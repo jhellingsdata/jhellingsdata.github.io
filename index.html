@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+
+    <!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+</head>
+
+
+
+<body>
+
+    <h1>Data Science 2021.</h1>
+
+    <h3>Covid-19</h3>
+
+    <p>The first chart tracks Covid-19 cases by UK region.</p>
+
+<!--Vaga embed, with notes for what is going on-->
+<div class="chart" id="firstChart">
+
+  <script>
+    // Following the script tag we are using Javascript.
+    // One way to tell is to see how comments work...
+    // First job is to set the chart as a JS variable:
+    var myChart1 = "chartCovid1.json";
+    // Now we simply insert it, using Vega's embed code:
+    // The embed function needs to be told the location, and what to put there. 
+    vegaEmbed('#firstChart', myChart1);
+  </script>
+
+</div>
+
+  <h3>Productivity puzzle</h3>
+
+  <p>My second chart looks at productivity in the UK</p>
+
+<div class="chart" id="secondChart">
+  <script>
+    var myChart1 = "chartLine1.json";
+    vegaEmbed('#secondChart', myChart1);
+  </script>
+</div>
+    
+</body>
+
+
+</html>
+
+

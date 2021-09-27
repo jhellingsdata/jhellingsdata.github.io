@@ -1,0 +1,37 @@
+/*Here is some example CSS by Charlie Meyrick. */
+
+body{
+
+    background-color: #122b39 ;
+    max-width: 450px;
+    margin: auto;
+}
+
+h1{
+
+    color: rgb(219, 188, 188);
+    font-family: 'Poppins', sans-serif ;
+}
+
+h3{
+    color: #f4c245;
+    font-family: 'Poppins', sans-serif ;
+}
+
+p{font-family: 'Poppins', sans-serif;
+color: white;
+}
+
+
+
+.chart{
+    width: 330px;
+    border-width: 10px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+    margin: auto;
+
+
+}
