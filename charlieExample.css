@@ -3,7 +3,7 @@
 body{
 
     background-color: #122b39 ;
-    max-width: 450px;
+    max-width: 350px;
     margin: auto;
 }
 
@@ -25,12 +25,12 @@ color: white;
 
 
 .chart{
-    width: 330px;
-    border-width: 10px;
+    width: 300px;
+    border-width: 5px;
     background-color: white;
     border-style: solid;
     border-radius: 5px;
-    border-color: white;
+    border-color: #122b39;
     margin: auto;
 
 
