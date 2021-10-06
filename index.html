@@ -30,49 +30,27 @@
 
     <h1>Data Science 2021.</h1>
 
-    <h3>Covid-19</h3>
-
-    <p>The first chart tracks Covid-19 cases by UK region.</p>
-
 <!--Vaga embed, with notes for what is going on-->
-<div class="chart" id="firstChart">
-
-  <script>
-    // Following the script tag we are using Javascript.
-    // One way to tell is to see how comments work...
-    // First job is to set the chart as a JS variable:
-    var myChart1 = "Charts/chart1_covidUKRegions.json";
-    // Now we simply insert it, using Vega's embed code:
-    // The embed function needs to be told the location, and what to put there. 
-    vegaEmbed('#firstChart', myChart1);
-  </script>
-
+<div class="grid_items"></div>
+  <div class="chart" id="firstChart">  
+  <div class="chart" id="secondChart">
+  <div class="chart" id="thirdChart">
 </div>
 
-  <h3>Productivity puzzle</h3>
 
-  <p>My second chart looks at productivity in the UK</p>
+  <script>
+    // Set the charts that we want on the page as variables linked to JSON files:
+    var myChart1 = "Charts/chart1_covidUKRegions.json";
+    var myChart2 = "Charts/chart2_ukProductivity.json";
+    var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
 
-   <div class="chart" id="secondChart">
-      <script>
-        var myChart2 = "Charts/chart2_ukProductivity.json";
-        vegaEmbed('#secondChart', myChart2);
-      </script>
-    </div>
-    
-    <h3>Ethereum Price</h3>
-
-  <p>My third chart looks at the dollar value of Ethereum in the last month</p>
-
-   <div class="chart" id="thirdChart">
-      <script>
-        var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
-        vegaEmbed('#thirdChart', myChart3);
-      </script>
-    </div>
+    // Embed the charts in the divs above
+    vegaEmbed('#firstChart', myChart1);
+    vegaEmbed('#secondChart', myChart2);
+    vegaEmbed('#thirdChart', myChart3);
+  </script>
   
+
 </body>
 
-
 </html>
-
