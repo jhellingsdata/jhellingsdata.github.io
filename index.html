@@ -30,11 +30,12 @@
 
     <h1>Data Science 2021.</h1>
 
+  
 <!--Vaga embed, with notes for what is going on-->
-<div class="grid_items"></div>
-  <div class="chart" id="firstChart">  
-  <div class="chart" id="secondChart">
-  <div class="chart" id="thirdChart">
+<div class="grid_items">
+  <div class="grid_item" id="firstChart"></div>
+  <div class="grid_item" id="secondChart"></div>
+  <div class="grid_item" id="thirdChart"></div>
 </div>
 
 
@@ -45,9 +46,9 @@
     var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
 
     // Embed the charts in the divs above
-    vegaEmbed('#firstChart', myChart1);
-    vegaEmbed('#secondChart', myChart2);
-    vegaEmbed('#thirdChart', myChart3);
+    vegaEmbed('#firstChart', myChart1, {"actions": false});
+    vegaEmbed('#secondChart', myChart2, {"actions": false});
+    vegaEmbed('#thirdChart', myChart3, {"actions": false});
   </script>
   
 
