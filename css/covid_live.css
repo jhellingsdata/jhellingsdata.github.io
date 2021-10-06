@@ -24,7 +24,9 @@ p {
 
 
 body {
-  background-color: #ebe5e5;
+  background-color: #212121;
+  max-width: 350px;
+  margin: auto;
  }
 
 /* ------------------------------------------------------------------------------
