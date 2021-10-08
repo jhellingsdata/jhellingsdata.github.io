@@ -9,8 +9,8 @@
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
-      "color": "#179fdb",
-      "subtitleColor":"#179fdb"},
+      "color": "#000000",
+      "subtitleColor":"#000000"},
   
     "config": {
       "background":"#ffffff",
