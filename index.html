@@ -1,59 +1,132 @@
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="">
 
-
+<!-- ////////////////////////////// START HEAD //////////////////////////////-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
 
-    <!--Stylesheets-->
-    <link rel="stylesheet" href="css/charlieExample.css">
-    <link rel="stylesheet" href="css/covid_live.css">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-    </style>
+<!--Meta stuff-->
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!--The next three lines allow the Vega embed-->
+
+
+<title>Data Science</title>
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" href="css/main2.css">
+<link rel="stylesheet" href="css/crypto.css">
+<link rel="stylesheet" href="css/preload.css">
+
+<!--Code to allow Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+<!-- ////////////////////////////// END HEAD //////////////////////////////-->
 
 
-
-<body>
-
-    <h1>Data Science 2021</h1>
+<!--Page content begins ///////////////////////////////-->
+<!-- <div style="display:none; background-color:#ebe5e5; width: 100vw;" id="myDiv" class="animate-bottom"> -->
+<div style="display:none; background-color:rgba(21, 32, 43); width: 100vw;" id="myDiv" class="animate-bottom">
 
   
-<!--Vaga embed, with notes for what is going on-->
-<div class="grid_items">
-  <div class="grid_items" id="firstChart"></div>
-  <div class="grid_items" id="secondChart"></div>
-  <div class="grid_items" id="thirdChart"></div>
+
+<!-- ///TOP SECTION - HEADER AND LINKS-->
+<!-- portfolio grid section -->
+<section id="work-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 work-detail ">
+        <div class="work-detail"> 
+
+  
+  <!-- heading for page-->
+<div class="wrap">
+  <h1>rapid<span style="color: #ff9a00">charts</span></h1>
+  <span style="display:block; height: 20px;"></span>
+  <p class="rubric-launch">Live and intereactive charts. From Covid to surfing, find your data dashboard here.</p>
+    <span style="display:block; height: 5px;"></span>
+
+  <!-- topics sub heading clickable links -->
+  <p>
+    <a class="dashboardButton" href="https://jhellingsdata.github.io/Portfolio">Portfolio</a>
+    <a class="dashboardButton" href="https://jhellingsdata.github.io/project">Project</a> 
+    <a class="dashboardButton" href="https://jhellingsdata.github.io/Playground">Playground</a> 
+
+   </p>
+ <!-- topics sub heading clickable links -->
+
+ <!-- White space across the page --> 
+ <span style="display:block; height: 0px;"></span>
+
+
 </div>
+<!-- ///END OF TOP SECTION -->
 
 
-  <script>
-    // Set the charts that we want on the page as variables linked to JSON files:
-    var myChart1 = "Charts/chart1_covidUKRegions.json";
-    var myChart2 = "Charts/chart2_ukProductivity.json";
-    var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
 
-    // Embed the charts in the divs above
-    vegaEmbed('#firstChart', myChart1, {"actions": false});
-    vegaEmbed('#secondChart', myChart2, {"actions": false});
-    vegaEmbed('#thirdChart', myChart3, {"actions": false});
-  </script>
-  
+
+<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                  <div class="column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="https://nuggetcharts.com/stream">Nugget</a></li>
+                            <li><a href="datascience">Course</a></li>
+                        </ul>
+                  </div>
+                  </div>
+                    
+                    <div class="footer-finalrow">
+                        <h3>Rapid Charts</h3>
+                        <p>Automated and interactive data analysis.</p>                    </div>
+                    
+                    <div class="col item social">
+                      <a href="https://www.economicsobservatory.com" class="fa fa-university"></a>
+                      <a href="https://twitter.com/RD_Economist" class="fa fa-twitter"></a>
+                      <a href="https://www.instagram.com/rapidcharts" class="fa fa-instagram"></a>
+                      <a href="https://www.linkedin.com/in/rd-economist" class="fa fa-linkedin"></a>
+                    </div>
+                
+                  </div>
+                <p class="copyright">Richard Davies © 2021</p>
+          </footer>          
+    </div>
+<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Scipt for the loader:
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
 
 </body>
-
 </html>
