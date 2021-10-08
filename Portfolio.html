@@ -1,43 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<!-- This is how you add comments to HTML -->
-<!-- Richard Davies, Data Science 2021 -->
 
-<!-- You can also include
-multi - line comments
-if you find that useful -->
-
-<!-- The head contains things you do not see -->
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
 
-<!-- Link to my CSS file -->
-<link rel="stylesheet" href="firstExample.css">
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="css/charlieExample.css">
+    <link rel="stylesheet" href="css/covid_live.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+
+    <!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
 </head>
 
-<!-- The body contains thigs you see -->
-<!-- Most elements both open and close, with the content in the middle -->
+
+
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <h1>Data Science 2021</h1>
 
-<!--Vaga embed, with notes for what is going on-->
-<div class="chart" id="firstChart">
-
-    <script>
-      // Following the script tag we are using Javascript.
-      // One way to tell is to see how comments work...
-      // First job is to set the chart as a JS variable:
-      var myChart1 = "Charts/chart1_covidUKRegions.json";
-      // Now we simply insert it, using Vega's embed code:
-      // The embed function needs to be told the location, and what to put there. 
-      vegaEmbed('#firstChart', myChart1);
-    </script>
   
-  </div>
+<!--Vaga embed, with notes for what is going on-->
+<div class="grid_items">
+  <div class="grid_items" id="firstChart"></div>
+  <div class="grid_items" id="secondChart"></div>
+  <div class="grid_items" id="thirdChart"></div>
+</div>
+
+
+  <script>
+    // Set the charts that we want on the page as variables linked to JSON files:
+    var myChart1 = "Charts/chart1_covidUKRegions.json";
+    var myChart2 = "Charts/chart2_ukProductivity.json";
+    var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
+
+    // Embed the charts in the divs above
+    vegaEmbed('#firstChart', myChart1, {"actions": false});
+    vegaEmbed('#secondChart', myChart2, {"actions": false});
+    vegaEmbed('#thirdChart', myChart3, {"actions": false});
+  </script>
   
 
 </body>
+
 </html>
