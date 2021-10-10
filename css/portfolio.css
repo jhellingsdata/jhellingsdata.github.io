@@ -1,0 +1,147 @@
+
+/* ------------------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
+
+
+
+/* ------------------------------------------------------------------------------
+	Grid stuff
+-------------------------------------------------------------------------------*/
+
+.grid_items {
+  padding: 2px;
+  display: grid;
+  grid-template-columns: 100%;
+  max-width: 800px; 
+  margin: 0 auto 0 auto !important;
+  padding: 0 5 0 5; 
+  grid-column-gap: 5px;
+  grid-row-gap: 20px;
+  padding-bottom: 18rem;
+}
+.grid_items > div {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  width: 360px;
+  margin:auto;
+}
+.grid_items > div:nth-child(3n + 2) {
+  background-color: #ffffff;
+}
+.grid_items > div:nth-child(3n) {
+  background-color: #ffffff;
+}
+
+
+/* ------------------------------------------------------------------------------
+	DIFFERENT SCREEN SIZES
+-------------------------------------------------------------------------------*/
+
+/* One column*/
+@media only screen and (min-width: 250px) {
+  .grid_items {
+    grid-template-columns: 100%;
+    max-width: 420px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .wrap {
+    grid-template-columns: 100%;
+    max-width: 360px; 
+    margin: 0 auto 0 auto !important;
+	  padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: center;
+  }
+  .grid_items > div {
+    padding: 10px;
+  }
+  .rubric {
+    text-align: left;
+  }
+
+
+}
+
+
+/* Two columns*/
+@media only screen and (min-width: 900px) {
+  .grid_items, .wrap {
+    grid-template-columns: 47.5% 47.5%;
+    max-width: 880px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    text-align: left;
+    align-items: center;
+  }
+  .grid_items > div {
+    padding: 10px;
+  }
+}
+
+
+/* Three columns*/
+@media only screen and (min-width: 1400px) {
+  .grid_items, .wrap {
+    grid-template-columns: 33% 33% 33%;
+    max-width: 1400px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+    align-items: center;
+  }
+  
+  .grid_items > div {
+    padding: 10px;
+  }
+}
+
+
+/* Four columns*/
+@media only screen and (min-width: 1800px) {
+  .grid_items, .wrap {
+    grid-template-columns: 25% 25% 25% 25%;
+    max-width: 1900px; 
+    margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+    align-items: center;
+  }
+  .grid_items > div {
+    padding: 10px;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------
+	Global Styles
+-------------------------------------------------------------------------------*/
+
+
+
+body {
+	font-family: "Crimson Text";
+	font-weight: 400;
+	color: #323232;
+	margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+	float: none !important; 
+}

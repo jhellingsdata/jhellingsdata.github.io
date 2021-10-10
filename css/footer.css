@@ -3,19 +3,59 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1{
+	font-family: "Catamaran", sans-serif;
+	font-variant: small-caps;
+    font-style: "Regular 400";
+	font-size: 60px;
+	color: #ffffff;
+	font-weight: 400;
+	font-kerning: 50;
+	margin: 15px 30px 30px 30px  ;
+	height: 80px;
+    text-align: center;
+}
+a {
+	xxfont-family: "Heebo";
+	font-size: 16px;
+	font-weight: 300;
+    xxbackground-color: lightblue ;
+    xxcolor: white;
+    padding: 0.05em 0.10em;
+    text-decoration: none;
+    text-transform: none;
+    outline: none;
+    border-radius: 8px;
+}
+a:link, a:visited{
+    color: #ffffff;
+    opacity: 0.7;
+}
+a:hover{
+    color: rgb(255, 210, 128);
+    text-decoration: none;
+}
+a:focus{
+    color: rgb(255, 210, 128);
+    text-decoration: none;
+}
 body{
-    background: #fcfcfc;
+    background: #212121;
+}
+.page-container{
+    position: relative;
+    min-height: 100vh;
 }
 footer{
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #000000;
-    height: auto;
-    width: 100vw;
+    background: #282d32;
+    height: 15rem;
+    width: 100%;
     font-family: "Open Sans";
-    padding-top: 40px;
+    padding-top: 10px;
     color: #fff;
 }
 .footer-content{
@@ -26,26 +66,29 @@ footer{
     text-align: center;
 }
 .footer-content h3{
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 400;
     text-transform: capitalize;
     line-height: 3rem;
+    font-family: sans-serif;
 }
 .footer-content p{
     max-width: 500px;
-    margin: 10px auto;
+    margin: 2px auto;
     line-height: 28px;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: sans-serif;
 }
 .socials{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 2rem 0;
 }
 .socials li{
     margin: 0 10px;
+    color:#fff
 }
 .socials a{
     text-decoration: none;
@@ -53,20 +96,28 @@ footer{
 }
 .socials a i{
     font-size: 1.1rem;
-    transition: color .4s ease;
 }
 .socials a:hover i{
-    color: aqua;
+    color: rgb(255, 210, 128);
+    text-decoration: none;
+}
+.socials a:focus i{
+    color: rgb(255, 210, 128);
+    text-decoration: none;
 }
 .footer-bottom{
-    background: #000;
+    position: absolute;
+    bottom: 0;
+    background: #282d32;
     width: 100vw;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    font-family: sans-serif;
 }
 .footer-bottom p{
-    font-size: 14px;
+    font-size: 12px;
     word-spacing: 2px;
+    opacity: .4;
     text-transform: capitalize;
 }
 .footer-bottom span{
@@ -74,3 +125,4 @@ footer{
     opacity: .4;
     font-weight: 200;
 }
+
