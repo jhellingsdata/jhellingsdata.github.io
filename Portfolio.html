@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
 
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
     <!--Stylesheets-->
-    <link rel="stylesheet" href="css/charlieExample.css">
-    <link rel="stylesheet" href="css/covid_live.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
     </style>
 
     <!--The next three lines allow the Vega embed-->
@@ -27,62 +29,55 @@
 
 <body>
 
-    <h1>Data Science 2021</h1>
+<h1>Data Science 2021</h1>
 
   
 <!--Vaga embed, with notes for what is going on-->
-<div class="grid_items">
-  <div class="grid_items" id="firstChart"></div>
-  <div class="grid_items" id="secondChart"></div>
-  <div class="grid_items" id="thirdChart"></div>
+<div class="page-container">
+  <div class="grid_items">
+    <div class="grid_item" id="firstChart"></div>
+    <div class="grid_item" id="secondChart"></div>
+    <div class="grid_item" id="thirdChart"></div>
+  </div>
+
+
+<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+
+  <footer>
+    <div class="footer-content">
+      <h3>Data Science</h3>
+        <p><a href="Portfolio.html">Portfolio</a></p>
+        <p><a href="Project.html">Project</a></p>                                        
+        <p><a href="Playground.html">Playground</a></p>           
+    </div>
+      
+    <div>
+      <ul class="socials">
+      <!--    <li><a href="https://uk.linkedin.com/in/josh-hellings-388b43165?trk=people-guest_people_search-card"><i class="fa fa-linkedin-square"></i></a></li>    -->
+      <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p>copyright &copy;2021 Josh Hellings
+    </div>
+  </footer>
 </div>
+<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
 
-
-  <script>
-    // Set the charts that we want on the page as variables linked to JSON files:
-    var myChart1 = "Charts/chart1_covidUKRegions.json";
-    var myChart2 = "Charts/chart2_ukProductivity.json";
-    var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
-
-    // Embed the charts in the divs above
-    vegaEmbed('#firstChart', myChart1, {"actions": false});
-    vegaEmbed('#secondChart', myChart2, {"actions": false});
-    vegaEmbed('#thirdChart', myChart3, {"actions": false});
-  </script>
-  
 
 </body>
 
-</html>
+<script>
+  // Set the charts that we want on the page as variables linked to JSON files:
+  var myChart1 = "Charts/chart1_covidUKRegions.json";
+  var myChart2 = "Charts/chart2_ukProductivity.json";
+  var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
 
-<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
-<div class="footer-dark">
-  <footer>
-      <div class="container">
-          <div class="row">
-            <div class="column">
-              <h3>Weekly Tasks</h3>
-              <ul>
-                  <li><a href="Portfolio.html">Portfolio</a></li>
-              </ul>
-            </div>
-            <div class="column">
-                  <h3>Resources</h3>
-                  <ul>
-                      <li><a href="Project.html">Project</a></li>
-                  </ul>
-            </div>
-            
-            <div class="footer-finalrow">
-              <h3>Rapid Charts</h3>
-              <ul>
-                <li><a href="Playground.html">Playground</a></li>
-            </ul>                  
-            </div>
-            
-            
-              
-         
-    </footer>          
-</div>
-<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+  // Embed the charts in the divs above
+  vegaEmbed('#firstChart', myChart1, {"actions": false});
+  vegaEmbed('#secondChart', myChart2, {"actions": false});
+  vegaEmbed('#thirdChart', myChart3, {"actions": false});
+</script>
+
+</html>
