@@ -38,6 +38,8 @@
     <div class="grid_item" id="firstChart"></div>
     <div class="grid_item" id="secondChart"></div>
     <div class="grid_item" id="thirdChart"></div>
+    <div class="grid_item" id="fourthChart"></div>
+    <div class="grid_item" id="fifthChart"></div>  
   </div>
 
 
@@ -70,14 +72,18 @@
 
 <script>
   // Set the charts that we want on the page as variables linked to JSON files:
-  var myChart1 = "Charts/chart1_covidUKRegions.json";
-  var myChart2 = "Charts/chart2_ukProductivity.json";
-  var myChart3 = "Charts/chartcrypto4_ETHthismonth.json";
+  var myChart1 = "Charts/W1_chart1_covidUKRegions.json";
+  var myChart2 = "Charts/W1_chart2_ukProductivity.json";
+  var myChart3 = "Charts/W1_chartcrypto4_ETHthismonth.json";
+  var myChart4 = "Charts/W2_chart4_VaccinationsDevonAPI.json";
+  var myChart5 = "Charts/W2_chart5_VaccinationsByAgeCSV.json";
 
   // Embed the charts in the divs above
   vegaEmbed('#firstChart', myChart1, {"actions": false});
   vegaEmbed('#secondChart', myChart2, {"actions": false});
   vegaEmbed('#thirdChart', myChart3, {"actions": false});
+  vegaEmbed('#fourthChart', myChart4, {"actions": false});
+  vegaEmbed('#fifthChart', myChart5, {"actions": false});
 </script>
 
 </html>
