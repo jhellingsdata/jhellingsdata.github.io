@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+    "text": "Vaccination Rate - Devon",
+    "subtitle":"Complete Vaccination Course, %",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+   "data": {
+    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=utla&metric=cumVaccinationCompleteCoverageByVaccinationDatePercentage&format=csv",
+    "format": {"type": "csv"}
+  },
+
+   "transform":[
+      
+      {"filter": {
+        "field": "areaName", 
+        "oneOf": ["Torbay", "Plymouth", "Devon"]}
+        }
+
+
+    ],
+  
+  
+  "height": 300,
+  "width": 300,
+   
+  "mark": {"type": "line", "point": false},
+ 
+  "encoding": {
+
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+
+    "y": {
+      "field": "cumVaccinationCompleteCoverageByVaccinationDatePercentage",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false},
+      "scale": {"domain": [0, 100]}
+    },
+
+    "color": {
+      "field": "areaName",
+      "type": "nominal",
+      "scale": {"scheme": "lighttealblue"},
+      "title": null,
+      "legend": {
+        "orient": "top-left", 
+        "fillColor": "#FcFdFd"}
+    }
+}
+}
