@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "title": {
-    "text": "Youth Vaccination Programme",
+    "text": "England - Vaccination by age",
     "subtitle":"% Population who have received 2 doses",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
