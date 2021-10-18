@@ -11,7 +11,7 @@
   },
   
     "data": {
-      "url": "https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/data/Vaccinations_demographics.csv",
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/data/Vaccinations_demographics.csv",
       "format": {"type": "csv"},
       "height": 300,
       "width": 300
