@@ -1,45 +1,54 @@
-body { 
-    width: 100%; 
-    height: 100%;
-    margin: 0; 
-    padding: 0;
-    background: rgb(21, 32, 43); 
-  }
-  
-  svg {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 150%);
-  }
-  
-  svg #plug,
-  svg #socket {
-    fill:rgb(255, 173, 31);
-  }
-  
-  svg #loop-normal {
-    fill: none;
-    stroke: rgb(255, 173, 31);
-    stroke-width: 7%;
-  }
-  
-  svg #loop-offset {
-    display: none;
-  }
-  
-  .credit {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 900%);
-    text-align: center;
-    color: #FDB515;
-  }
-  
-  .credit a {
-    color: #FDB515;
-    font: 800 75% "Open Sans", sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
+/*Loader Css*/
+body {
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  height: 100vh;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #323232;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}

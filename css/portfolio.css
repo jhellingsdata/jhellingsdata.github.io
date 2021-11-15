@@ -8,6 +8,45 @@
 
 
 
+/* ------------------------------------------------------------------------------
+	Titles and text
+-------------------------------------------------------------------------------*/
+
+
+h1 {
+	font-family: "Catamaran";
+	font-size: 60px;
+	color: #dad5df;
+	font-weight: 600;
+  padding-bottom: 10px;
+	height: 40px;
+  text-align: center;
+}
+h2 {
+	font-family: "Heebo";
+	font-size: 16px;
+	color: #2d3033;
+	margin: 0;
+	font-weight: 1000;
+}
+h3 {
+  font-family: "Catamaran";
+  text-align: center;
+	font-size: 24px;
+	color: #dad5df;
+	font-weight: 300;
+}
+h4 {
+	font-size: 22px;
+	color: #dad5df;
+	font-weight: 400;
+}
+h5 {
+	font-size: 14px;
+	color: #dad5df;
+	font-weight: 700;
+}
+
 
 /* ------------------------------------------------------------------------------
 	Grid stuff
@@ -50,8 +89,8 @@
     max-width: 420px; 
     margin: 0 auto 0 auto !important;
 	padding: 0 5 0 5; 
-    grid-column-gap: 10px;
-    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
     text-align: center;
     align-items: center;
   }
@@ -61,8 +100,8 @@
     max-width: 360px; 
     margin: 0 auto 0 auto !important;
 	  padding: 0 5 0 5; 
-    grid-column-gap: 10px;
-    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
     text-align: center;
   }
   .grid_items > div {
@@ -83,8 +122,8 @@
     max-width: 880px; 
     margin: 0 auto 0 auto !important;
 	padding: 0 5 0 5; 
-    grid-column-gap: 10px;
-    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
     text-align: left;
     align-items: center;
   }
@@ -140,7 +179,7 @@
 body {
 	font-family: "Crimson Text";
 	font-weight: 400;
-	color: #323232;
+  background-color: #212121;
 	margin: 0 auto 0 auto !important;
 	padding: 0 5 0 5; 
 	float: none !important; 

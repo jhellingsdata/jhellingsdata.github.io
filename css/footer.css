@@ -42,16 +42,19 @@ a:focus{
 body{
     background: #212121;
 }
-.page-container{
-    position: relative;
-    min-height: 100vh;
+
+.footer-dark {
+    padding:20px 0;
+    color:#f0f9ff;
+    background-color:#282d32;
+    font-family:Arial, Helvetica, sans-serif
 }
-footer{
-    position: absolute;
+.footer{
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #282d32;
+    background: #212121;
     height: 15rem;
     width: 100%;
     font-family: "Open Sans";
@@ -79,6 +82,32 @@ footer{
     font-size: 16px;
     font-family: sans-serif;
 }
+.page-container .footer-bottom{
+    position: absolute;
+    bottom: 0;
+    background: #282d32;
+    padding-top: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+    font-size: 12px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-content .footer-bottom p{
+    font-size: 12px;
+    word-spacing: 2px;
+    opacity: .4;
+    text-transform: capitalize;
+}
+.footer-content .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
 .socials{
     list-style: none;
     display: flex;
@@ -104,25 +133,5 @@ footer{
 .socials a:focus i{
     color: rgb(255, 210, 128);
     text-decoration: none;
-}
-.footer-bottom{
-    position: absolute;
-    bottom: 0;
-    background: #282d32;
-    width: 100vw;
-    padding: 10px 0;
-    text-align: center;
-    font-family: sans-serif;
-}
-.footer-bottom p{
-    font-size: 12px;
-    word-spacing: 2px;
-    opacity: .4;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
 }
 

@@ -12,7 +12,6 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
 
 
 p {
@@ -25,9 +24,7 @@ p {
 
 
 body {
-  background-color: #212121;
-  max-width: 350px;
-  margin: auto;
+  background-color: #ebe5e5;
  }
 
 /* ------------------------------------------------------------------------------
@@ -73,7 +70,6 @@ body {
     grid-column-gap: 10px;
     grid-row-gap: 40px;
     text-align: center;
-    align-items: center;
   }
 
   .wrap {
@@ -108,7 +104,6 @@ body {
     grid-column-gap: 10px;
     grid-row-gap: 40px;
     text-align: left;
-    align-items: center;
   }
   .grid_items > div {
     padding: 10px;
@@ -119,13 +114,12 @@ body {
 /* Three columns*/
 @media only screen and (min-width: 1400px) {
   .grid_items, .wrap {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 30% 30% 30%;
     max-width: 1400px; 
     margin: 0 auto 0 auto !important;
 	padding: 0 5 0 5; 
     grid-column-gap: 20px;
     grid-row-gap: 50px;
-    align-items: center;
   }
   
   .grid_items > div {
@@ -143,7 +137,6 @@ body {
 	padding: 0 5 0 5; 
     grid-column-gap: 20px;
     grid-row-gap: 50px;
-    align-items: center;
   }
   .grid_items > div {
     padding: 10px;
@@ -181,15 +174,14 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 h1 {
-	font-family: "Crimson Pro", serif;
+	font-family: "Catamaran";
 	font-variant: small-caps;
 	font-size: 60px;
-	color: #ffffff;
+	color: #320064;
 	font-weight: 900;
 	font-kerning: 50;
-	margin: 5px 5px 30px 5px  ;
+	margin: 0px 0px 30px 0px  ;
 	height: 40px;
-    text-align: center;
 }
 h2 {
 	font-family: "Heebo";
