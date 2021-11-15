@@ -1,0 +1,57 @@
+
+   
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "data": {"url": "https://app.sportdataapi.com/api/v1/soccer/matches?apikey=4bf3c1b0-3cab-11ec-9fe5-1de18886989b&season_id=2013&date_from=2021-08-07",
+    "format":{
+      "type": "json",
+      "property": "data"}},
+  
+      "title": {
+      "text": "League One - Venues",
+      "subtitle":["Stadium capacity, 21/22 season",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+  
+    },
+  
+    "XXparams": [
+        {"name": "highlight", "select": {"type": "point", "on": "mouseover"}}
+    ],
+  
+    "mark": {
+      "type":"bar",
+      "color":"#11bedd"},
+  
+    "height":300,
+    "width":220,
+    
+    "encoding": {
+  
+      "x": {
+        "field": "venue.capacity", 
+        "type": "quantitative",
+        "aggregate":"mean",
+        "title":null},
+  
+      "y": {
+        "field": "venue.name", 
+        "type": "ordinal",
+        "title":null},
+  
+       "XXfillOpacity": {
+        "condition": {"param": "highlight", "value": 1},
+        "value": 0.1
+      },
+  
+      "tooltip":[
+        {"field":"home_team.name", "title":"Team"},
+        {"field":"venue.city", "title":"City"},
+        {"field": "venue.capacity", "title":"Capacity"}
+      ]
+   
+    }
+  }
