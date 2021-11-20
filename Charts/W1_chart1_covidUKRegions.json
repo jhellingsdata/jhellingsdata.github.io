@@ -4,10 +4,11 @@
   
   "data": {
     "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=region&metric=newCasesByPublishDate&format=csv",
-    "height": 300,
-    "width": 320,
     "format": {"type": "csv"}
   },
+
+  "height": 280,
+  "width": 280,
 
   "title": {
     "text": "Covid cases: UK regions",

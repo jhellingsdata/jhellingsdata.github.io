@@ -10,12 +10,14 @@
     "color": "black"
   },
   
-    "data": {
-      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/data/Vaccinations_demographics.csv",
-      "format": {"type": "csv"},
-      "height": 300,
-      "width": 300
-    },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/data/Vaccinations_demographics.csv",
+    "format": {"type": "csv"}
+  },
+
+  "height": 265,
+  "width": 280,
+
 
   "mark": {"type": "line", "point": false},
 
