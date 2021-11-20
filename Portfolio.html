@@ -50,6 +50,7 @@
       <div class="chart" id="chart5"></div>
       <div class="chart" id="chart6"></div>
       <div class="chart" id="chart7"></div>
+      <div class="chart" id="chart8"></div>
     </div>
 <!-- END - Grid of divs that will house the charts--> 
 
@@ -65,7 +66,7 @@
     var myChart5 = "Charts/W2_chart5_VaccinationsByAgeCSV.json";
     var myChart6 = "Charts/W3_chart9_emissionsAPI.json";
     var myChart7 = "Charts/W3_LeagueOne_inline.json";
-    
+    var myChart8 = "Charts/W4_PremierLeague_Results.json";
     
 
 
@@ -77,10 +78,11 @@
     vegaEmbed('#chart5', myChart5, {"actions": false});
     vegaEmbed('#chart6', myChart6, {"actions": false});
     vegaEmbed('#chart7', myChart7, {"actions": false});
+    vegaEmbed('#chart8', myChart8, {"actions": false});
 
 
     $(window).on("load",function(){
-          $(".loader-wrapper").fadeOut("slow");
+          $(".loader-wrapper").fadeOut("fast");
         });
   </script>
 <!--/////////////////////////////////////SCRIPTS///////////////////////////////-->
