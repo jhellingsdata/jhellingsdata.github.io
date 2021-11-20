@@ -7,6 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
 
 
+.chart {
+  width: 380px;
+  height: 390px;
+  margin: 10px;
+  padding: 5px;
+  background-color: White;
+  border: #76939e solid 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
 
 /* ------------------------------------------------------------------------------
 	Titles and text
@@ -89,25 +100,25 @@ h5 {
     max-width: 420px; 
     margin: 0 auto 0 auto !important;
 	padding: 0 5 0 5; 
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
     text-align: center;
-    align-items: center;
   }
 
   .wrap {
     grid-template-columns: 100%;
-    max-width: 360px; 
+    max-width: 400px; 
     margin: 0 auto 0 auto !important;
-	  padding: 0 5 0 5; 
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
+	padding: 0 5 0 5; 
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
     text-align: center;
   }
   .grid_items > div {
     padding: 10px;
   }
-  .rubric {
+
+  .rubric, .rubric-launch {
     text-align: left;
   }
 
