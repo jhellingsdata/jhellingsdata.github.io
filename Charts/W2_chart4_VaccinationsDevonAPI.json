@@ -56,6 +56,13 @@
       "legend": {
         "orient": "top-left", 
         "fillColor": "#FcFdFd"}
-    }
+    },
+
+  
+    "tooltip": [
+      {"field": "date", "type": "temporal", "title": "Date"},
+      {"field": "cumVaccinationCompleteCoverageByVaccinationDatePercentage","type": "quantitative","title": "Vaxx rate (%)"},
+      {"field": "areaName", "title": "Area"}
+    ]
 }
 }

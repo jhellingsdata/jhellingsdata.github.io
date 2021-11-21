@@ -95,9 +95,9 @@
       },
 
 
-         "tooltip": [
+      "tooltip": [
         {"field": "date", "type": "temporal", "title": "Date"},
-        {"field": "cumVaccinationCompleteCoverageByVaccinationDatePercentage","type": "quantitative","title": "Vacination rate (%)"},
+        {"field": "cumVaccinationCompleteCoverageByVaccinationDatePercentage","type": "quantitative","title": "Vaxx rate (%)"},
         {"field": "age", "title": "Age group"}
       ]
     }
