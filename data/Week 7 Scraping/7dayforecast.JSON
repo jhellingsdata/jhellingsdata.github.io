@@ -1,0 +1,137 @@
+[
+    {
+        "time": 1640738340000,
+        "height": 4.57,
+        "hilo": "High"
+    },
+    {
+        "time": 1640761320000,
+        "height": 2.06,
+        "hilo": "Low"
+    },
+    {
+        "time": 1640783100000,
+        "height": 4.79,
+        "hilo": "High"
+    },
+    {
+        "time": 1640807040000,
+        "height": 1.84,
+        "hilo": "Low"
+    },
+    {
+        "time": 1640829180000,
+        "height": 4.72,
+        "hilo": "High"
+    },
+    {
+        "time": 1640852280000,
+        "height": 1.85,
+        "hilo": "Low"
+    },
+    {
+        "time": 1640874000000,
+        "height": 4.91,
+        "hilo": "High"
+    },
+    {
+        "time": 1640897640000,
+        "height": 1.62,
+        "hilo": "Low"
+    },
+    {
+        "time": 1640919720000,
+        "height": 4.95,
+        "hilo": "High"
+    },
+    {
+        "time": 1640942700000,
+        "height": 1.57,
+        "hilo": "Low"
+    },
+    {
+        "time": 1640964540000,
+        "height": 5.07,
+        "hilo": "High"
+    },
+    {
+        "time": 1640987760000,
+        "height": 1.36,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641009780000,
+        "height": 5.21,
+        "hilo": "High"
+    },
+    {
+        "time": 1641032700000,
+        "height": 1.27,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641054600000,
+        "height": 5.24,
+        "hilo": "High"
+    },
+    {
+        "time": 1641077580000,
+        "height": 1.13,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641099540000,
+        "height": 5.44,
+        "hilo": "High"
+    },
+    {
+        "time": 1641122460000,
+        "height": 1.0,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641144420000,
+        "height": 5.36,
+        "hilo": "High"
+    },
+    {
+        "time": 1641167160000,
+        "height": 0.95,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641189060000,
+        "height": 5.61,
+        "hilo": "High"
+    },
+    {
+        "time": 1641212040000,
+        "height": 0.81,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641234000000,
+        "height": 5.42,
+        "hilo": "High"
+    },
+    {
+        "time": 1641256500000,
+        "height": 0.86,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641278520000,
+        "height": 5.7,
+        "hilo": "High"
+    },
+    {
+        "time": 1641301380000,
+        "height": 0.71,
+        "hilo": "Low"
+    },
+    {
+        "time": 1641323520000,
+        "height": 5.41,
+        "hilo": "High"
+    }
+]
