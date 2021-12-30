@@ -1,0 +1,31 @@
+.grid-container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 80px 80px 80px;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.landing-page{
+    font-family: sans-serif;
+    font-weight: 200;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+body {
+    background: #212121;
+}
+
+.landing-page p {
+    line-height: 18px;
+    font-size: 20px;
+}
