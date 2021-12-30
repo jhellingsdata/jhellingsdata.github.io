@@ -27,7 +27,7 @@
   
   
   "height": 295,
-  "width": 300,
+  "width": "container",
    
   "mark": {"type": "line", "point": false},
  

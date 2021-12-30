@@ -1,0 +1,106 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.2.0.json",
+  "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
+
+  "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/data/monthlyGDP.csv",
+    "format":{"type": "csv"}},
+
+  "height": 280,
+  "width": "container",
+
+    "title": {
+      "text": "Comparing the UK's Covid recovery",
+      "subtitle":["Source: OECD, Normalised GDP to long-term trend",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+   "transform":[  
+      {"filter": {
+        "field": "Country", 
+        "oneOf": ["France", "United Kingdom", "Germany", "United States", "Italy", "Canada", "OECD - Total", "Japan", "EU27"]}
+        },
+      {"filter":{
+        "field": "TIME", "timeUnit": "yearmonth", "range":["Jan 2020", "May 2021"]
+      }}
+    ],
+
+  "encoding": {
+    "x": {
+      "field": "TIME",
+      "type": "temporal",
+      "title": null,
+      "timeUnit":"yearmonth",
+      "scale": {"domain": ["2020-01", "2021-05"]}
+    },
+
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Index",
+      "scale": {"domain": [ 75, 110]},
+      "axis":{
+      }
+    },
+
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field":"Country",
+        "legend": {
+          "offset": -2,
+          "labelExpr": "datum.label == 'Canada' ? 'Canada' : datum.label == 'Japan' ? 'Japan' : datum.label == 'Italy' ? 'Italy' : datum.label == 'Germany' ? 'Germany' : datum.label == 'United States' ? 'US' : datum.label == 'United Kingdom' ? 'UK' :datum.label == 'OECD - Total' ? 'OECD' : 'France'"
+        },
+        "type":"nominal",
+        "scale": {"range": ["#66b2b2", "#66b2b2", "#66b2b2", "#66b2b2", "#66b2b2", "#004c4c", "#eb8c00", "#66b2b2"]}
+      },
+      "value": "grey"
+    },
+
+    "opacity": {
+      "condition": {
+        "param": "hover",
+        "value": 1
+      },
+      "value": 0.2
+    },
+
+    "tooltip":[
+      {"field":"Country", "title":"Country"},
+      {"field":"Value", "title":"Value", "format": ".4"},
+      {"field":"TIME", "title":"Date", "timeUnit": "yearmonth"}
+    ]
+  },
+
+  "layer": [{
+    "description": "transparent layer to make it easier to trigger selection",
+    "params": [{
+      "name": "hover",
+      "value": [{"Country": "United Kingdom"}],
+      "select": {
+        "type": "point",
+        "fields": ["Country"],
+        "on": "mouseover"
+      }
+    }],
+    "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+  }, {
+    "mark": "line"
+  }, {
+    "encoding": {
+      "x": {"aggregate": "max", "field": "TIME"},
+      "y": {"aggregate": {"argmax": "TIME"}, "field": "value"}
+    },
+    "layer": [{
+      "mark": {"type": "circle"}
+    }, {
+      "mark": {"type": "text", "align": "left", "dx": 4},
+      "encoding": {"text": {"field":"Country", "type": "nominal"}}
+    }]
+  }],
+  "config": {
+    "view": {"stroke": null}
+}
+}

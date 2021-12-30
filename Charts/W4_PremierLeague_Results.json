@@ -18,7 +18,7 @@
   },
   
   "height":280,
-  "width":290,  
+  "width":400,  
   
   "transform": [
     {"calculate": "now()", "as": "today"},

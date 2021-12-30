@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "description": "Emissions data using satellite imagary // source , 3 data points for 19-21st November",
+  "description": "Emissions data using satellite imagary // Emissions API , 3 data points added for 19-21st November",
   
   "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/data/CO_emissionsData_added.json"},
 
@@ -22,7 +22,7 @@
   },
    
   "height":230,
-  "width":280,
+  "width": "container",
   
   "encoding": {
     

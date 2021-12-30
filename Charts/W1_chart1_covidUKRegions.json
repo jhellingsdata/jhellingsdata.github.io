@@ -1,4 +1,4 @@
-  {"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "description": "Coronavirus cases",
   
@@ -8,7 +8,7 @@
   },
 
   "height": 280,
-  "width": 280,
+  "width": "container",
 
   "title": {
     "text": "Covid cases: UK regions",
