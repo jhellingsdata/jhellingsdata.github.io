@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
+/* ------------------------------------------------------------------------------
+	Titles and text
+-------------------------------------------------------------------------------*/
+
+h1, h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Catamaran";
+    color: #dfdde2;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    padding-top: 4vh;
+    height: 10vh;
+}
+h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.chart {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 3px;
+    height: 360px;
+    width: 340px;
+    align-items: center;
+    justify-content: center;
+}
+
+ /* allows scrolling on oversize charts to fit within card */
+.chart#chart8 {
+    overflow: scroll;
+}
+.chart#chart14 {
+    overflow: scroll;
+}
+
+body {
+    background: #212121;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 220px;
+    overflow: auto;
+    margin-bottom: 10vh;
+}
+
+
+.card {
+    background: white;
+    width: 370px;
+    min-height: 450px;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 5px;
+    border: #76939e solid 6px;
+}
+
+.card h5 {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.card p {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    font-size: 10pt;
+    margin: 0;
+}
+
+
+.card .category .tag {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    
+}
+
