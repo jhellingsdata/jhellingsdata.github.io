@@ -16,7 +16,7 @@ a {
 }
 
 footer {
-    height: 230px;
+    height: 220px;
     position: relative;
     clear: both;
     margin-top: -220px;
@@ -73,7 +73,7 @@ footer {
     margin: 1rem 0 2rem 0;
 }
 .socials li{
-    margin: 0 10px;
+   
     color:#fff
 }
 
