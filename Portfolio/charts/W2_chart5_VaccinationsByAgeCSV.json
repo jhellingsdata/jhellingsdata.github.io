@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "England - Vaccination by age",
+    "subtitle":"% Population who have received 2 doses",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Portfolio/data/Vaccinations_demographics.csv",
+    "format": {"type": "csv"}
+  },
+
+  "height": 265,
+  "width": "container",
+
+
+  "mark": {"type": "line", "point": false},
+
+
+  "selection": {
+    "Region": {
+      "type": "single",
+      "fields": ["age"],
+      "bind": {          
+        "age": {"input": "select",
+          "options": [
+            null,
+            "16_17",
+            "18_24",
+            "25_29",
+            "60_64",
+            "65_69",
+            "70_74"
+          ],           
+          "name": "Age Range"
+        }
+      }
+    }
+  },
+
+
+     "transform":[
+
+        {"filter": {
+          "field": "age", 
+          "oneOf": ["16_17", "18_24", "25_29", "60_64","65_69", "70_74"]}
+        },
+
+        {"filter": {"selection": "Region"}},
+
+        {
+          "filter": {
+            "field": "date",
+            "range": [
+              {"year": 2021, "month": "feb", "date": 1},
+              {"year": 2050, "month": "dec", "date": 30}
+            ]
+          }
+        }
+  
+  
+      ],
+
+
+    "encoding": {
+  
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "cumVaccinationCompleteCoverageByVaccinationDatePercentage",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false},
+        "scale": {"domain": [0, 100]}
+      },
+  
+      "color": {
+        "field": "age",
+        "type": "nominal",
+        "scale": {"scheme": "set2"},
+        "title": null,
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#FcFdFd"}
+      },
+
+
+      "tooltip": [
+        {"field": "date", "type": "temporal", "title": "Date"},
+        {"field": "cumVaccinationCompleteCoverageByVaccinationDatePercentage","type": "quantitative","title": "Vaxx rate (%)"},
+        {"field": "age", "title": "Age group"}
+      ]
+    }
+}

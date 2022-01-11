@@ -1,0 +1,89 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+    "title": {
+      "text": "US Federal Reserve Assets",
+      "subtitle": ["total value of all assets reports on FED balance sheets, source: FRED"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"}
+    },
+   
+  
+      "width":268,
+      "height":290,
+  
+  
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Portfolio/data/Week%205%20Loops/data_FRED-WALCL.json",
+      "format":{
+        "type": "json",
+        "property": "observations"
+      }
+    },
+  
+      "mark": {
+      "type": "line",
+      "point": false,
+      "interpolate": "linear",
+      "color":"aquamarine"
+    },
+  
+    "transform": [
+      
+      {"calculate": "year(datum.date)", "as": "year"},
+  
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+  ],
+  
+  
+   
+  
+      "params": [    
+        {"name":"minYear", "value":2002,
+           "bind":{
+             "input": "range",
+             "min": 2002, 
+             "max": 2021, 
+             "step": 1,
+             "name": "Start year:"}
+        },
+  
+        {"name":"maxYear", "value":2021,
+           "bind":{
+             "input": "range",
+             "min": 2002, 
+             "max": 2021, 
+             "step": 1,
+             "name": "End year:"}
+        }
+      ],
+  
+    "encoding": {
+        
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "labelSeparation": 10
+        }},
+  
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "$ million"
+       },
+  
+      "tooltip":[
+        {"field":"date", "title":"Date", "type": "temporal"},
+        {"field": "value", "title":"Value"}
+      ]
+    }
+  }

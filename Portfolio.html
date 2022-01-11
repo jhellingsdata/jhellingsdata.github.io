@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+    <!--Meta stuff-->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <!--Import fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
+    </style>
+
+
+    <!--Title - this is the bit that comes up in the tab-->
+    <title>DS Portfolio</title>
+
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+
+<!-- heading for page-->
+<h1>Data Science 2021</h1>
+
+<h3>Course Portfolio - updated weekly</h3>
+
+
+<!-- START - Grid of divs that will house the charts-->
+
+    <section class="container">
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 1 - Getting Started</span>
+                </span>
+            </div>
+            <div class="chart" id="chart1"></div>
+            <p>Graph taken from Rapidcharts.io. Data fetched from UK gov covid API, so should automatically update in accordance with new daily Covid data. </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 1 - Embedding</span>
+                </span>
+            </div>
+            <div class="chart" id="chart2"></div>
+            <p>Graph taken from Rapidcharts.io. Data from the ONS measuring long-term UK productivity and hosted in CSV format on Github. </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 1 - Embedding</span>
+                </span>
+            </div>
+            <div class="chart" id="chart3"></div>
+            <p>Graph from Rapidcharts.io, source code taken from Github and embedded here.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 2 - Hosting Data</span>
+                </span>
+            </div>
+            <div class="chart" id="chart4"></div>
+            <p>UK government Covid API with the data filtered to 3 Upper Tier Local Authority areas. This should update daily
+                in line with new data being added.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 2 - Hosting Data</span>
+                </span>
+            </div>
+            <div class="chart" id="chart5"></div>
+
+            <p>UK government covid data downloaded in CSV format from the Covid API and hosted on Github. This process
+                would need to be repeated to show recent data.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 3 - Editing Data</span>
+                </span>
+            </div>
+            <div class="chart" id="chart6"></div>
+
+            <p>This data was downloaded from the Emissions API and pushed to Github. It has been edited on Github to show 3 further (ficticious)
+                observations from the 19th - 21st November. The API takes data captured by the Sentinel-5P satellite and provided by the ESA.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 3 - Editing Data</span>
+                </span>
+            </div>
+            <div class="chart" id="chart7"></div>
+
+            <p>This data was downloaded from the Sports Data API and copied to be 'in-line' within the vega-lite specification JSON file.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 4 - API driven charts</span>
+                </span>
+            </div>
+            <div class="chart" id="chart8"></div>
+
+            <p>**Check using sportsdataapi is allowed as homework**
+                This graph uses data from the Sports Data API that allows a free sign-up. This data is filtered for the current Premier League Season and should auto-update with 
+                every new game played.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 4 - API driven charts</span>
+                </span>
+            </div>
+            <div class="chart" id="chart9"></div>
+
+            <p>This graph uses data from the Nomics Crypto API which allows a free sign-up. It features 10 of the largest cryptocurrencies during November 2021 (excluding stablecoins). 
+                The free API has a requests limit so the graph may not always show up to the minute data. Hovering over the data points gives the time accurate at.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 5 - Loops</span>
+                </span>
+            </div>
+            <div class="chart" id="chart10"></div>
+
+            <p>This graph uses data from FRED, downloaded using a python loop and then uploaded to Github.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 5 - Loops</span>
+                </span>
+            </div>
+            <div class="chart" id="chart11"></div>
+
+            <p>This graph uses data from FRED, downloaded using a python loop and then uploaded to Github.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 5 - Loops</span>
+                </span>
+            </div>
+            <div class="chart" id="chart12"></div>
+
+            <p>This graph uses data from FRED, downloaded using a python loop and then uploaded to Github. 
+                The sudden jump in 2020 is due to a change in method for measuring the M1 money stock whereby
+                savings were newly included.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 5 - Loops</span>
+                </span>
+            </div>
+            <div class="chart" id="chart13"></div>
+
+            <h5> </h5>
+            <p>This graph uses data from FRED, downloaded using a python loop and then uploaded to Github. 
+                The sudden jump in 2020 is due to a change in method for measuring the M1 money stock whereby
+                savings were newly included.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 7 - Loops and Scrapers</span>
+                </span>
+            </div>
+            <div class="chart" id="chart14"></div>
+
+            <h5> </h5>
+            <p>The data for this graph was created by python scraping tidal data from tidetimes.org.uk.
+                The script finds the current day, and then uses a loop to adjust the URL and take tidal data 
+                from webpages for each of the next 7 days. This is then cleaned and exporting as JSON to be uploaded 
+                to github. This could be developed by auto-pushing the new JSON file everytime the script is run, or having
+                the script auto-run by itself to the graph always shows the next 7 days.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 8 - Data Stories</span>
+                </span>
+            </div>
+            <div class="chart" id="chart15"></div>
+
+            <h5>Festival of Economics - Economics of inequality</h5>
+            <p>During this talk, Prof. Jagjit S. Chadha from the NIESR - claimed the UK had the largest fall of outputs 
+                (quantity of goods and services produced yearly) during covid than any other advanced economy 
+                and one of the slowest recoveries. This graph uses data downloaded from the OECD to show the 
+                changes in output for some of the world's major economies, and an OECD average, during the Covid-19 pandemic</p>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        // Set the charts that we want on the page as variables linked to JSON files:
+        var myChart1 = "Portfolio/charts/W1_chart1_covidUKRegions.json";
+        var myChart2 = "Portfolio/charts/W1_chart2_ukProductivity.json";
+        var myChart3 = "Portfolio/charts/W1_chart3_globalCarbon.json";
+        var myChart4 = "Portfolio/charts/W2_chart4_VaccinationsDevonAPI.json";
+        var myChart5 = "Portfolio/charts/W2_chart5_VaccinationsByAgeCSV.json";
+        var myChart6 = "Portfolio/charts/W3_chart9_emissionsAPI.json";
+        var myChart7 = "Portfolio/charts/W3_LeagueOne_inline.json";
+        var myChart8 = "Portfolio/charts/W4_PremierLeague_Results.json";
+        var myChart9 = "Portfolio/charts/W4_nomics_cryptoPrice.json";
+        var myChart10 = "Portfolio/charts/W5_loop_PPI_comm.json";
+        var myChart11 = "Portfolio/charts/W5_loop_PPI_indu.json";
+        var myChart12 = "Portfolio/charts/W5_loop_fedAssets.json";
+        var myChart13 = "Portfolio/charts/W5_loop_M1Real.json"; 
+        var myChart14 = "Portfolio/charts/W7_pythonScrape.json";
+        var myChart15 = "Portfolio/charts/W8_GDP_econFestival.json";
+        
+    
+    
+        // Embed the charts in the divs above
+        vegaEmbed('#chart1', myChart1, {"actions": false});
+        vegaEmbed('#chart2', myChart2, {"actions": false});
+        vegaEmbed('#chart3', myChart3, {"actions": false});
+        vegaEmbed('#chart4', myChart4, {"actions": false});
+        vegaEmbed('#chart5', myChart5, {"actions": false});
+        vegaEmbed('#chart6', myChart6, {"actions": false});
+        vegaEmbed('#chart7', myChart7, {"actions": false});
+        vegaEmbed('#chart8', myChart8, {"actions": false});
+        vegaEmbed('#chart9', myChart9, {"actions": false});
+        vegaEmbed('#chart10', myChart10, {"actions": false});
+        vegaEmbed('#chart11', myChart11, {"actions": false});
+        vegaEmbed('#chart12', myChart12, {"actions": false});
+        vegaEmbed('#chart13', myChart13, {"actions": false});
+        vegaEmbed('#chart14', myChart14, {"actions": false});
+        vegaEmbed('#chart15', myChart15, {"actions": false});
+    
+    
+        $(window).on("load",function(){
+              $(".loader-wrapper").fadeOut("fast");
+            });
+    </script>
+
+
+
+<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+
+<!-- <div class="page-container"> -->
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-top">
+            <h3>Data Science</h3>
+                <p><a href="Portfolio.html">Portfolio</a></p>
+                <p><a href="Project.html">Project</a></p>    
+          </div>
+        
+          <div>
+              <ul class="socials">
+                  <!--    <li><a href="https://uk.linkedin.com/in/josh-hellings-388b43165?trk=people-guest_people_search-card"><i class="fa fa-linkedin-square"></i></a></li>    -->
+                  <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io"><i class="fa fa-github"></i></a></li>
+              </ul>
+          </div>
+    
+          <div class="footer-bottom">
+              <p>&copy;2021 Josh Hellings</p>
+          </div>
+      </div>
+    </footer>
+    <!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+    
+</body>
+
+</html>

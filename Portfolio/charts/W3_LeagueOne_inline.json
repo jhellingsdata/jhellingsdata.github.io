@@ -1,0 +1,80 @@
+   
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "data": {
+      "values": [
+        {"venue": "Alexandra Stadium", "home_team": "Crewe Alexandra", "capacity": 10153},
+        {"venue": "Keepmoat Stadium", "home_team": "Doncaster Rovers", "capacity": 15231},
+        {"venue": "Highbury Stadium", "home_team": "Fleetwood Town", "capacity": 5500},
+        {"venue": "MEMS Priestfield Stadium", "home_team": "Gillingham FC", "capacity": 11582},
+        {"venue": "AESSEAL New York Stadium", "home_team": "Rotherham United", "capacity": 12021},
+        {"venue": "Montgomery Waters Meadow", "home_team": "Shrewsbury Town", "capacity": 9875},
+        {"venue": "Portman Road Stadium", "home_team": "Ipswitch Town", "capacity": 30311},
+        {"venue": "Stadium of Light", "home_team": "Sunderland FC", "capacity": 48707},
+        {"venue": "The Valley", "home_team": "Charlton Athletic", "capacity": 27111},
+        {"venue": "Adams Park", "home_team": "Wycombe Wanderers", "capacity": 10284},
+        {"venue": "Abbey Stadium", "home_team": "Cambridge United", "capacity": 8127},
+        {"venue": "Home Park", "home_team": "Plymouth Argyle", "capacity": 18000},
+        {"venue": "DW Stadium", "home_team": "Wigan Athletic", "capacity": 25138},
+        {"venue": "Hillsborough Stadium", "home_team": "Sheffield Wednesday", "capacity": 39812},
+        {"venue": "Fratton Park", "home_team": "Portsmouth FC", "capacity": 21100},
+        {"venue": "Pirelli Stadium", "home_team": "Burton Albion", "capacity": 6912},
+        {"venue": "Globe Arena", "home_team": "Morecambe FC", "capacity": 6476},
+        {"venue": "Kassam Stadium", "home_team": "Oxford United", "capacity": 12500},
+        {"venue": "Plough Lane", "home_team": "AFC Wimbledon", "capacity": 9300},
+        {"venue": "The Crown Ground", "home_team": "Accrington Stanley", "capacity": 5057},
+        {"venue": "Jonny-Rocks Stadium", "home_team": "Cheltenham Town", "capacity": 7066},
+        {"venue": "Sincil Bank", "home_team": "Lincoln City", "capacity": 10120},
+        {"venue": "Stadium MK", "home_team": "Milton Keynes Dons", "capacity": 30500},
+        {"venue": "University of Bolton Stadium", "home_team": "Bolton Wanderers", "capacity": 28723}     
+    ]},
+    
+      "title": {
+        "text": "League One - Football Venues",
+        "subtitle":["Stadium capacity, 21/22 season",""],
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },
+    
+      "XXparams": [
+          {"name": "highlight", "select": {"type": "point", "on": "mouseover"}}
+      ],
+    
+      "mark": {
+        "type":"bar",
+        "color":"#11bedd"},
+    
+      "height":295,
+      "width": "container",
+      
+      "encoding": {
+    
+        "x": {
+          "field": "capacity", 
+          "type": "quantitative",
+          
+          "title":null},
+    
+        "y": {
+          "field": "venue", 
+          "type": "ordinal",
+          "axis":{
+            "labelFontSize": 9.5
+          },
+          "title": null},
+    
+         "XXfillOpacity": {
+          "condition": {"param": "highlight", "value": 1},
+          "value": 0.1
+        },
+    
+        "tooltip":[
+          {"field":"home_team", "title":"Team"},
+          {"field": "capacity", "title":"Capacity"}
+        ]
+     
+      }
+    }
