@@ -1,78 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>DS Project</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Project</title>
 
-  <!--Stylesheets-->
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/project.css">
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="css/project.css">
+    
+
+    <!--call JS for responsive navbar-->
+  <script src="Project/navScript.js" defer></script>
+
+    <!--The next three lines allow the Vega embed-->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+  <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
-  </style>
 
-  <!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-
-</head>
+  </head>
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
-
-
-<!-- ///////////////////  BODY //////////////////////////////////// -->
-
-<body>
-
-  <section id="container">
-    <div id="main">
-
-    </div>
-  </section>
-
-
-<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
-
-<!-- <div class="page-container"> -->
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-top">
-        <h3>Data Science</h3>
-          <p><a href="cardsPortfolio.html">Portfolio</a></p>
-          <p><a href="Project.html">Project</a></p>                                        
-          <p><a href="Playground.html">Playground</a></p>           
-      </div>
-      
-      <div>
-        <ul class="socials">
-          <!--    <li><a href="https://uk.linkedin.com/in/josh-hellings-388b43165?trk=people-guest_people_search-card"><i class="fa fa-linkedin-square"></i></a></li>    -->
+  <body>
+    <nav class="navbar">
+      <div class="page-title">Data Science</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="https://rapidcharts.io/datascience">Course</a></li>
           <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io"><i class="fa fa-github"></i></a></li>
         </ul>
       </div>
+    </nav>
 
-      <div class="footer-bottom">
-        <p>&copy;2021 Josh Hellings</p>
-      </div>
+    <div class='loading-dots'>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-  </footer>
-<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
 
+    <div>
+      <iframe src="https://ccaf.io/cbeci/mining_map" width="100%" height="300" style="border:none;" title="W3Schools Free Online Web Tutorials"></iframe>
+    </div>
 
-</body>
-
-<!-- ///////////////////  BODY //////////////////////////////////// -->
+  </body>
 
 </html>
