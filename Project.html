@@ -54,7 +54,7 @@
     <hr class="solid">
 
     <p><span class="leader">Aims: </span>
-      In less than 80 minutes, enough solar energy hits the Earth to power energy the whole world's energy usage for a whole year, and the world has only just started to take advantage. There has been a general consensus that switching to renewable energy sources is perhaps the most important goal in limiting climate change. This project looks at this transition by focusing on Solar development, and shows how the economics of Solar are enough to justify its need.
+      In less than 80 minutes, enough solar energy hits the Earth to power energy the whole world's energy usage for a whole year, and the world has only just started to take advantage. The general consensus is that switching to renewable energy sources is perhaps the most important goal in limiting climate change. This project looks at this transition by focusing on solar development, and shows how the economics of solar are enough to justify its need.
     </p>
     
     <p>
@@ -78,9 +78,8 @@
       </div>
 
       <p>
-        Are there similar dynamics at play in the solar industry? The following few graphs plots use data from the International Renewable Energy Agency (<a href="https://www.irena.org/">IRENA</a>). First, I explored the general trend in solar prices relative to other renewables. The data uses a Levelised Cost of Electricity (LCOE), as a means of comparing different energy sources (essentially by comparing total costs, energy output, and lifespan). The graph is interactive: click a datapoint to highlight its series on both graphs, double-click to reset.
+        Are there similar dynamics at play in the solar industry? The following graphs plot data from the International Renewable Energy Agency (<a href="https://www.irena.org/">IRENA</a>). First, I explored the general trend in solar prices relative to other renewables. The data uses a Levelised Cost of Electricity (LCOE), as a means of comparing different energy sources (essentially by comparing total costs, energy output, and lifespan). The graph is interactive: click a datapoint to highlight its series on both graphs, double-click to reset.
       </p>
-      <p></p>
 
       <div class="card" id="renewableCost">
         <div class="chart" id="chart2"></div>
@@ -111,7 +110,7 @@
     </div>
 
     <p>
-      Using a different IRENA dataset, obtained from their excel query tool, I split net solar installations into world regions. China's dominance in the solar industry warranted its own datapoint. Remarkably, prior to 2010, the world had less than 5% of the Solar Capacity it does today. The global expansion of solar shows a clear and accelerating increase, however the near non-existent values for the Middle East and particularly Africa show considerable wasted potential.
+      Using a different IRENA dataset, obtained from their excel query tool, I split net solar installations into world regions. China's dominance in the solar industry warranted its own datapoint. Remarkably, prior to 2010, the world had less than 5% of the solar capacity it does today. The global expansion of solar shows a clear and accelerating increase, however the near non-existent values for the Middle East and particularly Africa show considerable wasted potential.
     </p>
 
     <div class="card" id="solarvscoal">
@@ -120,7 +119,7 @@
     </div>
 
     <p>
-      Despite the immensely reduced costs and rapid expansion, solar energy still makes up a fraction of the global energy balance. In 2020, solar power generation was only 4.5% of the power generation from coal.
+      Despite the immensely reduced costs and rapid expansion, solar energy still makes up a fraction of the global energy balance. In 2020, solar power generation was only 4.5% of the power generation from coal. The data for these graphs is provided by the are the EIA API and so should update automatically with additions of new yearly data.
     </p>
   
     <div class="card" id="elec_US">
@@ -134,12 +133,9 @@
     </div>
 
     <p>
-      The graph above shows the cheapest new energy project for every county in the US, with removal of projects if they are predicted to be unfeasible. The data is collated by the<a href="https://calculators.energy.utexas.edu/lcoe_map/#/county/tech">University of Texas, Austin</a>, and a generates dataset dependent on a few additional live parameters. To save steps, I uploaded the file straight to Github, and merge with a GeoJson US Counties map live in the chart JSON specification. Note: Alaska is hid in Vega-Editor but does not transfer.
+      The graph above shows the cheapest new energy project for every county in the US, with removal of projects if they are predicted to be unfeasible. The data is collated by the <a href="https://calculators.energy.utexas.edu/lcoe_map/#/county/tech">University of Texas, Austin</a>, and a generates dataset dependent on a few additional live parameters. To save steps, I uploaded the file straight to Github, and merged it with a GeoJson US Counties map live in the chart JSON specification. Note: Alaska is hid in Vega-Editor but does not transfer.
     </p>
 
-    <p>
-      
-    </p>
 
     <div class="card" id="kepler1">
 
@@ -148,12 +144,12 @@
     </div>
 
     <p>
-
+      Lastly, this graph maps global emissions per capita using data from the EIA, with darker hues indicating higher pollution relative to population size. The API endpoint for this graph was only per region, and as such I used to Python automatically fetch data for each country. First, I scraped the specific Total Emissions API page listing each region with data. From this, I converted country names to 3 character ISO names, forming a list. It was then possible to loop through the API for each region, merging the data in a master dataset. I repeated this process for their Population API to calculate emissions on a per capita basis, and then merged again with a GeoJson file ready for export to Kepler. <a href="Project/Python/EIA_API_Emissions.ipynb">Python notebook.</a>
     </p>
 
 
     <p>
-      The majority of data used came from the EIA, IRENA and LBNL. IRENA only offered data either through excel direct downloads or query tools. As such for these, it was a case of extracting the data into a separate sheet and simply saving as a CSV and exporting to Github. Their data is mostly infrequent, being released yearly in new update publications, additionally, the nature of their data means the general trend has been identified and so there would not be considerable benefit in a live data source. LBNL similarly offered a large excel dataset containing semi-raw data and so the steps taken for this source were the same, with the data combined in a CSV file for the shared graph.
+      The majority of data used came from the EIA, IRENA and LBNL. IRENA only offered data either through excel direct downloads or query tools. As such for these, it was a case of extracting the data into a separate sheet and simply saving as a CSV and exporting to Github. Their data is mostly infrequent, being released yearly in new update publications. Additionally, the nature of their data means the general trend has been identified and so there would not be considerable benefit in a live data source. LBNL similarly offered a large excel dataset containing semi-raw data and so the steps taken for this source were the same, with the data combined in a CSV file for the shared graph.
     </p>
 
     <p>
@@ -177,7 +173,7 @@
     </p>
 
     <p>
-      Despite this, a system combined with other technologies is already capable of providing as cheap electricity as polluting alternative and the rate of development in solar technology gives a good indication of the renewables potential yet to come.
+      Despite this, a system combined with other technologies is already capable of providing as cheap electricity as polluting alternative and the rate of development in solar technology gives a good indication of the future potential of renewables.
     </p>
 
     </section>
