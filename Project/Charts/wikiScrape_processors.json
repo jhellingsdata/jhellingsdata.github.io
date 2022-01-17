@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Plot showing average data with raw values in the background.",
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/wikiScrape_Processors.JSON"},
+    "title": {
+      "text": "Transistors per square millimeter, 1971-2021",
+      "anchor": "start",
+      "subtitle": "Data scraped in Python, Source: Wikipedia",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10
+    },
+
+    "width": "container",
+    "height": 300, 
+
+    "layer": [
+      {
+        "mark": {"type": "circle", "opacity": 0.5, "color": "cornflowerblue"},
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal", "title": null,
+            "axis":{"grid": false}},
+          "y": {
+            "field": "Transistors/mm2",
+            "type": "quantitative",
+            "title": null,
+            "scale": {"type": "log", "base":10},
+            "axis":{"tickCount": 7}
+          },
+          "tooltip":[
+              {"field":"Processor"},
+              {"field":"Year", "timeUnit":"year", "title": "Released"},
+              {"field":"Designer"}]
+        }
+      },
+      {
+        "mark": {"type": "line", "color":"coral", "opacity": 0.8},
+
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "y": {
+            "field": "Transistors/mm2",
+            "type": "quantitative",
+            "scale": {"type": "log", "base":10}
+          }
+        },
+        "transform": [{
+          "on": "Year",
+          "regression": "Transistors/mm2",
+          "method": "exp"
+        }]
+      }
+    ]
+}

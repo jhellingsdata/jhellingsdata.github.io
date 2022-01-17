@@ -1,0 +1,119 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/SolCost_IRENA.csv"},
+  
+    "title": {
+      "text": "Cost of renewables, 10 years of progress",
+      "anchor": "start",
+      "subtitle": "Global LCOE 2020$/kWh, source: IRENA",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 11
+    },
+
+    "vconcat":[
+      {   
+        "width": 500,
+        "height": 300,
+  
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "temporal",
+            "title": null,
+            "axis": {"grid": false}
+          }},
+  
+        "layer": [
+          {
+            "encoding": {
+              "color": {"field": "Technology", "type": "nominal"},
+              "y": {
+                "field": "Weighted average",
+                "type": "quantitative"
+              }
+            },
+  
+            "layer": [
+              {"mark": {"type": "line", "interpolate":"linear", "point":false, "tooltip": {"content": "data"}}},
+              {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+            ]
+          },
+          {
+            "transform": [{"pivot": "Technology", "value": "Weighted average", "groupby": ["Year"]}],
+            "mark": "rule",
+            "encoding": {
+              "opacity": {
+                "condition": {"value": 0.3, "param": "hover", "empty": false},
+                "value": 0
+              },
+              "tooltip": [
+                {"title": "Levelised cost of energy 2020$/kWh"},
+                {"field": "Solar photovoltaic", "type": "quantitative"},
+                {"field": "Onshore wind", "type": "quantitative", "title": "Onshore wind"},
+                {"field": "Offshore wind", "type": "quantitative", "title": "Offshore wind"},
+                {"field": "Solar concentrating", "type": "quantitative"},
+                {"field": "Hydropower", "type": "quantitative", "title": "Hydropower $/kWh"},
+                {"field": "Bioenergy", "type": "quantitative"},
+                {"field": "Geothermal", "type": "quantitative"}
+              ]
+            },
+            "params": [{
+              "name": "hover",
+              "select": {
+                "type": "point",
+                "fields": ["Year"],
+                "nearest": true,
+                "on": "mouseover",
+                "clear": "mouseout"
+              }
+            }]
+          }
+        ]
+      },
+      {
+        "title": {
+          "text": "Added capacity, MW",
+          "anchor": "start"
+        },
+        "width": 500,
+        "height": 200,
+
+        "mark": {
+          "type": "bar",
+          "height": {"band": 0.8},
+          "align": "center",
+          "binSpacing": 0
+         
+        },
+  
+        "encoding": {
+          "x": {
+            "field": "Net additions MW",
+            "type": "quantitative",
+            "stack": "zero",
+            "title": null
+          },
+          "y": {
+            "field": "Year",
+            "type": "ordinal",
+            "timeUnit": "year",
+            "sort": "ascending",
+            "title": null,
+            "axis": {
+              "grid": false
+            }
+          },
+          "color": {
+            "field": "Technology",
+            "type": "nominal",
+            "title": "Technology",
+            "scale": {
+              "domain": ["Bioenergy", "Geothermal", "Hydropower", "Offshore wind", "Onshore wind", "Solar concentrating", "Solar photovoltaic"],
+              "range": ["#009642", "#E86200", "#00A9E8", "#5B5E76", "#5B5E76", "#AA649E", "#F7B913"]
+            }
+          }
+        }
+      }
+    ]
+  }
+  

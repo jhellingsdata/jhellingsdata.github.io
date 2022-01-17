@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/SolCapacity_Global_IRENA.csv"
+  },
+  "title": {
+    "text": "Solar progress around the globe",
+    "color": "#54bb8e",
+    "fontSize": 16,
+    "subtitlePadding": 5,
+    "fontWeight": 600,
+    "anchor": "start",
+    "subtitle": "Total installed MW, source: IRENA"
+  },
+  "width": 380,
+  "height": 250,
+  "transform": [
+    {"calculate": "year(datum.Year)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2019,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 2001,
+        "max": 2020,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "mark": "area",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": null},
+    "y": {"field": "Total Installed MW", "type": "quantitative", "title": null},
+    "color": {
+      "field": "Area",
+      "scale": {"scheme": "set3"},
+      "legend": {
+        "orient": "top-left",
+        "title": null
+      }
+    },
+
+
+    "tooltip": [
+      {"field": "Area"},
+      {"field": "Year", "formatType": "time", "format": "%Y"},
+      {"field": "Net Additions MW", "format": ".5"},
+      {"field": "Total Installed MW", "format": ".6"}
+    ]
+  }
+}

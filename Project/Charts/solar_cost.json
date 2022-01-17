@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/SolCost_Global_US.csv"
+    },
+  
+    "title": {
+      "text": "The decade of solar? Costs drop 7 times by 2020",
+      "color": "#54bb8e",
+      "fontSize": 14,
+      "subtitlePadding": 5,
+      "fontWeight": 600,
+      "anchor": "start",
+      "subtitle": "Global and US LCOE 2020$/kWh, source: IRENA, LBNL",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 11
+    },
+  
+    "width": 380,
+    "height": 240,
+    "mark": {"type": "line", "interpolate": "monotone", "point": true},
+  
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": null
+      },
+      "y": {
+        "field": "Solar_LCOE",
+        "type": "quantitative",
+        "title": null
+      },
+  
+      "color": {
+        "legend":{
+          "title": "Estimate",
+          "orient": "top-right"
+        },
+        "field": "Org",
+        "scale": {
+          "range": ["#4EA1EB", "#EB984E"]
+        }
+      }
+    }
+  
+  }

@@ -1,0 +1,987 @@
+﻿EIA ID,Project Name,Solar COD,Solar COD Year,Region,State,Latitude,Longitude,Avg GHI,Solar Tech Main,Solar Tech Sub,Solar Capacity MW-DC,Solar Capacity MW-AC,ILR,Mount,Tracking Type,Tilt,Azimuth,Hybrid?,Storage Tech,Storage COD Year,Storage Capacity MW,Storage Energy MWh,Energy Value 2020$/MWh,Capacity Value 2020$/MWh,Levelized PPA 2020$/MWh,LCOE noITC 2020$/MWh,2008 Capacity Factor,2009 Capacity Factor,2010 Capacity Factor,2011 Capacity Factor,2012 Capacity Factor,2013 Capacity Factor,2014 Capacity Factor,2015 Capacity Factor,2016 Capacity Factor,2017 Capacity Factor,2018 Capacity Factor,2019 Capacity Factor,2020 Capacity Factor
+10439,Solar Energy Generating Systems (SEGS) III,31/12/1986,1986,CAISO,CA,35.01,-117.56,5.95,CSP,Trough,,34.20,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,,  ,  ,,,23.0%,21.0%,20.0%,20.5%,18.9%,19.0%,18.2%,17.4%,15.5%,14.7%,14.6%,12.8%,
+10440,Solar Energy Generating Systems (SEGS) IV,31/12/1986,1986,CAISO,CA,35.01,-117.56,5.95,CSP,Trough,,34.20,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,,  ,  ,,,23.1%,21.2%,21.1%,19.3%,20.8%,19.5%,18.1%,17.7%,16.3%,14.4%,14.8%,14.0%,
+10441,Solar Energy Generating Systems (SEGS) V,31/10/1987,1987,CAISO,CA,35.02,-117.56,5.95,CSP,Trough,,34.20,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,,  ,  ,,,23.1%,20.0%,18.1%,20.2%,20.9%,19.3%,18.8%,17.6%,16.7%,14.7%,15.8%,13.8%,
+10442,Solar Energy Generating Systems (SEGS) VI,31/12/1988,1988,CAISO,CA,35.02,-117.57,5.95,CSP,Trough,,35.00,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,,  ,  ,,,21.8%,20.5%,20.7%,19.3%,18.2%,17.1%,16.5%,15.3%,13.3%,11.9%,11.2%,,
+10443,Solar Energy Generating Systems (SEGS) VII,31/12/1988,1988,CAISO,CA,35.02,-117.57,5.95,CSP,Trough,,35.00,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,,  ,  ,,,21.2%,19.2%,19.2%,18.7%,17.6%,15.7%,15.3%,12.3%,9.9%,10.6%,9.1%,,
+10444,Solar Energy Generating Systems (SEGS) VIII,31/12/1989,1989,CAISO,CA,35.03,-117.34,5.94,CSP,Trough,,92.00,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,, $23.17 , $6.91 ,,,17.5%,17.1%,20.2%,19.8%,18.8%,18.3%,18.9%,17.9%,18.2%,16.0%,17.2%,15.6%,14.8%
+10446,Solar Energy Generating Systems (SEGS) IX,31/10/1990,1990,CAISO,CA,35.03,-117.36,5.94,CSP,Trough,,92.00,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,, $22.85 , $6.53 ,,,19.5%,18.1%,21.3%,20.8%,21.2%,20.0%,19.2%,18.9%,18.5%,17.0%,17.8%,16.1%,15.8%
+56405,Nevada Solar One,01/06/2007,2007,West (non-ISO),NV,35.80,-114.98,5.48,CSP,Trough,,68.50,,Tracking,Single Axis,Tracking,180,,,,,, $23.87 , $7.55 ,208.7,,21.8%,21.1%,22.2%,21.4%,21.4%,18.8%,19.4%,17.6%,19.4%,19.7%,18.4%,18.4%,17.8%
+56568,Nellis Air Force Base,01/12/2007,2007,West (non-ISO),NV,36.26,-115.05,5.62,PV,c-Si,14.06,12.00,1.17,Tracking,Single Axis,20,180,,,,,, $28.05 , $6.66 ,,356.1,30.8%,30.4%,29.8%,30.6%,30.5%,30.2%,29.7%,28.9%,18.7%,26.8%,25.6%,25.2%,
+56481,Alamosa Photovoltaic Solar Plant (SunE Alamosa),01/12/2007,2007,West (non-ISO),CO,37.69,-105.88,5.37,PV,"Combo (c-Si, CPV)",8.22,6.90,1.19,Combo,"Fixed, Single, Double",20,180,,,,,, $18.52 , $26.83 ,239.9,382.7,28.9%,28.9%,29.1%,29.4%,29.0%,28.0%,27.5%,27.1%,26.8%,25.4%,26.4%,25.7%,23.5%
+56944,Copper Mountain Solar 1 (CM10) - Phase 1 (El Dorado Energy Solar Project),01/12/2008,2008,CAISO,NV,35.79,-115.00,5.66,PV,Thin-Film,12.14,10.00,1.21,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.45 , $4.03 ,168.8,195.3,,24.8%,24.0%,24.7%,24.4%,23.5%,21.7%,23.4%,21.9%,22.4%,23.6%,25.8%,25.0%
+56929,FPL DeSoto Next Generation Solar Energy Center,27/10/2009,2009,Southeast (non-ISO),FL,27.32,-81.80,5.04,PV,c-Si,27.60,25.00,1.10,Tracking,Single Axis,Tracking,180,,,,,, $20.64 , $30.56 ,,303.1,,,24.4%,23.7%,23.7%,22.8%,21.7%,22.8%,22.2%,22.0%,21.4%,20.9%,18.5%
+56939,NRG Solar Blythe I (not to be confused with 2016 NextEra plants),01/12/2009,2009,CAISO,CA,33.59,-114.74,5.68,PV,Thin-Film,25.20,21.00,1.20,Fixed Tilt,Fixed Tilt,24,180,,,,,, $16.92 , $4.30 ,117.5,139.6,,,28.0%,27.9%,26.0%,26.2%,25.4%,25.0%,24.6%,23.9%,23.9%,23.5%,22.5%
+,FPL Martin Next Generation Solar Energy Center,01/12/2010,2010,Southeast (non-ISO),FL,27.05,-80.55,4.95,CSP,Trough,,75.00,,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,,  ,  ,,,,,,,,,,,,,,,
+57205,Copper Mountain Solar 1 (CM48) - Phase 2 Expansion,01/06/2010,2010,CAISO,NV,35.78,-114.99,5.66,PV,Thin-Film,60.50,48.00,1.26,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.46 , $4.23 ,166.4,145.7,,,,25.7%,25.2%,25.7%,24.6%,24.2%,23.5%,23.7%,23.8%,23.3%,23.8%
+57243,Cimarron I Solar Project,01/12/2010,2010,West (non-ISO),NM,36.47,-104.64,5.36,PV,Thin-Film,36.80,30.64,1.20,Fixed Tilt,Fixed Tilt,25,180,,,,,,  ,  ,132.1,162.1,,,,25.3%,26.0%,24.8%,23.3%,22.6%,23.7%,22.7%,23.6%,23.0%,23.2%
+57377,Greater Sandhill Solar Plant 1,01/12/2010,2010,West (non-ISO),CO,37.69,-105.89,5.37,PV,c-Si,20.35,19.00,1.07,Tracking,Single Axis,20,177,,,,,, $18.44 , $19.16 ,150.8,174.9,,,,29.4%,29.4%,28.7%,27.9%,27.4%,28.3%,28.4%,28.5%,28.1%,28.6%
+,Davidson County Solar Farm,20/12/2010,2010,Southeast (non-ISO),NC,35.75,-80.29,4.48,PV,c-Si,22.30,17.50,1.27,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+57197,Blue Wing Solar Project,01/11/2010,2010,ERCOT,TX,29.30,-98.40,4.79,PV,Thin-Film,16.60,13.90,1.19,Fixed Tilt,Fixed Tilt,20,205,,,,,, $29.49 , $-   ,201.9,265.0,,,,23.5%,20.6%,19.5%,19.0%,18.0%,19.0%,18.6%,17.9%,17.8%,16.7%
+57202,PSEG Jacksonville Solar,01/09/2010,2010,Southeast (non-ISO),FL,30.32,-81.96,4.74,PV,Thin-Film,15.00,12.60,1.19,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,210.1,320.0,,,,21.0%,19.0%,19.4%,19.1%,18.1%,18.6%,18.4%,16.0%,16.6%,14.7%
+57203,PSEG Wyandot Solar Facility,15/03/2010,2010,PJM,OH,40.88,-83.32,3.84,PV,Thin-Film,12.02,10.08,1.19,Fixed Tilt,Fixed Tilt,25,180,,,,,, $25.85 , $14.87 ,227.7,356.7,,,,15.9%,17.8%,16.1%,16.5%,16.5%,16.3%,15.4%,14.8%,14.2%,13.4%
+56930,FPL Space Coast Next Generation Solar Energy Center,01/04/2010,2010,Southeast (non-ISO),FL,28.49,-80.68,5.02,PV,c-Si,11.00,10.00,1.10,Fixed Tilt,Fixed Tilt,20,180,,,,,, $20.71 , $28.36 ,,365.5,,,,21.5%,21.1%,20.7%,20.0%,20.2%,20.8%,17.8%,20.0%,18.9%,16.8%
+57191,Exelon City Solar (West Pullman Industrial Redevelopment Area),01/07/2010,2010,PJM,IL,41.68,-87.65,3.90,PV,c-Si,10.00,8.25,1.21,Tracking,Single Axis,Tracking,180,,,,,, $23.10 , $25.07 ,,421.9,,,19.6%,19.5%,20.8%,19.8%,20.1%,19.5%,19.5%,19.8%,19.0%,19.5%,19.1%
+58569,Paradise Solar Energy Center,31/12/2010,2010,PJM,NJ,39.84,-75.22,4.02,PV,c-Si,6.16,5.10,1.21,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.30 , $19.79 ,,278.7,,,,,,,,,,,,,
+57589,Long Island Solar Farm,01/11/2011,2011,NYISO,NY,40.87,-72.85,4.00,PV,c-Si,37.69,31.50,1.20,Fixed Tilt,Fixed Tilt,28,180,,,,,, $31.44 , $10.14 ,323.6,292.5,,,,,19.1%,18.8%,18.4%,18.9%,19.4%,17.1%,17.7%,18.3%,17.5%
+57317,San Luis Valley Solar Ranch,01/11/2011,2011,West (non-ISO),CO,37.69,-105.92,5.35,PV,c-Si,35.10,30.40,1.15,Tracking,Single Axis,Tracking,180,,,,,, $18.16 , $19.09 ,133.6,151.1,,,,,29.0%,27.3%,29.5%,27.7%,28.9%,28.6%,29.2%,27.3%,28.7%
+57699,Webberville Project - Austin Energy PV Project,29/12/2011,2011,ERCOT,TX,30.24,-97.51,4.72,PV,c-Si,34.99,30.00,1.17,Tracking,Single Axis,Tracking,182,,,,,, $27.64 , $-   ,159.5,205.4,,,,,24.3%,22.4%,22.1%,20.4%,16.7%,23.8%,21.8%,21.5%,21.8%
+57338,NRG Solar - Roadrunner,29/08/2011,2011,West (non-ISO),NM,31.80,-106.67,5.90,PV,Thin-Film,23.92,20.16,1.19,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,128.1,139.6,,,,,30.3%,30.0%,29.1%,28.6%,29.6%,29.6%,28.1%,29.0%,28.2%
+57497,Stroud Solar Station,04/10/2011,2011,CAISO,CA,36.52,-120.12,5.30,PV,c-Si,24.64,20.00,1.23,Fixed Tilt,Fixed Tilt,25,181,,,,,, $17.32 , $4.94 ,,171.5,,,,,24.5%,25.6%,24.4%,23.4%,21.9%,19.8%,21.3%,19.1%,19.2%
+57360,Sun City Project (Avenal),05/08/2011,2011,CAISO,CA,35.98,-120.10,5.35,PV,Thin-Film,25.64,20.00,1.28,Fixed Tilt,Fixed Tilt,25,180,,,,,, $0.42 , $4.16 ,240.1,215.3,,,,,24.5%,25.3%,24.5%,24.4%,23.9%,20.3%,21.2%,18.5%,21.5%
+57318,Copper Crossing,30/09/2011,2011,West (non-ISO),AZ,33.16,-111.48,5.76,PV,c-Si,25.00,20.00,1.25,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,134.1,156.5,,,,,29.1%,30.5%,30.3%,29.6%,30.8%,30.0%,28.6%,29.4%,30.1%
+57361,Sand Drag Solar Project (Avenal),11/08/2011,2011,CAISO,CA,35.98,-120.10,5.35,PV,Thin-Film,24.36,19.00,1.28,Fixed Tilt,Fixed Tilt,25,180,,,,,, $0.42 , $4.16 ,240.1,212.7,,,,,24.2%,25.4%,24.5%,24.4%,24.1%,20.4%,21.3%,19.1%,21.5%
+57669,SMUD - Bruceville (at Grundman) (NOT RE Bruceville),28/12/2011,2011,West (non-ISO),CA,38.37,-121.41,5.08,PV,Thin-Film,21.90,18.00,1.22,Fixed Tilt,Fixed Tilt,20,210,,,,,,  ,  ,,195.0,,,,,22.5%,23.9%,22.1%,21.9%,20.3%,20.3%,21.0%,20.6%,20.4%
+57448,Pilesgrove Solar Project,31/10/2011,2011,PJM,NJ,39.61,-75.31,4.09,PV,c-Si,19.90,18.00,1.11,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.56 , $20.03 ,,284.7,,,,,17.4%,17.0%,17.2%,17.7%,18.0%,16.4%,16.3%,16.8%,16.6%
+57562,APS - AZ Sun - Paloma Solar Plant,11/10/2011,2011,West (non-ISO),AZ,33.02,-112.66,5.81,PV,Thin-Film,22.50,17.60,1.28,Fixed Tilt,Fixed Tilt,25,190,,,,,, $17.95 , $10.40 ,,168.3,,,,,27.7%,27.0%,26.1%,25.5%,24.4%,25.0%,24.6%,25.0%,25.3%
+57561,Cotton Center,11/10/2011,2011,West (non-ISO),AZ,33.04,-112.66,5.81,PV,c-Si,21.00,17.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $19.16 , $10.98 ,,196.1,,,,,30.9%,29.3%,29.3%,28.7%,26.1%,21.9%,24.7%,26.2%,26.2%
+57563,Hyder Solar Plant I,01/10/2011,2011,West (non-ISO),AZ,33.03,-113.35,5.86,PV,c-Si,21.00,16.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $18.91 , $12.63 ,,187.7,,,,,,29.6%,30.0%,30.0%,28.9%,27.5%,27.0%,26.5%,25.9%
+57498,Five Points Solar Station,01/09/2011,2011,CAISO,CA,36.40,-120.11,5.36,PV,c-Si,17.60,15.00,1.17,Fixed Tilt,Fixed Tilt,25,179,,,,,, $16.44 , $5.21 ,,198.8,,,,,22.7%,21.6%,21.5%,19.4%,22.6%,21.1%,21.8%,19.9%,18.3%
+57499,Westside Solar Station,13/09/2011,2011,CAISO,CA,36.38,-120.12,5.36,PV,c-Si,18.48,15.00,1.23,Fixed Tilt,Fixed Tilt,25,180,,,,,, $16.41 , $5.14 ,,180.0,,,,,24.5%,24.8%,24.4%,21.9%,23.2%,19.3%,21.8%,21.1%,18.5%
+57790,Bagdad Solar Project,01/12/2011,2011,West (non-ISO),AZ,34.59,-113.18,5.71,PV,c-Si,16.59,15.00,1.11,Tracking,Single Axis,Tracking,180,,,,,, $22.65 , $12.18 ,,221.2,,,,,27.3%,26.1%,26.9%,26.0%,26.5%,26.0%,26.1%,24.9%,23.9%
+57662,McGraw-Hill Solar Farm,01/12/2011,2011,PJM,NJ,40.28,-74.56,3.99,PV,c-Si,14.11,12.00,1.18,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.70 , $19.94 ,,322.1,,,,,17.9%,17.7%,16.8%,17.2%,17.0%,16.3%,15.7%,17.2%,16.7%
+58147,Prescott Solar Plant (SunE AZ1 - Prescott),01/11/2011,2011,West (non-ISO),AZ,34.68,-112.41,5.53,PV,c-Si,11.75,10.40,1.13,Tracking,Single Axis,Tracking,180,,,,,, $20.44 , $8.27 ,,153.6,,,,,30.0%,29.2%,29.2%,28.1%,28.6%,27.7%,16.0%,25.8%,27.3%
+57738,SPS - Lea,01/12/2011,2011,SPP,NM,32.68,-103.30,5.57,PV,c-Si,10.63,10.08,1.05,Tracking,Single Axis,Tracking,181,,,,,, $25.52 , $20.16 ,,,,,,,26.5%,25.9%,25.3%,23.3%,24.9%,23.3%,21.4%,20.6%,24.3%
+57739,SPS - Monument,01/12/2011,2011,SPP,NM,32.34,-104.24,5.63,PV,c-Si,10.84,10.08,1.07,Tracking,Single Axis,Tracking,180,,,,,, $25.58 , $21.58 ,,,,,,,27.4%,27.5%,26.3%,25.3%,24.9%,23.3%,23.1%,23.3%,25.4%
+57337,Dover SUN Park (White Oak Solar),28/07/2011,2011,PJM,DE,39.19,-75.51,4.13,PV,c-Si,11.20,10.00,1.12,Tracking,Single Axis,Tracking,180,,,,,, $19.04 , $15.16 ,,258.2,,,,,21.1%,20.7%,20.3%,19.9%,20.0%,18.9%,18.5%,19.7%,18.1%
+57948,Oak Solar Farm,30/12/2011,2011,PJM,NJ,39.38,-75.19,4.16,PV,c-Si,12.50,10.00,1.25,Fixed Tilt,Fixed Tilt,15,182,,,,,, $19.39 , $22.33 ,,321.7,,,,,19.2%,19.7%,19.1%,18.2%,18.2%,17.3%,15.7%,16.7%,15.0%
+57740,SPS - Hopi,01/09/2011,2011,SPP,NM,32.35,-104.23,5.63,PV,c-Si,10.87,9.90,1.10,Tracking,Single Axis,Tracking,180,,,,,, $25.23 , $21.98 ,,,,,,,28.2%,27.6%,25.4%,24.5%,24.9%,23.3%,23.0%,21.4%,25.3%
+57736,SPS - Dollarhide,01/09/2011,2011,SPP,NM,32.13,-103.14,5.58,PV,c-Si,10.89,9.90,1.10,Tracking,Single Axis,Tracking,181,,,,,, $25.76 , $23.05 ,133.2,,,,,,25.6%,26.5%,25.5%,24.5%,24.9%,23.3%,20.3%,21.9%,24.5%
+57737,SPS - Jal,01/12/2011,2011,SPP,NM,32.47,-103.33,5.59,PV,c-Si,10.77,9.90,1.09,Tracking,Single Axis,Tracking,181,,,,,, $25.50 , $22.03 ,,,,,,,26.6%,26.8%,25.6%,24.6%,24.9%,23.3%,22.3%,22.9%,25.2%
+57575,Hondale Solar Farm (PNM - Deming Solar Energy Center) Phase 1+2,01/08/2011,2011,West (non-ISO),NM,34.83,-106.77,5.64,PV,Thin-Film,11.20,9.00,1.24,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.38 , $18.15 ,,136.2,,,,,26.5%,,26.8%,25.4%,26.4%,22.4%,25.6%,23.8%,25.9%
+"57777, 57779, 57781",RE Dillard 1-3,30/12/2011,2011,West (non-ISO),CA,38.46,-121.18,5.06,PV,c-Si,12.03,8.91,1.35,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,200.5,,,,,,,,,,,,,
+57462,BNB Napoleon Solar Phase 1,23/12/2011,2011,PJM,OH,41.39,-84.09,3.87,PV,c-Si,9.79,8.08,1.21,Tracking,Single Axis,Tracking,179,,,,,, $26.80 , $10.96 ,,179.1,,,,,20.0%,20.3%,20.2%,18.8%,19.2%,17.9%,16.5%,17.3%,
+57485,Flemington Solar,31/12/2011,2011,PJM,NJ,40.49,-74.85,3.97,PV,c-Si,9.36,8.00,1.17,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.82 , $20.05 ,,256.9,,,,,17.3%,18.2%,17.5%,18.6%,19.1%,17.8%,16.8%,17.6%,17.5%
+60489,"Hamilton Solar-Crosswicks (subunits 1,2)",30/12/2011,2011,PJM,NJ,40.17,-74.63,4.00,PV,c-Si,8.45,7.50,1.13,Fixed Tilt,Fixed Tilt,22,180,,,,,, $18.72 , $22.72 ,,,,,,,,,,,,15.9%,14.7%,15.7%,13.6%
+57571,Los Lunas Solar (Los Morros) Phase 1+2,01/05/2011,2011,West (non-ISO),NM,34.83,-106.77,5.64,PV,Thin-Film,8.90,7.00,1.27,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.38 , $18.33 ,,159.8,,,,,26.5%,,26.5%,24.9%,25.1%,21.9%,24.4%,24.6%,25.3%
+57359,Avenal Park Solar Project (Avenal),11/08/2011,2011,CAISO,CA,35.99,-120.11,5.35,PV,Thin-Film,7.69,6.00,1.28,Fixed Tilt,Fixed Tilt,25,180,,,,,, $0.50 , $4.13 ,240.1,226.7,,,,,24.1%,25.4%,24.3%,24.3%,24.2%,20.3%,20.1%,19.6%,21.3%
+57565,Stanton Solar Farm (RP Orlando) Phase 1,05/11/2011,2011,Southeast (non-ISO),FL,28.49,-81.18,4.89,PV,c-Si,5.92,5.50,1.08,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,193.8,237.3,,,,,21.1%,19.9%,19.3%,19.1%,20.4%,19.0%,19.4%,18.0%,17.7%
+57554,Colorado Springs Air Force Academy,30/06/2011,2011,West (non-ISO),CO,38.96,-104.81,4.82,PV,c-Si,6.04,5.20,1.16,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,160.6,,,,,27.1%,24.7%,24.8%,24.6%,25.3%,24.6%,25.9%,24.4%,24.4%
+57591,Hatch Solar Center,08/07/2011,2011,West (non-ISO),NM,32.63,-107.26,5.84,PV,CPV,5.88,5.04,1.17,Tracking,Dual-Axis,Tracking,,,,,,,  ,  ,119.0,,,,,,,,,,,,,,
+57707,Mesquite Solar 1,31/12/2012,2012,CAISO,AZ,33.34,-112.92,5.87,PV,c-Si,235.10,170.00,1.38,Fixed Tilt,Fixed Tilt,20,180,,,,,, $16.89 , $3.50 ,154.5,112.4,,,,,,27.8%,27.4%,26.7%,27.3%,27.8%,27.9%,27.4%,27.9%
+58017,Copper Mountain Solar 2 - Phase 1,21/11/2012,2012,CAISO,NV,35.80,-114.97,5.48,PV,Thin-Film,114.38,92.00,1.24,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.66 , $3.68 ,115.9,68.5,,,,,,28.2%,27.8%,28.4%,27.8%,27.9%,28.0%,27.2%,28.2%
+57442,Silver State North Solar Project,16/04/2012,2012,West (non-ISO),NV,35.62,-115.35,5.51,PV,Thin-Film,63.50,52.00,1.22,Fixed Tilt,Fixed Tilt,25,180,,,,,, $23.70 , $5.08 ,139.1,146.9,,,,,,26.8%,26.3%,26.3%,25.7%,25.6%,25.9%,25.0%,25.9%
+58003,Alpaugh 50 (1st Phase),28/12/2012,2012,CAISO,CA,35.90,-119.44,5.31,PV,c-Si,66.25,50.00,1.33,Tracking,Single Axis,Tracking,180,,,,,, $16.02 , $3.28 ,164.2,135.9,,,,,,28.9%,30.4%,30.3%,30.3%,29.2%,27.8%,24.8%,29.6%
+57816,McKenzie Road Solar Farm 1-6,08/11/2012,2012,West (non-ISO),CA,38.31,-121.29,5.07,PV,c-Si,38.30,30.00,1.28,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,155.5,,,,,,,,,,,,,
+57368,Cogentrix - Alamosa (Alamosa Solar Generating Project),01/04/2012,2012,West (non-ISO),CO,37.60,-105.95,5.34,PV,CPV,36.70,30.00,1.22,Tracking,Dual-Axis,Tracking,,,,,,, $18.34 , $21.14 ,138.2,,,,,,,,,,,,,,
+57657,NRG Solar - Avra Valley,14/12/2012,2012,West (non-ISO),AZ,32.37,-111.28,5.79,PV,Thin-Film,34.00,26.46,1.28,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,132.5,143.1,,,,,,32.7%,32.0%,30.6%,32.2%,31.8%,31.1%,29.5%,28.1%
+58039,McHenry Solar Farm (K Road Modesto Solar or RET Modesto),01/12/2012,2012,CAISO,CA,37.74,-120.99,5.14,PV,c-Si,31.20,25.80,1.21,Tracking,Single Axis,Tracking,180,,,,,, $24.98 , $3.74 ,160.6,163.9,,,,,,29.5%,28.8%,28.5%,28.4%,27.6%,28.3%,27.1%,27.0%
+58062,Imperial Valley Solar Company (IVSC) 1,01/05/2012,2012,West (non-ISO),CA,33.25,-115.50,5.83,PV,c-Si,28.57,23.00,1.24,Fixed Tilt,Fixed Tilt,30,180,,,,,,  ,  ,114.4,161.2,,,,,,27.1%,26.0%,26.1%,26.2%,25.7%,21.8%,23.6%,21.2%
+50765,"Stillwater Solar PV I- Geothermal, CSP",05/03/2012,2012,West (non-ISO),NV,39.54,-118.56,5.27,PV,c-Si,26.20,21.80,1.20,Fixed Tilt,Fixed Tilt,16.2,180,PV+Geothermal+CSP,,,,, $27.56 , $4.50 ,,169.6,,,,,,,,,,,,,
+58489,Apex Solar,01/09/2012,2012,West (non-ISO),NV,36.39,-114.96,5.69,PV,c-Si,24.80,20.00,1.24,Tracking,Single Axis,Tracking,190,,,,,, $29.03 , $8.25 ,131.4,176.7,,,,,,30.1%,29.8%,27.9%,29.7%,29.6%,29.7%,29.3%,30.2%
+58002,Alpaugh North (2nd Phase),28/12/2012,2012,CAISO,CA,35.91,-119.43,5.31,PV,c-Si,26.53,20.00,1.33,Tracking,Single Axis,Tracking,180,,,,,, $15.90 , $3.76 ,164.2,148.3,,,,,,29.2%,30.6%,28.9%,29.9%,28.8%,27.7%,25.9%,25.6%
+57522,Cantua Solar Station,25/07/2012,2012,CAISO,CA,36.42,-120.34,5.35,PV,c-Si,25.81,20.00,1.29,Fixed Tilt,Fixed Tilt,25,179,,,,,, $16.73 , $3.98 ,,130.8,,,,,,27.5%,24.7%,24.3%,24.9%,22.7%,24.1%,23.0%,24.1%
+57523,Huron Solar Station,30/08/2012,2012,CAISO,CA,36.18,-120.11,5.38,PV,c-Si,26.80,20.00,1.34,Fixed Tilt,Fixed Tilt,25,179,,,,,, $17.88 , $4.55 ,,153.7,,,,,,25.7%,25.1%,24.4%,24.2%,23.1%,23.6%,22.8%,21.4%
+57912,Grand Ridge Solar Plant,27/07/2012,2012,PJM,IL,41.15,-88.75,3.95,PV,Thin-Film,22.76,20.00,1.14,Fixed Tilt,Fixed Tilt,25,180,Wind+PV+Storage,Lithium-Ion,2013,33,13.5, $22.96 , $30.77 ,,212.2,,,,,,19.6%,17.9%,17.2%,16.7%,18.5%,17.8%,17.3%,17.1%
+58486,FRV Picture Rocks (FRV Tucson Solar),29/11/2012,2012,West (non-ISO),AZ,32.37,-111.24,5.79,PV,c-Si,25.16,20.00,1.26,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,132.5,136.1,,,,,,32.0%,31.3%,30.0%,31.7%,30.5%,30.0%,29.4%,30.1%
+57994,Apple Data Center- PV1,01/12/2012,2012,Southeast (non-ISO),NC,35.59,-81.25,4.49,PV,c-Si,24.95,20.00,1.25,Tracking,Single Axis,Tracking,179,,,,,, $23.12 , $4.44 ,,222.8,,,,,,,20.0%,21.2%,23.3%,21.5%,20.6%,18.2%,17.5%
+58408,Maryland Solar Farm,01/12/2012,2012,PJM,MD,39.56,-77.72,4.05,PV,Thin-Film,29.06,20.00,1.45,Fixed Tilt,Fixed Tilt,20,180,,,,,, $24.47 , $11.76 ,225.8,200.4,,,,,,22.0%,20.6%,20.9%,21.6%,20.4%,19.5%,19.8%,18.6%
+57883,PSEG Queen Creek Solar Farm,01/10/2012,2012,West (non-ISO),AZ,33.27,-111.61,5.80,PV,c-Si,25.28,19.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,108.1,145.9,,,,,,32.0%,31.3%,30.4%,31.2%,30.8%,29.8%,28.6%,28.4%
+57560,Chino Valley Solar,31/12/2012,2012,West (non-ISO),AZ,34.72,-112.43,5.60,PV,c-Si,21.00,19.00,1.11,Tracking,Single Axis,Tracking,180,,,,,, $20.49 , $8.81 ,,174.3,,,,,,29.7%,28.3%,27.9%,27.4%,25.1%,26.8%,26.9%,29.3%
+58483,Tinton Falls Solar Farm,01/10/2012,2012,PJM,NJ,40.26,-74.08,4.01,PV,c-Si,19.88,15.90,1.25,Fixed Tilt,Fixed Tilt,18,180,,,,,, $20.65 , $18.96 ,,246.2,,,,,,18.9%,17.9%,18.0%,19.3%,17.9%,17.9%,16.4%,18.3%
+58213,SunE AZ2 - Saddle Mountain,01/01/2012,2012,West (non-ISO),AZ,33.38,-113.18,5.86,PV,c-Si,16.92,15.00,1.13,Tracking,Single Axis,Tracking,181,,,,,, $21.04 , $12.36 ,,,,,,,,29.8%,28.6%,27.2%,26.1%,24.1%,26.3%,26.8%,26.6%
+"57783, 57784, 57785",RE Bruceville 1-3 (NOT SMUD-Bruceville at Grundman),28/02/2012,2012,West (non-ISO),CA,38.35,-121.41,5.08,PV,c-Si,19.15,14.85,1.29,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,178.1,,,,,,,,,,,,,
+"57778, 57780, 57782",RE Kammerer 1-3,28/02/2012,2012,West (non-ISO),CA,38.36,-121.39,5.08,PV,c-Si,19.15,14.85,1.29,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,173.5,,,,,,,,,,,,,
+57758,Mount St. Mary's University Solar Farm,01/08/2012,2012,PJM,MD,39.67,-77.35,4.04,PV,Thin-Film,16.11,13.00,1.24,Fixed Tilt,Fixed Tilt,25,169.29,,,,,, $24.23 , $10.28 ,,267.3,,,,,,20.7%,20.4%,20.4%,19.1%,18.4%,17.3%,17.6%,18.2%
+58135,Washington White Post Solar I,21/12/2012,2012,Southeast (non-ISO),NC,35.50,-76.85,4.41,PV,c-Si,14.79,12.50,1.18,Fixed Tilt,Fixed Tilt,25,181,,,,,, $23.19 , $1.76 ,,171.8,,,,,,20.2%,19.9%,19.6%,20.5%,20.5%,19.5%,18.3%,18.0%
+57985,Las Cruces Centennial Solar Farm (SunE EPE 2),01/05/2012,2012,West (non-ISO),NM,32.25,-106.91,5.89,PV,c-Si,13.69,12.00,1.14,Tracking,Single Axis,38,180,,,,,,  ,  ,100.8,149.4,,,,,,31.8%,31.3%,29.5%,30.4%,29.8%,25.4%,27.7%,29.6%
+58228,PSEG Milford Solar Farm,01/11/2012,2012,PJM,DE,38.92,-75.45,4.13,PV,c-Si,15.00,12.00,1.25,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.21 , $16.61 ,,231.5,,,,,,20.1%,19.5%,18.4%,19.3%,19.0%,17.8%,18.5%,17.7%
+57764,Naval Air Weapons Station China Lake,23/10/2012,2012,CAISO,CA,35.63,-117.65,5.88,PV,c-Si,13.78,11.12,1.24,Tracking,Single Axis,Tracking,180,,,,,, $22.27 , $3.60 ,,157.7,,,,,,24.5%,29.9%,28.8%,30.1%,29.2%,27.5%,24.6%,27.1%
+58009,SunE CPS3 - Somerset Solar Farm,01/08/2012,2012,ERCOT,TX,29.23,-98.67,4.80,PV,c-Si,12.30,10.60,1.16,Tracking,Single Axis,Tracking,180,,,,,, $27.83 , $-   ,,208.3,,,,,,23.1%,22.3%,21.0%,22.7%,22.3%,17.7%,19.5%,18.6%
+57986,El Chaparral (SunE EPE 1),01/06/2012,2012,West (non-ISO),NM,32.04,-106.34,5.84,PV,c-Si,11.30,10.00,1.13,Tracking,Single Axis,38,180,,,,,,  ,  ,100.5,,,,,,,30.1%,31.0%,29.6%,30.3%,31.3%,26.5%,29.0%,26.1%
+57521,Giffen Solar Station,25/07/2012,2012,CAISO,CA,36.53,-120.31,5.32,PV,c-Si,12.91,10.00,1.29,Fixed Tilt,Fixed Tilt,25,179,,,,,, $6.73 , $4.22 ,,160.4,,,,,,27.4%,24.6%,24.9%,23.5%,20.7%,21.6%,19.9%,21.7%
+57305,LADWP Adelanto Solar Project,01/07/2012,2012,West (non-ISO),CA,34.55,-117.44,5.92,PV,c-Si,11.40,10.00,1.14,Fixed Tilt,Fixed Tilt,30,180,,,,,,  ,  ,,305.7,,,,,,24.1%,22.8%,20.8%,18.5%,19.7%,17.8%,14.6%,14.0%
+57256,PA Solar Park,16/10/2012,2012,PJM,PA,40.86,-75.85,3.85,PV,c-Si,11.48,10.00,1.15,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.44 , $11.20 ,,290.7,,,,,,15.9%,15.9%,16.6%,17.2%,15.9%,14.1%,15.3%,15.4%
+58068,SunE CPS1 - Centennial Solar Farms,18/05/2012,2012,ERCOT,TX,29.24,-98.42,4.79,PV,c-Si,11.57,9.90,1.17,Tracking,Single Axis,Tracking,180,,,,,, $27.58 , $-   ,,208.4,,,,,,21.4%,22.2%,20.5%,22.2%,22.1%,18.7%,19.0%,19.0%
+58027,SunE CPS2 - Centennial Solar Farms,18/05/2012,2012,ERCOT,TX,29.23,-98.43,4.79,PV,c-Si,11.57,9.90,1.17,Tracking,Single Axis,Tracking,180,,,,,, $27.55 , $-   ,,207.6,,,,,,22.7%,22.4%,20.2%,22.1%,22.1%,19.3%,19.9%,18.9%
+58042,Black Mountain Solar Project,15/12/2012,2012,West (non-ISO),AZ,35.02,-114.16,5.78,PV,c-Si,9.98,9.00,1.11,Tracking,Single Axis,Tracking,180,,,,,, $23.66 , $12.65 ,137.7,150.2,,,,,,28.5%,28.3%,27.8%,26.1%,26.8%,26.7%,26.4%,26.0%
+58401,Volkswagen Solar,20/12/2012,2012,Southeast (non-ISO),TN,35.10,-85.13,4.34,PV,c-Si,9.58,7.60,1.26,Fixed Tilt,Fixed Tilt,25,181,,,,,, $22.93 , $4.62 ,,197.8,,,,,,20.0%,21.0%,19.4%,21.4%,19.3%,17.5%,18.6%,17.8%
+"57722, 57743","SPI Palm Springs Solar (North Palm Springs 1A, 4A)",01/06/2012,2012,CAISO,CA,33.81,-116.50,5.77,PV,c-Si,7.79,6.50,1.20,Tracking,Single Axis,Tracking,188,,,,,,  ,  ,,,,,,,,,,,,,,,
+58549,Port Allen Solar Farm,12/12/2012,2012,HI,HI,21.90,-159.58,5.39,PV,c-Si,7.20,5.76,1.25,Fixed Tilt,Fixed Tilt,10,180,PV+Storage,Lead Acid,2012,3,2.01,  ,  ,196.3,,,,,,,23.8%,22.5%,21.4%,20.3%,21.0%,22.3%,21.2%,17.5%
+58463,Herbert Farm Solar (SMECO),18/11/2012,2012,PJM,MD,38.55,-76.80,4.19,PV,c-Si,6.64,5.50,1.21,Fixed Tilt,Fixed Tilt,20,180,,,,,, $24.88 , $11.27 ,,234.0,,,,,,18.3%,17.7%,17.6%,18.4%,17.9%,16.8%,17.7%,15.8%
+58030,Reeves Station Road East,26/01/2012,2012,PJM,NJ,39.93,-74.82,4.03,PV,c-Si,6.69,5.50,1.22,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.63 , $20.52 ,,193.9,,,,,,18.9%,18.0%,18.5%,18.3%,16.8%,16.7%,18.0%,16.7%
+58356,Lawrenceville School Solar Farm (KDC Solar TLS),05/06/2012,2012,PJM,NJ,40.30,-74.72,3.99,PV,c-Si,6.11,5.50,1.11,Tracking,Single Axis,Tracking,160,,,,,, $18.54 , $19.12 ,,281.0,,,,,,18.5%,18.5%,19.1%,19.2%,17.9%,16.8%,18.1%,17.0%
+59455,AstroSol Tech Park AZ,19/12/2012,2012,West (non-ISO),AZ,32.10,-110.82,5.80,PV,Thin-Film,6.10,5.10,1.20,Fixed Tilt,Fixed Tilt,,180,,,,,,  ,  ,,106.1,,,,,,,,,,,,,
+57439,"California Valley Solar Ranch  (CVSR, High Plains Ranch II)",01/11/2013,2013,CAISO,CA,35.32,-119.91,5.53,PV,c-Si,314.90,250.00,1.26,Tracking,Single Axis,Tracking,180,,,,,, $19.37 , $3.39 ,131.8,136.1,,,,,,,31.1%,30.7%,30.6%,29.5%,30.7%,26.7%,29.3%
+56812,"Solana Generating Station (Abengoa, Arlington Valley Solar Energy Project)",08/10/2013,2013,West (non-ISO),AZ,32.92,-112.98,5.81,CSP,Trough,,250.00,,Tracking,Single Axis,Tracking,180,CSP+Storage,Molten Salt,2013,280,1680, $21.49 , $12.10 ,137.1,,,,,,,,27.6%,32.8%,29.3%,33.1%,35.4%,36.1%,35.3%
+58467,Campo Verde,01/08/2013,2013,CAISO,CA,32.75,-115.71,5.79,PV,Thin-Film,201.10,147.40,1.36,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.51 , $3.76 ,,121.2,,,,,,,30.5%,30.3%,29.7%,28.9%,26.8%,27.6%,27.5%
+57490,(Tenaska) Imperial Solar Energy Center South (CSolar IV South),18/11/2013,2013,CAISO,CA,32.66,-115.66,5.66,PV,Thin-Film,172.30,130.00,1.33,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.00 , $4.52 ,130.5,170.7,,,,,,,28.4%,28.1%,25.8%,24.6%,24.1%,24.7%,21.3%
+57680,Arlington Valley Solar Project II,13/11/2013,2013,West (non-ISO),AZ,33.30,-112.83,5.85,PV,c-Si,174.90,129.00,1.36,Tracking,Single Axis,Tracking,180,,,,,, $20.95 , $11.78 ,111.7,132.0,,,,,,,32.3%,31.6%,32.2%,31.7%,29.7%,30.8%,31.9%
+57708,Catalina Solar Project 1 (Phase 1+2),22/08/2013,2013,CAISO,CA,34.93,-118.33,5.82,PV,Thin-Film,143.00,110.00,1.30,Fixed Tilt,Fixed Tilt,20,180,Wind+PV,,,,, $21.02 , $3.93 ,119.6,113.0,,,,,,,29.9%,29.0%,27.9%,27.9%,27.5%,25.6%,25.9%
+57295,Alpine Solar Project,24/01/2013,2013,CAISO,CA,34.79,-118.51,5.62,PV,Thin-Film,86.40,66.00,1.31,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.11 , $3.67 ,140.6,148.2,,,,,,,29.0%,28.8%,28.5%,28.2%,28.3%,26.8%,26.9%
+58537,OCI Alamo 1 Solar,31/12/2013,2013,ERCOT,TX,29.27,-98.44,4.79,PV,c-Si,49.46,40.70,1.22,Tracking,Single Axis,Tracking,180,PV+Storage,Lithium-ion,2016,1,0.25, $29.82 , $-   ,,145.4,,,,,,,22.5%,20.4%,20.8%,20.0%,17.8%,15.7%,25.4%
+57997,APS - AZ Sun - Foothills Solar Plant Phase I+II,31/03/2013,2013,West (non-ISO),AZ,32.64,-114.43,5.90,PV,c-Si,52.00,37.44,1.39,Tracking,Single Axis,Tracking,180,,,,,, $21.33 , $11.88 ,,124.3,,,,,,,34.6%,33.8%,29.5%,29.1%,28.4%,29.1%,29.7%
+58490,Spectrum Nevada Solar Project,01/10/2013,2013,West (non-ISO),NV,36.24,-114.88,5.67,PV,c-Si,37.60,30.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $28.34 , $7.86 ,114.5,115.8,,,,,,,31.7%,31.6%,31.1%,31.7%,31.7%,31.2%,32.2%
+57455,Borrego Solar Project (NRG),12/02/2013,2013,CAISO,CA,33.29,-116.35,5.84,PV,c-Si,33.00,26.00,1.27,Tracking,Single Axis,Tracking,180,,,,,, $20.52 , $3.35 ,135.5,130.2,,,,,,,32.1%,31.5%,31.1%,30.3%,30.0%,29.1%,28.5%
+58366,Atwell Island,22/03/2013,2013,CAISO,CA,35.82,-119.45,5.31,PV,Thin-Film,23.50,20.20,1.16,Fixed Tilt,Fixed Tilt,18,180,,,,,, $15.22 , $5.19 ,,201.4,,,,,,,23.7%,23.3%,23.3%,21.5%,22.5%,21.2%,18.5%
+58621,Sol Orchard Imperial 1 (Grupo T-Solar El Centro Project),11/12/2013,2013,West (non-ISO),CA,32.80,-115.55,5.87,PV,c-Si,25.20,20.00,1.26,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,116.9,,,,,,,29.9%,29.6%,29.2%,28.0%,27.5%,26.7%,23.5%
+58373,White River Solar Phase 1,17/06/2013,2013,CAISO,CA,35.88,-119.46,5.31,PV,c-Si,26.80,20.00,1.34,Tracking,Single Axis,Tracking,180,,,,,, $16.01 , $3.44 ,163.2,118.7,,,,,,,30.6%,30.2%,30.2%,29.6%,29.6%,26.9%,28.1%
+57891,Guernsey Solar Station,01/06/2013,2013,CAISO,CA,36.16,-119.65,5.30,PV,c-Si,25.50,20.00,1.28,Tracking,Single Axis,Tracking,180,,,,,, $19.72 , $4.14 ,,166.2,,,,,,,26.4%,26.3%,26.1%,25.2%,25.0%,24.6%,23.8%
+57892,Gates Solar Station,01/06/2013,2013,CAISO,CA,36.18,-120.11,5.38,PV,c-Si,27.70,20.00,1.39,Fixed Tilt,Fixed Tilt,25,179,,,,,, $18.86 , $5.53 ,,170.0,,,,,,,27.2%,24.7%,24.9%,24.2%,24.7%,19.0%,17.7%
+58148,RE Kansas South,07/06/2013,2013,CAISO,CA,36.23,-119.83,5.32,PV,c-Si,27.00,20.00,1.35,Tracking,Single Axis,Tracking,180,,,,,, $19.80 , $4.15 ,,135.6,,,,,,,30.3%,30.0%,30.2%,26.4%,28.0%,28.0%,27.4%
+58149,TA-High Desert (Antelope Project),01/06/2013,2013,CAISO,CA,34.71,-118.30,5.78,PV,c-Si,25.63,20.00,1.28,Tracking,Single Axis,Tracking,180,,,,,, $22.15 , $3.52 ,,118.8,,,,,,,33.0%,32.7%,31.8%,31.5%,32.1%,28.4%,28.3%
+58374,Corcoran 1,29/07/2013,2013,CAISO,CA,36.14,-119.57,5.29,PV,c-Si,26.00,20.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $19.61 , $3.50 ,,114.9,,,,,,,29.2%,29.9%,29.1%,29.1%,28.9%,25.5%,28.2%
+58701,Apple Data Center- PV2,31/10/2013,2013,Southeast (non-ISO),NC,35.74,-81.21,4.46,PV,c-Si,25.06,20.00,1.25,Tracking,Single Axis,Tracking,179,,,,,, $23.05 , $4.22 ,,195.7,,,,,,,22.7%,21.8%,24.6%,22.6%,21.3%,22.8%,20.3%
+58892,Camilla Solar Plant (SDD Solar Project 1),01/12/2013,2013,Southeast (non-ISO),GA,31.19,-84.13,4.77,PV,c-Si,20.25,16.00,1.27,Fixed Tilt,Fixed Tilt,30,180,,,,,, $22.23 , $5.11 ,,163.3,,,,,,,22.8%,20.7%,22.5%,21.4%,19.6%,19.7%,17.9%
+58501,Gillespie 1,01/12/2013,2013,West (non-ISO),AZ,33.02,-112.66,5.81,PV,c-Si,20.20,15.00,1.35,Tracking,Single Axis,Tracking,190,,,,,, $19.15 , $14.07 ,86.3,106.5,,,,,,,34.0%,32.6%,33.5%,32.3%,31.7%,32.9%,30.6%
+58262,PSEG Badger I,19/12/2013,2013,West (non-ISO),AZ,33.50,-112.81,5.81,PV,c-Si,19.30,14.80,1.30,Tracking,Single Axis,Tracking,180,,,,,, $18.67 , $12.46 ,77.5,108.7,,,,,,,30.5%,30.2%,31.4%,30.5%,30.8%,29.7%,29.7%
+58383,Hyder II,26/01/2013,2013,West (non-ISO),AZ,33.03,-113.35,5.86,PV,c-Si,21.00,14.00,1.50,Tracking,Single Axis,Tracking,180,,,,,, $19.14 , $11.52 ,,137.4,,,,,,,34.9%,35.7%,30.2%,29.7%,30.2%,29.9%,31.9%
+58234,Highlander I (SEPV 8),01/04/2013,2013,CAISO,CA,34.17,-116.15,5.83,PV,c-Si,14.64,12.00,1.22,Tracking,Single Axis,Tracking,180,,,,,, $14.91 , $3.42 ,,108.4,,,,,,,31.5%,32.5%,31.4%,31.4%,32.4%,31.0%,26.4%
+58552,Indy Solar I,16/12/2013,2013,MISO,IN,39.66,-85.98,4.03,PV,c-Si,13.90,10.10,1.38,Fixed Tilt,Fixed Tilt,20,180,,,,,, $25.82 , $0.62 ,99.9,169.8,,,,,,,19.8%,19.8%,20.1%,18.3%,17.4%,16.7%,16.4%
+58556,Indy Solar II,16/12/2013,2013,MISO,IN,39.66,-85.98,4.03,PV,c-Si,13.90,10.10,1.38,Fixed Tilt,Fixed Tilt,20,180,,,,,, $26.03 , $0.70 ,,175.7,,,,,,,19.8%,20.2%,19.6%,18.7%,17.8%,17.4%,15.1%
+58206,West Gates Solar Station,24/06/2013,2013,CAISO,CA,36.14,-120.13,5.38,PV,c-Si,12.90,10.00,1.29,Fixed Tilt,Fixed Tilt,25,180,,,,,, $6.88 , $4.23 ,,161.5,,,,,,,26.7%,25.3%,25.5%,24.6%,24.8%,20.6%,21.6%
+58391,IND Airport Solar Farm (INDY I),01/10/2013,2013,MISO,IN,39.70,-86.32,4.05,PV,c-Si,12.57,10.00,1.26,Fixed Tilt,Fixed Tilt,30,180,,,,,, $25.66 , $0.68 ,,224.2,,,,,,,17.8%,18.2%,18.3%,17.8%,15.1%,16.6%,14.7%
+58488,"Bryan Solar, LLC",30/06/2013,2013,ERCOT,TX,29.59,-104.33,5.86,PV,c-Si,12.21,10.00,1.22,Tracking,Single Axis,Tracking,178,,,,,, $30.98 , $-   ,,145.6,,,,,,,29.9%,28.3%,29.2%,26.9%,27.9%,27.6%,27.3%
+59097,Berry Plastics Solar Plant,01/08/2013,2013,PJM,NJ,40.70,-75.15,3.93,PV,c-Si,13.06,9.80,1.33,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.04 , $21.12 ,,204.9,,,,,,,18.5%,19.7%,18.8%,18.6%,17.3%,18.3%,
+59454,Valencia Solar,28/06/2013,2013,West (non-ISO),AZ,32.15,-110.88,5.80,PV,c-Si,12.69,9.00,1.41,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,138.7,79.3,,,,,,,31.9%,29.5%,29.8%,33.5%,31.6%,31.3%,34.5%
+58553,Indy Solar III,16/12/2013,2013,MISO,IN,39.65,-86.26,4.04,PV,c-Si,11.90,8.60,1.38,Fixed Tilt,Fixed Tilt,20,177,,,,,, $25.70 , $0.62 ,,170.5,,,,,,,20.0%,19.6%,23.0%,19.1%,18.2%,17.9%,17.4%
+57306,LADWP Pine Tree Solar Project,01/03/2013,2013,West (non-ISO),CA,35.23,-118.20,5.79,PV,c-Si,9.75,8.50,1.15,Fixed Tilt,Fixed Tilt,30,180,,,,,,  ,  ,,354.3,,,,,,,22.4%,13.9%,15.3%,19.8%,19.7%,17.1%,13.5%
+58227,Highlander II (SEPV 9),01/04/2013,2013,CAISO,CA,34.19,-116.09,5.80,PV,c-Si,10.97,8.50,1.29,Tracking,Single Axis,Tracking,180,,,,,, $14.92 , $3.26 ,,103.7,,,,,,,33.0%,32.3%,30.8%,32.5%,31.2%,31.1%,26.1%
+58521,Manzano Solar Energy Center,01/11/2013,2013,West (non-ISO),NM,34.75,-106.65,5.62,PV,Thin-Film,10.26,8.00,1.28,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.42 , $20.52 ,,92.8,,,,,,,26.9%,25.8%,26.8%,27.0%,26.6%,25.8%,26.2%
+58482,Azalea Solar Power Facility,01/12/2013,2013,Southeast (non-ISO),GA,32.98,-82.59,4.68,PV,c-Si,9.70,7.65,1.27,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.20 , $4.70 ,149.4,182.8,,,,,,,22.0%,20.1%,21.2%,20.5%,18.6%,19.4%,18.1%
+58520,Tularosa Solar Energy Center (Otero County Solar Energy Center),15/12/2013,2013,West (non-ISO),NM,32.98,-105.97,5.69,PV,Thin-Film,9.62,7.50,1.28,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.66 , $20.08 ,,89.9,,,,,,,28.1%,27.1%,28.2%,28.4%,27.3%,26.2%,26.9%
+58882,Mercer County Community College Solar,17/09/2013,2013,PJM,NJ,40.26,-74.65,4.00,PV,Thin-Film,8.30,7.50,1.11,Fixed Tilt,Fixed Tilt,30,180,,,,,, $18.71 , $20.68 ,,357.6,,,,,,,16.4%,16.9%,16.8%,15.9%,14.6%,16.5%,15.4%
+57695,Topaz Solar Farm Phase 1-3,31/10/2014,2014,CAISO,CA,35.37,-120.06,5.49,PV,Thin-Film,757.90,585.90,1.29,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.53 , $3.99 ,150.7,115.9,,,,,,,,25.4%,24.6%,24.1%,26.0%,24.5%,24.9%
+"57073, 57074, 57075",Ivanpah Solar Energy Generating System 1-3,28/02/2014,2014,CAISO,CA,35.56,-115.47,5.72,CSP,Tower,,370.00,,Tracking,Dual-Axis,Tracking,,,,,,,  ,  ,154.4,,,,,,,,12.7%,19.5%,20.2%,20.8%,23.1%,22.4%,24.6%
+57993,Desert Sunlight 300,31/10/2014,2014,CAISO,CA,33.82,-115.40,5.71,PV,Thin-Film,407.06,313.70,1.30,Fixed Tilt,Fixed Tilt,22.5,191,,,,,, $16.68 , $3.86 ,141.8,138.3,,,,,,,,24.5%,26.2%,25.6%,26.4%,25.3%,23.9%
+57373,Agua Caliente Solar Project,28/02/2014,2014,CAISO,AZ,32.98,-113.49,5.86,PV,Thin-Film,398.60,290.00,1.37,Fixed Tilt,Fixed Tilt,15,195,,,,,, $17.41 , $3.47 ,194.8,142.9,,,,,,,,29.1%,29.2%,27.9%,28.6%,28.2%,28.4%
+57394,Genesis Solar Energy Project,31/03/2014,2014,CAISO,CA,33.66,-115.00,5.86,CSP,Trough,,250.00,,Tracking,Single Axis,Tracking,181,,,,,, $17.82 , $3.43 ,196.3,,,,,,,,28.7%,28.4%,28.4%,28.7%,28.5%,28.2%,27.7%
+57331,Mojave Solar (Abengoa),31/12/2014,2014,CAISO,CA,35.01,-117.32,5.94,CSP,Trough,,250.00,,Tracking,Single Axis,Tracking,180,,,,,, $23.25 , $3.93 ,198.6,,,,,,,,,23.0%,28.5%,27.1%,27.6%,23.5%,25.4%
+58542,Desert Sunlight 250,31/10/2014,2014,CAISO,CA,33.81,-115.37,5.71,PV,Thin-Film,333.62,249.70,1.34,Fixed Tilt,Fixed Tilt,22.5,191,,,,,, $17.01 , $3.35 ,145.6,125.3,,,,,,,,28.1%,28.4%,28.3%,28.3%,27.6%,27.8%
+57378,Antelope Valley Solar Ranch 1 (First Solar)/ AV Solar Ranch One,31/08/2014,2014,CAISO,CA,34.78,-118.43,5.72,PV,Thin-Film,283.70,241.50,1.17,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.02 , $3.71 ,142.8,169.2,,,,,,,26.0%,27.9%,27.6%,27.4%,27.4%,27.2%,26.9%
+56917,Mount Signal Solar Farm I (formerly known as Imperial Valley Solar I LLC),31/03/2014,2014,CAISO,CA,32.67,-115.59,5.85,PV,Thin-Film,265.78,206.72,1.29,Tracking,Single Axis,Tracking,180,,,,,, $18.93 , $3.33 ,86.7,133.0,,,,,,,,30.8%,30.6%,30.6%,28.2%,27.9%,22.7%
+58430,Centinela Solar Energy (phase I+II),31/08/2014,2014,CAISO,CA,32.69,-115.65,5.66,PV,c-Si,215.90,170.00,1.27,Tracking,Single Axis,Tracking,180,,,,,, $19.66 , $2.96 ,133.2,112.4,,,,,,,,34.2%,32.5%,31.4%,30.8%,32.5%,33.4%
+58592,"Solar Gen 2 - First Solar (Sonora, Arkansas, and Alhambra)",31/12/2014,2014,CAISO,CA,33.08,-115.47,5.90,PV,Thin-Film,194.70,155.10,1.26,Tracking,Single Axis,Tracking,180,,,,,, $15.34 , $3.15 ,107.1,142.3,,,,,,,,30.9%,30.7%,29.8%,29.7%,28.0%,29.0%
+57650,Regulus Solar Project,30/11/2014,2014,CAISO,CA,35.30,-118.85,5.38,PV,c-Si,81.60,60.00,1.36,Tracking,Single Axis,Tracking,180,,,,,, $19.59 , $3.52 ,124.7,129.8,,,,,,,,31.6%,28.6%,29.4%,30.9%,30.0%,28.2%
+59010,Macho Springs Solar Facility,31/05/2014,2014,West (non-ISO),NM,32.57,-107.49,5.82,PV,Thin-Film,65.13,52.20,1.25,Tracking,Single Axis,Tracking,180,PV+Wind,,,,,  ,  ,55.8,79.1,,,,,,,,29.7%,31.3%,31.1%,30.6%,30.4%,31.2%
+58983,RE Columbia 1 (Camelot Solar),31/12/2014,2014,CAISO,CA,35.02,-118.18,5.84,PV,c-Si,59.10,45.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $21.28 , $3.18 ,80.5,88.8,,,,,,,,32.7%,33.3%,32.2%,33.0%,31.4%,31.4%
+58717,OCI Alamo 4 Solar,31/08/2014,2014,ERCOT,TX,29.32,-100.38,4.91,PV,c-Si,48.10,39.60,1.21,Tracking,Dual-Axis,Tracking,180,,,,,, $16.62 , $-   ,,173.5,,,,,,,,22.5%,22.6%,21.8%,18.7%,20.3%,23.0%
+59020,APS Gila Bend Solar Power Plant,31/12/2014,2014,West (non-ISO),AZ,32.95,-112.77,5.80,PV,c-Si,51.03,37.12,1.37,Tracking,Single Axis,Tracking,180,,,,,, $19.26 , $16.08 ,,98.7,,,,,,,,32.2%,31.6%,30.8%,29.6%,29.1%,22.2%
+58628,Simon Solar Farm,01/01/2014,2014,Southeast (non-ISO),GA,33.68,-83.67,4.56,PV,c-Si,38.60,30.00,1.29,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.27 , $5.03 ,114.9,148.8,,,,,,,22.7%,21.2%,23.1%,21.4%,17.3%,20.8%,19.0%
+59168,Avalon Solar (Pima Mine Road Solar Generating Facility),08/12/2014,2014,West (non-ISO),AZ,32.03,-110.96,5.78,PV,c-Si,35.10,29.00,1.21,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,106.7,142.8,,,,,,,,29.6%,31.3%,30.8%,30.3%,29.1%,29.3%
+58544,Mountain View Solar,31/01/2014,2014,West (non-ISO),NV,36.39,-114.96,5.69,PV,c-Si,25.01,20.00,1.25,Tracking,Single Axis,Tracking,190,,,,,, $28.87 , $8.25 ,118.1,91.5,,,,,,,30.4%,30.4%,30.2%,30.5%,31.0%,30.3%,31.4%
+58498,Recurrent Rosamond Solar 1,28/02/2014,2014,CAISO,CA,34.90,-118.25,5.84,PV,c-Si,26.20,20.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $22.23 , $3.07 ,101.1,87.9,,,,,,,34.0%,33.3%,33.7%,32.9%,34.1%,32.7%,32.5%
+58499,Recurrent Rosamond Solar 2,28/02/2014,2014,CAISO,CA,34.90,-118.24,5.84,PV,c-Si,20.95,20.00,1.05,Tracking,Single Axis,Tracking,180,,,,,, $21.85 , $3.97 ,147.9,91.5,,,,,,,29.2%,28.2%,28.5%,28.3%,28.0%,25.5%,25.1%
+59237,Lone Valley Solar Park II (Marathon),30/11/2014,2014,CAISO,CA,34.41,-116.86,5.89,PV,c-Si,24.80,20.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $22.59 , $3.81 ,86.1,84.8,,,,,,,,30.4%,25.6%,28.9%,29.3%,26.3%,26.2%
+58985,RE Kansas Solar,31/12/2014,2014,CAISO,CA,36.24,-119.83,5.32,PV,Thin-Film,27.80,20.00,1.39,Tracking,Single Axis,Tracking,180,,,,,, $19.82 , $3.83 ,88.0,106.5,,,,,,,,28.5%,30.6%,30.5%,30.0%,28.3%,25.6%
+58973,White River Solar Phase 2,31/10/2014,2014,CAISO,CA,35.85,-119.06,5.34,PV,c-Si,26.00,20.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $16.15 , $3.45 ,83.9,87.3,,,,,,,,30.3%,30.1%,29.2%,28.4%,28.5%,28.1%
+59530,"Colonial Eagle Solar (Pasquotank), (Capital Partners, Phase I)",08/12/2014,2014,PJM,NC,36.27,-76.31,4.45,PV,c-Si,28.02,19.95,1.40,Tracking,Single Axis,Tracking,181,,,,,, $22.70 , $10.59 ,,116.3,,,,,,,,24.8%,25.9%,25.8%,25.1%,20.4%,21.4%
+58626,Western Antelope Blue Sky Ranch A (WABSRA),14/11/2014,2014,CAISO,CA,34.68,-118.32,5.62,PV,c-Si,23.92,19.95,1.20,Tracking,Single Axis,Tracking,180,,,,,, $21.89 , $3.84 ,76.8,84.4,,,,,,,,29.8%,29.8%,30.2%,30.5%,29.4%,25.9%
+58844,Dogwood Solar Power (Scotland Neck SE1 Solar),31/01/2014,2014,PJM,NC,36.12,-77.41,4.43,PV,c-Si,27.81,19.79,1.41,Tracking,Single Axis,Tracking,181,,,,,, $21.91 , $9.75 ,,122.8,,,,,,,,22.0%,23.4%,24.0%,20.0%,20.1%,21.1%
+59183,CID Solar,15/12/2014,2014,CAISO,CA,36.14,-119.56,5.29,PV,Thin-Film,27.23,19.76,1.38,Tracking,Single Axis,Tracking,180,,,,,, $19.63 , $3.59 ,100.9,130.6,,,,,,,,29.6%,29.4%,28.8%,28.7%,25.7%,26.0%
+59443,Antelope West Solar Farm,30/11/2014,2014,CAISO,CA,34.69,-118.33,5.62,PV,c-Si,28.34,19.70,1.44,Tracking,Single Axis,Tracking,180,,,,,, $22.83 , $2.99 ,,116.1,,,,,,,,35.7%,35.3%,33.8%,22.2%,33.0%,33.0%
+58986,RE Old River One,31/12/2014,2014,CAISO,CA,35.22,-119.08,5.39,PV,Thin-Film,26.15,19.65,1.33,Tracking,Single Axis,Tracking,180,,,,,, $19.93 , $3.63 ,,109.8,,,,,,,,29.0%,29.1%,29.2%,28.5%,28.3%,26.8%
+58943,Halifax (HXO) Airport Solar One,31/12/2014,2014,PJM,NC,36.44,-77.71,4.40,PV,c-Si,29.70,19.65,1.51,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.38 , $8.43 ,,134.3,,,,,,,,16.0%,17.1%,9.8%,19.1%,21.1%,20.7%
+57651,Adobe Solar (FRV Cygnus Solar Project),31/05/2014,2014,CAISO,CA,35.10,-118.95,5.40,PV,c-Si,26.00,19.57,1.33,Tracking,Single Axis,Tracking,180,,,,,, $19.21 , $3.78 ,,168.3,,,,,,,,28.6%,28.6%,28.3%,28.7%,27.3%,25.6%
+58991,RE Kent South,31/12/2014,2014,CAISO,CA,36.23,-119.91,5.36,PV,Thin-Film,26.60,19.41,1.37,Tracking,Single Axis,Tracking,180,,,,,, $20.00 , $3.50 ,,106.2,,,,,,,,30.7%,30.4%,30.3%,29.7%,29.3%,27.5%
+58984,RE Adams East,31/12/2014,2014,CAISO,CA,36.61,-120.38,5.31,PV,Thin-Film,24.87,19.00,1.31,Tracking,Single Axis,Tracking,179,,,,,, $17.54 , $3.69 ,,105.3,,,,,,,,30.7%,29.9%,30.3%,30.6%,29.7%,26.0%
+58590,Cascade Solar,31/01/2014,2014,CAISO,CA,34.16,-116.23,5.93,PV,c-Si,23.92,18.50,1.29,Tracking,Single Axis,Tracking,181,,,,,, $15.21 , $2.79 ,,90.4,,,,,,,33.8%,34.7%,33.8%,34.2%,34.1%,31.9%,33.1%
+58616,Westlands Solar Farms PV1,28/02/2014,2014,CAISO,CA,36.13,-120.14,5.38,PV,c-Si,23.10,18.00,1.28,Tracking,Single Axis,Tracking,179,,,,,, $18.73 , $3.65 ,,95.2,,,,,,,,29.0%,28.7%,27.4%,27.9%,27.2%,26.9%
+58972,Fort Huachuca Solar PV Project,31/12/2014,2014,West (non-ISO),AZ,31.56,-110.32,5.55,PV,c-Si,22.20,17.70,1.25,Fixed Tilt,Fixed Tilt,25,169,,,,,,  ,  ,,94.3,,,,,,,,24.8%,26.2%,23.6%,23.2%,24.1%,25.7%
+58202,RE Victor Phelan Solar One,28/02/2014,2014,CAISO,CA,34.51,-117.48,5.92,PV,c-Si,22.40,17.50,1.28,Tracking,Single Axis,Tracking,180,,,,,, $22.34 , $3.49 ,,145.1,,,,,,,33.5%,31.1%,32.3%,30.8%,30.8%,28.4%,28.7%
+59404,Searchlight Solar PV Generating Facility,31/12/2014,2014,West (non-ISO),NV,35.49,-114.94,5.74,PV,c-Si,21.47,17.49,1.23,Tracking,Single Axis,Tracking,180,,,,,, $29.63 , $8.46 ,,133.4,,,,,,,,31.6%,31.6%,31.3%,32.1%,31.3%,29.5%
+59188,Selmer Farm,30/11/2014,2014,Southeast (non-ISO),TN,35.15,-88.56,4.37,PV,c-Si,20.00,15.84,1.26,Fixed Tilt,Fixed Tilt,25,178,,,,,, $23.26 , $4.83 ,,112.2,,,,,,,,19.7%,20.0%,19.8%,18.5%,18.7%,17.6%
+59184,Mulberry Farm,31/12/2014,2014,Southeast (non-ISO),TN,35.13,-88.59,4.37,PV,c-Si,20.00,15.84,1.26,Fixed Tilt,Fixed Tilt,25,179,,,,,, $23.43 , $4.62 ,,115.7,,,,,,,,19.7%,19.6%,18.5%,18.4%,16.6%,17.2%
+58990,RE Columbia 2,31/12/2014,2014,CAISO,CA,35.02,-118.18,5.84,PV,c-Si,19.95,15.00,1.33,Tracking,Single Axis,Tracking,180,,,,,, $21.73 , $3.08 ,66.3,93.5,,,,,,,,32.8%,33.6%,32.0%,31.3%,31.9%,32.3%
+"58275, 58276, 58279","Warren Solar Farm (Mass Midstate 1-3, Ecos Energy LLC)",01/04/2014,2014,ISO-NE,MA,42.20,-72.22,3.81,PV,c-Si,17.20,14.00,1.23,Fixed Tilt,Fixed Tilt,25,180,,,,,,  ,  ,,234.1,,,,,,,,,,,,,
+8223,Springerville Generating Station Solar System Phase 1-3 (Ph3: White Mountain Solar ),31/12/2014,2014,West (non-ISO),AZ,34.30,-109.27,5.45,PV,"Combo (c-Si, Thin-Film, CPV)",16.61,13.62,1.22,Combo,"Fixed, Single",Tracking,180,PV+Fossil,,,,,  ,  ,,,,,,,,,,,,,,,
+59779,Davis-Monthan Air Force Base Phase I+II,20/02/2014,2014,West (non-ISO),AZ,32.15,-110.88,5.80,PV,c-Si,16.53,12.60,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,108.1,,,,,,,,,,,,,
+58718,Orion Solar Phase I,30/04/2014,2014,CAISO,CA,35.15,-118.89,5.39,PV,c-Si,15.68,12.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $19.28 , $4.02 ,,141.1,,,,,,,,29.2%,29.0%,26.8%,24.4%,25.8%,24.6%
+58640,KRS II Koloa Solar (Grove Farm/ Kauai Solar Farm),30/09/2014,2014,HI,HI,21.90,-159.45,4.79,PV,c-Si,14.26,12.00,1.19,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,152.2,,,,,,,,,20.5%,21.4%,20.8%,17.6%,16.9%,19.9%
+59407,PSEG El Paso Solar Energy Center (Newman),30/10/2014,2014,West (non-ISO),TX,31.98,-106.43,5.74,PV,c-Si,13.05,10.42,1.25,Tracking,Single Axis,Tracking,177,,,,,,  ,  ,48.9,69.0,,,,,,,,29.8%,30.8%,30.1%,28.9%,29.6%,31.4%
+58398,Heber Solar PV Project (Imperial Solar 1),31/05/2014,2014,West (non-ISO),CA,32.71,-115.54,5.89,PV,c-Si,13.13,10.00,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,112.0,,,,,,,,30.2%,29.5%,29.8%,29.3%,29.7%,27.9%
+58502,RE Columbia 3,28/02/2014,2014,CAISO,CA,35.02,-118.18,5.84,PV,c-Si,11.06,10.00,1.11,Tracking,Single Axis,Tracking,180,,,,,, $21.46 , $3.80 ,,94.7,,,,,,,30.3%,29.4%,30.1%,28.8%,28.7%,26.1%,26.2%
+58417,Lone Valley Solar Park I (Agincourt),30/11/2014,2014,CAISO,CA,34.40,-116.87,5.70,PV,c-Si,12.40,10.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $22.59 , $3.82 ,86.5,85.6,,,,,,,,28.6%,26.1%,27.2%,27.5%,27.2%,26.1%
+59618,Meadow Lake Solar Energy Center,31/12/2014,2014,West (non-ISO),NM,34.81,-106.52,5.65,PV,Thin-Film,11.37,9.12,1.25,Tracking,Single Axis,Tracking,180,,,,,, $23.14 , $20.46 ,,64.0,,,,,,,,,30.7%,31.0%,31.1%,29.7%,31.1%
+58615,Indianapolis Motor Speedway (IMS) Solar Farm,31/07/2014,2014,MISO,IN,39.80,-86.22,4.01,PV,c-Si,11.20,8.82,1.27,Fixed Tilt,Fixed Tilt,26,180,,,,,, $25.46 , $0.64 ,,125.2,,,,,,,,18.5%,17.9%,17.9%,17.0%,16.2%,15.7%
+58721,Orion Solar Phase II,30/06/2014,2014,CAISO,CA,35.15,-118.88,5.39,PV,c-Si,9.45,8.00,1.18,Tracking,Single Axis,Tracking,180,,,,,, $19.32 , $4.15 ,,132.7,,,,,,,,29.4%,28.0%,24.6%,25.1%,26.0%,23.9%
+59319,Rock Solid Solar Project (Howell Solar),30/11/2014,2014,PJM,NJ,40.23,-74.23,4.01,PV,c-Si,9.94,8.00,1.24,Fixed Tilt,Fixed Tilt,20,180,,,,,, $19.48 , $20.57 ,,153.2,,,,,,,,19.4%,17.7%,18.3%,17.0%,19.1%,17.6%
+58564,Frenchtown III Solar,19/02/2014,2014,PJM,NJ,40.48,-75.02,3.96,PV,c-Si,9.98,8.00,1.25,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.82 , $19.49 ,,141.2,,,,,,,,19.3%,19.4%,18.1%,16.9%,17.7%,18.3%
+58770,Maywood Superfund Project (HQC Maywood),01/04/2014,2014,MISO,IN,39.74,-86.22,4.01,PV,c-Si,10.86,7.89,1.38,Fixed Tilt,Fixed Tilt,20,180,,,,,, $25.47 , $0.64 ,,210.4,,,,,,,,15.8%,19.2%,16.8%,16.3%,15.8%,15.1%
+59631,KDC Solar Branchburg  (ImClone),30/06/2014,2014,PJM,NJ,40.56,-74.71,3.96,PV,c-Si,9.95,7.73,1.29,Fixed Tilt,Fixed Tilt,20,180,,,,,, $19.01 , $18.59 ,,195.8,,,,,,,,18.7%,19.3%,17.8%,16.8%,17.6%,18.8%
+59619,Cibola Solar Energy Center,31/12/2014,2014,West (non-ISO),NM,35.25,-107.25,5.48,PV,Thin-Film,9.42,7.60,1.24,Tracking,Single Axis,Tracking,180,,,,,, $25.23 , $19.22 ,,65.0,,,,,,,,,28.7%,30.0%,29.6%,29.7%,30.8%
+59366,G&S Wantage Solar,31/01/2014,2014,PJM,NJ,41.19,-74.59,3.89,PV,c-Si,8.45,7.00,1.21,Fixed Tilt,Fixed Tilt,10,180,,,,,, $19.72 , $19.91 ,,219.4,,,,,,,,15.5%,16.8%,15.1%,14.0%,15.2%,
+59186,West Pemberton Solar Facility,31/07/2014,2014,PJM,NJ,40.01,-74.73,4.01,PV,c-Si,9.19,7.00,1.31,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.55 , $21.61 ,,151.1,,,,,,,,19.7%,20.3%,18.9%,18.4%,17.9%,17.1%
+58757,Summer North Solar 6.5 (American Solar Greenworks),31/12/2014,2014,CAISO,CA,34.72,-118.29,5.81,PV,c-Si,9.20,6.49,1.42,Fixed Tilt,Fixed Tilt,25,193,,,,,, $22.21 , $4.06 ,,101.0,,,,,,,,25.2%,29.0%,27.7%,28.6%,25.2%,24.5%
+57959,Desert Green Solar Farm,09/12/2014,2014,CAISO,CA,33.27,-116.33,5.84,PV,CPV,8.86,6.30,1.41,Tracking,Dual-Axis,Tracking,,,,,,, $21.31 , $3.79 ,,,,,,,,,,,,,,,
+58682,Dartmouth Solar,11/04/2014,2014,ISO-NE,MA,41.68,-71.00,3.89,PV,c-Si,7.46,6.25,1.19,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.81 , $8.38 ,,214.3,,,,,,,,17.4%,17.3%,16.1%,15.1%,16.4%,16.8%
+59558,Sandoval Solar Energy Center,31/12/2014,2014,West (non-ISO),NM,35.28,-106.81,5.58,PV,Thin-Film,7.37,6.08,1.21,Tracking,Single Axis,Tracking,180,,,,,, $24.11 , $21.15 ,,76.0,,,,,,,,28.8%,30.4%,30.7%,30.6%,28.8%,28.4%
+59044,Rio Rico,31/03/2014,2014,West (non-ISO),AZ,31.50,-111.01,5.72,PV,c-Si,7.18,6.00,1.20,Fixed Tilt,Fixed Tilt,25,180,,,,,,  ,  ,,110.1,,,,,,,,19.6%,22.7%,21.4%,21.4%,21.4%,22.6%
+58545,NRG Community Solar 1,30/06/2014,2014,West (non-ISO),CA,32.98,-115.48,5.90,PV,c-Si,7.50,6.00,1.25,Tracking,Single Axis,Tracking,181,,,,,,  ,  ,,142.2,,,,,,,,27.5%,26.5%,26.0%,22.3%,26.4%,27.0%
+59630,KDC CentraState Medical (KDC Solar Middlesex 3),31/10/2014,2014,PJM,NJ,40.24,-74.32,4.00,PV,c-Si,6.31,5.34,1.18,Fixed Tilt,Fixed Tilt,15,180,,,,,, $20.08 , $21.59 ,,154.4,,,,,,,,18.2%,18.1%,16.9%,16.1%,17.1%,
+58388,Solar Star 1/ formerly Antelope Valley Solar Projects,30/06/2015,2015,CAISO,CA,34.81,-118.39,5.78,PV,c-Si,397.80,314.40,1.32,Tracking,Single Axis,Tracking,180,,,,,, $21.47 , $3.33 ,110.5,119.1,,,,,,,,,24.3%,32.5%,32.5%,30.9%,29.6%
+58389,Solar Star 2/ formerly Antelope Valley Solar Projects,30/06/2015,2015,CAISO,CA,34.85,-118.35,5.78,PV,c-Si,349.50,279.50,1.32,Tracking,Single Axis,Tracking,180,,,,,, $21.43 , $3.36 ,110.7,120.1,,,,,,,,,31.3%,31.4%,32.3%,30.9%,29.7%
+58915,Copper Mountain Solar 3,31/01/2015,2015,West (non-ISO),NV,35.89,-114.96,5.48,PV,c-Si,344.98,255.00,1.35,Fixed Tilt,Fixed Tilt,16,180,,,,,,  ,  ,91.6,78.1,,,,,,,,,27.7%,27.7%,28.1%,27.0%,28.6%
+57275,Crescent Dunes Solar Energy,30/11/2015,2015,West (non-ISO),NV,38.24,-117.36,5.56,CSP,Tower,,110.00,,Tracking,Dual-Axis,Tracking,,CSP+Storage,Molten Salt,2015,110,1100, $24.11 , $7.67 ,139.8,,,,,,,,,,13.2%,4.4%,20.3%,5.2%,
+59339,"Quinto Solar PV Project (SSC13, Quinto Farms + Stockton Terminal)",30/11/2015,2015,CAISO,CA,37.12,-121.05,5.21,PV,c-Si,135.60,105.10,1.29,Tracking,Single Axis,Tracking,180,,,,,, $27.00 , $3.50 ,123.3,127.7,,,,,,,,,29.6%,29.6%,30.0%,27.4%,28.0%
+59205,"OCI Alamo 5 (Downie Ranch Solar, Texas 5)",01/12/2015,2015,ERCOT,TX,29.22,-99.71,4.89,PV,c-Si,118.00,95.00,1.24,Tracking,Dual-Axis,Tracking,,,,,,, $31.36 , $-   ,,112.5,,,,,,,,,25.9%,27.5%,23.6%,23.8%,24.2%
+59450,Decatur Parkway Solar Project,01/12/2015,2015,Southeast (non-ISO),GA,30.99,-84.64,4.78,PV,Thin-Film,110.00,81.06,1.36,Tracking,Single Axis,Tracking,180,,,,,, $22.11 , $4.31 ,59.7,78.2,,,,,,,,,28.3%,26.5%,25.0%,26.4%,24.7%
+59944,Conetoe (II) Solar,01/12/2015,2015,PJM,NC,35.82,-77.48,4.44,PV,c-Si,112.10,81.00,1.32,Tracking,Single Axis,Tracking,181,,,,,, $22.32 , $10.13 ,,100.1,,,,,,,,,23.4%,24.1%,22.0%,22.1%,21.5%
+58660,Utah Red Hills Renewable Energy Park (Pelican Solar?),15/12/2015,2015,West (non-ISO),UT,37.88,-112.90,5.24,PV,c-Si,104.75,80.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $22.10 , $12.31 ,,60.7,,,,,,,,,29.6%,29.9%,29.9%,28.3%,30.9%
+58848,Warsaw Solar Facility (formerly Gantt Farm I),30/12/2015,2015,Southeast (non-ISO),NC,35.01,-78.12,4.50,PV,Thin-Film,87.50,64.80,1.35,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.17 , $1.86 ,,89.6,,,,,,,,,,20.4%,19.9%,20.9%,19.6%
+58713,North Star Solar,25/08/2015,2015,CAISO,CA,36.73,-120.42,5.28,PV,Thin-Film,73.00,62.50,1.17,Tracking,Single Axis,Tracking,180,,,,,, $19.62 , $3.77 ,124.5,133.1,,,,,,,,,27.3%,28.7%,28.4%,27.3%,26.0%
+58017,Copper Mountain Solar 2 - Phase 2,28/02/2015,2015,CAISO,NV,35.79,-114.96,5.66,PV,Thin-Film,77.80,60.80,1.28,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.66 , $3.68 ,115.9,68.5,,,,,,28.2%,27.8%,28.4%,27.8%,27.9%,28.0%,27.2%,28.2%
+58833,Red Horse 2,15/08/2015,2015,West (non-ISO),AZ,32.26,-110.16,5.76,PV,c-Si,75.87,55.00,1.38,Tracking,Single Axis,Tracking,180,Wind+PV,,,,,  ,  ,,75.5,,,,,,,,,31.9%,31.5%,32.6%,30.9%,32.6%
+60008,Hooper Solar (SunPower San Luis Valley Solar or Solar Star III),31/12/2015,2015,West (non-ISO),CO,37.69,-105.98,5.35,PV,c-Si,64.00,52.00,1.23,Tracking,Single Axis,Tracking,180,,,,,, $18.38 , $17.92 ,46.4,88.8,,,,,,,,,27.2%,27.5%,28.0%,27.1%,27.4%
+59702,Pavant Solar 1,31/12/2015,2015,West (non-ISO),UT,39.15,-112.36,5.00,PV,c-Si,62.50,50.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $23.00 , $16.15 ,,77.8,,,,,,,,,26.3%,26.9%,27.8%,23.0%,27.2%
+59778,"Eden Solar (formerly Derby, Innovative Solar 34)",31/12/2015,2015,Southeast (non-ISO),NC,35.15,-79.64,4.47,PV,c-Si,62.05,47.70,1.30,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.18 , $3.56 ,,99.0,,,,,,,,,21.7%,22.3%,20.4%,20.5%,19.3%
+59634,Sandstone Solar Power Plant,31/12/2015,2015,West (non-ISO),AZ,33.04,-111.45,5.80,PV,c-Si,57.46,45.00,1.28,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,48.8,60.6,,,,,,,,,30.7%,31.5%,31.2%,30.6%,31.7%
+58711,Lost Hills Solar / Blackwell,30/04/2015,2015,CAISO,CA,35.62,-119.85,5.37,PV,Thin-Film,43.00,32.00,1.34,Tracking,Single Axis,Tracking,180,,,,,, $19.68 , $3.31 ,79.6,95.2,,,,,,,,,32.7%,31.7%,32.2%,30.5%,30.0%
+59862,Fort Benning Solar,01/12/2015,2015,Southeast (non-ISO),GA,32.30,-84.99,4.61,PV,c-Si,41.54,30.00,1.38,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.36 , $4.83 ,,111.5,,,,,,,,,23.0%,21.3%,21.0%,20.3%,19.3%
+59723,Seville Solar 2,31/12/2015,2015,West (non-ISO),CA,33.11,-116.00,5.90,PV,Thin-Film,40.76,30.00,1.36,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,62.7,90.1,,,,,,,,,35.4%,35.0%,34.0%,32.1%,30.3%
+58710,Barilla Solar Project Phase 1-3,25/08/2015,2015,ERCOT,TX,30.96,-103.35,5.61,PV,Thin-Film,37.62,29.76,1.26,Fixed Tilt,Fixed Tilt,20,179,,,,,, $26.07 , $-   ,,63.2,,,,,,,,,23.3%,17.3%,18.2%,22.1%,22.5%
+59009,Hayworth Solar (Redwood: Hayworth),30/12/2015,2015,CAISO,CA,35.33,-118.82,5.37,PV,Thin-Film,33.26,26.66,1.25,Tracking,Single Axis,Tracking,180,,,,,, $19.32 , $4.75 ,59.1,83.0,,,,,,,,,25.3%,26.2%,26.1%,27.4%,20.7%
+59117,Fayetteville Solar (formerly E I DuPont de Nemours ),01/11/2015,2015,Southeast (non-ISO),NC,34.83,-78.84,4.51,PV,c-Si,32.10,23.10,1.39,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.15 , $2.67 ,,111.1,,,,,,,,,17.7%,17.6%,11.4%,16.1%,19.4%
+59412,SKIC 1 (South Kern Industrial Center) Solar (Algonquin or Bakersfield 1),30/06/2015,2015,CAISO,CA,35.13,-119.24,5.36,PV,c-Si,25.85,22.00,1.18,Tracking,Single Axis,Tracking,180,,,,,, $14.50 , $3.89 ,,94.7,,,,,,,,,23.8%,25.1%,25.0%,24.9%,24.0%
+59535,SR Hazlehurst Solar I,01/11/2015,2015,Southeast (non-ISO),GA,31.81,-82.58,4.73,PV,c-Si,27.25,21.00,1.30,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.15 , $4.47 ,65.6,88.5,,,,,,,,,21.0%,21.1%,20.4%,20.8%,
+59527,"Kelford Solar (Capital Partners, Phase II, Project A)",01/12/2015,2015,PJM,NC,36.16,-77.21,4.41,PV,c-Si,30.10,21.00,1.43,Tracking,Single Axis,Tracking,180,,,,,, $22.19 , $9.60 ,,106.1,,,,,,,,,24.4%,23.9%,23.4%,18.9%,22.2%
+59414,CED Atwell Island West,01/05/2015,2015,CAISO,CA,35.82,-119.46,5.31,PV,c-Si,30.00,20.02,1.50,Tracking,Single Axis,Tracking,180,,,,,, $16.38 , $3.30 ,,91.8,,,,,,,,,32.4%,31.8%,31.6%,30.4%,29.4%
+59657,Imperial Valley Solar Company (IVSC) 2 (Imperial County Niland),25/08/2015,2015,West (non-ISO),CA,33.25,-115.50,5.83,PV,c-Si,26.35,20.01,1.32,Fixed Tilt,Fixed Tilt,25,180,,,,,,  ,  ,85.5,118.2,,,,,,,,,28.3%,27.6%,27.7%,27.0%,25.0%
+60027,Adera Solar,28/12/2015,2015,CAISO,CA,37.12,-120.32,5.21,PV,c-Si,26.50,20.00,1.32,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.76 , $4.70 ,,93.6,,,,,,,,,21.5%,22.5%,24.5%,24.2%,21.0%
+59610,Diamond Valley Lake Solar (AP North Lake I),27/10/2015,2015,CAISO,CA,33.74,-117.01,5.51,PV,c-Si,24.06,20.00,1.20,Tracking,Single Axis,Tracking,180,,,,,, $16.65 , $3.73 ,82.3,81.7,,,,,,,,,27.4%,24.0%,26.3%,24.3%,24.7%
+59431,Sierra Solar Greenworks,30/11/2015,2015,CAISO,CA,34.70,-118.34,5.62,PV,Thin-Film,22.47,20.00,1.12,Fixed Tilt,Fixed Tilt,25,197,,,,,, $22.44 , $4.31 ,91.4,87.8,,,,,,,,,25.5%,25.1%,25.7%,24.3%,23.2%
+58649,Montgomery Solar,01/12/2015,2015,Southeast (non-ISO),NC,35.35,-79.76,4.48,PV,c-Si,28.03,20.00,1.40,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.25 , $3.70 ,,131.8,,,,,,,,,22.9%,23.3%,21.8%,22.0%,21.3%
+59441,NextEra Adelanto Solar Phase 1,03/09/2015,2015,CAISO,CA,34.55,-117.38,5.92,PV,c-Si,24.43,20.00,1.22,Tracking,Single Axis,Tracking,180,,,,,, $22.62 , $3.24 ,68.4,82.2,,,,,,,,,34.9%,34.6%,34.3%,34.3%,31.0%
+59408,Shafter Solar,22/06/2015,2015,CAISO,CA,35.45,-119.13,5.36,PV,c-Si,26.80,20.00,1.34,Tracking,Single Axis,Tracking,180,,,,,, $20.36 , $3.51 ,85.1,86.8,,,,,,,,,29.4%,29.9%,29.7%,29.6%,28.3%
+59555,Leo/Vega Solar,26/05/2015,2015,CAISO,CA,36.93,-120.81,5.20,PV,c-Si,25.82,20.00,1.29,Tracking,Single Axis,Tracking,180,,,,,, $19.72 , $3.93 ,,73.5,,,,,,,,,29.8%,29.1%,29.4%,28.1%,24.5%
+59153,Watson Seed Farm PV1 (Fresh Air Energy II),30/12/2015,2015,PJM,NC,36.13,-77.72,4.43,PV,Thin-Film,25.50,20.00,1.28,Fixed Tilt,Fixed Tilt,20,191,,,,,, $22.35 , $12.66 ,,104.7,,,,,,,,,19.1%,19.7%,19.8%,19.6%,17.2%
+59155,Shawboro (PV1 / Fresh Air Energy X ),01/10/2015,2015,PJM,NC,36.43,-76.09,4.39,PV,c-Si,29.50,20.00,1.47,Fixed Tilt,Fixed Tilt,25,182,,,,,, $23.06 , $10.71 ,,110.9,,,,,,,,,21.4%,22.0%,21.7%,19.2%,20.5%
+59322,Pumpjack Solar (1),28/02/2015,2015,CAISO,CA,35.42,-119.64,5.33,PV,c-Si,26.32,20.00,1.32,Tracking,Single Axis,Tracking,179,,,,,, $19.04 , $3.85 ,85.5,95.9,,,,,,,,,28.4%,28.4%,28.8%,29.1%,25.7%
+59380,Wildwood Solar Project (1),01/03/2015,2015,CAISO,CA,35.62,-119.57,5.38,PV,c-Si,26.08,20.00,1.30,Tracking,Single Axis,Tracking,179,,,,,, $20.89 , $3.96 ,86.9,100.6,,,,,,,,,26.5%,26.1%,28.5%,28.3%,25.0%
+59722,Seville Solar 1,31/12/2015,2015,West (non-ISO),CA,33.11,-116.00,5.90,PV,Thin-Film,27.30,20.00,1.37,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,83.8,111.9,,,,,,,,,33.9%,35.2%,29.9%,29.9%,29.3%
+59874,Richland Solar Center,01/12/2015,2015,Southeast (non-ISO),GA,32.62,-83.38,4.67,PV,c-Si,33.44,20.00,1.67,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,67.1,105.4,,,,,,,,,26.7%,23.5%,22.9%,24.4%,23.1%
+59607,Maricopa West Solar,09/11/2015,2015,CAISO,CA,35.11,-119.33,5.41,PV,c-Si,28.00,20.00,1.40,Tracking,Single Axis,Tracking,180,,,,,, $19.59 , $4.16 ,62.5,107.0,,,,,,,,,29.9%,27.2%,28.2%,25.7%,23.7%
+59638,Coronal Lost Hills,30/05/2015,2015,CAISO,CA,35.73,-119.91,5.38,PV,c-Si,25.99,20.00,1.30,Tracking,Single Axis,Tracking,179,,,,,, $19.58 , $3.76 ,,122.6,,,,,,,,,31.4%,29.7%,30.0%,28.9%,26.4%
+59633,Kettleman Solar (Kings Co) / Centaurus,14/08/2015,2015,CAISO,CA,36.06,-119.95,5.36,PV,c-Si,26.97,20.00,1.35,Tracking,Single Axis,Tracking,180,,,,,, $23.59 , $3.67 ,71.0,76.7,,,,,,,,,31.9%,29.2%,30.8%,30.4%,27.5%
+58623,Holstein Solar,01/12/2015,2015,Southeast (non-ISO),NC,34.77,-79.34,4.53,PV,c-Si,25.60,20.00,1.28,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.21 , $1.87 ,,86.1,,,,,,,,,20.6%,22.3%,19.4%,19.7%,19.0%
+59413,Corcoran 2 (SPS Corcoran West Solar),27/07/2015,2015,CAISO,CA,36.14,-119.58,5.29,PV,c-Si,28.00,19.75,1.42,Tracking,Single Axis,Tracking,180,,,,,, $19.61 , $3.56 ,,105.2,,,,,,,,,29.3%,29.0%,29.1%,28.3%,27.7%
+60422,Morgans Corner Solar,01/12/2015,2015,PJM,NC,36.42,-76.36,4.40,PV,c-Si,25.00,19.65,1.27,Fixed Tilt,Fixed Tilt,20,181,,,,,, $22.80 , $10.19 ,,128.4,,,,,,,,,18.8%,19.1%,15.9%,16.8%,17.5%
+59979,PSEG Pittsburg Solar Energy Center (Columbia Star / Columbia Solar Energy ),31/10/2015,2015,CAISO,CA,38.02,-121.87,5.04,PV,c-Si,25.41,19.20,1.32,Fixed Tilt,Fixed Tilt,20,203,,,,,, $24.15 , $4.99 ,,123.8,,,,,,,,,24.2%,24.6%,23.4%,22.8%,19.8%
+59449,Decatur County Solar Project,01/12/2015,2015,Southeast (non-ISO),GA,30.97,-84.63,4.78,PV,c-Si,27.00,18.97,1.42,Tracking,Single Axis,Tracking,180,,,,,, $22.10 , $4.17 ,,88.5,,,,,,,,,27.9%,26.4%,24.6%,25.9%,25.0%
+59469,Alamo Solar Project,01/05/2015,2015,CAISO,CA,34.69,-117.35,5.92,PV,c-Si,23.35,18.70,1.25,Tracking,Single Axis,Tracking,180,,,,,, $22.41 , $3.94 ,,114.5,,,,,,,,,32.0%,31.1%,31.9%,25.5%,25.3%
+59334,Catalina Solar Project 2 (Phase 3),22/07/2015,2015,CAISO,CA,34.92,-118.36,5.82,PV,c-Si,24.28,18.40,1.32,Tracking,Single Axis,Tracking,180,,,,,, $21.46 , $3.33 ,,101.7,,,,,,,,,35.0%,34.4%,34.8%,32.5%,29.8%
+59472,"Apple Data Center (Reno NV), (Fort Churchill)",31/05/2015,2015,West (non-ISO),NV,39.12,-119.14,5.26,PV,CPV,19.74,18.00,1.10,Tracking,Single Axis,Tracking,179,,,,,, $31.04 , $8.00 ,,,,,,,,,,,,,,,
+59474,Apple Data Center- PV3,01/12/2015,2015,Southeast (non-ISO),NC,35.70,-81.15,4.49,PV,c-Si,21.92,17.50,1.25,Tracking,Single Axis,Tracking,178,,,,,, $23.06 , $4.13 ,,134.7,,,,,,,,,25.4%,23.9%,23.1%,23.6%,21.4%
+58831,Redcrest Solar Farm (Redwood: Redcrest),06/11/2015,2015,CAISO,CA,35.32,-118.81,5.37,PV,Thin-Film,20.86,16.66,1.25,Tracking,Single Axis,Tracking,180,,,,,, $19.41 , $4.27 ,,103.1,,,,,,,,,27.6%,27.7%,26.4%,27.7%,23.1%
+59919,Solar Star Nellis Air Force Base (Solar Star NAFB),18/11/2015,2015,West (non-ISO),NV,36.21,-115.05,5.62,PV,c-Si,19.00,15.50,1.23,Tracking,Single Axis,Tracking,180,,,,,, $29.52 , $8.47 ,,84.7,,,,,,,,,29.8%,29.6%,29.9%,29.0%,29.4%
+59887,Beaufort Solar,01/12/2015,2015,Southeast (non-ISO),NC,35.46,-77.14,4.40,PV,c-Si,21.01,15.00,1.40,Fixed Tilt,Fixed Tilt,20,176,,,,,, $23.19 , $1.70 ,,102.9,,,,,,,,,22.0%,20.5%,20.6%,22.2%,20.9%
+60007,Morelos Del Sol,30/11/2015,2015,CAISO,CA,35.73,-119.90,5.38,PV,Thin-Film,18.72,15.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $19.59 , $3.67 ,,95.1,,,,,,,,,29.6%,29.5%,29.5%,27.4%,27.0%
+"59185, 59318, 59628","Jacobstown Solar Farm 1-3 (2: North Run, 3: Hanover)",30/09/2015,2015,PJM,NJ,40.06,-74.58,4.03,PV,c-Si,18.34,15.00,1.22,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,,139.5,,,,,,,,,,,,,
+59008,Woodmere Solar Farm (Redwood: Woodmere),18/12/2015,2015,CAISO,CA,35.32,-118.82,5.37,PV,Thin-Film,18.75,14.99,1.25,Tracking,Single Axis,Tracking,180,,,,,, $19.53 , $3.67 ,,89.4,,,,,,,,,27.3%,27.8%,26.7%,27.7%,27.1%
+59548,Creswell (Alligood) Solar,01/05/2015,2015,PJM,NC,35.89,-76.38,4.39,PV,c-Si,19.60,14.00,1.40,Tracking,Single Axis,Tracking,180,,,,,, $22.68 , $19.98 ,,114.6,,,,,,,,,24.1%,25.2%,24.9%,20.6%,11.2%
+59872,"UC Davis South Campus (UC Davis Large Solar Plant, SSC 32)",20/11/2015,2015,CAISO,CA,38.52,-121.74,5.08,PV,c-Si,16.30,13.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $26.82 , $4.13 ,,81.2,,,,,,,,,26.0%,25.9%,27.1%,26.2%,24.3%
+59966,"Camp Lejeune Solar (Navy, Marines)",01/12/2015,2015,Southeast (non-ISO),NC,34.72,-77.35,4.45,PV,c-Si,17.00,12.80,1.33,Fixed Tilt,Fixed Tilt,20,181,,,,,, $23.27 , $3.42 ,,106.7,,,,,,,,,21.0%,19.9%,17.6%,19.4%,18.5%
+59947,SR Camden,30/12/2015,2015,West (non-ISO),AR,33.64,-92.71,4.51,PV,Thin-Film,16.82,12.50,1.35,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,108.6,,,,,,,,,22.4%,24.3%,24.6%,23.8%,22.0%
+58639,KRS I Anahola Solar,01/08/2015,2015,HI,HI,22.13,-159.31,4.36,PV,c-Si,14.53,12.00,1.21,Fixed Tilt,Fixed Tilt,20,180,PV+Storage,Lithium-ion,2015,6,4.63,  ,  ,,,,,,,,,,,20.1%,20.5%,18.3%,17.1%,19.7%
+59526,"Whitakers Solar (Capital Partners, Phase II, Project B)",01/12/2015,2015,PJM,NC,36.13,-77.74,4.43,PV,c-Si,16.88,12.00,1.41,Tracking,Single Axis,Tracking,181,,,,,, $22.04 , $10.68 ,,102.7,,,,,,,,,25.2%,26.6%,25.0%,25.6%,23.4%
+59086,Goose Lake Solar (formerly Cottonwood 1),27/07/2015,2015,CAISO,CA,35.59,-119.58,5.34,PV,Thin-Film,16.87,12.00,1.41,Tracking,Single Axis,Tracking,179,,,,,, $21.21 , $3.34 ,126.5,127.9,,,,,,,,,33.4%,33.2%,32.6%,30.7%,29.8%
+59087,(City of) Corcoran Solar (formerly Cottonwood 2),01/05/2015,2015,CAISO,CA,36.14,-119.56,5.29,PV,Thin-Film,14.90,12.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $19.52 , $3.93 ,,134.2,,,,,,,,,28.1%,26.3%,27.3%,24.7%,25.0%
+59498,Tracy Solar,01/12/2015,2015,Southeast (non-ISO),NC,35.80,-78.14,4.43,PV,c-Si,14.00,11.66,1.20,Fixed Tilt,Fixed Tilt,20,181,,,,,, $23.16 , $3.75 ,,102.0,,,,,,,,,19.1%,19.4%,18.1%,18.2%,16.9%
+59444,(City of) Phoenix (Desert Star) (Landfill SR85),10/06/2015,2015,West (non-ISO),AZ,33.14,-112.66,5.85,PV,c-Si,15.62,11.20,1.40,Tracking,Single Axis,Tracking,180,,,,,, $19.18 , $9.50 ,,79.1,,,,,,,,,,,30.3%,31.6%,33.0%
+57324,Luke Air Force Base Solar,13/07/2015,2015,West (non-ISO),AZ,33.53,-112.38,5.81,PV,c-Si,15.62,11.20,1.40,Tracking,Single Axis,Tracking,180,,,,,, $20.65 , $12.34 ,,77.5,,,,,,,,,,,,31.4%,32.8%
+60197,Santolina Solar Energy Center,31/12/2015,2015,West (non-ISO),NM,35.01,-106.86,5.63,PV,c-Si,12.40,10.50,1.18,Tracking,Single Axis,Tracking,180,,,,,, $23.80 , $19.97 ,,59.6,,,,,,,,,27.5%,28.7%,28.9%,26.9%,28.3%
+59811,PSEG Waldorf Solar Center (Rockfish Solar),01/08/2015,2015,PJM,MD,38.59,-76.88,4.19,PV,c-Si,13.09,10.30,1.27,Tracking,Single Axis,Tracking,180,,,,,, $24.33 , $9.80 ,64.8,95.7,,,,,,,,,22.4%,22.3%,20.9%,22.5%,20.3%
+64190,Waipio Peninsula,31/10/2015,2015,HI,HI,21.37,-157.99,5.72,PV,c-Si,14.30,10.20,1.40,Fixed Tilt,Fixed Tilt,10,180,,,,,,  ,  ,,,,,,,,,,,,,,,24.1%
+"58418, 58419",Victor Dry Farm Ranch A+B,25/08/2015,2015,CAISO,CA,34.50,-117.47,5.89,PV,c-Si,11.00,10.00,1.10,Fixed Tilt,Fixed Tilt,15,192,,,,,,  ,  ,,97.6,,,,,,,,,,,,,
+59601,PSEG L&D Landfill Solar,30/12/2015,2015,PJM,NJ,39.98,-74.77,4.03,PV,c-Si,12.93,10.00,1.29,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.59 , $20.22 ,,183.6,,,,,,,,,19.0%,18.9%,18.0%,19.1%,18.5%
+60195,South Valley Solar Energy Center,31/12/2015,2015,West (non-ISO),NM,34.99,-106.73,5.61,PV,c-Si,12.40,10.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $23.53 , $17.69 ,,60.5,,,,,,,,,28.1%,21.7%,28.8%,27.6%,30.0%
+60198,Rio Communities Solar Energy Center,31/12/2015,2015,West (non-ISO),NM,34.64,-106.70,5.65,PV,c-Si,12.40,10.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $23.32 , $20.24 ,,64.2,,,,,,,,,26.9%,27.5%,26.8%,27.6%,28.0%
+"59424, 59823",IND Airport Solar Farm Phase 2 (INDY II + III),30/09/2015,2015,MISO,IN,39.69,-86.32,4.05,PV,c-Si,13.20,10.00,1.32,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,154.5,,,,,,,,,,,,,
+59273,SEPV Palmdale East Solar,27/10/2015,2015,CAISO,CA,34.61,-117.94,5.89,PV,c-Si,11.50,9.98,1.15,Tracking,Single Axis,Tracking,180,,,,,, $22.41 , $3.56 ,,89.4,,,,,,,,,31.2%,30.1%,30.8%,29.7%,28.0%
+60196,Santa Fe Solar Energy Center,31/12/2015,2015,West (non-ISO),NM,35.56,-106.09,5.52,PV,c-Si,11.60,9.50,1.22,Tracking,Single Axis,Tracking,180,,,,,, $23.21 , $20.30 ,,65.9,,,,,,,,,26.6%,26.0%,29.0%,28.7%,26.3%
+58877,PSEG Kinsley Landfill Solar,01/01/2015,2015,PJM,NJ,39.79,-75.11,4.08,PV,c-Si,11.18,8.60,1.30,Fixed Tilt,Fixed Tilt,10,180,,,,,, $18.56 , $26.48 ,,144.9,,,,,,,,,19.8%,18.1%,17.2%,19.1%,13.5%
+59001,PSEG Parkland Landfill Solar,01/01/2015,2015,PJM,NJ,40.13,-74.71,3.97,PV,c-Si,10.14,7.80,1.30,Fixed Tilt,Fixed Tilt,15,180,,,,,, $18.70 , $19.55 ,,146.2,,,,,,,,,17.1%,17.4%,16.8%,18.7%,18.0%
+60035,"Tequesquite Landfill Solar PV Project (RPU Project, SSC 31)",30/10/2015,2015,CAISO,CA,33.97,-117.41,5.45,PV,c-Si,9.40,7.50,1.25,Fixed Tilt,Fixed Tilt,7.5,180,,,,,, $25.77 , $4.75 ,81.5,106.7,,,,,,,,,23.3%,22.4%,22.6%,22.1%,21.1%
+59440,NextEra Adelanto Solar Phase 2,03/07/2015,2015,CAISO,CA,34.55,-117.37,5.92,PV,c-Si,8.55,7.00,1.22,Tracking,Single Axis,Tracking,180,,,,,, $22.27 , $3.75 ,75.8,87.5,,,,,,,,,31.1%,30.3%,30.7%,29.8%,26.7%
+60734,Bordentown Solar,30/12/2015,2015,PJM,NJ,40.04,-74.78,4.01,PV,c-Si,8.50,6.80,1.25,Fixed Tilt,Fixed Tilt,19,195,,,,,, $18.78 , $21.32 ,,,,,,,,,,,,18.1%,17.4%,18.0%,17.6%
+59611,Lakeland Bluebird Facility (Sutton or Bella Vista),01/08/2015,2015,Southeast (non-ISO),FL,28.07,-82.02,4.97,PV,c-Si,7.69,6.00,1.28,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,101.1,98.9,,,,,,,,,20.2%,21.6%,20.3%,21.0%,18.4%
+59556,Dalton phase 3 (Dalton 2 in EIA) (Looper Bridge Solar Facility in Ventyx),13/05/2015,2015,Southeast (non-ISO),GA,34.71,-84.92,4.37,PV,c-Si,7.10,5.50,1.29,Fixed Tilt,Fixed Tilt,22,180,,,,,, $22.31 , $5.17 ,,88.2,,,,,,,,,22.9%,21.8%,19.9%,20.6%,18.6%
+59204,"OCI Alamo 3 Solar (Walzem Solar, Texas 3)",01/01/2015,2015,ERCOT,TX,29.48,-98.30,4.77,PV,c-Si,6.75,5.50,1.23,Tracking,Dual-Axis,Tracking,,,,,,, $26.95 , $-   ,,126.1,,,,,,,,,24.9%,24.3%,21.9%,22.4%,22.3%
+60239,Pastime Farm,26/12/2015,2015,MISO,IN,39.52,-87.18,4.05,PV,Thin-Film,6.93,5.20,1.33,Fixed Tilt,Fixed Tilt,20,180,,,,,, $26.89 , $0.63 ,,158.1,,,,,,,,,21.3%,20.5%,20.0%,19.2%,19.6%
+60238,McDonald Solar Farm,26/12/2015,2015,MISO,IN,39.60,-87.47,4.07,PV,Thin-Film,7.14,5.20,1.37,Fixed Tilt,Fixed Tilt,20,180,,,,,, $26.83 , $0.56 ,,164.5,,,,,,,,,20.8%,20.0%,19.8%,13.0%,19.2%
+58646,Stateline Solar (1-7) (Desert Stateline),31/07/2016,2016,CAISO,CA,35.58,-115.44,5.72,PV,Thin-Film,340.40,299.50,1.14,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.53 , $4.05 ,,126.7,,,,,,,,,,25.1%,25.4%,24.6%,24.8%
+58462,McCoy Solar Energy Project (1-8) Phase I,30/06/2016,2016,CAISO,CA,33.69,-114.75,5.80,PV,Thin-Film,339.30,270.60,1.25,Tracking,Single Axis,Tracking,180,PV+Storage,,2021,230,920, $17.65 , $4.04 ,85.8,66.9,,,,,,,,,,31.4%,29.6%,30.4%,23.9%
+57859,Moapa Southern Paiute (Moapa Solar Project),31/12/2016,2016,West (non-ISO),NV,36.53,-114.77,5.71,PV,Thin-Film,353.00,250.00,1.41,Fixed Tilt,Fixed Tilt,30,181,,,,,, $22.96 , $5.20 ,80.8,88.3,,,,,,,,,,28.7%,28.5%,27.4%,28.7%
+58644,Silver State South Solar Project 1-8,30/06/2016,2016,CAISO,NV,35.62,-115.34,5.51,PV,Thin-Film,338.70,250.00,1.35,Tracking,Single Axis,Tracking,180,,,,,, $23.64 , $3.21 ,115.6,58.2,,,,,,,,,,32.5%,32.5%,29.9%,31.0%
+59939,RE Tranquility Solar,26/09/2016,2016,CAISO,CA,36.58,-120.40,5.30,PV,c-Si,257.70,205.30,1.26,Tracking,Single Axis,Tracking,180,PV+Storage,,2021,72,288, $8.28 , $3.88 ,,77.5,,,,,,,,,,25.3%,27.9%,27.4%,23.7%
+60233,RE Garland,30/11/2016,2016,CAISO,CA,34.83,-118.52,5.76,PV,c-Si,241.46,180.00,1.34,Tracking,Single Axis,Tracking,180,PV+Storage,,2021,88,352, $21.22 , $3.31 ,,66.6,,,,,,,,,,33.8%,32.5%,29.3%,30.0%
+59994,RE Roserock,23/11/2016,2016,ERCOT,TX,30.96,-103.31,5.61,PV,c-Si,212.10,157.50,1.35,Tracking,Single Axis,Tracking,179,,,,,, $24.06 , $-   ,43.8,60.8,,,,,,,,,,28.7%,18.3%,27.9%,30.0%
+59840,Springbok Solar Farm 2 (Fremont Solar),30/09/2016,2016,West (non-ISO),CA,35.25,-117.97,5.86,PV,c-Si,191.00,155.00,1.23,Tracking,Single Axis,Tracking,179,,,,,,  ,  ,51.0,71.7,,,,,,,,,,30.8%,30.0%,30.1%,30.2%
+60308,Mesquite Solar 3,31/12/2016,2016,CAISO,AZ,33.34,-112.95,5.87,PV,c-Si,210.00,154.00,1.36,Tracking,Single Axis,Tracking,180,,,,,, $18.67 , $2.97 ,48.9,40.7,,,,,,,,,,33.5%,33.9%,33.9%,34.4%
+57491,(Tenaska) Imperial Solar Energy Center West (Csolar IV West),30/04/2016,2016,CAISO,CA,32.77,-115.78,5.79,PV,Thin-Film,182.29,148.70,1.23,Tracking,Single Axis,Tracking,180,,,,,, $19.19 , $3.29 ,94.3,71.8,,,,,,,,,,30.0%,29.0%,30.3%,29.9%
+59897,Taylor County Solar (Sandhills Solar Facility),31/10/2016,2016,Southeast (non-ISO),GA,32.58,-84.30,4.59,PV,Thin-Film,180.00,146.00,1.23,Tracking,Single Axis,Tracking,180,,,,,, $22.05 , $4.59 ,57.9,77.0,,,,,,,,,,23.3%,22.6%,23.1%,21.0%
+60092,NextEra Blythe Solar II (125),30/10/2016,2016,CAISO,CA,33.68,-114.73,5.80,PV,c-Si,161.50,131.20,1.23,Tracking,Single Axis,Tracking,181,PV+Storage,,2021,115,460, $16.61 , $3.87 ,51.9,76.0,,,,,,,,,,30.4%,30.0%,23.7%,24.1%
+59656,Comanche Solar,30/09/2016,2016,West (non-ISO),CO,38.21,-104.57,5.13,PV,c-Si,156.00,120.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $18.74 , $19.61 ,55.6,66.9,,,,,,,,,,27.2%,28.3%,27.7%,27.6%
+60093,NextEra Blythe Solar I (110),07/03/2016,2016,CAISO,CA,33.68,-114.74,5.80,PV,c-Si,154.00,109.80,1.40,Tracking,Single Axis,Tracking,181,,,2022,63,252, $16.88 , $3.08 ,,68.5,,,,,,,,,,28.4%,31.1%,30.2%,30.6%
+59207,OCI Alamo 7 Solar,30/08/2016,2016,ERCOT,TX,33.01,-99.60,5.11,PV,c-Si,132.00,106.40,1.24,Tracking,Dual-Axis,Tracking,,,,,,, $22.24 , $-   ,,85.5,,,,,,,,,,26.7%,26.5%,27.0%,28.1%
+59532,Springbok Solar Farm 1,30/07/2016,2016,West (non-ISO),CA,35.25,-117.96,5.86,PV,c-Si,136.80,105.00,1.30,Tracking,Single Axis,Tracking,179,,,,,,  ,  ,60.4,79.1,,,,,,,,,,32.5%,32.4%,31.5%,31.9%
+59896,Butler Solar Project 103,31/12/2016,2016,Southeast (non-ISO),GA,32.56,-84.28,4.59,PV,Thin-Film,141.50,103.00,1.37,Tracking,Single Axis,Tracking,180,,,,,, $22.08 , $4.47 ,57.7,79.3,,,,,,,,,,25.8%,25.0%,25.5%,24.1%
+58975,Henrietta Solar Project,31/10/2016,2016,CAISO,CA,36.22,-119.81,5.32,PV,c-Si,127.90,102.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $19.94 , $3.68 ,89.0,117.3,,,,,,,,,,28.0%,28.5%,27.4%,27.1%
+60064,White Pine Solar,01/07/2016,2016,Southeast (non-ISO),GA,32.50,-84.26,4.59,PV,c-Si,148.50,101.20,1.47,Fixed Tilt,Fixed Tilt,17,200,,,,,, $22.30 , $4.87 ,52.8,76.8,,,,,,,,,,23.3%,21.6%,22.6%,21.3%
+60307,Mesquite Solar 2,31/12/2016,2016,CAISO,AZ,33.33,-112.92,5.87,PV,c-Si,136.50,100.80,1.35,Tracking,Single Axis,Tracking,180,,,,,, $19.23 , $3.33 ,54.7,57.1,,,,,,,,,,32.9%,32.3%,29.0%,29.8%
+59976,RE Astoria 1,31/12/2016,2016,CAISO,CA,34.84,-118.45,5.78,PV,c-Si,130.80,100.00,1.31,Tracking,Single Axis,Tracking,179,,,,,, $21.28 , $3.05 ,,67.4,,,,,,,,,,30.9%,32.9%,32.3%,32.7%
+60352,Boulder Solar Project 1,31/12/2016,2016,West (non-ISO),NV,35.84,-114.97,5.48,PV,c-Si,124.90,100.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $28.37 , $7.50 ,41.9,60.8,,,,,,,,,,31.0%,32.0%,30.6%,32.0%
+59852,North Star Solar Project,20/10/2016,2016,MISO,MN,45.49,-92.90,3.77,PV,c-Si,138.00,100.00,1.38,Tracking,Single Axis,Tracking,180,,,,,, $19.80 , $0.53 ,66.4,92.3,,,,,,,,,,21.6%,22.5%,20.3%,22.5%
+59150,RE Mustang Solar,23/08/2016,2016,CAISO,CA,36.23,-119.91,5.36,PV,c-Si,134.40,100.00,1.34,Tracking,Single Axis,Tracking,179,,,,,, $19.89 , $3.76 ,56.9,78.3,,,,,,,,,,30.2%,29.6%,28.2%,26.3%
+59814,Copper Mountain Solar 4,30/09/2016,2016,CAISO,NV,35.79,-114.98,5.66,PV,c-Si,125.20,93.60,1.34,Tracking,Single Axis,Tracking,180,,,,,, $22.14 , $3.10 ,54.5,63.4,,,,,,,,,,30.4%,32.2%,32.4%,32.5%
+60185,Solverde 1 Solar Facility,20/12/2016,2016,CAISO,CA,34.66,-118.30,5.74,PV,c-Si,106.30,85.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $22.23 , $3.43 ,51.5,60.2,,,,,,,,,,30.0%,30.1%,29.4%,29.2%
+59941,Iron Springs Solar (Three Cedars),15/08/2016,2016,West (non-ISO),UT,37.73,-113.16,5.23,PV,c-Si,101.06,80.02,1.26,Tracking,Single Axis,Tracking,179,,,,,, $22.23 , $13.10 ,,53.5,,,,,,,,,,30.3%,30.2%,29.7%,31.3%
+59387,Escalante Solar I (Four Brothers),31/10/2016,2016,West (non-ISO),UT,38.52,-113.04,5.16,PV,c-Si,105.10,80.02,1.31,Tracking,Single Axis,Tracking,179,,,,,, $22.12 , $15.39 ,,58.3,,,,,,,,,,29.5%,29.2%,29.3%,28.2%
+59388,Escalante Solar II (Four Brothers),31/10/2016,2016,West (non-ISO),UT,38.50,-113.03,5.23,PV,c-Si,105.10,80.02,1.31,Tracking,Single Axis,Tracking,179,,,,,, $21.77 , $14.02 ,,53.6,,,,,,,,,,29.9%,29.7%,29.1%,31.1%
+59389,Escalante Solar III (Four Brothers),31/10/2016,2016,West (non-ISO),UT,38.50,-112.99,5.22,PV,c-Si,105.30,80.02,1.32,Tracking,Single Axis,Tracking,179,,,,,, $20.33 , $14.81 ,,54.7,,,,,,,,,,29.7%,29.5%,29.2%,30.4%
+59386,Enterprise Solar Plant (Four Brothers),12/09/2016,2016,West (non-ISO),UT,37.64,-113.61,5.40,PV,c-Si,105.10,80.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $21.77 , $13.81 ,,50.0,,,,,,,,,,32.0%,32.2%,31.4%,33.4%
+59946,Granite Mountain Solar East (Three Cedars),01/09/2016,2016,West (non-ISO),UT,37.77,-113.23,5.25,PV,c-Si,101.30,80.00,1.27,Tracking,Single Axis,Tracking,179,,,,,, $22.25 , $12.97 ,,56.4,,,,,,,,,,29.8%,29.7%,29.1%,30.7%
+60127,"Amazon Solar Farm US East 1 (EIA: Eastern Shore Solar, Ventyx: Oak Hall Solar, Dominion: Solar Alliance with AWS, Amazon: Amazon Solar Farm US East 1)",31/10/2016,2016,PJM,VA,37.95,-75.57,4.30,PV,c-Si,105.40,80.00,1.32,Tracking,Single Axis,Tracking,182,,,,,, $25.67 , $11.40 ,67.6,98.8,,,,,,,,,,22.5%,21.9%,23.6%,22.1%
+60068,Grand View Solar Two,31/12/2016,2016,West (non-ISO),ID,43.02,-116.01,4.69,PV,c-Si,108.00,80.00,1.35,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,55.2,,,,,,,,,,23.3%,26.0%,25.7%,26.5%
+60432,Three Peaks Power Plant,31/12/2016,2016,West (non-ISO),UT,37.83,-113.13,5.25,PV,c-Si,107.75,80.00,1.35,Tracking,Single Axis,Tracking,180,,,,,, $22.49 , $13.99 ,,48.9,,,,,,,,,,31.5%,32.2%,30.9%,31.0%
+59671,Hope Mills Solar (Innovative Solar 46),20/12/2016,2016,Southeast (non-ISO),NC,34.92,-78.93,4.51,PV,c-Si,100.05,78.50,1.27,Tracking,Single Axis,Tracking,185,,,,,, $23.06 , $3.51 ,,87.4,,,,,,,,,,22.7%,21.3%,21.8%,21.6%
+60082,White Oak Solar,01/07/2016,2016,Southeast (non-ISO),GA,33.04,-82.11,4.67,PV,c-Si,112.60,76.50,1.47,Fixed Tilt,Fixed Tilt,17,200,,,,,, $22.26 , $4.76 ,53.5,77.8,,,,,,,,,,23.8%,22.5%,22.8%,21.5%
+59977,RE Astoria 2,31/12/2016,2016,CAISO,CA,34.84,-118.48,5.78,PV,c-Si,94.90,75.00,1.27,Tracking,Single Axis,Tracking,180,,,,,, $21.34 , $2.98 ,57.4,65.3,,,,,,,,,,32.2%,34.9%,32.8%,33.6%
+60058,River Bend Solar (AL),30/09/2016,2016,Southeast (non-ISO),AL,34.84,-87.84,4.40,PV,c-Si,100.20,75.00,1.34,Tracking,Single Axis,Tracking,180,,,,,, $23.48 , $4.81 ,57.6,83.1,,,,,,,,,,22.9%,22.5%,22.8%,19.8%
+59589,Rutherford Farm,31/12/2016,2016,Southeast (non-ISO),NC,35.26,-81.83,4.52,PV,c-Si,92.00,74.80,1.23,Fixed Tilt,Fixed Tilt,25,178,,,,,, $23.38 , $3.62 ,,79.8,,,,,,,,,,21.2%,20.1%,21.1%,20.0%
+59993,FPL Babcock Ranch Solar Energy Center,31/12/2016,2016,Southeast (non-ISO),FL,26.86,-81.74,5.05,PV,c-Si,123.00,74.50,1.65,Fixed Tilt,Fixed Tilt,20,195,PV+Storage,Lithium-ion,2018,10,40, $20.97 , $26.59 ,,71.1,,,,,,,,,,25.1%,25.3%,24.7%,24.0%
+60061,FPL Citrus Solar Energy Center,31/12/2016,2016,Southeast (non-ISO),FL,27.32,-81.80,5.04,PV,c-Si,123.00,74.50,1.65,Fixed Tilt,Fixed Tilt,20,180,PV+Storage,Lithium-ion,2018,4,16, $20.80 , $26.82 ,,74.0,,,,,,,,,,25.3%,25.3%,25.1%,23.8%
+60014,FPL Manatee Solar Energy Center,31/12/2016,2016,Southeast (non-ISO),FL,27.62,-82.35,5.01,PV,c-Si,123.00,74.50,1.65,Fixed Tilt,Fixed Tilt,20,195,PV+Storage,,2021,409,900, $20.88 , $28.93 ,,69.9,,,,,,,,,,25.8%,25.5%,25.2%,24.7%
+60406,Roswell Solar,07/10/2016,2016,SPP,NM,33.46,-104.46,5.58,PV,c-Si,95.60,70.00,1.37,Tracking,Single Axis,Tracking,180,,,,,, $24.80 , $24.90 ,37.5,62.0,,,,,,,,,,28.0%,30.7%,26.8%,28.5%
+60405,Chaves County Solar I,07/10/2016,2016,SPP,NM,33.45,-104.44,5.58,PV,c-Si,95.60,70.00,1.37,Tracking,Single Axis,Tracking,180,,,,,, $24.82 , $24.91 ,37.9,58.6,,,,,,,,,,28.4%,30.6%,27.0%,28.9%
+60389,RE Barren Ridge 1 / RE Cinco Solar Project (Apollo Solar Project?),30/08/2016,2016,West (non-ISO),CA,35.20,-118.07,5.85,PV,c-Si,78.00,62.00,1.26,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,60.4,70.4,,,,,,,,,,32.8%,32.6%,30.1%,31.0%
+60611,Summit Farms Solar (Phase 1),01/12/2016,2016,PJM,NC,36.47,-76.15,4.40,PV,c-Si,84.20,60.00,1.40,Tracking,Single Axis,Tracking,181,,,,,, $22.68 , $9.50 ,51.7,86.8,,,,,,,,,,23.9%,21.8%,23.3%,22.9%
+59523,Five Points Solar Park,30/08/2016,2016,CAISO,CA,36.39,-120.24,5.36,PV,c-Si,84.00,60.00,1.40,Tracking,Single Axis,Tracking,179,,,,,, $17.73 , $3.79 ,50.3,61.8,,,,,,,,,,28.3%,30.8%,27.5%,25.6%
+59316,Beacon Solar 3 ( Hecate Energy Beacon 3 Photovoltaic Project),09/12/2016,2016,West (non-ISO),CA,35.25,-118.01,5.85,PV,c-Si,62.95,56.00,1.12,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,57.2,61.4,,,,,,,,,,26.9%,29.2%,28.2%,28.1%
+60590,"TID Solar Generating Station (Golden Fields Solar I , Rosamond West Solar Project II)",31/12/2016,2016,CAISO,CA,34.84,-118.39,5.78,PV,c-Si,67.40,54.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $19.62 , $3.76 ,44.6,84.4,,,,,,,,,,31.8%,32.3%,31.5%,26.3%
+60591,"Stanford Solar Generating Station (Solar Star California  XLI  ,Rosamond West Solar Project I)",31/12/2016,2016,CAISO,CA,34.83,-118.40,5.78,PV,c-Si,67.40,54.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $18.77 , $3.96 ,45.3,71.3,,,,,,,,,,32.1%,33.2%,32.9%,25.0%
+60554,SR Hazlehurst Solar II,31/12/2016,2016,Southeast (non-ISO),GA,31.82,-82.60,4.72,PV,Thin-Film,71.30,52.50,1.36,Tracking,Single Axis,Tracking,180,,,,,, $21.97 , $4.07 ,47.0,87.3,,,,,,,,,,22.2%,25.6%,23.6%,24.9%
+60063,Live Oak Solar,31/12/2016,2016,Southeast (non-ISO),GA,32.42,-82.10,4.70,PV,c-Si,,51.00,,Fixed Tilt,Fixed Tilt,17,200,,,,,, $22.39 , $4.56 ,53.5,78.4,,,,,,,,,,22.2%,22.0%,22.9%,21.9%
+59945,Granite Mountain Solar West (Three Cedars),01/09/2016,2016,West (non-ISO),UT,37.79,-113.28,5.25,PV,c-Si,62.50,50.40,1.24,Tracking,Single Axis,Tracking,179,,,,,, $22.36 , $12.41 ,,56.9,,,,,,,,,,29.0%,28.0%,28.4%,29.7%
+59317,Beacon Solar 4 ( Hecate Energy Beacon 4 Photovoltaic Project),09/12/2016,2016,West (non-ISO),CA,35.25,-118.02,5.85,PV,c-Si,56.47,50.00,1.13,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,57.2,64.3,,,,,,,,,,26.4%,28.6%,28.1%,28.0%
+60186,Antelope DSR 1,16/12/2016,2016,CAISO,CA,34.66,-118.29,5.74,PV,c-Si,62.50,50.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $21.89 , $3.42 ,49.0,60.3,,,,,,,,,,30.1%,30.2%,29.2%,29.2%
+60449,PSEG Pavant 2,01/11/2016,2016,West (non-ISO),UT,39.16,-112.35,5.00,PV,c-Si,62.70,50.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $22.88 , $15.94 ,,64.5,,,,,,,,,,27.2%,27.8%,26.3%,28.3%
+60413,Apple Bonnybrooke Solar,30/11/2016,2016,West (non-ISO),AZ,33.05,-111.34,5.80,PV,c-Si,62.64,50.00,1.25,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,58.4,,,,,,,,,,30.8%,31.7%,31.1%,32.1%
+59964,Elevation Solar C,21/12/2016,2016,CAISO,CA,34.73,-118.30,5.78,PV,c-Si,51.14,40.00,1.28,Tracking,Single Axis,Tracking,180,,,,,, $21.97 , $3.18 ,58.8,61.3,,,,,,,,,,31.5%,33.1%,31.6%,31.4%
+59164,Elm City Solar Facility (formerly Nan Solar Center),01/03/2016,2016,Southeast (non-ISO),NC,35.78,-77.85,4.45,PV,Thin-Film,53.62,40.00,1.34,Fixed Tilt,Fixed Tilt,25,181,,,,,, $23.27 , $1.78 ,,84.2,,,,,,,,,,23.4%,22.7%,22.7%,21.4%
+60445,Idaho Solar 1 (Boise Solar Farm),23/09/2016,2016,West (non-ISO),ID,43.44,-116.33,4.65,PV,c-Si,54.63,40.00,1.37,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,84.9,,,,,,,,,,25.3%,27.8%,26.9%,26.8%
+60149,Innovative Solar 43,31/12/2016,2016,Southeast (non-ISO),NC,34.53,-78.31,4.49,PV,c-Si,50.78,38.90,1.31,Fixed Tilt,Fixed Tilt,20,181,,,,,, $22.99 , $3.33 ,,79.9,,,,,,,,,,20.4%,20.4%,22.3%,18.8%
+60351,"PSEG Rawhide Flats Solar Energy Center (Bison Solar, Larimer Solar)",31/10/2016,2016,West (non-ISO),CO,40.86,-105.01,4.44,PV,c-Si,36.30,32.40,1.12,Tracking,Single Axis,Tracking,180,,,,,, $18.85 , $19.02 ,47.1,67.5,,,,,,,,,,20.8%,22.7%,21.6%,22.1%
+59894,Pawpaw Solar Plant,01/03/2016,2016,Southeast (non-ISO),GA,32.57,-84.26,4.59,PV,c-Si,42.50,30.48,1.39,Tracking,Single Axis,Tracking,180,,,,,, $22.06 , $4.49 ,57.2,86.1,,,,,,,,,,25.3%,24.6%,25.5%,23.3%
+60304,PSEG San Isabel Solar,31/12/2016,2016,West (non-ISO),CO,37.37,-104.47,5.15,PV,c-Si,37.90,30.00,1.26,Tracking,Single Axis,Tracking,180,,,,,, $18.62 , $17.54 ,41.0,60.5,,,,,,,,,,25.4%,28.7%,28.2%,29.4%
+59865,Fort Stewart Solar Facility,30/10/2016,2016,Southeast (non-ISO),GA,31.90,-81.59,4.68,PV,c-Si,43.50,30.00,1.45,Fixed Tilt,Fixed Tilt,20,195,,,,,, $22.35 , $4.89 ,,107.7,,,,,,,,,,22.2%,20.1%,20.6%,19.2%
+59863,Fort Gordon Solar Facility,30/10/2016,2016,Southeast (non-ISO),GA,33.39,-82.13,4.60,PV,c-Si,42.50,30.00,1.42,Fixed Tilt,Fixed Tilt,20,195,,,,,, $22.32 , $4.68 ,,102.1,,,,,,,,,,22.4%,21.5%,21.5%,20.4%
+59864,King's Bay Solar Facility (Naval Submarine Base (SUBASE)),31/12/2016,2016,Southeast (non-ISO),GA,30.83,-81.56,4.77,PV,c-Si,41.50,30.00,1.38,Fixed Tilt,Fixed Tilt,16,180,,,,,, $22.20 , $4.36 ,,95.3,,,,,,,,,,22.7%,21.0%,22.6%,21.1%
+60285,Red Horse 3,30/07/2016,2016,West (non-ISO),AZ,32.27,-110.15,5.76,PV,c-Si,37.70,30.00,1.26,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,45.0,63.3,,,,,,,,,,30.2%,30.9%,28.8%,29.3%
+59251,Caprock Solar 1,31/12/2016,2016,SPP,NM,34.99,-103.62,5.46,PV,c-Si,32.40,25.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $23.88 , $28.07 ,42.3,65.0,,,,,,,,,,31.5%,31.0%,29.4%,28.1%
+59891,Butler Solar Farm,01/02/2016,2016,Southeast (non-ISO),GA,32.58,-84.32,4.58,PV,Thin-Film,29.00,22.00,1.32,Tracking,Single Axis,Tracking,197,,,,,, $22.20 , $4.59 ,,82.1,,,,,,,,,,23.8%,22.4%,23.1%,21.8%
+59900,Corcoran Solar 3,29/02/2016,2016,CAISO,CA,36.15,-119.59,5.29,PV,c-Si,28.00,21.19,1.32,Tracking,Single Axis,Tracking,180,,,,,, $19.50 , $3.91 ,,73.8,,,,,,,,,,29.7%,30.0%,28.4%,26.6%
+60381,Sulphur Springs,31/12/2016,2016,West (non-ISO),AZ,32.07,-109.92,5.76,PV,c-Si,22.97,20.50,1.12,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,57.6,,,,,,,,,,30.2%,31.1%,29.6%,30.9%
+60741,Old Midville Solar Project,17/11/2016,2016,Southeast (non-ISO),GA,32.82,-81.98,4.68,PV,c-Si,28.20,20.16,1.40,Tracking,Single Axis,Tracking,180,,,,,, $22.06 , $3.42 ,,71.0,,,,,,,,,,25.6%,23.9%,24.3%,23.7%
+59963,Central Antelope Dry Ranch C (CADR C),31/05/2016,2016,CAISO,CA,34.72,-118.30,5.78,PV,c-Si,22.47,20.00,1.12,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.50 , $5.33 ,,91.3,,,,,,,,,,21.2%,22.5%,21.9%,18.6%
+59740,SEPV Mojave West,31/05/2016,2016,CAISO,CA,35.02,-118.28,5.79,PV,c-Si,25.00,20.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $21.41 , $3.31 ,,76.8,,,,,,,,,,32.6%,32.7%,31.2%,30.1%
+60280,Summer Solar of Lancaster (Summer Solar SCPPA),08/07/2016,2016,CAISO,CA,34.71,-118.31,5.78,PV,c-Si,25.86,20.00,1.29,Tracking,Single Axis,Tracking,180,,,,,, $22.26 , $3.24 ,65.8,62.7,,,,,,,,,,32.0%,32.6%,31.2%,30.9%
+60279,Antelope Big Sky Ranch Solar Facility (ABSR),16/08/2016,2016,CAISO,CA,34.69,-118.29,5.74,PV,c-Si,26.31,20.00,1.32,Tracking,Single Axis,Tracking,180,,,,,, $22.02 , $3.36 ,63.2,69.1,,,,,,,,,,32.2%,32.7%,31.5%,29.7%
+59962,North Lancaster Ranch,14/12/2016,2016,CAISO,CA,34.72,-118.31,5.78,PV,c-Si,22.47,20.00,1.12,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.49 , $5.18 ,94.2,90.8,,,,,,,,,,22.6%,22.0%,22.2%,19.2%
+59961,Western Antelope Blue Sky Ranch B (WABSRB),21/12/2016,2016,CAISO,CA,34.73,-118.31,5.78,PV,c-Si,25.86,20.00,1.29,Tracking,Single Axis,Tracking,180,,,,,, $22.30 , $3.19 ,63.0,63.2,,,,,,,,,,30.8%,32.7%,31.4%,31.3%
+59088,Calipatria Solar Farm,12/02/2016,2016,West (non-ISO),CA,33.17,-115.53,5.91,PV,Thin-Film,26.60,20.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,102.2,,,,,,,,,,25.9%,23.9%,24.0%,23.8%
+60386,RE Garland A,14/12/2016,2016,CAISO,CA,34.82,-118.50,5.78,PV,c-Si,26.83,20.00,1.34,Tracking,Single Axis,Tracking,180,,,,,, $21.18 , $3.31 ,,65.1,,,,,,,,,,33.6%,34.2%,32.9%,30.1%
+59528,NRG Solar Oasis,31/01/2016,2016,CAISO,CA,34.65,-118.08,5.85,PV,c-Si,27.80,20.00,1.39,Tracking,Single Axis,Tracking,180,,,,,, $22.30 , $3.45 ,,79.2,,,,,,,,,,33.1%,32.6%,31.6%,28.9%
+60485,Longboat Solar,31/12/2016,2016,CAISO,CA,34.90,-117.10,5.92,PV,c-Si,26.73,20.00,1.34,Tracking,Single Axis,Tracking,181,,,,,, $23.20 , $3.36 ,,76.4,,,,,,,,,,33.6%,34.5%,30.0%,29.8%
+60319,"Whitehouse Solar Farm (Louisa Solar Project, SFAE VA121 PV Project)",31/12/2016,2016,PJM,VA,38.02,-77.97,4.24,PV,c-Si,26.80,20.00,1.34,Tracking,Single Axis,Tracking,190,,,,,, $22.86 , $6.63 ,,110.6,,,,,,,,,,20.3%,16.3%,21.1%,17.8%
+59600,Nicolis Solar PV Plant (Coronal Tulare 1),30/09/2016,2016,CAISO,CA,35.82,-119.04,5.34,PV,c-Si,26.00,20.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $23.95 , $3.73 ,77.0,99.2,,,,,,,,,,29.0%,28.5%,28.6%,26.8%
+60078,CED Ducor 1 (SR Solis Vestal Almond),31/12/2016,2016,CAISO,CA,35.86,-119.07,5.34,PV,c-Si,26.19,20.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $24.02 , $3.54 ,56.3,71.9,,,,,,,,,,30.6%,29.9%,26.7%,28.3%
+60079,CED Ducor 2 (SR Solis Vestal Herder),31/12/2016,2016,CAISO,CA,35.84,-119.07,5.34,PV,c-Si,26.19,20.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $24.03 , $3.49 ,56.3,78.5,,,,,,,,,,30.4%,29.8%,26.5%,28.7%
+60081,CED Ducor 4 (SR Solis Vestal Fireman),31/12/2016,2016,CAISO,CA,35.85,-119.03,5.34,PV,c-Si,26.19,20.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $23.97 , $3.61 ,56.3,75.5,,,,,,,,,,30.5%,29.9%,26.5%,27.7%
+60039,Frontier I Solar,30/06/2016,2016,CAISO,CA,37.37,-121.15,5.21,PV,c-Si,28.02,20.00,1.40,Tracking,Single Axis,Tracking,180,,,,,, $23.38 , $3.53 ,59.0,63.8,,,,,,,,,,29.3%,30.4%,29.7%,28.2%
+60886,Pavant Solar 3,31/12/2016,2016,West (non-ISO),UT,39.15,-112.36,5.00,PV,c-Si,25.80,20.00,1.29,Tracking,Single Axis,Tracking,180,,,,,, $22.98 , $16.54 ,,61.8,,,,,,,,,,27.4%,28.8%,27.5%,28.4%
+59868,Kingbird A Solar,30/04/2016,2016,CAISO,CA,34.82,-118.44,5.78,PV,Thin-Film,25.50,20.00,1.28,Tracking,Single Axis,Tracking,180,,,,,, $21.06 , $3.10 ,63.7,54.5,,,,,,,,,,33.9%,34.6%,32.8%,32.1%
+60091,Kingbird B Solar,30/04/2016,2016,CAISO,CA,34.82,-118.44,5.78,PV,Thin-Film,25.50,20.00,1.28,Tracking,Single Axis,Tracking,180,,,,,, $21.11 , $3.06 ,63.9,54.1,,,,,,,,,,33.8%,33.8%,31.2%,32.5%
+59513,PSEG Meadows Solar Energy Center (Meadows PV1),01/06/2016,2016,PJM,NC,35.83,-77.12,4.44,PV,Thin-Film,25.89,20.00,1.29,Fixed Tilt,Fixed Tilt,20,181,,,,,, $22.60 , $10.50 ,,93.0,,,,,,,,,,19.0%,19.6%,19.5%,19.4%
+60318,Woodland Solar Farm (VA) (Isle of Wight Solar Project),31/12/2016,2016,PJM,VA,36.89,-76.61,4.34,PV,c-Si,25.10,19.70,1.27,Tracking,Single Axis,Tracking,201,,,,,, $22.51 , $5.87 ,,100.6,,,,,,,,,,16.6%,16.3%,19.6%,19.2%
+59250,Rio Bravo Solar Project 2,31/12/2016,2016,CAISO,CA,35.42,-119.63,5.33,PV,c-Si,25.72,19.50,1.32,Tracking,Single Axis,Tracking,179,,,,,, $19.13 , $3.70 ,64.2,101.7,,,,,,,,,,30.6%,29.7%,28.3%,26.1%
+59249,Rio Bravo Solar Project 1,31/12/2016,2016,CAISO,CA,35.42,-119.63,5.33,PV,c-Si,25.72,19.50,1.32,Tracking,Single Axis,Tracking,179,,,,,, $19.13 , $3.73 ,64.2,102.2,,,,,,,,,,30.7%,29.9%,28.0%,25.9%
+60469,Solar Glynn,31/12/2016,2016,Southeast (non-ISO),GA,31.27,-81.45,4.79,PV,c-Si,22.98,17.68,1.30,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.34 , $4.66 ,,94.2,,,,,,,,,,20.5%,19.9%,19.8%,19.2%
+60316,"Scott 1 Solar Farm (Powhatan Solar, Scott Timber Solar)",31/12/2016,2016,PJM,VA,37.52,-77.94,4.31,PV,c-Si,22.90,17.00,1.35,Tracking,Single Axis,Tracking,180,,,,,, $22.97 , $3.62 ,,101.0,,,,,,,,,,18.6%,11.9%,14.2%,21.3%
+60555,Selmer I (Selmer North),01/12/2016,2016,Southeast (non-ISO),TN,35.14,-88.55,4.37,PV,Thin-Film,19.91,16.00,1.24,Tracking,Single Axis,Tracking,179,,,,,, $23.24 , $2.72 ,,98.4,,,,,,,,,,,21.1%,21.8%,20.9%
+60062,Avalon Solar Phase II,26/05/2016,2016,West (non-ISO),AZ,32.04,-110.96,5.78,PV,c-Si,21.51,16.00,1.34,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,53.6,,,,,,,,,,31.4%,30.9%,30.5%,31.7%
+61552,Fort Detrick Solar,10/02/2016,2016,PJM,MD,39.44,-77.45,4.06,PV,c-Si,18.60,15.70,1.18,Fixed Tilt,Fixed Tilt,15,180,,,,,, $24.20 , $9.55 ,,120.0,,,,,,,,,,14.9%,15.4%,16.3%,15.9%
+60702,Rincon Solar I,31/12/2016,2016,Southeast (non-ISO),GA,32.29,-81.28,4.68,PV,c-Si,21.25,15.70,1.35,Tracking,Single Axis,Tracking,180,,,,,, $22.17 , $4.33 ,,108.9,,,,,,,,,,26.1%,23.2%,21.7%,22.5%
+59570,Mocksville Solar Facility,31/12/2016,2016,Southeast (non-ISO),NC,35.83,-80.57,4.46,PV,c-Si,20.00,15.40,1.30,Fixed Tilt,Fixed Tilt,20,179,,,,,, $23.26 , $3.69 ,,98.6,,,,,,,,,,19.7%,19.1%,20.0%,19.2%
+60787,Williamston Speight Solar,30/11/2016,2016,PJM,NC,35.89,-77.16,4.44,PV,c-Si,20.90,15.00,1.39,Tracking,Single Axis,Tracking,180,,,,,, $22.37 , $9.62 ,,81.7,,,,,,,,,,22.5%,19.6%,24.6%,
+60080,CED Ducor 3 (SR Solis Crown),31/12/2016,2016,CAISO,CA,35.85,-119.06,5.34,PV,c-Si,19.64,15.00,1.31,Tracking,Single Axis,Tracking,180,,,,,, $24.03 , $3.49 ,56.3,74.3,,,,,,,,,,30.1%,29.8%,26.8%,28.7%
+60391,"NRG Spencer Community Solar Project (Solterra Monastery, Sja Solar, St Joseph Abbey Community Solar)",31/12/2016,2016,ISO-NE,MA,42.29,-72.01,3.81,PV,c-Si,20.10,14.68,1.37,Fixed Tilt,Fixed Tilt,20,180,,,,,, $20.73 , $7.02 ,,170.7,,,,,,,,,,18.1%,17.1%,18.2%,19.6%
+59747,River Mountains Solar,31/01/2016,2016,West (non-ISO),NV,36.03,-114.93,5.65,PV,c-Si,18.67,14.40,1.30,Tracking,Single Axis,Tracking,180,,,,,, $29.34 , $7.45 ,,75.5,,,,,,,,,,27.8%,27.0%,26.8%,
+59599,Tropico Solar (Coronal Tulare 2),30/09/2016,2016,CAISO,CA,35.83,-119.05,5.34,PV,c-Si,18.20,14.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $23.65 , $3.76 ,79.0,100.0,,,,,,,,,,28.9%,28.7%,27.9%,26.6%
+60735,"Longview Solar (Hebron Solar, LS Worcester Solar)",28/02/2016,2016,PJM,MD,38.40,-75.67,4.21,PV,c-Si,17.82,13.60,1.31,Tracking,Single Axis,Tracking,181,,,,,, $25.61 , $17.08 ,,107.6,,,,,,,,,,23.3%,19.2%,21.3%,19.8%
+60023,SR Jenkins Fort Lupton (United Power),30/06/2016,2016,West (non-ISO),CO,40.08,-104.75,4.81,PV,Thin-Film,18.10,13.00,1.39,Tracking,Single Axis,Tracking,180,,,,,, $18.68 , $20.14 ,,74.7,,,,,,,,,,26.8%,27.5%,27.1%,28.7%
+60764,Victory Solar,31/12/2016,2016,West (non-ISO),CO,39.79,-104.44,4.85,PV,c-Si,16.04,12.83,1.25,Tracking,Single Axis,Tracking,180,,,,,, $18.90 , $22.89 ,,75.6,,,,,,,,,,25.9%,26.4%,26.0%,24.5%
+61342,"Barrett PV (BWC Barrett Street, BWC French River+BWC Stillwater River)",30/11/2016,2016,ISO-NE,MA,42.16,-71.87,3.84,PV,c-Si,16.44,11.93,1.38,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.52 , $7.25 ,,167.3,,,,,,,,,,17.9%,15.8%,18.9%,18.7%
+60226,Rancho SECO Solar Project,03/07/2016,2016,West (non-ISO),CA,38.34,-121.12,5.06,PV,Thin-Film,12.50,10.88,1.15,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,74.9,80.3,,,,,,,,,,24.8%,25.4%,23.8%,24.0%
+64072,Camp Ripley Solar,31/01/2017,2017,MISO,MN,46.09,-94.34,3.76,PV,Thin-Film,13.10,10.80,1.21,Fixed Tilt,Fixed Tilt,35,180,,,,,, $19.25 , $0.54 ,,,,,,,,,,,,,,,16.9%
+62903,NorthPark Solar,28/02/2016,2016,PJM,NJ,40.26,-74.44,3.99,PV,c-Si,12.30,10.60,1.16,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.75 , $19.06 ,,,,,,,,,,,,,,17.7%,17.1%
+58627,"Western Antelope Dry Ranch Solar (WADR, Lancaster Choice Energy)",16/12/2016,2016,CAISO,CA,34.69,-118.32,5.62,PV,c-Si,12.75,10.00,1.27,Tracking,Single Axis,Tracking,180,,,,,, $22.25 , $3.38 ,50.1,68.9,,,,,,,,,,31.0%,30.2%,30.4%,29.6%
+60993,Darlington Solar,31/12/2016,2016,Southeast (non-ISO),SC,34.32,-79.92,4.60,PV,c-Si,14.03,10.00,1.40,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.14 , $2.05 ,,83.1,,,,,,,,,,23.6%,22.6%,21.5%,17.2%
+60604,Wye Mills Solar (Wye Mills VNEM),01/09/2016,2016,PJM,MD,38.94,-76.05,4.19,PV,c-Si,13.69,10.00,1.37,Tracking,Single Axis,Tracking,180,,,,,, $21.99 , $20.39 ,,149.9,,,,,,,,,,23.5%,20.4%,20.6%,17.0%
+60511,Clear Spring Ranch PV Project,21/10/2016,2016,West (non-ISO),CO,38.60,-104.69,5.00,PV,c-Si,13.90,10.00,1.39,Tracking,Single Axis,Tracking,181,,,,,,  ,  ,,65.6,,,,,,,,,,25.1%,31.1%,27.1%,27.3%
+1355,E W Brown Solar Facility,22/04/2016,2016,Southeast (non-ISO),KY,37.78,-84.72,4.13,PV,c-Si,14.27,10.00,1.43,Fixed Tilt,Fixed Tilt,16,180,PV+Fossil,,,,,  ,  ,,115.1,,,,,,,,,,19.9%,19.4%,20.0%,18.9%
+60332,Open Range Solar Center,30/09/2016,2016,West (non-ISO),OR,43.80,-117.06,4.55,PV,c-Si,13.10,10.00,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,76.4,,,,,,,,,,23.7%,25.8%,26.1%,26.0%
+60335,Vale Air Solar Center,30/11/2016,2016,West (non-ISO),OR,43.97,-117.26,4.58,PV,c-Si,13.09,10.00,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,78.0,,,,,,,,,,22.7%,25.0%,25.0%,25.6%
+60334,Thunderegg Solar Center,30/11/2016,2016,West (non-ISO),OR,43.93,-116.99,4.60,PV,c-Si,13.09,10.00,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,77.4,,,,,,,,,,23.2%,25.5%,25.6%,25.7%
+"59819, 63554",Mohave Electric At Fort Mohave AZ (Mohave Electric Cooperative at Joy Lane),30/10/2016,2016,West (non-ISO),AZ,34.98,-114.56,5.70,PV,c-Si,13.81,10.00,1.38,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+60976,"Collier (Oregon Solar Land Holding, OSLH)",31/12/2016,2016,West (non-ISO),OR,44.06,-121.23,4.51,PV,c-Si,13.77,9.90,1.39,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,119.2,,,,,,,,,,23.0%,24.0%,24.1%,27.4%
+60548,NorWest Energy 2 (NEFF),31/12/2016,2016,West (non-ISO),OR,44.07,-121.23,4.51,PV,c-Si,13.90,9.90,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,78.0,,,,,,,,,,,25.0%,23.9%,25.8%
+60869,"Pearblossom Solar Project (Solar Star California, XLIV)",31/12/2016,2016,CAISO,CA,34.51,-117.92,5.86,PV,c-Si,11.90,9.50,1.25,Tracking,Single Axis,Tracking,180,,,,,, $22.70 , $4.28 ,,79.2,,,,,,,,,,31.8%,30.1%,31.7%,30.4%
+59276,Leavenworth Greenworks (Shoreham),30/06/2016,2016,NYISO,NY,40.94,-72.89,3.94,PV,c-Si,14.25,9.50,1.50,Fixed Tilt,Fixed Tilt,25,181,,,,,, $31.83 , $11.36 ,,150.5,,,,,,,,,,20.6%,20.3%,20.9%,18.4%
+,Lumberton Solar,30/04/2016,2016,PJM,NJ,39.94,-74.84,4.03,PV,c-Si,,9.46,,Fixed Tilt,Fixed Tilt,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+60331,Hyline Solar Center,01/10/2016,2016,West (non-ISO),OR,44.15,-117.00,4.52,PV,c-Si,11.70,9.00,1.30,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,76.9,,,,,,,,,,22.0%,25.8%,25.6%,25.7%
+58951,Delilah Road Landfill (KDC Solar RTC LLC or Seashore Solar),01/10/2016,2016,PJM,NJ,39.42,-74.55,4.12,PV,c-Si,10.66,8.50,1.25,Fixed Tilt,Fixed Tilt,15,180,,,,,, $19.11 , $20.54 ,,127.0,,,,,,,,,,19.6%,19.0%,20.0%,19.0%
+60732,Frankford Solar,30/03/2016,2016,PJM,NJ,41.17,-74.70,3.86,PV,c-Si,9.84,8.16,1.21,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.57 , $20.38 ,,,,,,,,,,,,16.0%,14.5%,14.2%,
+60556,Selmer II (Selmer North),01/12/2016,2016,Southeast (non-ISO),TN,35.17,-88.64,4.37,PV,Thin-Film,9.96,8.00,1.25,Tracking,Single Axis,Tracking,179,,,,,, $23.23 , $3.53 ,,101.5,,,,,,,,,,,22.2%,22.0%,21.2%
+60616,"PSEG Lake County Solar Energy Center (Black Cap Solar II, BC Solar )",30/11/2016,2016,West (non-ISO),OR,42.17,-120.36,4.73,PV,c-Si,10.45,8.00,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,85.4,,,,,,,,,,25.6%,26.4%,26.5%,25.8%
+60990,Florence Solar,31/12/2016,2016,PJM,NJ,40.10,-74.79,4.01,PV,c-Si,9.93,7.92,1.25,Fixed Tilt,Fixed Tilt,15,180,,,,,, $18.64 , $20.29 ,,164.1,,,,,,,,,,17.2%,16.3%,17.7%,16.8%
+60805,Beaver Run Solar Farm,26/02/2016,2016,PJM,NJ,41.15,-74.64,3.88,PV,c-Si,10.00,7.85,1.27,Fixed Tilt,Fixed Tilt,20,180,,,,,, $19.67 , $22.62 ,,,,,,,,,,,,16.8%,15.4%,15.8%,14.2%
+60375,PSEG ILR Landfill Solar,31/12/2016,2016,PJM,NJ,40.52,-74.43,3.96,PV,c-Si,7.75,7.70,1.01,Fixed Tilt,Fixed Tilt,10,180,,,,,, $19.61 , $18.49 ,,143.4,,,,,,,,,,13.8%,13.0%,14.3%,14.7%
+60729,Raritan Solar,30/04/2016,2016,PJM,NJ,40.46,-74.86,3.97,PV,c-Si,10.00,7.50,1.33,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.82 , $18.32 ,,129.8,,,,,,,,,,19.2%,13.1%,19.1%,19.0%
+60728,Howell Solar,31/03/2016,2016,PJM,NJ,40.14,-74.17,4.02,PV,c-Si,8.86,7.00,1.27,Fixed Tilt,Fixed Tilt,20,180,,,,,, $19.41 , $19.95 ,,148.9,,,,,,,,,,18.9%,18.0%,19.3%,18.8%
+60535,Saluda I Solar,31/12/2016,2016,Southeast (non-ISO),SC,33.97,-81.78,4.60,PV,c-Si,10.00,6.80,1.47,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,,84.7,,,,,,,,,,23.2%,22.1%,22.0%,20.4%
+60367,Snow Camp Solar,01/03/2016,2016,Southeast (non-ISO),NC,35.86,-79.43,4.44,PV,c-Si,8.40,6.66,1.26,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.22 , $1.78 ,,91.4,,,,,,,,,,19.9%,18.6%,19.0%,18.0%
+60283,SR Mavericks,31/12/2016,2016,West (non-ISO),CO,40.23,-105.03,4.53,PV,Thin-Film,8.50,6.50,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,84.0,,,,,,,,,,25.4%,25.8%,24.4%,26.6%
+"58655, 58656",Waihonu North+South Solar (Honbushin Solar Blessings Park),30/07/2016,2016,HI,HI,21.47,-158.01,5.07,PV,c-Si,8.13,6.50,1.25,Fixed Tilt,Fixed Tilt,10,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+60762,Pfizer Peapack Solar,30/10/2016,2016,PJM,NJ,40.71,-74.67,3.94,PV,c-Si,7.96,6.20,1.28,Fixed Tilt,Fixed Tilt,15,180,,,,,, $18.93 , $20.02 ,,175.7,,,,,,,,,,18.6%,17.5%,18.7%,18.4%
+60737,Church Hill Solar Farm,01/05/2016,2016,PJM,MD,39.11,-75.96,4.17,PV,c-Si,7.36,6.00,1.23,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.25 , $18.06 ,,,,,,,,,,,,19.0%,18.3%,19.1%,17.8%
+60330,Grove Solar Center,30/09/2016,2016,West (non-ISO),OR,43.94,-117.38,4.56,PV,c-Si,7.85,6.00,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,77.3,,,,,,,,,,23.2%,25.5%,25.6%,25.7%
+60266,Cedar Branch Solar Project (Buena Vista),01/10/2016,2016,PJM,NJ,39.50,-74.96,4.10,PV,c-Si,7.15,5.90,1.21,Fixed Tilt,Fixed Tilt,20,184,,,,,, $18.74 , $20.63 ,,104.7,,,,,,,,,,18.8%,16.7%,19.7%,18.1%
+60864,Kokomo Solar Park (Kokomo Solar 1),29/12/2016,2016,MISO,IN,40.47,-86.15,3.95,PV,c-Si,7.15,5.40,1.32,Fixed Tilt,Fixed Tilt,30,180,,,,,, $26.65 , $0.65 ,,100.2,,,,,,,,,,18.4%,17.5%,17.0%,16.5%
+60410,Sullivan Solar,01/09/2016,2016,MISO,IN,39.13,-87.41,4.11,PV,Thin-Film,7.00,5.20,1.35,Fixed Tilt,Fixed Tilt,20,180,,,,,, $24.19 , $0.59 ,,103.8,,,,,,,,,,21.2%,14.8%,19.9%,19.6%
+60071,Perry Solar Facility,15/09/2016,2016,Southeast (non-ISO),FL,30.12,-83.56,4.78,PV,c-Si,6.75,5.10,1.32,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,,96.3,,,,,,,,,,17.9%,10.4%,19.5%,19.9%
+59854,Olive Solar Power Project,01/09/2016,2016,PJM,IN,41.71,-86.49,3.83,PV,Thin-Film,6.47,5.01,1.29,Fixed Tilt,Fixed Tilt,25,180,,,,,, $23.14 , $13.84 ,,111.7,,,,,,,,,,,,,
+60187,Antelope DSR 2,21/11/2016,2016,CAISO,CA,34.69,-118.31,5.62,PV,c-Si,6.25,5.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $22.37 , $3.19 ,,57.8,,,,,,,,,,,,,
+60581,CED Upton County Solar 1,30/12/2017,2017,ERCOT,TX,31.26,-102.27,5.55,PV,c-Si,213.00,157.50,1.35,Tracking,Single Axis,Tracking,180,,,,,, $17.17 , $-   ,33.5,48.4,,,,,,,,,,,28.8%,29.3%,25.5%
+60033,California Flats Solar 1,30/11/2017,2017,CAISO,CA,35.87,-120.31,5.44,PV,Thin-Film,173.00,130.00,1.33,Tracking,Single Axis,Tracking,180,,,,,, $19.20 , $3.33 ,59.1,79.2,,,,,,,,,,,31.8%,29.6%,29.8%
+60436,East Pecos Solar,05/04/2017,2017,ERCOT,TX,31.00,-102.28,5.49,PV,Thin-Film,142.80,120.00,1.19,Tracking,Single Axis,Tracking,179,,,,,, $20.28 , $-   ,36.0,49.7,,,,,,,,,,,28.0%,27.7%,28.2%
+59206,OCI Alamo 6 Solar,28/03/2017,2017,ERCOT,TX,30.99,-102.27,5.52,PV,c-Si,140.30,110.20,1.27,Tracking,Dual-Axis,Tracking,180,,,,,, $18.75 , $-   ,,102.4,,,,,,,,,,,27.3%,26.2%,25.5%
+61422,Amazon Solar Farm US East 6 (Southampton Solar ),30/11/2017,2017,PJM,VA,36.60,-77.17,4.39,PV,c-Si,140.80,103.60,1.36,Tracking,Single Axis,Tracking,180,,,,,, $21.60 , $10.95 ,42.2,70.0,,,,,,,,,,,23.7%,25.6%,22.7%
+60372,Lamesa Solar Facility,28/04/2017,2017,ERCOT,TX,32.72,-101.92,5.43,PV,c-Si,130.50,102.00,1.28,Tracking,Single Axis,Tracking,166,,,,,, $22.65 , $-   ,,51.4,,,,,,,,,,,26.8%,26.7%,27.1%
+60261,Playa Solar 2 (Switch Station 2),30/08/2017,2017,West (non-ISO),NV,36.41,-114.91,5.69,PV,Thin-Film,136.90,100.00,1.37,Tracking,Single Axis,Tracking,180,,,,,, $29.30 , $7.68 ,44.1,62.8,,,,,,,,,,,33.7%,33.0%,33.0%
+60583,"AL Solar (LaFayette Solar Farm, Alabama Solar A)",30/12/2017,2017,Southeast (non-ISO),AL,32.87,-85.39,4.57,PV,c-Si,110.90,79.20,1.40,Tracking,Single Axis,Tracking,180,,,,,, $22.12 , $4.94 ,38.4,57.8,,,,,,,,,,,23.2%,24.1%,21.2%
+59827,Playa Solar 1 (Switch Station 1),30/10/2017,2017,West (non-ISO),NV,36.40,-114.90,5.69,PV,Thin-Film,99.00,79.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $29.24 , $7.31 ,44.0,60.9,,,,,,,,,,,31.0%,30.1%,30.5%
+59665,Innovative Solar 37 (IS 37),30/05/2017,2017,Southeast (non-ISO),NC,34.83,-79.95,4.52,PV,c-Si,110.10,78.70,1.40,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.04 , $2.90 ,,82.7,,,,,,,,,,,22.3%,21.8%,20.0%
+60658,"Moffett Solar Project (Solvay Solar Energy Facility, Jasper Solar 1)",30/12/2017,2017,Southeast (non-ISO),SC,32.64,-81.00,4.66,PV,c-Si,93.40,71.40,1.31,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,68.1,,,,,,,,,,,23.0%,23.1%,21.7%
+60539,Innovative Solar 42,30/09/2017,2017,Southeast (non-ISO),NC,34.84,-78.88,4.51,PV,c-Si,91.63,71.00,1.29,Tracking,Single Axis,Tracking,188,,,,,, $22.90 , $3.49 ,,78.7,,,,,,,,,,,21.4%,21.2%,21.0%
+60380,Shoe Creek Solar,30/12/2017,2017,Southeast (non-ISO),NC,34.84,-79.38,4.50,PV,c-Si,91.59,64.48,1.42,Tracking,Single Axis,Tracking,180,,,,,, $23.19 , $2.98 ,,70.4,,,,,,,,,,,21.1%,25.2%,24.4%
+59875,Marshall Solar Project,09/01/2017,2017,MISO,MN,44.47,-95.66,3.91,PV,c-Si,93.16,62.25,1.50,Fixed Tilt,Fixed Tilt,25,180,,,,,, $16.16 , $0.66 ,62.3,94.0,,,,,,,,,,20.5%,19.7%,17.7%,19.1%
+60383,Monroe Solar Facility (Rocky River Solar),01/03/2017,2017,Southeast (non-ISO),NC,34.93,-80.63,4.54,PV,Thin-Film,74.90,60.00,1.25,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.15 , $3.30 ,,84.9,,,,,,,,,,,17.7%,18.4%,19.1%
+61813,Ranchland Solar (Summit Farms Solar Phase 2),30/12/2017,2017,PJM,NC,36.47,-76.16,4.40,PV,c-Si,84.50,60.00,1.41,Tracking,Single Axis,Tracking,180,,,,,, $22.68 , $10.06 ,,79.0,,,,,,,,,,,16.7%,23.3%,23.6%
+59315,Beacon Solar 1 (Hecate Energy Beacon 1 Photovoltaic Project),30/04/2017,2017,West (non-ISO),CA,35.27,-118.01,5.85,PV,c-Si,63.90,56.00,1.14,Tracking,Single Axis,Tracking,180,PV+Storage,Lithium-ion,2018,36,18,  ,  ,57.8,53.3,,,,,,,,,,,29.2%,28.1%,28.3%
+61048,Gala Solar Power Plant (Solar Star Oregon II),27/10/2017,2017,West (non-ISO),OR,44.18,-120.92,4.48,PV,c-Si,71.00,56.00,1.27,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,52.3,63.9,,,,,,,,,,,25.8%,25.7%,24.8%
+60303,Sumrall II Solar Farm (MS Solar 3),30/12/2017,2017,MISO,MS,31.40,-89.50,4.63,PV,c-Si,74.00,52.00,1.42,Tracking,Single Axis,Tracking,180,,,,,, $22.27 , $0.44 ,43.3,73.0,,,,,,,,,,,23.9%,22.2%,22.4%
+60306,Sumrall I Solar Farm (MS Solar 2),30/06/2017,2017,Southeast (non-ISO),MS,31.41,-89.50,4.63,PV,c-Si,74.00,52.00,1.42,Tracking,Single Axis,Tracking,180,,,,,, $22.66 , $4.40 ,59.7,91.9,,,,,,,,,,,25.5%,24.0%,22.7%
+60552,Hattiesburg Solar Farm,28/10/2017,2017,Southeast (non-ISO),MS,31.27,-89.30,4.64,PV,c-Si,67.50,50.60,1.33,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.71 , $4.52 ,44.7,80.5,,,,,,,,,,,20.4%,20.7%,19.9%
+60989,Solaire Holman 1,23/04/2017,2017,ERCOT,TX,30.46,-103.48,5.63,PV,c-Si,65.00,50.00,1.30,Tracking,Single Axis,Tracking,178,,,,,, $18.94 , $-   ,43.8,52.4,,,,,,,,,,,24.2%,27.7%,28.2%
+60682,Pearl Solar,30/10/2017,2017,ERCOT,TX,31.01,-102.26,5.49,PV,c-Si,66.13,50.00,1.32,Tracking,Single Axis,Tracking,180,,,,,, $19.10 , $-   ,,70.8,,,,,,,,,,,25.2%,23.8%,22.9%
+61561,Bladen Solar,30/12/2017,2017,Southeast (non-ISO),NC,34.82,-78.62,4.49,PV,c-Si,75.00,50.00,1.50,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.05 , $1.49 ,,90.3,,,,,,,,,,,23.7%,23.2%,22.5%
+61512,Bullock Solar,30/12/2017,2017,Southeast (non-ISO),NC,36.48,-78.32,4.40,PV,c-Si,75.00,50.00,1.50,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.35 , $1.43 ,,89.9,,,,,,,,,,,22.6%,23.3%,22.7%
+59691,"Gulf Coast Solar Center 3 (NAS Pensicola, NOLF Saufley Field)",23/08/2017,2017,Southeast (non-ISO),FL,30.47,-87.34,4.72,PV,Thin-Film,68.70,50.00,1.37,Fixed Tilt,Fixed Tilt,20,217,,,,,, $22.55 , $4.16 ,70.5,90.4,,,,,,,,,,,21.3%,21.6%,20.8%
+61084,Luning Solar Energy Center,27/02/2017,2017,West (non-ISO),NV,38.55,-118.19,5.38,PV,c-Si,65.92,50.00,1.32,Tracking,Single Axis,Tracking,180,,,,,, $27.70 , $7.18 ,,57.4,,,,,,,,,,,29.5%,29.6%,31.4%
+60885,Boulder Solar Project 2,31/01/2017,2017,West (non-ISO),NV,35.84,-114.95,5.48,PV,c-Si,62.00,50.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $28.43 , $7.25 ,46.1,53.8,,,,,,,,,,30.5%,30.9%,30.0%,31.1%
+59309,Beacon Solar 2,30/12/2017,2017,West (non-ISO),CA,35.27,-118.00,5.86,PV,c-Si,59.60,45.00,1.32,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,66.4,57.1,,,,,,,,,,,32.4%,31.2%,31.6%
+60043,Cuyama Solar,01/11/2017,2017,CAISO,CA,34.90,-119.60,5.56,PV,Thin-Film,56.10,40.00,1.40,Tracking,Single Axis,Tracking,180,,,,,, $2.80 , $2.84 ,,97.6,,,,,,,,,,,33.3%,29.5%,26.5%
+59690,"Gulf Coast Solar Center 2 (NAS Whiting Field, NOLF Holley)",23/08/2017,2017,Southeast (non-ISO),FL,30.43,-86.89,4.83,PV,Thin-Film,53.70,40.00,1.34,Fixed Tilt,Fixed Tilt,20,220,,,,,, $22.72 , $4.09 ,70.5,81.1,,,,,,,,,,,22.0%,22.4%,23.2%
+60467,Red Rock (AZ),28/02/2017,2017,West (non-ISO),AZ,32.55,-111.28,5.81,PV,c-Si,57.60,40.00,1.44,Tracking,Single Axis,Tracking,180,,,,,, $20.73 , $11.65 ,,56.6,,,,,,,,,,,34.2%,33.2%,32.9%
+59308,Beacon Solar 5,30/12/2017,2017,West (non-ISO),CA,35.25,-118.03,5.85,PV,c-Si,48.20,36.00,1.34,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,67.2,60.4,,,,,,,,,,,31.7%,31.0%,31.9%
+60540,Innovative Solar 31 (NC-31),01/01/2017,2017,Southeast (non-ISO),NC,34.54,-78.75,4.54,PV,c-Si,43.20,35.00,1.23,Tracking,Single Axis,Tracking,180,,,,,, $22.95 , $3.62 ,,86.2,,,,,,,,,,,20.5%,17.0%,19.0%
+59666,Innovative Solar 47 (NC-47),28/04/2017,2017,Southeast (non-ISO),NC,34.80,-79.33,4.50,PV,c-Si,47.60,35.00,1.36,Tracking,Single Axis,Tracking,180,,,,,, $23.06 , $3.17 ,,74.7,,,,,,,,,,,23.7%,23.0%,22.2%
+60237,Midway Solar Farm II,30/05/2017,2017,West (non-ISO),CA,33.17,-115.54,5.91,PV,Thin-Film,40.00,30.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,61.6,70.3,,,,,,,,,,,33.0%,30.6%,28.3%
+59689,Gulf Coast Solar Center 1 (Eglin AFB),23/08/2017,2017,Southeast (non-ISO),FL,30.52,-86.53,4.73,PV,Thin-Film,42.20,30.00,1.41,Fixed Tilt,Fixed Tilt,20,219,,,,,, $22.69 , $3.90 ,,86.5,,,,,,,,,,,21.5%,22.5%,22.4%
+60346,Lapeer Solar Project I (Demille Array),01/05/2017,2017,MISO,MI,43.04,-83.33,3.72,PV,c-Si,34.57,28.56,1.21,Fixed Tilt,Fixed Tilt,30,180,,,,,, $29.44 , $21.86 ,,91.2,,,,,,,,,,,15.9%,16.6%,17.3%
+60258,Alta Luna,16/03/2017,2017,West (non-ISO),NM,32.57,-107.46,5.82,PV,c-Si,33.77,28.10,1.20,Tracking,Single Axis,Tracking,180,,,,,, $23.89 , $17.46 ,41.2,64.5,,,,,,,,,,29.4%,29.3%,28.2%,27.8%
+61172,EE Waianae Solar Project (Waianae Solar),25/01/2017,2017,HI,HI,21.46,-158.19,5.29,PV,c-Si,40.39,27.60,1.46,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,130.3,,,,,,,,,,,,26.2%,27.7%,26.3%
+61268a,Kayenta Solar 1,30/05/2017,2017,West (non-ISO),AZ,36.79,-110.24,5.48,PV,c-Si,37.60,27.30,1.38,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+60558,NRG Solar Blythe II (Cisco),20/04/2017,2017,CAISO,CA,33.62,-114.70,5.84,PV,c-Si,27.65,21.04,1.31,Tracking,Single Axis,Tracking,180,,,,,, $15.59 , $3.49 ,,80.7,,,,,,,,,,,27.2%,31.9%,26.8%
+61463,Vandenberg Solar Project (Vandenberg AFB),30/12/2017,2017,CAISO,CA,34.75,-120.51,5.05,PV,c-Si,28.00,20.60,1.36,Tracking,Single Axis,Tracking,180,,,,,, $21.18 , $4.24 ,,87.0,,,,,,,,,,,25.3%,23.8%,23.2%
+61490,Estill Solar I,30/12/2017,2017,Southeast (non-ISO),SC,32.77,-81.25,4.67,PV,c-Si,27.99,20.40,1.37,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,45.6,60.2,,,,,,,,,,,,22.0%,21.8%
+60637,PSEG Cork Oak Solar,30/12/2017,2017,PJM,NC,36.37,-77.57,4.41,PV,c-Si,26.20,20.25,1.29,Tracking,Single Axis,Tracking,180,,,,,, $22.00 , $9.32 ,,78.4,,,,,,,,,,,19.0%,22.5%,20.6%
+59695,Mountain Home Solar (Mt Home Solar I),31/03/2017,2017,West (non-ISO),ID,43.15,-115.72,4.73,PV,c-Si,26.68,20.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,60.3,,,,,,,,,,,27.0%,28.6%,29.1%
+60481,Bayshore Solar A,30/12/2017,2017,CAISO,CA,34.67,-118.30,5.74,PV,c-Si,25.00,20.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $21.86 , $3.36 ,51.2,47.2,,,,,,,,,,,31.5%,31.0%,29.7%
+60474,Bayshore Solar B,30/12/2017,2017,CAISO,CA,34.68,-118.30,5.62,PV,c-Si,25.00,20.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $21.81 , $3.53 ,51.1,50.8,,,,,,,,,,,31.7%,30.7%,28.3%
+60475,Bayshore Solar C,30/12/2017,2017,CAISO,CA,34.68,-118.31,5.62,PV,c-Si,25.00,20.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $21.81 , $3.53 ,51.1,51.3,,,,,,,,,,,30.9%,30.6%,28.2%
+60582,"Tallahassee Airport 1 (CoTAL, City of Tallahassee Solar Farm, Tallahassee Solar 1)",30/12/2017,2017,Southeast (non-ISO),FL,30.38,-84.36,4.77,PV,Thin-Film,28.00,20.00,1.40,Fixed Tilt,Fixed Tilt,30,180,,,,,,  ,  ,46.3,66.5,,,,,,,,,,,21.4%,21.7%,22.2%
+60981,Westside Solar Energy Center (Nextera Westside PV),30/04/2017,2017,CAISO,CA,36.38,-120.13,5.36,PV,c-Si,27.50,20.00,1.38,Tracking,Single Axis,Tracking,180,,,,,, $17.46 , $3.39 ,68.1,70.5,,,,,,,,,,,30.7%,29.0%,28.6%
+60975,Whitney Point Solar Energy Center,15/04/2017,2017,CAISO,CA,36.38,-120.13,5.36,PV,c-Si,27.50,20.00,1.38,Tracking,Single Axis,Tracking,180,,,,,, $17.81 , $3.41 ,53.0,68.9,,,,,,,,,,,30.1%,29.5%,28.7%
+60622,Bowling Green Solar,19/01/2017,2017,PJM,OH,41.40,-83.58,3.84,PV,c-Si,28.70,20.00,1.44,Tracking,Single Axis,Tracking,180,,,,,, $27.18 , $11.49 ,,80.0,,,,,,,,,,,23.9%,21.2%,22.2%
+59522,Giffen Solar Park,30/06/2017,2017,CAISO,CA,36.55,-120.34,5.32,PV,c-Si,28.00,20.00,1.40,Tracking,Single Axis,Tracking,179,,,,,, $7.80 , $5.03 ,,87.0,,,,,,,,,,,21.1%,18.1%,17.1%
+61489,Cameron I Solar,30/12/2017,2017,Southeast (non-ISO),SC,33.58,-80.71,4.63,PV,c-Si,27.99,20.00,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,56.4,,,,,,,,,,,,24.8%,23.5%
+61498,Hampton Solar 2,30/12/2017,2017,Southeast (non-ISO),SC,32.88,-81.14,4.66,PV,c-Si,28.09,20.00,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,58.1,,,,,,,,,,,,23.9%,22.8%
+59685,Remington Solar Facility,26/10/2017,2017,PJM,VA,38.55,-77.78,4.18,PV,Thin-Film,27.70,20.00,1.39,Fixed Tilt,Fixed Tilt,20,180,PV+Fossil,,,,, $23.62 , $9.80 ,,98.7,,,,,,,,,,,20.2%,19.5%,19.0%
+60916,Amazon Solar Farm US East 4 (Sappony Solar),10/12/2017,2017,PJM,VA,36.94,-77.42,4.35,PV,c-Si,28.29,20.00,1.41,Tracking,Single Axis,Tracking,180,,,,,, $22.40 , $8.84 ,,68.0,,,,,,,,,,,22.3%,24.9%,22.8%
+61375,Hecate Energy Cherrydale,01/11/2017,2017,PJM,VA,37.37,-75.91,4.36,PV,c-Si,25.48,20.00,1.27,Tracking,Single Axis,Tracking,180,,,,,, $26.86 , $17.48 ,,81.4,,,,,,,,,,,18.0%,21.1%,20.5%
+60915,Amazon Solar Farm US East 3 (Correctional Solar),30/12/2017,2017,PJM,VA,37.47,-76.84,4.29,PV,c-Si,22.96,20.00,1.15,Tracking,Single Axis,Tracking,180,,,,,, $22.82 , $10.46 ,,71.9,,,,,,,,,,,19.0%,19.5%,15.4%
+60968,Amazon Solar Farm US East 5 (Scott 2),31/12/2017,2017,PJM,VA,37.53,-77.94,4.31,PV,c-Si,28.30,20.00,1.42,Tracking,Single Axis,Tracking,159,,,,,, $22.59 , $8.30 ,43.1,72.3,,,,,,,,,,,21.3%,23.3%,22.7%
+60310,Portal Ridge Solar B,28/02/2017,2017,CAISO,CA,34.72,-118.28,5.81,PV,Thin-Film,25.00,20.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $22.18 , $3.59 ,,87.9,,,,,,,,,,,31.5%,30.6%,27.8%
+61406,Essex Solar Center,30/12/2017,2017,PJM,VA,37.83,-76.80,4.26,PV,c-Si,26.70,20.00,1.34,Tracking,Single Axis,Tracking,180,,,,,, $37.87 , $8.85 ,,79.9,,,,,,,,,,,21.6%,24.4%,22.4%
+59915,CED Oro Loma (SR Solis Oro Loma Solar),01/02/2017,2017,CAISO,CA,36.88,-120.67,5.25,PV,c-Si,27.68,20.00,1.38,Tracking,Single Axis,Tracking,180,,,,,, $21.56 , $3.41 ,,77.2,,,,,,,,,,,30.1%,26.6%,29.1%
+10437,Sunray 2 (previously SEGS II),02/06/2017,2017,CAISO,CA,34.86,-116.83,5.85,PV,c-Si,26.90,20.00,1.35,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,47.5,,,,,,,,,,,34.2%,33.6%,33.2%
+60748,Simco Solar (Simcoe Solar),31/03/2017,2017,West (non-ISO),ID,43.33,-115.94,4.68,PV,Thin-Film,26.78,20.00,1.34,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,76.8,,,,,,,,,,,28.1%,27.6%,26.1%
+60012,American Falls Solar II,31/03/2017,2017,West (non-ISO),ID,42.83,-112.74,4.49,PV,c-Si,26.68,20.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,71.9,,,,,,,,,,,25.0%,25.2%,26.5%
+60011,American Falls Solar I,31/03/2017,2017,West (non-ISO),ID,42.83,-112.74,4.49,PV,c-Si,26.68,20.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,77.6,,,,,,,,,,,24.3%,25.0%,26.0%
+60009,Murphy Flat Power,30/03/2017,2017,West (non-ISO),ID,43.21,-116.44,4.61,PV,c-Si,26.68,20.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,76.9,,,,,,,,,,,26.1%,26.5%,26.1%
+60010,Orchard Ranch Solar,31/03/2017,2017,West (non-ISO),ID,43.47,-116.29,4.65,PV,Thin-Film,26.78,20.00,1.34,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,70.9,,,,,,,,,,,27.2%,27.6%,26.7%
+60964,Apache Solar 1,27/09/2017,2017,West (non-ISO),AZ,32.07,-109.89,5.64,PV,c-Si,24.66,20.00,1.23,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,43.7,,,,,,,,,,,28.5%,29.7%,31.3%
+60947,Jacumba Solar Farm,25/07/2017,2017,CAISO,CA,32.62,-116.13,5.86,PV,c-Si,28.00,20.00,1.40,Fixed Tilt,Fixed Tilt,25,180,,,,,, $17.59 , $4.23 ,,74.6,,,,,,,,,,,28.7%,25.2%,22.1%
+60490,Redwood 4 Solar Farm,30/12/2017,2017,CAISO,CA,35.31,-118.81,5.37,PV,c-Si,26.00,20.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $19.54 , $3.53 ,,62.9,,,,,,,,,,,28.9%,28.8%,28.2%
+60001,Vaughn Creek PV1 (Fresh Air Energy XXV),30/12/2017,2017,Southeast (non-ISO),NC,36.45,-77.12,4.40,PV,c-Si,26.00,19.90,1.31,Tracking,Single Axis,Tracking,180,,,,,, $22.91 , $3.44 ,,44.4,,,,,,,,,,,21.6%,24.3%,23.2%
+60917,Amazon Solar Farm US East 2 (Buckingham Solar),30/11/2017,2017,PJM,VA,37.50,-78.37,4.30,PV,c-Si,22.66,19.80,1.14,Tracking,Single Axis,Tracking,180,,,,,, $22.62 , $8.66 ,,68.0,,,,,,,,,,,17.6%,20.0%,18.9%
+60347,Lapeer Solar Project II (Turill Array),09/10/2017,2017,MISO,MI,43.03,-83.31,3.72,PV,c-Si,22.96,19.57,1.17,Fixed Tilt,Fixed Tilt,30,180,,,,,, $29.51 , $22.44 ,,97.2,,,,,,,,,,,15.5%,15.6%,15.9%
+58792,Ayrshire,30/09/2017,2017,Southeast (non-ISO),NC,35.28,-81.61,4.54,PV,Thin-Film,27.10,19.40,1.40,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.37 , $3.48 ,,112.0,,,,,,,,,,,20.8%,20.3%,20.0%
+645,Big Bend Solar (FL),20/02/2017,2017,Southeast (non-ISO),FL,27.79,-82.39,5.02,PV,Thin-Film,23.00,19.00,1.21,Tracking,Single Axis,Tracking,180,PV+Fossil,,,,,  ,  ,,69.8,,,,,,,,,,,24.4%,24.0%,23.0%
+60584,NAS Oceana Solar,30/12/2017,2017,PJM,VA,36.79,-76.05,4.32,PV,Thin-Film,21.00,17.60,1.19,Tracking,Single Axis,Tracking,174,,,,,, $22.75 , $8.49 ,,91.3,,,,,,,,,,,17.8%,21.3%,19.4%
+60435,NSA Crane Solar Project,27/02/2017,2017,MISO,IN,38.82,-86.88,4.10,PV,c-Si,24.30,17.00,1.43,Fixed Tilt,Fixed Tilt,25,180,,,,,, $25.89 , $0.57 ,,105.0,,,,,,,,,,,18.9%,18.6%,18.3%
+60638,PSEG Sunflower Solar,30/12/2017,2017,PJM,NC,36.40,-77.59,4.41,PV,c-Si,20.90,16.20,1.29,Tracking,Single Axis,Tracking,180,,,,,, $21.95 , $9.00 ,,79.5,,,,,,,,,,,19.4%,23.2%,21.9%
+60337,Providence Solar Center,01/10/2017,2017,Southeast (non-ISO),TN,35.58,-89.05,4.38,PV,Thin-Film,20.00,16.00,1.25,Tracking,Single Axis,Tracking,179,,,,,, $23.37 , $3.71 ,,86.4,,,,,,,,,,,22.1%,21.5%,21.3%
+61462,SR Platteville Solar Farm (Platte Solar Farm),31/12/2017,2017,West (non-ISO),CO,40.18,-104.69,4.81,PV,Thin-Film,21.80,16.00,1.36,Tracking,Single Axis,Tracking,180,,,,,, $18.70 , $23.23 ,,61.1,,,,,,,,,,,27.6%,26.9%,26.3%
+59516,American Legion PV 1 (Fresh Air Energy XIX),30/12/2017,2017,PJM,NC,36.42,-77.66,4.42,PV,c-Si,20.00,15.84,1.26,Fixed Tilt,Fixed Tilt,20,191,,,,,, $22.37 , $13.69 ,,71.6,,,,,,,,,,,16.6%,18.2%,13.1%
+60077,CED Avenal,31/01/2017,2017,CAISO,CA,36.00,-120.15,5.35,PV,c-Si,21.34,15.80,1.35,Tracking,Single Axis,Tracking,180,,,,,, $0.10 , $2.78 ,,110.8,,,,,,,,,,,25.1%,21.5%,18.9%
+60774,Fort Phantom,27/04/2017,2017,ERCOT,TX,31.11,-97.85,4.83,PV,c-Si,19.60,15.40,1.27,Tracking,Single Axis,Tracking,180,Wind+PV,,,,, $25.71 , $-   ,,90.2,,,,,,,,,,,17.6%,15.3%,20.2%
+62775,Wildberry,30/07/2017,2017,Southeast (non-ISO),TN,35.06,-89.37,4.41,PV,c-Si,20.00,15.00,1.33,Tracking,Single Axis,,184,,,,,, $23.30 , $4.79 ,,60.2,,,,,,,,,,,,21.5%,21.1%
+59253,Wildwood Solar II,31/01/2017,2017,CAISO,CA,35.63,-119.57,5.38,PV,c-Si,20.61,14.70,1.40,Tracking,Single Axis,Tracking,180,,,,,, $21.09 , $3.63 ,66.2,96.4,,,,,,,,,,,31.9%,30.4%,27.3%
+62636,"Valley Electric Association Community Solar Project (Pahrump Community Solar Project, NVSS-II)",28/02/2017,2017,West (non-ISO),NV,36.27,-115.97,5.71,PV,c-Si,17.53,14.00,1.25,Fixed Tilt,Fixed Tilt,,180,,,,,, $23.89 , $3.77 ,,,,,,,,,,,,,,,
+10438,Sunray 3 (previously SEGS I),29/06/2017,2017,CAISO,CA,34.87,-116.83,5.85,PV,c-Si,17.20,13.80,1.25,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,74.7,,,,,,,,,,,30.9%,32.4%,27.9%
+60000,Turkey Creek PV1,01/02/2017,2017,Southeast (non-ISO),NC,36.44,-77.14,4.40,PV,c-Si,16.80,13.50,1.24,Tracking,Single Axis,Tracking,180,,,,,, $22.91 , $3.22 ,,101.0,,,,,,,,,,,19.0%,20.8%,17.8%
+61864,Dix Solar (McGuire-Dix-Lakehurst Base),01/06/2017,2017,PJM,NJ,39.98,-74.62,4.02,PV,c-Si,16.50,13.00,1.27,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.97 , $19.99 ,,142.4,,,,,,,,,,,17.6%,18.2%,17.7%
+60546,KIUC Solar City Project (Kapaia PV+storage),13/03/2017,2017,HI,HI,22.00,-159.38,5.07,PV,c-Si,17.00,13.00,1.31,Fixed Tilt,Fixed Tilt,15,180,PV+Storage,Lithium-ion,2017,13.6,57.12,  ,  ,,,,,,,,,,,,,19.4%,19.2%,18.9%
+60311,Portal Ridge Solar C,28/02/2017,2017,CAISO,CA,34.71,-118.27,5.81,PV,Thin-Film,13.75,11.40,1.21,Tracking,Single Axis,Tracking,180,,,,,, $22.17 , $3.47 ,61.9,81.8,,,,,,,,,,,30.3%,30.6%,28.8%
+61522,Champion Solar (Phase 3),30/12/2017,2017,Southeast (non-ISO),SC,33.79,-81.26,4.56,PV,c-Si,15.22,10.88,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,40.5,,,,,,,,,,,24.5%,24.2%,21.5%
+61521,Swamp Fox Solar (Phase 2),30/12/2017,2017,Southeast (non-ISO),SC,33.79,-81.26,4.56,PV,c-Si,15.22,10.88,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,41.0,,,,,,,,,,,23.4%,24.6%,21.2%
+58319,"Cyrq Patua Solar Project (Patua Geothermal Project Phase 1A, Patua Acquisition Project)",30/07/2017,2017,West (non-ISO),NV,39.58,-119.07,5.24,PV,c-Si,14.20,10.64,1.33,Tracking,Single Axis,Tracking,180,PV+Geothermal,,,,, $32.10 , $7.29 ,,65.0,,,,,,,,,,,29.0%,27.2%,29.0%
+60679,Fort Rucker Solar,20/04/2017,2017,Southeast (non-ISO),AL,31.33,-85.73,4.70,PV,Thin-Film,13.00,10.60,1.23,Tracking,Single Axis,Tracking,180,,,,,, $22.28 , $4.65 ,,132.4,,,,,,,,,,,14.4%,15.3%,16.1%
+61013,Marin Clean Energy Solar One (Richmond Solar Project),30/12/2017,2017,CAISO,CA,37.95,-122.38,4.89,PV,c-Si,13.00,10.50,1.24,Tracking,Single Axis,15,180,,,,,, $27.65 , $4.52 ,83.9,81.9,,,,,,,,,,,22.0%,22.0%,22.2%
+61529,Estill Solar II,30/12/2017,2017,Southeast (non-ISO),SC,32.73,-81.25,4.67,PV,c-Si,14.80,10.20,1.45,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,,67.8,,,,,,,,,,,,22.6%,20.6%
+60293,St Matthews Solar,01/08/2017,2017,Southeast (non-ISO),SC,33.69,-80.76,4.61,PV,c-Si,14.79,10.20,1.45,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,49.7,,,,,,,,,,,24.8%,23.7%,22.0%
+61748,Southern Current One,30/12/2017,2017,Southeast (non-ISO),SC,32.95,-81.22,4.66,PV,c-Si,14.20,10.20,1.39,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,72.9,,,,,,,,,,,21.1%,22.6%,17.7%
+60519,Aurora Albany Solar,30/06/2017,2017,MISO,MN,45.64,-94.60,3.76,PV,c-Si,15.24,10.00,1.52,Tracking,Single Axis,Tracking,180,,,,,, $17.02 , $0.52 ,,113.0,,,,,,,,,,,21.9%,21.3%,19.9%
+60530,Aurora Paynesville Solar,30/06/2017,2017,MISO,MN,45.39,-94.72,3.81,PV,c-Si,15.24,10.00,1.52,Tracking,Single Axis,Tracking,180,,,,,, $19.85 , $0.56 ,,120.0,,,,,,,,,,,21.1%,21.3%,18.7%
+60532,Aurora Waseca Solar,30/06/2017,2017,MISO,MN,44.09,-93.53,3.84,PV,c-Si,15.92,10.00,1.59,Tracking,Single Axis,Tracking,180,,,,,, $17.68 , $0.45 ,,106.4,,,,,,,,,,,22.7%,20.2%,21.5%
+61901,Redstone Arsenal,01/12/2017,2017,Southeast (non-ISO),AL,34.61,-86.62,4.38,PV,c-Si,12.50,10.00,1.25,Tracking,Single Axis,Tracking,180,PV+Storage,Lithium-ion,2017,1,2, $23.12 , $3.56 ,,107.2,,,,,,,,,,,,,
+61556,Facebook 1 Solar Energy Center (Los Lunas 1),30/12/2017,2017,West (non-ISO),NM,34.83,-106.78,5.64,PV,c-Si,12.50,10.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $23.63 , $20.53 ,,45.3,,,,,,,,,,,30.3%,27.0%,30.0%
+61201,OR Solar 3 (Turkey Hill),30/12/2017,2017,West (non-ISO),OR,42.02,-121.42,4.76,PV,c-Si,13.20,10.00,1.32,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,63.0,,,,,,,,,,,25.3%,28.4%,28.7%
+61430,OR Solar 6 (Lakeview),30/12/2017,2017,West (non-ISO),OR,42.21,-120.37,4.71,PV,c-Si,13.70,10.00,1.37,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,67.0,,,,,,,,,,,27.3%,27.9%,27.3%
+61279,Wilson Solar Farm 6,30/05/2017,2017,Southeast (non-ISO),NC,35.70,-77.88,4.46,PV,c-Si,12.70,10.00,1.27,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.17 , $1.67 ,,72.3,,,,,,,,,,,21.1%,21.1%,
+61278,Wilson Solar Farm 5,30/05/2017,2017,Southeast (non-ISO),NC,35.70,-77.88,4.46,PV,c-Si,12.10,10.00,1.21,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.17 , $1.60 ,,74.1,,,,,,,,,,,19.4%,19.4%,
+61280,Wilson Solar Farm 7,28/04/2017,2017,Southeast (non-ISO),NC,35.76,-78.01,4.47,PV,c-Si,12.30,10.00,1.23,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.21 , $2.20 ,,76.5,,,,,,,,,,,19.6%,19.7%,
+61277,Wilson Solar Farm 4,28/04/2017,2017,Southeast (non-ISO),NC,35.71,-77.93,4.45,PV,c-Si,12.10,10.00,1.21,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.18 , $2.26 ,,72.6,,,,,,,,,,,19.2%,19.3%,
+61276,Wilson Solar Farm 3,28/04/2017,2017,Southeast (non-ISO),NC,35.78,-78.99,4.44,PV,c-Si,11.70,10.00,1.17,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.26 , $2.19 ,,78.4,,,,,,,,,,,18.5%,18.4%,
+61292,Jackson Solar Farm (Wilson),01/03/2017,2017,Southeast (non-ISO),NC,35.75,-77.86,4.45,PV,c-Si,11.90,10.00,1.19,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.21 , $2.38 ,,65.3,,,,,,,,,,,19.2%,19.6%,
+60659,Ridgeland Solar Farm I,30/06/2017,2017,Southeast (non-ISO),SC,32.47,-80.96,4.68,PV,c-Si,12.20,10.00,1.22,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,68.6,,,,,,,,,,,23.0%,22.6%,20.5%
+61374,Double Tollgate Solar Project (Clarke County Solar),01/07/2017,2017,PJM,VA,39.07,-78.14,4.09,PV,c-Si,12.60,10.00,1.26,Tracking,Single Axis,Tracking,180,,,,,, $23.01 , $9.25 ,,69.2,,,,,,,,,,,18.6%,20.3%,19.8%
+61532,Leon Solar,30/12/2017,2017,ERCOT,TX,33.16,-96.24,4.63,PV,c-Si,14.20,10.00,1.42,Tracking,Single Axis,Tracking,180,,,,,, $26.17 , $-   ,,55.3,,,,,,,,,,,22.1%,24.6%,15.9%
+61524,Whitewright Solar,30/12/2017,2017,ERCOT,TX,33.50,-96.37,4.64,PV,c-Si,14.28,10.00,1.43,Tracking,Single Axis,Tracking,180,,,,,, $25.36 , $-   ,,47.9,,,,,,,,,,,23.3%,24.8%,21.8%
+60242,"SKIC 2 (South Kern Industrial Center, Algonquin SKIC 10 Solar, Bakersfield 2)",31/01/2017,2017,CAISO,CA,35.12,-119.24,5.36,PV,c-Si,11.98,10.00,1.20,Tracking,Single Axis,Tracking,180,,,,,, $14.24 , $4.45 ,,99.8,,,,,,,,,,,24.8%,23.8%,20.6%
+61580,Tumbleweed Solar (Ventyx: Jeans Solar Park),30/12/2017,2017,West (non-ISO),OR,44.19,-121.23,4.47,PV,c-Si,14.00,9.90,1.41,Fixed Tilt,Fixed Tilt,28,180,,,,,,  ,  ,,74.6,,,,,,,,,,,23.7%,22.2%,24.2%
+61560,Eagle Point Solar,30/12/2017,2017,West (non-ISO),OR,42.40,-122.83,4.54,PV,c-Si,13.06,9.90,1.32,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,57.9,,,,,,,,,,,21.5%,21.8%,17.8%
+63180,"TPE Whitney Solar, LLC (United Community Solar Plant)",31/12/2017,2017,ERCOT,TX,32.07,-97.53,4.81,PV,c-Si,14.30,9.90,1.44,Tracking,Single Axis,,180,,,,,, $25.73 , $-   ,,,,,,,,,,,,,,25.5%,25.4%
+64078,Pittsfield Solar LLC,31/12/2017,2017,ISO-NE,ME,44.81,-69.45,3.65,PV,c-Si,13.90,9.90,1.40,Fixed Tilt,Fixed Tilt,35,170,,,,,, $21.62 , $6.81 ,,107.8,,,,,,,,,,,,,18.2%
+59737,Aspiration G,30/09/2017,2017,CAISO,CA,36.55,-120.34,5.32,PV,c-Si,11.70,9.00,1.30,Tracking,Single Axis,Tracking,180,,,,,, $8.28 , $3.48 ,,60.9,,,,,,,,,,,28.1%,24.9%,26.7%
+61487,PSEG West Babylon Solar Center (SL Babylon),30/12/2017,2017,NYISO,NY,40.73,-73.38,4.02,PV,c-Si,10.62,9.00,1.18,Fixed Tilt,Fixed Tilt,20,180,,,,,, $26.00 , $10.90 ,,128.7,,,,,,,,,,,17.1%,17.7%,15.6%
+61519,Baker Point (Frederick Road Solar),16/11/2017,2017,PJM,MD,39.57,-77.36,4.03,PV,c-Si,10.89,9.00,1.21,Fixed Tilt,Fixed Tilt,25,180,,,,,, $24.45 , $7.06 ,,,,,,,,,,,,,16.6%,18.1%,16.7%
+61073,Pemberton Road I (McGuire-Dix-Lakehurst Base),30/06/2017,2017,PJM,NJ,39.98,-74.70,4.02,PV,c-Si,9.99,8.80,1.14,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.62 , $20.73 ,,102.5,,,,,,,,,,,16.2%,17.4%,15.9%
+61074,Pemberton Road II (McGuire-Dix-Lakehurst Base),30/06/2017,2017,PJM,NJ,39.98,-74.70,4.03,PV,c-Si,9.99,8.80,1.14,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.62 , $20.63 ,,101.2,,,,,,,,,,,16.2%,17.4%,16.0%
+60788,Suwannee Solar Energy Facility,12/12/2017,2017,Southeast (non-ISO),FL,30.38,-83.17,4.74,PV,c-Si,14.20,8.80,1.61,Fixed Tilt,Fixed Tilt,20,180,PV+Fossil,,,,,  ,  ,,71.7,,,,,,,,,,,19.2%,24.3%,23.5%
+60534,Aurora West Waconia Solar,30/06/2017,2017,MISO,MN,44.79,-93.90,3.83,PV,c-Si,12.25,8.50,1.44,Tracking,Single Axis,Tracking,180,,,,,, $18.70 , $0.47 ,,108.8,,,,,,,,,,,20.0%,18.3%,20.8%
+60863,Cooperative Solar One,01/11/2017,2017,PJM,KY,38.03,-84.25,4.10,PV,c-Si,10.70,8.50,1.26,Fixed Tilt,Fixed Tilt,25,180,,,,,, $23.98 , $11.66 ,,91.9,,,,,,,,,,,18.5%,19.4%,18.3%
+60755,Spartan,28/03/2017,2017,PJM,NJ,40.04,-74.61,4.02,PV,c-Si,10.00,8.30,1.20,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.75 , $19.52 ,,147.5,,,,,,,,,,,18.9%,19.0%,18.7%
+61523,Haley Solar,30/12/2017,2017,Southeast (non-ISO),SC,33.02,-81.29,4.66,PV,c-Si,11.39,8.16,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,48.7,,,,,,,,,,,25.5%,24.3%,19.9%
+61324,Odyssey Solar (Phase 1),31/08/2017,2017,Southeast (non-ISO),SC,33.79,-81.27,4.56,PV,c-Si,11.84,8.16,1.45,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,48.4,42.9,,,,,,,,,,,25.8%,24.9%,26.1%
+61054,IMPA Anderson 2 Solar Project,30/12/2017,2017,PJM,IN,40.14,-85.69,3.96,PV,c-Si,10.20,8.10,1.26,Tracking,Single Axis,Tracking,180,,,,,, $24.96 , $11.15 ,,67.0,,,,,,,,,,,19.2%,19.5%,18.9%
+61559,Woodline Solar,30/12/2017,2017,West (non-ISO),OR,42.24,-121.58,4.73,PV,c-Si,11.16,8.00,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,39.7,,,,,,,,,,,20.7%,25.8%,25.5%
+60673,Nixa Solar Farm,14/11/2017,2017,SPP,MO,37.04,-93.34,4.33,PV,c-Si,11.09,7.92,1.40,Fixed Tilt,Fixed Tilt,25,180,,,,,, $23.79 , $30.70 ,,83.5,,,,,,,,,,,21.7%,21.5%,
+60527,Aurora Lake Pulaski Solar,30/06/2017,2017,MISO,MN,45.20,-93.81,3.80,PV,c-Si,10.92,7.50,1.46,Tracking,Single Axis,Tracking,180,,,,,, $18.89 , $0.47 ,,106.2,,,,,,,,,,,20.2%,19.3%,21.4%
+60680,ANAD Solar Array (Army) (Anniston),31/07/2017,2017,Southeast (non-ISO),AL,33.63,-85.94,4.46,PV,Thin-Film,9.70,7.40,1.31,Fixed Tilt,Fixed Tilt,20,180,,,,,, $22.49 , $5.06 ,,131.9,,,,,,,,,,,26.5%,13.7%,18.2%
+61680,MMPA Tatanka Wi Solar (Buffalo Solar Project),30/12/2017,2017,MISO,MN,45.21,-93.88,3.80,PV,c-Si,8.69,7.11,1.22,Tracking,Single Axis,Tracking,180,,,,,, $18.86 , $0.54 ,,72.4,,,,,,,,,,,18.2%,18.0%,19.2%
+61388,"AEP Jacksonville Solar Project (Northwest Jacksonville Solar Partners, Nwjax)",30/05/2017,2017,Southeast (non-ISO),FL,30.52,-81.68,4.74,PV,c-Si,7.50,7.10,1.06,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,61.1,78.4,,,,,,,,,,,16.2%,23.4%,22.8%
+61006,SCDA Solar 1 (Sacramento Airport PV) has North and East site,06/12/2017,2017,CAISO,CA,38.69,-121.59,5.04,PV,c-Si,7.91,6.80,1.16,Tracking,Single Axis,Tracking,180,,,,,, $23.69 , $4.18 ,63.5,71.7,,,,,,,,,,,,25.0%,24.1%
+61325,Hampton Solar I,31/08/2017,2017,Southeast (non-ISO),SC,32.88,-81.13,4.66,PV,c-Si,9.91,6.80,1.46,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,58.5,,,,,,,,,,,23.5%,22.1%,21.5%
+60523,Aurora Dodge Center Solar,30/06/2017,2017,MISO,MN,44.03,-92.88,3.81,PV,c-Si,9.90,6.50,1.52,Tracking,Single Axis,Tracking,180,,,,,, $15.03 , $0.49 ,,106.3,,,,,,,,,,,22.0%,19.1%,21.4%
+60522,Aurora Chisago Solar,31/03/2017,2017,MISO,MN,45.45,-92.90,3.77,PV,c-Si,9.60,6.50,1.48,Tracking,Single Axis,Tracking,180,,,,,, $19.89 , $0.53 ,,118.4,,,,,,,,,,,19.9%,17.3%,19.1%
+60621,Worcester Landfill,17/08/2017,2017,ISO-NE,MA,42.22,-71.79,3.83,PV,c-Si,8.10,6.50,1.25,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.65 , $10.08 ,,157.0,,,,,,,,,,,14.3%,14.6%,9.9%
+60520,Aurora Annandale Solar,30/06/2017,2017,MISO,MN,45.25,-94.11,3.79,PV,c-Si,9.12,6.00,1.52,Tracking,Single Axis,Tracking,180,,,,,, $18.84 , $0.53 ,,104.7,,,,,,,,,,,22.4%,20.3%,21.7%
+61510,"Monroe County Sites C, D, & E",30/12/2017,2017,NYISO,NY,43.32,-77.74,3.70,PV,c-Si,8.40,6.00,1.40,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.86 , $5.82 ,,108.0,,,,,,,,,,,16.8%,17.0%,17.2%
+61755,East Acres Solar NG,01/04/2017,2017,ISO-NE,MA,42.49,-73.24,3.69,PV,c-Si,6.80,5.80,1.17,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.27 , $7.67 ,,170.9,,,,,,,,,,,8.3%,9.0%,10.3%
+61884,Kearney NPPD Solar Project,11/12/2017,2017,SPP,NE,40.72,-99.04,4.41,PV,c-Si,7.25,5.76,1.26,Tracking,Single Axis,Tracking,180,,,,,, $20.04 , $31.85 ,,82.3,,,,,,,,,,,22.0%,21.0%,22.4%
+60524,Aurora Eastwood Solar,30/06/2017,2017,MISO,MN,44.15,-93.92,3.81,PV,c-Si,8.23,5.50,1.50,Tracking,Single Axis,Tracking,180,,,,,, $17.73 , $0.49 ,,106.6,,,,,,,,,,,21.7%,19.3%,21.3%
+60533,Aurora West Faribault Solar,30/06/2017,2017,MISO,MN,44.27,-93.31,3.82,PV,c-Si,7.89,5.50,1.43,Tracking,Single Axis,Tracking,180,,,,,, $18.08 , $0.49 ,,106.1,,,,,,,,,,,19.7%,18.4%,21.4%
+61327,Barnwell Solar,30/12/2017,2017,Southeast (non-ISO),SC,33.24,-81.35,4.64,PV,c-Si,7.65,5.44,1.41,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,46.3,,,,,,,,,,,24.3%,22.7%,27.6%
+61409,Highway 56 Solar (not the West Moore Sherman project coming in 2018),30/12/2017,2017,ERCOT,TX,33.61,-96.69,4.67,PV,c-Si,7.20,5.30,1.36,Tracking,Single Axis,Tracking,181,,,,,, $24.99 , $-   ,,89.1,,,,,,,,,,,19.1%,20.8%,18.9%
+59213,Clipperton Holdings,30/11/2017,2017,Southeast (non-ISO),NC,34.97,-78.35,4.48,PV,Thin-Film,7.00,5.28,1.33,Tracking,Single Axis,Tracking,175,,,,,, $22.98 , $1.87 ,,77.3,,,,,,,,,,,,,
+61513,Marlin Solar,30/12/2017,2017,ERCOT,TX,31.29,-96.88,4.71,PV,c-Si,7.22,5.28,1.37,Tracking,Single Axis,Tracking,180,,,,,, $26.73 , $-   ,,155.9,,,,,,,,,,,20.3%,22.8%,20.5%
+61117,Bakersfield PV 1,30/12/2017,2017,CAISO,CA,35.32,-118.98,5.39,PV,c-Si,7.03,5.25,1.34,Tracking,Single Axis,Tracking,180,,,,,, $19.85 , $4.76 ,,97.8,,,,,,,,,,,23.5%,22.0%,20.6%
+61514,North Gainesville Solar,30/12/2017,2017,ERCOT,TX,33.66,-97.15,4.74,PV,c-Si,6.82,5.17,1.32,Tracking,Single Axis,Tracking,180,,,,,, $26.71 , $-   ,,78.3,,,,,,,,,,,20.4%,20.6%,16.4%
+61614,Cyril,30/05/2017,2017,SPP,OK,34.90,-98.23,4.80,PV,c-Si,6.40,5.00,1.28,Tracking,Single Axis,Tracking,180,,,,,, $24.60 , $34.36 ,,55.5,,,,,,,,,,,,,
+60253,IMPA Anderson 1 Solar Project,23/01/2017,2017,PJM,IN,40.05,-85.73,3.96,PV,c-Si,6.20,5.00,1.24,Fixed Tilt,Fixed Tilt,25,180,,,,,, $25.20 , $15.27 ,,89.2,,,,,,,,,,,,,
+61410,Whitesboro Solar,30/12/2017,2017,ERCOT,TX,33.62,-96.87,4.69,PV,c-Si,7.14,5.00,1.43,Tracking,Single Axis,Tracking,180,,,,,, $24.45 , $-   ,,58.6,,,,,,,,,,,,,
+61411,Whitesboro Solar II,30/12/2017,2017,ERCOT,TX,33.62,-96.87,4.69,PV,c-Si,7.14,5.00,1.43,Tracking,Single Axis,Tracking,180,,,,,, $24.62 , $-   ,,74.8,,,,,,,,,,,,,
+58659,Aloha Solar Energy Fund 1 PK1,31/03/2017,2017,HI,HI,21.41,-158.15,5.29,PV,c-Si,6.20,5.00,1.24,Fixed Tilt,Fixed Tilt,15,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+60906,Mt. Tom Solar Project Hybrid,31/01/2017,2017,ISO-NE,MA,42.27,-72.60,3.79,PV,c-Si,5.76,5.00,1.15,Fixed Tilt,Fixed Tilt,25,180,PV+Storage,Lithium-Ion,2019,3,6, $20.54 , $8.17 ,,,,,,,,,,,,,,,
+61202,Mount Signal Solar Farm 3 (MS3),30/11/2018,2018,CAISO,CA,32.68,-115.57,5.85,PV,Thin-Film,328.90,252.30,1.30,Tracking,Single Axis,Tracking,180,,,,,, $19.63 , $3.62 ,48.3,74.3,,,,,,,,,,,,28.3%,26.9%
+59940,Great Valley Solar 1-4 (Tranquility 8),30/04/2018,2018,CAISO,CA,36.58,-120.39,5.32,PV,c-Si,281.00,200.00,1.41,Tracking,Single Axis,Tracking,180,,,,,, $8.20 , $3.09 ,41.9,56.5,,,,,,,,,,,,31.1%,30.2%
+61368,"Midway Solar - TX (McCamey, Waymark Solar)",31/12/2018,2018,ERCOT,TX,31.00,-102.22,5.52,PV,c-Si,236.00,182.00,1.30,Tracking,Single Axis,Tracking,191,,,,,, $17.03 , $-   ,,45.7,,,,,,,,,,,,20.9%,24.0%
+60123,Castle Gap Solar (Upton 2 Solar Power Plant),31/05/2018,2018,ERCOT,TX,31.26,-102.27,5.55,PV,c-Si,234.00,180.00,1.30,Tracking,Single Axis,Tracking,179,PV+Storage,Lithium-ion,2019,10,42, $18.91 , $-   ,,40.2,,,,,,,,,,,,27.6%,26.7%
+60044,Buckthorn Solar 1 (Riggins Solar),31/05/2018,2018,ERCOT,TX,31.08,-102.85,5.61,PV,Thin-Film,202.00,154.00,1.31,Tracking,Single Axis,Tracking,179,,,,,, $18.68 , $-   ,34.2,45.9,,,,,,,,,,,,,26.9%
+57340,CED Panoche Valley Solar Project,31/01/2018,2018,CAISO,CA,36.63,-120.89,5.35,PV,c-Si,188.00,140.00,1.34,Tracking,Single Axis,Tracking,180,,,,,, $20.34 , $3.70 ,,75.6,,,,,,,,,,,,31.1%,26.5%
+61264,Antelope Expansion 2,31/12/2018,2018,CAISO,CA,34.75,-118.32,5.78,PV,c-Si,130.00,105.00,1.24,Tracking,Single Axis,Tracking,180,,,,,, $21.80 , $3.64 ,,47.9,,,,,,,,,,,,25.3%,27.4%
+61750,CED Wistaria Ranch Solar,31/12/2018,2018,CAISO,CA,32.67,-115.62,5.66,PV,c-Si,141.00,100.00,1.41,Tracking,Single Axis,Tracking,180,,,,,, $18.44 , $3.19 ,45.7,66.7,,,,,,,,,,,,33.4%,30.7%
+61262,Stuttgart Solar Energy Center,31/01/2018,2018,MISO,AR,34.44,-91.44,4.52,PV,c-Si,81.00,81.00,1.00,Fixed Tilt,Fixed Tilt,14,180,,,,,, $22.08 , $0.56 ,47.4,45.7,,,,,,,,,,,,22.9%,22.2%
+61369,Sweetwater Solar (Green River Project),31/12/2018,2018,West (non-ISO),WY,41.63,-109.68,4.70,PV,c-Si,97.94,80.00,1.22,Tracking,Single Axis,Tracking,180,,,,,, $20.53 , $17.13 ,,51.2,,,,,,,,,,,,25.7%,23.5%
+62340,Aulander Holloman Solar,31/12/2018,2018,PJM,NC,36.25,-77.07,4.38,PV,c-Si,125.00,80.00,1.56,Tracking,Single Axis,Tracking,180,,,,,, $22.53 , $10.29 ,,88.0,,,,,,,,,,,,,25.5%
+59851,Great Bay Solar 1 (Great Bay Energy Center),31/03/2018,2018,PJM,MD,38.17,-75.69,4.28,PV,c-Si,99.00,75.00,1.32,Fixed Tilt,Fixed Tilt,25,180,,,,,, $25.02 , $18.17 ,,80.5,,,,,,,,,,,,20.4%,19.8%
+61807,Hamilton Solar Power Plant,31/12/2018,2018,Southeast (non-ISO),FL,30.45,-83.19,4.74,PV,c-Si,110.80,74.90,1.48,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,47.7,,,,,,,,,,,,27.5%,26.7%
+60030,Pecan Solar (Bethel Church Road Solar Power Plant),31/12/2018,2018,PJM,NC,36.49,-77.48,4.40,PV,Thin-Film,111.26,74.90,1.49,Tracking,Single Axis,Tracking,181,,,,,, $21.75 , $10.15 ,,60.3,,,,,,,,,,,,21.7%,24.0%
+60825,ColGreen North Shore Solar Farm,31/12/2018,2018,West (non-ISO),CA,33.55,-115.98,5.86,PV,c-Si,96.75,74.80,1.29,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,54.8,,,,,,,,,,,,28.6%,27.5%
+61610,NC 102 Project (Mc Bride Place Energy NC),30/09/2018,2018,Southeast (non-ISO),NC,35.29,-80.50,4.51,PV,c-Si,102.00,74.80,1.36,Fixed Tilt,Fixed Tilt,20,179,,,,,, $23.15 , $3.79 ,,71.1,,,,,,,,,,,,19.7%,21.4%
+61052,FPL Loggerhead Solar Energy Center,31/03/2018,2018,Southeast (non-ISO),FL,27.22,-80.54,4.94,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,196,,,,,, $21.03 , $28.78 ,,43.7,,,,,,,,,,,,23.8%,24.2%
+61051,FPL Barefoot Bay Solar Energy Center,31/03/2018,2018,Southeast (non-ISO),FL,27.87,-80.53,4.94,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,196,,,,,, $20.95 , $30.35 ,,43.2,,,,,,,,,,,,24.9%,24.6%
+61024,FPL Hammock Solar Energy Center,31/03/2018,2018,Southeast (non-ISO),FL,26.69,-81.32,5.05,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.98 , $26.73 ,,43.8,,,,,,,,,,,,24.1%,24.4%
+61029,FPL Blue Cypress Solar Energy Center,31/03/2018,2018,Southeast (non-ISO),FL,27.60,-80.53,4.92,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.98 , $28.62 ,,44.1,,,,,,,,,,,,23.4%,24.1%
+61020,FPL Indian River Solar Energy Center,31/01/2018,2018,Southeast (non-ISO),FL,27.57,-80.57,4.92,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.98 , $29.05 ,,43.4,,,,,,,,,,,,24.2%,24.1%
+61050,FPL Wildflower Solar Energy Center,31/01/2018,2018,Southeast (non-ISO),FL,27.31,-81.78,5.05,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.94 , $29.31 ,,43.5,,,,,,,,,,,,24.9%,24.2%
+61021,FPL Horizon Solar Energy Center,31/01/2018,2018,Southeast (non-ISO),FL,29.67,-82.06,4.80,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.65 , $26.57 ,,45.7,,,,,,,,,,,,23.9%,23.1%
+61022,FPL Coral Farms Solar Energy Center,31/01/2018,2018,Southeast (non-ISO),FL,29.76,-81.90,4.77,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.66 , $25.93 ,,46.1,,,,,,,,,,,,23.7%,22.8%
+61654,Balm Solar,30/09/2018,2018,Southeast (non-ISO),FL,27.77,-82.24,5.01,PV,Thin-Film,87.90,74.40,1.18,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,48.9,,,,,,,,,,,,20.9%,22.9%
+61665,Payne Creek Solar,30/09/2018,2018,Southeast (non-ISO),FL,27.66,-81.96,4.99,PV,Thin-Film,84.90,70.30,1.21,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,47.9,,,,,,,,,,,,20.4%,22.9%
+60560,Millington Solar Farm (NSA Mid-South Solar),31/12/2018,2018,Southeast (non-ISO),TN,35.35,-89.85,4.44,PV,Thin-Film,68.00,53.00,1.28,Tracking,Single Axis,Tracking,178,,,,,, $23.38 , $5.68 ,,70.6,,,,,,,,,,,,22.5%,22.7%
+61693,Buckleberry Solar,30/11/2018,2018,Southeast (non-ISO),NC,35.38,-77.41,4.43,PV,c-Si,75.03,52.10,1.44,Fixed Tilt,Fixed Tilt,20,181,,,,,, $23.25 , $2.92 ,,55.4,,,,,,,,,,,,23.3%,21.5%
+61988,"Citrus Ridge Solar (Disney, FL Solar 5)",31/12/2018,2018,Southeast (non-ISO),FL,28.40,-81.62,4.91,PV,Thin-Film,62.75,52.00,1.21,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,34.8,42.9,,,,,,,,,,,,21.5%,22.2%
+60623,Brantley Farm Solar,31/10/2018,2018,Southeast (non-ISO),NC,35.89,-78.15,4.46,PV,Thin-Film,71.40,50.20,1.42,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.25 , $4.15 ,,61.8,,,,,,,,,,,,23.4%,22.6%
+60624,Fox Creek Solar Farm,30/11/2018,2018,Southeast (non-ISO),NC,36.13,-78.28,4.43,PV,c-Si,65.50,50.20,1.30,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.27 , $4.01 ,,60.8,,,,,,,,,,,,21.0%,20.7%
+60336,Midway Solar Farm I  (83WI 8ME),31/01/2018,2018,West (non-ISO),CA,33.17,-115.55,5.91,PV,Thin-Film,66.00,50.00,1.32,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,67.8,,,,,,,,,,,,29.7%,24.1%
+61811,"Titan Solar (NER Deer Trail Titan Solar Energy Center, NOT Hunter Solar)",31/12/2018,2018,West (non-ISO),CO,39.69,-104.01,4.90,PV,c-Si,67.60,50.00,1.35,Tracking,Single Axis,Tracking,181,,,,,, $19.16 , $24.10 ,29.8,51.3,,,,,,,,,,,,23.7%,23.2%
+59669,Innovative Solar 54,31/12/2018,2018,Southeast (non-ISO),NC,35.21,-77.71,4.44,PV,c-Si,73.66,50.00,1.47,Fixed Tilt,Fixed Tilt,20,181,,,,,, $23.27 , $3.76 ,,64.2,,,,,,,,,,,,22.8%,21.9%
+61697,Project Ivory Solar (Lamesa Solar B/II),30/11/2018,2018,ERCOT,TX,32.71,-101.89,5.41,PV,c-Si,66.00,50.00,1.32,Tracking,Single Axis,Tracking,180,,,,,, $23.33 , $-   ,,40.9,,,,,,,,,,,,27.4%,29.8%
+61272,Gray Hawk Solar,30/06/2018,2018,West (non-ISO),AZ,35.35,-113.91,5.70,PV,c-Si,64.50,46.00,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,49.0,37.8,,,,,,,,,,,,34.7%,36.5%
+61976,Peony Solar,31/12/2018,2018,Southeast (non-ISO),SC,33.50,-81.25,4.61,PV,c-Si,57.00,39.00,1.46,Tracking,Single Axis,Tracking,185,,,,,,  ,  ,,79.4,,,,,,,,,,,,13.2%,18.2%
+59678,Innovative Solar 67,31/12/2018,2018,Southeast (non-ISO),NC,34.62,-78.01,4.47,PV,c-Si,48.65,33.30,1.46,Tracking,Single Axis,Tracking,181,,,,,, $22.99 , $4.31 ,,67.9,,,,,,,,,,,,25.1%,22.3%
+59876,Marine Corps Logistics Base Solar (MCLB Albany),28/02/2018,2018,Southeast (non-ISO),GA,31.56,-84.09,4.74,PV,c-Si,44.00,31.16,1.41,Fixed Tilt,Fixed Tilt,18,185,,,,,, $22.26 , $5.40 ,,82.4,,,,,,,,,,,,21.5%,20.4%
+60789,Bluebell Solar I (Capricorn Ridge Solar),30/11/2018,2018,ERCOT,TX,31.87,-100.83,5.28,PV,c-Si,45.40,30.00,1.51,Tracking,Single Axis,Tracking,180,Wind+PV,,,,, $22.71 , $-   ,,44.1,,,,,,,,,,,,29.2%,29.2%
+60045,Shoreham Solar Commons (Tallgrass Solar),30/07/2018,2018,NYISO,NY,40.94,-72.89,3.94,PV,c-Si,32.00,24.90,1.29,Fixed Tilt,Fixed Tilt,25,180,,,,,, $31.92 , $9.10 ,148.6,92.2,,,,,,,,,,,,21.3%,23.3%
+61445,RE Gaskell West 1,31/03/2018,2018,CAISO,CA,34.83,-118.56,5.76,PV,c-Si,28.00,20.00,1.40,Tracking,Single Axis,Tracking,180,,,,,, $21.39 , $3.27 ,,69.9,,,,,,,,,,,,30.0%,30.4%
+61678,Pinal Central Solar Energy Center,30/04/2018,2018,West (non-ISO),AZ,32.88,-111.55,5.77,PV,Thin-Film,30.90,20.00,1.55,Tracking,Single Axis,Tracking,180,PV+Storage,Lithium-ion,2018,10,40,  ,  ,,73.9,,,,,,,,,,,,35.5%,34.8%
+60315,"Midway Solar Farm III (Greenbacker, 97WI)",30/09/2018,2018,West (non-ISO),CA,33.16,-115.54,5.91,PV,Thin-Film,26.00,20.00,1.30,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,64.0,,,,,,,,,,,,23.1%,25.1%
+61809,"Stillwater Solar PV II- Geothermal, CSP (Wynn Solar Facility)",30/06/2018,2018,West (non-ISO),NV,39.54,-118.56,5.27,PV,c-Si,27.10,20.00,1.36,Fixed Tilt,Fixed Tilt,30,180,PV+Geothermal+CSP,,,,, $28.72 , $7.94 ,,74.1,,,,,,,,,,,,,
+61736,Woods Hill Solar,31/12/2018,2018,ISO-NE,CT,41.83,-71.92,3.84,PV,c-Si,24.58,20.00,1.23,Fixed Tilt,Fixed Tilt,25,181,,,,,, $20.19 , $8.00 ,,94.4,,,,,,,,,,,,13.5%,18.0%
+58876,Fusion Solar Center,31/03/2018,2018,ISO-NE,CT,41.64,-72.05,3.87,PV,c-Si,31.80,20.00,1.59,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.50 , $7.07 ,100.7,87.3,,,,,,,,,,,,22.7%,22.4%
+61068,AES Lawai Solar and Energy Storage Project,31/12/2018,2018,HI,HI,21.91,-159.49,4.79,PV,c-Si,28.19,20.00,1.41,Tracking,Single Axis,Tracking,180,PV+Storage,Lithium-ion,2018,20,100,  ,  ,,,,,,,,,,,,,,21.4%,22.2%
+64093,Montross Solar Facility,31/12/2018,2018,PJM,VA,38.07,-76.79,4.24,PV,c-Si,28.00,20.00,1.40,Tracking,Single Axis,Tracking,180,,,,,, $38.69 , $10.27 ,,56.8,,,,,,,,,,,,,22.4%
+61959,Coolidge Solar 1 (Coolidge Solar Ranger),31/12/2018,2018,ISO-NE,VT,43.42,-72.67,3.72,PV,c-Si,25.57,19.59,1.31,Fixed Tilt,Fixed Tilt,25,180,,,,,, $20.82 , $8.09 ,89.4,83.7,,,,,,,,,,,,15.4%,17.1%
+61933,Adams Nielson Solar,30/11/2018,2018,West (non-ISO),WA,46.96,-118.62,4.22,PV,c-Si,28.00,19.20,1.46,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,103.6,,,,,,,,,,,,25.8%,26.9%
+60678,"San Joaquin Solar (Summer Wheat Solar Farm, SJ1A)",31/10/2018,2018,CAISO,CA,36.53,-120.15,5.30,PV,Thin-Film,23.43,18.50,1.27,Tracking,Single Axis,Tracking,179,,,,,, $18.24 , $3.81 ,50.8,80.8,,,,,,,,,,,,22.4%,23.6%
+61023,UVA Hollyfield Solar Project,30/09/2018,2018,PJM,VA,37.67,-77.17,4.28,PV,c-Si,21.10,17.00,1.24,Tracking,Single Axis,Tracking,181,,,,,, $22.96 , $8.72 ,,67.8,,,,,,,,,,,,21.5%,22.0%
+61924,Cumberland Solar Project,31/12/2018,2018,Southeast (non-ISO),AL,34.95,-86.87,4.38,PV,Thin-Film,20.00,15.90,1.26,Tracking,Single Axis,Tracking,180,,,,,, $22.94 , $4.49 ,,95.6,,,,,,,,,,,,19.4%,20.9%
+61955,"Delta Solar Power II (DSP-II A+B, Delta Solar Power Project)",30/07/2018,2018,MISO,MI,42.71,-84.70,3.79,PV,c-Si,19.40,15.90,1.22,Tracking,Single Axis,Tracking,180,,,,,, $27.41 , $19.70 ,,63.8,,,,,,,,,,,,17.7%,19.9%
+62140,UVA Puller Solar Facility,31/10/2018,2018,PJM,VA,37.57,-76.47,4.30,PV,c-Si,19.70,15.00,1.31,Tracking,Single Axis,Tracking,181,,,,,, $22.91 , $8.79 ,,74.2,,,,,,,,,,,,22.0%,21.8%
+61412,Latitude Solar Center,31/12/2018,2018,Southeast (non-ISO),TN,35.31,-89.17,4.39,PV,Thin-Film,20.00,15.00,1.33,Tracking,Single Axis,Tracking,178,,,,,, $23.35 , $5.01 ,,69.4,,,,,,,,,,,,23.9%,22.9%
+60681,Annapolis Solar Park (Landfill),31/08/2018,2018,PJM,MD,38.99,-76.57,4.15,PV,c-Si,18.00,12.00,1.50,Fixed Tilt,Fixed Tilt,12,180,,,,,, $26.18 , $10.27 ,82.8,118.8,,,,,,,,,,,,21.5%,21.0%
+61530,Gaston Solar I,31/03/2018,2018,Southeast (non-ISO),SC,33.77,-81.11,4.59,PV,c-Si,14.80,10.20,1.45,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,57.0,,,,,,,,,,,,23.3%,23.2%
+61759,Covington Solar Farm,28/02/2018,2018,SPP,OK,36.32,-97.58,4.68,PV,c-Si,13.20,10.00,1.32,Tracking,Single Axis,Tracking,180,,,,,, $22.02 , $31.64 ,,56.8,,,,,,,,,,,,24.9%,23.6%
+61557,Facebook 2 Solar Energy Center (Los Lunas 2),28/02/2018,2018,West (non-ISO),NM,35.08,-106.87,5.63,PV,c-Si,12.50,10.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $24.08 , $20.04 ,,41.7,,,,,,,,,,,,27.6%,29.5%
+61558,Facebook 3 Solar Energy Center (Los Lunas 3),30/04/2018,2018,West (non-ISO),NM,35.08,-106.86,5.63,PV,c-Si,12.50,10.00,1.25,Tracking,Single Axis,Tracking,180,,,,,, $24.08 , $20.88 ,,41.8,,,,,,,,,,,,28.1%,30.0%
+61424,OR Solar 8 (Dairy Solar Facility),31/03/2018,2018,West (non-ISO),OR,42.24,-121.59,4.73,PV,c-Si,14.00,10.00,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,50.6,,,,,,,,,,,,28.2%,30.6%
+61345,Wy'East Solar,31/08/2018,2018,West (non-ISO),OR,45.59,-120.60,4.38,PV,c-Si,12.50,10.00,1.25,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,59.5,,,,,,,,,,,,21.5%,24.8%
+61599,New Road Solar,30/06/2018,2018,PJM,NJ,40.40,-74.57,3.99,PV,c-Si,13.00,10.00,1.30,Fixed Tilt,Fixed Tilt,20,180,,,,,, $19.38 , $20.10 ,,105.1,,,,,,,,,,,,19.1%,18.0%
+61496,Adams Solar Center,30/07/2018,2018,West (non-ISO),OR,44.67,-121.12,4.43,PV,c-Si,13.00,10.00,1.30,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,54.5,,,,,,,,,,,,23.7%,26.7%
+61497,Elbe Solar Center,31/08/2018,2018,West (non-ISO),OR,44.62,-121.21,4.40,PV,c-Si,13.00,10.00,1.30,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,60.3,,,,,,,,,,,,23.7%,26.1%
+61281,Bear Creek Solar Center,30/09/2018,2018,West (non-ISO),OR,44.06,-121.24,4.51,PV,c-Si,13.00,10.00,1.30,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,65.2,,,,,,,,,,,,25.9%,26.9%
+61871,Sterling Solar (TX),30/11/2018,2018,ERCOT,TX,33.17,-96.17,4.63,PV,Thin-Film,14.26,10.00,1.43,Tracking,Single Axis,Tracking,181,,,,,, $26.06 , $-   ,,65.7,,,,,,,,,,,,18.1%,20.0%
+61874,Eddy Solar II,30/11/2018,2018,ERCOT,TX,31.29,-97.26,4.74,PV,Thin-Film,14.26,10.00,1.43,Tracking,Single Axis,Tracking,181,,,,,, $26.49 , $-   ,,61.9,,,,,,,,,,,,20.9%,23.1%
+61868,Bronson Solar,31/12/2018,2018,ERCOT,TX,29.54,-95.97,4.65,PV,Thin-Film,14.26,10.00,1.43,Tracking,Single Axis,Tracking,182,,,,,, $26.49 , $-   ,,61.1,,,,,,,,,,,,17.4%,22.0%
+61867,Bovine Solar (Green Mountain Energy Gable Solar Park),31/12/2018,2018,ERCOT,TX,29.63,-96.08,4.64,PV,c-Si,14.26,10.00,1.43,Tracking,Single Axis,Tracking,180,,,,,, $28.10 , $-   ,,55.0,,,,,,,,,,,,,21.9%
+61810,Chisum Solar,31/12/2018,2018,ERCOT,TX,33.63,-95.39,4.56,PV,Thin-Film,14.26,10.00,1.43,Tracking,Single Axis,Tracking,182,,,,,, $25.84 , $-   ,,75.5,,,,,,,,,,,,18.1%,17.5%
+62713,DSM Nutritional Products Solar,31/12/2018,2018,PJM,NJ,40.84,-75.07,3.90,PV,c-Si,14.00,10.00,1.40,Fixed Tilt,Fixed Tilt,10,180,,,,,, $19.09 , $15.75 ,,118.5,,,,,,,,,,,,13.0%,18.1%
+61631,Chiloquin Solar Park,31/01/2018,2018,West (non-ISO),OR,42.61,-121.86,4.72,PV,c-Si,14.00,9.90,1.41,Fixed Tilt,Fixed Tilt,28,180,,,,,,  ,  ,,57.8,,,,,,,,,,,,22.4%,23.7%
+61600,Old Bridge Solar Farm,31/08/2018,2018,PJM,NJ,40.44,-74.24,3.95,PV,c-Si,10.69,8.80,1.21,Fixed Tilt,Fixed Tilt,12,180,,,,,, $20.19 , $19.41 ,,105.6,,,,,,,,,,,,17.9%,17.0%
+61965,Quakertown Solar Project (Quakertown Farms),31/10/2018,2018,PJM,NJ,40.52,-74.94,3.96,PV,c-Si,10.00,8.80,1.14,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.81 , $20.26 ,,97.6,,,,,,,,,,,,17.5%,16.4%
+61601,Raritan Solar Project,31/05/2018,2018,PJM,NJ,40.45,-74.86,3.97,PV,c-Si,9.99,8.40,1.19,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.83 , $19.83 ,,113.0,,,,,,,,,,,,16.6%,16.1%
+61588,"Independence II Solar Farm (IPL2, Bundschu) ",30/06/2018,2018,SPP,MO,39.12,-94.29,4.24,PV,c-Si,10.87,8.40,1.29,Fixed Tilt,Fixed Tilt,25,180,,,,,, $27.77 , $34.01 ,,61.2,,,,,,,,,,,,19.9%,19.9%
+61954,"Delta Solar Power I (DSP-I, Delta Solar Power Project)",30/06/2018,2018,MISO,MI,42.71,-84.70,3.79,PV,c-Si,9.90,8.10,1.22,Tracking,Single Axis,Tracking,180,,,,,, $27.41 , $19.73 ,,61.0,,,,,,,,,,,,18.1%,20.3%
+61433,SCE&G Nimitz Community Solar,30/06/2018,2018,Southeast (non-ISO),SC,32.50,-80.96,4.68,PV,Thin-Film,10.62,8.00,1.33,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,46.5,,,,,,,,,,,,22.5%,23.1%
+62272,Bly Solar Center,31/12/2018,2018,West (non-ISO),OR,42.38,-121.02,4.68,PV,c-Si,11.10,8.00,1.39,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,78.2,,,,,,,,,,,,25.8%,29.3%
+61423,OR Solar 5 (Merrill Solar Facility),31/01/2018,2018,West (non-ISO),OR,42.18,-121.69,4.77,PV,c-Si,10.30,8.00,1.29,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,51.9,,,,,,,,,,,,27.9%,28.1%
+62406,City of Gallup Solar,31/05/2018,2018,West (non-ISO),NM,35.52,-108.77,5.43,PV,c-Si,9.80,8.00,1.23,Tracking,Single Axis,,180,,,,,, $26.40 , $17.59 ,41.0,52.2,,,,,,,,,,,,24.8%,
+64102,GE 19th Hole,31/01/2018,2018,NYISO,NY,42.99,-74.31,3.74,PV,c-Si,10.40,7.70,1.35,Tracking,Single Axis,25,180,,,,,, $21.28 , $4.81 ,,,,,,,,,,,,,,,18.3%
+61907,Springfield Solar Project (near McGuir-Dix-Lakehurst Base),31/10/2018,2018,PJM,NJ,40.03,-74.65,4.02,PV,c-Si,9.20,7.50,1.23,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.68 , $17.10 ,,148.1,,,,,,,,,,,,13.7%,17.0%
+61729,IMPA Richmond 2 Solar Project,31/12/2018,2018,PJM,IN,39.84,-84.82,3.97,PV,c-Si,9.75,7.50,1.30,Tracking,Single Axis,Tracking,180,,,,,, $23.69 , $11.27 ,,62.9,,,,,,,,,,,,20.2%,20.2%
+61961,Gaston Solar II,31/12/2018,2018,Southeast (non-ISO),SC,33.78,-81.11,4.59,PV,Thin-Film,10.47,7.48,1.40,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,76.8,,,,,,,,,,,,18.1%,21.8%
+61879,Bartow Solar Energy,31/03/2018,2018,Southeast (non-ISO),FL,27.93,-81.78,4.97,PV,c-Si,9.30,7.26,1.28,Fixed Tilt,Fixed Tilt,15,180,,,,,,  ,  ,51.8,57.6,,,,,,,,,,,,19.7%,20.8%
+62062,Athens MN CONX (Ventyx: Connexus Energy (Athens)),31/12/2018,2018,MISO,MN,45.46,-93.27,3.80,PV,c-Si,8.84,6.63,1.33,Fixed Tilt,Fixed Tilt,25,180,PV+Storage,Lithium-ion,2018,9,18, $20.81 , $0.63 ,,62.2,,,,,,,,,,,,15.8%,18.2%
+61434,SCE&G Springfield Community Solar,30/06/2018,2018,Southeast (non-ISO),SC,33.49,-81.30,4.61,PV,Thin-Film,7.78,6.10,1.27,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,48.0,,,,,,,,,,,,20.9%,21.5%
+61849,Kentuck Solar Project,31/03/2018,2018,PJM,VA,36.66,-79.30,4.34,PV,c-Si,8.00,6.00,1.33,Tracking,Single Axis,Tracking,180,,,,,, $21.92 , $10.33 ,,50.8,,,,,,,,,,,,24.8%,
+62241,NorWest Energy 9 (Pendleton),30/09/2018,2018,West (non-ISO),OR,45.68,-118.85,4.18,PV,c-Si,8.40,6.00,1.40,Fixed Tilt,Fixed Tilt,20,181,,,,,,  ,  ,,59.4,,,,,,,,,,,,21.9%,22.6%
+62304,Woodleaf Solar Facility,31/12/2018,2018,Southeast (non-ISO),NC,35.73,-80.61,4.48,PV,c-Si,9.40,6.00,1.57,Tracking,Single Axis,Tracking,179,,,,,, $23.12 , $1.63 ,,79.8,,,,,,,,,,,,,21.8%
+60301,Holloman Atlas Solar Array,31/10/2018,2018,West (non-ISO),NM,32.92,-106.07,5.72,PV,Thin-Film,6.50,5.00,1.30,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,54.2,,,,,,,,,,,,,
+63214,Middleton Solar Park,30/06/2018,2018,ISO-NE,MA,42.58,-71.00,3.80,PV,c-Si,6.00,5.00,1.20,Fixed Tilt,Fixed Tilt,20,180,PV+Storage,LIB,2019,3,6.6, $20.85 , $8.04 ,,,,,,,,,,,,,,,
+61906,Phoebe Solar,30/11/2019,2019,ERCOT,TX,31.84,-102.87,5.57,PV,Thin-Film,315.00,250.00,1.26,Tracking,Single Axis,,180,,,,,, $24.11 , $-   ,,38.9,,,,,,,,,,,,,28.0%
+61930,Techren Solar II,31/10/2019,2019,West (non-ISO),NV,35.87,-114.96,5.48,PV,c-Si,249.90,200.00,1.25,Tracking,Single Axis,,180,,,,,, $29.94 , $20.13 ,31.8,29.8,,,,,,,,,,,,,27.9%
+59525,Wright Solar Park,31/12/2019,2019,CAISO,CA,37.01,-120.96,5.22,PV,c-Si,237.30,200.00,1.19,Tracking,Single Axis,,180,,,,,, $19.07 , $3.92 ,29.9,32.3,,,,,,,,,,,,,24.6%
+59879,North Rosamond Solar,30/06/2019,2019,CAISO,CA,34.85,-118.38,5.78,PV,Thin-Film,182.50,150.00,1.22,Tracking,Single Axis,,180,,,,,, $22.70 , $3.70 ,,55.9,,,,,,,,,,,,,26.7%
+60034,California Flats Solar 2 (CA Flats Solar 150),28/02/2019,2019,CAISO,CA,35.87,-120.32,5.44,PV,Thin-Film,201.00,150.00,1.34,Tracking,Single Axis,,180,,,,,, $19.16 , $3.53 ,,60.4,,,,,,,,,,,,,28.1%
+62584,Quitman Solar,31/12/2019,2019,Southeast (non-ISO),GA,30.85,-83.64,4.78,PV,c-Si,225.00,150.00,1.50,Tracking,Single Axis,,180,,,,,, $22.09 , $4.37 ,26.5,34.9,,,,,,,,,,,,,26.9%
+61985,Colonial Trail West,31/12/2019,2019,PJM,VA,37.15,-76.90,4.33,PV,c-Si,210.90,142.40,1.48,Tracking,Single Axis,Tracking,181,,,,,, $23.63 , $9.88 ,,57.7,,,,,,,,,,,,,24.1%
+62375,Dougherty County Solar,31/12/2019,2019,Southeast (non-ISO),GA,31.51,-84.04,4.74,PV,c-Si,174.00,120.00,1.45,Tracking,Single Axis,,180,,,,,, $22.09 , $4.74 ,26.3,42.4,,,,,,,,,,,,,26.2%
+62288,Valentine Solar,30/11/2019,2019,CAISO,CA,34.90,-118.38,5.82,PV,Thin-Film,132.00,111.20,1.19,Tracking,Single Axis,,180,,,,,, $24.46 , $3.88 ,,39.2,,,,,,,,,,,,,26.0%
+62367,SR Arlington II (Bancroft Station Solar Farm),30/11/2019,2019,Southeast (non-ISO),GA,31.42,-84.83,4.74,PV,c-Si,139.70,102.50,1.36,Tracking,Single Axis,,180,,,,,, $22.16 , $4.77 ,22.6,32.8,,,,,,,,,,,,,24.5%
+62448,Lapetus 2 (second phase),31/12/2019,2019,ERCOT,TX,32.46,-102.68,5.48,PV,c-Si,135.30,100.70,1.34,Tracking,Single Axis,,180,,,,,, $24.81 , $-   ,,44.1,,,,,,,,,,,,,28.4%
+62004,San Pablo Raceway,31/08/2019,2019,CAISO,CA,34.72,-118.28,5.81,PV,c-Si,132.00,100.00,1.32,Tracking,Single Axis,,180,,,,,, $22.82 , $3.17 ,30.2,30.8,,,,,,,,,,,,,31.5%
+60324,Willow Springs Solar,31/01/2019,2019,CAISO,CA,34.83,-118.33,5.78,PV,Thin-Film,125.70,100.00,1.26,Tracking,Single Axis,,180,,,,,, $21.84 , $3.45 ,,39.8,,,,,,,,,,,,,26.7%
+61611,Techren Solar I,31/03/2019,2019,West (non-ISO),NV,35.85,-114.97,5.48,PV,c-Si,132.00,100.00,1.32,Tracking,Single Axis,,180,,,,,, $27.08 , $5.65 ,34.7,37.0,,,,,,,,,,,,,26.8%
+62415,West of the Pecos Solar,31/12/2019,2019,ERCOT,TX,31.84,-102.86,5.57,PV,c-Si,130.65,100.00,1.31,Tracking,Single Axis,,180,,,,,, $25.50 , $-   ,,34.3,,,,,,,,,,,,,28.2%
+59826,Sunshine Valley Solar,31/12/2019,2019,CAISO,NV,36.52,-116.51,5.69,PV,Thin-Film,126.00,100.00,1.26,Tracking,Single Axis,,180,,,,,, $(4.37), $3.90 ,,39.0,,,,,,,,,,,,,21.7%
+60491,Springbok 3 Solar Farm,30/07/2019,2019,West (non-ISO),CA,35.27,-118.00,5.85,PV,c-Si,121.00,90.00,1.34,Tracking,Single Axis,,179,PV+Storage,Lithium-Ion,2019,1.5,1.5,  ,  ,41.8,64.0,,,,,,,,,,,,,30.7%
+62544,Wilkinson Solar,31/12/2019,2019,PJM,NC,35.59,-76.76,4.41,PV,c-Si,95.90,80.60,1.19,Tracking,Single Axis,,172.7,,,,,, $22.25 , $8.70 ,,70.6,,,,,,,,,,,,,19.9%
+63076,Gutenberg Solar,31/10/2019,2019,PJM,NC,36.45,-77.54,4.40,PV,Thin-Film,119.00,79.90,1.49,Tracking,Single Axis,,180,,,,,, $21.28 , $8.71 ,,63.9,,,,,,,,,,,,,21.8%
+62679,Palmetto Plains Solar Project,30/07/2019,2019,Southeast (non-ISO),SC,33.35,-80.70,4.64,PV,Thin-Film,106.00,74.90,1.42,Tracking,Single Axis,,180,,,,,,  ,  ,,40.5,,,,,,,,,,,,,24.0%
+62543,Trenton Solar Power Plant,31/12/2019,2019,Southeast (non-ISO),FL,29.64,-82.84,4.82,PV,c-Si,104.90,74.90,1.40,Tracking,Single Axis,,181,,,,,,  ,  ,,44.3,,,,,,,,,,,,,25.8%
+61790,Shaw Creek Solar,31/10/2019,2019,Southeast (non-ISO),SC,33.68,-81.75,4.58,PV,c-Si,108.60,74.90,1.45,Tracking,Single Axis,,180,,,,,,  ,  ,,47.8,,,,,,,,,,,,,25.2%
+61768,FPL Interstate Solar Energy Center,31/01/2019,2019,Southeast (non-ISO),FL,27.49,-80.44,4.93,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.95 , $26.89 ,,43.1,,,,,,,,,,,,,23.2%
+61767,FPL Pioneer Trail Solar Energy Center,31/01/2019,2019,Southeast (non-ISO),FL,29.01,-81.10,4.81,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.75 , $29.84 ,,46.9,,,,,,,,,,,,,22.2%
+61766,FPL Miami Dade Solar Energy Center,31/01/2019,2019,Southeast (non-ISO),FL,25.64,-80.49,4.98,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $21.07 , $26.23 ,,41.8,,,,,,,,,,,,,23.4%
+61763,FPL Sunshine Gateway Solar Energy Center,31/01/2019,2019,Southeast (non-ISO),FL,30.28,-82.78,4.78,PV,c-Si,113.24,74.50,1.52,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.60 , $28.88 ,,44.4,,,,,,,,,,,,,23.3%
+61663,Lithia Solar,31/01/2019,2019,Southeast (non-ISO),FL,27.75,-82.16,5.01,PV,Thin-Film,87.20,74.50,1.17,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,53.1,,,,,,,,,,,,,21.9%
+61701,Seabrook Solar,31/12/2019,2019,Southeast (non-ISO),SC,32.56,-80.73,4.71,PV,Thin-Film,93.00,72.50,1.28,Tracking,Single Axis,,182,,,,,,  ,  ,,48.3,,,,,,,,,,,,,23.5%
+62678,Crooked Run,31/12/2019,2019,Southeast (non-ISO),NC,34.68,-77.98,4.50,PV,Thin-Film,105.61,70.10,1.51,Tracking,Single Axis,,204,,,,,, $23.03 , $4.99 ,,55.9,,,,,,,,,,,,,22.2%
+61656,Grange Hall Solar,31/01/2019,2019,Southeast (non-ISO),FL,27.68,-82.21,5.00,PV,Thin-Film,71.40,61.10,1.17,Tracking,Single Axis,Tracking,180,,,,,,  ,  ,,51.4,,,,,,,,,,,,,22.1%
+62399,Sage Solar I-III,31/10/2019,2019,West (non-ISO),UT,41.77,-111.06,4.51,PV,Thin-Film,76.30,57.60,1.32,Tracking,Single Axis,,180,,,,,, $22.86 , $20.47 ,,51.6,,,,,,,,,,,,,29.4%
+61666,Peace Creek Solar,31/03/2019,2019,Southeast (non-ISO),FL,27.91,-81.81,5.00,PV,Thin-Film,64.80,55.00,1.18,Tracking,Single Axis,,180,,,,,,  ,  ,,54.5,,,,,,,,,,,,,21.3%
+62163,Meridian III,31/12/2019,2019,Southeast (non-ISO),MS,32.45,-88.55,4.62,PV,c-Si,75.00,52.50,1.43,Tracking,Single Axis,,180,,,,,, $22.59 , $4.83 ,37.8,32.6,,,,,,,,,,,,,27.0%
+63579,Britton Solar Energy Center,31/12/2019,2019,West (non-ISO),NM,35.02,-106.10,5.44,PV,c-Si,67.70,50.00,1.35,Tracking,Single Axis,,180,,,,,, $21.88 , $14.82 ,25.1,31.6,,,,,,,,,,,,,32.0%
+61657,Lake Hancock Solar,30/04/2019,2019,Southeast (non-ISO),FL,27.93,-81.86,5.00,PV,Thin-Film,58.00,49.60,1.17,Tracking,Single Axis,,180,,,,,,  ,  ,,60.7,,,,,,,,,,,,,18.9%
+60125,Kawailoa Solar,19/09/2019,2019,HI,HI,21.62,-158.05,5.33,PV,Thin-Film,49.00,48.75,1.01,Tracking,Single Axis,,180,Wind+PV,,,,,  ,  ,95.0,,,,,,,,,,,,,,18.3%
+62560,Airport Solar,31/12/2019,2019,West (non-ISO),OR,42.17,-120.41,4.72,PV,c-Si,60.70,47.30,1.28,Tracking,Single Axis,,180,,,,,,  ,  ,,49.1,,,,,,,,,,,,,24.5%
+60024,Waipio Solar (Waiwa PV),30/09/2019,2019,HI,HI,21.46,-157.98,5.13,PV,c-Si,45.90,45.90,1.00,Tracking,Single Axis,,180,,,,,,  ,  ,90.2,,,,,,,,,,,,,,19.8%
+62541,Lake Placid Solar Power Plant,31/12/2019,2019,Southeast (non-ISO),FL,27.33,-81.37,5.07,PV,c-Si,63.00,45.00,1.40,Tracking,Single Axis,,180,,,,,,  ,  ,,48.6,,,,,,,,,,,,,24.5%
+63187,Tallahassee Solar 2 (FL Solar 4),31/12/2019,2019,Southeast (non-ISO),FL,30.38,-84.36,4.77,PV,Thin-Film,55.00,42.00,1.31,Fixed Tilt,Fixed Tilt,25,180,,,,,,  ,  ,40.4,43.6,,,,,,,,,,,,,19.9%
+62057,SR Hazlehurst III,31/12/2019,2019,Southeast (non-ISO),GA,31.83,-82.60,4.72,PV,c-Si,55.30,40.00,1.38,Tracking,Single Axis,,180,,,,,, $21.97 , $4.91 ,28.2,31.2,,,,,,,,,,,,,27.0%
+62376,Grazing Yak Solar,30/11/2019,2019,West (non-ISO),CO,38.98,-104.25,4.99,PV,c-Si,47.25,39.50,1.20,Tracking,Single Axis,,181,,,,,,  ,  ,27.8,36.8,,,,,,,,,,,,,24.9%
+61655,Bonnie Mine Solar,31/01/2019,2019,Southeast (non-ISO),FL,27.88,-81.92,5.01,PV,Thin-Film,41.70,37.50,1.11,Tracking,Single Axis,,180,,,,,,  ,  ,,53.1,,,,,,,,,,,,,22.0%
+62052,Citizens Imperial Solar,31/08/2019,2019,West (non-ISO),CA,33.19,-115.43,5.89,PV,c-Si,39.46,30.00,1.32,Tracking,Single Axis,,180,,,,,,  ,  ,27.8,41.4,,,,,,,,,,,,,30.2%
+61268b,Kayenta Solar 2,31/08/2019,2019,West (non-ISO),AZ,36.79,-110.24,5.48,PV,c-Si,38.80,28.00,1.39,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62657,DWW Solar ll (aka Tobacco Valley Solar),31/12/2019,2019,ISO-NE,CT,41.90,-72.80,3.81,PV,c-Si,48.60,26.40,1.84,Fixed Tilt,Fixed Tilt,,180,,,,,, $20.81 , $9.57 ,,83.6,,,,,,,,,,,,,16.5%
+63668,"University Solar, LLC",31/12/2019,2019,ISO-NE,RI,41.62,-71.66,3.89,PV,c-Si,28.40,24.00,1.18,Fixed Tilt,Fixed Tilt,15,180,,,,,, $21.34 , $8.21 ,,49.7,,,,,,,,,,,,,15.6%
+61778,North Halifax,31/12/2019,2019,PJM,NC,36.21,-77.62,4.42,PV,c-Si,26.90,20.00,1.35,Tracking,Single Axis,,181,,,,,, $21.93 , $9.01 ,,59.4,,,,,,,,,,,,,21.7%
+61973,Blackville Solar II,31/05/2019,2019,Southeast (non-ISO),SC,33.34,-81.26,4.63,PV,c-Si,29.58,20.00,1.48,Tracking,Single Axis,,180,,,,,,  ,  ,,43.1,,,,,,,,,,,,,24.1%
+59524,Blackwell Solar Park,31/01/2019,2019,CAISO,CA,35.62,-119.85,5.37,PV,c-Si,27.05,20.00,1.35,Tracking,Single Axis,,179,,,,,, $19.57 , $3.20 ,,39.9,,,,,,,,,,,,,26.2%
+62017,Riverhead Solar Farm,30/06/2019,2019,NYISO,NY,40.92,-72.76,3.93,PV,c-Si,22.90,20.00,1.15,Tracking,Single Axis,,180,,,,,, $27.53 , $8.69 ,158.2,93.6,,,,,,,,,,,,,17.5%
+61265,Antelope DSR 3,30/09/2019,2019,CAISO,CA,34.74,-118.30,5.78,PV,c-Si,25.00,20.00,1.25,Tracking,Single Axis,,180,,,,,, $22.44 , $3.09 ,,34.6,,,,,,,,,,,,,32.5%
+61987,West Loch Solar One,30/11/2019,2019,HI,HI,21.34,-158.01,5.60,PV,c-Si,28.00,20.00,1.40,Fixed Tilt,Fixed Tilt,15,180,,,,,,  ,  ,,,,,,,,,,,,,,,22.1%
+59951,Five Forks Solar,31/12/2019,2019,PJM,NC,36.52,-78.03,4.39,PV,c-Si,25.90,20.00,1.30,Tracking,Single Axis,,180,,,,,, $22.17 , $9.16 ,,56.4,,,,,,,,,,,,,22.6%
+59878,Windhub Solar A,31/12/2019,2019,CAISO,CA,35.02,-118.29,5.79,PV,Thin-Film,25.00,20.00,1.25,Tracking,Single Axis,,180,,,,,, $21.56 , $3.52 ,41.1,42.5,,,,,,,,,,,,,28.2%
+63031,Gloucester Solar,30/04/2019,2019,PJM,VA,37.44,-76.47,4.31,PV,c-Si,27.80,19.90,1.40,Tracking,Single Axis,Tracking,191,,,,,, $22.93 , $9.68 ,,66.4,,,,,,,,,,,,,21.4%
+62413,Ellis Solar (North+South),31/12/2019,2019,NYISO,NY,42.45,-76.43,3.69,PV,c-Si,27.00,18.00,1.50,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.06 , $5.38 ,,61.2,,,,,,,,,,,,,18.5%
+60510,Two Mile Desert Project aka Hertford Solar,30/06/2019,2019,PJM,NC,36.22,-76.47,4.44,PV,c-Si,21.04,16.20,1.30,Fixed Tilt,Fixed Tilt,15,169,,,,,, $23.10 , $9.80 ,,55.8,,,,,,,,,,,,,19.6%
+64108,Gold Meadow Farms,31/05/2019,2019,ISO-NE,RI,41.73,-71.53,3.85,PV,c-Si,21.30,16.20,1.31,Fixed Tilt,Fixed Tilt,25,180,,,,,, $21.34 , $8.02 ,,,,,,,,,,,,,,,
+62389,Pasto Solar,30/09/2019,2019,NYISO,NY,42.21,-76.52,3.73,PV,c-Si,23.87,16.00,1.49,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.36 , $5.90 ,,75.3,,,,,,,,,,,,,18.9%
+58281,Lanikuhana Solar (Mililani II),30/09/2019,2019,HI,HI,21.43,-158.02,5.07,PV,Thin-Film,14.70,14.70,1.00,Tracking,Single Axis,,180,,,,,,  ,  ,98.6,,,,,,,,,,,,,,22.0%
+62989,Whitetail Solar 1 (Roxbury Solar),31/12/2019,2019,PJM,PA,40.14,-77.61,3.90,PV,c-Si,18.23,13.50,1.35,Tracking,Single Axis,52,180,,,,,, $24.13 , $10.03 ,,55.7,,,,,,,,,,,,,20.9%
+62792,DG AMP Solar Piqua Manier,30/07/2019,2019,PJM,OH,40.13,-84.26,3.93,PV,c-Si,13.20,12.63,1.05,Tracking,Single Axis,,180,,,,,, $25.29 , $11.55 ,,57.0,,,,,,,,,,,,,19.2%
+62467,Vista Solar Energy Center,31/03/2019,2019,West (non-ISO),NM,34.74,-106.66,5.62,PV,c-Si,12.80,10.00,1.28,Tracking,Single Axis,,180,,,,,, $23.39 , $20.80 ,,34.8,,,,,,,,,,,,,29.7%
+62597,Rio De Oro Solar Energy Center,30/06/2019,2019,West (non-ISO),NM,34.69,-106.69,5.66,PV,c-Si,12.66,10.00,1.27,Tracking,Single Axis,,180,,,,,, $23.51 , $18.27 ,,37.4,,,,,,,,,,,,,27.7%
+63027,Mars Solar,31/08/2019,2019,ERCOT,TX,27.42,-98.83,5.03,PV,Thin-Film,14.20,10.00,1.42,Tracking,Single Axis,,180,,,,,, $27.08 , $-   ,,39.5,,,,,,,,,,,,,24.9%
+61875,Cascade Solar (TX),30/04/2019,2019,ERCOT,TX,29.21,-96.03,4.64,PV,c-Si,14.29,10.00,1.43,Tracking,Single Axis,,180,,,,,, $27.13 , $-   ,,43.1,,,,,,,,,,,,,20.9%
+61840,Hope Farm Solar,30/09/2019,2019,ISO-NE,RI,41.75,-71.52,3.85,PV,c-Si,12.60,10.00,1.26,Fixed Tilt,Fixed Tilt,25,171,,,,,, $20.21 , $7.64 ,,67.4,,,,,,,,,,,,,19.0%
+63081,San Miguel I Solar Energy Center,30/09/2019,2019,West (non-ISO),NM,35.63,-105.18,5.28,PV,c-Si,12.64,10.00,1.26,Tracking,Single Axis,,180,,,,,, $22.33 , $15.31 ,,35.6,,,,,,,,,,,,,29.0%
+62980,Turquoise Liberty Solar (Turquoise 1),30/11/2019,2019,West (non-ISO),NV,39.58,-119.52,5.23,PV,Thin-Film,12.72,10.00,1.27,Tracking,Single Axis,,179,,,,,, $26.66 , $14.15 ,30.4,53.9,,,,,,,,,,,,,18.4%
+63184,Rio Rancho Solar Energy Center,31/12/2019,2019,West (non-ISO),NM,35.10,-106.48,5.56,PV,c-Si,12.67,10.00,1.27,Tracking,Single Axis,,180,,,,,, $23.34 , $17.78 ,,35.4,,,,,,,,,,,,,29.4%
+60997,Everett PV1,31/12/2019,2019,PJM,NC,35.82,-77.31,4.44,PV,c-Si,13.00,10.00,1.30,Fixed Tilt,Fixed Tilt,20,191,,,,,, $22.66 , $10.11 ,,43.9,,,,,,,,,,,,,16.8%
+63301,"Garrett Solar (PSEG Lake County Solar Energy Center, FKA Lakeview Airport 10 Solar)",31/12/2019,2019,West (non-ISO),OR,42.17,-120.41,4.72,PV,c-Si,13.32,10.00,1.33,Tracking,Single Axis,,180,,,,,,  ,  ,,71.9,,,,,,,,,,,,,26.6%
+61996,Rankin Solar Center,31/12/2019,2019,Southeast (non-ISO),SC,34.24,-79.65,4.56,PV,c-Si,13.40,10.00,1.34,Tracking,Single Axis,,180,,,,,,  ,  ,,52.3,,,,,,,,,,,,,
+63082,San Miguel II Solar Energy Center,30/10/2019,2019,West (non-ISO),NM,35.63,-105.18,5.28,PV,c-Si,12.64,10.00,1.26,Tracking,Single Axis,Tracking,180,,,,,, $22.34 , $15.33 ,,35.4,,,,,,,,,,,,,29.2%
+63505,Cherry Blossom Solar,31/12/2019,2019,Southeast (non-ISO),SC,33.76,-79.46,4.61,PV,c-Si,14.40,10.00,1.44,Tracking,Single Axis,,180,,,,,, $22.98 , $3.23 ,,32.6,,,,,,,,,,,,,
+63344,Starvation (aka Starvation Ridge?),31/12/2019,2019,West (non-ISO),OR,43.50,-119.15,4.58,PV,c-Si,15.30,9.90,1.55,Tracking,Single Axis,,180,,,,,,  ,  ,,58.2,,,,,,,,,,,,,27.4%
+64227,Alexis Solar (GMP Azure Solar Park),31/12/2019,2019,ERCOT,TX,26.89,-98.23,4.93,PV,c-Si,14.00,9.50,1.47,Tracking,Single Axis,,180,,,,,, $33.50 , $-   ,,,,,,,,,,,,,,,11.3%
+59910,KDC Solar PR1 (Six Flags Adventure Solar),30/06/2019,2019,PJM,NJ,40.13,-74.42,4.03,PV,c-Si,12.50,8.80,1.42,Fixed Tilt,Fixed Tilt,15,180,,,,,, $18.85 , $19.12 ,,,,,,,,,,,,,,,
+61974,Diamond Solar II,30/06/2019,2019,Southeast (non-ISO),SC,33.79,-81.27,4.56,PV,c-Si,10.82,8.20,1.32,Tracking,Single Axis,,180,,,,,,  ,  ,,50.0,,,,,,,,,,,,,20.9%
+63869,IBM Solar,30/07/2019,2019,West (non-ISO),CO,40.09,-105.19,4.50,PV,c-Si,9.70,8.10,1.20,Tracking,Single Axis,52,180,,,,,, $18.09 , $16.14 ,,42.8,,,,,,,,,,,,,21.7%
+62484,Crawfordsville 2 Solar Park,31/12/2019,2019,MISO,IN,40.05,-86.89,3.98,PV,c-Si,10.37,7.90,1.31,Fixed Tilt,Fixed Tilt,,180,,,,,, $26.64 , $0.64 ,,53.5,,,,,,,,,,,,,16.7%
+61794,Gateway Solar,31/05/2019,2019,PJM,MD,38.38,-75.27,4.21,PV,c-Si,10.00,7.60,1.32,Tracking,Single Axis,,181,,,,,, $26.80 , $16.36 ,,76.2,,,,,,,,,,,,,11.6%
+62655,HL Solar/Lassen,30/06/2019,2019,CAISO,CA,40.37,-120.26,5.04,PV,c-Si,9.31,7.60,1.22,Tracking,Single Axis,,180,,,,,, $21.87 , $5.90 ,,52.5,,,,,,,,,,,,,16.9%
+62638,McCullough Road Solar Farm,30/06/2019,2019,PJM,NJ,40.76,-74.96,3.92,PV,c-Si,10.00,7.60,1.32,Fixed Tilt,Fixed Tilt,23,180,,,,,, $19.11 , $19.60 ,,97.2,,,,,,,,,,,,,19.2%
+62637,Milford Solar Farm (NJ),30/09/2019,2019,PJM,NJ,40.62,-75.16,3.93,PV,c-Si,8.90,7.50,1.19,Fixed Tilt,Fixed Tilt,15,180,,,,,, $19.41 , $19.54 ,,121.2,,,,,,,,,,,,,14.7%
+61872,Lampwick,30/11/2019,2019,ERCOT,TX,30.87,-99.54,5.07,PV,c-Si,10.90,7.50,1.45,Tracking,Single Axis,,180,,,,,, $24.09 , $-   ,,42.3,,,,,,,,,,,,,26.2%
+60785,Tungsten Mountain,30/07/2019,2019,West (non-ISO),NV,39.67,-117.68,4.86,PV,c-Si,9.70,7.30,1.33,Tracking,Single Axis,,180,PV+Geothermal,,,,, $29.83 , $19.62 ,,35.5,,,,,,,,,,,,,27.0%
+62770,Richmond Solar Park 3 (aka Richmond 3 Solar Array),31/12/2019,2019,PJM,IN,39.84,-84.83,3.97,PV,c-Si,8.70,6.70,1.30,Tracking,Single Axis,,180,,,,,, $23.68 , $10.95 ,,51.2,,,,,,,,,,,,,18.5%
+62942,DG AMP Wadsworth 1048,31/12/2019,2019,PJM,OH,41.01,-81.77,3.81,PV,c-Si,8.60,6.30,1.37,Tracking,Single Axis,,180,,,,,, $24.46 , $11.53 ,,50.8,,,,,,,,,,,,,18.0%
+62931,City of Pratt Solar (Pratt Solar Farm),31/03/2019,2019,SPP,KS,37.65,-98.70,4.74,PV,c-Si,7.67,6.00,1.28,Fixed Tilt,Fixed Tilt,,180,,,,,, $21.19 , $17.44 ,59.3,45.2,,,,,,,,,,,,,
+62582,Newfield Community Solar,31/01/2019,2019,NYISO,NY,42.39,-76.60,3.71,PV,c-Si,7.50,6.00,1.25,Fixed Tilt,Fixed Tilt,20,180,,,,,, $18.01 , $4.87 ,,65.2,,,,,,,,,,,,,16.6%
+64519,Centinela State Prison,31/12/2019,2019,West (non-ISO),CA,32.83,-115.77,5.68,PV,c-Si,8.20,6.00,1.37,Tracking,Single Axis,52,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+64521,Calipatria State Prison,31/12/2019,2019,West (non-ISO),CA,33.17,-115.50,5.89,PV,c-Si,8.20,6.00,1.37,Tracking,Single Axis,52,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62268,NorWest Energy 4 aka Bonanza ,31/01/2019,2019,West (non-ISO),OR,42.21,-121.35,4.78,PV,c-Si,6.80,5.60,1.21,Tracking,Single Axis,,180,,,,,,  ,  ,,58.2,,,,,,,,,,,,,24.0%
+62306,IFF Union Beach Solar Project,30/06/2019,2019,PJM,NJ,40.45,-74.15,3.92,PV,c-Si,6.80,5.50,1.24,Fixed Tilt,Fixed Tilt,15,180,,,,,, $20.19 , $19.31 ,,126.2,,,,,,,,,,,,,16.5%
+62305,Tipton Solar Park,30/07/2019,2019,MISO,IN,40.28,-86.07,3.95,PV,c-Si,6.30,5.30,1.19,Tracking,Single Axis,,180,,,,,, $26.35 , $0.54 ,,56.9,,,,,,,,,,,,,19.7%
+62652,Happy Hollow CSG Hybrid,15/11/2019,2019,ISO-NE,MA,42.61,-72.04,3.79,PV,c-Si,7.13,5.00,1.43,Fixed Tilt,Fixed Tilt,25,180,PV+Storage,Lithium-Ion,2019,3.3,6.6, $20.69 , $8.01 ,,,,,,,,,,,,,,,
+62327,Synergen Panorama CSG aka Panorama Solar Electric Facility,30/07/2019,2019,PJM,MD,38.77,-76.97,4.17,PV,c-Si,6.60,5.00,1.32,Fixed Tilt,Fixed Tilt,25,180,,,,,, $24.63 , $10.29 ,,,,,,,,,,,,,,,
+62683,Westside Wastewater Treatment Plant Hybrid,31/08/2019,2019,SPP,AR,36.04,-94.14,4.41,PV,c-Si,5.80,5.00,1.16,Tracking,Single Axis,,180,PV+Storage,Lithium-Ion,2019,6,13.1, $24.86 , $23.09 ,,,,,,,,,,,,,,,
+62682,Noland Wastewater Treatment Plant Hybrid,31/08/2019,2019,SPP,AR,36.08,-94.07,4.40,PV,c-Si,5.80,5.00,1.16,Tracking,Single Axis,,179,PV+Storage,Lithium-Ion,2019,6,13.1, $24.83 , $22.30 ,,,,,,,,,,,,,,,
+62082,Southwick Solar PV,31/01/2019,2019,ISO-NE,MA,42.02,-72.78,3.81,PV,c-Si,6.60,5.00,1.32,Fixed Tilt,Fixed Tilt,20,179,,,,,, $20.29 , $7.76 ,,90.4,,,,,,,,,,,,,
+62953,Griffin Solar,30/11/2019,2019,ERCOT,TX,31.47,-97.14,4.74,PV,c-Si,7.20,5.00,1.44,Tracking,Single Axis,,181,,,,,, $26.88 , $-   ,,37.5,,,,,,,,,,,,,
+63186,Imeson Solar (SunPort Solar),31/12/2019,2019,Southeast (non-ISO),FL,30.46,-81.71,4.74,PV,c-Si,9.00,5.00,1.80,Tracking,Single Axis,,180,PV+Storage,,2019,2,4,  ,  ,,,,,,,,,,,,,,,
+62610,Commerce Solar,31/12/2019,2019,ERCOT,TX,29.44,-98.62,4.75,PV,c-Si,5.90,5.00,1.18,Tracking,Single Axis,,180,PV+Storage,Lithium-Ion,2019,10,10, $27.66 , $-   ,,,,,,,,,,,,,,,
+62382,GMP Solar/Storage-Ferrisburgh Hybrid,30/09/2019,2019,ISO-NE,VT,44.23,-73.25,3.65,PV,c-Si,6.32,5.00,1.26,Tracking,Single Axis,,180,PV+Storage,Lithium-Ion,2019,2,8, $21.62 , $9.06 ,,,,,,,,,,,,,,,
+62381,GMP Solar/Storage-Milton Hybrid,30/09/2019,2019,ISO-NE,VT,44.66,-73.18,3.63,PV,c-Si,7.00,5.00,1.40,Fixed Tilt,Fixed Tilt,25,180,PV+Storage,Lithium-Ion,2019,2,8, $20.82 , $8.86 ,,,,,,,,,,,,,,,
+63000,RT 52 Walden Solar 1 Hybrid,31/12/2019,2019,NYISO,NY,41.58,-74.21,3.89,PV,c-Si,5.94,5.00,1.19,Fixed Tilt,Fixed Tilt,25,210,PV+Storage,Lithium-Ion,2020,3.9,8.8, $19.89 , $6.83 ,,,,,,,,,,,,,,,
+62561,Roadrunner (Queen Solar),31/08/2020,2020,ERCOT,TX,31.22,-102.19,5.50,PV,c-Si,497.00,410.00,1.21,Tracking,Single Axis,,180,,,,,, $20.42 , $-   ,,23.4,,,,,,,,,,,,,
+62755,Prospero Solar,30/06/2020,2020,ERCOT,TX,32.31,-102.87,5.46,PV,Thin-Film,378.90,303.60,1.25,Tracking,Single Axis,,180,,,,,, $26.21 , $-   ,,31.8,,,,,,,,,,,,,
+62249,Misae Solar (Phase 1),31/01/2020,2020,ERCOT,TX,34.37,-100.11,5.08,PV,c-Si,326.90,240.00,1.36,Tracking,Single Axis,,181,,,,,, $20.74 , $-   ,,26.0,,,,,,,,,,,,,
+62845,ENGIE Long Draw Solar,31/12/2020,2020,ERCOT,TX,32.74,-101.62,5.36,PV,c-Si,287.00,225.00,1.28,Tracking,Single Axis,,180,,,,,, $16.90 , $-   ,,,,,,,,,,,,,,,
+61962,Holstein 1 Solar Farm,30/06/2020,2020,ERCOT,TX,32.10,-100.17,5.12,PV,c-Si,280.00,204.40,1.37,Tracking,Single Axis,,180,,,,,, $26.70 , $-   ,,,,,,,,,,,,,,,
+61696,Twiggs County Solar (GA Solar 4),30/09/2020,2020,Southeast (non-ISO),GA,32.60,-83.50,4.68,PV,Thin-Film,261.00,204.00,1.28,Tracking,Single Axis,,180,,,,,, $25.34 , $4.62 ,25.2,30.7,,,,,,,,,,,,,
+62141,Rambler,30/06/2020,2020,ERCOT,TX,31.53,-100.62,5.20,PV,c-Si,266.00,200.00,1.33,Tracking,Single Axis,,180,,,,,, $28.71 , $-   ,,33.7,,,,,,,,,,,,,
+63222,Impact Solar 1,31/12/2020,2020,ERCOT,TX,33.47,-95.37,4.58,PV,c-Si,260.00,198.50,1.31,Tracking,Single Axis,,180,,,,,, $16.80 , $-   ,,35.2,,,,,,,,,,,,,
+63859,Golden Field Solar III (Rosamond Central),31/12/2020,2020,CAISO,CA,34.84,-118.38,5.78,PV,c-Si,240.00,192.00,1.25,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+61785,Camilla Solar Energy Project (Southern Oak Solar Energy Center?),28/02/2020,2020,Southeast (non-ISO),GA,31.28,-84.22,4.78,PV,c-Si,224.00,171.40,1.31,Tracking,Single Axis,,180,,,,,, $22.79 , $5.44 ,,,,,,,,,,,,,,,
+62014,Highlander Solar Station 1 (part of Pleinmont facility),31/12/2020,2020,PJM,VA,38.25,-77.76,4.23,PV,c-Si,200.10,165.00,1.21,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+60827,Sun Streams 1,31/01/2020,2020,CAISO,AZ,33.35,-112.83,5.85,PV,Thin-Film,199.20,158.00,1.26,Tracking,Single Axis,,180,,,,,, $20.22 , $3.85 ,42.6,,,,,,,,,,,,,,
+61353,Mount Signal Solar Farm II (MS2),31/01/2020,2020,CAISO,CA,32.67,-115.63,5.66,PV,Thin-Film,199.60,153.50,1.30,Tracking,Single Axis,,180,,,,,, $19.37 , $3.39 ,,60.5,,,,,,,,,,,,,
+63519,CED Crane Solar (Fowler Ranch),30/06/2020,2020,ERCOT,TX,31.26,-102.32,5.51,PV,c-Si,212.59,152.50,1.39,Tracking,Single Axis,,180,,,,,, $21.71 , $-   ,,,,,,,,,,,,,,,
+62933,Oberon IA,30/07/2020,2020,ERCOT,TX,31.71,-102.69,5.55,PV,c-Si,193.00,150.00,1.29,Tracking,Single Axis,,164,,,,,, $27.21 , $-   ,,27.9,,,,,,,,,,,,,
+63105,Two Creeks Solar,30/11/2020,2020,MISO,WI,44.25,-87.54,3.80,PV,c-Si,213.00,150.00,1.42,Tracking,Single Axis,,181,,,,,, $24.82 , $1.69 ,,46.6,,,,,,,,,,,,,
+62015,Mustang Two,30/11/2020,2020,CAISO,CA,36.21,-119.89,5.32,PV,c-Si,210.00,150.00,1.40,Tracking,Single Axis,,179,,,,,, $25.08 , $4.48 ,28.3,27.9,,,,,,,,,,,,,
+60095,NextEra Blythe Solar IV,30/11/2020,2020,CAISO,CA,33.66,-114.74,5.80,PV,c-Si,154.00,137.40,1.12,Tracking,Single Axis,,181,,,,,, $6.09 , $4.48 ,28.9,,,,,,,,,,,,,,
+60094,NextEra Blythe Solar III,31/05/2020,2020,CAISO,CA,33.66,-114.74,5.80,PV,c-Si,154.00,137.40,1.12,Tracking,Single Axis,,181,PV+Storage,,2021,115,460, $24.52 , $4.48 ,,,,,,,,,,,,,,,
+60777,American Kings Solar,31/12/2020,2020,CAISO,CA,36.24,-119.90,5.32,PV,Thin-Film,172.30,128.00,1.35,Tracking,Single Axis,,180,PV+Storage,,,,500,  ,  ,,,,,,,,,,,,,,,
+62178,Maverick Solar (Palen 1 Solar),31/12/2020,2020,CAISO,CA,33.70,-115.22,5.88,PV,c-Si,173.40,125.00,1.39,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62470,Cove Mountain Solar 2,31/10/2020,2020,West (non-ISO),UT,37.64,-113.64,5.40,PV,Thin-Film,156.30,122.00,1.28,Tracking,Single Axis,,180,,,,,, $17.16 , $14.05 ,23.2,30.8,,,,,,,,,,,,,
+63273,Wagyu Solar,31/08/2020,2020,ERCOT,TX,29.24,-95.66,4.64,PV,Thin-Film,162.40,120.00,1.35,Tracking,Single Axis,,180,,,,,, $29.52 , $-   ,,28.0,,,,,,,,,,,,,
+63351,Bluebell Solar II,31/12/2020,2020,ERCOT,TX,31.89,-100.84,5.28,PV,Thin-Film,150.00,115.00,1.30,Tracking,Single Axis,,180,,,,,, $16.90 , $-   ,,,,,,,,,,,,,,,
+63295,Chicot Solar,30/09/2020,2020,MISO,AR,33.48,-91.36,4.58,PV,c-Si,140.00,100.00,1.40,Tracking,Single Axis,,180,,,,,, $25.74 , $0.65 ,28.2,,,,,,,,,,,,,,
+62798,Fern Solar (Moccasin Creek Solar),31/12/2020,2020,PJM,NC,36.01,-77.68,4.44,PV,c-Si,133.60,100.00,1.34,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+64104,Maverick Solar 4 (Palen Solar),31/12/2020,2020,CAISO,CA,33.70,-115.22,5.88,PV,c-Si,135.90,100.00,1.36,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62899,East Line Solar,31/12/2020,2020,West (non-ISO),AZ,32.85,-111.57,5.77,PV,Thin-Film,121.40,100.00,1.21,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62812,Milford Solar 1,30/11/2020,2020,West (non-ISO),UT,38.49,-113.02,5.23,PV,Thin-Film,127.80,99.00,1.29,Tracking,Single Axis,,180,,,,,, $18.78 , $14.05 ,,33.9,,,,,,,,,,,,,
+61986,Spring Grove I,30/11/2020,2020,PJM,VA,37.17,-76.92,4.33,PV,c-Si,135.50,97.90,1.38,Tracking,Single Axis,,181,,,,,, $23.72 , $10.01 ,,45.0,,,,,,,,,,,,,
+62165,SR Snipesville I,31/12/2020,2020,Southeast (non-ISO),GA,31.71,-82.74,4.74,PV,Thin-Film,122.80,86.00,1.43,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62813,Grasshopper Solar (aka Chase City Solar),30/09/2020,2020,PJM,VA,36.82,-78.45,4.36,PV,c-Si,103.80,80.00,1.30,Tracking,Single Axis,,180,,,,,, $22.59 , $10.01 ,,42.7,,,,,,,,,,,,,
+63745,Greensville Solar,31/12/2020,2020,PJM,VA,36.64,-77.57,4.37,PV,,104.00,80.00,1.30,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62177,"Desert Harvest, LLC",31/12/2020,2020,CAISO,CA,33.80,-115.39,5.86,PV,Thin-Film,114.00,80.00,1.43,Tracking,Single Axis,,180,,,,,,  ,  ,34.5,,,,,,,,,,,,,,
+64169,Albemarle Beach Solar,31/12/2020,2020,PJM,NC,35.91,-76.64,4.37,PV,c-Si,150.60,80.00,1.88,Tracking,Single Axis,,182,,,,,,  ,  ,,,,,,,,,,,,,,,
+63271,Huntley Solar,30/04/2020,2020,Southeast (non-ISO),SC,33.34,-80.63,4.65,PV,Thin-Film,100.00,75.00,1.33,Tracking,Single Axis,,180,,,,,,  ,  ,,41.5,,,,,,,,,,,,,
+62012,Pleinmont Solar 1 (part of Pleinmont facility),31/10/2020,2020,PJM,VA,38.25,-77.75,4.23,PV,c-Si,99.60,75.00,1.33,Tracking,Single Axis,,180,,,,,, $22.10 , $10.01 ,,,,,,,,,,,,,,,
+63810,"Centerfield Cooper Solar, LLC",31/12/2020,2020,Southeast (non-ISO),SC,34.70,-80.13,4.54,PV,c-Si,97.60,75.00,1.30,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63932,Titan Solar 1 (CA),31/12/2020,2020,CAISO,CA,33.10,-116.00,5.92,PV,c-Si,98.00,75.00,1.31,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62828,TWE Bowman Solar Project,31/05/2020,2020,Southeast (non-ISO),SC,33.32,-80.68,4.65,PV,Thin-Film,101.90,74.97,1.36,Fixed Tilt,Fixed Tilt,,180,,,,,,  ,  ,,37.6,,,,,,,,,,,,,
+61011,Chestnut Solar,31/03/2020,2020,PJM,NC,36.18,-77.71,4.43,PV,c-Si,100.00,74.90,1.34,Tracking,Single Axis,,180,,,,,, $22.79 , $11.53 ,,45.1,,,,,,,,,,,,,
+61982,Columbia Solar Power Plant,31/03/2020,2020,Southeast (non-ISO),FL,29.89,-82.69,4.78,PV,Thin-Film,105.60,74.90,1.41,Tracking,Single Axis,,181,,,,,,  ,  ,,37.2,,,,,,,,,,,,,
+62634,FPL Babcock Preserve Solar Energy Center (not FPL Babcock Ranch),31/01/2020,2020,Southeast (non-ISO),FL,26.86,-81.73,5.05,PV,c-Si,114.70,74.50,1.54,Fixed Tilt,Fixed Tilt,20,180,,,,,, $20.64 , $33.85 ,,33.6,,,,,,,,,,,,,
+62633,FPL Twin Lakes Solar Energy Center,31/01/2020,2020,Southeast (non-ISO),FL,29.61,-81.84,4.78,PV,c-Si,96.50,74.50,1.30,Tracking,Single Axis,,180,,,,,, $20.18 , $33.93 ,,30.1,,,,,,,,,,,,,
+62645,FPL Northern Preserve Solar Energy Center,31/01/2020,2020,Southeast (non-ISO),FL,30.23,-82.25,4.75,PV,c-Si,98.40,74.50,1.32,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.35 , $35.65 ,,32.2,,,,,,,,,,,,,
+62394,FPL Sweetbay Solar Energy Center,31/01/2020,2020,Southeast (non-ISO),FL,27.06,-80.48,4.95,PV,c-Si,99.00,74.50,1.33,Fixed Tilt,Fixed Tilt,20,180,,,,,, $20.61 , $37.76 ,,31.9,,,,,,,,,,,,,
+62632,FPL Cattle Ranch Solar Energy Center,31/01/2020,2020,Southeast (non-ISO),FL,27.33,-81.77,5.05,PV,c-Si,94.60,74.50,1.27,Tracking,Single Axis,,180,,,,,, $20.40 , $36.92 ,,27.3,,,,,,,,,,,,,
+62631,FPL Blue Heron Solar Energy Center,31/01/2020,2020,Southeast (non-ISO),FL,26.70,-81.14,5.06,PV,c-Si,114.70,74.50,1.54,Fixed Tilt,Fixed Tilt,20,195,,,,,, $20.75 , $35.33 ,,33.8,,,,,,,,,,,,,
+62750,Little Manatee River Solar,28/02/2020,2020,Southeast (non-ISO),FL,27.68,-82.41,5.08,PV,Thin-Film,87.90,74.50,1.18,Tracking,Single Axis,,180,,,,,,  ,  ,,33.8,,,,,,,,,,,,,
+61667,Wimauma Solar,30/04/2020,2020,Southeast (non-ISO),FL,27.73,-82.27,5.01,PV,Thin-Film,87.90,74.50,1.18,Tracking,Single Axis,,180,,,,,,  ,  ,,34.8,,,,,,,,,,,,,
+62490,FPL Echo River Solar,30/04/2020,2020,Southeast (non-ISO),FL,30.30,-82.87,4.76,PV,c-Si,108.03,74.50,1.45,Tracking,Single Axis,,181,,,,,, $20.06 , $31.16 ,,33.9,,,,,,,,,,,,,
+62491,FPL Okeechobee Solar Energy Center,30/04/2020,2020,Southeast (non-ISO),FL,27.62,-80.79,4.96,PV,Thin-Film,111.75,74.50,1.50,Fixed Tilt,Fixed Tilt,20,180,,,,,, $20.82 , $31.16 ,,38.9,,,,,,,,,,,,,
+62493,FPL Southfork Solar Energy Center,30/04/2020,2020,Southeast (non-ISO),FL,27.57,-82.19,5.00,PV,c-Si,108.03,74.50,1.45,Tracking,Single Axis,,180,,,,,, $20.63 , $31.16 ,,32.2,,,,,,,,,,,,,
+62206,FPL Hibiscus Solar Energy Center,30/04/2020,2020,Southeast (non-ISO),FL,26.76,-80.34,4.95,PV,Thin-Film,108.03,74.50,1.45,Fixed Tilt,Fixed Tilt,20,190,,,,,, $20.96 , $31.16 ,,38.3,,,,,,,,,,,,,
+62542,DeBary Solar Power Plant,31/05/2020,2020,Southeast (non-ISO),FL,28.90,-81.33,4.86,PV,c-Si,102.50,74.50,1.38,Fixed Tilt,Fixed Tilt,,180,PV+Fossil,,,,,  ,  ,,35.0,,,,,,,,,,,,,
+63582,Harmony Solar,30/06/2020,2020,Southeast (non-ISO),FL,28.16,-81.10,4.91,PV,c-Si,115.50,74.50,1.55,Tracking,Single Axis,,180,,,,,,  ,  ,29.7,,,,,,,,,,,,,,
+63754,Gulf Power Blue Indigo Solar Energy Center,30/04/2020,2020,Southeast (non-ISO),FL,30.88,-85.40,4.74,PV,c-Si,108.00,74.50,1.45,Tracking,Single Axis,,180,,,,,, $23.72 , $4.62 ,,,,,,,,,,,,,,,
+63583,Taylor Creek Solar,30/06/2020,2020,Southeast (non-ISO),FL,28.51,-81.04,4.87,PV,c-Si,115.50,74.50,1.55,Tracking,Single Axis,,180,,,,,,  ,  ,29.7,,,,,,,,,,,,,,
+62925,FPL Egret Solar Center,31/12/2020,2020,Southeast (non-ISO),FL,30.29,-82.19,4.76,PV,c-Si,93.80,74.50,1.26,Tracking,Single Axis,,181,,,,,,  ,  ,,29.5,,,,,,,,,,,,,
+62923,FPL Union Springs Solar Center,31/12/2020,2020,Southeast (non-ISO),FL,30.00,-82.30,4.77,PV,c-Si,93.80,74.50,1.26,Tracking,Single Axis,,180,,,,,,  ,  ,,29.8,,,,,,,,,,,,,
+62922,FPL Lakeside Solar Center,31/12/2020,2020,Southeast (non-ISO),FL,27.22,-80.74,5.05,PV,c-Si,108.00,74.50,1.45,Fixed Tilt,Fixed Tilt,16,205,,,,,,  ,  ,,31.8,,,,,,,,,,,,,
+62916,FPL Trailside Solar Center,31/12/2020,2020,Southeast (non-ISO),FL,29.77,-81.43,4.80,PV,c-Si,93.80,74.50,1.26,Tracking,Single Axis,,180,,,,,,  ,  ,,29.8,,,,,,,,,,,,,
+62914,FPL Nassau Solar Center,31/12/2020,2020,Southeast (non-ISO),FL,30.53,-81.89,4.75,PV,c-Si,93.80,74.50,1.26,Tracking,Single Axis,,180,,,,,,  ,  ,,31.4,,,,,,,,,,,,,
+62058,SR Terrell,30/09/2020,2020,Southeast (non-ISO),GA,31.87,-84.36,4.72,PV,Thin-Film,105.00,74.00,1.42,Tracking,Single Axis,,180,,,,,, $25.57 , $4.62 ,,,,,,,,,,,,,,,
+63839,Midlands Solar,30/07/2020,2020,Southeast (non-ISO),SC,33.65,-80.95,4.59,PV,c-Si,101.60,72.10,1.41,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63548,Lily Solar (SC),28/02/2020,2020,Southeast (non-ISO),SC,33.09,-81.43,4.65,PV,c-Si,103.00,70.00,1.47,Tracking,Single Axis,,183,,,,,,  ,  ,,38.2,,,,,,,,,,,,,
+64103,Desert Harvest II,31/12/2020,2020,CAISO,CA,33.80,-115.37,5.86,PV,Thin-Film,100.00,70.00,1.43,Tracking,Single Axis,,180,PV+Storage,,2020,35,140,  ,  ,,,,,,,,,,,,,,,
+62495,Palmer Solar,30/04/2020,2020,West (non-ISO),CO,38.63,-104.66,5.00,PV,c-Si,81.50,60.00,1.36,Tracking,Single Axis,,180,,,,,,  ,  ,24.6,,,,,,,,,,,,,,
+62774,Kellam Solar,31/12/2020,2020,ERCOT,TX,32.48,-95.71,4.64,PV,c-Si,81.00,59.80,1.35,Tracking,Single Axis,,180,,,,,, $16.14 , $-   ,,,,,,,,,,,,,,,
+62773,Rippey Solar,31/12/2020,2020,ERCOT,TX,33.55,-97.18,4.75,PV,c-Si,81.00,59.80,1.35,Tracking,Single Axis,,180,,,,,, $(0.11), $-   ,,,,,,,,,,,,,,,
+62469,Cove Mountain Solar,30/11/2020,2020,West (non-ISO),UT,37.63,-113.63,5.40,PV,Thin-Film,74.20,58.00,1.28,Tracking,Single Axis,,180,,,,,, $18.66 , $14.05 ,19.7,33.9,,,,,,,,,,,,,
+63350,Tanglewood Solar (OE_GA3),30/06/2020,2020,Southeast (non-ISO),GA,31.19,-84.14,4.77,PV,Thin-Film,77.00,57.50,1.34,Tracking,Single Axis,,180,,,,,, $22.19 , $4.83 ,23.8,34.7,,,,,,,,,,,,,
+63860,Encino Solar Energy Center,30/07/2020,2020,West (non-ISO),NM,35.36,-106.86,5.55,PV,c-Si,66.70,55.00,1.21,Tracking,Single Axis,,180,,,,,, $31.54 , $18.77 ,,,,,,,,,,,,,,,
+63906,Turquoise Nevada (Turquoise 2),31/12/2020,2020,West (non-ISO),NV,39.59,-119.52,5.23,PV,c-Si,61.16,54.60,1.12,Fixed Tilt,Fixed Tilt,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+59531,Borden Solar Farm (Lotus Solar Farm),30/06/2020,2020,CAISO,CA,36.94,-119.96,5.21,PV,c-Si,67.00,50.00,1.34,Tracking,Single Axis,,180,,,,,, $29.24 , $4.48 ,,,,,,,,,,,,,,,
+61646,LA3 West Baton Rouge Solar Facility,30/09/2020,2020,MISO,LA,30.47,-91.32,4.65,PV,c-Si,74.50,50.00,1.49,Tracking,Single Axis,,180,,,,,, $28.62 , $1.69 ,,34.4,,,,,,,,,,,,,
+62465,Little Bear Solar 5,31/12/2020,2020,CAISO,CA,36.71,-120.40,5.27,PV,Thin-Film,68.90,50.00,1.38,Tracking,Single Axis,,180,,,,,,  ,  ,,42.7,,,,,,,,,,,,,
+62440,Techren Solar V,31/12/2020,2020,West (non-ISO),NV,35.90,-114.93,5.48,PV,c-Si,65.40,50.00,1.31,Tracking,Single Axis,,180,,,,,,  ,  ,24.3,,,,,,,,,,,,,,
+62422,Assembly Solar I,31/12/2020,2020,MISO,MI,43.06,-83.94,3.78,PV,c-Si,72.00,50.00,1.44,Tracking,Single Axis,,180,,,,,,  ,  ,42.9,50.3,,,,,,,,,,,,,
+62464,Little Bear Solar 4,31/12/2020,2020,CAISO,CA,36.71,-120.41,5.28,PV,Thin-Film,65.30,50.00,1.31,Tracking,Single Axis,,180,,,,,,  ,  ,,42.6,,,,,,,,,,,,,
+62377,Moody Air Force Base Solar,30/06/2020,2020,Southeast (non-ISO),GA,30.95,-83.22,4.76,PV,c-Si,66.20,49.50,1.34,Fixed Tilt,Fixed Tilt,20,180,,,,,, $25.16 , $4.62 ,,47.3,,,,,,,,,,,,,
+63667,Sanford Solar,30/11/2020,2020,ISO-NE,ME,43.39,-70.71,3.83,PV,c-Si,70.80,49.40,1.43,Tracking,Single Axis,,180,,,,,, $33.28 , $9.65 ,67.9,,,,,,,,,,,,,,
+59870,Little Bear Solar 1,31/12/2020,2020,CAISO,CA,36.72,-120.41,5.28,PV,Thin-Film,53.60,40.00,1.34,Tracking,Single Axis,,180,,,,,,  ,  ,,42.6,,,,,,,,,,,,,
+63349,"Salome Solar (OE_AZ1, AZ Solar 1)",31/01/2020,2020,West (non-ISO),AZ,33.77,-113.65,5.81,PV,Thin-Film,42.00,32.50,1.29,Tracking,Single Axis,,180,,,,,,  ,  ,21.5,32.6,,,,,,,,,,,,,
+63084,Caden Energix Hickory LLC (Hickory Solar Farm),31/08/2020,2020,PJM,VA,36.63,-76.19,4.36,PV,Thin-Film,40.30,32.00,1.26,Tracking,Single Axis,,181,,,,,, $24.30 , $10.01 ,,37.8,,,,,,,,,,,,,
+62932,Oberon IB,30/07/2020,2020,ERCOT,TX,31.69,-102.69,5.54,PV,c-Si,37.30,30.00,1.24,Tracking,Single Axis,,164,,,,,, $30.75 , $-   ,,,,,,,,,,,,,,,
+63545,"Chevron - Lost Hills (Solar Star Lost Hills, Cahn Solar Plant)",30/04/2020,2020,CAISO,CA,35.61,-119.70,5.35,PV,c-Si,34.00,30.00,1.13,Tracking,Single Axis,,180,PV+Storage,Lithium-Ion,2021,10,20, $22.32 , $4.48 ,,,,,,,,,,,,,,,
+61932,Techren Solar IV,31/10/2020,2020,West (non-ISO),NV,35.90,-114.93,5.48,PV,c-Si,32.70,25.00,1.31,Tracking,Single Axis,,180,,,,,, $22.89 , $7.94 ,27.8,,,,,,,,,,,,,,
+61931,Techren Solar III,31/10/2020,2020,West (non-ISO),NV,35.85,-114.97,5.48,PV,c-Si,32.70,25.00,1.31,Tracking,Single Axis,,180,,,,,, $23.11 , $7.94 ,27.8,,,,,,,,,,,,,,
+64158,Mechanicsville Solar (Hanover),30/09/2020,2020,PJM,VA,37.67,-77.20,4.28,PV,c-Si,35.00,25.00,1.40,Tracking,Single Axis,,181,,,,,, $24.66 , $10.01 ,,,,,,,,,,,,,,,
+62669,Gaston Solar Power Plant,31/12/2020,2020,Southeast (non-ISO),NC,35.32,-81.34,4.52,PV,c-Si,36.30,25.00,1.45,Fixed Tilt,Fixed Tilt,20,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+64211,Baxley (Appling Solar Farm),31/12/2020,2020,Southeast (non-ISO),GA,31.88,-82.33,4.73,PV,c-Si,37.00,25.00,1.48,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62594,Ruff Solar (Ruff Solar Sol Systems),30/07/2020,2020,Southeast (non-ISO),NC,35.29,-81.78,4.53,PV,c-Si,31.80,22.00,1.45,Tracking,Single Axis,,180,,,,,, $26.20 , $3.78 ,,47.8,,,,,,,,,,,,,
+62993,Johnson Corner Solar 1,30/04/2020,2020,SPP,KS,37.55,-101.79,5.05,PV,c-Si,27.50,20.00,1.38,Tracking,Single Axis,,178,,,,,, $24.41 , $29.16 ,,41.9,,,,,,,,,,,,,
+63786,Ben Moreell Solar Farm,31/01/2020,2020,PJM,NJ,40.28,-74.10,4.01,PV,c-Si,28.50,20.00,1.43,Fixed Tilt,Fixed Tilt,20,180,,,,,, $20.61 , $19.77 ,,,,,,,,,,,,,,,
+62991,Whitetail Solar 3 (aka St Thomas Township Solar),31/08/2020,2020,PJM,PA,39.88,-77.77,3.97,PV,c-Si,27.00,20.00,1.35,Tracking,Single Axis,,180,,,,,, $23.28 , $9.95 ,,45.2,,,,,,,,,,,,,
+62990,Whitetail Solar 2 (aka St. Thomas Township Solar Facility II),30/09/2020,2020,PJM,PA,39.90,-77.82,3.95,PV,c-Si,27.00,20.00,1.35,Tracking,Single Axis,,180,,,,,, $24.16 , $9.95 ,,45.4,,,,,,,,,,,,,
+63814,SR Odom,30/11/2020,2020,Southeast (non-ISO),GA,31.07,-83.60,4.78,PV,Thin-Film,30.00,20.00,1.50,Tracking,Single Axis,,180,,,,,, $26.15 , $4.62 ,21.5,,,,,,,,,,,,,,
+62463,Little Bear Solar 3,31/12/2020,2020,CAISO,CA,36.72,-120.40,5.28,PV,Thin-Film,27.50,20.00,1.38,Tracking,Single Axis,,180,,,,,,  ,  ,,42.6,,,,,,,,,,,,,
+62011,Richmond Spider Solar (part of Pleinmont facility),31/12/2020,2020,PJM,VA,38.26,-77.77,4.23,PV,c-Si,24.20,20.00,1.21,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63322,Temperance Solar,31/12/2020,2020,MISO,MI,41.75,-83.52,3.85,PV,c-Si,29.60,20.00,1.48,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63321,Bingham Solar,31/12/2020,2020,MISO,MI,43.01,-84.53,3.79,PV,c-Si,29.40,20.00,1.47,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+64307,New Orleans Solar Station,30/08/2020,2020,MISO,LA,30.02,-89.92,4.65,PV,c-Si,27.00,20.00,1.35,Fixed Tilt,Fixed Tilt,20,180,,,,,, $23.67 , $0.59 ,,,,,,,,,,,,,,,
+63087,Caden Energix Rives Road Solar,31/05/2020,2020,PJM,VA,37.17,-77.34,4.33,PV,Thin-Film,20.90,19.70,1.06,Tracking,Single Axis,,181,,,,,, $25.26 , $10.01 ,,,,,,,,,,,,,,,
+63592,Nutmeg Solar,31/12/2020,2020,ISO-NE,CT,41.97,-72.51,3.84,PV,c-Si,31.60,19.60,1.61,Fixed Tilt,Fixed Tilt,25,180,,,,,,  ,  ,83.4,54.2,,,,,,,,,,,,,
+59518,Grandy PV 1,28/02/2020,2020,PJM,NC,36.23,-75.88,4.42,PV,Thin-Film,25.00,18.00,1.39,Fixed Tilt,Fixed Tilt,,182,,,,,, $23.49 , $11.18 ,,,,,,,,,,,,,,,
+63388,Oxy Renewable Energy - Goldsmith,31/05/2020,2020,ERCOT,TX,32.00,-102.63,5.53,PV,Thin-Film,19.50,16.80,1.16,Tracking,Single Axis,,180,,,,,, $26.06 , $-   ,,,,,,,,,,,,,,,
+60998,Underwood PV2,31/10/2020,2020,PJM,NC,36.41,-77.05,4.39,PV,c-Si,20.00,16.00,1.25,Fixed Tilt,Fixed Tilt,,181,,,,,, $20.96 , $10.01 ,,,,,,,,,,,,,,,
+59996,Boykin PV1,31/12/2020,2020,Southeast (non-ISO),NC,35.11,-78.75,4.51,PV,c-Si,20.00,16.00,1.25,Tracking,Single Axis,,180,,,,,, $22.89 , $3.78 ,,,,,,,,,,,,,,,
+63083,Caden Energix Pamplin,30/07/2020,2020,PJM,VA,37.33,-78.77,4.31,PV,Thin-Film,19.80,15.70,1.26,Tracking,Single Axis,,180,,,,,, $26.34 , $10.01 ,,43.4,,,,,,,,,,,,,
+61854,Baker City Solar (aka Sutton Creek),28/02/2020,2020,West (non-ISO),OR,44.70,-117.76,4.32,PV,c-Si,19.00,15.00,1.27,Tracking,Single Axis,,182,,,,,,  ,  ,,,,,,,,,,,,,,,
+63746,Myrtle Solar,30/06/2020,2020,PJM,VA,36.79,-76.67,4.35,PV,c-Si,20.80,15.00,1.39,Tracking,Single Axis,,195,,,,,, $26.21 , $10.01 ,,,,,,,,,,,,,,,
+64097,Electric City Solar,31/12/2020,2020,PJM,MI,41.77,-85.42,3.83,PV,c-Si,18.90,15.00,1.26,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63768,Elk Hill Solar 2 (aka Upton),31/12/2020,2020,PJM,PA,39.80,-77.81,3.99,PV,c-Si,17.50,15.00,1.17,Tracking,Single Axis,,180,,,,,,  ,  ,24.2,42.7,,,,,,,,,,,,,
+63280,"AES Kekaha Solar (PMRF Solar, Barking Sands)",31/03/2020,2020,HI,HI,21.99,-159.76,5.74,PV,c-Si,19.30,14.00,1.38,Tracking,Single Axis,,180,PV+Storage,,2020,14,70,  ,  ,,,,,,,,,,,,,,,
+63077,Twittys Creek Solar,31/12/2020,2020,PJM,VA,37.02,-78.58,4.34,PV,c-Si,17.40,13.80,1.26,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62988,Wildflower Solar 1,31/12/2020,2020,West (non-ISO),CA,38.70,-121.48,5.04,PV,c-Si,16.50,13.70,1.20,Tracking,Single Axis,,180,,,,,,  ,  ,36.6,36.9,,,,,,,,,,,,,
+63451,Monroe Solar Farm (Hoffman Station Road Solar),30/07/2020,2020,PJM,NJ,40.31,-74.42,3.97,PV,c-Si,14.90,13.00,1.15,Fixed Tilt,Fixed Tilt,15,180,,,,,, $19.32 , $20.29 ,,,,,,,,,,,,,,,
+63965,Danville Farm,30/11/2020,2020,PJM,VA,36.59,-79.30,4.36,PV,Thin-Film,15.90,12.00,1.33,Tracking,Single Axis,,180,,,,,, $22.96 , $11.83 ,,46.1,,,,,,,,,,,,,
+62346,Trask East Solar,31/12/2020,2020,Southeast (non-ISO),SC,32.47,-80.75,4.73,PV,c-Si,17.00,12.00,1.42,Tracking,Single Axis, ,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63893,GD Hopkinton Main I,30/11/2020,2020,ISO-NE,RI,41.44,-71.78,3.92,PV,c-Si,13.10,10.60,1.24,Fixed Tilt,Fixed Tilt,20,180,,,,,, $31.28 , $8.09 ,,,,,,,,,,,,,,,
+64079,Catan Solar,31/12/2020,2020,ERCOT,TX,28.87,-97.70,4.76,PV,Thin-Film,13.50,10.00,1.35,Tracking,Single Axis,,180,,,,,, $18.05 , $-   ,,,,,,,,,,,,,,,
+63331,Firwood Solar,28/02/2020,2020,West (non-ISO),OR,45.38,-122.23,3.48,PV,c-Si,15.20,10.00,1.52,Tracking,Single Axis,,179,,,,,,  ,  ,,,,,,,,,,,,,,,
+63330,Duus Solar (Pollinator Solar) ,28/02/2020,2020,West (non-ISO),OR,45.32,-122.33,3.54,PV,c-Si,15.20,10.00,1.52,Tracking,Single Axis,,179,,,,,,  ,  ,,,,,,,,,,,,,,,
+63926,Fort Rock IV (Obsidian Solar Energy Center),30/06/2020,2020,West (non-ISO),OR,43.40,-120.95,4.62,PV,c-Si,15.10,10.00,1.51,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63796,West Hines Solar I,30/06/2020,2020,West (non-ISO),OR,43.50,-119.15,4.58,PV,c-Si,15.34,10.00,1.53,Tracking,Single Axis,,181,,,,,,  ,  ,,,,,,,,,,,,,,,
+63795,Alkali Solar,30/06/2020,2020,West (non-ISO),OR,43.32,-121.00,4.65,PV,c-Si,15.14,10.00,1.51,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63779,Rock Garden Solar,30/06/2020,2020,West (non-ISO),OR,43.40,-120.95,4.62,PV,c-Si,14.90,10.00,1.49,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63778,Suntex Solar,30/07/2020,2020,West (non-ISO),OR,43.55,-119.69,4.57,PV,c-Si,15.30,10.00,1.53,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63925,Riley,30/07/2020,2020,West (non-ISO),OR,43.56,-119.68,4.57,PV,c-Si,15.30,10.00,1.53,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63520,PA Solar Park II,31/01/2020,2020,PJM,PA,40.86,-75.85,3.85,PV,c-Si,11.50,10.00,1.15,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.32 , $12.06 ,,,,,,,,,,,,,,,
+61200,OR Solar 2 (Agate Bay Solar),31/10/2020,2020,West (non-ISO),OR,42.52,-122.83,4.49,PV,c-Si,12.80,10.00,1.28,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62912,Solar Hagerstown (aka Holcim Hagerstown),30/11/2020,2020,PJM,MD,39.65,-77.68,4.03,PV,c-Si,13.22,10.00,1.32,Tracking,Single Axis,,180,,,,,, $24.80 , $9.95 ,,53.4,,,,,,,,,,,,,
+62353,Yemassee Solar,31/12/2020,2020,Southeast (non-ISO),SC,32.71,-80.91,4.65,PV,c-Si,14.20,10.00,1.42,Tracking,Single Axis, ,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63636,Fort Rock Solar I (Obsidian Solar Energy Center),31/03/2020,2020,West (non-ISO),OR,43.32,-121.01,4.65,PV,c-Si,14.90,9.90,1.51,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62793,Crawfordsville 5 Solar Park,30/09/2020,2020,MISO,IN,40.01,-86.86,3.98,PV,c-Si,13.24,9.80,1.35,Tracking,Single Axis,,180,,,,,, $25.87 , $0.64 ,,47.3,,,,,,,,,,,,,
+63503,Lakehurst Solar,31/03/2020,2020,PJM,NJ,40.02,-74.31,4.01,PV,c-Si,14.40,9.60,1.50,Fixed Tilt,Fixed Tilt,20,180,,,,,, $19.90 , $24.11 ,,,,,,,,,,,,,,,
+63566,HWY 158 PV,31/10/2020,2020,PJM,NC,36.42,-77.07,4.39,PV,c-Si,12.00,9.00,1.33,Tracking,Single Axis,,180,,,,,, $21.16 , $10.01 ,,,,,,,,,,,,,,,
+64080,Dane County Airport Solar,31/12/2020,2020,MISO,WI,43.16,-89.33,3.84,PV,c-Si,11.40,9.00,1.27,Tracking,Single Axis,,180,,,,,,  ,  ,,52.3,,,,,,,,,,,,,
+63149,Franklin Solar,31/01/2020,2020,PJM,NJ,40.73,-75.06,3.92,PV,c-Si,10.00,8.80,1.14,Fixed Tilt,Fixed Tilt,25,180,,,,,, $19.01 , $20.76 ,,78.6,,,,,,,,,,,,,
+63416,Sierra Pacific Industries (2042-RD),31/05/2020,2020,CAISO,CA,40.12,-122.19,4.95,PV,c-Si,11.03,8.40,1.31,Fixed Tilt,Fixed Tilt,25,181,,,,,, $27.64 , $4.48 ,,41.0,,,,,,,,,,,,,
+63150,Pohatcong Solar Farm,31/01/2020,2020,PJM,NJ,40.67,-75.16,3.93,PV,c-Si,9.99,8.00,1.25,Fixed Tilt,Fixed Tilt,25,180,,,,,, $18.94 , $20.04 ,,81.5,,,,,,,,,,,,,
+61918,"Blackville Solar Farm, LLC",31/12/2020,2020,Southeast (non-ISO),SC,33.35,-81.26,4.63,PV,c-Si,10.05,7.20,1.40,Tracking,Single Axis,,160,,,,,,  ,  ,,,,,,,,,,,,,,,
+62766,Scottsburg Solar Park,31/10/2020,2020,MISO,IN,38.66,-85.79,4.12,PV,c-Si,9.75,7.10,1.37,Tracking,Single Axis,,190,,,,,, $23.44 , $0.64 ,,,,,,,,,,,,,,,
+62791,Richmond Solar Park 4,31/10/2020,2020,PJM,IN,39.86,-84.93,3.96,PV,c-Si,9.34,7.05,1.33,Tracking,Single Axis,,180,,,,,, $20.98 , $11.83 ,,,,,,,,,,,,,,,
+63973,Cardinal Solar,31/12/2020,2020,Southeast (non-ISO),SC,34.20,-79.39,4.59,PV,c-Si,10.10,7.02,1.44,Tracking,Single Axis,,,,,,,,  ,  ,,,,,,,,,,,,,,,
+64525,Troupsburg,31/12/2020,2020,NYISO,NY,42.03,-77.56,3.75,PV,c-Si,8.70,7.00,1.24,Fixed Tilt,Fixed Tilt,30,180,,,,,, $26.55 , $5.17 ,,44.9,,,,,,,,,,,,,
+63136,Hopkins Hill CSG,30/11/2020,2020,ISO-NE,RI,41.62,-71.57,3.89,PV,c-Si,9.60,6.68,1.44,Fixed Tilt,Fixed Tilt,25,180,,,,,, $31.07 , $8.09 ,,,,,,,,,,,,,,,
+63452,Solvay Solar (West Deptford Solar Farm),31/01/2020,2020,PJM,NJ,39.85,-75.21,4.02,PV,c-Si,7.90,6.50,1.22,Tracking,Single Axis,,161,,,,,, $18.07 , $18.96 ,,,,,,,,,,,,,,,
+63756,Omtanke Solar,31/03/2020,2020,Southeast (non-ISO),SC,33.13,-80.26,4.62,PV,c-Si,8.50,6.50,1.31,Fixed Tilt,Fixed Tilt,20,200,,,,,,  ,  ,,,,,,,,,,,,,,,
+62332,Blue Star (Part of Phoenix Solar Portfolio),31/03/2020,2020,PJM,MD,39.31,-75.83,4.11,PV,c-Si,7.70,6.00,1.28,Tracking,Single Axis,,181,,,,,, $22.96 , $20.62 ,,39.4,,,,,,,,,,,,,
+64152,SR Rattlesnake II (Rattlesnake II Solar Farm),31/12/2020,2020,West (non-ISO),CO,40.18,-104.69,4.81,PV,Thin-Film,8.90,6.00,1.48,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+62211,Denmark Solar,31/12/2020,2020,Southeast (non-ISO),SC,33.35,-81.14,4.63,PV,c-Si,8.60,6.00,1.43,Tracking,Single Axis, ,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63341,Owlville Creek Solar,31/12/2020,2020,NYISO,NY,43.08,-75.78,3.66,PV,c-Si,6.72,5.00,1.34,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63340,Owlville Creek Solar 2,31/12/2020,2020,NYISO,NY,43.08,-75.78,3.66,PV,c-Si,6.47,5.00,1.29,Tracking,Single Axis,,180,,,,,,  ,  ,,,,,,,,,,,,,,,
+63499,Choctaw Nation Solar Farm,30/07/2020,2020,SPP,OK,33.97,-96.43,4.64,PV,c-Si,6.10,5.00,1.22,Tracking,Single Axis,,180,,,,,, $42.33 , $29.16 ,,,,,,,,,,,,,,,
+63500,Chickasaw Nation Solar Farm,30/07/2020,2020,SPP,OK,34.48,-97.11,4.67,PV,c-Si,6.10,5.00,1.22,Tracking,Single Axis,,180,,,,,, $29.92 , $29.16 ,,,,,,,,,,,,,,,
+62731,Middleton Municipal Airport Solar (Morey Field),30/07/2020,2020,MISO,WI,43.12,-89.53,3.85,PV,c-Si,6.30,5.00,1.26,Tracking,Single Axis,,180,,,,,, $25.26 , $1.69 ,,52.3,,,,,,,,,,,,,
+64014,28 Livermore Hill Road Solar,30/06/2020,2020,ISO-NE,MA,42.55,-71.95,3.80,PV,c-Si,6.37,5.00,1.27,Fixed Tilt,Fixed Tilt,20,180,PV+Storage,,2020,2.24,, $24.05 , $7.86 ,,,,,,,,,,,,,,,
+62999,Finchville Solar Hybrid CSG,31/10/2020,2020,NYISO,NY,41.46,-74.55,3.84,PV,c-Si,6.81,5.00,1.36,Fixed Tilt,Fixed Tilt,25,220,PV+Storage,Lithium-Ion,2020,1.92,, $23.02 , $6.14 ,,,,,,,,,,,,,,,
+64432,Breckenridge Solar,30/11/2020,2020,ISO-NE,MA,42.17,-72.31,3.80,PV,c-Si,5.40,5.00,1.08,Fixed Tilt,Fixed Tilt,25,180,PV+Storage,LIB,2020,2.2,4.7, $31.20 , $8.03 ,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "US EIA chart from API",
+  
+    "title": {
+      "text": "Coal - Global electricity generation",
+      "color": "#54bb8e",
+      "fontSize": 15,
+      "subtitlePadding": 5,
+      "fontWeight": 600,
+      "subtitle":"quadrillion Btu generated. World, Annual. Source: US EIA",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+    
+    "data": 
+      {"url": "https://api.eia.gov/series/?series_id=INTL.4411-1-WORL-QBTU.A&api_key=cKNHOE6oTscEBlfP9TF7LXFAK68fOfbzhTVn3HO0&out=json",
+        "format":{
+          "type": "json",
+          "property":"series"}
+      },
+  
+    "transform": [
+      {
+        "flatten":["data"],
+        "as":["dataArray"]
+      },
+      {
+        "filter": "datum.dataArray[0] > 2000"
+      }
+    ],  
+    
+    "height": 260,
+    "width": 300,
+    
+    "mark": {
+      "type": "bar",
+      "color": "#EB984E",
+      "width": 6
+    },
+    
+    "encoding": {
+    
+      "x": {
+        "field": "dataArray[0]",
+        "type": "temporal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "ticks": false
+        }
+      },
+  
+      "y": {
+        "field": "dataArray[1]",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false},
+        "scale": {"domain": [0, 220]}
+      },
+
+      "tooltip": [
+        {"field": "dataArray[0]", "title": "Year", "formatType": "time", "format": "%Y"},
+        {"field": "dataArray[1]", "title": "Quadrillion Btu", "format": ".5"}
+      ]
+    }
+  }

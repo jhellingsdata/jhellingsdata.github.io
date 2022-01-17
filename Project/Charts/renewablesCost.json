@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/SolCost_IRENA.csv"},
+  
+    "title": {
+      "text": "Cost of renewables, 10 years of progress",
+      "anchor": "start",
+      "subtitle": "Global LCOE 2020$/kWh, source: IRENA",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 11
+    },
+    
+    "width": 400,
+    "height": 300,
+  
+    
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      }},
+  
+    "layer": [
+      {
+        "encoding": {
+          "color": {"field": "Technology", "type": "nominal"},
+          "y": {
+            "field": "Weighted average",
+            "type": "quantitative"
+          }
+        },
+  
+        "layer": [
+          {"mark": {"type": "line", "interpolate":"linear", "point":false}},
+          {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+        ]
+      },
+      {
+        "transform": [{"pivot": "Technology", "value": "Weighted average", "groupby": ["Year"]}],
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Solar photovoltaic", "type": "quantitative"},
+            {"field": "Onshore", "type": "quantitative"},
+            {"field": "Offshore", "type": "quantitative"},
+            {"field": "Solar concentrating", "type": "quantitative"},
+            {"field": "Hydro", "type": "quantitative"},
+            {"field": "Bioenergy", "type": "quantitative"},
+            {"field": "Geothermal", "type": "quantitative"}
+          ]
+        },
+        "params": [{
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Year"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }]
+      }
+    ]
+  }

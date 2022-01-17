@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/SolCost_IRENA.csv"
+  },
+  "title": {
+    "text": "Solar price declining with each doubling of capacity",
+    "color": "#54bb8e",
+    "fontSize": 16,
+    "subtitlePadding": 5,
+    "fontWeight": 600,
+    "anchor": "start",
+    "subtitle": "Global LCOE 2020$/kWh, source: IRENA",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11
+  },
+  "transform": [{"filter": "datum.Technology==='Solar photovoltaic'"}],
+  "vconcat": [
+    {
+      "width": 400,
+      "height": 200,
+      "mark": {"type": "line", "interpolate": "monotone", "point": true},
+      "encoding": {
+        "x": {
+          "field": "Cumulative capacity MW",
+          "type": "quantitative",
+          "title": null
+        },
+        "y": {
+          "field": "Weighted average",
+          "type": "quantitative",
+          "title": null
+        }
+      }
+    },
+    {
+      "title": {
+        "text": "Logarithmic Scales",
+        "anchor": "start",
+        "fontSize": 12
+      },
+      "width": 400,
+      "height": 300,
+      "mark": {"type": "line", "interpolate": "monotone", "point": true},
+      "encoding": {
+        "x": {
+          "field": "Cumulative capacity MW",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "values": ["20000", "40000", "80000", "160000", "320000", "640000"]
+          },
+          "scale": {"type": "log", "base": 10, "domain": [30000, 960000]}
+        },
+        "y": {
+          "field": "Weighted average",
+          "title": null,
+          "axis": {"values": ["0.02", "0.04", "0.08", "0.16", "0.32", "0.64"]},
+          "scale": {"type": "log", "base": 10, "domain": [0.04, 0.64]}
+        }
+      }
+    }
+  ]
+}

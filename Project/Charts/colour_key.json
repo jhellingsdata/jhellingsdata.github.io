@@ -1,0 +1,54 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"name": "Coal (Subbituminous)", "num": "1"},
+        {"name": "Natural Gas Combined Cycle", "num": "1"},
+        {"name": "Natural Gas Combustion Turbine", "num": "1"},
+        {"name": "Solar PV (Residential)", "num": "1"},
+        {"name": "Solar PV (Utility)", "num": "1"},
+        {"name": "Wind", "num": "1"}
+      ]
+    },
+    "width": 100,
+    "height": 100,
+  
+    "mark": {
+      "type": "rect"
+    },
+  
+    "encoding": {
+      "y": {
+        "field": "name",
+        "type": "ordinal",
+        "title": null,
+        "axis": {
+          "labels": false,
+          "ticks": false
+        }
+      },
+  
+      "x": {
+        "field": "num",
+        "type": "quantitative",
+        "title": null,
+        "axis": {
+          "labels": false,
+          "ticks": false
+        }
+      },
+  
+      "color": {
+        "title": "Cheapest technology",
+        "field": "name",
+        "scale": {
+          "domain": ["Coal (Subbituminous)", "Natural Gas Combined Cycle", "Natural Gas Combustion Turbine", "Solar PV (Residential)","Solar PV (Utility)", "Wind"],
+          "range": ["#5B5E76", "#7D8092", "#00A9E8", "#AA649E",  "#D988AD", "#B5D37E"]
+        }
+      }
+    },
+    "config": {
+      "axis": {"grid": true, "tickBand": "extent"}
+    }
+  }
+  
