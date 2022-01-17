@@ -43,6 +43,7 @@ h3 {
     justify-content: center;
 }
 
+
  /* allows scrolling on oversize charts to fit within card */
 .chart#chart8 {
     overflow: scroll;
@@ -50,7 +51,12 @@ h3 {
 .chart#chart14 {
     overflow: scroll;
 }
-
+.chart#chart18 {
+    overflow: scroll;
+}
+.chart#chart19 {
+    overflow: scroll;
+}
 body {
     background: #212121;
 }
@@ -60,6 +66,7 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    align-items: center;
     padding-bottom: 220px;
     overflow: auto;
     margin-bottom: 10vh;
