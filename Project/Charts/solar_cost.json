@@ -16,7 +16,7 @@
       "subtitleFontSize": 11
     },
   
-    "width": 380,
+    "width": 340,
     "height": 240,
     "mark": {"type": "line", "interpolate": "monotone", "point": true},
   
