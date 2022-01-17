@@ -135,9 +135,8 @@
             </div>
             <div class="chart" id="chart8"></div>
 
-            <p>**Check using sportsdataapi is allowed as homework**
-                This graph uses data from the Sports Data API that allows a free sign-up. This data is filtered for the current Premier League Season and should auto-update with 
-                every new game played.
+            <p>
+                This graph uses live data from the Sports Data API. It ranks Premier League teams by the number of unique players to score a goal in the 2021/22 season.
             </p>
         </div>
 
@@ -234,10 +233,56 @@
                 and one of the slowest recoveries. This graph uses data downloaded from the OECD to show the 
                 changes in output for some of the world's major economies, and an OECD average, during the Covid-19 pandemic</p>
         </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 9 - Merging data</span>
+                </span>
+            </div>
+            <div class="chart" id="chart16"></div>
+
+            <h5></h5>
+            <p>Ths graph considers the impact on the cost of solar as the capacity is increased. Both axis use a logarithmic scale, with each tick to the right representing a doubling of solar capacity globally. The dataset was created by combining data appropriate data from the IRENA 2021 Solar Cost publicationa and their online Query Tool for global solar capacity.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 10 - Advanced analytics</span>
+                </span>
+            </div>
+            <div class="chart" id="chart17"></div>
+
+            <h5></h5>
+            <p>This graph explores if there's any clear correlation between the daily returns of Bitcoin and Gold. I initially used data from MetalsAPI but due to some missing data points in the daily pricing, I switched to using PAXG, a crypto stablecoin for gold, with data obtained in csv from coinGecko. The BTC data was obtained from the Nomics API and combined with the PAXG pricing data using Python. I then calculated their simple daily returns and exported in JSON format to be used in Vega-lite. The result shows no clean correlation between assets, however is not conclusive as it only considers returns at the daily frequency.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 11 - Interactivity</span>
+                </span>
+            </div>
+            <div class="chart" id="chart18"></div>
+
+            <h5></h5>
+            <p>Using data from Sports Data API, this graph filters for the current Premier League Season and shows the gold scored for the home team in every match this season. Click any result to isolate that team's home results, double click to deselect.</p>
+        </div>
+
+        <div class="card">
+            <div class ="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Week 11 - Interactivity</span>
+                </span>
+            </div>
+            <div class="chart" id="chart19"></div>
+
+            <h5></h5>
+            <p>Area chart uses data from IRENA using their VBA excel data query tool for Renewables Capacity and Generation. This was then exported as a CSV file and uploaded to Github. Use the sliders to explore the full data period is 2000-2020.</p>
+        </div>
+
     </section>
-
-
-
 
     <script>
         // Set the charts that we want on the page as variables linked to JSON files:
@@ -248,7 +293,7 @@
         var myChart5 = "Portfolio/charts/W2_chart5_VaccinationsByAgeCSV.json";
         var myChart6 = "Portfolio/charts/W3_chart9_emissionsAPI.json";
         var myChart7 = "Portfolio/charts/W3_LeagueOne_inline.json";
-        var myChart8 = "Portfolio/charts/W4_PremierLeague_Results.json";
+        var myChart8 = "Portfolio/charts/W4_PL_scorers.json";
         var myChart9 = "Portfolio/charts/W4_nomics_cryptoPrice.json";
         var myChart10 = "Portfolio/charts/W5_loop_PPI_comm.json";
         var myChart11 = "Portfolio/charts/W5_loop_PPI_indu.json";
@@ -256,6 +301,10 @@
         var myChart13 = "Portfolio/charts/W5_loop_M1Real.json"; 
         var myChart14 = "Portfolio/charts/W7_pythonScrape.json";
         var myChart15 = "Portfolio/charts/W8_GDP_econFestival.json";
+        var myChart16 = "Portfolio/charts/W9_combiningData.json";
+        var myChart17 = "Portfolio/charts/W10_advPlotting.json";
+        var myChart18 = "Portfolio/charts/W11_PL_Interactive.json";
+        var myChart19 = "Portfolio/charts/W11_solar_world.json";
         
     
     
@@ -275,6 +324,10 @@
         vegaEmbed('#chart13', myChart13, {"actions": false});
         vegaEmbed('#chart14', myChart14, {"actions": false});
         vegaEmbed('#chart15', myChart15, {"actions": false});
+        vegaEmbed('#chart16', myChart16, {"actions": false});
+        vegaEmbed('#chart17', myChart17, {"actions": false});
+        vegaEmbed('#chart18', myChart18, {"actions": false});
+        vegaEmbed('#chart19', myChart19, {"actions": false});
     
     
         $(window).on("load",function(){

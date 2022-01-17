@@ -5,7 +5,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Data Project</title>
 
@@ -14,15 +14,15 @@
     
 
     <!--call JS for responsive navbar-->
-  <script src="Project/navScript.js" defer></script>
+    <script src="Project/navScript.js" defer></script>
 
     <!--The next three lines allow the Vega embed-->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
-  <!-- Add icon library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
   </head>
@@ -46,11 +46,170 @@
       </div>
     </nav>
 
-    <div class='loading-dots'>
-      <div></div>
-      <div></div>
-      <div></div>
+
+    <p class=title>Renewables and the potential for solar</p>
+
+    <p class=subtitle>How the transition to renewables is justifying itself</p>
+
+    <hr class="solid">
+
+    <p><span class="leader">Aims: </span>
+      In less than 80 minutes, enough solar energy hits the Earth to power energy the whole world's energy usage for a whole year, and the world has only just started to take advantage. There has been a general consensus that switching to renewable energy sources is perhaps the most important goal in limiting climate change. This project looks at this transition by focusing on Solar development, and shows how the economics of Solar are enough to justify its need.
+    </p>
+    
+    <p>
+      In 1965, Gordon Moore (co-founder of Intel) observed that the number of components in an integrated circuit (think transistors, capacitors etc) doubled with each year of research, and predicted this trend to continue. A decade later in 1975 he amended his prediction to every two years. Now known as Moore's Law, the trend has guided long-term planning and targets in research and development.
+    </p>
+   
+    <p>
+      To illustrate this, I used <a href="Project/Python/mooresLaw.ipynb">Python</a> to scrape the microprocessor section of the Wikipedia Processors page to create a dataset of all the listed processors. Transistor density (often referenced as a proxy), has grown at a average biennial rate of 71.7% across the 50 year period, or 31% yearly.
+    </p>
+    
+
+    <section class="container">
+
+      <div class="card" id="transistors">
+          <div class ="category" style="color: #54bb8e;">
+              <span>
+                  <span style="color: #54bb8e;" class="tag">Moore's Law in action</span>
+              </span>
+          </div>
+          <div class="chart" id="chart1"></div>
+      </div>
+
+      <p>
+        Are there similar dynamics at play in the solar industry? The following few graphs plots use data from the International Renewable Energy Agency (<a href="https://www.irena.org/">IRENA</a>). First, I explored the general trend in solar prices relative to other renewables. The data uses a Levelised Cost of Electricity (LCOE), as a means of comparing different energy sources (essentially by comparing total costs, energy output, and lifespan). The graph is interactive: click a datapoint to highlight its series on both graphs, double-click to reset.
+      </p>
+      <p></p>
+
+      <div class="card" id="renewableCost">
+        <div class="chart" id="chart2"></div>
+      </div>
+
+      <p>
+        Across the 10 year period, solar photovoltaic (the most common type seen on rooftoops etc) has seen by far the biggest drop of nearly 7 times, with onshore wind becoming 2.5 times cheaper during the period. At the same time, they have both trended upwards in global installations. This suggests a 'learning effect' similar to that predicted in Moore's Law based <a href="https://www.sciencedirect.com/science/article/pii/S0301421515002293">models</a>.
+      </p>
+
+    <div class="card" id="solarCap">
+      <div class="chart" id="chart3"></div>
     </div>
+
+    <p>
+      Isolating solar across the same period, I combined the global IRENA data with US focused data from Lawrence Berkeley National Laboratory (LBNL).
+    </p>
+
+    <div class="card" id="solarCap">
+      <div class="chart" id="chart4"></div>
+    </div>
+
+    <p>
+      Now plotting cost against net installations, we see the cost of solar is a linear function of the doubling of capacity. This trend is consistent and gives a learning rate of roughly 39%, ie. for each doubling in capacity the cost per kWh will decrease by 39%.
+    </p>
+
+    <div class="card" id="solarCap">
+      <div class="chart" id="chart5"></div>
+    </div>
+
+    <p>
+      Using a different IRENA dataset, obtained from their excel query tool, I split net solar installations into world regions. China's dominance in the solar industry warranted its own datapoint. Remarkably, prior to 2010, the world had less than 5% of the Solar Capacity it does today. The global expansion of solar shows a clear and accelerating increase, however the near non-existent values for the Middle East and particularly Africa show considerable wasted potential.
+    </p>
+
+    <div class="card" id="solarvscoal">
+      <div class="chart" id="chart6"></div>
+      <div class="chart" id="chart7"></div>
+    </div>
+
+    <p>
+      Despite the immensely reduced costs and rapid expansion, solar energy still makes up a fraction of the global energy balance. In 2020, solar power generation was only 4.5% of the power generation from coal.
+    </p>
+  
+    <div class="card" id="elec_US">
+      <div class ="category" style="color: #54bb8e;">
+          <span>
+              <span style="color: #54bb8e;" class="tag">A strong case for renewables in the US</span>
+          </span>
+      </div>
+      <div class="chart" id="chart8"></div>
+      <div class="chart" id="chart9"></div>
+    </div>
+
+    <p>
+      The graph above shows the cheapest new energy project for every county in the US, with removal of projects if they are predicted to be unfeasible. The data is collated by the<a href="https://calculators.energy.utexas.edu/lcoe_map/#/county/tech">University of Texas, Austin</a>, and a generates dataset dependent on a few additional live parameters. To save steps, I uploaded the file straight to Github, and merge with a GeoJson US Counties map live in the chart JSON specification. Note: Alaska is hid in Vega-Editor but does not transfer.
+    </p>
+
+    <p>
+      
+    </p>
+
+    <div class="card" id="kepler1">
+
+      <iframe src="Project/Charts/emissions.kepler.html"></iframe>
+
+    </div>
+
+    <p>
+
+    </p>
+
+
+    <p>
+      The majority of data used came from the EIA, IRENA and LBNL. IRENA only offered data either through excel direct downloads or query tools. As such for these, it was a case of extracting the data into a separate sheet and simply saving as a CSV and exporting to Github. Their data is mostly infrequent, being released yearly in new update publications, additionally, the nature of their data means the general trend has been identified and so there would not be considerable benefit in a live data source. LBNL similarly offered a large excel dataset containing semi-raw data and so the steps taken for this source were the same, with the data combined in a CSV file for the shared graph.
+    </p>
+
+    <p>
+      The US Energy Information Agency operate a free sign-up access API, with a good depth of information available. However, the API endpoints tend to give data for just one region, source etc. These single endpoints mostly don’t provide the most interesting data as they need another dimension for comparison. So to better utilise the data, I used Python to scrape the indicator page to generate a list of all the URL codes necessary (eg 3 letter country codes). From there, I was able to loop through the API and combine the results in a single, large dataframe. 
+    </p>
+    
+    <p>
+      This presented its own issues, for example, the indicator page with links to each regions’ API, listed only the country’s full name in the html, whereas the API endpoint would use a 3-letter abbreviation. I found a package that can convert between country names and their internationally recognised codes (eg ISO3), and used this to create the list. I ran the code multiple times to ensure all non-current countries were filtered out, and then adjusted the code to clean accordingly. The list is used to loop through the API roughly 200 times and add the cleaned results to a master dataframe.
+    </p>
+
+    <p>
+
+    </p>
+
+    <p>
+      <span class="leader">Conclusions: </span>The current trend in solar costs presents a massive opportunity for decarbonising the electricity system, as well as becoming the catalyst for green energy systems in those regions with rapidly accelerating energy usage. Solar costs still have some way to fall and as the US map showed, renewables widely make sense as both the economic and sustainable choice for new power.
+    </p>
+
+    <p>
+      Solar won’t be a solution in isolation of course. A major drawback of this analysis is that LCOE estimates don’t include storage technologies. Battery prices are many years behind solar in their learning curve, and their inclusion takes solar cost back to the top of the cost pile. As such, aiming for a near-full solar electricity grid is uneconomic and unsuitable.
+    </p>
+
+    <p>
+      Despite this, a system combined with other technologies is already capable of providing as cheap electricity as polluting alternative and the rate of development in solar technology gives a good indication of the renewables potential yet to come.
+    </p>
+
+    </section>
+
+
+
+    <script>
+
+      // Set the charts that we want on the page as variables linked to JSON files:
+      var myChart1 = "Project/Charts/wikiScrape_processors.json";
+      var myChart2 = "Project/Charts/renewablesCost_stackedV2.json";
+      var myChart3 = "Project/Charts/solar_cost.json";
+      var myChart4 = "Project/Charts/solar_regression.json";
+      var myChart5 = "Project/Charts/solarCapacities.json";
+      var myChart6 = "Project/Charts/coal_gen_world.json";
+      var myChart7 = "Project/Charts/solar_gen_world.json";
+      var myChart8 = "Project/Charts/cheapestElec_State.json";
+      var myChart9 = "Project/Charts/colour_key.json";
+      
+      // Embed the charts in the divs above
+      vegaEmbed('#chart1', myChart1, {"actions": true});
+      vegaEmbed('#chart2', myChart2, {"actions": true});
+      vegaEmbed('#chart3', myChart3, {"actions": true});
+      vegaEmbed('#chart4', myChart4, {"actions": true});
+      vegaEmbed('#chart5', myChart5, {"actions": true});
+      vegaEmbed('#chart6', myChart6, {"actions": true});
+      vegaEmbed('#chart7', myChart7, {"actions": true});
+      vegaEmbed('#chart8', myChart8, {"actions": true});
+      vegaEmbed('#chart9', myChart9, {"actions": false});
+  
+
+    </script>
 
   </body>
 
