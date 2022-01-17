@@ -79,7 +79,7 @@
         {"filter": {"selection": "selector051"}},
         {"calculate": "datum['Weighted average'] + ' $/kWh'", "as": "LCOE"}
       ],
-      "width": 350
+      "width": 330
     },
 
     {
@@ -131,7 +131,7 @@
         {"calculate": "datum['Net additions MW'] + ' MW'", "as": "Net additions"}
       ],
 
-      "width": 350
+      "width": 330
     }
   ]
 }
