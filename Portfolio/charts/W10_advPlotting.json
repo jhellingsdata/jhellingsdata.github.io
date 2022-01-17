@@ -1,0 +1,83 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Portfolio/data/advPlotting.JSON"
+    },
+  
+    "title": {
+      "text": "Bitcoin vs Gold returns 2021",
+      "subtitle":"PAXG stabelecoin used as proxy for gold, sources: Nomics API & coinGecko",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "width": 290,
+    "height": 280,
+  
+    "layer": [
+      {
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "color": "salmon"
+        },
+        "encoding": {
+          "x": {
+            "field": "PAXGdayRtn",
+            "type": "quantitative",
+            "title": "Paxos Gold Daily Return"
+          },
+          "y": {
+            "field": "BTCdayRtn",
+            "type": "quantitative",
+            "title": "Bitcoin Daily Return"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "seagreen"
+        },
+        "transform": [
+          {
+            "regression": "BTCdayRtn",
+            "on": "PAXGdayRtn"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "PAXGdayRtn",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "BTCdayRtn",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "regression": "BTCdayRtn",
+            "on": "PAXGdayRtn",
+            "params": true
+          },
+          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+        ],
+        "mark": {
+          "type": "text",
+          "color": "firebrick",
+          "x": "width",
+          "align": "right",
+          "y": -5
+        },
+        "encoding": {
+          "text": {"type": "nominal", "field": "R2"}
+        }
+      }
+    ]
+  }
+  

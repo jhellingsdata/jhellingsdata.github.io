@@ -1,0 +1,76 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/SolCapacity_Global_IRENA.csv"
+    },
+    "title": {
+      "text": "Installations of Solar growing",
+      "anchor": "start",
+      "subtitle": "Net solar pv capacity added yearly, source: IRENA 2021"
+    },
+    "width": 350,
+    "height": 250,
+    "transform": [
+      {"calculate": "year(datum.Year)", "as": "year"},
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 2014,
+        "bind": {
+          "input": "range",
+          "min": 2000,
+          "max": 2019,
+          "step": 1,
+          "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2020,
+        "bind": {
+          "input": "range",
+          "min": 2001,
+          "max": 2020,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+  
+    "mark": {
+      "type": "area"
+    },
+  
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": null},
+  
+      "y": {
+        "field": "Net Additions MW",
+        "type": "quantitative",
+        "title": null
+      },
+  
+      "color": {
+        "field": "Area",
+        "scale": {"scheme": "tableau20"},
+        "legend": {
+          "orient": "top-left",
+          "labelFontSize": 10,
+          "symbolSize": 55,
+          "rowPadding": 1
+        }
+      },
+  
+      "tooltip": [
+        {"field": "Area"},
+        {"field": "Year", "type": "temporal", "format": "%Y"},
+        {"field": "Net Additions MW"}
+      ]
+    }
+  }
