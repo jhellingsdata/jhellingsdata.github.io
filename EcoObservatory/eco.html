@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+    <!--Meta stuff-->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <!--Import fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
+    </style>
+
+
+    <!--Title - this is the bit that comes up in the tab-->
+    <title>Data Hub</title>
+
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" href="css/eco.css">
+
+    <!--call JS for responsive navbar-->
+    <script src="Project/navScript.js" defer></script>
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="page-title">Monetary Policy Library</div>
+        <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+        <ul>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="https://rapidcharts.io/datascience">Course</a></li>
+            <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io"><i class="fa fa-github"></i></a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Title -->
+
+
+    <p class=subtitle>Selection of charts focusing on key economic indicators related to Unit 10 of the Core Econ textbook </p>
+
+    <hr class="solid">
+
+    <!-- START - Grid of divs that will house the charts-->
+
+    <section class="container">
+        <div class="card">
+            <div class="chart" id="chart1"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart2"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart3"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart4"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart5"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart6"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart7"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart8"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart9"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart10"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart" id="chart11"></div>
+        </div>
+
+
+
+    </section>
+
+    <script>
+        // Set the charts that we want on the page as variables linked to JSON files:
+        var myChart1 = "EcoObservatory/Monetary Policy/dMP5.json";
+        var myChart2 = "EcoObservatory/Monetary Policy/dMP6.json";
+
+        
+    
+    
+        // Embed the charts in the divs above
+        vegaEmbed('#chart1', myChart1, {"actions": false});
+        vegaEmbed('#chart2', myChart2, {"actions": false});
+
+
+    </script>
+
+
+
+<!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+
+<!-- <div class="page-container"> -->
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-top">
+            <h3>Data Science</h3>
+                <p><a href="eco.html">Eco Observatory Data Hub</a></p>
+                <p><a href="Portfolio.html">Portfolio</a></p>
+                <p><a href="Project.html">Project</a></p>    
+          </div>
+        
+          <div>
+              <ul class="socials">
+                  <!--    <li><a href="https://uk.linkedin.com/in/josh-hellings-388b43165?trk=people-guest_people_search-card"><i class="fa fa-linkedin-square"></i></a></li>    -->
+                  <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io"><i class="fa fa-github"></i></a></li>
+              </ul>
+          </div>
+    
+          <div class="footer-bottom">
+              <p>&copy;2021 Josh Hellings</p>
+          </div>
+      </div>
+    </footer>
+    <!--/////////////////////////////////////END SECTION - SAME ALL PAGES//////////////////////////-->
+    
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "M1 Money, FRED, change of measurement in May 2021 to include a component found in M2",
+
+    "title": {
+      "text": "US M1 Money Stock",
+      "subtitle": ["money supply including physical currency, demand deposits,", "and other checkable deposits, source: FRED"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"}
+    },
+   
+  
+      "width":285,
+      "height":290,
+  
+  
+    "data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DM1SL%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",
+      "format":{
+        "type": "json",
+        "property": "observations"
+      }
+    },
+  
+      "mark": {
+      "type": "line",
+      "point": false,
+      "interpolate": "monotone",
+      "color":"indianred"
+    },
+  
+    "transform": [
+      
+      {"calculate": "year(datum.date)", "as": "year"},
+  
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+  ],
+  
+  
+   
+  
+      "params": [    
+        {"name":"minYear", "value":1980,
+           "bind":{
+             "input": "range",
+             "min": 1955, 
+             "max": 2021, 
+             "step": 1,
+             "name": "Start year:"}
+        },
+  
+        {"name":"maxYear", "value":2021,
+           "bind":{
+             "input": "range",
+             "min": 1955, 
+             "max": 2021, 
+             "step": 1,
+             "name": "End year:"}
+        }
+      ],
+  
+    "encoding": {
+        
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "labelSeparation": 10
+        }},
+  
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "$ billion"
+       },
+  
+      "tooltip":[
+        {"field":"date", "title":"Date", "type": "temporal"},
+        {"field": "value", "title":"Value"}
+      ]
+    }
+  }

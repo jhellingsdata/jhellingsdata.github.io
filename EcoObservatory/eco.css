@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
+/* ------------------------------------------------------------------------------
+	Titles and text
+-------------------------------------------------------------------------------*/
+
+h1, h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Catamaran";
+    color: #dfdde2;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    padding-top: 4vh;
+    height: 10vh;
+}
+h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.chart {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 3px;
+    height: 360px;
+    width: 340px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body {
+    background: #212121;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 220px;
+    overflow: auto;
+    margin-bottom: 10vh;
+}
+
+
+.card {
+    background: white;
+    width: 370px;
+    min-height: 400px;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 5px;
+    border: #76939e solid 6px;
+}
+
+.card h5 {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.card p {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    font-size: 10pt;
+    margin: 0;
+}
+
+
+.card .category .tag {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p.title {
+    text-align: left;
+    color: #7ea9ba;
+    font-size: 2.2rem;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+p.subtitle {
+    color: #a5cddd;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+p {
+    align-items: center;
+    text-align: left;
+    color: rgb(250, 250, 250);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-all;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+
+.leader{
+    font-weight: 550;
+}
+
+/* Solid border */
+hr.solid {
+    border-top: 0.9px solid #bbb;
+    max-width: 750px;
+  }
+
+
+/* ------ START - navigation bar styling -----*/
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.page-title {
+    font-size: 1.9rem;
+    margin-left: 1rem;
+    margin: 0.5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* ------ END - navigation bar styling -----*/

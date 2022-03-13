@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "World Bank - Unbanked UK",
+
+    "title": {
+      "text": "Unbanked",
+      "subtitle": "Account (% age 15+)",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+  
+    "width": 300,
+    "height": 300,
+  
+  
+    "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FGBR%2Findicator%2FACCOUNT.T.D%3Fformat%3Dxml",
+      "format":{
+        "type": "json",
+        "property": "data.data"
+      }
+    },
+
+
+      "mark": {
+      "type": "line",
+      "point": false,
+      "interpolate": "monotone",
+      "color":"indianred"
+    },
+
+    "encoding": {
+        
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "labelSeparation": 10
+        }},
+  
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Unbanked 15+ %"
+       },
+  
+      "tooltip":[
+        {"field":"date", "title":"Date", "type": "temporal"},
+        {"field": "value", "title":"Value"}
+      ]
+    }
+  }
