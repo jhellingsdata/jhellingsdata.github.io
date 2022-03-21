@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+  "description": "FRED data covering main interest rates in US, 3 data sets layered, mortgage rates given weekly, fed funds effective rate monthly, and credit cards quarterly. Earliest credit card data end of 1994 so earlier data has been filtered out. Pastel rainbow colour palette",
+
+
+  "title": {
+    "text": "Key interest rates in the US",
+    "subtitle": "Fed funds rate, 30 year mortgage, credit cards, Source: FRED",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+"config": {
+  "locale": {
+    "number": {
+      "decimal": ".",
+      "thousands": ",",
+      "grouping": [3],
+      "currency": ["", " %"]
+    }
+  },
+  "view": {"stroke": "transparent"}
+},
+
+  "height": 300,
+  "width": 300,
+  
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
+
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "grid": true,
+        "gridOpacity": 0.6,
+        "ticks": false,
+        "labelPadding": 5
+    }},
+
+    "tooltip": [
+      {"field": "date", "title": "Date", "type": "temporal"},
+      {"field": "value", "title": "Rate", "type": "quantitative", "format": "$.3s"}
+    ]
+  },
+
+
+  "layer": [
+
+    {"data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DFEDFUNDS%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",
+      "format":{
+        "type": "json",
+        "property": "observations"
+      }},
+      "mark": {"type":"line", "color":"#a8e6cf", "point": "transparent"},
+      "transform": [
+        {"calculate": "year(datum.date)", "as": "year"},
+        {"filter": "datum.year >= '1995'"}
+      ],
+      "encoding": {
+        "tooltip": [
+          {"field": "date", "title": "Date", "type": "temporal"},
+          {"field": "value", "title": "Fed Funds Rate", "format": "$,"}
+        ]
+      }
+    },
+    
+    {"data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMORTGAGE30US%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",
+      "format":{
+        "type": "json",
+        "property": "observations"
+      }},
+      "mark": {"type":"line", "interpolate": "monotone", "color":"#ffd3b6", "point": "transparent"},
+      "transform": [
+        {"calculate": "year(datum.date)", "as": "year"},
+        {"filter": "datum.year >= '1995'"}
+      ],
+      "encoding": {
+        "tooltip": [
+          {"field": "date", "title": "Date", "type": "temporal"},
+          {"field": "value", "title": "Mortgage Rate", "format": "$.3s"}
+        ]
+      }
+    },
+
+    {"data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DTERMCBCCALLNS%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",
+      "format":{
+        "type": "json",
+        "property": "observations"
+      }},
+      "mark": {"type":"line", "color":"#ff8b94", "point": "transparent"},
+      "transform": [
+        {"filter": "datum.value != '.'"}
+      ],
+      "encoding": {
+        "tooltip": [
+          {"field": "date", "title": "Date", "type": "temporal"},
+          {"field": "value", "title": "Credit Rate", "format": "$.3s"}
+        ]
+      }
+    }
+  ]
+}

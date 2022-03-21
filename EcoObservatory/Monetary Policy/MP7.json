@@ -1,0 +1,99 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          
+    "description": "Bank of England data downloaded and saved to github. UMTLMV - revert-to-rate mortage. IUMCCTL - representative credit card lending to households rate. IUMBEDR - official BoE policy rate.",
+  
+      "title": {
+        "text": "Key interest rates in the UK",
+        "subtitle": "Bank base rate, mortgage, credit cards, Source: Bank of England",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },
+  
+        
+      "data": {
+          "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Monetary%20Policy/Data/UK_rates.csv"
+          },
+          
+        "config": {
+          "locale": {
+            "number": {
+              "decimal": ".",
+              "thousands": ",",
+              "grouping": [3],
+              "currency": ["", " %"]
+            }
+          },
+          "view": {"stroke": "transparent"}
+        },
+      
+      "transform": [
+          {"fold":["Bank", "Mortgage", "Credit Card"], "as": ["Type", "value"]},
+          {"calculate": "year(datum.Date)", "as": "year"},
+          {"filter": "datum.year>=minYear"},
+          {"filter": "datum.year<=maxYear"}
+        ],
+  
+      "params": [    
+        {"name":"minYear", "value": 2000,
+            "bind":{
+              "input": "range",
+              "min": 1995, 
+              "max": 2021, 
+              "step": 1,
+              "name": "Start year:"}
+        },
+      
+        {"name":"maxYear", "value": 2022,
+            "bind":{
+              "input": "range",
+              "min": 1996, 
+              "max": 2022, 
+              "step": 1,
+              "name": "End year:"}
+        }
+      ],
+            
+      "height": 265,
+      "width": 300,   
+      
+      "mark": {   
+        "type":"line",
+        "strokeWidth":2,
+        "point":"transparent"
+      },    
+      
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "title":null,
+          "axis":{"grid": false}},
+  
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "grid": true,
+            "gridOpacity": 0.6,
+            "ticks": false,
+            "labelPadding": 5
+          }
+        },
+        "color":{
+          "field": "Type",
+          "legend": null,
+          "scale": {
+            "scheme": "set2"
+          }
+        },
+        "tooltip": [
+          {"field": "Type"},
+          {"field": "Date", "timeUnit": "yearmonth", "title": "Date"},
+          {"field": "value", "title": "Rate", "format": "$.3"}
+        ]
+      }
+    }

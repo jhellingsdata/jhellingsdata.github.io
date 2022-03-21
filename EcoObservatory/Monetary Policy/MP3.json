@@ -1,0 +1,120 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Notes & coins in circulation outside Bank of England (BOE), seasonally adjusted, Bank of England data accessed from ONS, BoE has more up to date monthly data but lose live aspect. Includes interactive time-filter and auto-snap tooltip",
+  
+    "title": {
+      "text": "Base Money - United Kingdom",
+      "subtitle": ["(£m) Notes & coins circulating outside Bank of England, SA, source: ONS"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"}
+    },
+   
+  
+      "width":290,
+      "height":260,
+  
+  
+    "data": {"url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/avab/dataset/qna/data",
+      "format":{
+        "type": "json",
+        "property": "quarters"
+      }
+    },
+  
+  
+    "transform": [
+      {"filter": "datum.value != 0"},
+      {
+        "as": "Date",
+        "calculate": "timeParse(replace(replace(replace(replace(datum.date, ' Q1', '03'), ' Q2', '06'),  ' Q3', '09'), ' Q4', '12'), '%Y%m')"
+      },
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+  ],
+  
+  
+   
+  
+  "params": [    
+    {"name":"minYear", "value": 2000,
+        "bind":{
+          "input": "range",
+          "min": 1959, 
+          "max": 2021, 
+          "step": 1,
+          "name": "Start year:"}
+    },
+  
+    {"name":"maxYear", "value": 2022,
+        "bind":{
+          "input": "range",
+          "min": 1960, 
+          "max": 2022, 
+          "step": 1,
+          "name": "End year:"}
+    }
+  ],
+  
+  
+  "encoding": {      
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10
+      }
+    }
+  },
+  
+  "layer": [
+    {
+      "encoding": {
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "",
+          "axis": {
+            "gridOpacity": 0.6,
+            "ticks": false,
+            "labelPadding": 5
+          }
+        }
+      },
+      "layer": [
+        {"mark": {"type": "line", "interpolate": "monotone", "color": "olivedrab", "opacity": 0.7}},
+        {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+      ]
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {"field" : "Date", "title": "Date", "timeUnit": "yearmonth"},
+          {"field": "value", "type": "quantitative", "title": "£m", "format": "6,"}
+        ]
+      },
+      "params": [{
+        "name": "hover",
+        "select": {
+          "type": "point",
+          "fields": ["Date"],
+          "nearest": true,
+          "on": "mouseover",
+          "clear": "mouseout"
+        }
+      }]
+    }
+  ]
+  }

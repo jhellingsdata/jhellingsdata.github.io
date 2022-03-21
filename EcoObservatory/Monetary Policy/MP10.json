@@ -1,0 +1,93 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Unbanked by gender, achieved by layering male and female datasets, then grouping by country and offsetting bars. Also uses a locale hack to append a percentage sign to values already on the correct 0-100 scale (otherwise would x100)",
+    "title": {
+      "text": "Financial inclusion and gender equality",
+      "subtitle": "% of people 15+ with bank account, Source: World Bank",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+  "config": {
+    "locale": {
+      "number": {
+        "decimal": ".",
+        "thousands": ",",
+        "grouping": [3],
+        "currency": ["", " %"]
+      }
+    },
+    "view": {"stroke": "transparent"}
+  },
+  "transform": [
+    {"calculate": "{'GBR': 'UK', 'USA': 'USA', 'MEA': 'Middle East & N. Africa', 'WLD': 'Globally','SSF': 'Sub-Saharan Africa', 'EAS': 'East Asia'}[datum[country.id]]", "as": "region"}
+  ],
+
+    "width": 275,
+    "height": 300,
+  
+    "encoding": {
+      "y": {
+        "field": "country.id",
+        "type": "ordinal",
+        "scale": {"domain": ["GBR", "USA", "EAS", "WLD", "MEA", "SSF"]}, 
+        "title": null,
+        "axis": {
+          "labelAngle": 0,
+          "labelExpr": "{'GBR': ['United', 'Kingdom'], 'USA': ['United', 'States'], 'MEA': ['Middle East', '& N. Africa'], 'WLD': ['Global', 'Average'],'SSF': ['Sub-Saharan', 'Africa'], 'EAS': ['East Asia', '& Pacific']}[datum.label]",
+          "labelOffset": -6,
+          "labelPadding": 5,
+          "ticks": false
+        }
+      },
+
+      "color": {
+        "field": "indicator.id",
+        "scale": {
+          "domain": ["fin1.t.a.1", "fin1.t.a.2"],
+          "range": ["orange", "skyblue"]
+        },
+        "legend": {
+          "title": null,
+          "labelExpr": "{'fin1.t.a.1': ['Male'], 'fin1.t.a.2': ['Female']}[datum.label]",
+          "orient": "bottom-right"
+        }   
+      },
+
+      "tooltip": [
+        {"field": "country.text", "title": "Region"},
+        {"field": "value", "title": "Access", "format": "$.3"},
+        {"field": "indicator.id", "title": "Dataset ID"}
+      ]
+    },
+    "layer": [
+      {
+        "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FUSA%3BGBR%3BWLD%3BMEA%3BSSF%3BEAS%2Findicator%2FFIN1.T.A.1%3Fformat%3Dxml%26date%3D2017", "format": {"property": "data.data"}},
+  
+        "mark": {"type": "bar", "yOffset": -9, "size": 15, "color": "orange", "clip": true},
+        "encoding": {
+          "x": {
+            "field": "value",
+            "type": "quantitative",
+            "axis": {"title": null, "ticks": false, "format": "$.3", "gridOpacity": 0.5},
+            "scale": {"domain": [0, 100]}
+          }
+        }
+      },
+      {
+        "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FUSA%3BGBR%3BWLD%3BMEA%3BSSF%3BEAS%2Findicator%2FFIN1.T.A.2%3Fformat%3Dxml%26date%3D2017", "format": {"property": "data.data"}},
+  
+        "mark": {"type": "bar", "size": 15, "yOffset": 9, "color": "skyblue", "clip": true},
+        "encoding": {
+          "x": {
+            "field": "value",
+            "type": "quantitative",
+            "axis": {"title": null, "ticks": false, "format": "$.3"},
+            "scale": {"domain": [0, 100]}
+          }
+        }
+      }
+    ]
+  }

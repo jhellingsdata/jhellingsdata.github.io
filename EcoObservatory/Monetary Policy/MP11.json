@@ -1,0 +1,242 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Any account(eg mobile payment wallets) vs bank account",
+  
+    "width": {"step": 20},
+    
+    "config": {
+      "locale": {
+        "number": {
+          "decimal": ".",
+          "thousands": ",",
+          "grouping": [3],
+          "currency": ["", " %"]
+        }
+      },
+      "concat": {
+        "spacing": 10
+      },
+      "view": {"stroke": "transparent"}
+    },
+  
+    "title": {
+      "text": "Mobile wallets propelling financial inclusion",
+      "subtitle": ["% of people 15+ with banking access, source: World Bank"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10
+    },
+  
+      "hconcat": [
+        { 
+          "layer": [
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FUGA%2Findicator%2FACCOUNT.T.D%3Fformat%3Dxml", "format": {"property": "data.data"}},
+    
+              "mark": {"type": "line", "point": true},
+              "height": 250,
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal",
+                  "title": "Uganda",
+                  "axis": {
+                    "values": ["2011", "2017"],
+                    "labelAngle": -1,
+                    "labelOffset": 11,
+                    "labelOpacity": 0.7,
+                    "titleFontWeight": 400
+                  }
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "axis": {"ticks": false, "labelPadding": 5, "labelOpacity": 0.7, "format": "$.3"},
+                  "scale": {
+                    "domain": [0,100]
+                  },
+                  "title": null
+                },
+                "color": {"field": "indicator.id", "type": "nominal", "scale": {"range": ["#ffc713", "#ff6839"]},"legend": {"title":null, "orient": "bottom", "offset": 4, "labelExpr": "{'fin1.t.a': ['Bank Account'], 'account.t.d': [' Bank or Mobile Wallet']}[datum.label]"}},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            },
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FUGA%2Findicator%2FFIN1.T.A%3Fformat%3Dxml", "format": {"property": "data.data"}},   
+              "mark": {"type": "line", "point": true},   
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative"
+                },
+                "color": {"field": "indicator.id", "type": "nominal"},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            }
+          ]
+        },
+        {
+          "layer": [
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FKEN%2Findicator%2FACCOUNT.T.D%3Fformat%3Dxml", "format": {"property": "data.data"}},
+    
+              "mark": {"type": "line", "point": true},
+              "height": 250,  
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal",
+                  "title": "Kenya",
+                  "axis": {
+                    "values": ["2011", "2017"],
+                    "labelAngle": -1,
+                    "labelOffset": 11,
+                    "labelOpacity": 0.7,
+                    "titleFontWeight": 400
+                  }
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "axis": {"ticks": false, "labels": false},
+                  "scale": {
+                    "domain": [0,100]
+                  },
+                  "title": null
+                },
+                "color": {"field": "indicator.id", "type": "nominal", "legend": null},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            },
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FKEN%2Findicator%2FFIN1.T.A%3Fformat%3Dxml", "format": {"property": "data.data"}},
+    
+              "mark": {"type": "line", "point": true},
+    
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative"
+                },
+                "color": {"field": "indicator.id", "type": "nominal"},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            }
+          ]     
+        },
+        {
+          "layer": [
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FBFA%2Findicator%2FACCOUNT.T.D%3Fformat%3Dxml", "format": {"property": "data.data"}},    
+              "mark": {"type": "line", "point": true},
+              "height": 250,  
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal",
+                  "title": ["Burkino", "Faso"],
+                  "axis": {
+                    "values": ["2011", "2017"],
+                    "labelAngle": -1,
+                    "labelOffset": 11,
+                    "labelOpacity": 0.7,
+                    "titleFontWeight": 400
+                  }
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "axis": {"ticks": false, "labels": false},
+                  "scale": {
+                    "domain": [0,100]
+                  },
+                  "title": null
+                },
+                "color": {"field": "indicator.id", "type": "nominal", "legend": null},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            },
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FBFA%2Findicator%2FFIN1.T.A%3Fformat%3Dxml", "format": {"property": "data.data"}},
+    
+              "mark": {"type": "line", "point": true},
+    
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "labels": "false"
+                },
+                "color": {"field": "indicator.id", "type": "nominal"},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            }
+          ]     
+        },
+        {
+          "layer": [
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FGAB%2Findicator%2FACCOUNT.T.D%3Fformat%3Dxml", "format": {"property": "data.data"}},   
+              "mark": {"type": "line", "point": true},
+              "height": 250,   
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal",
+                  "title": "Gabon",
+                  "axis": {
+                    "values": ["2011", "2017"],
+                    "labelAngle": -1,
+                    "labelOffset": 11,
+                    "labelOpacity": 0.7,
+                    "titleFontWeight": 400
+                  }
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "axis": {"ticks": false, "labels": false},
+                  "scale": {
+                    "domain": [0,100]
+                  },
+                  "title": null
+                },
+                "color": {"field": "indicator.id", "type": "nominal", "legend": null},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            },
+            {
+              "data": {"url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FGAB%2Findicator%2FFIN1.T.A%3Fformat%3Dxml", "format": {"property": "data.data"}},
+    
+              "mark": {"type": "line", "point": true},
+    
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "value",
+                  "type": "quantitative"
+                },
+                "color": {"field": "indicator.id", "type": "nominal"},
+                "tooltip": [{"field": "country.text", "title": "Region"}, {"field": "date", "title": "Year"},{"field": "value", "title": "Access", "format": "$.3"}]
+              }
+            }
+          ]     
+        }
+      ]
+    }
+    
+    
