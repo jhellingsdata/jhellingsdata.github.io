@@ -5,7 +5,7 @@
   
     "title": {
       "text": "Base Money - United Kingdom",
-      "subtitle": ["(£m) Notes & coins circulating outside Bank of England, SA, source: ONS"],
+      "subtitle": ["(£m) Notes & coins circulating outside Bank of England, SA. Source: ONS"],
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start"

@@ -21,7 +21,7 @@
   
     "title": {
       "text": "Mobile wallets propelling financial inclusion",
-      "subtitle": ["% of people 15+ with banking access, source: World Bank"],
+      "subtitle": ["% of people 15+ with banking access. Source: World Bank"],
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10
     },

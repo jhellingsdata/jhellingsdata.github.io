@@ -5,7 +5,7 @@
   
       "title": {
         "text": "Key interest rates in the UK",
-        "subtitle": "Bank base rate, mortgage, credit cards, Source: Bank of England",
+        "subtitle": "BoE base rate, mortgage, credit card (ascending). Source: Bank of England",
         "subtitleFontStyle":"italic",
         "subtitleFontSize":10,
         "anchor": "start",

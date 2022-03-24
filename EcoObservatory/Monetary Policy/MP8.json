@@ -7,7 +7,7 @@
 
   "title": {
     "text": "Key interest rates in the US",
-    "subtitle": "Fed funds rate, 30 year mortgage, credit cards, Source: FRED",
+    "subtitle": "Fed funds rate, 30 year mortgage, credit cards (ascending). Source: FRED",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",

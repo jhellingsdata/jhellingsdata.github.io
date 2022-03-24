@@ -3,7 +3,7 @@
     "description": "Unbanked by gender, achieved by layering male and female datasets, then grouping by country and offsetting bars. Also uses a locale hack to append a percentage sign to values already on the correct 0-100 scale (otherwise would x100)",
     "title": {
       "text": "Financial inclusion and gender equality",
-      "subtitle": "% of people 15+ with bank account, Source: World Bank",
+      "subtitle": "% of people 15+ with bank account. Source: World Bank",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",

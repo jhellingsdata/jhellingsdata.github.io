@@ -5,7 +5,7 @@
 
   "title": {
     "text": "Velocity of Money - United Kingdom",
-    "subtitle": ["Ratio of nominal GDP to mean quarterly M3 money, source: FRED"],
+    "subtitle": ["Ratio of nominal GDP to mean quarterly M3 money. Source: FRED"],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start"

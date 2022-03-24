@@ -5,7 +5,7 @@
 
   "title": {
     "text": "Velocity of Money - United States",
-    "subtitle": ["Ratio of nominal GDP/M2 Money, seasonally adjusted, source: FRED"],
+    "subtitle": ["Ratio of nominal GDP/M2 Money, seasonally adjusted. Source: FRED"],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start"
