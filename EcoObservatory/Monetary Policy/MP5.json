@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "description": "Velocity of M3 money UK, graph takes monthly M3 money data, calculates the quarterly mean, then extracts the temporaneous quarterly GDP values from another dataset. Had to employ a few tricks to get equivalent date formating on each dataset so they could be merged. Should update correctly as new monthly/quarterly data is released.",
+  "description": "Velocity of M3 money UK, graph takes monthly M3 money data, calculates the quarterly mean, then extracts the temporaneous quarterly GDP values from another dataset and calculates a rolling 4 quarter sum to get an annual figure, and then calculates Velocity. Had to employ a few tricks to get equivalent date formating on each dataset so they could be merged. Should update correctly as new monthly/quarterly data is released.",
 
   "title": {
     "text": "Velocity of Money - United Kingdom",
-    "subtitle": ["Ratio of quarterly nominal GDP to mean quarterly M3 money, source: FRED"],
+    "subtitle": ["Ratio of nominal GDP to mean quarterly M3 money, source: FRED"],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start"
@@ -52,9 +52,21 @@
       },
       "as": ["GDP"]
     },
-    {"calculate": "1000000*datum.GDP/datum.value", "as": "Velocity"},
+    {"filter": {"field": "GDP", "valid": true}},
+    {
+      "window": [
+        {
+          "field": "GDP",
+          "op": "sum",
+          "as": "GDP_annual"
+        }
+      ],
+      "frame": [-3, 0]
+    },
+    {"calculate": "1000000*datum.GDP_annual/datum.value", "as": "Velocity"},
     {"calculate": "datum.value/1000000", "as": "M3"},
-    {"filter": "datum.Velocity != 0"}
+    {"filter": "datum.datekey > '1987-07-01'"}
+    
   ],
 
 
@@ -78,7 +90,7 @@
           "type": "quantitative",
           "title": "",
           "scale": {
-            "domain": [0,0.5]
+            "domain": [0,2]
           },
           "axis": {
             "gridOpacity": 0.6,

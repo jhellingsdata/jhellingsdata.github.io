@@ -1,70 +1,84 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
 
-    "description": "FRED/OECD data covering Narrow and Broad money, note in May 2020 FRED adjusted the M1 calculation to include components previously only accounted for in broader money measures, and so causing a jump bringing the measures mostly in line",
+  "description": "OECD data accessed live through the FRED API covering Narrow and Broad money for the UK. Two datasets so data uses a layered line chart pulling data from each. Custom locale to show £ instead of $ (no other D3 option for £). Transparent points to make selecting tooltip easier.",
 
 
-    "title": {
-      "text": "Narrow and Broad Money for the United Kingdom",
-      "subtitle": "M1 and M3 Money Supply (£), Source: FRED",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
-
-  "config": {
-    "locale": {
-      "number": {
-        "decimal": ".",
-        "thousands": ",",
-        "grouping": [3],
-        "currency": ["£", ""]
-      }
-    },
-    "view": {"stroke": "transparent"}
+  "title": {
+    "text": "Narrow and Broad Money for the United Kingdom",
+    "subtitle": "M1 and M3 (Larger) Money Supply (£), Source: FRED",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
   },
 
-    "height": 300,
-    "width": 300,
-    
-    "encoding": {
-      "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
+"config": {
+  "locale": {
+    "number": {
+      "decimal": ".",
+      "thousands": ",",
+      "grouping": [3],
+      "currency": ["£ ", ""]
+    }
+  },
+  "view": {"stroke": "transparent"}
+},
 
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "title": null,
-        "axis": {
-          "grid": true,
-          "format": "$,s",
-          "formatType": "number",
-          "gridOpacity": 0.6,
-          "ticks": false,
-          "labelPadding": 5
+  "height": 300,
+  "width": 300,
+  
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
+
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "grid": true,
+        "format": "$,s",
+        "formatType": "number",
+        "gridOpacity": 0.6,
+        "ticks": false,
+        "labelPadding": 5
+    }}
+  },
+
+
+  "layer": [
+    
+    {"data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMANMM101GBM189S%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",            "format":{
+        "type": "json",
+        "property": "observations"
       }},
-      "tooltip": [
-        {"field": "date", "title": "Date", "type": "temporal"},
-        {"field": "value", "title": "Supply", "type": "quantitative", "format": "$.4s"}
-      ]
+      "mark": {"type":"line", "color":"olivedrab", "point": "transparent"},
+      "transform": [
+        {"calculate": "datum.value / 1000000", "as": "M1"}
+      ],
+      "encoding": {
+        "tooltip": [
+          {"field": "date", "title": "Date", "type": "temporal"},
+          {"field": "M1", "title": "M1 Money (£m)", "format": "$,.14"}
+        ]
+      }
     },
 
-
-    "layer": [
-      
-      {"data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMANMM101GBM189S%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",            "format":{
-          "type": "json",
-          "property": "observations"
-        }},
-        "mark": {"type":"line", "color":"olivedrab"}
-      },
-
-      {"data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMABMM301GBM189S%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",            "format":{
-          "type": "json",
-          "property": "observations"
-        }},
-        "mark": {"type":"line", "color":"darkolivegreen"}
+    {"data": {"url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMABMM301GBM189S%26api_key%3D838a40e4f5a37b6b4d8c9cfc4b1abaff%26file_type%3Djson",            "format":{
+        "type": "json",
+        "property": "observations"
+      }},
+      "mark": {"type":"line", "color":"darkolivegreen", "point":"transparent"},
+      "transform": [
+        {"calculate": "datum.value / 1000000", "as": "M3"}
+      ],
+      "encoding": {
+        "tooltip": [
+          {"field": "date", "title": "Date", "type": "temporal"},
+          {"field": "M3", "title": "M3 Money (£m)", "format": "$,.14"}
+        ]
       }
-    ]
+    }
+  ]
 }

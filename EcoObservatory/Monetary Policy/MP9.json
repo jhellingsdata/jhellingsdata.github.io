@@ -1,22 +1,20 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
-    "description": "World bank unbanked data from the global financial inclusion report, report covers 2011, 2014, 2017, but doesn't seem to have continued and have not found equivalent but newer data",
+    "description": "Layered bar chart with world average overlay. World bank unbanked data from the global financial inclusion report, report covers 2011, 2014, 2017, but doesn't seem to have continued and have not found equivalent but newer data.",
   
     "data": {
-      "url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FUSA%3BGBR%3BRUS%3BIND%3BCHN%3BNGA%2Findicator%2FFIN1.T.A%3Fformat%3Dxml",
+      "url": "https://api.factmaven.com/xml-to-json/?xml=https%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2FUSA%3BGBR%3BRUS%3BIND%3BCHN%3BNGA%3BWLD%2Findicator%2FFIN1.T.A%3Fformat%3Dxml",
       "format": {"property": "data.data"}
     },
-  
     "title": {
       "text": "Plugging in - a look at the unbanked",
-      "subtitle": "% of over 15s holding a bank account, source: World Bank",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
+      "subtitle": "% with bank account of over 15s, World average in red, source: World Bank",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
       "anchor": "start",
       "color": "black"
     },
-  
     "config": {
       "locale": {
         "number": {
@@ -29,75 +27,71 @@
       "view": {"stroke": "transparent"}
     },
   
-    "height": 300,
-    "width": 300,
-  
-    "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "title": null,
-        "axis":{
-          "grid": false
-        }
-      }
-    },
-  
-    "layer": [
+    "hconcat": [
       {
-        "encoding": {
-          "color": {
-            "field": "country.id",
-            "type": "nominal",
-            "legend": {"title": null, "orient": "none", "legendX": 200, "legendY": 210, "symbolSize": 55}
-          },
+        "columns": 3,
+        "facet": {
+          "field": "date",
+          "type": "temporal",
+          "timeUnit": "year",
+          "title": null
+        },
+        "spec": {
+          "layer": [
+            {
+              "transform": [
+                {"filter": "datum.country.id != 'WLD'"}
+              ],
+              "width": 87,
+              "height": 270,
+              "mark": "bar",
+              "encoding": {
+                "x": {
+                  "field": "country.id",
+                  "type": "nominal",
+                  "title": null,
+                  "sort": "-y"
+                },
   
-          "y": {
-            "field": "value",
-            "type": "quantitative",
-            "title": null,
-            "axis": {
-              "gridOpacity": 0.6,
-              "ticks": false,
-              "labelPadding": 5
+                "y": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "title": "Totale ricoveri in TI",
+                  "axis": {
+                    "ticks": false,
+                    "labelPadding": 5
+                  }
+                },
+                "tooltip": [
+                  {"field": "date", "type": "temporal", "title": "Year", "timeUnit": "year"},
+                  {"field": "country.text", "type": "nominal", "title": "Country"},
+                  {"field": "value", "type": "quantitative", "title": "Access", "format": "$.3"}
+                ],
+                "color": {
+                  "field": "country.id",
+                  "type": "nominal",
+                  "legend": null,
+                  "scale": {"scheme": "set2"}
+                }
+              }
             },
-            "scale": {
-              "domain": [10,100]
-          }}
-        },
-        "layer": [
-          {"mark": "line"},
-          {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
-        ]
-      },
-      {
-        "transform": [{"pivot": "country.text", "value": "value", "groupby": ["date"]}],
-        "mark": "rule",
-        "encoding": {
-          "opacity": {
-            "condition": {"value": 0.3, "param": "hover", "empty": false},
-            "value": 0
-          },
-          "tooltip": [
-            {"field": "United Kingdom", "type": "quantitative", "format": "$.3"},
-            {"field": "United States", "type": "quantitative", "format": "$.3"},
-            {"field": "China", "type": "quantitative", "format": "$.3"},
-            {"field": "Russian Federation", "type": "quantitative", "format": "$.3"},
-            {"field": "India", "type": "quantitative", "format": "$.3"},
-            {"field": "Nigeria", "type": "quantitative", "format": "$.3"}
+            {
+              "transform": [
+                {"filter": "datum.country.id === 'WLD'"}
+              ],       
+              "mark": {
+                "type": "rule",
+                "color": "#ee5555",
+                "strokeWidth": 2,
+                "strokeDash": [4, 2]
+              }, 
+  
+              "encoding": {
+                "y": {"field": "value", "type": "quantitative", "title": null}
+              }
+            }
           ]
-        },
-        "params": [{
-          "name": "hover",
-          "select": {
-            "type": "point",
-            "fields": ["date"],
-            "nearest": true,
-            "on": "mouseover",
-            "clear": "mouseout"
-          }
-        }]
+        }
       }
     ]
   }
-  
