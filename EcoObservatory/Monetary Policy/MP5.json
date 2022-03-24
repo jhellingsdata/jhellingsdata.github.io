@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "description": "Velocity of M3 money UK, graph takes monthly M3 money data, calculates the quarterly mean, then extracts the temporaneous quarterly GDP values from another dataset and calculates a rolling 4 quarter sum to get an annual figure, and then calculates Velocity. Had to employ a few tricks to get equivalent date formating on each dataset so they could be merged. Should update correctly as new monthly/quarterly data is released.",
+  "description": "Velocity of M3 money UK, graph takes monthly M3 money data, calculates the quarterly mean, then extracts the temporaneous quarterly GDP values from another dataset and calculates a rolling 4 quarter sum to get an annual figure, and finally calculates Velocity. Had to employ a few tricks to get equivalent date formating on each dataset so they could be merged. Should update correctly as new monthly/quarterly data is released.",
 
   "title": {
     "text": "Velocity of Money - United Kingdom",
@@ -114,7 +114,7 @@
         "tooltip": [
           {"field" : "quarter_end", "title": "Date", "timeUnit": "yearquarter"},
           {"field": "Velocity", "type": "quantitative", "title": "Velocity", "format": ".4"},
-          {"field": "GDP", "type": "quantitative", "title": "Nominal GDP £m", "format": ","},
+          {"field": "GDP_annual", "type": "quantitative", "title": "Nominal GDP £m", "format": ","},
           {"field": "M3", "type": "quantitative", "title": "M3 Money £m", "format": "7,"}
         ]
       },
