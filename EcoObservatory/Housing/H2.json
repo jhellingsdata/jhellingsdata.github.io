@@ -1,0 +1,77 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+    "description": "ONS data.",
+  
+  
+    "title": {
+      "text": "House Prices Outpace Inflation",
+      "subtitle": "Monthly values, indexed at 1990=100. Source: ONS",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"}
+    },
+  
+  
+    "height": 300,
+    "width": 300,
+    
+    "encoding": {
+      "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
+  
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": null,
+        "axis": {
+          "grid": true,
+          "gridOpacity": 0.6,
+          "ticks": false,
+          "labelPadding": 5
+      }}
+    },
+  
+  
+    "layer": [
+      
+      {"data": {"url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/chbf/dataset/mm23/data",            "format":{
+          "type": "json",
+          "property": "months"
+        }},
+        "mark": {"type":"line", "color":"#e2af50", "point": "transparent"},
+        "transform": [
+          {"filter": "datum.year > '1989'"},
+          {"calculate": "datum.value / 1.458", "as": "value"}
+        ],
+        "encoding": {
+          "tooltip": [
+            {"field": "date", "title": "Date", "type": "temporal"},
+            {"field": "value", "title": "Index", "format": ".4"}
+          ]
+        }
+      },
+  
+      {"data": {"url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/D7BT/dataset/mm23/data",            "format":{
+          "type": "json",
+          "property": "months"
+        }},
+        "mark": {"type":"line", "color":"#9b9bd8", "point":"transparent"},
+        "transform": [
+          {"filter": "datum.year > '1989'"},
+          {"calculate": "datum.value / 0.536", "as": "value"}
+        ],
+        "encoding": {
+          "tooltip": [
+            {"field": "date", "title": "Date", "type": "temporal"},
+            {"field": "value", "title": "Index", "format": ".4"}
+          ]
+        }
+      }
+    ]
+  }

@@ -1,0 +1,128 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "",
+  
+    "title": {
+      "text": "International housing market trends",
+      "subtitle": ["2015-2021 changes in real prices & price-to-income, 2015=100.", "Source: OECD"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"}
+    },
+   
+  
+      "width": 290,
+      "height": 250,
+  
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Housing/OECD_hprices.csv",
+      "format":{
+        "type": "csv"
+      }
+    }, 
+  
+    "transform": [
+      {"filter": {"field" : "LOCATION", "oneOf": ["GBR", "USA", "AUS", "OECD", "IRL", "NOR", "FRA", "KOR"]}},
+      {
+        "pivot": "SUBJECT",
+        "groupby": ["LOCATION", "TIME"],
+        "value": "Value"
+      },
+      {"calculate": "year(datum.TIME)", "as": "year"},
+      {"filter": {"field": "year", "oneOf": [2015, 2021]}}
+      
+  ],
+  
+"encoding": {
+    "y": {
+      "field": "REAL",
+      "type": "quantitative",
+      "scale": {"domain": [98, 150]},
+      "title": null
+    },
+    "x": {
+      "field": "LOCATION",
+      "type": "nominal",
+      "scale": {"domain":["USA", "IRL", "OECD", "AUS", "GBR", "FRA", "NOR", "KOR"]},
+      "title": null,
+      "axis": {
+        "offset": 0,
+        "ticks": false,
+        "minExtent": 70,
+        "domain": false,
+        "labelAngle": -35,
+        "labelOffset": 7
+      }
+    },
+    "shape": {"legend": {"orient": "top-right"}}
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {
+          "field": "LOCATION",
+          "type": "nominal"
+        },
+        "color": {"value": "lightgrey"}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "shape": "circle",
+        "filled": true
+      },
+      "encoding": {
+        "y": {
+          "field": "REAL",
+          "type": "quantitative",
+          "scale": {"domain": [98, 150]},
+          "title": null
+        },
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "scale": {
+            "domain": [2021],
+            "range": ["#db646f"]
+          },
+          "legend": null
+        },
+        "shape": {"datum": "Real price index"},
+        "size": {"value": 130},
+        "opacity": {"value": 1}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "y": {
+          "field": "PRICEINCOME",
+          "type": "quantitative",
+          "scale": {"domain": [98, 150]},
+          "title": null
+        },
+        "color": {
+          "field": "year",
+          "type": "ordinal",
+          "scale": {
+            "domain": [2021],
+            "range": ["#e6959c"]
+          },
+          "legend": null
+        },
+        "shape": {"datum": "Price-to-income index"},
+        "size": {"value": 60},
+        "opacity": {"value": 1}
+      }
+    }
+  ]
+}

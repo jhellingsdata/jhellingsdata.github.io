@@ -1,0 +1,115 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Note: data pre-1978 is a quarterly average summing to the annual figure given for a financial year. Decomposition of house building, shows dramatic decline in Thatcher era largely due to lack of building by Local Authorities, which hasn't been replaced by private enterprise",
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Housing/Eng_housingSupplyQ.csv", "format" :{"type": "csv"}
+    },
+  
+    "title": {
+      "text": "Quarterly House Building in England",
+      "subtitle": ["Split by Private Enterprise, Housing Associations and Local Authorites.", "Source: Gov.uk (DLUHC)"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"}
+    },
+  
+    "width":290,
+    "height":250,
+  
+    "transform": [
+      {"calculate": "year(datum.Date)", "as": "year"},
+      {"filter": "datum.year>=1970"}
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "timeUnit": "yearquarter",
+        "title": null
+      }
+    },
+  
+    "layer": [
+      {
+        "mark": {"type": "line", "interpolate": "monotone", "color":"#ff8b94", "point": "transparent"},
+        "encoding": {
+          "y": {
+            "field": "All",
+            "type": "quantitative",
+            "title": null
+          },
+          "tooltip": [
+            {"field": "Date", "type": "temporal", "timeUnit": "yearquarter", "title": "Period"},
+            {"field": "All", "type": "quantitative", "title": "Total Completed"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "line", "interpolate": "monotone", "color":"#fdaeb594", "point": "transparent", "strokeDash": [0]},
+        "encoding": {
+          "y": {
+            "field": "Private Enterprise",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "gridOpacity": 0.6,
+                "ticks": false,
+                "labelPadding": 5
+              } 
+          },
+          "tooltip": [
+            {"field": "Date", "type": "temporal", "timeUnit": "yearquarter", "title": "Period"},
+            {"field": "Private Enterprise", "type": "quantitative", "title": "By Private Enterprise"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "line", "interpolate": "monotone", "color":"#a8e6cf", "point": "transparent"},
+        "encoding": {
+          "y": {
+            "field": "Housing Associations",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "gridOpacity": 0.6,
+                "ticks": false,
+                "labelPadding": 5
+            }
+          },
+          "tooltip": [
+            {"field": "Date", "type": "temporal", "timeUnit": "yearquarter", "title": "Period"},
+            {"field": "Housing Associations", "type": "quantitative", "title": "By Housing Associations"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "line", "interpolate": "monotone", "color":"#ffd3b6", "point": "transparent"},
+        "encoding": {
+          "y": {
+            "field": "Local Authorities",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "gridOpacity": 0.6,
+                "ticks": false,
+                "labelPadding": 5
+            } 
+          },
+          "tooltip": [
+            {"field": "Date", "type": "temporal", "timeUnit": "yearquarter", "title": "Period"},
+            {"field": "Local Authorities", "type": "quantitative", "title": "By Local Authorities"}
+          ]
+        }
+      }
+    ]
+  }
+  

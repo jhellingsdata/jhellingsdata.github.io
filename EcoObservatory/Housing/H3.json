@@ -1,0 +1,83 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Data hosted on Github. Interactive highlight snaps to nearest data point",
+  
+    "title": {
+      "text": "V-shaped recovery for post-Covid housing market",
+      "subtitle": ["Monthly UK Mortgage Approvals. Source: BoE"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"}
+    },
+   
+  
+      "width": 285,
+      "height": 300,
+  
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Housing/boe_mortgages.csv"
+    },
+  
+    "encoding": {      
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "labelSeparation": 10
+        }
+      }
+    },
+  
+    "layer": [
+      {
+        "encoding": {
+          "y": {
+            "field": "Approvals",
+            "type": "quantitative",
+            "title": "",
+            "axis": {
+              "gridOpacity": 0.6,
+              "ticks": false,
+              "labelPadding": 5
+            }
+          }
+        },
+        "layer": [
+          {"mark": {"type": "line", "interpolate": "monotone", "color": "#004c4c", "opacity": 0.7}},
+          {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+        ]
+      },
+      {
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field" : "Date", "title": "Date", "timeUnit": "yearmonth"},
+            {"field": "Approvals", "type": "quantitative", "title": "Approvals"},
+            {"field": "Value_mi", "type": "quantitative", "title": "Value £m", "format": ","}
+          ]
+        },
+        "params": [{
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Date"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }]
+      }
+    ]
+  }

@@ -1,0 +1,90 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Housing Construction in England. New builds in England by region with selector to filter for each. Sourced from Gov.uk and put together by Department for Levelling Up Housing and Communities", 
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Housing/regions_housingSupply.csv",
+      "format": {
+        "type": "csv"
+      }
+    },
+  
+    "height": 280,
+    "width": 290,
+  
+    "title": {
+      "text": "Housing Building Across England",
+      "subtitle": "Completed new builds by region. Source: Gov.uk (DLUHC)",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "config": {
+        "view": {"stroke": "transparent"}
+      },
+    "mark": {"type": "bar", "width":10},
+    
+    "selection": {
+      "Region": {
+        "type": "single",
+        "fields": ["Region"],
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "East Midlands",
+            "East of England",
+            "London",
+            "North East",
+            "North West",
+            "South East",
+            "South West",
+            "West Midlands",
+            "Yorkshire and The Humber"
+          ],
+          "name": "Region"
+        }
+      }
+    },
+    "transform": [
+      {"timeUnit": "yearmonthdate", "field": "Date", "as": "date"},
+      {"timeUnit": "yearquarter", "field": "Date", "as": "quarter"},
+      {"filter": {"selection": "Region"}}
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "timeUnit": "year",
+        "title": null
+      },
+      "y": {
+        "field": "Completed",
+        "type": "quantitative",
+        "title": null,
+        "scale" : {"domain": [0, 220000]},
+        "axis": {
+          "grid": true,
+          "gridOpacity": 0.6,
+          "ticks": false,
+          "labelPadding": 5
+        } 
+      },
+         
+      "color": {
+        "field": "Region",
+        "type": "nominal",
+        "legend": null,
+        "scale": {"scheme": "magma"}
+      },
+      "tooltip": [
+        {"field": "Date", "type": "temporal", "timeUnit":"yearquarter", "title": "Period"},
+        {"field": "Region", "type": "nominal", "title": "Region"},
+        {"field": "Completed", "type": "quantitative", "title": "Completed in region"}
+      ]
+    }
+  }
+  

@@ -1,75 +1,96 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
-  
-    "description": "ONS data.",
-  
+    "description": "",
   
     "title": {
-      "text": "House Prices Outpace Inflation",
-      "subtitle": "Index: 100 = 1990",
+      "text": "Average house price across the UK",
+      "subtitle":"Mean sale price of any house type for each UK region. Source: ONS",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
-      "color": "black"
-    },
+      "color": "black"},
   
-    "view": {"stroke": "transparent"},
-  
-  
-    "height": 300,
-    "width": 300,
     
-    "encoding": {
-      "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
-  
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "title": null,
-        "axis": {
-          "grid": true,
-          "gridOpacity": 0.6,
-          "ticks": false,
-          "labelPadding": 5
-      }}
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Housing/regionalPrices.csv",
+      "format":{
+        "type": "csv"
+      }
     },
-  
-  
-    "layer": [
-      
-      {"data": {"url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/chbf/dataset/mm23/data",            "format":{
-          "type": "json",
-          "property": "months"
-        }},
-        "mark": {"type":"line", "color":"#e2af50", "point": "transparent"},
-        "transform": [
-          {"filter": "datum.year > '1989'"},
-          {"calculate": "datum.value / 1.458", "as": "value"}
-        ],
-        "encoding": {
-          "tooltip": [
-            {"field": "date", "title": "Date", "type": "temporal"},
-            {"field": "value", "title": "Index", "format": ".4"}
-          ]
+    "config": {
+      "locale": {
+        "number": {
+          "decimal": ".",
+          "thousands": ",",
+          "grouping": [3],
+          "currency": ["£ ", ""]
         }
       },
-  
-      {"data": {"url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/D7BT/dataset/mm23/data",            "format":{
-          "type": "json",
-          "property": "months"
-        }},
-        "mark": {"type":"line", "color":"#9b9bd8", "point":"transparent"},
-        "transform": [
-          {"filter": "datum.year > '1989'"},
-          {"calculate": "datum.value / 0.536", "as": "value"}
-        ],
-        "encoding": {
-          "tooltip": [
-            {"field": "date", "title": "Date", "type": "temporal"},
-            {"field": "value", "title": "Index", "format": ".4"}
-          ]
+      "view": {"stroke": "transparent"}
+    },
+      "selection": {
+        "Region": {
+          "type": "single",
+          "fields": ["Region"],
+          "bind": {
+            "input": "select",
+            "options": [
+              null,
+              "East Midlands",
+              "East of England",
+              "London",
+              "North East",
+              "North West",
+              "South East",
+              "South West",
+              "West Midlands",
+              "Yorkshire and The Humber",
+              "England",
+              "Northern Ireland",
+              "Scotland",
+              "Wales"
+            ],
+            "name": "Region"
+          }
         }
-      }
-    ]
+      },
+   
+    "transform": [
+      {"filter": {"selection": "Region"}}
+    ],
+    "height": 280,
+    "width": 290,
+   
+    "mark": {"type": "circle", "point": false},
+    
+    "encoding": {
+      
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}},
+   
+      "y": {
+        "field": "All",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}},
+  
+      "color": {
+        "field": "Region",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "title": null,
+        "legend": {"orient": "none", "symbolSize": 40, "labelFontSize": 10, "legendX": 8, "legendY": 10}
+      },
+      "tooltip": [
+        {"field": "Date", "type": "temporal", "title": "Year", "timeUnit": "year"},
+        {"field": "Region", "title": "Region"},
+        {"field": "New Build", "type": "quantitative", "title": "New Builds", "format": "$,.6"},
+        {"field": "Other", "type": "quantitative", "title": "Non-New Builds", "format": "$,.6"},
+        {"field": "First time buyers", "type": "quantitative", "title": "First time buyers", "format": "$,.6"},
+        {"field": "All", "type": "quantitative", "title": "Average", "format": "$,.6"}
+      ]
+  }
   }
