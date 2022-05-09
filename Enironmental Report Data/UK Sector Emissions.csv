@@ -1,0 +1,321 @@
+﻿Sector,Year,Emissions
+Power stations,1990,203.01
+Power stations,1991,199.60
+Power stations,1992,187.58
+Power stations,1993,170.26
+Power stations,1994,166.06
+Power stations,1995,162.96
+Power stations,1996,162.65
+Power stations,1997,150.15
+Power stations,1998,155.27
+Power stations,1999,147.23
+Power stations,2000,158.61
+Power stations,2001,169.36
+Power stations,2002,165.03
+Power stations,2003,174.01
+Power stations,2004,173.68
+Power stations,2005,172.93
+Power stations,2006,181.72
+Power stations,2007,177.53
+Power stations,2008,172.45
+Power stations,2009,150.78
+Power stations,2010,157.03
+Power stations,2011,144.30
+Power stations,2012,158.14
+Power stations,2013,147.15
+Power stations,2014,124.01
+Power stations,2015,103.89
+Power stations,2016,82.10
+Power stations,2017,72.15
+Power stations,2018,65.76
+Power stations,2019,57.79
+Power stations,2020,49.52
+Power stations,2021,54.09
+Energy supply,1990,40.64
+Energy supply,1991,40.79
+Energy supply,1992,42.06
+Energy supply,1993,43.89
+Energy supply,1994,44.66
+Energy supply,1995,46.62
+Energy supply,1996,48.39
+Energy supply,1997,48.57
+Energy supply,1998,49.32
+Energy supply,1999,46.59
+Energy supply,2000,46.46
+Energy supply,2001,46.86
+Energy supply,2002,47.79
+Energy supply,2003,46.04
+Energy supply,2004,44.71
+Energy supply,2005,46.02
+Energy supply,2006,42.34
+Energy supply,2007,41.65
+Energy supply,2008,40.46
+Energy supply,2009,39.08
+Energy supply,2010,40.09
+Energy supply,2011,38.38
+Energy supply,2012,34.85
+Energy supply,2013,34.08
+Energy supply,2014,32.74
+Energy supply,2015,33.48
+Energy supply,2016,32.92
+Energy supply,2017,32.49
+Energy supply,2018,31.74
+Energy supply,2019,31.54
+Energy supply,2020,28.65
+Energy supply,2021,26.65
+Business,1990,111.30
+Business,1991,116.88
+Business,1992,113.74
+Business,1993,111.85
+Business,1994,110.83
+Business,1995,108.45
+Business,1996,110.46
+Business,1997,106.97
+Business,1998,106.33
+Business,1999,109.24
+Business,2000,108.88
+Business,2001,106.29
+Business,2002,95.42
+Business,2003,98.08
+Business,2004,97.45
+Business,2005,97.23
+Business,2006,94.36
+Business,2007,92.36
+Business,2008,89.70
+Business,2009,76.48
+Business,2010,78.18
+Business,2011,71.60
+Business,2012,72.96
+Business,2013,73.23
+Business,2014,71.00
+Business,2015,69.69
+Business,2016,67.18
+Business,2017,67.60
+Business,2018,66.93
+Business,2019,64.57
+Business,2020,61.46
+Business,2021,65.09
+Transport,1990,125.37
+Transport,1991,123.57
+Transport,1992,124.84
+Transport,1993,126.17
+Transport,1994,127.40
+Transport,1995,126.78
+Transport,1996,131.23
+Transport,1997,132.27
+Transport,1998,131.53
+Transport,1999,132.64
+Transport,2000,130.97
+Transport,2001,130.66
+Transport,2002,133.29
+Transport,2003,132.51
+Transport,2004,133.55
+Transport,2005,134.28
+Transport,2006,134.39
+Transport,2007,135.96
+Transport,2008,130.07
+Transport,2009,125.18
+Transport,2010,123.36
+Transport,2011,121.17
+Transport,2012,120.19
+Transport,2013,118.76
+Transport,2014,120.08
+Transport,2015,122.16
+Transport,2016,124.50
+Transport,2017,124.71
+Transport,2018,123.07
+Transport,2019,121.03
+Transport,2020,97.74
+Transport,2021,107.53
+Public,1990,13.26
+Public,1991,14.18
+Public,1992,14.81
+Public,1993,13.44
+Public,1994,13.16
+Public,1995,13.10
+Public,1996,14.04
+Public,1997,13.74
+Public,1998,12.77
+Public,1999,12.76
+Public,2000,12.03
+Public,2001,12.16
+Public,2002,10.28
+Public,2003,10.22
+Public,2004,11.15
+Public,2005,11.13
+Public,2006,10.07
+Public,2007,9.39
+Public,2008,9.71
+Public,2009,8.85
+Public,2010,9.49
+Public,2011,7.98
+Public,2012,8.91
+Public,2013,9.11
+Public,2014,7.77
+Public,2015,7.96
+Public,2016,8.04
+Public,2017,7.66
+Public,2018,7.73
+Public,2019,7.49
+Public,2020,7.42
+Public,2021,7.89
+Residential,1990,78.19
+Residential,1991,86.91
+Residential,1992,84.30
+Residential,1993,88.32
+Residential,1994,84.14
+Residential,1995,79.80
+Residential,1996,90.99
+Residential,1997,83.88
+Residential,1998,85.77
+Residential,1999,85.58
+Residential,2000,85.80
+Residential,2001,88.09
+Residential,2002,84.71
+Residential,2003,85.51
+Residential,2004,87.17
+Residential,2005,82.68
+Residential,2006,80.07
+Residential,2007,76.53
+Residential,2008,78.45
+Residential,2009,75.24
+Residential,2010,84.72
+Residential,2011,67.52
+Residential,2012,73.90
+Residential,2013,74.72
+Residential,2014,62.22
+Residential,2015,64.75
+Residential,2016,66.05
+Residential,2017,63.82
+Residential,2018,66.02
+Residential,2019,63.47
+Residential,2020,64.36
+Residential,2021,68.09
+Agriculture,1990,6.48
+Agriculture,1991,6.52
+Agriculture,1992,6.47
+Agriculture,1993,6.08
+Agriculture,1994,6.54
+Agriculture,1995,6.50
+Agriculture,1996,6.62
+Agriculture,1997,5.80
+Agriculture,1998,6.05
+Agriculture,1999,6.17
+Agriculture,2000,5.48
+Agriculture,2001,5.36
+Agriculture,2002,5.50
+Agriculture,2003,6.21
+Agriculture,2004,6.19
+Agriculture,2005,6.13
+Agriculture,2006,5.88
+Agriculture,2007,5.65
+Agriculture,2008,5.49
+Agriculture,2009,5.41
+Agriculture,2010,5.38
+Agriculture,2011,5.55
+Agriculture,2012,5.44
+Agriculture,2013,5.17
+Agriculture,2014,5.54
+Agriculture,2015,5.45
+Agriculture,2016,5.71
+Agriculture,2017,5.67
+Agriculture,2018,5.76
+Agriculture,2019,6.03
+Agriculture,2020,5.51
+Agriculture,2021,5.51
+Industrial processes,1990,19.89
+Industrial processes,1991,17.17
+Industrial processes,1992,16.19
+Industrial processes,1993,15.81
+Industrial processes,1994,17.60
+Industrial processes,1995,18.29
+Industrial processes,1996,18.61
+Industrial processes,1997,17.80
+Industrial processes,1998,17.79
+Industrial processes,1999,17.91
+Industrial processes,2000,17.32
+Industrial processes,2001,16.00
+Industrial processes,2002,15.11
+Industrial processes,2003,15.99
+Industrial processes,2004,16.41
+Industrial processes,2005,16.73
+Industrial processes,2006,15.89
+Industrial processes,2007,17.16
+Industrial processes,2008,15.49
+Industrial processes,2009,10.12
+Industrial processes,2010,10.76
+Industrial processes,2011,10.30
+Industrial processes,2012,10.12
+Industrial processes,2013,12.35
+Industrial processes,2014,12.42
+Industrial processes,2015,12.12
+Industrial processes,2016,10.07
+Industrial processes,2017,10.38
+Industrial processes,2018,9.78
+Industrial processes,2019,9.86
+Industrial processes,2020,9.17
+Industrial processes,2021,9.35
+Waste management,1990,1.36
+Waste management,1991,1.32
+Waste management,1992,1.32
+Waste management,1993,1.27
+Waste management,1994,1.08
+Waste management,1995,1.04
+Waste management,1996,1.05
+Waste management,1997,0.64
+Waste management,1998,0.65
+Waste management,1999,0.60
+Waste management,2000,0.62
+Waste management,2001,0.57
+Waste management,2002,0.55
+Waste management,2003,0.54
+Waste management,2004,0.52
+Waste management,2005,0.47
+Waste management,2006,0.31
+Waste management,2007,0.39
+Waste management,2008,0.33
+Waste management,2009,0.30
+Waste management,2010,0.29
+Waste management,2011,0.27
+Waste management,2012,0.26
+Waste management,2013,0.26
+Waste management,2014,0.27
+Waste management,2015,0.25
+Waste management,2016,0.26
+Waste management,2017,0.26
+Waste management,2018,0.24
+Waste management,2019,0.24
+Waste management,2020,0.25
+Waste management,2021,0.25
+Land use and forestry,1990,5.92
+Land use and forestry,1991,5.42
+Land use and forestry,1992,4.62
+Land use and forestry,1993,4.04
+Land use and forestry,1994,3.64
+Land use and forestry,1995,3.66
+Land use and forestry,1996,2.68
+Land use and forestry,1997,2.14
+Land use and forestry,1998,1.38
+Land use and forestry,1999,1.54
+Land use and forestry,2000,1.28
+Land use and forestry,2001,0.67
+Land use and forestry,2002,-0.12
+Land use and forestry,2003,-0.30
+Land use and forestry,2004,-1.08
+Land use and forestry,2005,-1.44
+Land use and forestry,2006,-1.81
+Land use and forestry,2007,-2.42
+Land use and forestry,2008,-3.08
+Land use and forestry,2009,-3.12
+Land use and forestry,2010,-3.18
+Land use and forestry,2011,-3.79
+Land use and forestry,2012,-3.56
+Land use and forestry,2013,-3.61
+Land use and forestry,2014,-3.84
+Land use and forestry,2015,-3.55
+Land use and forestry,2016,-3.44
+Land use and forestry,2017,-3.63
+Land use and forestry,2018,-3.02
+Land use and forestry,2019,-2.69
+Land use and forestry,2020,-2.99
+Land use and forestry,2021,-2.99
