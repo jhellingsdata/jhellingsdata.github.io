@@ -1,0 +1,73 @@
+﻿Year,Technology,Capacity,Generated,Share
+2010,Onshore Wind,4080,7225.97,1.89
+2011,Onshore Wind,4758,10813.95,2.94
+2012,Onshore Wind,6035,12243.95,3.36
+2013,Onshore Wind,7586,16925.38,4.72
+2014,Onshore Wind,8573,18554.65,5.49
+2015,Onshore Wind,9212.24,22851.99,6.74
+2016,Onshore Wind,10832.53,20753.68,6.12
+2017,Onshore Wind,12597.15,28725.23,8.49
+2018,Onshore Wind,13424.85,30382.41,9.13
+2019,Onshore Wind,13993.66,31820.01,9.83
+2020,Onshore Wind,14101.94,34688.05,11.12
+2021,Onshore Wind,14474.46,29018.27,9.37
+2010,Offshore Wind,1341,3059.67,0.8
+2011,Offshore Wind,1838,5149.03,1.4
+2012,Offshore Wind,2995,7603.17,2.09
+2013,Offshore Wind,3696,11471.78,3.2
+2014,Offshore Wind,4501,13404.59,3.96
+2015,Offshore Wind,5093.5,17422.74,5.14
+2016,Offshore Wind,5293.4,16405.74,4.84
+2017,Offshore Wind,6987.85,20915.92,6.18
+2018,Offshore Wind,8180.5,26525.2,7.97
+2019,Offshore Wind,9888.3,31975.15,9.87
+2020,Offshore Wind,10382.85,40681.09,13.04
+2021,Offshore Wind,11255.68,35441.24,11.44
+2010,Wave and tidal,4,1.89,0
+2011,Wave and tidal,4,0.94,0
+2012,Wave and tidal,9,4.21,0
+2013,Wave and tidal,8,4.76,0
+2014,Wave and tidal,9,2.22,0
+2015,Wave and tidal,8.94,2,0
+2016,Wave and tidal,13.49,0.01,0
+2017,Wave and tidal,18.4,4.19,0
+2018,Wave and tidal,20.4,9.3,0
+2019,Wave and tidal,22.4,13.99,0
+2020,Wave and tidal,22.4,11.28,0
+2021,Wave and tidal,22.4,4.54,0
+2010,Solar photovoltaics,95,40.28,0.01
+2011,Solar photovoltaics,1000,243.66,0.07
+2012,Solar photovoltaics,1754,1353.76,0.37
+2013,Solar photovoltaics,2937,2010.26,0.56
+2014,Solar photovoltaics,5528,4054.07,1.2
+2015,Solar photovoltaics,9601.22,7532.86,2.22
+2016,Solar photovoltaics,11914.02,10395.13,3.06
+2017,Solar photovoltaics,12760.02,11457.24,3.39
+2018,Solar photovoltaics,13059.07,12668.4,3.81
+2019,Solar photovoltaics,13224.03,12580.09,3.89
+2020,Solar photovoltaics,13462.48,13157.99,4.22
+2021,Solar photovoltaics,13799.02,12384.41,4
+2010,Hydro,1647,3591.37,0.94
+2011,Hydro,1679,5691.74,1.55
+2012,Hydro,1693,5309.64,1.46
+2013,Hydro,1709,4701.48,1.31
+2014,Hydro,1730,5887.8,1.74
+2015,Hydro,1776.98,6297.27,1.86
+2016,Hydro,1832.52,5370.39,1.58
+2017,Hydro,1869.64,5881.86,1.74
+2018,Hydro,1877.19,5443.28,1.64
+2019,Hydro,1877.95,5846.27,1.81
+2020,Hydro,1875.74,6753.92,2.16
+2021,Hydro,1880.25,5014.87,1.62
+2010,Bioenergy and waste,2089,12261.09,3.21
+2011,Bioenergy and waste,3103,13312.88,3.61
+2012,Bioenergy and waste,3165,14733.78,4.06
+2013,Bioenergy and waste,4025,18100.11,5.06
+2014,Bioenergy and waste,4580,22619,6.69
+2015,Bioenergy and waste,5272.89,29256.97,8.64
+2016,Bioenergy and waste,5764.78,30065.54,8.87
+2017,Bioenergy and waste,6059.5,31894.18,9.44
+2018,Bioenergy and waste,7566.25,34966.82,10.51
+2019,Bioenergy and waste,7825.58,37305.43,11.52
+2020,Bioenergy and waste,7968.03,39311,12.6
+2021,Bioenergy and waste,8006.73,40002.46,12.9
