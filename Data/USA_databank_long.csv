@@ -101,57 +101,57 @@ Washington,WA,53,Real GDP,578519.7
 West Virginia,WV,54,Real GDP,71130.2
 Wisconsin,WI,55,Real GDP,310909.7
 Wyoming,WY,56,Real GDP,35899.8
-Alabama,AL,1,Person Income per Capita,49769.0
-Alaska,AK,2,Person Income per Capita,65813.0
-Arizona,AZ,4,Person Income per Capita,55487.0
-Arkansas,AR,5,Person Income per Capita,50625.0
-California,CA,6,Person Income per Capita,76614.0
-Colorado,CO,8,Person Income per Capita,70706.0
-Connecticut,CT,9,Person Income per Capita,83294.0
-Delaware,DE,10,Person Income per Capita,59931.0
-District of Columbia,DC,11,Person Income per Capita,96477.0
-Florida,FL,12,Person Income per Capita,62270.0
-Georgia,GA,13,Person Income per Capita,55786.0
-Hawaii,HI,15,Person Income per Capita,60947.0
-Idaho,ID,16,Person Income per Capita,52369.0
-Illinois,IL,17,Person Income per Capita,67244.0
-Indiana,IN,18,Person Income per Capita,56497.0
-Iowa,IA,19,Person Income per Capita,57163.0
-Kansas,KS,20,Person Income per Capita,58924.0
-Kentucky,KY,21,Person Income per Capita,51266.0
-Louisiana,LA,22,Person Income per Capita,54217.0
-Maine,ME,23,Person Income per Capita,58484.0
-Maryland,MD,24,Person Income per Capita,69817.0
-Massachusetts,MA,25,Person Income per Capita,83653.0
-Michigan,MI,26,Person Income per Capita,56494.0
-Minnesota,MN,27,Person Income per Capita,66280.0
-Mississippi,MS,28,Person Income per Capita,45881.0
-Missouri,MO,29,Person Income per Capita,55325.0
-Montana,MT,30,Person Income per Capita,56949.0
-Nebraska,NE,31,Person Income per Capita,61205.0
-Nevada,NV,32,Person Income per Capita,60213.0
-New Hampshire,NH,33,Person Income per Capita,73200.0
-New Jersey,NJ,34,Person Income per Capita,77016.0
-New Mexico,NM,35,Person Income per Capita,50311.0
-New York,NY,36,Person Income per Capita,76837.0
-North Carolina,NC,37,Person Income per Capita,56173.0
-North Dakota,ND,38,Person Income per Capita,64524.0
-Ohio,OH,39,Person Income per Capita,56879.0
-Oklahoma,OK,40,Person Income per Capita,53870.0
-Oregon,OR,41,Person Income per Capita,61596.0
-Pennsylvania,PA,42,Person Income per Capita,64279.0
-Rhode Island,RI,44,Person Income per Capita,64376.0
-South Carolina,SC,45,Person Income per Capita,52467.0
-South Dakota,SD,46,Person Income per Capita,64462.0
-Tennessee,TN,47,Person Income per Capita,56560.0
-Texas,TX,48,Person Income per Capita,59865.0
-Utah,UT,49,Person Income per Capita,56019.0
-Vermont,VT,50,Person Income per Capita,61882.0
-Virginia,VA,51,Person Income per Capita,66305.0
-Washington,WA,53,Person Income per Capita,73775.0
-West Virginia,WV,54,Person Income per Capita,48488.0
-Wisconsin,WI,55,Person Income per Capita,59626.0
-Wyoming,WY,56,Person Income per Capita,69666.0
+Alabama,AL,1,Personal Income per capita,49769.0
+Alaska,AK,2,Personal Income per capita,65813.0
+Arizona,AZ,4,Personal Income per capita,55487.0
+Arkansas,AR,5,Personal Income per capita,50625.0
+California,CA,6,Personal Income per capita,76614.0
+Colorado,CO,8,Personal Income per capita,70706.0
+Connecticut,CT,9,Personal Income per capita,83294.0
+Delaware,DE,10,Personal Income per capita,59931.0
+District of Columbia,DC,11,Personal Income per capita,96477.0
+Florida,FL,12,Personal Income per capita,62270.0
+Georgia,GA,13,Personal Income per capita,55786.0
+Hawaii,HI,15,Personal Income per capita,60947.0
+Idaho,ID,16,Personal Income per capita,52369.0
+Illinois,IL,17,Personal Income per capita,67244.0
+Indiana,IN,18,Personal Income per capita,56497.0
+Iowa,IA,19,Personal Income per capita,57163.0
+Kansas,KS,20,Personal Income per capita,58924.0
+Kentucky,KY,21,Personal Income per capita,51266.0
+Louisiana,LA,22,Personal Income per capita,54217.0
+Maine,ME,23,Personal Income per capita,58484.0
+Maryland,MD,24,Personal Income per capita,69817.0
+Massachusetts,MA,25,Personal Income per capita,83653.0
+Michigan,MI,26,Personal Income per capita,56494.0
+Minnesota,MN,27,Personal Income per capita,66280.0
+Mississippi,MS,28,Personal Income per capita,45881.0
+Missouri,MO,29,Personal Income per capita,55325.0
+Montana,MT,30,Personal Income per capita,56949.0
+Nebraska,NE,31,Personal Income per capita,61205.0
+Nevada,NV,32,Personal Income per capita,60213.0
+New Hampshire,NH,33,Personal Income per capita,73200.0
+New Jersey,NJ,34,Personal Income per capita,77016.0
+New Mexico,NM,35,Personal Income per capita,50311.0
+New York,NY,36,Personal Income per capita,76837.0
+North Carolina,NC,37,Personal Income per capita,56173.0
+North Dakota,ND,38,Personal Income per capita,64524.0
+Ohio,OH,39,Personal Income per capita,56879.0
+Oklahoma,OK,40,Personal Income per capita,53870.0
+Oregon,OR,41,Personal Income per capita,61596.0
+Pennsylvania,PA,42,Personal Income per capita,64279.0
+Rhode Island,RI,44,Personal Income per capita,64376.0
+South Carolina,SC,45,Personal Income per capita,52467.0
+South Dakota,SD,46,Personal Income per capita,64462.0
+Tennessee,TN,47,Personal Income per capita,56560.0
+Texas,TX,48,Personal Income per capita,59865.0
+Utah,UT,49,Personal Income per capita,56019.0
+Vermont,VT,50,Personal Income per capita,61882.0
+Virginia,VA,51,Personal Income per capita,66305.0
+Washington,WA,53,Personal Income per capita,73775.0
+West Virginia,WV,54,Personal Income per capita,48488.0
+Wisconsin,WI,55,Personal Income per capita,59626.0
+Wyoming,WY,56,Personal Income per capita,69666.0
 Alabama,AL,1,Population,5039.877
 Alaska,AK,2,Population,732.673
 Arizona,AZ,4,Population,7276.316
@@ -305,108 +305,108 @@ Washington,WA,53,Median Household Income,87648.0
 West Virginia,WV,54,Median Household Income,46836.0
 Wisconsin,WI,55,Median Household Income,69943.0
 Wyoming,WY,56,Median Household Income,71052.0
-Alabama,AL,1,High School Graduates,87.9
-Alaska,AK,2,High School Graduates,93.3
-Arizona,AZ,4,High School Graduates,89.0
-Arkansas,AR,5,High School Graduates,88.7
-California,CA,6,High School Graduates,84.4
-Colorado,CO,8,High School Graduates,92.4
-Connecticut,CT,9,High School Graduates,91.1
-Delaware,DE,10,High School Graduates,91.4
-District of Columbia,DC,11,High School Graduates,92.8
-Florida,FL,12,High School Graduates,89.8
-Georgia,GA,13,High School Graduates,89.0
-Hawaii,HI,15,High School Graduates,92.9
-Idaho,ID,16,High School Graduates,91.3
-Illinois,IL,17,High School Graduates,90.2
-Indiana,IN,18,High School Graduates,90.6
-Iowa,IA,19,High School Graduates,93.3
-Kansas,KS,20,High School Graduates,91.9
-Kentucky,KY,21,High School Graduates,88.0
-Louisiana,LA,22,High School Graduates,86.7
-Maine,ME,23,High School Graduates,94.5
-Maryland,MD,24,High School Graduates,91.1
-Massachusetts,MA,25,High School Graduates,91.1
-Michigan,MI,26,High School Graduates,92.0
-Minnesota,MN,27,High School Graduates,94.1
-Mississippi,MS,28,High School Graduates,86.5
-Missouri,MO,29,High School Graduates,91.6
-Montana,MT,30,High School Graduates,94.4
-Nebraska,NE,31,High School Graduates,92.2
-Nevada,NV,32,High School Graduates,87.2
-New Hampshire,NH,33,High School Graduates,94.4
-New Jersey,NJ,34,High School Graduates,91.0
-New Mexico,NM,35,High School Graduates,87.5
-New York,NY,36,High School Graduates,88.0
-North Carolina,NC,37,High School Graduates,89.7
-North Dakota,ND,38,High School Graduates,93.6
-Ohio,OH,39,High School Graduates,91.7
-Oklahoma,OK,40,High School Graduates,88.7
-Oregon,OR,41,High School Graduates,91.9
-Pennsylvania,PA,42,High School Graduates,91.9
-Rhode Island,RI,44,High School Graduates,89.1
-South Carolina,SC,45,High School Graduates,89.6
-South Dakota,SD,46,High School Graduates,93.1
-Tennessee,TN,47,High School Graduates,89.7
-Texas,TX,48,High School Graduates,85.4
-Utah,UT,49,High School Graduates,93.2
-Vermont,VT,50,High School Graduates,94.5
-Virginia,VA,51,High School Graduates,91.4
-Washington,WA,53,High School Graduates,92.3
-West Virginia,WV,54,High School Graduates,88.8
-Wisconsin,WI,55,High School Graduates,93.3
-Wyoming,WY,56,High School Graduates,93.6
-Alabama,AL,1,Bachelor Degrees,27.4
-Alaska,AK,2,Bachelor Degrees,32.8
-Arizona,AZ,4,Bachelor Degrees,32.4
-Arkansas,AR,5,Bachelor Degrees,25.3
-California,CA,6,Bachelor Degrees,36.2
-Colorado,CO,8,Bachelor Degrees,44.4
-Connecticut,CT,9,Bachelor Degrees,42.1
-Delaware,DE,10,Bachelor Degrees,35.6
-District of Columbia,DC,11,Bachelor Degrees,63.0
-Florida,FL,12,Bachelor Degrees,33.2
-Georgia,GA,13,Bachelor Degrees,34.6
-Hawaii,HI,15,Bachelor Degrees,35.3
-Idaho,ID,16,Bachelor Degrees,30.7
-Illinois,IL,17,Bachelor Degrees,37.1
-Indiana,IN,18,Bachelor Degrees,28.9
-Iowa,IA,19,Bachelor Degrees,30.5
-Kansas,KS,20,Bachelor Degrees,35.4
-Kentucky,KY,21,Bachelor Degrees,27.0
-Louisiana,LA,22,Bachelor Degrees,26.4
-Maine,ME,23,Bachelor Degrees,36.0
-Maryland,MD,24,Bachelor Degrees,42.5
-Massachusetts,MA,25,Bachelor Degrees,46.6
-Michigan,MI,26,Bachelor Degrees,31.7
-Minnesota,MN,27,Bachelor Degrees,38.9
-Mississippi,MS,28,Bachelor Degrees,24.8
-Missouri,MO,29,Bachelor Degrees,31.7
-Montana,MT,30,Bachelor Degrees,34.8
-Nebraska,NE,31,Bachelor Degrees,34.4
-Nevada,NV,32,Bachelor Degrees,27.6
-New Hampshire,NH,33,Bachelor Degrees,40.2
-New Jersey,NJ,34,Bachelor Degrees,43.1
-New Mexico,NM,35,Bachelor Degrees,30.1
-New York,NY,36,Bachelor Degrees,39.9
-North Carolina,NC,37,Bachelor Degrees,34.9
-North Dakota,ND,38,Bachelor Degrees,31.7
-Ohio,OH,39,Bachelor Degrees,30.7
-Oklahoma,OK,40,Bachelor Degrees,27.9
-Oregon,OR,41,Bachelor Degrees,36.3
-Pennsylvania,PA,42,Bachelor Degrees,34.5
-Rhode Island,RI,44,Bachelor Degrees,36.5
-South Carolina,SC,45,Bachelor Degrees,31.5
-South Dakota,SD,46,Bachelor Degrees,31.7
-Tennessee,TN,47,Bachelor Degrees,30.5
-Texas,TX,48,Bachelor Degrees,33.1
-Utah,UT,49,Bachelor Degrees,36.8
-Vermont,VT,50,Bachelor Degrees,44.4
-Virginia,VA,51,Bachelor Degrees,41.8
-Washington,WA,53,Bachelor Degrees,39.0
-West Virginia,WV,54,Bachelor Degrees,24.1
-Wisconsin,WI,55,Bachelor Degrees,32.5
-Wyoming,WY,56,Bachelor Degrees,29.2
+Alabama,AL,1,High School Graduate Rate,87.9
+Alaska,AK,2,High School Graduate Rate,93.3
+Arizona,AZ,4,High School Graduate Rate,89.0
+Arkansas,AR,5,High School Graduate Rate,88.7
+California,CA,6,High School Graduate Rate,84.4
+Colorado,CO,8,High School Graduate Rate,92.4
+Connecticut,CT,9,High School Graduate Rate,91.1
+Delaware,DE,10,High School Graduate Rate,91.4
+District of Columbia,DC,11,High School Graduate Rate,92.8
+Florida,FL,12,High School Graduate Rate,89.8
+Georgia,GA,13,High School Graduate Rate,89.0
+Hawaii,HI,15,High School Graduate Rate,92.9
+Idaho,ID,16,High School Graduate Rate,91.3
+Illinois,IL,17,High School Graduate Rate,90.2
+Indiana,IN,18,High School Graduate Rate,90.6
+Iowa,IA,19,High School Graduate Rate,93.3
+Kansas,KS,20,High School Graduate Rate,91.9
+Kentucky,KY,21,High School Graduate Rate,88.0
+Louisiana,LA,22,High School Graduate Rate,86.7
+Maine,ME,23,High School Graduate Rate,94.5
+Maryland,MD,24,High School Graduate Rate,91.1
+Massachusetts,MA,25,High School Graduate Rate,91.1
+Michigan,MI,26,High School Graduate Rate,92.0
+Minnesota,MN,27,High School Graduate Rate,94.1
+Mississippi,MS,28,High School Graduate Rate,86.5
+Missouri,MO,29,High School Graduate Rate,91.6
+Montana,MT,30,High School Graduate Rate,94.4
+Nebraska,NE,31,High School Graduate Rate,92.2
+Nevada,NV,32,High School Graduate Rate,87.2
+New Hampshire,NH,33,High School Graduate Rate,94.4
+New Jersey,NJ,34,High School Graduate Rate,91.0
+New Mexico,NM,35,High School Graduate Rate,87.5
+New York,NY,36,High School Graduate Rate,88.0
+North Carolina,NC,37,High School Graduate Rate,89.7
+North Dakota,ND,38,High School Graduate Rate,93.6
+Ohio,OH,39,High School Graduate Rate,91.7
+Oklahoma,OK,40,High School Graduate Rate,88.7
+Oregon,OR,41,High School Graduate Rate,91.9
+Pennsylvania,PA,42,High School Graduate Rate,91.9
+Rhode Island,RI,44,High School Graduate Rate,89.1
+South Carolina,SC,45,High School Graduate Rate,89.6
+South Dakota,SD,46,High School Graduate Rate,93.1
+Tennessee,TN,47,High School Graduate Rate,89.7
+Texas,TX,48,High School Graduate Rate,85.4
+Utah,UT,49,High School Graduate Rate,93.2
+Vermont,VT,50,High School Graduate Rate,94.5
+Virginia,VA,51,High School Graduate Rate,91.4
+Washington,WA,53,High School Graduate Rate,92.3
+West Virginia,WV,54,High School Graduate Rate,88.8
+Wisconsin,WI,55,High School Graduate Rate,93.3
+Wyoming,WY,56,High School Graduate Rate,93.6
+Alabama,AL,1,Bachelor's Degree Rate,27.4
+Alaska,AK,2,Bachelor's Degree Rate,32.8
+Arizona,AZ,4,Bachelor's Degree Rate,32.4
+Arkansas,AR,5,Bachelor's Degree Rate,25.3
+California,CA,6,Bachelor's Degree Rate,36.2
+Colorado,CO,8,Bachelor's Degree Rate,44.4
+Connecticut,CT,9,Bachelor's Degree Rate,42.1
+Delaware,DE,10,Bachelor's Degree Rate,35.6
+District of Columbia,DC,11,Bachelor's Degree Rate,63.0
+Florida,FL,12,Bachelor's Degree Rate,33.2
+Georgia,GA,13,Bachelor's Degree Rate,34.6
+Hawaii,HI,15,Bachelor's Degree Rate,35.3
+Idaho,ID,16,Bachelor's Degree Rate,30.7
+Illinois,IL,17,Bachelor's Degree Rate,37.1
+Indiana,IN,18,Bachelor's Degree Rate,28.9
+Iowa,IA,19,Bachelor's Degree Rate,30.5
+Kansas,KS,20,Bachelor's Degree Rate,35.4
+Kentucky,KY,21,Bachelor's Degree Rate,27.0
+Louisiana,LA,22,Bachelor's Degree Rate,26.4
+Maine,ME,23,Bachelor's Degree Rate,36.0
+Maryland,MD,24,Bachelor's Degree Rate,42.5
+Massachusetts,MA,25,Bachelor's Degree Rate,46.6
+Michigan,MI,26,Bachelor's Degree Rate,31.7
+Minnesota,MN,27,Bachelor's Degree Rate,38.9
+Mississippi,MS,28,Bachelor's Degree Rate,24.8
+Missouri,MO,29,Bachelor's Degree Rate,31.7
+Montana,MT,30,Bachelor's Degree Rate,34.8
+Nebraska,NE,31,Bachelor's Degree Rate,34.4
+Nevada,NV,32,Bachelor's Degree Rate,27.6
+New Hampshire,NH,33,Bachelor's Degree Rate,40.2
+New Jersey,NJ,34,Bachelor's Degree Rate,43.1
+New Mexico,NM,35,Bachelor's Degree Rate,30.1
+New York,NY,36,Bachelor's Degree Rate,39.9
+North Carolina,NC,37,Bachelor's Degree Rate,34.9
+North Dakota,ND,38,Bachelor's Degree Rate,31.7
+Ohio,OH,39,Bachelor's Degree Rate,30.7
+Oklahoma,OK,40,Bachelor's Degree Rate,27.9
+Oregon,OR,41,Bachelor's Degree Rate,36.3
+Pennsylvania,PA,42,Bachelor's Degree Rate,34.5
+Rhode Island,RI,44,Bachelor's Degree Rate,36.5
+South Carolina,SC,45,Bachelor's Degree Rate,31.5
+South Dakota,SD,46,Bachelor's Degree Rate,31.7
+Tennessee,TN,47,Bachelor's Degree Rate,30.5
+Texas,TX,48,Bachelor's Degree Rate,33.1
+Utah,UT,49,Bachelor's Degree Rate,36.8
+Vermont,VT,50,Bachelor's Degree Rate,44.4
+Virginia,VA,51,Bachelor's Degree Rate,41.8
+Washington,WA,53,Bachelor's Degree Rate,39.0
+West Virginia,WV,54,Bachelor's Degree Rate,24.1
+Wisconsin,WI,55,Bachelor's Degree Rate,32.5
+Wyoming,WY,56,Bachelor's Degree Rate,29.2
 Alabama,AL,1,Homeownership Rate,73.4
 Alaska,AK,2,Homeownership Rate,64.0
 Arizona,AZ,4,Homeownership Rate,65.2
@@ -560,108 +560,108 @@ Washington,WA,53,Price Parities Index,107.359
 West Virginia,WV,54,Price Parities Index,87.959
 Wisconsin,WI,55,Price Parities Index,93.188
 Wyoming,WY,56,Price Parities Index,92.257
-Alabama,AL,1,Nominal GDP per Capita,50420.0
-Alaska,AK,2,Nominal GDP per Capita,78274.0
-Arizona,AZ,4,Nominal GDP per Capita,57725.0
-Arkansas,AR,5,Nominal GDP per Capita,49135.0
-California,CA,6,Nominal GDP per Capita,85969.0
-Colorado,CO,8,Nominal GDP per Capita,75078.0
-Connecticut,CT,9,Nominal GDP per Capita,82759.0
-Delaware,DE,10,Nominal GDP per Capita,80886.0
-District of Columbia,DC,11,Nominal GDP per Capita,
-Florida,FL,12,Nominal GDP per Capita,57644.0
-Georgia,GA,13,Nominal GDP per Capita,64042.0
-Hawaii,HI,15,Nominal GDP per Capita,63193.0
-Idaho,ID,16,Nominal GDP per Capita,50651.0
-Illinois,IL,17,Nominal GDP per Capita,74630.0
-Indiana,IN,18,Nominal GDP per Capita,60678.0
-Iowa,IA,19,Nominal GDP per Capita,67916.0
-Kansas,KS,20,Nominal GDP per Capita,65216.0
-Kentucky,KY,21,Nominal GDP per Capita,52597.0
-Louisiana,LA,22,Nominal GDP per Capita,55919.0
-Maine,ME,23,Nominal GDP per Capita,56814.0
-Maryland,MD,24,Nominal GDP per Capita,72007.0
-Massachusetts,MA,25,Nominal GDP per Capita,91819.0
-Michigan,MI,26,Nominal GDP per Capita,56931.0
-Minnesota,MN,27,Nominal GDP per Capita,72267.0
-Mississippi,MS,28,Nominal GDP per Capita,43156.0
-Missouri,MO,29,Nominal GDP per Capita,58132.0
-Montana,MT,30,Nominal GDP per Capita,53157.0
-Nebraska,NE,31,Nominal GDP per Capita,74495.0
-Nevada,NV,32,Nominal GDP per Capita,61860.0
-New Hampshire,NH,33,Nominal GDP per Capita,71759.0
-New Jersey,NJ,34,Nominal GDP per Capita,73696.0
-New Mexico,NM,35,Nominal GDP per Capita,51791.0
-New York,NY,36,Nominal GDP per Capita,95851.0
-North Carolina,NC,37,Nominal GDP per Capita,62753.0
-North Dakota,ND,38,Nominal GDP per Capita,82018.0
-Ohio,OH,39,Nominal GDP per Capita,64229.0
-Oklahoma,OK,40,Nominal GDP per Capita,54014.0
-Oregon,OR,41,Nominal GDP per Capita,64103.0
-Pennsylvania,PA,42,Nominal GDP per Capita,65141.0
-Rhode Island,RI,44,Nominal GDP per Capita,60761.0
-South Carolina,SC,45,Nominal GDP per Capita,51978.0
-South Dakota,SD,46,Nominal GDP per Capita,68893.0
-Tennessee,TN,47,Nominal GDP per Capita,61235.0
-Texas,TX,48,Nominal GDP per Capita,69486.0
-Utah,UT,49,Nominal GDP per Capita,67508.0
-Vermont,VT,50,Nominal GDP per Capita,57474.0
-Virginia,VA,51,Nominal GDP per Capita,70000.0
-Washington,WA,53,Nominal GDP per Capita,87546.0
-West Virginia,WV,54,Nominal GDP per Capita,47917.0
-Wisconsin,WI,55,Nominal GDP per Capita,62520.0
-Wyoming,WY,56,Nominal GDP per Capita,71717.0
-Alabama,AL,1,Real GDP per Capita,41664.0
-Alaska,AK,2,Real GDP per Capita,69430.0
-Arizona,AZ,4,Real GDP per Capita,47779.0
-Arkansas,AR,5,Real GDP per Capita,40764.0
-California,CA,6,Real GDP per Capita,73264.0
-Colorado,CO,8,Real GDP per Capita,64308.0
-Connecticut,CT,9,Real GDP per Capita,68381.0
-Delaware,DE,10,Real GDP per Capita,64187.0
-District of Columbia,DC,11,Real GDP per Capita,
-Florida,FL,12,Real GDP per Capita,47269.0
-Georgia,GA,13,Real GDP per Capita,53270.0
-Hawaii,HI,15,Real GDP per Capita,51713.0
-Idaho,ID,16,Real GDP per Capita,42134.0
-Illinois,IL,17,Real GDP per Capita,61560.0
-Indiana,IN,18,Real GDP per Capita,50873.0
-Iowa,IA,19,Real GDP per Capita,56295.0
-Kansas,KS,20,Real GDP per Capita,55303.0
-Kentucky,KY,21,Real GDP per Capita,43868.0
-Louisiana,LA,22,Real GDP per Capita,47827.0
-Maine,ME,23,Real GDP per Capita,46343.0
-Maryland,MD,24,Real GDP per Capita,59783.0
-Massachusetts,MA,25,Real GDP per Capita,76324.0
-Michigan,MI,26,Real GDP per Capita,47934.0
-Minnesota,MN,27,Real GDP per Capita,60659.0
-Mississippi,MS,28,Real GDP per Capita,35374.0
-Missouri,MO,29,Real GDP per Capita,47937.0
-Montana,MT,30,Real GDP per Capita,44352.0
-Nebraska,NE,31,Real GDP per Capita,62197.0
-Nevada,NV,32,Real GDP per Capita,50753.0
-New Hampshire,NH,33,Real GDP per Capita,59746.0
-New Jersey,NJ,34,Real GDP per Capita,61172.0
-New Mexico,NM,35,Real GDP per Capita,44249.0
-New York,NY,36,Real GDP per Capita,76365.0
-North Carolina,NC,37,Real GDP per Capita,51362.0
-North Dakota,ND,38,Real GDP per Capita,69429.0
-Ohio,OH,39,Real GDP per Capita,53420.0
-Oklahoma,OK,40,Real GDP per Capita,48469.0
-Oregon,OR,41,Real GDP per Capita,53691.0
-Pennsylvania,PA,42,Real GDP per Capita,54842.0
-Rhode Island,RI,44,Real GDP per Capita,49841.0
-South Carolina,SC,45,Real GDP per Capita,42585.0
-South Dakota,SD,46,Real GDP per Capita,55349.0
-Tennessee,TN,47,Real GDP per Capita,50530.0
-Texas,TX,48,Real GDP per Capita,61469.0
-Utah,UT,49,Real GDP per Capita,55995.0
-Vermont,VT,50,Real GDP per Capita,47318.0
-Virginia,VA,51,Real GDP per Capita,58474.0
-Washington,WA,53,Real GDP per Capita,74319.0
-West Virginia,WV,54,Real GDP per Capita,40014.0
-Wisconsin,WI,55,Real GDP per Capita,51980.0
-Wyoming,WY,56,Real GDP per Capita,62888.0
+Alabama,AL,1,Nominal GDP per capita,50420.0
+Alaska,AK,2,Nominal GDP per capita,78274.0
+Arizona,AZ,4,Nominal GDP per capita,57725.0
+Arkansas,AR,5,Nominal GDP per capita,49135.0
+California,CA,6,Nominal GDP per capita,85969.0
+Colorado,CO,8,Nominal GDP per capita,75078.0
+Connecticut,CT,9,Nominal GDP per capita,82759.0
+Delaware,DE,10,Nominal GDP per capita,80886.0
+District of Columbia,DC,11,Nominal GDP per capita,
+Florida,FL,12,Nominal GDP per capita,57644.0
+Georgia,GA,13,Nominal GDP per capita,64042.0
+Hawaii,HI,15,Nominal GDP per capita,63193.0
+Idaho,ID,16,Nominal GDP per capita,50651.0
+Illinois,IL,17,Nominal GDP per capita,74630.0
+Indiana,IN,18,Nominal GDP per capita,60678.0
+Iowa,IA,19,Nominal GDP per capita,67916.0
+Kansas,KS,20,Nominal GDP per capita,65216.0
+Kentucky,KY,21,Nominal GDP per capita,52597.0
+Louisiana,LA,22,Nominal GDP per capita,55919.0
+Maine,ME,23,Nominal GDP per capita,56814.0
+Maryland,MD,24,Nominal GDP per capita,72007.0
+Massachusetts,MA,25,Nominal GDP per capita,91819.0
+Michigan,MI,26,Nominal GDP per capita,56931.0
+Minnesota,MN,27,Nominal GDP per capita,72267.0
+Mississippi,MS,28,Nominal GDP per capita,43156.0
+Missouri,MO,29,Nominal GDP per capita,58132.0
+Montana,MT,30,Nominal GDP per capita,53157.0
+Nebraska,NE,31,Nominal GDP per capita,74495.0
+Nevada,NV,32,Nominal GDP per capita,61860.0
+New Hampshire,NH,33,Nominal GDP per capita,71759.0
+New Jersey,NJ,34,Nominal GDP per capita,73696.0
+New Mexico,NM,35,Nominal GDP per capita,51791.0
+New York,NY,36,Nominal GDP per capita,95851.0
+North Carolina,NC,37,Nominal GDP per capita,62753.0
+North Dakota,ND,38,Nominal GDP per capita,82018.0
+Ohio,OH,39,Nominal GDP per capita,64229.0
+Oklahoma,OK,40,Nominal GDP per capita,54014.0
+Oregon,OR,41,Nominal GDP per capita,64103.0
+Pennsylvania,PA,42,Nominal GDP per capita,65141.0
+Rhode Island,RI,44,Nominal GDP per capita,60761.0
+South Carolina,SC,45,Nominal GDP per capita,51978.0
+South Dakota,SD,46,Nominal GDP per capita,68893.0
+Tennessee,TN,47,Nominal GDP per capita,61235.0
+Texas,TX,48,Nominal GDP per capita,69486.0
+Utah,UT,49,Nominal GDP per capita,67508.0
+Vermont,VT,50,Nominal GDP per capita,57474.0
+Virginia,VA,51,Nominal GDP per capita,70000.0
+Washington,WA,53,Nominal GDP per capita,87546.0
+West Virginia,WV,54,Nominal GDP per capita,47917.0
+Wisconsin,WI,55,Nominal GDP per capita,62520.0
+Wyoming,WY,56,Nominal GDP per capita,71717.0
+Alabama,AL,1,Real GDP per capita,41664.0
+Alaska,AK,2,Real GDP per capita,69430.0
+Arizona,AZ,4,Real GDP per capita,47779.0
+Arkansas,AR,5,Real GDP per capita,40764.0
+California,CA,6,Real GDP per capita,73264.0
+Colorado,CO,8,Real GDP per capita,64308.0
+Connecticut,CT,9,Real GDP per capita,68381.0
+Delaware,DE,10,Real GDP per capita,64187.0
+District of Columbia,DC,11,Real GDP per capita,
+Florida,FL,12,Real GDP per capita,47269.0
+Georgia,GA,13,Real GDP per capita,53270.0
+Hawaii,HI,15,Real GDP per capita,51713.0
+Idaho,ID,16,Real GDP per capita,42134.0
+Illinois,IL,17,Real GDP per capita,61560.0
+Indiana,IN,18,Real GDP per capita,50873.0
+Iowa,IA,19,Real GDP per capita,56295.0
+Kansas,KS,20,Real GDP per capita,55303.0
+Kentucky,KY,21,Real GDP per capita,43868.0
+Louisiana,LA,22,Real GDP per capita,47827.0
+Maine,ME,23,Real GDP per capita,46343.0
+Maryland,MD,24,Real GDP per capita,59783.0
+Massachusetts,MA,25,Real GDP per capita,76324.0
+Michigan,MI,26,Real GDP per capita,47934.0
+Minnesota,MN,27,Real GDP per capita,60659.0
+Mississippi,MS,28,Real GDP per capita,35374.0
+Missouri,MO,29,Real GDP per capita,47937.0
+Montana,MT,30,Real GDP per capita,44352.0
+Nebraska,NE,31,Real GDP per capita,62197.0
+Nevada,NV,32,Real GDP per capita,50753.0
+New Hampshire,NH,33,Real GDP per capita,59746.0
+New Jersey,NJ,34,Real GDP per capita,61172.0
+New Mexico,NM,35,Real GDP per capita,44249.0
+New York,NY,36,Real GDP per capita,76365.0
+North Carolina,NC,37,Real GDP per capita,51362.0
+North Dakota,ND,38,Real GDP per capita,69429.0
+Ohio,OH,39,Real GDP per capita,53420.0
+Oklahoma,OK,40,Real GDP per capita,48469.0
+Oregon,OR,41,Real GDP per capita,53691.0
+Pennsylvania,PA,42,Real GDP per capita,54842.0
+Rhode Island,RI,44,Real GDP per capita,49841.0
+South Carolina,SC,45,Real GDP per capita,42585.0
+South Dakota,SD,46,Real GDP per capita,55349.0
+Tennessee,TN,47,Real GDP per capita,50530.0
+Texas,TX,48,Real GDP per capita,61469.0
+Utah,UT,49,Real GDP per capita,55995.0
+Vermont,VT,50,Real GDP per capita,47318.0
+Virginia,VA,51,Real GDP per capita,58474.0
+Washington,WA,53,Real GDP per capita,74319.0
+West Virginia,WV,54,Real GDP per capita,40014.0
+Wisconsin,WI,55,Real GDP per capita,51980.0
+Wyoming,WY,56,Real GDP per capita,62888.0
 Alabama,AL,1,Labour Participation Rate,57.2
 Alaska,AK,2,Labour Participation Rate,66.0
 Arizona,AZ,4,Labour Participation Rate,61.0
