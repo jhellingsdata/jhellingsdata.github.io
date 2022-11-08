@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ 
+  "width": 500,
+  "height": 400,
+
+  "title": {
+      "text": "London cycle parking",
+      "fontSize": 12,
+      "subtitle":["All bike parking stations. Source: TfL, 2021", ""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10, "anchor": "middle"},
+
+  "config": {
+      "background":"white",
+      "view": {"stroke": "transparent"}},
+
+  "layer": [
+    {
+      "data": {
+        "url": "data/londonBoroughs.json",
+        "format": {
+          "type": "topojson",
+          "feature": "boroughs"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "value": "#eee"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/point_maps/cycle_parking.json",
+        "format": {"property": "features"}
+      },
+
+  
+      "projection": {"type": "mercator"},
+      "mark": "circle",
+      "encoding": {
+        "longitude": {"field": "geometry['coordinates'][0]", "type": "quantitative"},
+        "latitude": {"field": "geometry['coordinates'][1]", "type": "quantitative"},
+        "size": {"value": 5}, 
+        "color": {"value": "#D35400"}
+      }
+    }
+  ]
+}
