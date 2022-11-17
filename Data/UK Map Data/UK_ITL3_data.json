@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL3_2021_20m.geojson",
+      "format": {"property": "features"}
+    },
+  
+    "title": {
+      "text": "UK Map, by ITL3 regions",
+      "fontSize": 12,
+      "subtitle":[],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "middle",
+      "color": "black"
+    },
+  
+    "projection": {"type": "mercator"},
+    "mark": "geoshape", 
+  
+    "params": [
+      {
+        "name": "Select",
+        "value": "Population",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Population",
+            "Gross Domestic Product (£m)",
+            "GDP Growth 2010-19 (%)",
+            "Gross Value Added (£)",
+            "GDP per capita (£)",
+            "Employment (%)",
+            "Unemployment (%)",
+            "Economic Inactivity (%)",
+            "Unemployment Claimants (%)"
+          ]
+        }
+      }
+    ],
+  
+    "transform": [{
+      "lookup": "properties.ITL321CD",
+      "from": {
+        "key": "ITL code",
+        "fields": [       
+          "Population",
+          "Gross Domestic Product (£m)",
+          "GDP Growth 2010-19 (%)",
+          "Gross Value Added (£)",
+          "GDP per capita (£)",
+          "Employment (%)",
+          "Unemployment (%)",
+          "Economic Inactivity (%)",
+          "Unemployment Claimants (%)"
+          ],
+        "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL3_UK_DataHub.csv"}}
+        },
+      {"calculate": "datum[Select]","as": "varSelected"}
+        ],
+    "encoding":{
+      
+      "color":{
+        "field":"varSelected",
+        "legend":{
+          "title": "",
+          "legendX": 0,
+          "legendY": 0,
+          "direction": "vertical"
+        },
+        "type": "quantitative",
+        "scale":{
+          "scheme":"goldorange",
+          "reverse": false
+        }
+      },
+      "tooltip":[
+        {"field":"properties.ITL321NM", "title": "Region"},
+        {"field":"varSelected", "title": "Value", "format": ","}
+      ]
+    }
+  }
