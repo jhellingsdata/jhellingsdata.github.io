@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Project</title>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="css/project.css">
+    
+
+    <!--call JS for responsive navbar-->
+    <script src="Project/navScript.js" defer></script>
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+  <body>
+    <nav class="navbar">
+      <div class="page-title">Map</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="eco.html">Monetary Hub</a></li>
+          <li><a href="housing.html">Housing Hub</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="https://rapidcharts.io/datascience">Course</a></li>
+          <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io"><i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <p class=title>Map visualisations.</p>
+
+    <p class=subtitle>UK Data Hub, ONS Data</p>
+
+    <hr class="solid">
+
+    
+
+    
+
+    <section class="container">
+
+      <div class="card">
+        <div class="chart" id="chart1"></div>
+      </div>
+
+      <p>
+
+      </p>
+
+      <div class="card">
+        <div class="chart" id="chart2"></div>
+      </div>
+
+      <p>
+
+      </p>
+
+      <div class="card">
+        <div class="chart" id="chart3"></div>
+      </div>
+
+
+    </section>
+
+
+
+    <script>
+
+      // Set the charts that we want on the page as variables linked to JSON files:
+      var myChart1 = "data/UK%20Map%20Data/UK_ITL1_data.json";
+      var myChart2 = "data/UK%20Map%20Data/UK_ITL3_data.json";
+      var myChart3 = "data/UK%20Map%20Data/Eng&Wales_crimeSelection.json";
+
+      
+      // Embed the charts in the divs above
+      vegaEmbed('#chart1', myChart1, {"actions": false});
+      vegaEmbed('#chart2', myChart2, {"actions": false});
+      vegaEmbed('#chart3', myChart3, {"actions": false});
+
+  
+
+    </script>
+
+  </body>
+
+</html>
