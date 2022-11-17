@@ -1,0 +1,132 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL1_2021_20m.geojson",
+      "format": {"property": "features"}
+    },
+  
+    "title": {
+      "text": "UK Map, by ITL1 regions",
+      "fontSize": 12,
+      "subtitle":[],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "middle",
+      "color": "black"
+    },
+  
+    "projection": {"type": "mercator"},
+    "mark": "geoshape", 
+  
+    "params": [
+      {
+        "name": "Select",
+        "value": "Population",
+        "bind": {
+          "input": "select",
+          "options": [
+          "Population",
+          "Gross Domestic Product (£m)",
+          "GDP Growth 2010-19 (%)",
+          "Gross Value Added (£)",
+          "GDP per capita (£)",
+          "Unemployment (%)",
+          "Employment (%)",
+          "Economically Inactive (%)",
+          "Mean Average House Prices (£)",
+          "Median gross annual earnings (£)",
+          "Life Expectancy (Male)",
+          "Life Expectancy (Female)",
+          "Smoking prevalence (%)",
+          "Violence against the person",
+          "Homicide",
+          "Violence with injury (including unlawful driving)",
+          "Violence without injury",
+          "Violence without injury (including harassment)",
+          "Violence without injury",
+          "Stalking and harassment",
+          "Sexual offences",
+          "Robbery",
+          "Theft Total",
+          "Burglary",
+          "Vehicle Theft",
+          "Theft from the person",
+          "Bicycle theft",
+          "Shoplifting",
+          "Criminal damage and arson",
+          "Drug offences",
+          "Possession of weapons",
+          "Public order offences",
+          "Serious offences involving a knife"
+          ]
+        }
+      }
+    ],
+  
+    "transform": [{
+      "lookup": "properties.ITL121CD",
+      "from": {
+        "key": "ITL code",
+        "fields": [       
+          "Population",
+          "Gross Domestic Product (£m)",
+          "GDP Growth 2010-19 (%)",
+          "Gross Value Added (£)",
+          "GDP per capita (£)",
+          "Unemployment (%)",
+          "Employment (%)",
+          "Economically Inactive (%)",
+          "Mean Average House Prices (£)",
+          "Median gross annual earnings (£)",
+          "Life Expectancy (Male)",
+          "Life Expectancy (Female)",
+          "Smoking prevalence (%)",
+          "Violence against the person",
+          "Homicide",
+          "Violence with injury (including unlawful driving)",
+          "Violence without injury",
+          "Violence without injury (including harassment)",
+          "Violence without injury",
+          "Stalking and harassment",
+          "Sexual offences",
+          "Robbery",
+          "Theft Total",
+          "Burglary",
+          "Vehicle Theft",
+          "Theft from the person",
+          "Bicycle theft",
+          "Shoplifting",
+          "Criminal damage and arson",
+          "Drug offences",
+          "Possession of weapons",
+          "Public order offences",
+          "Serious offences involving a knife"
+          ],
+        "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL1_UK_DataHub.csv"}}
+        },
+      {"calculate": "datum[Select]","as": "varSelected"}
+        ],
+    "encoding":{
+      
+      "color":{
+        "field":"varSelected",
+        "legend":{
+          "title": "",
+          "legendX": 0,
+          "legendY": 0,
+          "direction": "vertical"
+        },
+        "type": "quantitative",
+        "scale":{
+          "scheme":"goldorange",
+          "reverse": false
+        }
+      },
+      "tooltip":[
+        {"field":"properties.ITL121NM", "title": "Region"},
+        {"field":"varSelected", "title": "Value", "format": ","}
+      ]
+    }
+  }

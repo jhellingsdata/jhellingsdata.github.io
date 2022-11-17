@@ -1,109 +1,109 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
-    "height": 400,
-    "data": {
-      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/Eng%26Wales_crimeMap.geojson",
-      "format": {"property": "features"}
-    },
-  
-    "title": {
-      "text": "Crime Rates, by Police Force Area",
-      "fontSize": 12,
-      "subtitle":["No data from Greater Manchester. Source: ONS (2019)"],
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "middle",
-      "color": "black"
-    },
-  
-    "projection": {"type": "mercator"},
-    "mark": "geoshape", 
-  
-    "params": [
-      {
-        "name": "Select",
-        "value": "Total recorded crime",
-        "bind": {
-          "input": "select",
-          "options": [
-          "Population (mid-2018)",
-          "Total recorded crime",
-          "Violence against the person",
-          "Homicide",
-          "Violence with injury",
-          "Violence without injury",
-          "Stalking and harassment",
-          "Death or serious injury - unlawful driving",
-          "Sexual offences",
-          "Robbery",
-          "Theft total",
-          "Residential burglary (household rate)",
-          "Vehicle theft",
-          "Theft from the person",
-          "Bicycle theft",
-          "Shoplifting",
-          "Criminal damage and arson",
-          "Drug offences",
-          "Possession of weapons",
-          "Public order offences",
-          "Serious offences involving a knife (per 100,000)"
-          ]
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/Eng%26Wales_crimeMap.geojson",
+    "format": {"property": "features"}
+  },
+
+  "title": {
+    "text": "Crime Rates, by Police Force Area",
+    "fontSize": 12,
+    "subtitle":["No data from Greater Manchester Force. Source: ONS (2019)"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "middle",
+    "color": "black"
+  },
+
+  "projection": {"type": "mercator"},
+  "mark": "geoshape", 
+
+  "params": [
+    {
+      "name": "Select",
+      "value": "Total recorded crime",
+      "bind": {
+        "input": "select",
+        "options": [
+        "Population (mid-2018)",
+        "Total recorded crime",
+        "Violence against the person",
+        "Homicide",
+        "Violence with injury",
+        "Violence without injury",
+        "Stalking and harassment",
+        "Death or serious injury - unlawful driving",
+        "Sexual offences",
+        "Robbery",
+        "Theft total",
+        "Residential burglary (household rate)",
+        "Vehicle theft",
+        "Theft from the person",
+        "Bicycle theft",
+        "Shoplifting",
+        "Criminal damage and arson",
+        "Drug offences",
+        "Possession of weapons",
+        "Public order offences",
+        "Serious offences involving a knife"
+        ]
       }
-    ],
-  
-    "transform": [{
-      "lookup": "properties.pfa17cd",
-      "from": {
-        "key": "Area Code",
-        "fields": [
-          "Population (mid-2018)",
-          "Total recorded crime",
-          "Violence against the person",
-          "Homicide",
-          "Violence with injury",
-          "Violence without injury",
-          "Stalking and harassment",
-          "Death or serious injury - unlawful driving",
-          "Sexual offences",
-          "Robbery",
-          "Theft total",
-          "Residential burglary (household rate)",
-          "Vehicle theft",
-          "Theft from the person",
-          "Bicycle theft",
-          "Shoplifting",
-          "Criminal damage and arson",
-          "Drug offences",
-          "Possession of weapons",
-          "Public order offences",
-          "Serious offences involving a knife (per 100,000)"
-          ],
-        "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/Eng%26Wales_crimeRates.csv"}}
-        },
-      {"calculate": "datum[Select]","as": "varSelected"},
-      {"calculate": "datum[Select].value","as": "varLabel"}
-        ],
-    "encoding":{
-      
-      "color":{
-        "field":"varSelected",
-        "legend":{
-          "title": "",
-          "legendX": 0,
-          "legendY": 0,
-          "direction": "vertical"
-        },
-        "type": "quantitative",
-        "scale":{
-          "scheme":"greenblue",
-          "reverse": false
-        }
-      },
-      "tooltip":[
-        {"field":"properties.pfa17nm", "title": "Police Force Area"},
-        {"field":"varSelected", "title": "Offences per 1,000 people", "format": ","}
-      ]
     }
+  ],
+
+  "transform": [{
+    "lookup": "properties.pfa17cd",
+    "from": {
+      "key": "Area Code",
+      "fields": [
+        "Population (mid-2018)",
+        "Total recorded crime",
+        "Violence against the person",
+        "Homicide",
+        "Violence with injury",
+        "Violence without injury",
+        "Stalking and harassment",
+        "Death or serious injury - unlawful driving",
+        "Sexual offences",
+        "Robbery",
+        "Theft total",
+        "Residential burglary (household rate)",
+        "Vehicle theft",
+        "Theft from the person",
+        "Bicycle theft",
+        "Shoplifting",
+        "Criminal damage and arson",
+        "Drug offences",
+        "Possession of weapons",
+        "Public order offences",
+        "Serious offences involving a knife"
+        ],
+      "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/Eng%26Wales_crimeRates.csv"}}
+      },
+    {"calculate": "datum[Select]","as": "varSelected"},
+    {"calculate": "datum[Select].value","as": "varLabel"}
+      ],
+  "encoding":{
+    
+    "color":{
+      "field":"varSelected",
+      "legend":{
+        "title": "",
+        "legendX": 0,
+        "legendY": 0,
+        "direction": "vertical"
+      },
+      "type": "quantitative",
+      "scale":{
+        "scheme":"greenblue",
+        "reverse": false
+      }
+    },
+    "tooltip":[
+      {"field":"properties.pfa17nm", "title": "Police Force Area"},
+      {"field":"varSelected", "title": "Offences per 1,000 people", "format": ","}
+    ]
   }
+}
