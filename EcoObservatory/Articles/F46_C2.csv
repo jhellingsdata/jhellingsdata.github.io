@@ -1,0 +1,21 @@
+﻿region,reason,value
+Wales,Sick/disabled,34.4
+Wales,Student,25.6
+Wales,Retired,12.5
+Wales,Home/family,18
+Wales,Other,9.4
+Scotland,Sick/disabled,33.6
+Scotland,Student,23.9
+Scotland,Retired,14.9
+Scotland,Home/family,16.8
+Scotland,Other,10.7
+England,Sick/disabled,26.6
+England,Student,27.6
+England,Retired,13.6
+England,Home/family,20.2
+England,Other,12.1
+N. Ireland,Sick/disabled,36
+N. Ireland,Student,29
+N. Ireland,Retired,11.5
+N. Ireland,Home/family,15.2
+N. Ireland,Other,8.4

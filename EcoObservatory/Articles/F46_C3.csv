@@ -1,0 +1,73 @@
+﻿year,period_start,period_end,region,value
+2005-01-01,July 04,June 05,Wales,9.8
+2006-01-01,July 05,June 06,Wales,9.3
+2007-01-01,July 06,June 07,Wales,8.8
+2008-01-01,July 07,June 08,Wales,8.8
+2009-01-01,July 08,June 09,Wales,8.8
+2010-01-01,July 09,June 10,Wales,8.8
+2011-01-01,July 10,June 11,Wales,8.4
+2012-01-01,July 11,June 12,Wales,8.0
+2013-01-01,July 12,June 13,Wales,7.5
+2014-01-01,July 13,June 14,Wales,6.9
+2015-01-01,July 14,June 15,Wales,7.6
+2016-01-01,July 15,June 16,Wales,7.7
+2017-01-01,July 16,June 17,Wales,7.0
+2018-01-01,July 17,June 18,Wales,7.2
+2019-01-01,July 18,June 19,Wales,7.2
+2020-01-01,July 19,June 20,Wales,7.0
+2021-01-01,July 20,June 21,Wales,7.5
+2022-01-01,July 21,June 22,Wales,8.1
+2005-01-01,July 04,June 05,Scotland,8.3
+2006-01-01,July 05,June 06,Scotland,7.9
+2007-01-01,July 06,June 07,Scotland,7.3
+2008-01-01,July 07,June 08,Scotland,7.4
+2009-01-01,July 08,June 09,Scotland,7.2
+2010-01-01,July 09,June 10,Scotland,7.1
+2011-01-01,July 10,June 11,Scotland,7.3
+2012-01-01,July 11,June 12,Scotland,7.2
+2013-01-01,July 12,June 13,Scotland,7.3
+2014-01-01,July 13,June 14,Scotland,6.9
+2015-01-01,July 14,June 15,Scotland,6.4
+2016-01-01,July 15,June 16,Scotland,6.9
+2017-01-01,July 16,June 17,Scotland,7.1
+2018-01-01,July 17,June 18,Scotland,6.4
+2019-01-01,July 18,June 19,Scotland,6.8
+2020-01-01,July 19,June 20,Scotland,6.8
+2021-01-01,July 20,June 21,Scotland,7.6
+2022-01-01,July 21,June 22,Scotland,7.7
+2005-01-01,July 04,June 05,England,5.8
+2006-01-01,July 05,June 06,England,5.8
+2007-01-01,July 06,June 07,England,5.7
+2008-01-01,July 07,June 08,England,5.6
+2009-01-01,July 08,June 09,England,5.4
+2010-01-01,July 09,June 10,England,5.5
+2011-01-01,July 10,June 11,England,5.5
+2012-01-01,July 11,June 12,England,5.4
+2013-01-01,July 12,June 13,England,5.2
+2014-01-01,July 13,June 14,England,5.1
+2015-01-01,July 14,June 15,England,5.1
+2016-01-01,July 15,June 16,England,5.2
+2017-01-01,July 16,June 17,England,5.0
+2018-01-01,July 17,June 18,England,5.1
+2019-01-01,July 18,June 19,England,5.0
+2020-01-01,July 19,June 20,England,5.2
+2021-01-01,July 20,June 21,England,5.2
+2022-01-01,July 21,June 22,England,5.6
+2005-01-01,July 04,June 05,N. Ireland,10.5
+2006-01-01,July 05,June 06,N. Ireland,9.1
+2007-01-01,July 06,June 07,N. Ireland,9.3
+2008-01-01,July 07,June 08,N. Ireland,9.0
+2009-01-01,July 08,June 09,N. Ireland,9.9
+2010-01-01,July 09,June 10,N. Ireland,9.5
+2011-01-01,July 10,June 11,N. Ireland,8.6
+2012-01-01,July 11,June 12,N. Ireland,8.4
+2013-01-01,July 12,June 13,N. Ireland,7.8
+2014-01-01,July 13,June 14,N. Ireland,8.2
+2015-01-01,July 14,June 15,N. Ireland,8.7
+2016-01-01,July 15,June 16,N. Ireland,8.7
+2017-01-01,July 16,June 17,N. Ireland,8.8
+2018-01-01,July 17,June 18,N. Ireland,9.0
+2019-01-01,July 18,June 19,N. Ireland,8.5
+2020-01-01,July 19,June 20,N. Ireland,9.3
+2021-01-01,July 20,June 21,N. Ireland,9.7
+2022-01-01,July 21,June 22,N. Ireland,9.8
