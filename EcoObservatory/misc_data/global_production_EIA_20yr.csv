@@ -16,7 +16,7 @@
 2014,Coal,171.97
 2015,Coal,168.04
 2016,Coal,158.12
-2017,Coal,162.70
+2017,Coal,162.7
 2018,Coal,169.01
 2019,Coal,172.88
 2000,Natural gas,89.28
@@ -30,17 +30,17 @@
 2008,Natural gas,111.66
 2009,Natural gas,109.56
 2010,Natural gas,116.95
-2011,Natural gas,121.00
+2011,Natural gas,121
 2012,Natural gas,123.53
 2013,Natural gas,125.03
 2014,Natural gas,126.99
 2015,Natural gas,129.64
 2016,Natural gas,130.88
-2017,Natural gas,137.20
+2017,Natural gas,137.2
 2018,Natural gas,144.78
 2019,Natural gas,149.43
 2000,Nuclear,25.67
-2001,Nuclear,26.40
+2001,Nuclear,26.4
 2002,Nuclear,26.69
 2003,Nuclear,26.31
 2004,Nuclear,27.26
@@ -51,7 +51,7 @@
 2009,Nuclear,26.66
 2010,Nuclear,27.37
 2011,Nuclear,26.25
-2012,Nuclear,24.50
+2012,Nuclear,24.5
 2013,Nuclear,24.65
 2014,Nuclear,25.25
 2015,Nuclear,25.52
@@ -79,3 +79,23 @@
 2017,Renewables & other,64.41
 2018,Renewables & other,67.88
 2019,Renewables & other,69.58
+2000,Petroleum & other liquids,156.35
+2001,Petroleum & other liquids,155.6
+2002,Petroleum & other liquids,153.94
+2003,Petroleum & other liquids,159.03
+2004,Petroleum & other liquids,166.96
+2005,Petroleum & other liquids,169.77
+2006,Petroleum & other liquids,169.45
+2007,Petroleum & other liquids,169.05
+2008,Petroleum & other liquids,171.08
+2009,Petroleum & other liquids,167.19
+2010,Petroleum & other liquids,169.99
+2011,Petroleum & other liquids,171.5
+2012,Petroleum & other liquids,176.76
+2013,Petroleum & other liquids,176.81
+2014,Petroleum & other liquids,181.11
+2015,Petroleum & other liquids,186.2
+2016,Petroleum & other liquids,187.16
+2017,Petroleum & other liquids,187.04
+2018,Petroleum & other liquids,191.51
+2019,Petroleum & other liquids,190.41
