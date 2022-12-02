@@ -1,0 +1,155 @@
+﻿year,type,generation
+2000,Nuclear,2451.40
+2001,Nuclear,2518.28
+2002,Nuclear,2547.17
+2003,Nuclear,2519.27
+2004,Nuclear,2620.44
+2005,Nuclear,2626.55
+2006,Nuclear,2661.31
+2007,Nuclear,2609.62
+2008,Nuclear,2598.87
+2009,Nuclear,2561.70
+2010,Nuclear,2629.10
+2011,Nuclear,2518.10
+2012,Nuclear,2347.09
+2013,Nuclear,2364.30
+2014,Nuclear,2419.60
+2015,Nuclear,2448.17
+2016,Nuclear,2488.99
+2017,Nuclear,2517.09
+2018,Nuclear,2570.08
+2019,Nuclear,2668.76
+2020,Nuclear,2595.77
+2021,Nuclear,2698.34
+2000,Fossil Fuels,9346.12
+2001,Fossil Fuels,9572.29
+2002,Fossil Fuels,9992.85
+2003,Fossil Fuels,10517.65
+2004,Fossil Fuels,10978.52
+2005,Fossil Fuels,11459.90
+2006,Fossil Fuels,11975.53
+2007,Fossil Fuels,12781.75
+2008,Fossil Fuels,12870.36
+2009,Fossil Fuels,12700.60
+2010,Fossil Fuels,13712.86
+2011,Fossil Fuels,14325.55
+2012,Fossil Fuels,14694.88
+2013,Fossil Fuels,15035.67
+2014,Fossil Fuels,15155.13
+2015,Fossil Fuels,15355.58
+2016,Fossil Fuels,15609.81
+2017,Fossil Fuels,15947.52
+2018,Fossil Fuels,16303.57
+2019,Fossil Fuels,16250.80
+2020,Fossil Fuels,15835.02
+2021,Fossil Fuels,16832.82
+2000,Geothermal,51.40
+2001,Geothermal,51.00
+2002,Geothermal,51.80
+2003,Geothermal,53.51
+2004,Geothermal,55.69
+2005,Geothermal,56.41
+2006,Geothermal,57.81
+2007,Geothermal,60.43
+2008,Geothermal,63.12
+2009,Geothermal,65.11
+2010,Geothermal,64.84
+2011,Geothermal,65.81
+2012,Geothermal,66.98
+2013,Geothermal,68.44
+2014,Geothermal,73.20
+2015,Geothermal,77.12
+2016,Geothermal,79.23
+2017,Geothermal,81.70
+2018,Geothermal,85.27
+2019,Geothermal,87.50
+2020,Geothermal,90.66
+2021,Geothermal,91.78
+2000,Solar,1.21
+2001,Solar,1.51
+2002,Solar,1.88
+2003,Solar,2.35
+2004,Solar,3.00
+2005,Solar,4.18
+2006,Solar,5.71
+2007,Solar,7.71
+2008,Solar,12.65
+2009,Solar,21.02
+2010,Solar,33.57
+2011,Solar,66.32
+2012,Solar,104.22
+2013,Solar,146.68
+2014,Solar,202.22
+2015,Solar,260.18
+2016,Solar,341.48
+2017,Solar,445.05
+2018,Solar,569.84
+2019,Solar,701.03
+2020,Solar,849.14
+2021,Solar,1036.24
+2000,Wind,31.33
+2001,Wind,38.37
+2002,Wind,52.73
+2003,Wind,64.50
+2004,Wind,84.63
+2005,Wind,104.24
+2006,Wind,133.42
+2007,Wind,171.30
+2008,Wind,221.36
+2009,Wind,277.78
+2010,Wind,339.40
+2011,Wind,435.11
+2012,Wind,521.50
+2013,Wind,645.08
+2014,Wind,717.25
+2015,Wind,827.43
+2016,Wind,957.25
+2017,Wind,1127.11
+2018,Wind,1263.52
+2019,Wind,1399.10
+2020,Wind,1590.47
+2021,Wind,1807.80
+2000,Biomass,158.70
+2001,Biomass,166.83
+2002,Biomass,180.91
+2003,Biomass,190.30
+2004,Biomass,203.77
+2005,Biomass,218.78
+2006,Biomass,231.49
+2007,Biomass,248.19
+2008,Biomass,276.84
+2009,Biomass,301.08
+2010,Biomass,348.09
+2011,Biomass,371.99
+2012,Biomass,407.15
+2013,Biomass,445.64
+2014,Biomass,479.65
+2015,Biomass,507.59
+2016,Biomass,547.18
+2017,Biomass,582.60
+2018,Biomass,601.20
+2019,Biomass,632.15
+2020,Biomass,637.51
+2021,Biomass,639.97
+2000,Hydropower,2595.13
+2001,Hydropower,2538.41
+2002,Hydropower,2579.47
+2003,Hydropower,2586.89
+2004,Hydropower,2758.78
+2005,Hydropower,2877.78
+2006,Hydropower,2979.92
+2007,Hydropower,3008.44
+2008,Hydropower,3147.67
+2009,Hydropower,3207.20
+2010,Hydropower,3381.05
+2011,Hydropower,3443.25
+2012,Hydropower,3603.50
+2013,Hydropower,3733.86
+2014,Hydropower,3801.75
+2015,Hydropower,3816.82
+2016,Hydropower,3947.10
+2017,Hydropower,3989.62
+2018,Hydropower,4124.11
+2019,Hydropower,4148.07
+2020,Hydropower,4285.64
+2021,Hydropower,4188.23
