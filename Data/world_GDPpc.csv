@@ -1,16 +1,16 @@
-﻿Country Name,ISO3,Indicator Name,2019,2020,GDP per capita (PPP)
+Country Name,ISO3,Indicator Name,2019,2020,GDP per capita (PPP)
 Aruba,ABW,"GDP per capita, PPP (current international $)",42501.64155,34971.00991,42698.35987
 Africa Eastern and Southern,AFE,"GDP per capita, PPP (current international $)",3777.972368,3621.058106,3839.470058
 Afghanistan,AFG,"GDP per capita, PPP (current international $)",2167.704111,2076.13838,1665.805842
 Africa Western and Central,AFW,"GDP per capita, PPP (current international $)",4264.731035,4174.504565,4409.450961
 Angola,AGO,"GDP per capita, PPP (current international $)",6881.076241,6362.636076,6491.125578
 Albania,ALB,"GDP per capita, PPP (current international $)",13973.04584,13759.54243,15709.25126
-Andorra,AND,"GDP per capita, PPP (current international $)",,,
+Andorra,AND,"GDP per capita, PPP (current international $)",null,null,null
 Arab World,ARB,"GDP per capita, PPP (current international $)",14634.45595,13914.58349,14793.88131
 United Arab Emirates,ARE,"GDP per capita, PPP (current international $)",74811.69022,71374.18105,76609.198
 Argentina,ARG,"GDP per capita, PPP (current international $)",23003.27718,20763.28855,23649.6703
 Armenia,ARM,"GDP per capita, PPP (current international $)",14921.81932,14089.23938,15592.48736
-American Samoa,ASM,"GDP per capita, PPP (current international $)",,,
+American Samoa,ASM,"GDP per capita, PPP (current international $)",null,null,null
 Antigua and Barbuda,ATG,"GDP per capita, PPP (current international $)",24007.86848,19276.56881,21010.00357
 Australia,AUS,"GDP per capita, PPP (current international $)",51810.77671,53358.20808,56281.37865
 Austria,AUT,"GDP per capita, PPP (current international $)",58076.3488,55685.97029,58430.64025
@@ -37,7 +37,7 @@ Central African Republic,CAF,"GDP per capita, PPP (current international $)",898
 Canada,CAN,"GDP per capita, PPP (current international $)",49299.21177,46572.13743,52085.03569
 Central Europe and the Baltics,CEB,"GDP per capita, PPP (current international $)",33785.05843,33936.61927,37291.42706
 Switzerland,CHE,"GDP per capita, PPP (current international $)",72033.92944,71731.96058,77273.60724
-Channel Islands,CHI,"GDP per capita, PPP (current international $)",,,
+Channel Islands,CHI,"GDP per capita, PPP (current international $)",null,null,null
 Chile,CHL,"GDP per capita, PPP (current international $)",25206.40166,24849.70664,28684.78027
 China,CHN,"GDP per capita, PPP (current international $)",16652.0988,17189.28179,19338.23408
 Cote d'Ivoire,CIV,"GDP per capita, PPP (current international $)",5343.001606,5377.785528,5850.051925
@@ -49,7 +49,7 @@ Comoros,COM,"GDP per capita, PPP (current international $)",3429.531083,3398.849
 Cabo Verde,CPV,"GDP per capita, PPP (current international $)",7123.550529,6084.456051,6716.956331
 Costa Rica,CRI,"GDP per capita, PPP (current international $)",22467.87549,22117.92711,23319.50228
 Caribbean small states,CSS,"GDP per capita, PPP (current international $)",17049.11465,15873.37712,17323.61226
-Cuba,CUB,"GDP per capita, PPP (current international $)",,,
+Cuba,CUB,"GDP per capita, PPP (current international $)",null,null,null
 Curacao,CUW,"GDP per capita, PPP (current international $)",24657.76304,20681.24467,22832.19418
 Cayman Islands,CYM,"GDP per capita, PPP (current international $)",75458.5687,70767.81292,74155.27789
 Cyprus,CYP,"GDP per capita, PPP (current international $)",42711.28516,40611.70313,44109.67188
@@ -68,7 +68,7 @@ Europe & Central Asia,ECS,"GDP per capita, PPP (current international $)",36726.
 Ecuador,ECU,"GDP per capita, PPP (current international $)",11870.9364,10924.18012,11720.64464
 "Egypt, Arab Rep.",EGY,"GDP per capita, PPP (current international $)",11652.5738,12004.12593,12706.40445
 Euro area,EMU,"GDP per capita, PPP (current international $)",48830.19358,47121.9284,50757.85101
-Eritrea,ERI,"GDP per capita, PPP (current international $)",,,
+Eritrea,ERI,"GDP per capita, PPP (current international $)",null,null,null
 Spain,ESP,"GDP per capita, PPP (current international $)",41695.14695,37754.56863,40698.6887
 Estonia,EST,"GDP per capita, PPP (current international $)",37850.07415,37644.00382,42138.32058
 Ethiopia,ETH,"GDP per capita, PPP (current international $)",2273.734896,2376.635601,2547.716814
@@ -77,22 +77,22 @@ Fragile and conflict affected situations,FCS,"GDP per capita, PPP (current inter
 Finland,FIN,"GDP per capita, PPP (current international $)",50321.53969,50937.16075,55013.38586
 Fiji,FJI,"GDP per capita, PPP (current international $)",13800.19987,11567.53537,11380.5695
 France,FRA,"GDP per capita, PPP (current international $)",48971.08855,46858.21592,50541.25936
-Faroe Islands,FRO,"GDP per capita, PPP (current international $)",,,
+Faroe Islands,FRO,"GDP per capita, PPP (current international $)",null,null,null
 "Micronesia, Fed. Sts.",FSM,"GDP per capita, PPP (current international $)",3690.219681,3644.970925,3642.095394
 Gabon,GAB,"GDP per capita, PPP (current international $)",15089.03985,14664.71093,15175.68734
 United Kingdom,GBR,"GDP per capita, PPP (current international $)",49041.46355,46526.91187,49675.30467
 Georgia,GEO,"GDP per capita, PPP (current international $)",15621.87366,14731.20059,17013.56632
 Ghana,GHA,"GDP per capita, PPP (current international $)",5571.564866,5551.786802,5971.125009
-Gibraltar,GIB,"GDP per capita, PPP (current international $)",,,
+Gibraltar,GIB,"GDP per capita, PPP (current international $)",null,null,null
 Guinea,GIN,"GDP per capita, PPP (current international $)",2652.5568,2746.73328,2900.668958
 "Gambia, The",GMB,"GDP per capita, PPP (current international $)",2171.234263,2154.485618,2281.305526
 Guinea-Bissau,GNB,"GDP per capita, PPP (current international $)",1970.322278,1902.407505,2011.94848
 Equatorial Guinea,GNQ,"GDP per capita, PPP (current international $)",16925.78796,15961.11386,16080.14326
 Greece,GRC,"GDP per capita, PPP (current international $)",30356.2664,27953.76213,31363.80736
 Grenada,GRD,"GDP per capita, PPP (current international $)",16043.4798,13896.98274,15037.84954
-Greenland,GRL,"GDP per capita, PPP (current international $)",,,
+Greenland,GRL,"GDP per capita, PPP (current international $)",null,null,null
 Guatemala,GTM,"GDP per capita, PPP (current international $)",9037.688376,8849.717743,9806.82822
-Guam,GUM,"GDP per capita, PPP (current international $)",,,
+Guam,GUM,"GDP per capita, PPP (current international $)",null,null,null
 Guyana,GUY,"GDP per capita, PPP (current international $)",13361.57321,19439.93098,24086.90092
 High income,HIC,"GDP per capita, PPP (current international $)",51726.33121,50466.93245,54675.70321
 "Hong Kong SAR, China",HKG,"GDP per capita, PPP (current international $)",62103.42761,58949.46595,65891.69471
@@ -107,9 +107,9 @@ IDA total,IDA,"GDP per capita, PPP (current international $)",3931.866415,3893.0
 IDA blend,IDB,"GDP per capita, PPP (current international $)",5263.213884,5151.235977,5536.66907
 Indonesia,IDN,"GDP per capita, PPP (current international $)",12358.24225,12146.40679,13027.30061
 IDA only,IDX,"GDP per capita, PPP (current international $)",3273.043342,3274.505211,3432.887326
-Isle of Man,IMN,"GDP per capita, PPP (current international $)",,,
+Isle of Man,IMN,"GDP per capita, PPP (current international $)",null,null,null
 India,IND,"GDP per capita, PPP (current international $)",6887.538348,6448.870196,7241.98423
-Not classified,INX,"GDP per capita, PPP (current international $)",,,
+Not classified,INX,"GDP per capita, PPP (current international $)",null,null,null
 Ireland,IRL,"GDP per capita, PPP (current international $)",87379.69297,93355.55516,106351.3735
 "Iran, Islamic Rep.",IRN,"GDP per capita, PPP (current international $)",14678.77788,15222.75974,16484.07536
 Iraq,IRQ,"GDP per capita, PPP (current international $)",10733.99471,9408.295527,9846.0415
@@ -126,7 +126,7 @@ Cambodia,KHM,"GDP per capita, PPP (current international $)",4652.708167,4510.37
 Kiribati,KIR,"GDP per capita, PPP (current international $)",2074.526963,2051.357672,2128.076638
 St. Kitts and Nevis,KNA,"GDP per capita, PPP (current international $)",32511.29829,28162.94691,29097.1867
 "Korea, Rep.",KOR,"GDP per capita, PPP (current international $)",42998.38824,45403.03259,47242.52723
-Kuwait,KWT,"GDP per capita, PPP (current international $)",49311.69846,46328.07946,
+Kuwait,KWT,"GDP per capita, PPP (current international $)",49311.69846,46328.07946,null
 Latin America & Caribbean (excluding high income),LAC,"GDP per capita, PPP (current international $)",15964.18906,15096.19993,16496.11012
 Lao PDR,LAO,"GDP per capita, PPP (current international $)",8170.958382,8189.14621,8620.647618
 Lebanon,LBN,"GDP per capita, PPP (current international $)",17896.94322,14535.68092,14256.68971
@@ -136,7 +136,7 @@ St. Lucia,LCA,"GDP per capita, PPP (current international $)",16113.31752,12289.
 Latin America & Caribbean,LCN,"GDP per capita, PPP (current international $)",16632.96195,15743.8829,17271.81653
 Least developed countries: UN classification,LDC,"GDP per capita, PPP (current international $)",3215.922273,3212.820885,3335.93272
 Low income,LIC,"GDP per capita, PPP (current international $)",2059.0586,2040.816019,2111.161006
-Liechtenstein,LIE,"GDP per capita, PPP (current international $)",,,
+Liechtenstein,LIE,"GDP per capita, PPP (current international $)",null,null,null
 Sri Lanka,LKA,"GDP per capita, PPP (current international $)",14214.65121,13812.95748,14706.54132
 Lower middle income,LMC,"GDP per capita, PPP (current international $)",7566.15411,7310.420509,7955.079428
 Low & middle income,LMY,"GDP per capita, PPP (current international $)",10985.57477,10810.18676,11861.18939
@@ -146,9 +146,9 @@ Lithuania,LTU,"GDP per capita, PPP (current international $)",38540.78145,38880.
 Luxembourg,LUX,"GDP per capita, PPP (current international $)",117341.9151,117846.1365,134544.5291
 Latvia,LVA,"GDP per capita, PPP (current international $)",31883.25911,31424.90221,34444.31209
 "Macao SAR, China",MAC,"GDP per capita, PPP (current international $)",128005.7819,58179.5128,71185.65564
-St. Martin (French part),MAF,"GDP per capita, PPP (current international $)",,,
+St. Martin (French part),MAF,"GDP per capita, PPP (current international $)",null,null,null
 Morocco,MAR,"GDP per capita, PPP (current international $)",8564.418945,7959.256348,8852.914063
-Monaco,MCO,"GDP per capita, PPP (current international $)",,,
+Monaco,MCO,"GDP per capita, PPP (current international $)",null,null,null
 Moldova,MDA,"GDP per capita, PPP (current international $)",13580.11657,12870.01602,15390.46583
 Madagascar,MDG,"GDP per capita, PPP (current international $)",1652.385832,1514.861688,1607.935225
 Maldives,MDV,"GDP per capita, PPP (current international $)",21442.73873,14154.25248,20615.37308
@@ -163,7 +163,7 @@ Myanmar,MMR,"GDP per capita, PPP (current international $)",5033.365324,5218.024
 Middle East & North Africa (excluding high income),MNA,"GDP per capita, PPP (current international $)",10930.91211,10660.8031,11444.00319
 Montenegro,MNE,"GDP per capita, PPP (current international $)",23075.08563,20107.69856,23284.56728
 Mongolia,MNG,"GDP per capita, PPP (current international $)",12983.80399,12305.71791,12818.87945
-Northern Mariana Islands,MNP,"GDP per capita, PPP (current international $)",,,
+Northern Mariana Islands,MNP,"GDP per capita, PPP (current international $)",null,null,null
 Mozambique,MOZ,"GDP per capita, PPP (current international $)",1339.42552,1300.510773,1347.720024
 Mauritania,MRT,"GDP per capita, PPP (current international $)",5738.00988,5605.920294,5830.817088
 Mauritius,MUS,"GDP per capita, PPP (current international $)",24681.05184,21331.81412,23035.283
@@ -171,7 +171,7 @@ Malawi,MWI,"GDP per capita, PPP (current international $)",1581.75721,1571.18029
 Malaysia,MYS,"GDP per capita, PPP (current international $)",28842.38839,27245.62042,28929.4742
 North America,NAC,"GDP per capita, PPP (current international $)",63475.50692,61337.15892,67513.58966
 Namibia,NAM,"GDP per capita, PPP (current international $)",10432.02821,9543.712734,10038.73827
-New Caledonia,NCL,"GDP per capita, PPP (current international $)",,,
+New Caledonia,NCL,"GDP per capita, PPP (current international $)",null,null,null
 Niger,NER,"GDP per capita, PPP (current international $)",1268.827795,1281.061929,1303.567363
 Nigeria,NGA,"GDP per capita, PPP (current international $)",5290.614333,5131.526238,5407.979457
 Nicaragua,NIC,"GDP per capita, PPP (current international $)",5574.739132,5465.507439,6194.70035
@@ -192,13 +192,13 @@ Papua New Guinea,PNG,"GDP per capita, PPP (current international $)",4114.483535
 Poland,POL,"GDP per capita, PPP (current international $)",33728.39436,34449.32341,37836.76295
 Pre-demographic dividend,PRE,"GDP per capita, PPP (current international $)",3653.504206,3512.444546,3669.896682
 Puerto Rico,PRI,"GDP per capita, PPP (current international $)",36261.06526,34160.86163,35850.32193
-"Korea, Dem. People's Rep.",PRK,"GDP per capita, PPP (current international $)",,,
+"Korea, Dem. People's Rep.",PRK,"GDP per capita, PPP (current international $)",null,null,null
 Portugal,PRT,"GDP per capita, PPP (current international $)",36172.07254,34177.08571,35798.75385
 Paraguay,PRY,"GDP per capita, PPP (current international $)",14184.11579,14046.65222,15037.18964
 West Bank and Gaza,PSE,"GDP per capita, PPP (current international $)",6509.035299,5698.412057,6199.451018
 Pacific island small states,PSS,"GDP per capita, PPP (current international $)",7512.776566,6585.424447,6486.196007
 Post-demographic dividend,PST,"GDP per capita, PPP (current international $)",50832.29617,49490.26093,53528.6689
-French Polynesia,PYF,"GDP per capita, PPP (current international $)",,,
+French Polynesia,PYF,"GDP per capita, PPP (current international $)",null,null,null
 Qatar,QAT,"GDP per capita, PPP (current international $)",94674.31214,93894.25275,102018.1159
 Romania,ROU,"GDP per capita, PPP (current international $)",32069.70986,32680.99374,35869.63348
 Russian Federation,RUS,"GDP per capita, PPP (current international $)",30067.74023,29936.92969,32862.62109
@@ -211,11 +211,11 @@ Singapore,SGP,"GDP per capita, PPP (current international $)",102431.3157,99681.
 Solomon Islands,SLB,"GDP per capita, PPP (current international $)",2727.306675,2604.354881,2648.732207
 Sierra Leone,SLE,"GDP per capita, PPP (current international $)",1725.562684,1673.065019,1773.899246
 El Salvador,SLV,"GDP per capita, PPP (current international $)",9402.17161,8720.011997,9981.88602
-San Marino,SMR,"GDP per capita, PPP (current international $)",62611.49478,59451.03424,
+San Marino,SMR,"GDP per capita, PPP (current international $)",62611.49478,59451.03424,null
 Somalia,SOM,"GDP per capita, PPP (current international $)",1186.326829,1189.162288,1248.812487
 Serbia,SRB,"GDP per capita, PPP (current international $)",18819.89122,19173.19609,21503.35809
 Sub-Saharan Africa (excluding high income),SSA,"GDP per capita, PPP (current international $)",3972.363208,3842.783834,4067.575768
-South Sudan,SSD,"GDP per capita, PPP (current international $)",,,
+South Sudan,SSD,"GDP per capita, PPP (current international $)",null,null,null
 Sub-Saharan Africa,SSF,"GDP per capita, PPP (current international $)",3974.682146,3844.879529,4069.889126
 Small states,SST,"GDP per capita, PPP (current international $)",21191.48823,20048.05546,21476.76819
 Sao Tome and Principe,STP,"GDP per capita, PPP (current international $)",4183.119385,4280.949702,4451.642512
@@ -224,9 +224,9 @@ Slovak Republic,SVK,"GDP per capita, PPP (current international $)",31966.55484,
 Slovenia,SVN,"GDP per capita, PPP (current international $)",40670.87787,39725.25919,43602.4892
 Sweden,SWE,"GDP per capita, PPP (current international $)",54598.78035,55064.88501,59323.96461
 Eswatini,SWZ,"GDP per capita, PPP (current international $)",8860.058796,8744.438693,9730.068125
-Sint Maarten (Dutch part),SXM,"GDP per capita, PPP (current international $)",,,
+Sint Maarten (Dutch part),SXM,"GDP per capita, PPP (current international $)",null,null,null
 Seychelles,SYC,"GDP per capita, PPP (current international $)",30609.05759,28351.85683,31596.15966
-Syrian Arab Republic,SYR,"GDP per capita, PPP (current international $)",,,
+Syrian Arab Republic,SYR,"GDP per capita, PPP (current international $)",null,null,null
 Turks and Caicos Islands,TCA,"GDP per capita, PPP (current international $)",27028.02442,19486.65314,20337.69338
 Chad,TCD,"GDP per capita, PPP (current international $)",1627.920102,1570.742918,1566.041161
 East Asia & Pacific (IDA & IBRD countries),TEA,"GDP per capita, PPP (current international $)",15183.74794,15418.67646,17082.36046
@@ -234,7 +234,7 @@ Europe & Central Asia (IDA & IBRD countries),TEC,"GDP per capita, PPP (current i
 Togo,TGO,"GDP per capita, PPP (current international $)",2168.331916,2180.16961,2334.299325
 Thailand,THA,"GDP per capita, PPP (current international $)",18763.50902,17771.30717,18760.75522
 Tajikistan,TJK,"GDP per capita, PPP (current international $)",3726.172928,3851.942913,4288.16789
-Turkmenistan,TKM,"GDP per capita, PPP (current international $)",15625.36066,,
+Turkmenistan,TKM,"GDP per capita, PPP (current international $)",15625.36066,null,null
 Latin America & the Caribbean (IDA & IBRD countries),TLA,"GDP per capita, PPP (current international $)",16548.48111,15667.25999,17193.13247
 Timor-Leste,TLS,"GDP per capita, PPP (current international $)",3895.548594,5122.48822,5528.580523
 Middle East & North Africa (IDA & IBRD countries),TMN,"GDP per capita, PPP (current international $)",10983.73776,10720.62492,11507.80471
@@ -253,15 +253,15 @@ Uruguay,URY,"GDP per capita, PPP (current international $)",24238.13305,23024.09
 United States,USA,"GDP per capita, PPP (current international $)",65094.79943,63027.67953,69287.53659
 Uzbekistan,UZB,"GDP per capita, PPP (current international $)",7658.27241,7746.430969,8497.448308
 St. Vincent and the Grenadines,VCT,"GDP per capita, PPP (current international $)",14788.84181,14211.48403,15045.30178
-"Venezuela, RB",VEN,"GDP per capita, PPP (current international $)",,,
-British Virgin Islands,VGB,"GDP per capita, PPP (current international $)",,,
-Virgin Islands (U.S.),VIR,"GDP per capita, PPP (current international $)",,,
+"Venezuela, RB",VEN,"GDP per capita, PPP (current international $)",null,null,null
+British Virgin Islands,VGB,"GDP per capita, PPP (current international $)",null,null,null
+Virgin Islands (U.S.),VIR,"GDP per capita, PPP (current international $)",null,null,null
 Vietnam,VNM,"GDP per capita, PPP (current international $)",10684.68628,11022.957,11676.10856
 Vanuatu,VUT,"GDP per capita, PPP (current international $)",3199.933726,2992.173313,3057.4114
 World,WLD,"GDP per capita, PPP (current international $)",17496.44918,17110.46554,18603.86985
 Samoa,WSM,"GDP per capita, PPP (current international $)",6613.982839,6394.375803,6079.764271
 Kosovo,XKX,"GDP per capita, PPP (current international $)",11796.15331,11292.86265,13055.90078
-"Yemen, Rep.",YEM,"GDP per capita, PPP (current international $)",,,
+"Yemen, Rep.",YEM,"GDP per capita, PPP (current international $)",null,null,null
 South Africa,ZAF,"GDP per capita, PPP (current international $)",14436.83264,13517.78059,14624.41517
 Zambia,ZMB,"GDP per capita, PPP (current international $)",3514.688008,3358.005322,3555.920229
 Zimbabwe,ZWE,"GDP per capita, PPP (current international $)",2296.390269,2099.320459,2323.687257
