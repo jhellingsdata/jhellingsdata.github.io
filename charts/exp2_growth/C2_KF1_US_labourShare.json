@@ -1,0 +1,78 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/KF1_US_labourShare.csv"
+    },
+    "width": 400,
+    "height": 300,
+  
+    "title": {
+      "text": "Labour and Capital Shares",
+      "subtitle": "Share of compensation in GDP (Current National Prices), source: FRED",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      }
+    },
+    "layer": [
+      {
+        "encoding": {
+          "color": {
+            "field": "Metric",
+            "type": "nominal",
+            "legend": {
+              "orient": "bottom-right",
+              "title": null,
+              "labelFontSize": 12
+            }
+          },
+          "y": {
+            "field": "Share",
+            "type": "quantitative",
+            "title": null,
+            "axis": {"gridOpacity": 0.6},
+            "scale": {"domain": [0,0.8]}
+          }
+        },
+        "layer": [
+          {"mark": "line"},
+          {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+        ]
+      },
+      {
+        "transform": [{"pivot": "Metric", "value": "Share", "groupby": ["Date"]}],
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Date", "type": "temporal", "format": "%Y", "title": "Year"},
+            {"field": "Labour", "type": "quantitative", "format": ".2%"},
+            {"field": "Capital", "type": "quantitative", "format": ".2%"}
+          ]
+        },
+        "params": [{
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Date"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }]
+      }
+    ]
+  }
+  
