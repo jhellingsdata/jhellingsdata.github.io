@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+    "width": 500,
+    "height": 300,
+  
+    "title": {
+      "text": "Mapping the garment supply chain",
+      "subtitle":["25 Largest Shoe Factories"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+    "config": {
+        "background":"white",
+        "view": {"stroke": "transparent"}},
+  
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/world_countries.geojson",
+          "format": {"property": "features"}
+        },
+  
+        "transform": [
+          {"filter": "datum['properties']['ISO'] != 'AQ'"}
+        ],
+  
+  
+        "projection": {
+          "type": "naturalEarth1",
+          "translate": [
+            -530,
+            220
+          ],
+          "scale": 480
+        },
+        
+        "params": [{
+          "name": "grid",
+          "select": "interval",
+          "bind": "scales"
+        }],
+    
+        "mark": {
+            "type": "geoshape",
+            "fill": "lightgray",
+            "stroke": "white",
+            "strokeWidth":0.5},
+  
+        "encoding": {
+          "tooltip": 
+            {"field": "properties.COUNTRY"}
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/Global_WageIndicator_shoeFactories.csv"
+        },
+        "projection": {
+          "type": "naturalEarth1",
+          "translate": [
+            275,
+            175
+          ],
+          "scale": 300
+        },
+        "mark": "circle",
+        "encoding": {
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
+          "size": {"field": "number", "type": "quantitative", "legend":null, "scale": {"range": [10, 100]}},
+          "color": {"field": "brand", "type": "nominal", "legend": {"orient": "bottom-left", "title": null, "labelFontSize": 12}},
+          "tooltip": [
+            {"field": "country", "title": "Country"},
+            {"field": "location2", "title": "Region"},
+            {"field": "number", "format": ",", "title": "Workers"},
+            {"field": "brand", "title": "Brand"}
+          ]
+        }
+      }
+    ]
+  }
