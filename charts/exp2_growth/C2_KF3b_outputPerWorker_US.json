@@ -20,7 +20,7 @@
 
   "mark":{
     "type": "line",
-    "color":"#f55d50",
+    "color":"rgb(128,0,0)",
     "strokeWidth":2,
     "opacity":1
   },
