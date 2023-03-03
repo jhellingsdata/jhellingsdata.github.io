@@ -11,7 +11,7 @@
       "subtitleFontSize": 9
     },
   
-    "height": 350,
+    "height": 300,
     
     "data": {
       "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/growth-global_research_gdp.csv"
