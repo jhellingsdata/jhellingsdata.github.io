@@ -1,52 +1,52 @@
 ,Shortname,Info,Wage,State
-0,GA,Federal,7.25,Georgia
-1,IA,Federal,7.25,Iowa
-2,ID,Federal,7.25,Idaho
-3,IN,Federal,7.25,Indiana
-4,KS,Federal,7.25,Kansas
-5,KY,Federal,7.25,Kentucky
-6,NC,Federal,7.25,North Carolina
-7,ND,Federal,7.25,North Dakota
-8,NH,Federal,7.25,New Hampshire
-9,OK,Federal,7.25,Oklahoma
-10,PA,Federal,7.25,Pennsylvania
-11,TX,Federal,7.25,Texas
-12,UT,Federal,7.25,Utah
-13,WI,Federal,7.25,Wisconsin
-14,WY,Federal,7.25,Wyoming
-15,AL,No MW,,Alabama
-16,LA,No MW,,Louisiana
-17,MS,No MW,,Mississippi
-18,SC,No MW,,South Carolina
-19,TN,No MW,,Tennessee
-20,AK,Above Fed,10.85,Alaska
-21,AR,Above Fed,11.0,Arkansas
-22,AZ,Above Fed,13.85,Arizona
-23,CA,Above Fed,15.5,California
-24,CO,Above Fed,13.65,Colorado
-25,CT,Above Fed,14.0,Connecticut
-26,DC,Above Fed,16.5,District of Columbia
-27,DE,Above Fed,11.75,Delaware
-28,FL,Above Fed,11.0,Florida
-29,HI,Above Fed,12.0,Hawaii
-30,IL,Above Fed,13.0,Illinois
-31,MA,Above Fed,15.0,Massachusetts
-32,MD,Above Fed,13.25,Maryland
-33,ME,Above Fed,13.8,Maine
-34,MI,Above Fed,10.1,Michigan
-35,MN,Above Fed,10.59,Minnesota
-36,MO,Above Fed,12.0,Missouri
-37,MT,Above Fed,9.95,Montana
-38,NE,Above Fed,10.5,Nebraska
-39,NJ,Above Fed,14.13,New Jersey
-40,NM,Above Fed,12.0,New Mexico
-41,NV,Above Fed,9.5,Nevada
-42,NY,Above Fed,14.2,New York
-43,OH,Above Fed,10.1,Ohio
-44,OR,Above Fed,13.5,Oregon
-45,RI,Above Fed,13.0,Rhode Island
-46,SD,Above Fed,10.8,South Dakota
-47,VA,Above Fed,12.0,Virginia
-48,VT,Above Fed,13.18,Vermont
-49,WA,Above Fed,15.74,Washington
-50,WV,Above Fed,8.75,West Virginia
+0,GA,At or below Federal,7.25,Georgia
+1,IA,At or below Federal,7.25,Iowa
+2,ID,At or below Federal,7.25,Idaho
+3,IN,At or below Federal,7.25,Indiana
+4,KS,At or below Federal,7.25,Kansas
+5,KY,At or below Federal,7.25,Kentucky
+6,NC,At or below Federal,7.25,North Carolina
+7,ND,At or below Federal,7.25,North Dakota
+8,NH,At or below Federal,7.25,New Hampshire
+9,OK,At or below Federal,7.25,Oklahoma
+10,PA,At or below Federal,7.25,Pennsylvania
+11,TX,At or below Federal,7.25,Texas
+12,UT,At or below Federal,7.25,Utah
+13,WI,At or below Federal,7.25,Wisconsin
+14,WY,At or below Federal,7.25,Wyoming
+15,AL,No Minimum Wage,7.25,Alabama
+16,LA,No Minimum Wage,7.25,Louisiana
+17,MS,No Minimum Wage,7.25,Mississippi
+18,SC,No Minimum Wage,7.25,South Carolina
+19,TN,No Minimum Wage,7.25,Tennessee
+20,AK,Above Federal,10.85,Alaska
+21,AR,Above Federal,11.0,Arkansas
+22,AZ,Above Federal,13.85,Arizona
+23,CA,Above Federal,15.5,California
+24,CO,Above Federal,13.65,Colorado
+25,CT,Above Federal,14.0,Connecticut
+26,DC,Above Federal,16.5,District of Columbia
+27,DE,Above Federal,11.75,Delaware
+28,FL,Above Federal,11.0,Florida
+29,HI,Above Federal,12.0,Hawaii
+30,IL,Above Federal,13.0,Illinois
+31,MA,Above Federal,15.0,Massachusetts
+32,MD,Above Federal,13.25,Maryland
+33,ME,Above Federal,13.8,Maine
+34,MI,Above Federal,10.1,Michigan
+35,MN,Above Federal,10.59,Minnesota
+36,MO,Above Federal,12.0,Missouri
+37,MT,Above Federal,9.95,Montana
+38,NE,Above Federal,10.5,Nebraska
+39,NJ,Above Federal,14.13,New Jersey
+40,NM,Above Federal,12.0,New Mexico
+41,NV,Above Federal,9.5,Nevada
+42,NY,Above Federal,14.2,New York
+43,OH,Above Federal,10.1,Ohio
+44,OR,Above Federal,13.5,Oregon
+45,RI,Above Federal,13.0,Rhode Island
+46,SD,Above Federal,10.8,South Dakota
+47,VA,Above Federal,12.0,Virginia
+48,VT,Above Federal,13.18,Vermont
+49,WA,Above Federal,15.74,Washington
+50,WV,Above Federal,8.75,West Virginia
