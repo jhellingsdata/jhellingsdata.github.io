@@ -1,0 +1,313 @@
+ISO3,Household,Measure,Year,Hours,Country
+AUT,Single - 2 Child,67% Average Wage,2022,31,Austria
+AUT,Single - No Child,67% Average Wage,2022,21,Austria
+AUT,Couple - 2 Child,67% Average Wage,2022,38,Austria
+AUT,Couple - No Child,67% Average Wage,2022,35,Austria
+AUT,Single - 2 Child,Average Wage,2022,20,Austria
+AUT,Single - No Child,Average Wage,2022,14,Austria
+AUT,Couple - 2 Child,Average Wage,2022,25,Austria
+AUT,Couple - No Child,Average Wage,2022,23,Austria
+BEL,Single - 2 Child,67% Average Wage,2022,23,Belgium
+BEL,Single - No Child,67% Average Wage,2022,17,Belgium
+BEL,Couple - 2 Child,67% Average Wage,2022,29,Belgium
+BEL,Couple - No Child,67% Average Wage,2022,24,Belgium
+BEL,Single - 2 Child,Average Wage,2022,15,Belgium
+BEL,Single - No Child,Average Wage,2022,11,Belgium
+BEL,Couple - 2 Child,Average Wage,2022,19,Belgium
+BEL,Couple - No Child,Average Wage,2022,16,Belgium
+BEL,Single - 2 Child,Minimum Wage,2022,42,Belgium
+BEL,Single - No Child,Minimum Wage,2022,31,Belgium
+BEL,Couple - 2 Child,Minimum Wage,2022,52,Belgium
+CZE,Single - 2 Child,67% Average Wage,2022,39,Czech Republic
+CZE,Single - No Child,67% Average Wage,2022,27,Czech Republic
+CZE,Couple - 2 Child,67% Average Wage,2022,44,Czech Republic
+CZE,Couple - No Child,67% Average Wage,2022,38,Czech Republic
+CZE,Single - 2 Child,Average Wage,2022,26,Czech Republic
+CZE,Single - No Child,Average Wage,2022,18,Czech Republic
+CZE,Couple - 2 Child,Average Wage,2022,30,Czech Republic
+CZE,Couple - No Child,Average Wage,2022,26,Czech Republic
+CZE,Single - 2 Child,Minimum Wage,2022,63,Czech Republic
+CZE,Single - No Child,Minimum Wage,2022,43,Czech Republic
+CZE,Couple - 2 Child,Minimum Wage,2022,71,Czech Republic
+DNK,Single - 2 Child,67% Average Wage,2022,19,Denmark
+DNK,Single - No Child,67% Average Wage,2022,26,Denmark
+DNK,Couple - 2 Child,67% Average Wage,2022,0,Denmark
+DNK,Couple - No Child,67% Average Wage,2022,0,Denmark
+DNK,Single - 2 Child,Average Wage,2022,17,Denmark
+DNK,Single - No Child,Average Wage,2022,17,Denmark
+DNK,Couple - 2 Child,Average Wage,2022,0,Denmark
+DNK,Couple - No Child,Average Wage,2022,0,Denmark
+FIN,Single - 2 Child,67% Average Wage,2022,24,Finland
+FIN,Single - No Child,67% Average Wage,2022,19,Finland
+FIN,Couple - 2 Child,67% Average Wage,2022,42,Finland
+FIN,Couple - No Child,67% Average Wage,2022,30,Finland
+FIN,Single - 2 Child,Average Wage,2022,16,Finland
+FIN,Single - No Child,Average Wage,2022,13,Finland
+FIN,Couple - 2 Child,Average Wage,2022,28,Finland
+FIN,Couple - No Child,Average Wage,2022,20,Finland
+FRA,Single - 2 Child,67% Average Wage,2022,23,France
+FRA,Single - No Child,67% Average Wage,2022,17,France
+FRA,Couple - 2 Child,67% Average Wage,2022,28,France
+FRA,Couple - No Child,67% Average Wage,2022,21,France
+FRA,Single - 2 Child,Average Wage,2022,16,France
+FRA,Single - No Child,Average Wage,2022,11,France
+FRA,Couple - 2 Child,Average Wage,2022,18,France
+FRA,Couple - No Child,Average Wage,2022,14,France
+FRA,Single - 2 Child,Minimum Wage,2022,34,France
+FRA,Single - No Child,Minimum Wage,2022,24,France
+FRA,Couple - 2 Child,Minimum Wage,2022,40,France
+DEU,Single - 2 Child,67% Average Wage,2022,15,Germany
+DEU,Single - No Child,67% Average Wage,2022,20,Germany
+DEU,Couple - 2 Child,67% Average Wage,2022,24,Germany
+DEU,Couple - No Child,67% Average Wage,2022,27,Germany
+DEU,Single - 2 Child,Average Wage,2022,10,Germany
+DEU,Single - No Child,Average Wage,2022,14,Germany
+DEU,Couple - 2 Child,Average Wage,2022,16,Germany
+DEU,Couple - No Child,Average Wage,2022,18,Germany
+DEU,Single - 2 Child,Minimum Wage,2022,27,Germany
+DEU,Single - No Child,Minimum Wage,2022,36,Germany
+DEU,Couple - 2 Child,Minimum Wage,2022,43,Germany
+HUN,Single - 2 Child,67% Average Wage,2022,24,Hungary
+HUN,Single - No Child,67% Average Wage,2022,21,Hungary
+HUN,Couple - 2 Child,67% Average Wage,2022,30,Hungary
+HUN,Couple - No Child,67% Average Wage,2022,29,Hungary
+HUN,Single - 2 Child,Average Wage,2022,16,Hungary
+HUN,Single - No Child,Average Wage,2022,14,Hungary
+HUN,Couple - 2 Child,Average Wage,2022,20,Hungary
+HUN,Couple - No Child,Average Wage,2022,20,Hungary
+HUN,Single - 2 Child,Minimum Wage,2022,40,Hungary
+HUN,Single - No Child,Minimum Wage,2022,35,Hungary
+HUN,Couple - 2 Child,Minimum Wage,2022,50,Hungary
+ISL,Single - 2 Child,67% Average Wage,2022,34,Iceland
+ISL,Single - No Child,67% Average Wage,2022,22,Iceland
+ISL,Couple - 2 Child,67% Average Wage,2022,37,Iceland
+ISL,Couple - No Child,67% Average Wage,2022,28,Iceland
+ISL,Single - 2 Child,Average Wage,2022,23,Iceland
+ISL,Single - No Child,Average Wage,2022,14,Iceland
+ISL,Couple - 2 Child,Average Wage,2022,25,Iceland
+ISL,Couple - No Child,Average Wage,2022,18,Iceland
+IRL,Single - 2 Child,67% Average Wage,2022,10,Ireland
+IRL,Single - No Child,67% Average Wage,2022,17,Ireland
+IRL,Couple - 2 Child,67% Average Wage,2022,23,Ireland
+IRL,Couple - No Child,67% Average Wage,2022,26,Ireland
+IRL,Single - 2 Child,Average Wage,2022,6,Ireland
+IRL,Single - No Child,Average Wage,2022,12,Ireland
+IRL,Couple - 2 Child,Average Wage,2022,19,Ireland
+IRL,Couple - No Child,Average Wage,2022,17,Ireland
+IRL,Single - 2 Child,Minimum Wage,2022,16,Ireland
+IRL,Single - No Child,Minimum Wage,2022,29,Ireland
+IRL,Couple - 2 Child,Minimum Wage,2022,38,Ireland
+ITA,Single - 2 Child,67% Average Wage,2022,26,Italy
+ITA,Single - No Child,67% Average Wage,2022,18,Italy
+ITA,Couple - 2 Child,67% Average Wage,2022,33,Italy
+ITA,Couple - No Child,67% Average Wage,2022,25,Italy
+ITA,Single - 2 Child,Average Wage,2022,18,Italy
+ITA,Single - No Child,Average Wage,2022,12,Italy
+ITA,Couple - 2 Child,Average Wage,2022,22,Italy
+ITA,Couple - No Child,Average Wage,2022,17,Italy
+JPN,Single - 2 Child,67% Average Wage,2022,0,Japan
+JPN,Single - No Child,67% Average Wage,2022,7,Japan
+JPN,Couple - 2 Child,67% Average Wage,2022,1,Japan
+JPN,Couple - No Child,67% Average Wage,2022,2,Japan
+JPN,Single - 2 Child,Average Wage,2022,0,Japan
+JPN,Single - No Child,Average Wage,2022,4,Japan
+JPN,Couple - 2 Child,Average Wage,2022,0,Japan
+JPN,Couple - No Child,Average Wage,2022,1,Japan
+JPN,Single - 2 Child,Minimum Wage,2022,0,Japan
+JPN,Single - No Child,Minimum Wage,2022,12,Japan
+JPN,Couple - 2 Child,Minimum Wage,2022,2,Japan
+LUX,Single - 2 Child,67% Average Wage,2022,21,Luxembourg
+LUX,Single - No Child,67% Average Wage,2022,22,Luxembourg
+LUX,Couple - 2 Child,67% Average Wage,2022,23,Luxembourg
+LUX,Couple - No Child,67% Average Wage,2022,23,Luxembourg
+LUX,Single - 2 Child,Average Wage,2022,14,Luxembourg
+LUX,Single - No Child,Average Wage,2022,15,Luxembourg
+LUX,Couple - 2 Child,Average Wage,2022,15,Luxembourg
+LUX,Couple - No Child,Average Wage,2022,15,Luxembourg
+LUX,Single - 2 Child,Minimum Wage,2022,29,Luxembourg
+LUX,Single - No Child,Minimum Wage,2022,32,Luxembourg
+LUX,Couple - 2 Child,Minimum Wage,2022,32,Luxembourg
+NOR,Single - 2 Child,67% Average Wage,2022,38,Norway
+NOR,Single - No Child,67% Average Wage,2022,26,Norway
+NOR,Couple - 2 Child,67% Average Wage,2022,54,Norway
+NOR,Couple - No Child,67% Average Wage,2022,39,Norway
+NOR,Single - 2 Child,Average Wage,2022,25,Norway
+NOR,Single - No Child,Average Wage,2022,17,Norway
+NOR,Couple - 2 Child,Average Wage,2022,36,Norway
+NOR,Couple - No Child,Average Wage,2022,26,Norway
+SVK,Single - 2 Child,67% Average Wage,2022,40,Slovakia
+SVK,Single - No Child,67% Average Wage,2022,28,Slovakia
+SVK,Couple - 2 Child,67% Average Wage,2022,48,Slovakia
+SVK,Couple - No Child,67% Average Wage,2022,38,Slovakia
+SVK,Single - 2 Child,Average Wage,2022,26,Slovakia
+SVK,Single - No Child,Average Wage,2022,19,Slovakia
+SVK,Couple - 2 Child,Average Wage,2022,32,Slovakia
+SVK,Couple - No Child,Average Wage,2022,26,Slovakia
+SVK,Single - 2 Child,Minimum Wage,2022,53,Slovakia
+SVK,Single - No Child,Minimum Wage,2022,38,Slovakia
+SVK,Couple - 2 Child,Minimum Wage,2022,64,Slovakia
+ESP,Single - 2 Child,67% Average Wage,2022,36,Spain
+ESP,Single - No Child,67% Average Wage,2022,22,Spain
+ESP,Couple - 2 Child,67% Average Wage,2022,47,Spain
+ESP,Couple - No Child,67% Average Wage,2022,32,Spain
+ESP,Single - 2 Child,Average Wage,2022,24,Spain
+ESP,Single - No Child,Average Wage,2022,15,Spain
+ESP,Couple - 2 Child,Average Wage,2022,31,Spain
+ESP,Couple - No Child,Average Wage,2022,21,Spain
+ESP,Single - 2 Child,Minimum Wage,2022,52,Spain
+ESP,Single - No Child,Minimum Wage,2022,32,Spain
+ESP,Couple - 2 Child,Minimum Wage,2022,66,Spain
+SWE,Single - 2 Child,67% Average Wage,2022,33,Sweden
+SWE,Single - No Child,67% Average Wage,2022,24,Sweden
+SWE,Couple - 2 Child,67% Average Wage,2022,47,Sweden
+SWE,Couple - No Child,67% Average Wage,2022,36,Sweden
+SWE,Single - 2 Child,Average Wage,2022,22,Sweden
+SWE,Single - No Child,Average Wage,2022,16,Sweden
+SWE,Couple - 2 Child,Average Wage,2022,32,Sweden
+SWE,Couple - No Child,Average Wage,2022,24,Sweden
+CHE,Single - 2 Child,67% Average Wage,2022,31,Switzerland
+CHE,Single - No Child,67% Average Wage,2022,21,Switzerland
+CHE,Couple - 2 Child,67% Average Wage,2022,39,Switzerland
+CHE,Couple - No Child,67% Average Wage,2022,32,Switzerland
+CHE,Single - 2 Child,Average Wage,2022,21,Switzerland
+CHE,Single - No Child,Average Wage,2022,14,Switzerland
+CHE,Couple - 2 Child,Average Wage,2022,26,Switzerland
+CHE,Couple - No Child,Average Wage,2022,21,Switzerland
+TUR,Single - 2 Child,67% Average Wage,2022,25,Türkiye
+TUR,Single - No Child,67% Average Wage,2022,14,Türkiye
+TUR,Couple - 2 Child,67% Average Wage,2022,29,Türkiye
+TUR,Couple - No Child,67% Average Wage,2022,20,Türkiye
+TUR,Single - 2 Child,Average Wage,2022,16,Türkiye
+TUR,Single - No Child,Average Wage,2022,10,Türkiye
+TUR,Couple - 2 Child,Average Wage,2022,20,Türkiye
+TUR,Couple - No Child,Average Wage,2022,14,Türkiye
+TUR,Single - 2 Child,Minimum Wage,2022,38,Türkiye
+TUR,Single - No Child,Minimum Wage,2022,22,Türkiye
+TUR,Couple - 2 Child,Minimum Wage,2022,45,Türkiye
+GBR,Single - 2 Child,67% Average Wage,2022,9,United Kingdom
+GBR,Single - No Child,67% Average Wage,2022,14,United Kingdom
+GBR,Couple - 2 Child,67% Average Wage,2022,10,United Kingdom
+GBR,Couple - No Child,67% Average Wage,2022,22,United Kingdom
+GBR,Single - 2 Child,Average Wage,2022,6,United Kingdom
+GBR,Single - No Child,Average Wage,2022,10,United Kingdom
+GBR,Couple - 2 Child,Average Wage,2022,7,United Kingdom
+GBR,Couple - No Child,Average Wage,2022,15,United Kingdom
+GBR,Single - 2 Child,Minimum Wage,2022,14,United Kingdom
+GBR,Single - No Child,Minimum Wage,2022,22,United Kingdom
+GBR,Couple - 2 Child,Minimum Wage,2022,17,United Kingdom
+BGR,Single - 2 Child,67% Average Wage,2022,24,Bulgaria
+BGR,Single - No Child,67% Average Wage,2022,23,Bulgaria
+BGR,Couple - 2 Child,67% Average Wage,2022,38,Bulgaria
+BGR,Couple - No Child,67% Average Wage,2022,33,Bulgaria
+BGR,Single - 2 Child,Average Wage,2022,16,Bulgaria
+BGR,Single - No Child,Average Wage,2022,16,Bulgaria
+BGR,Couple - 2 Child,Average Wage,2022,26,Bulgaria
+BGR,Couple - No Child,Average Wage,2022,22,Bulgaria
+BGR,Single - 2 Child,Minimum Wage,2022,39,Bulgaria
+BGR,Single - No Child,Minimum Wage,2022,37,Bulgaria
+BGR,Couple - 2 Child,Minimum Wage,2022,60,Bulgaria
+HRV,Single - 2 Child,67% Average Wage,2022,40,Croatia
+HRV,Single - No Child,67% Average Wage,2022,25,Croatia
+HRV,Couple - 2 Child,67% Average Wage,2022,47,Croatia
+HRV,Couple - No Child,67% Average Wage,2022,35,Croatia
+HRV,Single - 2 Child,Average Wage,2022,26,Croatia
+HRV,Single - No Child,Average Wage,2022,17,Croatia
+HRV,Couple - 2 Child,Average Wage,2022,32,Croatia
+HRV,Couple - No Child,Average Wage,2022,24,Croatia
+HRV,Single - 2 Child,Minimum Wage,2022,54,Croatia
+HRV,Single - No Child,Minimum Wage,2022,34,Croatia
+HRV,Couple - 2 Child,Minimum Wage,2022,63,Croatia
+CYP,Single - 2 Child,67% Average Wage,2022,32,Cyprus
+CYP,Single - No Child,67% Average Wage,2022,27,Cyprus
+CYP,Couple - 2 Child,67% Average Wage,2022,52,Cyprus
+CYP,Couple - No Child,67% Average Wage,2022,38,Cyprus
+CYP,Single - 2 Child,Average Wage,2022,22,Cyprus
+CYP,Single - No Child,Average Wage,2022,18,Cyprus
+CYP,Couple - 2 Child,Average Wage,2022,34,Cyprus
+CYP,Couple - No Child,Average Wage,2022,26,Cyprus
+EST,Single - 2 Child,67% Average Wage,2022,33,Estonia
+EST,Single - No Child,67% Average Wage,2022,26,Estonia
+EST,Couple - 2 Child,67% Average Wage,2022,50,Estonia
+EST,Couple - No Child,67% Average Wage,2022,38,Estonia
+EST,Single - 2 Child,Average Wage,2022,22,Estonia
+EST,Single - No Child,Average Wage,2022,18,Estonia
+EST,Couple - 2 Child,Average Wage,2022,34,Estonia
+EST,Couple - No Child,Average Wage,2022,25,Estonia
+EST,Single - 2 Child,Minimum Wage,2022,57,Estonia
+EST,Single - No Child,Minimum Wage,2022,45,Estonia
+EST,Couple - 2 Child,Minimum Wage,2022,80,Estonia
+LVA,Single - 2 Child,67% Average Wage,2022,26,Latvia
+LVA,Single - No Child,67% Average Wage,2022,27,Latvia
+LVA,Couple - 2 Child,67% Average Wage,2022,48,Latvia
+LVA,Couple - No Child,67% Average Wage,2022,41,Latvia
+LVA,Single - 2 Child,Average Wage,2022,18,Latvia
+LVA,Single - No Child,Average Wage,2022,18,Latvia
+LVA,Couple - 2 Child,Average Wage,2022,32,Latvia
+LVA,Couple - No Child,Average Wage,2022,28,Latvia
+LVA,Single - 2 Child,Minimum Wage,2022,49,Latvia
+LVA,Single - No Child,Minimum Wage,2022,51,Latvia
+LVA,Couple - 2 Child,Minimum Wage,2022,80,Latvia
+LTU,Single - 2 Child,67% Average Wage,2022,20,Lithuania
+LTU,Single - No Child,67% Average Wage,2022,22,Lithuania
+LTU,Couple - 2 Child,67% Average Wage,2022,35,Lithuania
+LTU,Couple - No Child,67% Average Wage,2022,34,Lithuania
+LTU,Single - 2 Child,Average Wage,2022,13,Lithuania
+LTU,Single - No Child,Average Wage,2022,14,Lithuania
+LTU,Couple - 2 Child,Average Wage,2022,24,Lithuania
+LTU,Couple - No Child,Average Wage,2022,23,Lithuania
+LTU,Single - 2 Child,Minimum Wage,2022,31,Lithuania
+LTU,Single - No Child,Minimum Wage,2022,34,Lithuania
+LTU,Couple - 2 Child,Minimum Wage,2022,56,Lithuania
+MLT,Single - 2 Child,67% Average Wage,2022,42,Malta
+MLT,Single - No Child,67% Average Wage,2022,25,Malta
+MLT,Couple - 2 Child,67% Average Wage,2022,52,Malta
+MLT,Couple - No Child,67% Average Wage,2022,40,Malta
+MLT,Single - 2 Child,Average Wage,2022,28,Malta
+MLT,Single - No Child,Average Wage,2022,17,Malta
+MLT,Couple - 2 Child,Average Wage,2022,34,Malta
+MLT,Couple - No Child,Average Wage,2022,27,Malta
+MLT,Single - 2 Child,Minimum Wage,2022,74,Malta
+MLT,Single - No Child,Minimum Wage,2022,44,Malta
+MLT,Couple - 2 Child,Minimum Wage,2022,80,Malta
+ROU,Single - 2 Child,67% Average Wage,2022,24,Romania
+ROU,Single - No Child,67% Average Wage,2022,18,Romania
+ROU,Couple - 2 Child,67% Average Wage,2022,30,Romania
+ROU,Couple - No Child,67% Average Wage,2022,27,Romania
+ROU,Single - 2 Child,Average Wage,2022,16,Romania
+ROU,Single - No Child,Average Wage,2022,12,Romania
+ROU,Couple - 2 Child,Average Wage,2022,20,Romania
+ROU,Couple - No Child,Average Wage,2022,18,Romania
+ROU,Single - 2 Child,Minimum Wage,2022,39,Romania
+ROU,Single - No Child,Minimum Wage,2022,30,Romania
+ROU,Couple - 2 Child,Minimum Wage,2022,47,Romania
+SVN,Single - 2 Child,67% Average Wage,2022,29,Slovenia
+SVN,Single - No Child,67% Average Wage,2022,31,Slovenia
+SVN,Couple - 2 Child,67% Average Wage,2022,56,Slovenia
+SVN,Couple - No Child,67% Average Wage,2022,46,Slovenia
+SVN,Single - 2 Child,Average Wage,2022,29,Slovenia
+SVN,Single - No Child,Average Wage,2022,21,Slovenia
+SVN,Couple - 2 Child,Average Wage,2022,37,Slovenia
+SVN,Couple - No Child,Average Wage,2022,30,Slovenia
+SVN,Single - 2 Child,Minimum Wage,2022,29,Slovenia
+SVN,Single - No Child,Minimum Wage,2022,38,Slovenia
+SVN,Couple - 2 Child,Minimum Wage,2022,68,Slovenia
+BEL,Couple - No Child,Minimum Wage,2022,43,Belgium
+CZE,Couple - No Child,Minimum Wage,2022,61,Czech Republic
+FRA,Couple - No Child,Minimum Wage,2022,31,France
+DEU,Couple - No Child,Minimum Wage,2022,50,Germany
+HUN,Couple - No Child,Minimum Wage,2022,50,Hungary
+IRL,Couple - No Child,Minimum Wage,2022,43,Ireland
+JPN,Couple - No Child,Minimum Wage,2022,4,Japan
+LUX,Couple - No Child,Minimum Wage,2022,32,Luxembourg
+SVK,Couple - No Child,Minimum Wage,2022,51,Slovakia
+ESP,Couple - No Child,Minimum Wage,2022,45,Spain
+TUR,Couple - No Child,Minimum Wage,2022,31,Türkiye
+GBR,Couple - No Child,Minimum Wage,2022,35,United Kingdom
+BGR,Couple - No Child,Minimum Wage,2022,52,Bulgaria
+HRV,Couple - No Child,Minimum Wage,2022,48,Croatia
+EST,Couple - No Child,Minimum Wage,2022,64,Estonia
+LVA,Couple - No Child,Minimum Wage,2022,76,Latvia
+LTU,Couple - No Child,Minimum Wage,2022,54,Lithuania
+MLT,Couple - No Child,Minimum Wage,2022,71,Malta
+ROU,Couple - No Child,Minimum Wage,2022,42,Romania
+SVN,Couple - No Child,Minimum Wage,2022,56,Slovenia
