@@ -65,11 +65,9 @@
             <div class="chart" id="chart2"></div>
         </div>
 
-
         <div class="card">
             <div class="chart" id="chart3"></div>
         </div>
-
 
         <div class="card">
             <div class="chart" id="chart4"></div>
@@ -86,7 +84,14 @@
         <div class="card">
           <div class="chart" id="chart7"></div>
         </div>
-
+  
+        <div class="card">
+          <div class="chart" id="chart8"></div>
+        </div>
+        
+        <div class="card">
+          <div class="chart" id="chart9"></div>
+        </div>
 
 
     </section>
@@ -101,8 +106,10 @@
       var myChart3 = "charts/exp3_work/C2a_US_employ_dualAxis.json";
       var myChart4 = "charts/exp3_work/C1b_UK_unemploy.json";
       var myChart5 = "charts/exp3_work/C2b_UK_employ.json";
-      var myChart6 = "charts/exp3_work/map_US_minWage.json";
-      var myChart7 = "charts/exp3_work/C4a_replacementRate.json";
+      var myChart6 = "charts/exp3_work/map1_US_minWage.json";
+      var myChart7 = "charts/exp3_work/map2_US_livingWage.json";
+      var myChart8 = "charts/exp3_work/C4a_replacementRate.json";
+      var myChart9 = "charts/exp3_work/C4b_benefitsAdequacy.json";
       
       // Embed the charts in the divs above
       vegaEmbed('#chart1', myChart1, {"actions": true});
@@ -112,6 +119,8 @@
       vegaEmbed('#chart5', myChart5, {"actions": true});
       vegaEmbed('#chart6', myChart6, {"actions": true});
       vegaEmbed('#chart7', myChart7, {"actions": true});
+      vegaEmbed('#chart8', myChart8, {"actions": true});
+      vegaEmbed('#chart9', myChart9, {"actions": true});
   
 
     </script>
