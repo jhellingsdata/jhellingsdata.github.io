@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "State minimum wages as of Feb 2023 for DoL. Federal rate of $7.25 applies where there is no state law or min wage rate is below $7.25.",
+    "width": 500,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_States_5m.json",
+      "format": {"property": "features"}
+    },
+    "title": {
+      "text": "Shortfall of minimum to living wage",
+      "subtitle": [
+        "Source: MIT Living Wage Calculator 2023",
+        "Source: US Department of Labor"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "transform": [
+      {
+        "lookup": "properties.NAME",
+        "from": {
+          "key": "State",
+          "fields": ["Wage", "Living Wage", "Shortfall", "Info"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_minWages.csv"
+          }
+        }
+      }
+    ],
+
+
+    "projection": {"type": "albersUsa"},
+    "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+    "encoding": {
+      "color": {
+        "field": "Shortfall",
+        "legend": {
+          "title": "",
+          "legendX": 0,
+          "legendY": 0,
+          "direction": "vertical",
+          "format": "$s"
+        },
+        "type": "quantitative",
+        "scale": {"scheme": "yelloworangered", "reverse": true}
+      },
+      "tooltip": [
+        {"field": "properties.NAME", "title": "State"},
+        {"field": "Wage", "title": "Minimum Hourly", "format": "$.2f"},
+        {"field": "Living Wage", "title": "Liveable Wage", "format": "$.2f"},
+        {"field": "Shortfall", "title": "Shortfall", "format": "$.2f"}
+      ]
+    }
+    
+  }

@@ -1,0 +1,108 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+"description": "Adequacy of minimum income benefits, 2021, OECD data - 'Income of jobless families relying on guaranteed minimum income benefits as a percentage of the median disposable income in the country'. Sorted by average values in view.",
+
+"data": {
+  "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/OECD_benefit_adequacy2021.csv",
+  "format": {"type": "csv"}
+},
+
+"config": {"view": {"stroke": "transparent"}},
+
+"height": 290,
+"width": 500,
+
+"title": {
+  "text": "Adequacy of minimum income benefits",
+  "subtitle": ["Jobless family income as proportion of median disposable income, source: OECD 2021"],
+  "subtitleFontStyle":"italic",
+  "subtitleFontSize":10,
+  "anchor": "start",
+  "color": "black"
+},
+
+"transform": [
+  {"filter": {"not": {"field": "ISO3", "oneOf": ["AUS", "CAN", "GRC", "KOR", "NLD", "NZL", "POL", "PRT", "ISR", "OECD"]}}},
+  
+  {"calculate": "truncate(datum.Situation, 6, 'right','')", "as": "Category"},
+  {"calculate": "truncate(datum.Situation, 8, 'left','')", "as": "Children"},
+  
+  {"calculate": "trim(datum.Children)", "as": "Children"}
+
+],
+
+"encoding": {
+  "x": {
+    "field": "ISO3", "type": "nominal", "title": null,
+    "sort": {"order": "ascending", "op":"average", "field": "Value"},
+    "axis": {"labelAngle": -40, "labelOffset": 6, "labelPadding": 0, "tickOpacity": 0.6}
+  },
+  "y": {
+    "field": "Value",
+    "type": "quantitative",
+    "title": null,
+    "axis": {"gridOpacity": 0.6, "tickOpacity": 0.6}
+  },
+  "tooltip": [
+    {"field": "Country", "title": "Country"},
+    {"field": "Situation", "title": "Situation"},
+    {"field": "Value", "title": "Benefits Adequacy (%)"}
+  ]
+},
+"layer": [
+  {
+    "transform": [{"filter": {"selection": "SelectMetric"}}],
+    "mark": "line",
+    "encoding": {
+      "detail": {
+        "field": "ISO3",
+        "type": "nominal"
+      },
+
+      "color": {"value": "lightgrey"}
+    }
+  },
+  {
+    "params": [{
+      "name": "SelectMetric",
+      "value": [{"Children": "No Child"}],
+      "select": {"type": "point", "fields": ["Children"]},
+      "bind": {
+        "input": "select", "options": ["No Child", "2 Child"], "labels": ["No Children", "Two Children"],
+        "name": "Dependents"
+      }
+    },
+    {
+      "name": "hover",
+      "value": [{"Situation": "Single- No Child"}],
+      "select": {
+        "type": "point",
+        "fields": ["Situation"],
+        "on": "mouseover"
+      }
+    }],
+    "transform": [{"filter": {"selection": "SelectMetric"}}],
+    "mark": {
+      "type": "point",
+      "filled": true
+    },
+    "encoding": {
+        "color": {
+          "condition": {
+            "param": "hover",
+            "field": "Situation",
+            "type": "nominal",
+            "legend": {"orient": "bottom-right", "title": null, "labelFontSize": 12},
+            "scale": {"range": ["#911a24", "#e6959c"]}
+          },
+          "value": "grey"
+      },
+      "size": {
+        "condition": {"param": "hover", "empty": false, "value": 80},
+        "value": 50
+      },
+      "opacity": {"value": 1}
+    }
+  }
+]
+}
