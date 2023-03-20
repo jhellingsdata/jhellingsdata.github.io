@@ -33,7 +33,8 @@
               "orient": "bottom-right",
               "title": null,
               "labelFontSize": 12
-            }
+            },
+            "scale": {"range": ["rgb(128,0,0)", "#008080"]}
           },
           "y": {
             "field": "Share",

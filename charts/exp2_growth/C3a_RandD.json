@@ -11,7 +11,7 @@
       "subtitleFontSize": 9
     },
   
-    "height": 300,
+    "height": 320,
     
     "data": {
       "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/growth-global_research_gdp.csv"
@@ -20,7 +20,7 @@
     "transform": [
       {"filter": "datum['R&D Expenditure (% of GDP)'] > 1.5"}
     ],
-    "mark": {"type": "bar", "color": "#587f86", "height": 11},
+    "mark": {"type": "bar", "color": "rgb(128,0,0)"},
     "encoding": {
       "y": {"field": "Country", "type": "nominal", "title": null, "sort": "-x"},
       "x": {"field": "R&D Expenditure (% of GDP)", "type": "quantitative"},
