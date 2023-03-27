@@ -1,0 +1,80 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/FRED_UNEMPLOY_educ.csv"},
+  
+    "config": {"view": {"stroke": "transparent"}},
+    "width": 500,
+    "height": 250,
+  
+    "title": {
+      "text": "Unemployment by education level",
+      "subtitle": ["Monthly rate, 25+ years, seasonally adjusted, source: FRED"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "mark": {"type": "line", "point": "transparent"},
+  
+    "transform": [
+      {"calculate": "toNumber(datum.Value)", "as": "Value"},
+      {"calculate": "year(datum.date)", "as": "year"},
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 1992,
+        "bind": {
+          "input": "range",
+          "min": 1992,
+          "max": 2022,
+          "step": 1,
+          "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2023,
+        "bind": {
+          "input": "range",
+          "min": 1993,
+          "max": 2023,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"format": "s", "gridOpacity": 0.6}
+      },
+      "color": {
+        "field": "Series",
+        "type": "nominal",
+        "legend": {
+          "orient": "top",
+          "columns": 2, 
+          "title": null
+        },
+      "scale":{"range":["#539165", "#A84448", "#F7C04A", "#3F497F"]}
+      },
+      "tooltip": [
+        {"field": "date", "type": "temporal", "format": "%b %Y", "title": "Month"},
+        {"field": "Series", "title": "Education"},
+        {"field": "value", "type": "quantitative", "title": "Unemployed %", "format": ""}
+      ]
+    }
+  }
+  

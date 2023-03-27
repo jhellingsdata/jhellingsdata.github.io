@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/FRED_UNEMPLOY_age.csv"},
+  
+    "config": {"view": {"stroke": "transparent"}},
+    "width": 500,
+    "height": 260,
+  
+    "title": {
+      "text": "Unemployment by age",
+      "subtitle": ["Monthly rate, seasonally adjusted, source: FRED"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "mark": {"type": "line", "point": "transparent"},
+  
+    "transform": [
+      {"calculate": "toNumber(datum.Value)", "as": "Value"},
+      {"calculate": "year(datum.date)", "as": "year"},
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 1992,
+        "bind": {
+          "input": "range",
+          "min": 1948,
+          "max": 2022,
+          "step": 1,
+          "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2023,
+        "bind": {
+          "input": "range",
+          "min": 1949,
+          "max": 2023,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"format": "s", "gridOpacity": 0.6}
+      },
+      "color": {
+        "field": "Series",
+        "type": "nominal",
+        "legend": {
+          "orient": "top-left",
+          "offset": 6,
+          "columns": 3, 
+          "title": null,
+          "padding": 0
+        },
+        "scale":{"range":["#539165", "#A84448", "#F7C04A", "#3F497F", "#E9A178", "#B4E4FF"]}
+      },
+      "tooltip": [
+        {"field": "date", "type": "temporal", "format": "%b %Y", "title": "Month"},
+        {"field": "Series", "title": "Age Range"},
+        {"field": "value", "type": "quantitative", "title": "Unemployed %", "format": ""}
+      ]
+    }
+  }
+  
