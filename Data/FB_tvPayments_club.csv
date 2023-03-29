@@ -1,0 +1,79 @@
+﻿League,Club,Season,Position,Local currency (m),Exchange Rate,Value
+Premier League,Manchester City,2021-22,1,153.1,1,153.1
+Premier League,Liverpool,2021-22,2,151.9,1,151.9
+Premier League,Tottenham Hotspur,2021-22,4,146.1,1,146.1
+Premier League,Arsenal,2021-22,5,145.7,1,145.7
+Premier League,Chelsea,2021-22,3,145.6,1,145.6
+Premier League,Manchester United,2021-22,6,142.8,1,142.8
+Premier League,West Ham,2021-22,7,136.6,1,136.6
+Premier League,Leicester City,2021-22,8,128.6,1,128.6
+Premier League,Newcastle United,2021-22,11,126.7,1,126.7
+Premier League,Brighton,2021-22,9,125.7,1,125.7
+Premier League,Wolves,2021-22,10,124.5,1,124.5
+Premier League,Crystal Palace,2021-22,12,120.4,1,120.4
+Premier League,Aston Villa,2021-22,14,119.6,1,119.6
+Premier League,Brentford,2021-22,13,118.4,1,118.4
+Premier League,Everton,2021-22,16,117.2,1,117.2
+Premier League,Leeds United,2021-22,17,115.1,1,115.1
+Premier League,Southampton,2021-22,15,110.9,1,110.9
+Premier League,Burnley,2021-22,18,104.7,1,104.7
+Premier League,Watford,2021-22,19,102.7,1,102.7
+Premier League,Norwich City,2021-22,20,100.6,1,100.6
+Bundesliga,Bayern München,2021-22,1,90.0,1.173,76.7
+Bundesliga,Borussia Dortmund,2021-22,2,79.9,1.173,68.1
+Bundesliga,Bayer 04 Leverkusen,2021-22,3,75.4,1.173,64.3
+Bundesliga,RB Leipzig,2021-22,4,73.1,1.173,62.3
+Bundesliga,Eintracht Frankfurt,2021-22,11,67.0,1.173,57.1
+Bundesliga,Bor. Mönchengladbach,2021-22,10,66.6,1.173,56.8
+Bundesliga,VfL Wolfsburg,2021-22,12,60.6,1.173,51.7
+Bundesliga,TSG 1899 Hoffenheim,2021-22,9,60.5,1.173,51.6
+Bundesliga,SC Freiburg,2021-22,6,52.6,1.173,44.8
+Bundesliga,Hertha BSC,2021-22,16,51.9,1.173,44.2
+Bundesliga,FSV Mainz 05,2021-22,8,50.7,1.173,43.2
+Bundesliga,VfB Stuttgart ,2021-22,15,44.4,1.173,37.9
+Bundesliga,FC Augsburg,2021-22,14,42.3,1.173,36.1
+Bundesliga,1.FC Union Berlin,2021-22,5,39.4,1.173,33.6
+Bundesliga,1.FC Köln,2021-22,7,39.0,1.173,33.2
+Bundesliga,Arminia Bielefeld ,2021-22,17,34.4,1.173,29.3
+Bundesliga,VfL Bochum,2021-22,13,31.2,1.173,26.6
+Bundesliga,SpVgg Greuther Fürth,2021-22,18,28.5,1.173,24.3
+La Liga,Real Madrid CF,2021-22,1,160.6,1.173,136.9
+La Liga,FC Barcelona,2021-22,2,159.9,1.173,136.3
+La Liga,Club Atlético de Madrid,2021-22,3,130.4,1.173,111.2
+La Liga,Sevilla FC,2021-22,4,87.6,1.173,74.7
+La Liga,Valencia CF,2021-22,9,69.9,1.173,59.6
+La Liga,Real Sociedad,2021-22,6,69.5,1.173,59.2
+La Liga,Villarreal CF,2021-22,7,67.9,1.173,57.9
+La Liga,Athletic Bilbao,2021-22,8,66.1,1.173,56.4
+La Liga,Real Betis,2021-22,5,65.5,1.173,55.8
+La Liga,RCD Espanyol,2021-22,14,54.6,1.173,46.5
+La Liga,Getafe FC,2021-22,15,54.6,1.173,46.5
+La Liga,RC Celta de Vigo,2021-22,11,53.2,1.173,45.4
+La Liga,Granada CF,2021-22,18,51.9,1.173,44.2
+La Liga,CA Osasuna,2021-22,10,50.9,1.173,43.4
+La Liga,Deportivo Alavés,2021-22,20,49.7,1.173,42.4
+La Liga,Levante UD,2021-22,19,49.5,1.173,42.2
+La Liga,Cádiz CF,2021-22,17,47.6,1.173,40.6
+La Liga,Rayo Vallecano,2021-22,12,45.9,1.173,39.1
+La Liga,Elche CF,2021-22,13,45.9,1.173,39.1
+La Liga,RCD Mallorca,2021-22,16,45.9,1.173,39.1
+Serie A,Atalanta,2021-22,8,48.8,1.173,41.6
+Serie A,Bologna,2021-22,13,38.4,1.173,32.7
+Serie A,Cagliari,2021-22,18,30.7,1.173,26.2
+Serie A,Empoli,2021-22,14,29.7,1.173,25.3
+Serie A,Fiorentina,2021-22,7,51.2,1.173,43.6
+Serie A,Genoa,2021-22,19,35.4,1.173,30.2
+Serie A,Inter,2021-22,2,84.2,1.173,71.8
+Serie A,JJ Juventus,2021-22,4,77.9,1.173,66.4
+Serie A,Lazio,2021-22,5,58.9,1.173,50.2
+Serie A,Milan,2021-22,1,77.8,1.173,66.3
+Serie A,Napoli,2021-22,3,68.5,1.173,58.4
+Serie A,Roma,2021-22,6,64.1,1.173,54.6
+Serie A,Salernitana,2021-22,17,28.4,1.173,24.2
+Serie A,Sampdoria,2021-22,15,38.6,1.173,32.9
+Serie A,Sassuolo,2021-22,11,37.8,1.173,32.2
+Serie A,Spezia,2021-22,16,27.6,1.173,23.5
+Serie A,Torino,2021-22,10,43.5,1.173,37.1
+Serie A,Udinese,2021-22,12,34.5,1.173,29.4
+Serie A,Venezia,2021-22,20,26.0,1.173,22.2
+Serie A,Verona,2021-22,9,37.2,1.173,31.7
