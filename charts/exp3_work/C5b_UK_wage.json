@@ -61,8 +61,8 @@
             {
               "field": "Real",
               "type": "quantitative",
-              "format": "$d",
-              "title": "Total Weekly Earnings"
+              "format": "d",
+              "title": "Weekly Earnings (£)"
             }
           ]
         },
