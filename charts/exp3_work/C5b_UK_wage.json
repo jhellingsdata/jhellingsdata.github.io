@@ -1,0 +1,83 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Combines whole economy average weekly earnings (not seasonally adjusted, ONS series=KA46), with historical estimated weekly earnings for pre-2000 data. Deflated using CPIH indexed at 2015.",
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_realAWE_nsa.csv"
+    },
+    "width": 400,
+    "height": 250,
+    "config": {"view": {"stroke": "transparent"}},
+    "title": {
+      "text": "Weekly Wages, UK",
+      "subtitle": "Average weekly earnings, 2015 CPIH, not seasonally adjusted, source: FRED",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "encoding": {
+      "x": {
+        "field": "Month",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      }
+    },
+  
+    "layer": [
+      {
+        "encoding": {
+          "y": {
+            "field": "Real",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "gridOpacity": 0.6
+            },
+            "scale": {
+              "zero": false,
+              "padding": 40
+            }
+          }
+        },
+        "layer": [
+          {"mark": {"type": "line", "color": "rgb(128,0,0)"}},
+          {
+            "transform": [{"filter": {"param": "hover", "empty": false}}],
+            "mark": "point"
+          }
+        ]
+      },
+      {
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Month", "type": "temporal", "format": "%b %Y"},
+            {
+              "field": "Real",
+              "type": "quantitative",
+              "format": "$d",
+              "title": "Total Weekly Earnings"
+            }
+          ]
+        },
+        "params": [
+          {
+            "name": "hover",
+            "select": {
+              "type": "point",
+              "fields": ["Month"],
+              "nearest": true,
+              "on": "mouseover",
+              "clear": "mouseout"
+            }
+          }
+        ]
+      }
+    ]
+  }

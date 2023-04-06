@@ -1,0 +1,121 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+   "title": {
+    "text": "US Wages vs Unemployment",
+    "subtitle": ["Median real weekly earnings, 1982-84 US$, full time 16+ yrs.", "Monthly unemployment rate averaged per quarter, source: FRED"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start"},
+  
+    "width": 500,
+    "height": 300,
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/FRED_US_unrate_realWage.csv"},
+  
+    "transform": [
+      {"calculate": "datum.Unemployment / 100", "as": "Unemployment"}
+    ],
+  
+    "encoding": {     
+      "x": {
+        "field": "Date",
+        "title": null,
+        "type": "temporal",
+        "axis": {
+          "grid": false,
+          "gridOpacity": 0.6
+        }
+      }
+    },
+            
+    "layer":[
+  
+      {
+        "mark": {"type": "line","point": "transparent"},
+  
+        "encoding": {
+          "y": {
+            "field": "Wage",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "grid": false,            
+              "labelColor": "#008080",
+              "format":",.5"
+            },
+            "scale": {
+              "zero": false,
+              "padding": 20
+            }
+          },
+            
+          "color": {
+            "datum": "Wage",
+            "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+            "legend":{
+              "orient": "top-left"}}}
+      },
+  
+      {
+        "mark": {
+          "type": "line",
+          "point": false
+        },
+  
+        "encoding": {
+          "y": {
+            "field": "Unemployment",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "grid": true,
+              "labelColor": "rgb(128,0,0)",
+              "format": "~%"
+            },
+            "scale": {
+              "zero": false,
+              "padding": 30
+            }
+          },
+            
+          "color": {
+            "datum": "Unemployment",
+            "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+            "legend":{
+              "orient": "top-left"}
+            }
+        } 
+      },
+      {
+  
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Date", "type": "temporal", "format": "%b %Y"},
+            {"field": "Unemployment", "type": "quantitative", "format": "~%"},
+            {"field": "Wage", "title": "Weekly Wage", "type": "quantitative", "format": "$"}
+          ]
+        },
+        "params": [
+          {
+            "name": "hover",
+            "select": {
+              "type": "point",
+              "fields": ["Date"],
+              "nearest": true,
+              "on": "mouseover",
+              "clear": "mouseout"
+            }
+          }
+        ]
+      }
+    ],
+    "resolve": {"scale": {"y": "independent"}} 
+  }
