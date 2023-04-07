@@ -1,16 +1,26 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Combines whole economy average weekly earnings (not seasonally adjusted, ONS series=KA46), with historical estimated weekly earnings for pre-2000 data. Deflated using CPIH indexed at 2015.",
+    "description": "Combines whole economy average weekly earnings (not seasonally adjusted, ONS series=KA46), with historical estimated weekly earnings for pre-2000 data. Deflated using CPIH indexed at 2015. Then seasonally adjusted using X13 ARIMA.",
   
     "data": {
-      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_realAWE_nsa.csv"
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_realAWE_sa.csv"
     },
     "width": 400,
     "height": 250,
-    "config": {"view": {"stroke": "transparent"}},
+    "config": {
+      "locale": {
+        "number": {
+          "decimal": ".",
+          "thousands": ",",
+          "grouping": [3],
+          "currency": ["£", ""]
+        }
+      },
+      "view": {"stroke": "transparent"}
+    },
     "title": {
-      "text": "Weekly Wages, UK",
-      "subtitle": "Average weekly earnings, 2015 CPIH, not seasonally adjusted, source: FRED",
+      "text": "Real Wage Growth, UK",
+      "subtitle": "Average weekly earnings, CPIH 2015 prices, seasonally adjusted, source: FRED",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
       "anchor": "start",
@@ -18,7 +28,7 @@
     },
     "encoding": {
       "x": {
-        "field": "Month",
+        "field": "Date",
         "type": "temporal",
         "title": null,
         "axis": {"grid": false}
@@ -29,7 +39,7 @@
       {
         "encoding": {
           "y": {
-            "field": "Real",
+            "field": "Wages",
             "type": "quantitative",
             "title": null,
             "axis": {
@@ -57,12 +67,12 @@
             "value": 0
           },
           "tooltip": [
-            {"field": "Month", "type": "temporal", "format": "%b %Y"},
+            {"field": "Date", "type": "temporal", "title": "Month", "format": "%b %Y"},
             {
-              "field": "Real",
+              "field": "Wages",
               "type": "quantitative",
-              "format": "d",
-              "title": "Weekly Earnings (£)"
+              "format": "$d",
+              "title": "Weekly Earnings"
             }
           ]
         },
@@ -71,7 +81,7 @@
             "name": "hover",
             "select": {
               "type": "point",
-              "fields": ["Month"],
+              "fields": ["Date"],
               "nearest": true,
               "on": "mouseover",
               "clear": "mouseout"
