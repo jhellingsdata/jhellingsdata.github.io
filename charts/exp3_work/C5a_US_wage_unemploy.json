@@ -4,7 +4,7 @@
   
    "title": {
     "text": "US Wages vs Unemployment",
-    "subtitle": ["Median real weekly earnings, 1982-84 US$, full time 16+ yrs.", "Monthly unemployment rate averaged per quarter, source: FRED"],
+    "subtitle": ["Median real weekly earnings, 1982-84 US$, full time 16+ yrs.", "Monthly unemployment rate, averaged per quarter, source: FRED"],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start"},
@@ -44,19 +44,28 @@
             "axis": {
               "grid": false,            
               "labelColor": "#008080",
-              "format":",.5"
+              "labelFontSize": 11
             },
             "scale": {
               "zero": false,
               "padding": 20
             }
           },
-            
           "color": {
             "datum": "Wage",
             "scale": {"range": ["#008080", "rgb(128,0,0)"]},
             "legend":{
-              "orient": "top-left"}}}
+              "orient": "top-left"
+            }
+          }
+        },
+        "layer": [
+          {"mark": {"type": "line", "color": "transparent", "point":"transparent"}},
+          {
+            "transform": [{"filter": {"param": "hover", "empty": false}}],
+            "mark": "point"
+          }
+        ]
       },
   
       {
@@ -73,7 +82,9 @@
             "axis": {
               "grid": true,
               "labelColor": "rgb(128,0,0)",
-              "format": "~%"
+              "format": "~%",
+              "labelFontSize": 11,
+              "gridOpacity": 0.6
             },
             "scale": {
               "zero": false,
@@ -85,9 +96,19 @@
             "datum": "Unemployment",
             "scale": {"range": ["#008080", "rgb(128,0,0)"]},
             "legend":{
-              "orient": "top-left"}
+              "orient": "top-left",
+              "labelFontSize": 11,
+              "offset": 10
             }
-        } 
+          }
+        },
+        "layer": [
+          {"mark": {"type": "line", "color": "transparent", "point":"transparent"}},
+          {
+            "transform": [{"filter": {"param": "hover", "empty": false}}],
+            "mark": {"type": "point"}
+          }
+        ]
       },
       {
   
@@ -98,7 +119,7 @@
             "value": 0
           },
           "tooltip": [
-            {"field": "Date", "type": "temporal", "format": "%b %Y"},
+            {"field": "Date", "type": "temporal", "title": "Month","timeUnit": "yearquarter"},
             {"field": "Unemployment", "type": "quantitative", "format": "~%"},
             {"field": "Wage", "title": "Weekly Wage", "type": "quantitative", "format": "$"}
           ]
