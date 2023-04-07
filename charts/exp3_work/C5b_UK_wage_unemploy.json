@@ -1,0 +1,153 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+   "title": {
+    "text": "UK Wages vs Unemployment",
+    "subtitle": ["Average weekly earnings: whole economy, including bonuses and arrears.", "Unemployment rate, three-month average, 16+ yrs. Both seasonally adjusted, source: ONS"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start"},
+  
+    "width": 500,
+    "height": 300,
+    "config": {
+      "locale": {
+        "number": {
+          "decimal": ".",
+          "thousands": ",",
+          "grouping": [3],
+          "currency": ["£", ""]
+        }
+      }
+    },
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_unrate_realWage.csv"},
+  
+    "transform": [
+      {"calculate": "datum.Unemployment / 100", "as": "Unemployment"}
+    ],
+  
+    "encoding": {     
+      "x": {
+        "field": "Date",
+        "title": null,
+        "type": "temporal",
+        "axis": {
+          "grid": false,
+          "gridOpacity": 0.6
+        }
+      }
+    },
+            
+    "layer":[
+  
+      {
+        "mark": {"type": "line","point": "transparent"},
+  
+        "encoding": {
+          "y": {
+            "field": "Wages",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "grid": false,            
+              "labelColor": "#008080",
+              "labelFontSize": 11
+            },
+            "scale": {
+              "zero": false,
+              "padding": 25
+            }
+          },
+            
+          "color": {
+            "datum": "Wages",
+            "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+            "legend":{
+              "orient": "top-left"
+            }
+          }
+        },
+        "layer": [
+          {"mark": {"type": "line", "color": "transparent", "point":"transparent"}},
+          {
+            "transform": [{"filter": {"param": "hover", "empty": false}}],
+            "mark": "point"
+          }
+        ]
+      },
+  
+      {
+        "mark": {
+          "type": "line",
+          "point": false
+        },
+  
+        "encoding": {
+          "y": {
+            "field": "Unemployment",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "grid": true,
+              "labelColor": "rgb(128,0,0)",
+              "format": "~%",
+              "labelFontSize": 11,
+              "gridOpacity": 0.6
+            },
+            "scale": {
+              "zero": false,
+              "padding": 45
+            }
+          },
+            
+          "color": {
+            "datum": "Unemployment",
+            "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+            "legend":{
+              "orient": "top-left",
+              "labelFontSize": 11,
+              "offset": 12
+            }
+          }
+        },
+        "layer": [
+          {"mark": {"type": "line", "color": "transparent", "point":"transparent"}},
+          {
+            "transform": [{"filter": {"param": "hover", "empty": false}}],
+            "mark": "point"
+          }
+        ]
+      },
+      {
+  
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Date", "type": "temporal", "format": "%b %Y"},
+            {"field": "Unemployment", "type": "quantitative", "format": "~%"},
+            {"field": "Wages", "title": "Weekly Wage", "type": "quantitative", "format": "$d"}
+          ]
+        },
+        "params": [
+          {
+            "name": "hover",
+            "select": {
+              "type": "point",
+              "fields": ["Date"],
+              "nearest": true,
+              "on": "mouseover",
+              "clear": "mouseout"
+            }
+          }
+        ]
+      }
+    ],
+    "resolve": {"scale": {"y": "independent"}} 
+  }

@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ILO_ABC_monthlyEarnings.csv"
+    },
+    "config": {"view": {"stroke": "transparent"}},
+    "width": 400,
+    "height": 300,
+    "title": {
+      "text": "Wages in Latin America",
+      "subtitle": ["Monthly earnings, annual average, 2017 PPP $, seasonally adjusted, source: ILO"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "transform": [
+      {"filter": "datum.Currency == ' 2017 PPP $'"}
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      }
+    },
+    "layer": [
+      {
+        "encoding": {
+          "color": {
+            "field": "Country",
+            "type": "nominal",
+            "legend": {
+              "orient": "bottom-right",
+              "title": null,
+              "labelFontSize": 12
+            },
+            "scale": {"range": ["grey", "#008080", "rgb(128,0,0)"]}
+          },
+          "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": null,
+            "axis": {"gridOpacity": 0.6}
+          }
+        },
+        "layer": [
+          {"mark": "line"},
+          {
+            "transform": [{"filter": {"param": "hover", "empty": false}}],
+            "mark": "point"
+          }
+        ]
+      },
+      {
+        "transform": [
+          {"pivot": "Country", "value": "Value", "groupby": ["Year"]}
+        ],
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Year", "type": "temporal", "format": "%Y"},
+            {"field": "Argentina", "type": "quantitative", "format": "$d"},
+            {"field": "Brazil", "type": "quantitative", "format": "$d"},
+            {"field": "Chile", "type": "quantitative", "format": "$d"}
+          ]
+        },
+        "params": [
+          {
+            "name": "hover",
+            "select": {
+              "type": "point",
+              "fields": ["Year"],
+              "nearest": true,
+              "on": "mouseover",
+              "clear": "mouseout"
+            }
+          }
+        ]
+      }
+    ]
+  }
