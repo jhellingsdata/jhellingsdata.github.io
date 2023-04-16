@@ -1,60 +1,63 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/Global_debtPositions_Q322.csv"
-    },
-    "config": {"view": {"stroke": "transparent"}},
-    "width": 220,
-    "height": 400,
-    "title": {
-      "text": "Global Foreign Currency Debt",
-      "subtitle": [
-        "Gross External Debt Position, Foreign and Domestic", "Currency (USD millions), Q3 2022, source: World Bank"
-      ],
-      "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
-      "anchor": "start",
-      "color": "black"
-    },
-    
-    "transform": [
-      {"calculate": "toNumber(datum.Total)", "as": "Total"},
-      {"calculate": "toNumber(datum.Proportion)", "as": "Proportion"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/Global_debtPositions_Q322.csv"
+  },
+  "config": {"view": {"stroke": "transparent"}},
+  "width": 220,
+  "height": 400,
+  "title": {
+    "text": "Global Foreign Currency Debt",
+    "subtitle": [
+      "Gross External Debt Position, Foreign and Domestic", "Currency (USD millions), Q3 2022, source: World Bank"
     ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
   
-    "mark": "bar",
-    "encoding": {
-      "x": {
+  "transform": [
+    {"calculate": "toNumber(datum.Total)", "as": "Total"},
+    {"calculate": "toNumber(datum.Proportion)", "as": "Proportion"}
+  ],
+
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Proportion",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": null,
+      "stack": "normalize",
+      "axis": {
+        "format": "%"
+      }
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "title": null,
+      "axis": {"grid": false},
+      "sort": {"op": "sum", "field": "Rank"}
+    },
+    "color": {
+      "field": "Currency",
+      "type": "nominal",
+      "scale": {"range": ["rgb(166,116,116)", "rgb(128,0,0)"]},
+      "legend": {"orient": "right"},
+      "title": null
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Currency", "type": "nominal", "title": "Currency"},
+      {"field": "Total", "type": "nominal", "title": "Value ($m)", "format": "$,"},
+      {
         "field": "Proportion",
-        "aggregate": "sum",
         "type": "quantitative",
-        "title": null,
-        "stack": "normalize"
-      },
-      "y": {
-        "field": "Country",
-        "type": "nominal",
-        "title": null,
-        "axis": {"grid": false},
-        "sort": {"op": "sum", "field": "Rank"}
-      },
-      "color": {
-        "field": "Currency",
-        "type": "nominal",
-        "scale": {"range": ["rgb(166,116,116)", "rgb(128,0,0)"]},
-        "legend": {"orient": "right"},
-        "title": null
-      },
-      "tooltip": [
-        {"field": "Country", "type": "nominal"},
-        {"field": "Currency", "type": "nominal", "title": "Currency"},
-        {"field": "Total", "type": "nominal", "title": "Value ($m)", "format": "$,"},
-        {
-          "field": "Proportion",
-          "type": "quantitative",
-          "title": "% of total",
-          "format": ".2%"
-        }
-      ]
-    }
+        "title": "% of total",
+        "format": ".2%"
+      }
+    ]
   }
+}
