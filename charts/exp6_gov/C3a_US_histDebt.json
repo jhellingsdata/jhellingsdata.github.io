@@ -8,7 +8,7 @@
   "config": {"view": {"stroke": "transparent"}},
   "title": {
     "text": "US Historical Debt",
-    "subtitle": "Millions of US$, principal amount of marketable and non-marketable securities, source: Treasury",
+    "subtitle": "Millions of US$, principal amount of marketable and non-marketable securities, source: US Treasury",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
