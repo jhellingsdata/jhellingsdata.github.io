@@ -5,9 +5,9 @@
     },
     "title": {
       "text": "Treasury Debt by Maturity",
-      "fontWeight": 600,
       "anchor": "start",
       "subtitle": "Securities Held Outright: U.S. Treasury Securities, source: FRED",
+      "subtitleFontStyle": "italic",
       "subtitleFontSize": 10
     },
     "width": 380,
@@ -41,7 +41,7 @@
         }
       }
     ],
-    "mark": {"type": "area", "interpolate": "monotone"},
+    "mark": {"type": "area"},
     "encoding": {
       "x": {"field": "date", "type": "temporal", "title": null},
       "y": {
@@ -57,12 +57,12 @@
         "field": "Series",
         "scale": {
           "range": [
-            "#539165",
-            "#A84448",
-            "#F7C04A",
-            "#3F497F",
-            "#E9A178",
-            "#B4E4FF"
+            "rgb(255, 232, 199)",
+            "rgb(255, 203, 171)",
+            "rgb(255, 147, 119)",
+            "rgb(220, 93, 70)",
+            "rgb(128,0,0)",
+            "rgb(69, 0, 0)"
           ]
         },
         "sort": [
@@ -81,7 +81,7 @@
       "tooltip": [
         {"field": "date", "type": "temporal", "format": "%b %Y", "title": "Record Date"},
         {"field": "Series", "type": "nominal", "title": "Maturity"},
-        {"field": "value", "format": "$,", "title": "Debt Value ($m)"}
+        {"field": "value", "format": ",", "title": "Debt Value ($m)"}
       ]
     }
   }
