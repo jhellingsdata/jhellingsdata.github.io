@@ -50,7 +50,7 @@
         "aggregate": "sum",
         "type": "quantitative",
         "title": "Debt Value ($m)",
-        "format": "$,d"
+        "format": ",d"
       }
     ]
   }

@@ -6,7 +6,7 @@
     "title": {
       "text": "Treasury Debt by Maturity",
       "anchor": "start",
-      "subtitle": "Securities Held Outright: U.S. Treasury Securities, source: FRED",
+      "subtitle": "Proportion of face value US Treasury securities by maturity date, source: FRED",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10
     },
@@ -20,7 +20,7 @@
     "params": [
       {
         "name": "minYear",
-        "value": 2010,
+        "value": 2002,
         "bind": {
           "input": "range",
           "min": 2002,
@@ -75,7 +75,7 @@
         ],
         "legend": {
           "orient": "bottom", "title": null, "columns":3
-          }
+        }
       },
       "order": {"field": "order", "type": "ordinal"},
       "tooltip": [

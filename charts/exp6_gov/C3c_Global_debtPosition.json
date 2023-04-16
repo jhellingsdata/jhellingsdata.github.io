@@ -51,7 +51,7 @@
     "tooltip": [
       {"field": "Country", "type": "nominal"},
       {"field": "Currency", "type": "nominal", "title": "Currency"},
-      {"field": "Total", "type": "nominal", "title": "Value ($m)", "format": "$,"},
+      {"field": "Total", "type": "nominal", "title": "Value ($m)", "format": ","},
       {
         "field": "Proportion",
         "type": "quantitative",
