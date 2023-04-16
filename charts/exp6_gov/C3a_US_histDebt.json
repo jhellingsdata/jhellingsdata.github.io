@@ -83,7 +83,7 @@
           {
             "field": "Debt Outstanding Amount",
             "type": "quantitative",
-            "format": "$,d",
+            "format": ",d",
             "title": "Debt Outstanding ($m)"
           }
         ]
