@@ -9,7 +9,7 @@
   "title": {
     "text": "Treasury Debt Maturity",
     "subtitle": [
-      "USD millions, Outstanding Marketable Debt, 31st March 2023, source: Treasury"
+      "Millions of US$, Outstanding Marketable Debt, 31st March 2023, source: US Treasury"
     ],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
@@ -35,7 +35,7 @@
       "type": "quantitative",
       "title": null,
       "axis": {
-        "format": "$,d"
+        "format": ",d"
       }
     },
     "tooltip": [

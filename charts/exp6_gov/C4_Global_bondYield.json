@@ -1,42 +1,115 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "",
-  "title": {
-    "text": "Global Bond Yields",
-    "fontSize": 12,
-    "anchor": "start",
-    "subtitle": ["Major 10 Year Bonds, source: Trading Economics"],
-    "subtitleFontStyle": "italic",
-    "subtitleFontSize": 9
-  },
-  "height": 320,
   "data": {
-    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/Global_bondYields.csv"
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_historicalDebt.csv"
   },
-  "mark": {"type": "bar", "color": "rgb(128,0,0)"},
-  "transform": [
-    {"calculate": "datum['Major10Y Yield'] / 100", "as": "Yield"}
-  ],
-  "encoding": {
-    "y": {"field": "Country", "type": "nominal", "title": null, "sort": "-x"},
-    "x": {
-      "field": "Yield",
-      "type": "quantitative",
-      "title": null,
-      "axis": {
-        "format": "%"
+  "width": 380,
+  "height": 250,
+  "config": {
+    "locale": {
+      "number": {
+        "decimal": ".",
+        "thousands": ",",
+        "grouping": [3],
+        "currency": ["$ ", ""]
       }
     },
-    "tooltip": [
-      {"field": "Country", "type": "nominal"},
-      {"field": "Record Time", "type": "temporal"},
-      {
-        "field": "Yield",
-        "type": "quantitative",
-        "title": "Yield",
-        "format": ".2%"
+    "view": {"stroke": "transparent"}
+  },
+  "title": {
+    "text": "US Historical Debt",
+    "subtitle": "Millions of US$, principal amount of marketable and non-marketable securities, source: Treasury",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "encoding": {
+    "x": {
+      "field": "Record Date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    }
+  },
+  "transform": [
+    {"calculate": "datum['Debt Outstanding Amount'] / 1000000", "as": "Debt Outstanding Amount"},
+    {"calculate": "date(datum['Record Date'])", "as": "Date"},
+    {"calculate": "year(datum['Record Date'])", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 1900,
+      "bind": {
+        "input": "range",
+        "min": 1790,
+        "max": 2021,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2022,
+      "bind": {
+        "input": "range",
+        "min": 1791,
+        "max": 2022,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "encoding": {
+        "y": {
+          "field": "Debt Outstanding Amount",
+          "type": "quantitative",
+          "title": null,
+          "axis": {"gridOpacity": 0.6, "format": ",d", "labelFontSize": 10}
+        }
       },
-      {"field": "Yearly Change", "type": "nominal"}
-    ]
-  }
+      "layer": [
+        {"mark": {"type": "line", "color": "rgb(128,0,0)"}},
+        {
+          "transform": [{"filter": {"param": "hover", "empty": false}}],
+          "mark": "point"
+        }
+      ]
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Record Date", "type": "temporal", "format": "%b %Y", "title": "Record Date"},
+          {
+            "field": "Debt Outstanding Amount",
+            "type": "quantitative",
+            "format": "$,d",
+            "title": "Debt Outstanding ($m)"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Record Date"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ]
+    }
+  ]
 }
