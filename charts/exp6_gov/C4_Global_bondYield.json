@@ -1,37 +1,42 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "",
-    "title": {
-      "text": "Global Bond Yields",
-      "fontSize": 12,
-      "anchor": "start",
-      "subtitle": ["Major 10 Year Bonds, source: Trading Economics"],
-      "subtitleFontStyle": "italic",
-      "subtitleFontSize": 9
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "title": {
+    "text": "Global Bond Yields",
+    "fontSize": 12,
+    "anchor": "start",
+    "subtitle": ["Major 10 Year Bonds, source: Trading Economics"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9
+  },
+  "height": 320,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/Global_bondYields.csv"
+  },
+  "mark": {"type": "bar", "color": "rgb(128,0,0)"},
+  "transform": [
+    {"calculate": "datum['Major10Y Yield'] / 100", "as": "Yield"}
+  ],
+  "encoding": {
+    "y": {"field": "Country", "type": "nominal", "title": null, "sort": "-x"},
+    "x": {
+      "field": "Yield",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "format": "%"
+      }
     },
-    "height": 320,
-    "data": {
-      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/Global_bondYields.csv"
-    },
-  
-    "transform": [
-      {"calculate": "datum['Major10Y Yield'] / 100", "as": "Major10Y Yield"}
-    ],
-  
-    "mark": {"type": "bar", "color": "rgb(128,0,0)"},
-    "encoding": {
-      "y": {"field": "Country", "type": "nominal", "title": null, "sort": "-x"},
-      "x": {"field": "Major10Y Yield", "type": "quantitative", "title": null, "axis": {"format": "%"}},
-      "tooltip": [
-        {"field": "Country", "type": "nominal"},
-        {"field": "Record Time", "type": "temporal"},
-        {
-          "field": "Major10Y Yield",
-          "type": "quantitative",
-          "title": "Current Yield",
-          "format": ".2%"
-        },
-        {"field": "Yearly Change", "type": "nominal"}
-      ]
-    }
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Record Time", "type": "temporal"},
+      {
+        "field": "Yield",
+        "type": "quantitative",
+        "title": "Yield",
+        "format": ".2%"
+      },
+      {"field": "Yearly Change", "type": "nominal"}
+    ]
   }
+}
