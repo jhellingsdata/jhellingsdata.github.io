@@ -5,17 +5,7 @@
   },
   "width": 380,
   "height": 250,
-  "config": {
-    "locale": {
-      "number": {
-        "decimal": ".",
-        "thousands": ",",
-        "grouping": [3],
-        "currency": ["$ ", ""]
-      }
-    },
-    "view": {"stroke": "transparent"}
-  },
+  "config": {"view": {"stroke": "transparent"}},
   "title": {
     "text": "US Historical Debt",
     "subtitle": "Millions of US$, principal amount of marketable and non-marketable securities, source: Treasury",
