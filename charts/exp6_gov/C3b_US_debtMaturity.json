@@ -1,0 +1,87 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_debtMaturity.csv"
+    },
+    "title": {
+      "text": "Treasury Debt by Maturity",
+      "fontWeight": 600,
+      "anchor": "start",
+      "subtitle": "Securities Held Outright: U.S. Treasury Securities, source: FRED",
+      "subtitleFontSize": 10
+    },
+    "width": 380,
+    "height": 250,
+    "transform": [
+      {"calculate": "year(datum.date)", "as": "year"},
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 2010,
+        "bind": {
+          "input": "range",
+          "min": 2002,
+          "max": 2021,
+          "step": 1,
+          "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2023,
+        "bind": {
+          "input": "range",
+          "min": 2003,
+          "max": 2023,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+    "mark": {"type": "area", "interpolate": "monotone"},
+    "encoding": {
+      "x": {"field": "date", "type": "temporal", "title": null},
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": null,
+        "stack": "normalize",
+        "axis": {
+          "format": "%"
+        }
+      },
+      "color": {
+        "field": "Series",
+        "scale": {
+          "range": [
+            "#539165",
+            "#A84448",
+            "#F7C04A",
+            "#3F497F",
+            "#E9A178",
+            "#B4E4FF"
+          ]
+        },
+        "sort": [
+          "Within 15 Days",
+          "16-90 Days",
+          "91-365 Days",
+          "1-5 Years",
+          "5-10 Years",
+          "Over 10 Years"
+        ],
+        "legend": {
+          "orient": "bottom", "title": null, "columns":3
+          }
+      },
+      "order": {"field": "order", "type": "ordinal"},
+      "tooltip": [
+        {"field": "date", "type": "temporal", "format": "%b %Y", "title": "Record Date"},
+        {"field": "Series", "type": "nominal", "title": "Maturity"},
+        {"field": "value", "format": "$,", "title": "Debt Value ($m)"}
+      ]
+    }
+  }

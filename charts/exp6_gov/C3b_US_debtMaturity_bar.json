@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_debtMaturity_MSPD.csv"
+  },
+  "config": {"view": {"stroke": "transparent"}},
+  "width": 400,
+  "height": 300,
+  "title": {
+    "text": "Treasury Debt Maturity",
+    "subtitle": [
+      "USD millions, Outstanding Marketable Debt, 31st March 2023, source: Treasury"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "mark": {"type": "bar", "color": "rgb(128,0,0)"},
+  "transform": [
+    {"filter": "datum.Sector != 'Total'"},
+    {"calculate": "toNumber(datum.Value)", "as": "Value"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Maturity Date",
+      "timeUnit": "year",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "Outstanding Amount (in Millions)",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "format": "$,d"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Maturity Date",
+        "type": "temporal",
+        "timeUnit": "year",
+        "title": "Year"
+      },
+      {
+        "field": "Outstanding Amount (in Millions)",
+        "aggregate": "sum",
+        "type": "quantitative",
+        "title": "Debt Value ($m)",
+        "format": "$,d"
+      }
+    ]
+  }
+}
