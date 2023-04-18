@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "GDP data from BEA, Q3 2022. Population estimate from Census Bureau, Mid-2022. District of Columbia filtered out as distorts relative differences",
+  
+    "width": 600,
+    "height": 300,
+    "config": {
+        "view": {
+          "stroke": null
+        },
+        "padding": 0
+      },
+
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_States_5m.json",
+      "format": {"property": "features"}
+    },
+
+    "title": {
+      "text": "Income Tax by State",
+      "fontSize": 12,
+      "subtitle": ["Top state-level income tax rate, Jan 2023, source: Tax Foundation.", ""],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "projection": {"type": "albersUsa"},
+  
+    "mark": {
+      "type": "geoshape",
+      "stroke": "white",
+      "strokeWidth": 0.7
+    },
+  
+    "transform": [
+      {
+        "lookup": "properties.NAME",
+        "from": {
+          "key": "State",
+          "fields": [
+            "Filer",
+            "Bracket",
+            "Rate",
+            "Top Rate",
+            "Notes"
+          ],
+          "data": {
+            "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_states_incomeTax.csv"
+          }
+        }
+      },
+      {"filter": "datum['Top Rate'] == 'TRUE'"}
+    ],
+    "encoding": {
+      "color": {
+        "condition": {
+          "test": "!datum['Rate']",
+          "value": "lightgrey"
+        },
+        "field": "Rate",
+        "legend": {
+          "title": "",
+          "orient": "bottom-left",
+          "legendX": -5,
+          "legendY": 0,
+          "direction": "vertical",
+          "format": "%"
+        },
+        "type": "quantitative",
+        "scale": {"scheme": "goldorange", "reverse": false}
+      },
+      "tooltip": [
+        {"field": "properties.NAME", "title": "State"},
+        {"field": "Bracket", "type": "quantitative", "format": "$,", "title": "Threshold"},
+        {"field": "Rate", "title": "Top Rate", "format": "~%"},
+        {"field": "Notes","type": "nominal"}
+      ]
+    }
+  }
