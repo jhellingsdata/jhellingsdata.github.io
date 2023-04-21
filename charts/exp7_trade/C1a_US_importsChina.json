@@ -1,144 +1,147 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Offshoring",
-      "subtitle": [
-        "Manufacturing, as % of total employment, source: US BLS",
-        "Imports from China, as % of total GDP, sources: US Census Bureau, S&P Monthly GDP Index"
-      ],
-      "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
-      "anchor": "start"
-    },
-    "width": 500,
-    "height": 280,
-    "data": {
-      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_importsChina.csv"
-    },
-  
-    "encoding": {
-      "x": {
-        "field": "Date",
-        "title": null,
-        "type": "temporal",
-        "axis": {"grid": false, "gridOpacity": 0.6}
-      }
-    },
-    "layer": [
-      {
-        "mark": {"type": "line", "point": "transparent"},
-        "encoding": {
-          "y": {
-            "field": "Manufacturing % of Total",
-            "type": "quantitative",
-            "title": null,
-            "axis": {
-              "grid": false,
-              "format": "%",
-              "labelColor": "#008080",
-              "labelFontSize": 11
-            },
-            "scale": {
-              "zero": true,
-              "padding": 20
-            }
-          },
-          "color": {
-            "datum": "Manufacturing Jobs",
-            "scale": {"range": ["#008080", "rgb(128,0,0)"]},
-            "legend": {"orient": "bottom"}
-          }
-        },
-        "layer": [
-          {
-            "mark": {
-              "type": "line",
-              "color": "transparent",
-              "point": "transparent"
-            }
-          },
-          {
-            "transform": [{"filter": {"param": "hover", "empty": false}}],
-            "mark": "point"
-          }
-        ]
-      },
-      {
-        "mark": {"type": "line", "point": false},
-        "encoding": {
-          "y": {
-            "field": "Imports (% of GDP)",
-            "type": "quantitative",
-            "title": null,
-            "axis": {
-              "grid": true,
-              "labelColor": "rgb(128,0,0)",
-              "format": "~%",
-              "labelFontSize": 11,
-              "gridOpacity": 0.6
-            }
-          },
-          "color": {
-            "datum": "Imports from China",
-            "scale": {"range": ["#008080", "rgb(128,0,0)"]},
-            "legend": {"orient": "bottom", "labelFontSize": 11, "offset": 13}
-          }
-        },
-        "layer": [
-          {
-            "mark": {
-              "type": "line",
-              "color": "transparent",
-              "point": "transparent"
-            }
-          },
-          {
-            "transform": [{"filter": {"param": "hover", "empty": false}}],
-            "mark": {"type": "point"}
-          }
-        ]
-      },
-      {
-        "mark": "rule",
-        "encoding": {
-          "opacity": {
-            "condition": {"value": 0.3, "param": "hover", "empty": false},
-            "value": 0
-          },
-          "tooltip": [
-            {
-              "field": "Month",
-              "type": "temporal",
-              "title": "Date",
-              "timeUnit": "yearmonth"
-            },
-            {
-              "field": "Imports (% of GDP)",
-              "title": "Yearly Imports (% of GDP)",
-              "type": "quantitative",
-              "format": ".2%"
-            },
-            {
-              "field": "Manufacturing % of Total",
-              "title": "Manufacturing (% of Total)",
-              "type": "quantitative",
-              "format": ".2%"
-            }
-          ]
-        },
-        "params": [
-          {
-            "name": "hover",
-            "select": {
-              "type": "point",
-              "fields": ["Date"],
-              "nearest": true,
-              "on": "mouseover",
-              "clear": "mouseout"
-            }
-          }
-        ]
-      }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Offshoring and Domestic Industry",
+    "subtitle": [
+      "Manufacturing, as % of total employment, source: US BLS",
+      "Imports from China, as % of total GDP, sources: US Census Bureau, S&P Monthly GDP Index"
     ],
-    "resolve": {"scale": {"y": "independent"}}
-  }
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "width": 500,
+  "height": 280,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_importsChina.csv"
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "title": null,
+      "type": "temporal",
+      "axis": {"grid": false, "gridOpacity": 0.6}
+    }
+  },
+  "layer": [
+    {
+      "encoding": {
+        "y": {
+          "field": "Manufacturing % of Total",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "grid": false,
+            "format": "%",
+            "labelColor": "#008080",
+            "labelFontSize": 11
+          },
+          "scale": {
+            "zero": true,
+            "padding": 20
+          }
+        },
+        "color": {
+          "datum": "Manufacturing Jobs",
+          "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+          "legend": {"orient": "bottom"}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "transparent",
+            "point": "transparent"
+          }
+        },
+        {
+          "transform": [{"filter": {"param": "hover", "empty": false}}],
+          "mark": "point"
+        }
+      ]
+    },
+    {
+      "encoding": {
+        "y": {
+          "field": "Imports (% of GDP)",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "grid": true,
+            "labelColor": "rgb(128,0,0)",
+            "format": "~%",
+            "labelFontSize": 11,
+            "gridOpacity": 0.6
+          }
+        },
+        "color": {
+          "datum": "Imports from China",
+          "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+          "legend": {"orient": "bottom", "labelFontSize": 11, "offset": 13}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "transparent",
+            "point": "transparent"
+          }
+        },
+        {
+          "transform": [{"filter": {"param": "hover", "empty": false}}],
+          "mark": {"type": "point"}
+        }
+      ]
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "Date",
+            "type": "temporal",
+            "title": "Month",
+            "timeUnit": "yearmonth"
+          },
+          {
+            "field": "Employees: Manufacturing",
+            "title": "Industry Employees (000s)",
+            "format": ","
+          },
+          {
+            "field": "Manufacturing % of Total",
+            "title": "Manufacturing (% of Total)",
+            "type": "quantitative",
+            "format": ".2%"
+          },
+          {
+            "field": "Imports (% of GDP)",
+            "title": "Yearly Imports (% of GDP)",
+            "type": "quantitative",
+            "format": ".2%"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Date"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ]
+    }
+  ],
+  "resolve": {"scale": {"y": "independent"}}
+}
