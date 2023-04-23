@@ -54,34 +54,12 @@
     <hr class="solid">
     
 
-    <section class="container">
 
-      <div class="card">
-        <div class="chart" id="chart1"></div>
-      </div>
-
-      <div class="card">
-        <div class="chart" id="chart2"></div>
-      </div>
-
-    </section>
+    <section class="container" data-target-folder="charts/exp7_trade/"></section>
 
 
+    <script src="js/load_charts_auto.js" defer></script>
 
-    <script>
-
-      // Set the charts that we want on the page as variables linked to JSON files:
-      var myChart1 = "charts/exp7_trade/map1_shoeFactories_3chart.json";
-      var myChart2 = "charts/exp7_trade/C1a_US_importsChina.json";
-
-      
-      // Embed the charts in the divs above
-      vegaEmbed('#chart1', myChart1, {"actions": true});
-      vegaEmbed('#chart2', myChart2, {"actions": true});
-
-  
-
-    </script>
 
   </body>
 
