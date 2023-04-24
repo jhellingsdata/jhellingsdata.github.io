@@ -1,0 +1,194 @@
+State,State FIPS,County,Industry,Date,Quarter,Establishments,Employment,Average Weekly Wage,NOFO Region,ID,Employment (% of total)
+Illinois,17,Adams,Manufacturing,1990-07-01,Q3 1990,97,6034,481,West Central,17001,0.21541537253221948
+Illinois,17,Alexander,Manufacturing,1990-07-01,Q3 1990,11,446,400,Southern,17003,0.20534069981583794
+Illinois,17,Bond,Manufacturing,1990-07-01,Q3 1990,13,598,395,Southwest Central,17005,0.20161834120026972
+Illinois,17,Boone,Manufacturing,1990-07-01,Q3 1990,49,5819,700,Northern,17007,0.5295295295295295
+Illinois,17,Bureau,Manufacturing,1990-07-01,Q3 1990,46,2270,427,Northwest,17011,0.19016503309039123
+Illinois,17,Carroll,Manufacturing,1990-07-01,Q3 1990,20,677,324,Northwest,17015,0.14994462901439645
+Illinois,17,Cass,Manufacturing,1990-07-01,Q3 1990,17,1732,380,Central,17017,0.38825375476350593
+Illinois,17,Champaign,Manufacturing,1990-07-01,Q3 1990,160,10035,427,Northeast Central,17019,0.12664378202377646
+Illinois,17,Christian,Manufacturing,1990-07-01,Q3 1990,23,1016,449,Central,17021,0.09648622981956315
+Illinois,17,Clark,Manufacturing,1990-07-01,Q3 1990,21,724,396,Southeast Central,17023,0.19102902374670186
+Illinois,17,Clay,Manufacturing,1990-07-01,Q3 1990,28,1822,331,Southeast Central,17025,0.3977297533289675
+Illinois,17,Clinton,Manufacturing,1990-07-01,Q3 1990,33,1011,325,Southwest Central,17027,0.11419857675364284
+Illinois,17,Coles,Manufacturing,1990-07-01,Q3 1990,52,4178,475,Southeast Central,17029,0.19447935576967834
+Illinois,17,Cook,Manufacturing,1990-07-01,Q3 1990,9748,426452,549,Suburban,17031,0.16423944917170097
+Illinois,17,Crawford,Manufacturing,1990-07-01,Q3 1990,20,1624,542,Southeast Central,17033,0.288403480731664
+Illinois,17,Cumberland,Manufacturing,1990-07-01,Q3 1990,5,103,289,Southeast Central,17035,0.07680835197613721
+Illinois,17,DeKalb,Manufacturing,1990-07-01,Q3 1990,121,6631,445,Northern,17037,0.2259207522741985
+Illinois,17,DeWitt,Manufacturing,1990-07-01,Q3 1990,19,1124,482,North Central,17039,0.18925745074928438
+Illinois,17,Douglas,Manufacturing,1990-07-01,Q3 1990,42,1902,573,Northeast Central,17041,0.2931565967940814
+Illinois,17,DuPage,Manufacturing,1990-07-01,Q3 1990,1870,59918,553,Collar,17043,0.14314519018973582
+Illinois,17,Edgar,Manufacturing,1990-07-01,Q3 1990,25,794,462,Southeast Central,17045,0.17473591549295775
+Illinois,17,Effingham,Manufacturing,1990-07-01,Q3 1990,49,2912,398,Southeast Central,17049,0.1776584711121957
+Illinois,17,Fayette,Manufacturing,1990-07-01,Q3 1990,21,1115,396,Southeast Central,17051,0.24066479602849125
+Illinois,17,Ford,Manufacturing,1990-07-01,Q3 1990,21,889,363,Northeast Central,17053,0.20199954555782776
+Illinois,17,Franklin,Manufacturing,1990-07-01,Q3 1990,42,563,413,Southern,17055,0.06258337038683859
+Illinois,17,Fulton,Manufacturing,1990-07-01,Q3 1990,23,445,249,North Central,17057,0.045324913424322676
+Illinois,17,Greene,Manufacturing,1990-07-01,Q3 1990,16,325,486,Central,17061,0.11694854264123786
+Illinois,17,Grundy,Manufacturing,1990-07-01,Q3 1990,45,2105,572,Collar,17063,0.17192094086899706
+Illinois,17,Hamilton,Manufacturing,1990-07-01,Q3 1990,5,40,198,Southern,17065,0.028715003589375447
+Illinois,17,Hancock,Manufacturing,1990-07-01,Q3 1990,25,1091,408,West Central,17067,0.22499484429779337
+Illinois,17,Henry,Manufacturing,1990-07-01,Q3 1990,56,3655,369,Northwest,17073,0.23162230671736375
+Illinois,17,Iroquois,Manufacturing,1990-07-01,Q3 1990,40,1215,293,Northeast Central,17075,0.15438373570520966
+Illinois,17,Jackson,Manufacturing,1990-07-01,Q3 1990,42,1269,307,Southern,17077,0.05554826001313198
+Illinois,17,Jasper,Manufacturing,1990-07-01,Q3 1990,13,1120,272,Southeast Central,17079,0.3408399269628728
+Illinois,17,Jefferson,Manufacturing,1990-07-01,Q3 1990,35,2894,551,Southern,17081,0.18832563284961282
+Illinois,17,Jersey,Manufacturing,1990-07-01,Q3 1990,14,130,261,Southwest Central,17083,0.03296981993406036
+Illinois,17,Jo Daviess,Manufacturing,1990-07-01,Q3 1990,39,2048,369,Northwest,17085,0.2838137472283814
+Illinois,17,Kane,Manufacturing,1990-07-01,Q3 1990,746,35177,551,Collar,17089,0.2488433949717746
+Illinois,17,Kankakee,Manufacturing,1990-07-01,Q3 1990,119,5408,587,Collar,17091,0.1489971346704871
+Illinois,17,Kendall,Manufacturing,1990-07-01,Q3 1990,46,1643,379,Collar,17093,0.22898954703832752
+Illinois,17,Knox,Manufacturing,1990-07-01,Q3 1990,50,5596,460,West Central,17095,0.2655152780413741
+Illinois,17,Lake,Manufacturing,1990-07-01,Q3 1990,800,50240,639,Collar,17097,0.22759292396203765
+Illinois,17,LaSalle,Manufacturing,1990-07-01,Q3 1990,150,6705,515,Northwest,17099,0.17961425127243505
+Illinois,17,Lawrence,Manufacturing,1990-07-01,Q3 1990,21,348,434,Southeast Central,17101,0.0760655737704918
+Illinois,17,Lee,Manufacturing,1990-07-01,Q3 1990,31,2358,452,Northwest,17103,0.19348486091737097
+Illinois,17,Livingston,Manufacturing,1990-07-01,Q3 1990,49,3085,513,North Central,17105,0.24295164592849267
+Illinois,17,Logan,Manufacturing,1990-07-01,Q3 1990,22,1534,448,Central,17107,0.1401553220648698
+Illinois,17,McDonough,Manufacturing,1990-07-01,Q3 1990,27,1727,384,West Central,17109,0.13307135151795346
+Illinois,17,McHenry,Manufacturing,1990-07-01,Q3 1990,452,20642,469,Collar,17111,0.3300396520849322
+Illinois,17,McLean,Manufacturing,1990-07-01,Q3 1990,126,7544,643,North Central,17113,0.12243970526179115
+Illinois,17,Macon,Manufacturing,1990-07-01,Q3 1990,141,13018,653,Central,17115,0.25178422915498133
+Illinois,17,Macoupin,Manufacturing,1990-07-01,Q3 1990,47,1746,588,Central,17117,0.15725479600108078
+Illinois,17,Madison,Manufacturing,1990-07-01,Q3 1990,218,20478,621,Southwest Central,17119,0.23925971795441003
+Illinois,17,Marion,Manufacturing,1990-07-01,Q3 1990,59,2677,397,Southeast Central,17121,0.17250934398762727
+Illinois,17,Marshall,Manufacturing,1990-07-01,Q3 1990,16,869,536,North Central,17123,0.28214285714285714
+Illinois,17,Mason,Manufacturing,1990-07-01,Q3 1990,14,175,396,North Central,17125,0.051259519625073226
+Illinois,17,Massac,Manufacturing,1990-07-01,Q3 1990,11,566,636,Southern,17127,0.1745835903763109
+Illinois,17,Mercer,Manufacturing,1990-07-01,Q3 1990,15,248,416,Northwest,17131,0.09005083514887437
+Illinois,17,Monroe,Manufacturing,1990-07-01,Q3 1990,28,311,396,Southwest Central,17133,0.06765281705460083
+Illinois,17,Montgomery,Manufacturing,1990-07-01,Q3 1990,42,1830,394,Central,17135,0.20529504150774064
+Illinois,17,Morgan,Manufacturing,1990-07-01,Q3 1990,37,4172,415,Central,17137,0.2764378478664193
+Illinois,17,Moultrie,Manufacturing,1990-07-01,Q3 1990,26,494,364,Southeast Central,17139,0.1688888888888889
+Illinois,17,Ogle,Manufacturing,1990-07-01,Q3 1990,70,5311,440,Northern,17141,0.3744095875925273
+Illinois,17,Peoria,Manufacturing,1990-07-01,Q3 1990,208,15053,639,North Central,17143,0.1609946524064171
+Illinois,17,Perry,Manufacturing,1990-07-01,Q3 1990,36,1393,378,Southern,17145,0.21892189218921893
+Illinois,17,Piatt,Manufacturing,1990-07-01,Q3 1990,12,480,409,Northeast Central,17147,0.14405762304921968
+Illinois,17,Pike,Manufacturing,1990-07-01,Q3 1990,16,305,423,West Central,17149,0.0815944355270198
+Illinois,17,Putnam,Manufacturing,1990-07-01,Q3 1990,13,1063,716,Northwest,17155,0.42082343626286617
+Illinois,17,Randolph,Manufacturing,1990-07-01,Q3 1990,33,2732,401,Southern,17157,0.21788021373315256
+Illinois,17,Richland,Manufacturing,1990-07-01,Q3 1990,28,1609,304,Southeast Central,17159,0.25637348629700446
+Illinois,17,Rock Island,Manufacturing,1990-07-01,Q3 1990,194,11808,656,Northwest,17161,0.16041734594065862
+Illinois,17,St. Clair,Manufacturing,1990-07-01,Q3 1990,216,6650,555,Southwest Central,17163,0.0901206125491259
+Illinois,17,Saline,Manufacturing,1990-07-01,Q3 1990,21,134,310,Southern,17165,0.015942891136228435
+Illinois,17,Sangamon,Manufacturing,1990-07-01,Q3 1990,149,4298,447,Central,17167,0.03161293644314011
+Illinois,17,Schuyler,Manufacturing,1990-07-01,Q3 1990,6,121,331,West Central,17169,0.053468846663720725
+Illinois,17,Shelby,Manufacturing,1990-07-01,Q3 1990,18,1163,395,Central,17173,0.24535864978902955
+Illinois,17,Stark,Manufacturing,1990-07-01,Q3 1990,6,351,381,North Central,17175,0.26631259484066766
+Illinois,17,Stephenson,Manufacturing,1990-07-01,Q3 1990,73,7508,545,Northern,17177,0.37061901471023795
+Illinois,17,Tazewell,Manufacturing,1990-07-01,Q3 1990,114,17770,803,North Central,17179,0.37404226656563105
+Illinois,17,Union,Manufacturing,1990-07-01,Q3 1990,20,1130,335,Southern,17181,0.21042830540037244
+Illinois,17,Vermilion,Manufacturing,1990-07-01,Q3 1990,122,9750,541,Northeast Central,17183,0.3059399416360727
+Illinois,17,Wabash,Manufacturing,1990-07-01,Q3 1990,16,1473,461,Southern,17185,0.26364775371397886
+Illinois,17,Warren,Manufacturing,1990-07-01,Q3 1990,25,864,354,West Central,17187,0.14462671576832942
+Illinois,17,Washington,Manufacturing,1990-07-01,Q3 1990,12,864,438,Southwest Central,17189,0.20425531914893616
+Illinois,17,Wayne,Manufacturing,1990-07-01,Q3 1990,17,851,362,Southern,17191,0.21221945137157108
+Illinois,17,White,Manufacturing,1990-07-01,Q3 1990,17,170,321,Southern,17193,0.04004711425206125
+Illinois,17,Whiteside,Manufacturing,1990-07-01,Q3 1990,83,7485,527,Northwest,17195,0.3557678596891487
+Illinois,17,Will,Manufacturing,1990-07-01,Q3 1990,388,17692,601,Collar,17197,0.18952532967680424
+Illinois,17,Williamson,Manufacturing,1990-07-01,Q3 1990,54,2700,433,Southern,17199,0.1597538607183007
+Illinois,17,Winnebago,Manufacturing,1990-07-01,Q3 1990,719,42241,567,Northern,17201,0.3390101203040104
+Illinois,17,Woodford,Manufacturing,1990-07-01,Q3 1990,36,952,410,North Central,17203,0.1462140992167102
+Illinois,17,Adams,Manufacturing,2022-07-01,Q3 2022,84,4571,1430,West Central,17001,0.14302700334803967
+Illinois,17,Alexander,Manufacturing,2022-07-01,Q3 2022,4,105,992,Southern,17003,0.1337579617834395
+Illinois,17,Bond,Manufacturing,2022-07-01,Q3 2022,17,775,1436,Southwest Central,17005,0.17881864328564837
+Illinois,17,Boone,Manufacturing,2022-07-01,Q3 2022,71,3308,1423,Northern,17007,0.25566117938016847
+Illinois,17,Brown,Manufacturing,2022-07-01,Q3 2022,3,0,0,West Central,17009,0.0
+Illinois,17,Bureau,Manufacturing,2022-07-01,Q3 2022,37,1507,1226,Northwest,17011,0.13711218269493222
+Illinois,17,Calhoun,Manufacturing,2022-07-01,Q3 2022,2,0,0,Southwest Central,17013,0.0
+Illinois,17,Carroll,Manufacturing,2022-07-01,Q3 2022,23,676,1043,Northwest,17015,0.16118264186933715
+Illinois,17,Cass,Manufacturing,2022-07-01,Q3 2022,11,0,0,Central,17017,0.0
+Illinois,17,Champaign,Manufacturing,2022-07-01,Q3 2022,157,6912,1171,Northeast Central,17019,0.07396627001112918
+Illinois,17,Christian,Manufacturing,2022-07-01,Q3 2022,23,1403,1247,Central,17021,0.15241716458446497
+Illinois,17,Clark,Manufacturing,2022-07-01,Q3 2022,22,1171,1115,Southeast Central,17023,0.26237956531481066
+Illinois,17,Clay,Manufacturing,2022-07-01,Q3 2022,16,1500,1167,Southeast Central,17025,0.33860045146726864
+Illinois,17,Clinton,Manufacturing,2022-07-01,Q3 2022,40,923,959,Southwest Central,17027,0.07641993707567478
+Illinois,17,Coles,Manufacturing,2022-07-01,Q3 2022,40,1544,1252,Southeast Central,17029,0.06723860122806254
+Illinois,17,Cook,Manufacturing,2022-07-01,Q3 2022,5724,175216,1531,Suburban,17031,0.06912105534110612
+Illinois,17,Crawford,Manufacturing,2022-07-01,Q3 2022,20,1786,1739,Southeast Central,17033,0.2566829548720897
+Illinois,17,Cumberland,Manufacturing,2022-07-01,Q3 2022,11,0,0,Southeast Central,17035,0.0
+Illinois,17,DeKalb,Manufacturing,2022-07-01,Q3 2022,137,3530,1198,Northern,17037,0.09619052809417407
+Illinois,17,DeWitt,Manufacturing,2022-07-01,Q3 2022,11,343,1326,North Central,17039,0.06769291493980659
+Illinois,17,Douglas,Manufacturing,2022-07-01,Q3 2022,82,2677,1237,Northeast Central,17041,0.3509899042874
+Illinois,17,DuPage,Manufacturing,2022-07-01,Q3 2022,1942,56858,1591,Collar,17043,0.09339448154876691
+Illinois,17,Edgar,Manufacturing,2022-07-01,Q3 2022,12,2707,1153,Southeast Central,17045,0.37016272391631344
+Illinois,17,Edwards,Manufacturing,2022-07-01,Q3 2022,8,0,0,Southern,17047,0.0
+Illinois,17,Effingham,Manufacturing,2022-07-01,Q3 2022,68,3365,1020,Southeast Central,17049,0.14296639333814845
+Illinois,17,Fayette,Manufacturing,2022-07-01,Q3 2022,19,396,828,Southeast Central,17051,0.0744780891480158
+Illinois,17,Ford,Manufacturing,2022-07-01,Q3 2022,24,861,1032,Northeast Central,17053,0.15938541281007035
+Illinois,17,Franklin,Manufacturing,2022-07-01,Q3 2022,38,536,1115,Southern,17055,0.06014362657091562
+Illinois,17,Fulton,Manufacturing,2022-07-01,Q3 2022,16,340,890,North Central,17057,0.0412821758135017
+Illinois,17,Gallatin,Manufacturing,2022-07-01,Q3 2022,6,42,1138,Southern,17059,0.047244094488188976
+Illinois,17,Greene,Manufacturing,2022-07-01,Q3 2022,9,62,657,Central,17061,0.02667814113597246
+Illinois,17,Grundy,Manufacturing,2022-07-01,Q3 2022,49,1459,1764,Collar,17063,0.06849765258215962
+Illinois,17,Hamilton,Manufacturing,2022-07-01,Q3 2022,11,94,748,Southern,17065,0.04805725971370143
+Illinois,17,Hancock,Manufacturing,2022-07-01,Q3 2022,19,313,987,West Central,17067,0.075476247890041
+Illinois,17,Hardin,Manufacturing,2022-07-01,Q3 2022,1,0,0,Southern,17069,0.0
+Illinois,17,Henderson,Manufacturing,2022-07-01,Q3 2022,4,24,675,West Central,17071,0.021798365122615803
+Illinois,17,Henry,Manufacturing,2022-07-01,Q3 2022,47,1580,922,Northwest,17073,0.11947069943289225
+Illinois,17,Iroquois,Manufacturing,2022-07-01,Q3 2022,29,558,1741,Northeast Central,17075,0.08287538987078569
+Illinois,17,Jackson,Manufacturing,2022-07-01,Q3 2022,41,1181,931,Southern,17077,0.04792824966519216
+Illinois,17,Jasper,Manufacturing,2022-07-01,Q3 2022,9,203,863,Southeast Central,17079,0.0951265229615745
+Illinois,17,Jefferson,Manufacturing,2022-07-01,Q3 2022,31,4346,1319,Southern,17081,0.2268148844006054
+Illinois,17,Jersey,Manufacturing,2022-07-01,Q3 2022,23,380,1116,Southwest Central,17083,0.07110778443113773
+Illinois,17,Jo Daviess,Manufacturing,2022-07-01,Q3 2022,44,700,1311,Northwest,17085,0.09455626097528029
+Illinois,17,Johnson,Manufacturing,2022-07-01,Q3 2022,7,33,914,Southern,17087,0.014102564102564103
+Illinois,17,Kane,Manufacturing,2022-07-01,Q3 2022,927,31805,1339,Collar,17089,0.15035692336784381
+Illinois,17,Kankakee,Manufacturing,2022-07-01,Q3 2022,122,6967,1644,Collar,17091,0.16535339630702045
+Illinois,17,Kendall,Manufacturing,2022-07-01,Q3 2022,104,2778,1435,Collar,17093,0.09259691343621879
+Illinois,17,Knox,Manufacturing,2022-07-01,Q3 2022,36,1173,1103,West Central,17095,0.07247899159663866
+Illinois,17,Lake,Manufacturing,2022-07-01,Q3 2022,1063,53672,2088,Collar,17097,0.16293274076232803
+Illinois,17,LaSalle,Manufacturing,2022-07-01,Q3 2022,149,6024,1746,Northwest,17099,0.14879217507286469
+Illinois,17,Lawrence,Manufacturing,2022-07-01,Q3 2022,12,778,1149,Southeast Central,17101,0.20587456999206138
+Illinois,17,Lee,Manufacturing,2022-07-01,Q3 2022,34,3095,1278,Northwest,17103,0.24633874562241326
+Illinois,17,Livingston,Manufacturing,2022-07-01,Q3 2022,55,2581,1338,North Central,17105,0.19485127585686246
+Illinois,17,Logan,Manufacturing,2022-07-01,Q3 2022,16,1760,1439,Central,17107,0.20972354623450906
+Illinois,17,McDonough,Manufacturing,2022-07-01,Q3 2022,16,1831,1107,West Central,17109,0.18092885375494072
+Illinois,17,McHenry,Manufacturing,2022-07-01,Q3 2022,517,12813,1346,Collar,17111,0.13231239479961585
+Illinois,17,McLean,Manufacturing,2022-07-01,Q3 2022,122,9079,1621,North Central,17113,0.10700185034590862
+Illinois,17,Macon,Manufacturing,2022-07-01,Q3 2022,90,10730,1773,Central,17115,0.23497207927296618
+Illinois,17,Macoupin,Manufacturing,2022-07-01,Q3 2022,39,844,1188,Central,17117,0.0845945675052621
+Illinois,17,Madison,Manufacturing,2022-07-01,Q3 2022,221,10292,1734,Southwest Central,17119,0.1011230435167081
+Illinois,17,Marion,Manufacturing,2022-07-01,Q3 2022,43,2478,1028,Southeast Central,17121,0.1990521327014218
+Illinois,17,Marshall,Manufacturing,2022-07-01,Q3 2022,16,902,1124,North Central,17123,0.3130857341200972
+Illinois,17,Mason,Manufacturing,2022-07-01,Q3 2022,9,143,1172,North Central,17125,0.05056577086280056
+Illinois,17,Massac,Manufacturing,2022-07-01,Q3 2022,6,0,0,Southern,17127,0.0
+Illinois,17,Menard,Manufacturing,2022-07-01,Q3 2022,5,32,362,Central,17129,0.019358741681790685
+Illinois,17,Mercer,Manufacturing,2022-07-01,Q3 2022,13,583,1047,Northwest,17131,0.1838536739198991
+Illinois,17,Monroe,Manufacturing,2022-07-01,Q3 2022,26,309,1240,Southwest Central,17133,0.036085484059325004
+Illinois,17,Montgomery,Manufacturing,2022-07-01,Q3 2022,34,687,994,Central,17135,0.07966141001855287
+Illinois,17,Morgan,Manufacturing,2022-07-01,Q3 2022,39,2298,1327,Central,17137,0.16938158767597847
+Illinois,17,Moultrie,Manufacturing,2022-07-01,Q3 2022,40,2180,1108,Southeast Central,17139,0.4142911440516914
+Illinois,17,Ogle,Manufacturing,2022-07-01,Q3 2022,63,2888,1170,Northern,17141,0.18966309844355422
+Illinois,17,Peoria,Manufacturing,2022-07-01,Q3 2022,161,13630,1970,North Central,17143,0.13246384699113667
+Illinois,17,Perry,Manufacturing,2022-07-01,Q3 2022,18,462,1217,Southern,17145,0.10490463215258855
+Illinois,17,Piatt,Manufacturing,2022-07-01,Q3 2022,18,282,902,Northeast Central,17147,0.07824639289678136
+Illinois,17,Pike,Manufacturing,2022-07-01,Q3 2022,13,110,884,West Central,17149,0.02749312671832042
+Illinois,17,Pope,Manufacturing,2022-07-01,Q3 2022,2,0,0,Southern,17151,0.0
+Illinois,17,Pulaski,Manufacturing,2022-07-01,Q3 2022,5,0,0,Southern,17153,0.0
+Illinois,17,Putnam,Manufacturing,2022-07-01,Q3 2022,12,535,1366,Northwest,17155,0.2968923418423973
+Illinois,17,Randolph,Manufacturing,2022-07-01,Q3 2022,30,2418,994,Southern,17157,0.2078390923156266
+Illinois,17,Richland,Manufacturing,2022-07-01,Q3 2022,22,445,1059,Southeast Central,17159,0.07609439124487004
+Illinois,17,Rock Island,Manufacturing,2022-07-01,Q3 2022,147,10898,1394,Northwest,17161,0.15024056688310794
+Illinois,17,St. Clair,Manufacturing,2022-07-01,Q3 2022,170,5022,1207,Southwest Central,17163,0.05672525188632359
+Illinois,17,Saline,Manufacturing,2022-07-01,Q3 2022,19,302,784,Southern,17165,0.03928710810459217
+Illinois,17,Sangamon,Manufacturing,2022-07-01,Q3 2022,113,3470,1049,Central,17167,0.027276443214689975
+Illinois,17,Schuyler,Manufacturing,2022-07-01,Q3 2022,6,47,562,West Central,17169,0.03145917001338688
+Illinois,17,Scott,Manufacturing,2022-07-01,Q3 2022,2,0,0,Central,17171,0.0
+Illinois,17,Shelby,Manufacturing,2022-07-01,Q3 2022,18,1137,1103,Central,17173,0.23801549089386645
+Illinois,17,Stark,Manufacturing,2022-07-01,Q3 2022,6,269,1293,North Central,17175,0.17444876783398183
+Illinois,17,Stephenson,Manufacturing,2022-07-01,Q3 2022,65,3130,1285,Northern,17177,0.18409598870721092
+Illinois,17,Tazewell,Manufacturing,2022-07-01,Q3 2022,139,6696,1284,North Central,17179,0.14461890671907734
+Illinois,17,Union,Manufacturing,2022-07-01,Q3 2022,16,263,916,Southern,17181,0.05205859065716548
+Illinois,17,Vermilion,Manufacturing,2022-07-01,Q3 2022,75,4297,1380,Northeast Central,17183,0.1677270775596237
+Illinois,17,Wabash,Manufacturing,2022-07-01,Q3 2022,12,131,922,Southern,17185,0.03774128493229617
+Illinois,17,Warren,Manufacturing,2022-07-01,Q3 2022,16,1752,1118,West Central,17187,0.2870719318368016
+Illinois,17,Washington,Manufacturing,2022-07-01,Q3 2022,14,1616,1111,Southwest Central,17189,0.23990498812351543
+Illinois,17,Wayne,Manufacturing,2022-07-01,Q3 2022,18,122,1106,Southern,17191,0.030730478589420653
+Illinois,17,White,Manufacturing,2022-07-01,Q3 2022,6,245,1120,Southern,17193,0.06294964028776978
+Illinois,17,Whiteside,Manufacturing,2022-07-01,Q3 2022,81,3823,1201,Northwest,17195,0.1816238301106941
+Illinois,17,Will,Manufacturing,2022-07-01,Q3 2022,783,22385,1524,Collar,17197,0.08680696937616095
+Illinois,17,Williamson,Manufacturing,2022-07-01,Q3 2022,48,3081,1047,Southern,17199,0.11315141944250615
+Illinois,17,Winnebago,Manufacturing,2022-07-01,Q3 2022,575,22206,1353,Northern,17201,0.1777745754977544
+Illinois,17,Woodford,Manufacturing,2022-07-01,Q3 2022,36,1499,1184,North Central,17203,0.14573206299825006
