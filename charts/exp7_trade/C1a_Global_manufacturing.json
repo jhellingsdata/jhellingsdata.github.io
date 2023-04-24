@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "",
+  
+    "title": {
+      "text": "Manufacturing employment vs Openness",
+      "subtitle": ["Manufacturing employment as % of total, source: Our World In Data", "Imports of goods & services as % of GDP, source: World Bank"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/Global_manufacturing.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {
+      "type": "circle",
+      "size": 150,
+      "color": "rgb(0,67,167)",
+      "opacity": 0.7
+    },
+    "height": 280,
+    "width": 480,
+
+    "transform": [
+      {"filter": "datum.Population > 50000"}
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "Openness",
+        "type": "quantitative",
+        "title": "Total Imports % of GDP",
+        "axis":{
+          "gridOpacity": 0.5,
+          "tickOpacity": 0.5
+        },
+        "scale": {
+          "type":  "log",
+          "domain": [12, 180]
+        }
+      },
+      "y": {
+        "field": "Manufacturing employment (% of total)",
+        "type": "quantitative",
+        "title": "% of Total Employment",
+        "axis": {
+          "gridOpacity": 0.5,
+          "tickOpacity": 0.5,
+          "titlePadding": 7
+        },
+        "scale": {
+          "domain": [0, 30]
+        }
+      },
+  
+      "color": {
+        "field": "Continent",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "legend": {
+          "orient": "top-left",
+          "offset": 15
+        },
+        "title": null
+      },
+      "size": {
+        "field": "Population",
+        "type": "quantitative",
+        "scale": {"range": [10, 800]},
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "Year"},
+        {"field": "Country"},
+        {"field": "Population", "format": ",d"},
+        {"field": "Openness", "format": ".2f"},
+        {"field": "Manufacturing employment (% of total)", "format": ".2f"}
+      ]
+    }
+  }
