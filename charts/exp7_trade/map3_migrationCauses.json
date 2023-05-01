@@ -101,7 +101,7 @@
       "field": "varSelectedRank",
       "type": "quantitative",
       "scale": {
-        "scheme": "goldorange",
+        "scheme": "inferno",
         "reverse": true
       },
       "legend": {
