@@ -3,7 +3,7 @@
     "view": {"continuousWidth": 400, "continuousHeight": 300, "stroke": null}
   },
   "title": {
-    "text": "Average temperatures for Africa above historical averages",
+    "text": "Average temperatures for Africa (above historical averages)",
     "anchor": "start",
     "color": "black",
     "dy": -5,
