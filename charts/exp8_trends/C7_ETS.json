@@ -1,0 +1,226 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {
+      "view": {"stroke": null}
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ICAP_ETS_monthlyPrices.csv"
+    },
+    "description": "Sources in order EEX, ICE, Jarden, RGGI, Korea Exchange, Shanghai EEE",
+  
+    "title": {
+      "text": "Emission Trading Schemes",
+      "anchor": "start",
+      "color": "black",
+      "dy": -5,
+      "subtitle": ["Regional Greenhouse Gas Initiative (RGGI) covers 10 Northeastern states.", "USD price per metric tons, adjusted using monthly currency conversion. Source: ICAP"],
+      "subtitleFontSize": 10,
+      "subtitleFontStyle": "italic"
+    },
+  
+    "width": 350, "height": 300,
+  
+    "encoding": {
+      "color": {
+        "condition": {
+          "param": "hover",
+          "type": "nominal",
+          "field": "Scheme",
+          "legend": null,
+          "scale": {"scheme": "yellowgreenblue", "reverse": true}
+        },
+        "value": "lightgrey",
+        "title": null
+      },
+      "tooltip": [
+        {
+          "type": "temporal",
+          "field": "Month",
+          "timeUnit": "yearmonth",
+          "title": "Year"
+        },
+        {
+          "type": "quantitative",
+          "field": "USD",
+          "title": "Cost per ton CO2",
+          "format": "$.2f"
+        },
+        {"type": "nominal", "field": "Scheme"}
+      ],
+      "x": {
+        "type": "temporal",
+        "axis": {
+          "grid": false
+        },
+        "field": "Month",
+        "title": ""
+      },
+      "y": {
+        "type": "quantitative",
+        "field": "USD",
+        "axis": {
+          "grid": true,
+          "gridOpacity": 0.6,
+          "tickCount": 7
+        },
+        "sort": [],
+        "title": ""
+      }
+    },
+  
+  
+    "layer": [
+      {
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "European Union",
+                "New Zealand",
+                "United Kingdom",
+                "China",
+                "South Korea", 
+                "United States (RGGI)",
+                "California"
+              ]
+            }
+          },
+          {"filter": "datum.USD > 0"}
+        ],
+        "description": "transparent layer to make it easier to trigger selection",
+        "params": [{
+          "name": "hover",
+          "value": [{"Scheme": "European Union"}],
+          "select": {
+            "type": "point",
+            "fields": ["Scheme"],
+            "on": "mouseover"
+          }
+        }],
+        "mark": {"type": "line", "strokeWidth": 6, "stroke": "transparent"}
+      },
+      {
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "New Zealand",
+                "United Kingdom",
+                "China",
+                "South Korea", 
+                "United States (RGGI)",
+                "California"
+              ]
+            }
+          },
+          {"filter": "datum.USD > 0"}
+        ],
+        "mark": {"type": "line", "point": "transparent", "strokeWidth": 1.5}, 
+        "description": ""
+      },
+      {
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "European Union"
+              ]
+            }
+          },
+          {"filter": "datum.USD > 0"}
+        ],
+        "mark": {"type": "line", "point": "transparent"}, 
+        "description": ""
+      },
+      {
+        "mark": {"type": "text", "align": "left", "dx": 4},
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "European Union",
+                "New Zealand",
+                "South Korea"
+              ]
+            }
+          },
+          {"filter": "datum.Month==1677628800000"}
+        ],
+        "encoding": {
+          "text": {"type": "nominal", "field": "Scheme"}
+        }
+      },
+      {
+        "mark": {"type": "text", "align": "left", "dx": 4},
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "California"
+              ]
+            }
+          },
+          {"filter": "datum.Month==1675209600000"}
+        ],
+        "encoding": {
+          "text": {"type": "nominal", "field": "Scheme"}
+        }
+      },
+      {
+        "mark": {"type": "text", "align": "left", "dx": 4, "dy": 4},
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "United Kingdom"
+              ]
+            }
+          },
+          {"filter": "datum.Month==1677628800000"}
+        ],
+        "encoding": {
+          "text": {"type": "nominal", "field": "Scheme"}
+        }
+      },
+      {
+        "mark": {"type": "text", "align": "left", "dx": 4, "dy": -4},
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "United States (RGGI)"
+              ]
+            }
+          },
+          {"filter": "datum.Month==1677628800000"}
+        ],
+        "encoding": {
+          "text": {"type": "nominal", "field": "Scheme"}
+        }
+      },
+      {
+        "mark": {"type": "text", "align": "left", "dx": 4, "dy": 7},
+        "transform": [
+          {
+            "filter": {
+              "field": "Scheme",
+              "oneOf": [
+                "China"
+              ]
+            }
+          },
+          {"filter": "datum.Month==1677628800000"}
+        ],
+        "encoding": {
+          "text": {"type": "nominal", "field": "Scheme"}
+        }
+      }
+    ]
+  }
