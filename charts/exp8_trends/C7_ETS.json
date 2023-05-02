@@ -13,7 +13,7 @@
       "anchor": "start",
       "color": "black",
       "dy": -5,
-      "subtitle": ["Regional Greenhouse Gas Initiative (RGGI) covers 10 Northeastern states.", "USD price per metric tons, adjusted using monthly currency conversion. Source: ICAP"],
+      "subtitle": ["Regional Greenhouse Gas Initiative (RGGI) covers 10 Northeastern states.", "USD price per metric ton CO2, adjusted using monthly currency conversion. Source: ICAP"],
       "subtitleFontSize": 10,
       "subtitleFontStyle": "italic"
     },
