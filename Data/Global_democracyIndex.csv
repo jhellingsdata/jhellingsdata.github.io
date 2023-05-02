@@ -1,4 +1,4 @@
-Entity,ISO3,Year,democracy_eiu,Region,Sources
+Country,ISO3,Year,democracy_eiu,Region,Sources
 Afghanistan,AFG,2006,3.06,South Asia,https://www.eiu.com/n/campaigns/democracy-index-2022/
 Afghanistan,AFG,2008,3.02,South Asia,
 Afghanistan,AFG,2010,2.48,South Asia,
