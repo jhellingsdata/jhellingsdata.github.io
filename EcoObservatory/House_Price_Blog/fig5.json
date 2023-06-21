@@ -1,0 +1,384 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "data": {
+      "values": [
+        {"Date": 1548892800000, "Value": 96970, "Series": "Housing Transactions"},
+        {"Date": 1551312000000, "Value": 96630, "Series": "Housing Transactions"},
+        {"Date": 1553990400000, "Value": 97010, "Series": "Housing Transactions"},
+        {"Date": 1556582400000, "Value": 98050, "Series": "Housing Transactions"},
+        {"Date": 1559260800000, "Value": 96920, "Series": "Housing Transactions"},
+        {
+          "Date": 1561852800000,
+          "Value": 101230,
+          "Series": "Housing Transactions"
+        },
+        {"Date": 1564531200000, "Value": 98660, "Series": "Housing Transactions"},
+        {"Date": 1567209600000, "Value": 97880, "Series": "Housing Transactions"},
+        {"Date": 1569801600000, "Value": 99120, "Series": "Housing Transactions"},
+        {"Date": 1572480000000, "Value": 98040, "Series": "Housing Transactions"},
+        {"Date": 1575072000000, "Value": 97460, "Series": "Housing Transactions"},
+        {"Date": 1577750400000, "Value": 98560, "Series": "Housing Transactions"},
+        {"Date": 1580428800000, "Value": 96350, "Series": "Housing Transactions"},
+        {"Date": 1582934400000, "Value": 96980, "Series": "Housing Transactions"},
+        {"Date": 1585612800000, "Value": 90210, "Series": "Housing Transactions"},
+        {"Date": 1588204800000, "Value": 42830, "Series": "Housing Transactions"},
+        {"Date": 1590883200000, "Value": 48720, "Series": "Housing Transactions"},
+        {"Date": 1590969600000, "Value": 64200, "Series": "Housing Transactions"},
+        {"Date": 1593561600000, "Value": 72400, "Series": "Housing Transactions"},
+        {"Date": 1596240000000, "Value": 82310, "Series": "Housing Transactions"},
+        {"Date": 1598918400000, "Value": 95830, "Series": "Housing Transactions"},
+        {
+          "Date": 1601510400000,
+          "Value": 105990,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1604188800000,
+          "Value": 114060,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1606780800000,
+          "Value": 126150,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1609459200000,
+          "Value": 117390,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1612137600000,
+          "Value": 141630,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1614556800000,
+          "Value": 173970,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1617235200000,
+          "Value": 122660,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1619827200000,
+          "Value": 116060,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1622505600000,
+          "Value": 208700,
+          "Series": "Housing Transactions"
+        },
+        {"Date": 1625097600000, "Value": 76740, "Series": "Housing Transactions"},
+        {"Date": 1627776000000, "Value": 97920, "Series": "Housing Transactions"},
+        {
+          "Date": 1630454400000,
+          "Value": 161790,
+          "Series": "Housing Transactions"
+        },
+        {"Date": 1633046400000, "Value": 76240, "Series": "Housing Transactions"},
+        {"Date": 1635724800000, "Value": 91930, "Series": "Housing Transactions"},
+        {"Date": 1638316800000, "Value": 98340, "Series": "Housing Transactions"},
+        {
+          "Date": 1640995200000,
+          "Value": 106760,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1643673600000,
+          "Value": 109810,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1646092800000,
+          "Value": 110290,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1648771200000,
+          "Value": 109640,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1651363200000,
+          "Value": 109060,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1654041600000,
+          "Value": 102850,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1656633600000,
+          "Value": 104550,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1659312000000,
+          "Value": 103840,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1661990400000,
+          "Value": 103560,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1664582400000,
+          "Value": 103950,
+          "Series": "Housing Transactions"
+        },
+        {
+          "Date": 1667260800000,
+          "Value": 102120,
+          "Series": "Housing Transactions"
+        },
+        {"Date": 1669852800000, "Value": 97790, "Series": "Housing Transactions"},
+        {"Date": 1672531200000, "Value": 93060, "Series": "Housing Transactions"},
+        {"Date": 1675209600000, "Value": 87730, "Series": "Housing Transactions"},
+        {"Date": 1677628800000, "Value": 89210, "Series": "Housing Transactions"},
+        {"Date": 1680307200000, "Value": 82120, "Series": "Housing Transactions"},
+        {"Date": 1548892800000, "Value": 64341, "Series": "Mortgage Approvals"},
+        {"Date": 1551312000000, "Value": 64496, "Series": "Mortgage Approvals"},
+        {"Date": 1553990400000, "Value": 62325, "Series": "Mortgage Approvals"},
+        {"Date": 1556582400000, "Value": 65747, "Series": "Mortgage Approvals"},
+        {"Date": 1559260800000, "Value": 65544, "Series": "Mortgage Approvals"},
+        {"Date": 1561852800000, "Value": 66945, "Series": "Mortgage Approvals"},
+        {"Date": 1564531200000, "Value": 68762, "Series": "Mortgage Approvals"},
+        {"Date": 1567209600000, "Value": 67470, "Series": "Mortgage Approvals"},
+        {"Date": 1569801600000, "Value": 66626, "Series": "Mortgage Approvals"},
+        {"Date": 1572480000000, "Value": 65262, "Series": "Mortgage Approvals"},
+        {"Date": 1575072000000, "Value": 65132, "Series": "Mortgage Approvals"},
+        {"Date": 1577750400000, "Value": 65747, "Series": "Mortgage Approvals"},
+        {"Date": 1580428800000, "Value": 68439, "Series": "Mortgage Approvals"},
+        {"Date": 1582934400000, "Value": 72200, "Series": "Mortgage Approvals"},
+        {"Date": 1585612800000, "Value": 56371, "Series": "Mortgage Approvals"},
+        {"Date": 1588204800000, "Value": 15857, "Series": "Mortgage Approvals"},
+        {"Date": 1590883200000, "Value": 9346, "Series": "Mortgage Approvals"},
+        {"Date": 1590969600000, "Value": 40706, "Series": "Mortgage Approvals"},
+        {"Date": 1593561600000, "Value": 68669, "Series": "Mortgage Approvals"},
+        {"Date": 1596240000000, "Value": 87494, "Series": "Mortgage Approvals"},
+        {"Date": 1598918400000, "Value": 93358, "Series": "Mortgage Approvals"},
+        {"Date": 1601510400000, "Value": 99306, "Series": "Mortgage Approvals"},
+        {"Date": 1604188800000, "Value": 104996, "Series": "Mortgage Approvals"},
+        {"Date": 1606780800000, "Value": 100146, "Series": "Mortgage Approvals"},
+        {"Date": 1609459200000, "Value": 95341, "Series": "Mortgage Approvals"},
+        {"Date": 1612137600000, "Value": 86046, "Series": "Mortgage Approvals"},
+        {"Date": 1614556800000, "Value": 81528, "Series": "Mortgage Approvals"},
+        {"Date": 1617235200000, "Value": 85715, "Series": "Mortgage Approvals"},
+        {"Date": 1619827200000, "Value": 86484, "Series": "Mortgage Approvals"},
+        {"Date": 1622505600000, "Value": 80464, "Series": "Mortgage Approvals"},
+        {"Date": 1625097600000, "Value": 76197, "Series": "Mortgage Approvals"},
+        {"Date": 1627776000000, "Value": 74338, "Series": "Mortgage Approvals"},
+        {"Date": 1630454400000, "Value": 72403, "Series": "Mortgage Approvals"},
+        {"Date": 1633046400000, "Value": 67701, "Series": "Mortgage Approvals"},
+        {"Date": 1635724800000, "Value": 67593, "Series": "Mortgage Approvals"},
+        {"Date": 1638316800000, "Value": 70204, "Series": "Mortgage Approvals"},
+        {"Date": 1640995200000, "Value": 73220, "Series": "Mortgage Approvals"},
+        {"Date": 1643673600000, "Value": 70240, "Series": "Mortgage Approvals"},
+        {"Date": 1646092800000, "Value": 69531, "Series": "Mortgage Approvals"},
+        {"Date": 1648771200000, "Value": 65974, "Series": "Mortgage Approvals"},
+        {"Date": 1651363200000, "Value": 66404, "Series": "Mortgage Approvals"},
+        {"Date": 1654041600000, "Value": 63481, "Series": "Mortgage Approvals"},
+        {"Date": 1656633600000, "Value": 63967, "Series": "Mortgage Approvals"},
+        {"Date": 1659312000000, "Value": 73111, "Series": "Mortgage Approvals"},
+        {"Date": 1661990400000, "Value": 64819, "Series": "Mortgage Approvals"},
+        {"Date": 1664582400000, "Value": 56689, "Series": "Mortgage Approvals"},
+        {"Date": 1667260800000, "Value": 45310, "Series": "Mortgage Approvals"},
+        {"Date": 1669852800000, "Value": 40337, "Series": "Mortgage Approvals"},
+        {"Date": 1672531200000, "Value": 39610, "Series": "Mortgage Approvals"},
+        {"Date": 1675209600000, "Value": 43717, "Series": "Mortgage Approvals"},
+        {"Date": 1677628800000, "Value": 51488, "Series": "Mortgage Approvals"},
+        {"Date": 1680307200000, "Value": 48690, "Series": "Mortgage Approvals"}
+      ]
+    },
+    "width": 550,
+    "height": 300,
+    "layer": [
+      {
+        "mark": {"type": "text", "align": "left", "color": "rgb(224,52,82)"},
+        "data": {"values": [{"Date": "x"}]},
+        "encoding": {
+          "x": {"value": 162},
+          "text": {"value": "Housing Transactions (LHS)"},
+          "y": {"value": 25}
+        }
+      },
+      {
+        "mark": {"type": "text", "align": "right", "color": "rgb(110,177,222)"},
+        "data": {"values": [{"Date": "x"}]},
+        "encoding": {
+          "x": {"value": 525},
+          "text": {"value": "Mortgage Approvals (RHS)"},
+          "y": {"value": 118}
+        }
+      },
+      {
+        "mark": {"type": "line", "color": "rgb(224,52,82)"},
+        "encoding": {
+          "x": {
+            "field": "Date",
+            "type": "temporal",
+            "axis": {
+              "format": "%Y",
+              "grid": false,
+              "domainColor": "#919ae4",
+              "domainOpacity": 0.5,
+              "labelAngle": 0,
+              "labelColor": "#676A86",
+              "labelOpacity": 0.7,
+              "orient": "bottom",
+              "tickColor": "#676A86",
+              "tickCount": 10,
+              "tickOpacity": 0.5,
+              "title": "",
+              "titleAlign": "center",
+              "titleAnchor": "middle",
+              "titleColor": "#676A86",
+              "titleFontSize": 12,
+              "titleOpacity": 0.8,
+              "titleX": 207,
+              "titleY": -15
+            }
+          },
+          "y": {
+            "scale": {"domain": [20000, 220000]},
+            "axis": {
+              "domainColor": "#676A86",
+              "domainOpacity": 0.5,
+              "orient": "left",
+              "format": ",.2r",
+              "gridColor": "#676A86",
+              "gridDash": [1, 5],
+              "gridOpacity": 0.5,
+              "labelColor": "#676A86",
+              "labelOpacity": 0.7,
+              "labelPadding": 5,
+              "tickColor": "#676A86",
+              "tickCount": 8,
+              "tickOpacity": 0.5,
+              "ticks": false,
+              "title": "Monthly Housing Transactions (LHS) and Mortgage Approvals (RHS), 2019-23",
+              "titleAlign": "left",
+              "titleAngle": 0,
+              "titleBaseline": "bottom",
+              "titleColor": "#676A86",
+              "titleFontSize": 12,
+              "titleOpacity": 0.8,
+              "titleX": 0,
+              "titleY": -18
+            },
+            "type": "quantitative",
+            "field": "Value"
+          }
+        },
+        "transform": [{"filter": "datum.Series == 'Housing Transactions'"}]
+      },
+      {
+        "mark": {"type": "line", "color": "rgb(110,177,222)"},
+        "encoding": {
+          "x": {
+            "field": "Date",
+            "type": "temporal",
+            "axis": {
+              "format": "%Y",
+              "grid": false,
+              "domainColor": "#919ae4",
+              "domainOpacity": 0.5,
+              "labelAngle": 0,
+              "labelColor": "#676A86",
+              "labelOpacity": 0.7,
+              "orient": "bottom",
+              "tickColor": "#676A86",
+              "tickCount": 10,
+              "tickOpacity": 0.5,
+              "title": "",
+              "titleAlign": "center",
+              "titleAnchor": "middle",
+              "titleColor": "#676A86",
+              "titleFontSize": 12,
+              "titleOpacity": 0.8,
+              "titleX": 207,
+              "titleY": -15
+            }
+          },
+          "y": {
+            "scale": {"domain": [5000, 125000]},
+            "axis": {
+              "domainColor": "#676A86",
+              "domainOpacity": 0.5,
+              "orient": "right",
+              "format": ",.2r",
+              "gridColor": "#676A86",
+              "gridDash": [1, 5],
+              "gridOpacity": 0.5,
+              "labelColor": "#676A86",
+              "labelOpacity": 0.7,
+              "labelPadding": 5,
+              "tickColor": "#676A86",
+              "tickCount": 8,
+              "tickOpacity": 0.5,
+              "ticks": false,
+              "title": null,
+              "titleAlign": "left",
+              "titleAngle": 0,
+              "titleBaseline": "bottom",
+              "titleColor": "#676A86",
+              "titleFontSize": 12,
+              "titleOpacity": 0.8,
+              "titleX": 0,
+              "titleY": -18
+            },
+            "type": "quantitative",
+            "field": "Value"
+          }
+        },
+        "transform": [{"filter": "datum.Series != 'Housing Transactions'"}]
+      },
+      {
+        "mark": {
+          "type": "text",
+          "fontWeight": "lighter",
+          "align": "left",
+          "color": "#676A86",
+          "fontSize": 11
+        },
+        "data": {"values": [{"Value": 0}]},
+        "encoding": {
+          "x": {"value": 1},
+          "text": {"value": "Source: Bank of England"},
+          "y": {"axis": null, "value": -10}
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "image": "https://raw.githubusercontent.com/EconomicsObservatory/ECOvisualisations/main/guidelines/logos/eco-icon-dark.png"
+            }
+          ]
+        },
+        "mark": {
+          "type": "image",
+          "align": "right",
+          "baseline": "top",
+          "height": 40,
+          "opacity": 0.5,
+          "width": 40,
+          "xOffset": 105,
+          "yOffset": -33
+        },
+        "encoding": {
+          "x": {"value": 490},
+          "url": {"field": "image", "type": "nominal"},
+          "y": {"axis": null, "value": -10}
+        }
+      }
+    ],
+    "resolve": {"scale": {"y": "independent"}}
+  }

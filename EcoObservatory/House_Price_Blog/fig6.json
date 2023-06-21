@@ -1,0 +1,179 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "data": {
+      "values": [
+        {"Date": 1546300800000, "Value": 0.0167928821, "Series": "Change"},
+        {"Date": 1548979200000, "Value": 0.0115811283, "Series": "Change"},
+        {"Date": 1551398400000, "Value": 0.0148891703, "Series": "Change"},
+        {"Date": 1554076800000, "Value": 0.0125676573, "Series": "Change"},
+        {"Date": 1556668800000, "Value": 0.009818872, "Series": "Change"},
+        {"Date": 1559347200000, "Value": 0.0074171053, "Series": "Change"},
+        {"Date": 1561939200000, "Value": 0.0061903577, "Series": "Change"},
+        {"Date": 1564617600000, "Value": 0.0063322543, "Series": "Change"},
+        {"Date": 1567296000000, "Value": 0.008994865, "Series": "Change"},
+        {"Date": 1569888000000, "Value": 0.0073879267, "Series": "Change"},
+        {"Date": 1572566400000, "Value": 0.0081317329, "Series": "Change"},
+        {"Date": 1575158400000, "Value": 0.0089802911, "Series": "Change"},
+        {"Date": 1577836800000, "Value": 0.0158790459, "Series": "Change"},
+        {"Date": 1580515200000, "Value": 0.0126045352, "Series": "Change"},
+        {"Date": 1583020800000, "Value": 0.0245695574, "Series": "Change"},
+        {"Date": 1585699200000, "Value": 0.006856449, "Series": "Change"},
+        {"Date": 1588291200000, "Value": 0.010680951, "Series": "Change"},
+        {"Date": 1590969600000, "Value": 0.0202313379, "Series": "Change"},
+        {"Date": 1593561600000, "Value": 0.0174912501, "Series": "Change"},
+        {"Date": 1596240000000, "Value": 0.0241318412, "Series": "Change"},
+        {"Date": 1598918400000, "Value": 0.0342784293, "Series": "Change"},
+        {"Date": 1601510400000, "Value": 0.0457500786, "Series": "Change"},
+        {"Date": 1604188800000, "Value": 0.0601842747, "Series": "Change"},
+        {"Date": 1606780800000, "Value": 0.0698518355, "Series": "Change"},
+        {"Date": 1609459200000, "Value": 0.076526826, "Series": "Change"},
+        {"Date": 1612137600000, "Value": 0.0822912423, "Series": "Change"},
+        {"Date": 1614556800000, "Value": 0.0894851482, "Series": "Change"},
+        {"Date": 1617235200000, "Value": 0.0863672584, "Series": "Change"},
+        {"Date": 1619827200000, "Value": 0.0854302891, "Series": "Change"},
+        {"Date": 1622505600000, "Value": 0.1319659226, "Series": "Change"},
+        {"Date": 1625097600000, "Value": 0.0687541327, "Series": "Change"},
+        {"Date": 1627776000000, "Value": 0.0896723626, "Series": "Change"},
+        {"Date": 1630454400000, "Value": 0.1136934367, "Series": "Change"},
+        {"Date": 1633046400000, "Value": 0.0811154992, "Series": "Change"},
+        {"Date": 1635724800000, "Value": 0.0865827268, "Series": "Change"},
+        {"Date": 1638316800000, "Value": 0.0811799972, "Series": "Change"},
+        {"Date": 1640995200000, "Value": 0.0923097669, "Series": "Change"},
+        {"Date": 1643673600000, "Value": 0.0916238597, "Series": "Change"},
+        {"Date": 1646092800000, "Value": 0.0800032716, "Series": "Change"},
+        {"Date": 1648771200000, "Value": 0.107742689, "Series": "Change"},
+        {"Date": 1651363200000, "Value": 0.1178636372, "Series": "Change"},
+        {"Date": 1654041600000, "Value": 0.0658247365, "Series": "Change"},
+        {"Date": 1656633600000, "Value": 0.1425695634, "Series": "Change"},
+        {"Date": 1659312000000, "Value": 0.1191222967, "Series": "Change"},
+        {"Date": 1661990400000, "Value": 0.0869923259, "Series": "Change"},
+        {"Date": 1664582400000, "Value": 0.1099551832, "Series": "Change"},
+        {"Date": 1667260800000, "Value": 0.0941831487, "Series": "Change"},
+        {"Date": 1669852800000, "Value": 0.0867014448, "Series": "Change"},
+        {"Date": 1672531200000, "Value": 0.058811084, "Series": "Change"},
+        {"Date": 1675209600000, "Value": 0.0583912333, "Series": "Change"},
+        {"Date": 1677628800000, "Value": 0.0409882596, "Series": "Change"}
+      ]
+    },
+    "width": 550,
+    "height": 300,
+    "layer": [
+      {
+        "mark": {"type": "text", "color": "rgb(224,52,82)"},
+        "data": {"values": [{"x": 0}]},
+        "encoding": {
+          "x": {"value": 495},
+          "y": {"value": 218},
+          "text": {"value": "Annual Change (%)"}
+        }
+      },
+      {
+        "layer": [
+          {
+            "mark": {"type": "line"},
+            "encoding": {
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "axis": {
+                  "format": "%b %Y",
+                  "grid": false,
+                  "domainColor": "#919ae4",
+                  "domainOpacity": 0.5,
+                  "labelAngle": 0,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "orient": "bottom",
+                  "tickColor": "#676A86",
+                  "tickCount": 10,
+                  "tickOpacity": 0.5,
+                  "title": "",
+                  "titleAlign": "center",
+                  "titleAnchor": "middle",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 207,
+                  "titleY": -15
+                }
+              },
+              "y": {
+                "field": "Value",
+                "type": "quantitative",
+                "scale": {"domainMin": 0, "domainMax": 0.16},
+                "axis": {
+                  "domainColor": "#676A86",
+                  "domainOpacity": 0.5,
+                  "format": "%",
+                  "gridColor": "#676A86",
+                  "gridDash": [1, 5],
+                  "gridOpacity": 0.5,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "labelPadding": 5,
+                  "tickColor": "#676A86",
+                  "tickCount": 8,
+                  "tickOpacity": 0.5,
+                  "ticks": false,
+                  "title": "Annual Percentage Change in House Prices ",
+                  "titleAlign": "left",
+                  "titleAngle": 0,
+                  "titleBaseline": "bottom",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 0,
+                  "titleY": -18
+                }
+              },
+              "color": {
+                "field": "Series",
+                "scale": {"range": ["rgb(224,52,82)", "rgb(110,177,222)"]},
+                "legend": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "mark": {
+          "type": "text",
+          "fontWeight": "lighter",
+          "align": "left",
+          "color": "#676A86",
+          "fontSize": 11
+        },
+        "data": {"values": [{"Value": 0}]},
+        "encoding": {
+          "x": {"value": 1},
+          "y": {"value": -10},
+          "text": {"value": "Source: UK Government"}
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "image": "https://raw.githubusercontent.com/EconomicsObservatory/ECOvisualisations/main/guidelines/logos/eco-icon-dark.png"
+            }
+          ]
+        },
+        "mark": {
+          "type": "image",
+          "align": "right",
+          "baseline": "top",
+          "height": 40,
+          "opacity": 0.5,
+          "width": 40,
+          "xOffset": 105,
+          "yOffset": -33
+        },
+        "encoding": {
+          "x": {"value": 450},
+          "y": {"value": -10},
+          "url": {"field": "image", "type": "nominal"}
+        }
+      }
+    ]
+  }

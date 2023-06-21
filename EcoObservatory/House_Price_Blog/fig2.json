@@ -1,0 +1,200 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "data": {
+      "values": [
+        {"Date": 1083801600000, "Value": 0.0425, "Series": "Bank Rate"},
+        {"Date": 1086825600000, "Value": 0.045, "Series": "Bank Rate"},
+        {"Date": 1091664000000, "Value": 0.0475, "Series": "Bank Rate"},
+        {"Date": 1123113600000, "Value": 0.045, "Series": "Bank Rate"},
+        {"Date": 1154563200000, "Value": 0.0475, "Series": "Bank Rate"},
+        {"Date": 1163030400000, "Value": 0.05, "Series": "Bank Rate"},
+        {"Date": 1168473600000, "Value": 0.0525, "Series": "Bank Rate"},
+        {"Date": 1178755200000, "Value": 0.055, "Series": "Bank Rate"},
+        {"Date": 1183593600000, "Value": 0.0575, "Series": "Bank Rate"},
+        {"Date": 1196899200000, "Value": 0.055, "Series": "Bank Rate"},
+        {"Date": 1202342400000, "Value": 0.0525, "Series": "Bank Rate"},
+        {"Date": 1207785600000, "Value": 0.05, "Series": "Bank Rate"},
+        {"Date": 1223424000000, "Value": 0.045, "Series": "Bank Rate"},
+        {"Date": 1225929600000, "Value": 0.03, "Series": "Bank Rate"},
+        {"Date": 1228348800000, "Value": 0.02, "Series": "Bank Rate"},
+        {"Date": 1231372800000, "Value": 0.015, "Series": "Bank Rate"},
+        {"Date": 1233792000000, "Value": 0.01, "Series": "Bank Rate"},
+        {"Date": 1236211200000, "Value": 0.005, "Series": "Bank Rate"},
+        {"Date": 1470268800000, "Value": 0.0025, "Series": "Bank Rate"},
+        {"Date": 1509580800000, "Value": 0.005, "Series": "Bank Rate"},
+        {"Date": 1533168000000, "Value": 0.0075, "Series": "Bank Rate"},
+        {"Date": 1583884800000, "Value": 0.0025, "Series": "Bank Rate"},
+        {"Date": 1584576000000, "Value": 0.001, "Series": "Bank Rate"},
+        {"Date": 1639612800000, "Value": 0.0025, "Series": "Bank Rate"},
+        {"Date": 1643846400000, "Value": 0.005, "Series": "Bank Rate"},
+        {"Date": 1647475200000, "Value": 0.0075, "Series": "Bank Rate"},
+        {"Date": 1651708800000, "Value": 0.01, "Series": "Bank Rate"},
+        {"Date": 1655337600000, "Value": 0.0125, "Series": "Bank Rate"},
+        {"Date": 1659571200000, "Value": 0.0175, "Series": "Bank Rate"},
+        {"Date": 1663804800000, "Value": 0.0225, "Series": "Bank Rate"},
+        {"Date": 1667433600000, "Value": 0.03, "Series": "Bank Rate"},
+        {"Date": 1671062400000, "Value": 0.035, "Series": "Bank Rate"},
+        {"Date": 1675296000000, "Value": 0.04, "Series": "Bank Rate"},
+        {"Date": 1679529600000, "Value": 0.0425, "Series": "Bank Rate"},
+        {"Date": 1683763200000, "Value": 0.045, "Series": "Bank Rate"}
+      ]
+    },
+    "width": 550,
+    "height": 300,
+    "layer": [
+      {
+        "mark": {"type": "text", "color": "rgb(224,52,82)"},
+        "data": {"values": [{"x": 0}]},
+        "encoding": {
+          "x": {"value": 520},
+          "y": {"value": 111},
+          "text": {"value": "Base Rate"}
+        }
+      },
+      {
+        "layer": [
+          {
+            "mark": {"type": "line", "interpolate": "step-after"},
+            "encoding": {
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "axis": {
+                  "format": " %Y",
+                  "grid": false,
+                  "domainColor": "#919ae4",
+                  "domainOpacity": 0.5,
+                  "labelAngle": 0,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "orient": "bottom",
+                  "tickColor": "#676A86",
+                  "tickCount": 10,
+                  "tickOpacity": 0.5,
+                  "title": "",
+                  "titleAlign": "center",
+                  "titleAnchor": "middle",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 207,
+                  "titleY": -15
+                }
+              },
+              "y": {
+                "field": "Value",
+                "type": "quantitative",
+                "scale": {"domainMin": 0, "domainMax": 0.07},
+                "axis": {
+                  "domainColor": "#676A86",
+                  "domainOpacity": 0.5,
+                  "format": "%",
+                  "gridColor": "#676A86",
+                  "gridDash": [1, 5],
+                  "gridOpacity": 0.5,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "labelPadding": 5,
+                  "tickColor": "#676A86",
+                  "tickCount": 8,
+                  "tickOpacity": 0.5,
+                  "ticks": false,
+                  "title": "Bank of England Base Rate, 2004-23",
+                  "titleAlign": "left",
+                  "titleAngle": 0,
+                  "titleBaseline": "bottom",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 0,
+                  "titleY": -18
+                }
+              },
+              "color": {
+                "field": "Series",
+                "scale": {"range": ["rgb(224,52,82)", "rgb(110,177,222)"]},
+                "legend": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "mark": {"type": "rule", "color": "#676A86"},
+        "data": {"values": [{"Value": "0"}]},
+        "encoding": {
+          "x": null,
+          "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "scale": {"domainMin": 0, "domainMax": 0.07},
+            "axis": {
+              "domainColor": "#676A86",
+              "domainOpacity": 0.5,
+              "format": "%",
+              "gridColor": "#676A86",
+              "gridDash": [1, 5],
+              "gridOpacity": 0.5,
+              "labelColor": "#676A86",
+              "labelOpacity": 0.7,
+              "labelPadding": 5,
+              "tickColor": "#676A86",
+              "tickCount": 8,
+              "tickOpacity": 0.5,
+              "ticks": false,
+              "title": "Bank of England Base Rate, 2004-23",
+              "titleAlign": "left",
+              "titleAngle": 0,
+              "titleBaseline": "bottom",
+              "titleColor": "#676A86",
+              "titleFontSize": 12,
+              "titleOpacity": 0.8,
+              "titleX": 0,
+              "titleY": -18
+            }
+          },
+          "opacity": {"value": 0.6}
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "fontWeight": "lighter",
+          "align": "left",
+          "color": "#676A86",
+          "fontSize": 11
+        },
+        "data": {"values": [{"Value": 0}]},
+        "encoding": {
+          "x": {"value": 1},
+          "y": {"value": -10},
+          "text": {"value": "Source: Bank of England"}
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "image": "https://raw.githubusercontent.com/EconomicsObservatory/ECOvisualisations/main/guidelines/logos/eco-icon-dark.png"
+            }
+          ]
+        },
+        "mark": {
+          "type": "image",
+          "align": "right",
+          "baseline": "top",
+          "height": 40,
+          "opacity": 0.5,
+          "width": 40,
+          "xOffset": 105,
+          "yOffset": -33
+        },
+        "encoding": {
+          "x": {"value": 470},
+          "y": {"value": -10},
+          "url": {"field": "image", "type": "nominal"}
+        }
+      }
+    ]
+  }

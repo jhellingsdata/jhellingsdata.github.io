@@ -1,0 +1,221 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "data": {
+      "values": [
+        {"Date": "2000-01-01", "Value": 0.2344283555, "Series": "Payments"},
+        {"Date": "2000-04-01", "Value": 0.2398163003, "Series": "Payments"},
+        {"Date": "2000-07-01", "Value": 0.2309047637, "Series": "Payments"},
+        {"Date": "2000-10-01", "Value": 0.2343292761, "Series": "Payments"},
+        {"Date": "2001-01-01", "Value": 0.2328155772, "Series": "Payments"},
+        {"Date": "2001-04-01", "Value": 0.2325372101, "Series": "Payments"},
+        {"Date": "2001-07-01", "Value": 0.2351726065, "Series": "Payments"},
+        {"Date": "2001-10-01", "Value": 0.2273379222, "Series": "Payments"},
+        {"Date": "2002-01-01", "Value": 0.2288136889, "Series": "Payments"},
+        {"Date": "2002-04-01", "Value": 0.2374839214, "Series": "Payments"},
+        {"Date": "2002-07-01", "Value": 0.2496313748, "Series": "Payments"},
+        {"Date": "2002-10-01", "Value": 0.2664496338, "Series": "Payments"},
+        {"Date": "2003-01-01", "Value": 0.2739275309, "Series": "Payments"},
+        {"Date": "2003-04-01", "Value": 0.2764128727, "Series": "Payments"},
+        {"Date": "2003-07-01", "Value": 0.280375504, "Series": "Payments"},
+        {"Date": "2003-10-01", "Value": 0.287874043, "Series": "Payments"},
+        {"Date": "2004-01-01", "Value": 0.3158886535, "Series": "Payments"},
+        {"Date": "2004-04-01", "Value": 0.3492841822, "Series": "Payments"},
+        {"Date": "2004-07-01", "Value": 0.3724789535, "Series": "Payments"},
+        {"Date": "2004-10-01", "Value": 0.3823191062, "Series": "Payments"},
+        {"Date": "2005-01-01", "Value": 0.3777184422, "Series": "Payments"},
+        {"Date": "2005-04-01", "Value": 0.3820915162, "Series": "Payments"},
+        {"Date": "2005-07-01", "Value": 0.375187567, "Series": "Payments"},
+        {"Date": "2005-10-01", "Value": 0.3647285697, "Series": "Payments"},
+        {"Date": "2006-01-01", "Value": 0.3730231443, "Series": "Payments"},
+        {"Date": "2006-04-01", "Value": 0.3796167258, "Series": "Payments"},
+        {"Date": "2006-07-01", "Value": 0.3890317602, "Series": "Payments"},
+        {"Date": "2006-10-01", "Value": 0.4016782841, "Series": "Payments"},
+        {"Date": "2007-01-01", "Value": 0.4135580481, "Series": "Payments"},
+        {"Date": "2007-04-01", "Value": 0.4414222593, "Series": "Payments"},
+        {"Date": "2007-07-01", "Value": 0.4544849655, "Series": "Payments"},
+        {"Date": "2007-10-01", "Value": 0.4601743756, "Series": "Payments"},
+        {"Date": "2008-01-01", "Value": 0.4384499039, "Series": "Payments"},
+        {"Date": "2008-04-01", "Value": 0.4051319224, "Series": "Payments"},
+        {"Date": "2008-07-01", "Value": 0.3953425214, "Series": "Payments"},
+        {"Date": "2008-10-01", "Value": 0.3585090076, "Series": "Payments"},
+        {"Date": "2009-01-01", "Value": 0.3129724872, "Series": "Payments"},
+        {"Date": "2009-04-01", "Value": 0.315723582, "Series": "Payments"},
+        {"Date": "2009-07-01", "Value": 0.324994736, "Series": "Payments"},
+        {"Date": "2009-10-01", "Value": 0.3222903737, "Series": "Payments"},
+        {"Date": "2010-01-01", "Value": 0.3163283595, "Series": "Payments"},
+        {"Date": "2010-04-01", "Value": 0.3253034215, "Series": "Payments"},
+        {"Date": "2010-07-01", "Value": 0.3168187959, "Series": "Payments"},
+        {"Date": "2010-10-01", "Value": 0.305251384, "Series": "Payments"},
+        {"Date": "2011-01-01", "Value": 0.3039851622, "Series": "Payments"},
+        {"Date": "2011-04-01", "Value": 0.3105024978, "Series": "Payments"},
+        {"Date": "2011-07-01", "Value": 0.3073029264, "Series": "Payments"},
+        {"Date": "2011-10-01", "Value": 0.297197411, "Series": "Payments"},
+        {"Date": "2012-01-01", "Value": 0.2946978079, "Series": "Payments"},
+        {"Date": "2012-04-01", "Value": 0.3011975577, "Series": "Payments"},
+        {"Date": "2012-07-01", "Value": 0.3035640755, "Series": "Payments"},
+        {"Date": "2012-10-01", "Value": 0.2986335609, "Series": "Payments"},
+        {"Date": "2013-01-01", "Value": 0.2918616792, "Series": "Payments"},
+        {"Date": "2013-04-01", "Value": 0.2877371335, "Series": "Payments"},
+        {"Date": "2013-07-01", "Value": 0.2892296309, "Series": "Payments"},
+        {"Date": "2013-10-01", "Value": 0.2911597609, "Series": "Payments"},
+        {"Date": "2014-01-01", "Value": 0.2981886123, "Series": "Payments"},
+        {"Date": "2014-04-01", "Value": 0.3106812085, "Series": "Payments"},
+        {"Date": "2014-07-01", "Value": 0.3190821798, "Series": "Payments"},
+        {"Date": "2014-10-01", "Value": 0.3161473459, "Series": "Payments"},
+        {"Date": "2015-01-01", "Value": 0.3095983586, "Series": "Payments"},
+        {"Date": "2015-04-01", "Value": 0.3081133988, "Series": "Payments"},
+        {"Date": "2015-07-01", "Value": 0.3043927642, "Series": "Payments"},
+        {"Date": "2015-10-01", "Value": 0.3020685075, "Series": "Payments"},
+        {"Date": "2016-01-01", "Value": 0.2994642359, "Series": "Payments"},
+        {"Date": "2016-04-01", "Value": 0.3025924673, "Series": "Payments"},
+        {"Date": "2016-07-01", "Value": 0.3015383786, "Series": "Payments"},
+        {"Date": "2016-10-01", "Value": 0.2931160758, "Series": "Payments"},
+        {"Date": "2017-01-01", "Value": 0.2914855248, "Series": "Payments"},
+        {"Date": "2017-04-01", "Value": 0.290446373, "Series": "Payments"},
+        {"Date": "2017-07-01", "Value": 0.2906352442, "Series": "Payments"},
+        {"Date": "2017-10-01", "Value": 0.2858571673, "Series": "Payments"},
+        {"Date": "2018-01-01", "Value": 0.2861642328, "Series": "Payments"},
+        {"Date": "2018-04-01", "Value": 0.2848054563, "Series": "Payments"},
+        {"Date": "2018-07-01", "Value": 0.2862935917, "Series": "Payments"},
+        {"Date": "2018-10-01", "Value": 0.2824247211, "Series": "Payments"},
+        {"Date": "2019-01-01", "Value": 0.2802256715, "Series": "Payments"},
+        {"Date": "2019-04-01", "Value": 0.2779110898, "Series": "Payments"},
+        {"Date": "2019-07-01", "Value": 0.2774215918, "Series": "Payments"},
+        {"Date": "2019-10-01", "Value": 0.2732195748, "Series": "Payments"},
+        {"Date": "2020-01-01", "Value": 0.2760003101, "Series": "Payments"},
+        {"Date": "2020-04-01", "Value": 0.2728155068, "Series": "Payments"},
+        {"Date": "2020-07-01", "Value": 0.2708639137, "Series": "Payments"},
+        {"Date": "2020-10-01", "Value": 0.2786191657, "Series": "Payments"},
+        {"Date": "2021-01-01", "Value": 0.2913270966, "Series": "Payments"},
+        {"Date": "2021-04-01", "Value": 0.3052412741, "Series": "Payments"},
+        {"Date": "2021-07-01", "Value": 0.3087603321, "Series": "Payments"},
+        {"Date": "2021-10-01", "Value": 0.3036230349, "Series": "Payments"},
+        {"Date": "2022-01-01", "Value": 0.3031123712, "Series": "Payments"},
+        {"Date": "2022-04-01", "Value": 0.3185585377, "Series": "Payments"},
+        {"Date": "2022-07-01", "Value": 0.3358469262, "Series": "Payments"},
+        {"Date": "2022-10-01", "Value": 0.34900252, "Series": "Payments"},
+        {"Date": "2023-01-01", "Value": 0.3704325011, "Series": "Payments"}
+      ]
+    },
+    "width": 550,
+    "height": 300,
+    "layer": [
+      {
+        "mark": {"type": "text", "color": "rgb(224,52,82)"},
+        "data": {"values": [{"x": 0}]},
+        "encoding": {
+          "x": {"value": 488},
+          "y": {"value": 132},
+          "text": {"value": "Percentage of Net Pay"}
+        }
+      },
+      {
+        "layer": [
+          {
+            "mark": {"type": "line"},
+            "encoding": {
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "axis": {
+                  "format": "%Y",
+                  "grid": false,
+                  "domainColor": "#919ae4",
+                  "domainOpacity": 0.5,
+                  "labelAngle": 0,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "orient": "bottom",
+                  "tickColor": "#676A86",
+                  "tickCount": 10,
+                  "tickOpacity": 0.5,
+                  "title": "",
+                  "titleAlign": "center",
+                  "titleAnchor": "middle",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 207,
+                  "titleY": -15
+                }
+              },
+              "y": {
+                "field": "Value",
+                "type": "quantitative",
+                "scale": {"domainMin": 0.2, "domainMax": 0.5},
+                "axis": {
+                  "domainColor": "#676A86",
+                  "domainOpacity": 0.5,
+                  "format": "%",
+                  "gridColor": "#676A86",
+                  "gridDash": [1, 5],
+                  "gridOpacity": 0.5,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "labelPadding": 5,
+                  "tickColor": "#676A86",
+                  "tickCount": 8,
+                  "tickOpacity": 0.5,
+                  "ticks": false,
+                  "title": "Monthly Mortgage Payments for First-Time Buyers ",
+                  "titleAlign": "left",
+                  "titleAngle": 0,
+                  "titleBaseline": "bottom",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 0,
+                  "titleY": -18
+                }
+              },
+              "color": {
+                "field": "Series",
+                "scale": {"range": ["rgb(224,52,82)", "rgb(110,177,222)"]},
+                "legend": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "mark": {
+          "type": "text",
+          "fontWeight": "lighter",
+          "align": "left",
+          "color": "#676A86",
+          "fontSize": 11
+        },
+        "data": {"values": [{"Value": 0}]},
+        "encoding": {
+          "x": {"value": 1},
+          "y": {"value": -10},
+          "text": {"value": "as a Percentage of Net Pay, Source: Nationwide"}
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "image": "https://raw.githubusercontent.com/EconomicsObservatory/ECOvisualisations/main/guidelines/logos/eco-icon-dark.png"
+            }
+          ]
+        },
+        "mark": {
+          "type": "image",
+          "align": "right",
+          "baseline": "top",
+          "height": 40,
+          "opacity": 0.5,
+          "width": 40,
+          "xOffset": 105,
+          "yOffset": -33
+        },
+        "encoding": {
+          "x": {"value": 470},
+          "y": {"value": -10},
+          "url": {"field": "image", "type": "nominal"}
+        }
+      }
+    ]
+  }

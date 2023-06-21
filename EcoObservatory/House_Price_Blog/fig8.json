@@ -1,0 +1,390 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {
+      "style": {"cell": {"stroke": "transparent"}},
+      "locale": {
+        "number": {
+          "decimal": ".",
+          "thousands": ",",
+          "grouping": [3],
+          "currency": ["£", ""]
+        }
+      }
+    },
+    "data": {
+      "values": [
+        {"Date": "2009-10-01", "Series": "Fixed Rate", "Value": 0.49667},
+        {"Date": "2010-01-01", "Series": "Fixed Rate", "Value": 0.37393},
+        {"Date": "2010-04-01", "Series": "Fixed Rate", "Value": 0.3913},
+        {"Date": "2010-07-01", "Series": "Fixed Rate", "Value": 0.43527},
+        {"Date": "2010-10-01", "Series": "Fixed Rate", "Value": 0.4593},
+        {"Date": "2011-01-01", "Series": "Fixed Rate", "Value": 0.5123},
+        {"Date": "2011-04-01", "Series": "Fixed Rate", "Value": 0.56058},
+        {"Date": "2011-07-01", "Series": "Fixed Rate", "Value": 0.51707},
+        {"Date": "2011-10-01", "Series": "Fixed Rate", "Value": 0.53588},
+        {"Date": "2012-01-01", "Series": "Fixed Rate", "Value": 0.5507},
+        {"Date": "2012-04-01", "Series": "Fixed Rate", "Value": 0.56395},
+        {"Date": "2012-07-01", "Series": "Fixed Rate", "Value": 0.55983},
+        {"Date": "2012-10-01", "Series": "Fixed Rate", "Value": 0.6355},
+        {"Date": "2013-01-01", "Series": "Fixed Rate", "Value": 0.70689},
+        {"Date": "2013-04-01", "Series": "Fixed Rate", "Value": 0.75269},
+        {"Date": "2013-07-01", "Series": "Fixed Rate", "Value": 0.77321},
+        {"Date": "2013-10-01", "Series": "Fixed Rate", "Value": 0.80263},
+        {"Date": "2014-01-01", "Series": "Fixed Rate", "Value": 0.80989},
+        {"Date": "2014-04-01", "Series": "Fixed Rate", "Value": 0.81945},
+        {"Date": "2014-07-01", "Series": "Fixed Rate", "Value": 0.8255},
+        {"Date": "2014-10-01", "Series": "Fixed Rate", "Value": 0.82214},
+        {"Date": "2015-01-01", "Series": "Fixed Rate", "Value": 0.7761},
+        {"Date": "2015-04-01", "Series": "Fixed Rate", "Value": 0.78896},
+        {"Date": "2015-07-01", "Series": "Fixed Rate", "Value": 0.80665},
+        {"Date": "2015-10-01", "Series": "Fixed Rate", "Value": 0.84091},
+        {"Date": "2016-01-01", "Series": "Fixed Rate", "Value": 0.81427},
+        {"Date": "2016-04-01", "Series": "Fixed Rate", "Value": 0.8227},
+        {"Date": "2016-07-01", "Series": "Fixed Rate", "Value": 0.82279},
+        {"Date": "2016-10-01", "Series": "Fixed Rate", "Value": 0.8126},
+        {"Date": "2017-01-01", "Series": "Fixed Rate", "Value": 0.84715},
+        {"Date": "2017-04-01", "Series": "Fixed Rate", "Value": 0.87944},
+        {"Date": "2017-07-01", "Series": "Fixed Rate", "Value": 0.89339},
+        {"Date": "2017-10-01", "Series": "Fixed Rate", "Value": 0.9022},
+        {"Date": "2018-01-01", "Series": "Fixed Rate", "Value": 0.90557},
+        {"Date": "2018-04-01", "Series": "Fixed Rate", "Value": 0.91591},
+        {"Date": "2018-07-01", "Series": "Fixed Rate", "Value": 0.90567},
+        {"Date": "2018-10-01", "Series": "Fixed Rate", "Value": 0.91896},
+        {"Date": "2019-01-01", "Series": "Fixed Rate", "Value": 0.91839},
+        {"Date": "2019-04-01", "Series": "Fixed Rate", "Value": 0.92192},
+        {"Date": "2019-07-01", "Series": "Fixed Rate", "Value": 0.91741},
+        {"Date": "2019-10-01", "Series": "Fixed Rate", "Value": 0.92434},
+        {"Date": "2020-01-01", "Series": "Fixed Rate", "Value": 0.91909},
+        {"Date": "2020-04-01", "Series": "Fixed Rate", "Value": 0.90415},
+        {"Date": "2020-07-01", "Series": "Fixed Rate", "Value": 0.91196},
+        {"Date": "2020-10-01", "Series": "Fixed Rate", "Value": 0.9244},
+        {"Date": "2021-01-01", "Series": "Fixed Rate", "Value": 0.92437},
+        {"Date": "2021-04-01", "Series": "Fixed Rate", "Value": 0.93513},
+        {"Date": "2021-07-01", "Series": "Fixed Rate", "Value": 0.94141},
+        {"Date": "2021-10-01", "Series": "Fixed Rate", "Value": 0.94399},
+        {"Date": "2022-01-01", "Series": "Fixed Rate", "Value": 0.94349},
+        {"Date": "2022-04-01", "Series": "Fixed Rate", "Value": 0.95549},
+        {"Date": "2022-07-01", "Series": "Fixed Rate", "Value": 0.95455},
+        {"Date": "2022-10-01", "Series": "Fixed Rate", "Value": 0.94494},
+        {"Date": "2009-10-01", "Series": "Variable Rate", "Value": 0.50333},
+        {"Date": "2010-01-01", "Series": "Variable Rate", "Value": 0.62607},
+        {"Date": "2010-04-01", "Series": "Variable Rate", "Value": 0.6087},
+        {"Date": "2010-07-01", "Series": "Variable Rate", "Value": 0.56473},
+        {"Date": "2010-10-01", "Series": "Variable Rate", "Value": 0.5407},
+        {"Date": "2011-01-01", "Series": "Variable Rate", "Value": 0.4877},
+        {"Date": "2011-04-01", "Series": "Variable Rate", "Value": 0.43942},
+        {"Date": "2011-07-01", "Series": "Variable Rate", "Value": 0.48293},
+        {"Date": "2011-10-01", "Series": "Variable Rate", "Value": 0.46412},
+        {"Date": "2012-01-01", "Series": "Variable Rate", "Value": 0.4493},
+        {"Date": "2012-04-01", "Series": "Variable Rate", "Value": 0.43605},
+        {"Date": "2012-07-01", "Series": "Variable Rate", "Value": 0.44017},
+        {"Date": "2012-10-01", "Series": "Variable Rate", "Value": 0.3645},
+        {"Date": "2013-01-01", "Series": "Variable Rate", "Value": 0.29311},
+        {"Date": "2013-04-01", "Series": "Variable Rate", "Value": 0.24731},
+        {"Date": "2013-07-01", "Series": "Variable Rate", "Value": 0.22679},
+        {"Date": "2013-10-01", "Series": "Variable Rate", "Value": 0.19737},
+        {"Date": "2014-01-01", "Series": "Variable Rate", "Value": 0.19011},
+        {"Date": "2014-04-01", "Series": "Variable Rate", "Value": 0.18055},
+        {"Date": "2014-07-01", "Series": "Variable Rate", "Value": 0.1745},
+        {"Date": "2014-10-01", "Series": "Variable Rate", "Value": 0.17786},
+        {"Date": "2015-01-01", "Series": "Variable Rate", "Value": 0.2239},
+        {"Date": "2015-04-01", "Series": "Variable Rate", "Value": 0.21104},
+        {"Date": "2015-07-01", "Series": "Variable Rate", "Value": 0.19335},
+        {"Date": "2015-10-01", "Series": "Variable Rate", "Value": 0.15909},
+        {"Date": "2016-01-01", "Series": "Variable Rate", "Value": 0.18573},
+        {"Date": "2016-04-01", "Series": "Variable Rate", "Value": 0.1773},
+        {"Date": "2016-07-01", "Series": "Variable Rate", "Value": 0.17721},
+        {"Date": "2016-10-01", "Series": "Variable Rate", "Value": 0.1874},
+        {"Date": "2017-01-01", "Series": "Variable Rate", "Value": 0.15285},
+        {"Date": "2017-04-01", "Series": "Variable Rate", "Value": 0.12056},
+        {"Date": "2017-07-01", "Series": "Variable Rate", "Value": 0.10661},
+        {"Date": "2017-10-01", "Series": "Variable Rate", "Value": 0.0978},
+        {"Date": "2018-01-01", "Series": "Variable Rate", "Value": 0.09443},
+        {"Date": "2018-04-01", "Series": "Variable Rate", "Value": 0.08409},
+        {"Date": "2018-07-01", "Series": "Variable Rate", "Value": 0.09433},
+        {"Date": "2018-10-01", "Series": "Variable Rate", "Value": 0.08104},
+        {"Date": "2019-01-01", "Series": "Variable Rate", "Value": 0.08161},
+        {"Date": "2019-04-01", "Series": "Variable Rate", "Value": 0.07808},
+        {"Date": "2019-07-01", "Series": "Variable Rate", "Value": 0.08259},
+        {"Date": "2019-10-01", "Series": "Variable Rate", "Value": 0.07566},
+        {"Date": "2020-01-01", "Series": "Variable Rate", "Value": 0.08091},
+        {"Date": "2020-04-01", "Series": "Variable Rate", "Value": 0.09585},
+        {"Date": "2020-07-01", "Series": "Variable Rate", "Value": 0.08804},
+        {"Date": "2020-10-01", "Series": "Variable Rate", "Value": 0.0756},
+        {"Date": "2021-01-01", "Series": "Variable Rate", "Value": 0.07563},
+        {"Date": "2021-04-01", "Series": "Variable Rate", "Value": 0.06487},
+        {"Date": "2021-07-01", "Series": "Variable Rate", "Value": 0.05859},
+        {"Date": "2021-10-01", "Series": "Variable Rate", "Value": 0.05601},
+        {"Date": "2022-01-01", "Series": "Variable Rate", "Value": 0.05651},
+        {"Date": "2022-04-01", "Series": "Variable Rate", "Value": 0.04451},
+        {"Date": "2022-07-01", "Series": "Variable Rate", "Value": 0.04545},
+        {"Date": "2022-10-01", "Series": "Variable Rate", "Value": 0.05506}
+      ]
+    },
+    "width": 550,
+    "height": 300,
+    "layer": [
+      {
+        "layer": [
+          {
+            "mark": {"type": "line"},
+            "encoding": {
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "axis": {
+                  "format": " %Y",
+                  "grid": false,
+                  "domainColor": "#919ae4",
+                  "domainOpacity": 0.5,
+                  "labelAngle": 0,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "orient": "bottom",
+                  "tickColor": "#676A86",
+                  "tickCount": 10,
+                  "tickOpacity": 0.5,
+                  "title": "",
+                  "titleAlign": "center",
+                  "titleAnchor": "middle",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 207,
+                  "titleY": -15
+                }
+              },
+              "y": {
+                "field": "Value",
+                "type": "quantitative",
+                "scale": {"domainMin": 0, "domainMax": 1},
+                "axis": {
+                  "domainColor": "#676A86",
+                  "domainOpacity": 0.5,
+                  "format": ".0%",
+                  "gridColor": "#676A86",
+                  "gridDash": [1, 5],
+                  "gridOpacity": 0.5,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "labelPadding": 5,
+                  "tickColor": "#676A86",
+                  "tickCount": 8,
+                  "tickOpacity": 0.5,
+                  "ticks": false,
+                  "title": "Proportion of Residential Lending to Individuals, by Type, 2009-23 ",
+                  "titleAlign": "left",
+                  "titleAngle": 0,
+                  "titleBaseline": "bottom",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 0,
+                  "titleY": -18
+                }
+              },
+              "color": {
+                "field": "Series",
+                "scale": {
+                  "range": [
+                    "rgb(224,52,82)",
+                    "rgb(110,177,222)",
+                    "rgb(74,164,108)",
+                    "rgb(236,177,95)"
+                  ]
+                },
+                "legend": false
+              }
+            }
+          },
+          {
+            "mark": {"type": "text", "align": "left", "dx": 35, "dy": -6},
+            "encoding": {
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "axis": {
+                  "format": " %Y",
+                  "grid": false,
+                  "domainColor": "#919ae4",
+                  "domainOpacity": 0.5,
+                  "labelAngle": 0,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "orient": "bottom",
+                  "tickColor": "#676A86",
+                  "tickCount": 10,
+                  "tickOpacity": 0.5,
+                  "title": "",
+                  "titleAlign": "center",
+                  "titleAnchor": "middle",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 207,
+                  "titleY": -15
+                },
+                "datum": 1640995200000
+              },
+              "y": {
+                "field": "Value",
+                "type": "quantitative",
+                "scale": {"domainMin": 0, "domainMax": 1},
+                "axis": {
+                  "domainColor": "#676A86",
+                  "domainOpacity": 0.5,
+                  "format": ".0%",
+                  "gridColor": "#676A86",
+                  "gridDash": [1, 5],
+                  "gridOpacity": 0.5,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "labelPadding": 5,
+                  "tickColor": "#676A86",
+                  "tickCount": 8,
+                  "tickOpacity": 0.5,
+                  "ticks": false,
+                  "title": "Proportion of Residential Lending to Individuals, by Type, 2009-23 ",
+                  "titleAlign": "left",
+                  "titleAngle": 0,
+                  "titleBaseline": "bottom",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 0,
+                  "titleY": -18
+                }
+              },
+              "color": {
+                "field": "Series",
+                "scale": {
+                  "range": [
+                    "rgb(224,52,82)",
+                    "rgb(110,177,222)",
+                    "rgb(74,164,108)",
+                    "rgb(236,177,95)"
+                  ]
+                },
+                "legend": false
+              },
+              "text": {"field": "Series"}
+            },
+            "transform": [{"filter": "datum.Date == 1640995200000"}]
+          },
+          {
+            "mark": {"type": "text", "align": "left", "dx": 35, "dy": 5},
+            "encoding": {
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "axis": {
+                  "format": " %Y",
+                  "grid": false,
+                  "domainColor": "#919ae4",
+                  "domainOpacity": 0.5,
+                  "labelAngle": 0,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "orient": "bottom",
+                  "tickColor": "#676A86",
+                  "tickCount": 10,
+                  "tickOpacity": 0.5,
+                  "title": "",
+                  "titleAlign": "center",
+                  "titleAnchor": "middle",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 207,
+                  "titleY": -15
+                },
+                "datum": 1640995200000
+              },
+              "y": {
+                "field": "Value",
+                "type": "quantitative",
+                "scale": {"domainMin": 0, "domainMax": 1},
+                "axis": {
+                  "domainColor": "#676A86",
+                  "domainOpacity": 0.5,
+                  "format": ".0%",
+                  "gridColor": "#676A86",
+                  "gridDash": [1, 5],
+                  "gridOpacity": 0.5,
+                  "labelColor": "#676A86",
+                  "labelOpacity": 0.7,
+                  "labelPadding": 5,
+                  "tickColor": "#676A86",
+                  "tickCount": 8,
+                  "tickOpacity": 0.5,
+                  "ticks": false,
+                  "title": "Proportion of Residential Lending to Individuals, by Type, 2009-23 ",
+                  "titleAlign": "left",
+                  "titleAngle": 0,
+                  "titleBaseline": "bottom",
+                  "titleColor": "#676A86",
+                  "titleFontSize": 12,
+                  "titleOpacity": 0.8,
+                  "titleX": 0,
+                  "titleY": -18
+                }
+              },
+              "color": {
+                "field": "Series",
+                "scale": {
+                  "range": [
+                    "rgb(224,52,82)",
+                    "rgb(110,177,222)",
+                    "rgb(74,164,108)",
+                    "rgb(236,177,95)"
+                  ]
+                },
+                "legend": false
+              },
+              "text": {"value": "Mortgages"}
+            },
+            "transform": [{"filter": "datum.Date == 1640995200000"}]
+          }
+        ]
+      },
+      {
+        "mark": {
+          "type": "text",
+          "fontWeight": "lighter",
+          "align": "left",
+          "color": "#676A86",
+          "fontSize": 11
+        },
+        "data": {"values": [{"Value": 0}]},
+        "encoding": {
+          "x": {"value": 1},
+          "y": {"value": -10},
+          "text": {"value": "Source: Financial Conduct Authority (FCA)"}
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "image": "https://raw.githubusercontent.com/EconomicsObservatory/ECOvisualisations/main/guidelines/logos/eco-icon-dark.png"
+            }
+          ]
+        },
+        "mark": {
+          "type": "image",
+          "align": "right",
+          "baseline": "top",
+          "height": 40,
+          "opacity": 0.5,
+          "width": 40,
+          "xOffset": 105,
+          "yOffset": -33
+        },
+        "encoding": {
+          "x": {"value": 505},
+          "y": {"value": -10},
+          "url": {"field": "image", "type": "nominal"}
+        }
+      }
+    ]
+  }
