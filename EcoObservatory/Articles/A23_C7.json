@@ -1,0 +1,148 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Articles/A23_C7.csv"
+    },
+  
+    "config": {
+      "view": {"stroke": "transparent"},
+      "text": {"fontWeight": "bold", "color": "#404040"}
+    },
+  
+    "width": 400,
+    "height": 300,
+    "transform": [
+      {"window": [{"op": "sum", "field": "Contribution", "as": "sum"}]},
+      {
+        "calculate": "round(datum.sum * 100) /100",
+        "as": "sum"
+      },
+      {"window": [{"op": "lead", "field": "Factor", "as": "lead"}]},
+      {
+        "calculate": "datum.lead === null ? datum.Factor : datum.lead",
+        "as": "lead"
+      },
+      {
+        "calculate": "datum.Factor === 'Total' ? 0 : datum.sum - datum.Contribution",
+        "as": "previous_sum"
+      },
+      {
+        "calculate": "datum.Factor === 'Total' ? datum.sum : datum.Contribution",
+        "as": "Contribution"
+      },
+      {
+        "calculate": "(datum.Factor !== 'Total' && datum.Contribution > 0 ? '+' : '') + datum.Contribution",
+        "as": "text_Contribution"
+      },
+      {"calculate": "(datum.sum + datum.previous_sum) / 2", "as": "center"},
+      {
+        "calculate": "datum.sum < datum.previous_sum ? datum.sum : ''",
+        "as": "sum_dec"
+      },
+      {
+        "calculate": "datum.sum > datum.previous_sum ? datum.sum : ''",
+        "as": "sum_inc"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Factor",
+        "type": "ordinal",
+        "sort": null,
+        "axis": {
+          "title": null,
+          "labelAngle": -35,
+          "labelOffset": 8,
+          "tickOpacity": 0.6
+        }
+      }
+    },
+    "layer": [
+      {
+        "mark": {"type": "line", "color": "#676A86", "size":1, "strokeDash": [4,1]},
+        "encoding": {
+          "y": {
+            "type": "quantitative",
+            "field": "y"
+          }
+        },
+        "transform": [{"calculate": "0", "as": "y"}]
+      },
+      {
+        "mark": {"type": "bar", "size": 32},
+        "encoding": {
+          "y": {
+            "field": "previous_sum",
+            "type": "quantitative",
+            "title": "Contribution",
+            "axis": {
+              "gridOpacity": 0.6,
+              "labelFontSize": 12,
+              "ticks": false,
+              "labelPadding": 5
+            }
+          },
+          "y2": {"field": "sum"},
+          "color": {
+            "condition": [
+              {
+                "test": "datum.Factor === 'Total'",
+                "value": "lightgrey"
+              },
+              {"test": "datum.sum < datum.previous_sum", "value": "#e6224b"}
+            ],
+            "value": "#36b7b4"
+          },
+          "tooltip": [
+            {"field": "Factor"},
+            {"field": "Contribution"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "rule",
+          "color": "#404040",
+          "opacity": 1,
+          "strokeWidth": 2,
+          "xOffset": -16,
+          "x2Offset": 16
+        },
+        "encoding": {
+          "x2": {"field": "lead"},
+          "y": {"field": "sum", "type": "quantitative"}
+        }
+      },
+      {
+        "mark": {"type": "text", "dy": -4, "baseline": "bottom"},
+        "encoding": {
+          "y": {"field": "sum_inc", "type": "quantitative"},
+          "text": {"field": "sum_inc", "type": "nominal"}
+        }
+      },
+      {
+        "mark": {"type": "text", "dy": 4, "baseline": "top"},
+        "encoding": {
+          "y": {"field": "sum_dec", "type": "quantitative"},
+          "text": {"field": "sum_dec", "type": "nominal"}
+        }
+      },
+      {
+        "mark": {"type": "text", "fontWeight": "bold", "baseline": "middle"},
+        "encoding": {
+          "y": {"field": "center", "type": "quantitative"},
+          "text": {"field": "text_Contribution", "type": "nominal"},
+          "color": {
+            "condition": [
+              {
+                "test": "datum.Factor === 'Total'",
+                "value": "#725a30"
+              }
+            ],
+            "value": "white"
+          }
+        }
+      }
+    ]
+  }
+  
