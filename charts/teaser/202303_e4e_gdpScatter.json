@@ -1,0 +1,80 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Patents vs GDP. Equivalent applications by origin (per 1m inhabitants). GDP: per capita PPP (international $), source: World Bank. WIPO data, filtered to countries with over 5 million inhabitants and over 100 patent applications, * countries may have incomplete data due to local patent offices not reporting resident applications, 2020 data",
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/growth-patents_equivalent_applications_2021.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type": "circle", "opacity": 0.8},
+    "height": "container",
+    "width": "container",
+    "view": {"stroke": "aliceblue"},
+    "encoding": {
+      "x": {
+        "field": "GDP per capita",
+        "type": "quantitative",
+        "scale": {"type": "log", "domain": [2000, 120000]},
+        "axis": {
+          "values": [1000, 2000, 5000, 10000, 20000, 40000, 100000],
+          "format": "$,",
+          "gridOpacity": 0.3,
+          "title": "GDP",
+          "titleAngle": 0,
+          "titleAnchor": "end",
+          "titleAlign": "right",
+          "titleY": -15,
+          "titleColor": "#676A86",
+          "titleOpacity": 0.8
+        }
+      },
+      "y": {
+        "field": "Application Rate",
+        "type": "quantitative",
+        "scale": {"type": "log"},
+        "axis": {
+          "grid": false,
+          "tickCount": 10,
+          "title": "Patent applications rate",
+          "titleAngle": 0,
+          "titleAnchor": "end",
+          "titleAlign": "left",
+          "titleX": 3,
+          "titleY": 12,
+          "titleColor": "#676A86",
+          "titleOpacity": 0.8
+        }
+      },
+      "color": {
+        "field": "Continent",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "legend": {
+          "orient": "top",
+          "labelAlign": "left",
+          "labelOffset": 2,
+          "offset": 5,
+          "symbolSize": 80,
+          "columnPadding": 5
+        },
+        "title": null
+      },
+      "size": {
+        "field": "Population",
+        "type": "quantitative",
+        "scale": {"range": [12, 600]},
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "Country"},
+        {
+          "field": "Application Rate",
+          "type": "quantitative",
+          "format": ".3",
+          "title": "Applications per 1m inhabitants"
+        },
+        {"field": "Population", "format": ",d"},
+        {"field": "GDP per capita", "title": "GDP per capita", "format": "$,d"}
+      ]
+    }
+  }

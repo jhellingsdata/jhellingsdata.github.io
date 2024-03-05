@@ -1,31 +1,62 @@
-.grid-container {
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 80px 80px 80px 80px;
-    justify-content: space-between;
-    align-content: center;
-}
-
-.grid-container > div {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-}
-
-.landing-page{
-    font-family: sans-serif;
-    font-weight: 200;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-
 body {
-    background: #212121;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fef7f4;
 }
 
-.landing-page p {
-    line-height: 18px;
-    font-size: 20px;
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Adjust the space between cards */
+    padding: 20px; /* Padding around the container */
+}
+
+.card {
+    background-color: #F6EFEC;
+    width: 300px;;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.1s ease-in-out;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    width: 90%; /* Adjust based on preference */
+    text-align: left;
+    margin: 10px 0;
+}
+
+.card-chart {
+    width: 100%; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.card-date {
+    width: 90%; /* Adjust based on preference */
+    text-align: left;
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.card-text {
+    width: 90%; /* Adjust based on preference */
+    text-align: left;
+    margin: 10px 0;
 }

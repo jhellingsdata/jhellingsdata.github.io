@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Portfolio/data/advPlotting.JSON"
+  },
+
+  "width": "container",
+  "height": "container",
+
+  "config": {
+    "axis": {
+      "title": null
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "salmon"
+      },
+      "encoding": {
+        "x": {
+          "field": "PAXGdayRtn",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "BTCdayRtn",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "seagreen"
+      },
+      "transform": [
+        {
+          "regression": "BTCdayRtn",
+          "on": "PAXGdayRtn"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "PAXGdayRtn",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "BTCdayRtn",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "BTCdayRtn",
+          "on": "PAXGdayRtn",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+  ]
+}
