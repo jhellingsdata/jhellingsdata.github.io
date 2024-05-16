@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Housing Construction in England. New builds in England by region with selector to filter for each. Sourced from Gov.uk and put together by Department for Levelling Up Housing and Communities",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Housing/regions_housingSupply.csv",
+    "format": {"type": "csv"}
+  },
+  "height": "container",
+  "width": "container",
+  "config": {"view": {"stroke": "transparent"}},
+  "mark": {"type": "bar", "width": 10},
+
+  "transform": [
+    {"timeUnit": "yearmonthdate", "field": "Date", "as": "date"},
+    {"timeUnit": "yearquarter", "field": "Date", "as": "quarter"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "timeUnit": "year",
+      "axis": {
+        "title": null
+      }
+    },
+    "y": {
+      "field": "Completed",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [0, 220000]},
+      "axis": {
+        "grid": true,
+        "gridOpacity": 0.6,
+        "ticks": false,
+        "labelPadding": 5,
+        "title": "New builds, by region",
+        "titleAngle": 0,
+        "titleAnchor": "end",
+        "titleAlign": "left",
+        "titleX": 0,
+        "titleY": -5,
+        "titleColor": "#676A86",
+        "titleOpacity": 0.8
+      }
+    },
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "legend": null,
+      "scale": {"scheme": "magma"}
+    },
+    "tooltip": [
+      {
+        "field": "Date",
+        "type": "temporal",
+        "timeUnit": "yearquarter",
+        "title": "Period"
+      },
+      {"field": "Region", "type": "nominal", "title": "Region"},
+      {
+        "field": "Completed",
+        "type": "quantitative",
+        "title": "Completed in region"
+      }
+    ]
+  }
+}

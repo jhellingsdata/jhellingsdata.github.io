@@ -1,0 +1,109 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Key interest rates in the UK. Bank of England data downloaded and saved to github. UMTLMV - revert-to-rate mortage. IUMCCTL - representative credit card lending to households rate. IUMBEDR - official BoE policy rate.",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/EcoObservatory/Monetary%20Policy/Data/UK_rates.csv"
+  },
+  "config": {
+    "locale": {
+      "number": {
+        "decimal": ".",
+        "thousands": ",",
+        "grouping": [3],
+        "currency": ["", " %"]
+      }
+    },
+    "view": {"stroke": "transparent"}
+  },
+  "transform": [
+    {"fold": ["Bank", "Mortgage", "Credit Card"], "as": ["Type", "value"]},
+    {"calculate": "year(datum.Date)", "as": "year"},
+    {"filter": "datum.year>= 2000"}
+  ],
+
+  "height": "container",
+  "width": "container",
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 2, "point": "transparent"},
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "title": null,
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "grid": true,
+            "gridOpacity": 0.6,
+            "ticks": false,
+            "labelPadding": 5,
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "color": {"field": "Type", "legend": null, "scale": {"scheme": "set2"}},
+        "tooltip": [
+          {"field": "Type"},
+          {"field": "Date", "timeUnit": "yearmonth", "title": "Date"},
+          {"field": "value", "title": "Rate", "format": "$.3"}
+        ]
+      }     
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5
+      },
+      "transform": [
+        {"calculate": "toString(year(datum.Date)) + toString(month(datum.Date))", "as": "year_month"},
+        {"filter": "datum.year_month == '20221'"}
+      ],
+      "encoding": {
+        "text": {
+          "field": "Type"
+        },
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 40,
+        "opacity": 1,
+        "filled": true
+      },
+      "transform": [
+        {"calculate": "toString(year(datum.Date)) + toString(month(datum.Date))", "as": "year_month"},
+        {"filter": "datum.year_month == '20221'"}
+      ],
+      "encoding": {
+
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Type",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

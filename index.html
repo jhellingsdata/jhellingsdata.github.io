@@ -1,35 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/preload.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
     <script src="jquery-3.6.0.js"></script>
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
 </head>
 
 <body>
 
-    <div class="grid-container">
-        <div class="landing-page">
-            <div><p><a href="maps.html">Maps</a></p></div>
-            <div><p><a href="eco.html">ECO Observatory</a></p></div>
-            <div><p><a href="Portfolio.html">Portfolio</a></p></div>
-            <div><p><a href="Project.html">Project</a></p></div>
-            <div><p><a href="https://github.com/jhellingsdata/jhellingsdata.github.io">Github</a></p></div>
+    <div class="cards-container">
+        <div class="card">
+            <span class="card-date">March 2023</span>
+            <!-- <div class="card-chart" id="chart1"></div> -->
+            <div class="card-content" onclick="location.href='Project.html';">
+                <h3 class="card-title">Project Title</h3>
+                <p class="card-text">This is a short summary of the project. Click to learn more.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="location.href='e4e2_growth.html';">
+            <h3 class="card-title">Economics for Everyone</h3>
+            <div class="card-chart" id="chart5"></div>
+            <span class="card-date">March 2023</span>
+            <p class="card-text">Selection of charts produced for a new macroeconomics course at the <a
+                    href="https://econ4everyone.uchicago.edu/macro-syllabus/">University of
+                    Chicago</a>.</p>
+        </div>
+
+        <div class="card" onclick="location.href='housing.html';">
+            <h3 class="card-title">Housing</h3>
+            <div class="card-chart" id="chart4"></div>
+            <span class="card-date">April 2022</span>
+            <p class="card-text">Selection of charts on house building in the UK. Produced for the <a
+                    href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
+        </div>
+
+        <div class="card" onclick="location.href='monetary_policy.html';">
+            <h3 class="card-title">Monetary Policy</h3>
+            <div class="card-chart" id="chart3"></div>
+            <span class="card-date">April 2022</span>
+            <p class="card-text">Selection of charts focusing on key economic indicators related to Unit 10 of the Core
+                Econ textbook: Banks, Money and the Credit Market. Produced for the <a
+                    href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
+        </div>
+
+        <div class="card" onclick="location.href='Project.html';">
+            <h3 class="card-title">Data Science: Project</h3>
+            <div class="card-chart" id="chart2"></div>
+            <span class="card-date">January 2022</span>
+            <p class="card-text"><span class="leader">Renewables and the potential for solar.</span>The page holds a
+                collection of charts produced for the Data Science course final project.
+            </p>
+        </div>
+
+        <div class="card" onclick="location.href='Portfolio.html';">
+            <h3 class="card-title">Data Science: Portfolio</h3>
+            <div class="card-chart" id="chart1"></div>
+            <span class="card-date">December 2021</span>
+            <p class="card-text">A collection of charts produced throughout the Data Science unit, part of the
+                University of Bristol Economics course. Each chart
+                demonstrates different data science and visualisation techniques.</p>
         </div>
     </div>
+
+    <!-- <div class="grid-container">
+        <div class="landing-page">
+            <div>
+                <p><a href="maps.html">Maps</a></p>
+            </div>
+            <div>
+                <p><a href="eco.html">ECO Observatory</a></p>
+            </div>
+            <div>
+                <p><a href="Portfolio.html">Portfolio</a></p>
+            </div>
+            <div>
+                <p><a href="Project.html">Project</a></p>
+            </div>
+            <div>
+                <p><a href="https://github.com/jhellingsdata/jhellingsdata.github.io">Github</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="" alt="">
+            <div class="container">
+                <h4><b>Data Science Project</b></h4>
+                <p>A collection of charts produced for the Data Science course final project.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="" alt="">
+            <div class="container">
+                <h4><b>Data Science Portfolio</b></h4>
+                <p>A collection of charts produced throughout the Data Science course.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="" alt="">
+            <div class="container">
+                <h4><b>Data Science Project</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+    </div> -->
+
 
 
 
     <script>
-        $(window).on("load",function(){
-          $(".loader-wrapper").fadeOut("slow");
-        });
+        // Set the charts that we want on the page as variables linked to JSON files:
+        var myChart1 = "charts/teaser/202112_DS_portfolio_advPlotting.json";
+        var myChart2 = "charts/teaser/202201_DS_project_map.json";
+        var myChart3 = "charts/teaser/202204_ECO_bankRate.json";
+        var myChart4 = "charts/teaser/202204_ECO_newHousing.json";
+        var myChart5 = "charts/teaser/202303_e4e_gdpScatter.json";
+
+        // Embed the charts in the divs above
+        vegaEmbed('#chart1', myChart1, { "actions": false });
+        vegaEmbed('#chart2', myChart2, { "actions": false });
+        vegaEmbed('#chart3', myChart3, { "actions": false });
+        vegaEmbed('#chart4', myChart4, { "actions": false });
+        vegaEmbed('#chart5', myChart5, { "actions": false });
     </script>
 
 </body>
