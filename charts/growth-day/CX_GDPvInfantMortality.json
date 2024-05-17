@@ -1,0 +1,104 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "",
+    "title": {
+      "text": "GDP and Infant Mortality",
+      "subtitle": [
+        "Infant mortality: per 1,000 live births. Source: UN Population prospects 2022",
+        "GDP: per capita PPP (international $). Source: World Bank",
+        ""
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "anchor": "start",
+      "color": "black",
+      "fontSize": 16
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/e4e/ch1_GDP/data/chart1_1-3_GDP_multi.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {
+      "type": "point",
+      "filled": true,
+      "opacity": 0.8,
+      "shape": "M0.866,0.5L0,1L-0.866,0.5L-0.866,-0.5L0,-1L0.866,-0.5Z"
+    },
+  
+    "height": 300,
+    "width": 500,
+    "view":{"stroke":"aliceblue"},
+  
+     "transform": [
+      {
+        "filter": {
+          "field": "ISO3",
+          "oneOf": ["CHN", "IND", "USA", "IDN", "PAK", "BRA", "NGA", "BGD", "RUS", "MEX", "JPN", "ETH", "PHL", "EGY", "VNM", "COD", "TUR", "IRN", "DEU", "THA", "GBR"]
+        }
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "GDP per capita (PPP)",
+        "type": "quantitative",
+        "title": "GDP (log scale)",
+        "scale": {"type": "log", "domain": [1000, 140000]},
+        "axis": {
+          "values": [1000, 2000, 5000, 10000, 20000, 40000, 100000],
+          "format": "$,",
+          "gridOpacity": 0.3,
+          "ticks": false,
+          "labelFontSize": 11,
+          "labelPadding": 5,
+          "titleFontWeight": "bold",
+          "titlePadding": 6
+        }
+      },
+      "y": {
+        "field": "Infant Mortality",
+        "type": "quantitative",
+        "title": "Infant Mortality",
+        "scale": {"domain": [0, 78]},
+        "axis": {
+          "values": [0, 10, 20, 30, 40, 50, 60, 70],
+          "gridOpacity": 0.3,
+          "ticks": false,
+          "labelFontSize": 11,
+          "labelPadding": 5,
+          "titleFontWeight": "bold",
+          "titlePadding": 6
+        }
+      },
+      "color": {
+        "field": "Continent",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "legend": {
+          "orient": "top",
+          "direction": "horizontal",
+          "legendX": -40,
+          "legendY": -25,
+          "title": null,
+          "offset": 10,
+          "labelFontSize": 11
+        },
+        "title": null
+      },
+      "size": {
+        "field": "Population",
+        "type": "quantitative",
+        "scale": {"range": [10, 900]},
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "Country"},
+        {"field": "Population", "format": ",d"},
+        {
+          "field": "GDP per capita (PPP)",
+          "title": "GDP per capita",
+          "format": "$,d"
+        },
+        {"field": "Infant Mortality", "format": ".1f"}
+      ]
+    }
+  }

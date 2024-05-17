@@ -1,0 +1,178 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.18.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/LAD_Debt/LADs_2023.geojson",
+      "format": {"type": "json", "property": "features"}
+    },
+    "config": {"view": {"strokeOpacity": 0}},
+    "title": {
+      "text": "Local Authority Finances",
+      "subtitleFontWeight": "normal",
+      "fontSize": 16,
+      "subtitleFontSize": 12,
+      "dx": 50,
+      "subtitle": ["Left shows Assets & Borrowing; right shows 10-year population growth.", "Excludes City of London & Shetland Islands.", ""]
+    },
+    "transform": [
+      {
+        "lookup": "properties.LAD23CD",
+  
+        "from": {
+          "fields": ["ONS code", "Assets", "Borrowing", "DebtToAssets", "Name", "PopulationChange", "Population", "YouthPopulation"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/LAD_Debt/cleanedFinanceData_2023_lads.csv"
+          },
+          "key": "ONS code"
+        }
+      },
+      {
+        "filter": "datum.properties.LAD23NM != 'Shetland Islands' && datum.Assets > -1"
+      }
+    ],
+    "hconcat": [
+      {
+        "width": 250,
+        "height": 400,
+        "encoding": {
+          "x": {
+            "field": "Borrowing",
+            "axis": {
+              "titleFontWeight": "normal",
+              "gridOpacity": 0.3,
+              "tickOpacity": 0,
+              "labelFontWeight": "lighter",
+              "labelExpr": "'£'+format(datum.value/1000000, '.1f')+'B'"
+            },
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "Assets",
+            "axis": {
+              "titleFontWeight": "normal",
+              "gridOpacity": 0.3,
+              "tickOpacity": 0,
+              "labelFontWeight": "lighter",
+              "labelExpr": "'£'+format(datum.value/1000000, ',.1f')+'B'"
+            },
+            "scale": {
+              "domain": [0, 1000000]
+            },
+            "type": "quantitative"
+          }
+        },
+        "layer": [
+          {
+            "params": [
+              {
+                "name": "point_paintbrush",
+                "select": {
+                  "type": "point",
+                  "fields": ["Name"],
+                  "on": "pointerover"
+                }
+              },
+              {"name": "grid", "select": "interval", "bind": "scales"}
+            ],
+            "encoding": {
+              "color": {"field": "PopulationChange", "type": "quantitative"},
+              "opacity": {
+                "condition": [
+                  {
+                    "test": "datum.Name == point_paintbrush.Name | !isValid(point_paintbrush.Name)",
+                    "value": 1
+                  }
+                ],
+                "value": 0.2
+              }
+            },
+            "mark": {
+              "type": "circle",
+              "stroke": "rgba(0,0,0,0.8)",
+              "strokeWidth": 0.5,
+              "tooltip": {
+                "expr": "{'Authority': datum.properties.LAD23NM, 'Debt': '£'+format(datum.Borrowing*1000, ',.4r'), 'Assets': '£'+format(datum.Assets*1000, ',.4r'), 'Ratio': format(datum.DebtToAssets, ',.3r'), 'Pop. Growth (10yr)': format(datum['PopulationChange'], '.1%')}"
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "text",
+              "opacity": 1,
+              "color": "black",
+              "fontWeight": "lighter",
+              "align": "left",
+              "dx": 5
+            },
+            "transform": [{"filter": "datum.Name == point_paintbrush.Name"}],
+            "encoding": {
+              "text": {"field": "Name"},
+              "opacity": {"value": 1},
+              "color": {"value": "black"}
+            }
+          }
+        ]
+      },
+      {
+        "height": 400,
+        "width": 350,
+        "projection": {"type": "identity", "reflectY": true},
+        "layer": [
+          {
+            "params": [
+              {
+                "name": "point_paintbrush",
+                "select": {
+                  "type": "point",
+                  "fields": ["Name"],
+                  "on": "pointerover"
+                }
+              }
+            ],
+            "mark": {
+              "type": "geoshape",
+              "tooltip": {
+                "expr": "{'Authority': datum.properties.LAD23NM, 'Debt': '£'+format(datum.Borrowing*1000, ',.4r'), 'Assets': '£'+format(datum.Assets*1000, ',.4r'), 'Ratio': format(datum.DebtToAssets, ',.3r'), 'Pop. Growth (10yr)': format(datum['PopulationChange'], '.1%')}"
+              },
+              "color": "red",
+              "stroke": "grey"
+            },
+            "encoding": {
+              "strokeWidth": {
+                "condition": [
+                  {"test": "datum.Name == point_paintbrush.Name", "value": 1}
+                ],
+                "value": 0
+              },
+              "opacity": {
+                "condition": [
+                  {
+                    "test": "datum.Name == point_paintbrush.Name | !isValid(point_paintbrush.Name)",
+                    "value": 1
+                  }
+                ],
+                "value": 0.2
+              },
+              "color": {
+                "field": "PopulationChange",
+                "legend": {
+                  "titleFontWeight": "lighter",
+                  "orient": "none",
+                  "legendX": 270,
+                  "legendY": -5,
+                  "title": "Growth",
+                  "format": "%"
+                },
+                "scale": {
+                  "domain": [-0.1, 0.25],
+                  "domainMid": 0,
+                  "type": "linear",
+                  "scheme": "redyellowgreen"
+                },
+                "type": "quantitative"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
