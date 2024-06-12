@@ -1,0 +1,489 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-1ac7f5f9b61e8698a0d810d172022054"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(107,188,162)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "format": "$,d"
+          },
+          "field": "PPP",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Minimum Wages",
+        "subtitle": [
+          "Statutory gross monthly minimum wages, PPP 2017 $, 2022-23"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: International Labour Organization"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-1ac7f5f9b61e8698a0d810d172022054"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.PPP < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.PPP < 0 ? -2 : 4"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "DEU",
+                "BGD"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "PPP",
+          "format": "$,d",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "format": "$,d"
+          },
+          "field": "PPP",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Minimum Wages",
+        "subtitle": [
+          "Statutory gross monthly minimum wages, PPP 2017 $, 2022-23"
+        ]
+      }
+    },
+    {
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "dimgrey",
+            "opacity": 0.7
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 210
+            },
+            "y2": {
+              "value": 290
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-up"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-down"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 290
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "color": "dimgrey",
+            "dx": 4,
+            "dy": -8,
+            "lineBreak": "\n",
+            "opacity": 0.6
+          },
+          "encoding": {
+            "text": {
+              "value": "Missing or no \nminimum"
+            },
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 250.0
+            }
+          }
+        }
+      ],
+      "data": {
+        "name": "data-c3602a7fc25ec29a58c596ee59b4cf75"
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-1ac7f5f9b61e8698a0d810d172022054": [
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Year": "2022",
+        "Type": "Singular national minimum wage ",
+        "PPP": 45.32,
+        "US": 16.35
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Year": "2022",
+        "Type": "National floor ",
+        "PPP": 473.33,
+        "US": 234.7
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Year": "2022",
+        "Type": "Regional ",
+        "PPP": 501.65,
+        "US": 286.47
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Year": "2021",
+        "Type": "Singular national minimum wage ",
+        "PPP": null,
+        "US": 92.47
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Year": "2022",
+        "Type": "Singular national minimum wage ",
+        "PPP": 668.66,
+        "US": 156.57
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Year": "2023",
+        "Type": "One national minimum wage",
+        "PPP": 2362.74,
+        "US": null
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Year": "2022",
+        "Type": "National floor ",
+        "PPP": 220.09,
+        "US": 58.88
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Year": "2022",
+        "Type": "Regional ",
+        "PPP": 548.1,
+        "US": 180.46
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Year": "2021",
+        "Type": "Singular national minimum wage ",
+        "PPP": 680.86,
+        "US": 632.26
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Year": "2022",
+        "Type": "Regional ",
+        "PPP": 1508.87,
+        "US": 1266.74
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Year": "2022",
+        "Type": "Singular national minimum wage ",
+        "PPP": 162.56,
+        "US": 70.43
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Year": "2022",
+        "Type": "Occupational (unskilled workers) ",
+        "PPP": 536.35,
+        "US": 122.03
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Year": "2022",
+        "Type": "Regional (lowest provincial rate in non-agriculture) ",
+        "PPP": 408.67,
+        "US": 147.95
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Year": "2022",
+        "Type": "National floor ",
+        "PPP": 533.81,
+        "US": 223.1
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Year": "2022",
+        "Type": "National floor when available",
+        "PPP": 1986.8,
+        "US": 1940.41
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Year": null,
+        "Type": null,
+        "PPP": null,
+        "US": null
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Year": null,
+        "Type": null,
+        "PPP": null,
+        "US": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Year": null,
+        "Type": null,
+        "PPP": null,
+        "US": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Year": null,
+        "Type": null,
+        "PPP": null,
+        "US": null
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Year": null,
+        "Type": null,
+        "PPP": null,
+        "US": null
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Year": null,
+        "Type": null,
+        "PPP": null,
+        "US": null
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-c3602a7fc25ec29a58c596ee59b4cf75": [
+      {
+        "x": 50
+      }
+    ]
+  }
+}

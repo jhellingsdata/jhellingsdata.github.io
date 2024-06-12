@@ -1,0 +1,370 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "area": {
+      "opacity": 0.3
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "dx": 24,
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 0
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-f0c41abb0c4a4f19085716e02e6e8e5a"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(126,179,215)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "$,d"
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "GDP per capita",
+        "anchor": "start",
+        "dx": 0,
+        "fontSize": 14,
+        "frame": "group",
+        "offset": 6,
+        "subtitle": [
+          "PPP (current international $), 2022"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: World Bank"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-f0c41abb0c4a4f19085716e02e6e8e5a"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 2
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "USA",
+                "COD"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Value",
+          "format": "$,.3s",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "$,d"
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "GDP per capita",
+        "anchor": "start",
+        "dx": 0,
+        "fontSize": 14,
+        "frame": "group",
+        "offset": 6,
+        "subtitle": [
+          "PPP (current international $), 2022"
+        ]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-f0c41abb0c4a4f19085716e02e6e8e5a": [
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2022",
+        "Value": 8400.3828483398
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2022",
+        "Value": 21482.5621847397
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2022",
+        "Value": 76329.5822652032
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2022",
+        "Value": 14657.7823368915
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2022",
+        "Value": 6351.00252324571
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2022",
+        "Value": 5862.23507005742
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2022",
+        "Value": 17827.6410509892
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2022",
+        "Value": 7397.54573714685
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2022",
+        "Value": 34637.76171875
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2022",
+        "Value": 23900.3799175672
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2022",
+        "Value": 2812.51313440852
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2022",
+        "Value": 46850.0843861909
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2022",
+        "Value": 10136.5527084588
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2022",
+        "Value": 15095.9900534616
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2022",
+        "Value": 1337.83414851626
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2022",
+        "Value": 13461.0089701732
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2022",
+        "Value": 18261.8484604897
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2022",
+        "Value": 38355.1539672096
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2022",
+        "Value": 66616.022245056
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2022",
+        "Value": 20679.1194757004
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2022",
+        "Value": 57460.5057520708
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ]
+  }
+}

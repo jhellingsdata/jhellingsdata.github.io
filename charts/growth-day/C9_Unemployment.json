@@ -1,0 +1,429 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-76bb82dfc87071ca42a11e599b6d6600"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(107,188,162)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "%"
+          },
+          "field": "Total",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Unemployment",
+        "subtitle": [
+          "% of labour force, bands indicate gap between female and male rates, 2023"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: International Labour Organization, via World Bank"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-76bb82dfc87071ca42a11e599b6d6600"
+      },
+      "mark": {
+        "type": "line",
+        "color": {
+          "expr": "datum.Female - datum.Male > 0 ? \"#e6224b\" : \"#122b39\""
+        }
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "%"
+          },
+          "field": "Female",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "Male"
+        },
+        "y": {
+          "field": "Country",
+          "sort": {
+            "field": "Total",
+            "order": "descending"
+          },
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-007b6604d250f56a600315c3a5cf9dd4"
+      },
+      "mark": {
+        "type": "text",
+        "lineBreak": "\n",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 324
+        },
+        "y": {
+          "value": 30
+        }
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-76bb82dfc87071ca42a11e599b6d6600": [
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2023",
+        "Total": 0.04186,
+        "Male": 0.03073,
+        "Female": 0.06504,
+        "Rank": 10
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2023",
+        "Total": 0.07776,
+        "Male": 0.06515,
+        "Female": 0.09415,
+        "Rank": 3
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2023",
+        "Total": 0.04967,
+        "Male": 0.05505,
+        "Female": 0.043120000000000006,
+        "Rank": 6
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2023",
+        "Total": 0.044989999999999995,
+        "Male": 0.053259999999999995,
+        "Female": 0.03619,
+        "Rank": 8
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2023",
+        "Total": 0.06268,
+        "Male": 0.046310000000000004,
+        "Female": 0.13434,
+        "Rank": 4
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2023",
+        "Total": 0.03331,
+        "Male": 0.02326,
+        "Female": 0.04473,
+        "Rank": 13
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2023",
+        "Total": 0.030059999999999996,
+        "Male": 0.03209,
+        "Female": 0.02775,
+        "Rank": 16
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2023",
+        "Total": 0.04668,
+        "Male": 0.04963,
+        "Female": 0.03935,
+        "Rank": 7
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2023",
+        "Total": 0.03277,
+        "Male": 0.03459,
+        "Female": 0.02996,
+        "Rank": 14
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2023",
+        "Total": 0.08734,
+        "Male": 0.07397000000000001,
+        "Female": 0.15355,
+        "Rank": 2
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2023",
+        "Total": 0.02649,
+        "Male": 0.028069999999999998,
+        "Female": 0.024569999999999998,
+        "Rank": 18
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2023",
+        "Total": 0.028210000000000002,
+        "Male": 0.027770000000000003,
+        "Female": 0.028900000000000002,
+        "Rank": 17
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2023",
+        "Total": 0.03576,
+        "Male": 0.02355,
+        "Female": 0.05143,
+        "Rank": 12
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2023",
+        "Total": 0.05717,
+        "Male": 0.051089999999999997,
+        "Female": 0.07732,
+        "Rank": 5
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2023",
+        "Total": 0.02244,
+        "Male": 0.02054,
+        "Female": 0.02545,
+        "Rank": 19
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2023",
+        "Total": 0.03159,
+        "Male": 0.03094,
+        "Female": 0.03227,
+        "Rank": 15
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2023",
+        "Total": 0.0089,
+        "Male": 0.00784,
+        "Female": 0.01015,
+        "Rank": 21
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2023",
+        "Total": 0.09638999999999999,
+        "Male": 0.08207,
+        "Female": 0.12509,
+        "Rank": 1
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2023",
+        "Total": 0.043550000000000005,
+        "Male": 0.04523,
+        "Female": 0.041710000000000004,
+        "Rank": 9
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2023",
+        "Total": 0.03648,
+        "Male": 0.03798,
+        "Female": 0.03475,
+        "Rank": 11
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2023",
+        "Total": 0.01654,
+        "Male": 0.01765,
+        "Female": 0.015349999999999999,
+        "Rank": 20
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-007b6604d250f56a600315c3a5cf9dd4": [
+      {
+        "text": "Red if female \n rate is higher"
+      }
+    ]
+  }
+}

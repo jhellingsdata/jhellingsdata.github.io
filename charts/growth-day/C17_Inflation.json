@@ -1,0 +1,419 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-08beab49ce3ed481a69459446ad91eeb"
+      },
+      "mark": {
+        "type": "rect",
+        "color": "black",
+        "opacity": 0.2
+      },
+      "encoding": {
+        "x": {
+          "field": "target_low",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "target_high"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-e7ba09f35d18624056719f0551b09f92"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(218,77,82)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Inflation Rate",
+        "subtitle": [
+          "Annual % change in CPI, April 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: World Economic Outlook (April 2024)"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-e7ba09f35d18624056719f0551b09f92"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Value < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Value < 0 ? -2 : 5"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "TUR",
+                "THA"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Value",
+          "format": ".2%",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Inflation Rate",
+        "subtitle": [
+          "Annual % change in CPI, April 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-993f5402c510fc056b8fbd64d96285a8"
+      },
+      "mark": {
+        "type": "text",
+        "dy": -10,
+        "lineBreak": "\n",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "target_high",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 250
+        }
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-08beab49ce3ed481a69459446ad91eeb": [
+      {
+        "target_low": 0.02,
+        "target_high": 0.05
+      }
+    ],
+    "data-e7ba09f35d18624056719f0551b09f92": [
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Year": "2024-01-01",
+        "Value": 0.046
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Year": "2024-01-01",
+        "Value": 0.01
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Year": "2024-01-01",
+        "Value": 0.0289999999999999
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Year": "2024-01-01",
+        "Value": 0.026
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Year": "2024-01-01",
+        "Value": 0.248
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Year": "2024-01-01",
+        "Value": 0.263
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Year": "2024-01-01",
+        "Value": 0.0409999999999999
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Year": "2024-01-01",
+        "Value": 0.093
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Year": "2024-01-01",
+        "Value": 0.069
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Year": "2024-01-01",
+        "Value": 0.04
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Year": "2024-01-01",
+        "Value": 0.256
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Year": "2024-01-01",
+        "Value": 0.022
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Year": "2024-01-01",
+        "Value": 0.036
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Year": "2024-01-01",
+        "Value": 0.325
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Year": "2024-01-01",
+        "Value": 0.172
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Year": "2024-01-01",
+        "Value": 0.037
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Year": "2024-01-01",
+        "Value": 0.375
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Year": "2024-01-01",
+        "Value": 0.595
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Year": "2024-01-01",
+        "Value": 0.024
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Year": "2024-01-01",
+        "Value": 0.0069999999999999
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Year": "2024-01-01",
+        "Value": 0.025
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-993f5402c510fc056b8fbd64d96285a8": [
+      {
+        "target_low": 0.02,
+        "target_high": 0.05,
+        "label": "Most inflation targets sit at 2% \n for advanced economies and\n 3-5% for developing economies."
+      }
+    ]
+  }
+}

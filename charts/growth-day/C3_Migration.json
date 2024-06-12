@@ -1,0 +1,396 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "area": {
+      "opacity": 0.3
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "dx": 24,
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 0
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "rule",
+        "color": "dimgrey"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-ef833affc1e2ad889f47418ad0dc74e2"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(218,77,82)"
+      },
+      "encoding": {
+        "x": {
+          "field": "Net Migration Rate",
+          "scale": {
+            "domain": [
+              -4.2,
+              3
+            ]
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Migration",
+        "anchor": "start",
+        "dx": 0,
+        "fontSize": 14,
+        "frame": "group",
+        "offset": 6,
+        "subtitle": [
+          "Net migration rate (per 1,000 population), 2023 projection"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-ef833affc1e2ad889f47418ad0dc74e2"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum[\"Net Migration Rate\"] < 0 ? \"right\" : \"left\""
+        },
+        "dx": {
+          "expr": "datum[\"Net Migration Rate\"] < 0 ? -5 : 5"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "TUR",
+                "USA"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Net Migration Rate",
+          "format": ".2f",
+          "type": "quantitative"
+        },
+        "x": {
+          "field": "Net Migration Rate",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: UN Population Prospects (2022)"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    }
+  ],
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-ef833affc1e2ad889f47418ad0dc74e2": [
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Year": 2023.0,
+        "Net Migrants": -11.999,
+        "Net Migration Rate": -0.095
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Year": 2023.0,
+        "Net Migrants": -14.999,
+        "Net Migration Rate": -0.147
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Year": 2023.0,
+        "Net Migrants": -29.998,
+        "Net Migration Rate": -0.266
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Year": 2023.0,
+        "Net Migrants": -59.996,
+        "Net Migration Rate": -0.268
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Year": 2023.0,
+        "Net Migrants": -310.22,
+        "Net Migration Rate": -0.218
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Year": 2023.0,
+        "Net Migrants": 99.994,
+        "Net Migration Rate": 0.811
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Year": 2023.0,
+        "Net Migrants": -309.977,
+        "Net Migration Rate": -1.791
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Year": 2023.0,
+        "Net Migrants": -486.136,
+        "Net Migration Rate": -0.34
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Year": 2023.0,
+        "Net Migrants": -39.998,
+        "Net Migration Rate": -0.448
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Year": 2023.0,
+        "Net Migrants": -165.988,
+        "Net Migration Rate": -0.69
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Year": 2023.0,
+        "Net Migrants": -49.997,
+        "Net Migration Rate": -0.18
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Year": 2023.0,
+        "Net Migrants": -69.996,
+        "Net Migration Rate": -0.596
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Year": 2023.0,
+        "Net Migrants": 18.999,
+        "Net Migration Rate": 0.265
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Year": 2023.0,
+        "Net Migrants": -82.7,
+        "Net Migration Rate": -0.836
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Year": 2023.0,
+        "Net Migrants": -318.067,
+        "Net Migration Rate": -3.7
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Year": 2023.0,
+        "Net Migrants": -136.414,
+        "Net Migration Rate": -0.944
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Year": 2023.0,
+        "Net Migrants": 165.79,
+        "Net Migration Rate": 2.451
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Year": 2023.0,
+        "Net Migrants": 155.751,
+        "Net Migration Rate": 1.872
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Year": 2023.0,
+        "Net Migrants": -50.239,
+        "Net Migration Rate": -0.391
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Year": 2023.0,
+        "Net Migrants": 6.0,
+        "Net Migration Rate": 0.028
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Year": 2023.0,
+        "Net Migrants": 999.7,
+        "Net Migration Rate": 2.945
+      }
+    ]
+  },
+  "height": 300
+}
