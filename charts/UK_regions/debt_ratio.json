@@ -11,7 +11,11 @@
       "fontSize": 16,
       "subtitleFontSize": 12,
       "dx": 50,
-      "subtitle": ["Left shows assets & borrowing; right shows debt-to-assets ratio", "Excludes City of London & Shetland Islands.", ""]
+      "subtitle": [
+        "Left shows assets & borrowing; right shows debt-to-assets ratio",
+        "Excludes City of London & Shetland Islands.",
+        ""
+      ]
     },
     "transform": [
       {
@@ -30,7 +34,7 @@
     ],
     "hconcat": [
       {
-        "width": 250,
+        "width": 260,
         "height": 400,
         "encoding": {
           "x": {
@@ -42,7 +46,10 @@
               "labelFontWeight": "lighter",
               "labelExpr": "'£'+format(datum.value/1000000, ',.1f')+'B'"
             },
-            "type": "quantitative"
+            "type": "quantitative",
+            "scale": {
+              "domain": [0,3700000]
+            }
           },
           "y": {
             "field": "Assets",
@@ -53,9 +60,7 @@
               "labelFontWeight": "lighter",
               "labelExpr": "'£'+format(datum.value/1000000, ',.1f')+'B'"
             },
-            "scale": {
-              "domain": [0, 1000000]
-            },
+            "scale": {"domain": [0, 1000000]},
             "type": "quantitative"
           },
           "color": {"field": "DebtToAssets", "type": "quantitative"}
@@ -99,10 +104,15 @@
               "opacity": 1,
               "color": "black",
               "fontWeight": "lighter",
-              "align": "left",
-              "dx": 5
+              "align": {"expr": "datum.Name == 'Birmingham'? 'center' : 'left'"},
+              "dy": {"expr": "datum.Name == 'Birmingham'? -10 : 0"},
+              "dx": {"expr": "datum.Name == 'Birmingham'? 0 : 5"}
             },
-            "transform": [{"filter": "datum.Name == point_paintbrush.Name"}],
+            "transform": [
+              {
+                "filter": "datum.Name == point_paintbrush.Name | indexof(['Birmingham', 'Leeds', 'Thurrock'], datum.Name) != -1"
+              }
+            ],
             "encoding": {
               "text": {"field": "Name"},
               "opacity": {"value": 1},

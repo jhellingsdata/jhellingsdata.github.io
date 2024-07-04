@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/e4e/ch2_Growth/data/chart2_2_GDP_trajectory_global.csv",
+      "format": {"type": "csv"}
+    },
+    "view": {"stroke": "transparent"},
+    "title": {
+      "text": "Growth Trajectories",
+      "subtitle": ["GDP per capita, 1960=0, logs", "Source: World Bank", ""],
+      "fontSize": 16,
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "height": 300,
+    "width": 450,
+    "transform": [
+      {
+        "filter": {
+          "field": "ISO3",
+          "oneOf": ["CHN", "IND", "USA", "IDN", "PAK", "BRA", "NGA", "BGD", "RUS", "MEX", "JPN", "ETH", "PHL", "EGY", "VNM", "COD", "TUR", "IRN", "DEU", "THA", "GBR"]
+        }
+      },
+      {"calculate": "log(datum.Value)", "as": "logGDP"}],
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": null,
+        "axis": {
+          "labelAngle": 0,
+          "grid": false,
+          "ticks": false,
+          "labelPadding": 5,
+          "labelFontSize": 11,
+          "tickCount": 8
+        }
+      },
+      "y": {
+        "field": "logGDP",
+        "type": "quantitative",
+        "title": null,
+        "axis": {
+          "gridOpacity": 0.4,
+          "ticks": false,
+          "labelPadding": 5,
+          "labelFontSize": 11
+        }
+      },
+      "color": {
+        "field": "Country",
+        "type": "nominal",
+        "scale": {"range": ["rgba(128,0,0,0.2)"]},
+        "legend": null,
+        "title": null,
+        "condition": {
+          "param": "hover",
+          "field": "Country",
+          "type": "nominal",
+          "scale": {"range": ["rgba(128,0,0,1)"]}
+        }
+      },
+      "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2},
+      "tooltip": {"field": "Country", "type": "nominal"}
+    },
+    "layer": [
+      {
+        "params": [
+          {
+            "name": "hover",
+            "select": {"type": "point", "fields": ["Country"], "on": "mouseover"}
+          }
+        ],
+        "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+      },
+      {"mark": "line"}
+    ]
+  }
