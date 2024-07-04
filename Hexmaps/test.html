@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagon Grid</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .hexagon {
+            fill: none;
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <svg id="hexGrid" width="800" height="800"></svg>
+    <script>
+        const n = 72;
+        const hex_width = 2;
+        const hexHeight = Math.sqrt(3) / 2 * hex_width;
+        const positions = [];
+
+        function calculateHexPositions(n, hex_width) {
+            function addHexagon(x, y) {
+                if (positions.length < n) {
+                    positions.push({ x, y });
+                }
+            }
+
+            // Add the central hexagon
+            addHexagon(0, 0);
+
+            let ring = 1;
+            while (positions.length < n) {
+                let x = ring * hex_width;  // Starting point for the ring
+                let y = 0;
+
+                // There are 6 sides, and for each side we have 'ring' hexagons
+                for (let side = 0; side < 6; side++) {
+                    for (let i = 0; i < ring; i++) {
+                        if (positions.length >= n) break;
+                        addHexagon(x, y);
+                        switch (side) {
+                            case 0: y -= hexHeight; x -= hex_width / 2; break;
+                            case 1: y -= hexHeight; x += hex_width / 2; break;
+                            case 2: y += 0; x += hex_width; break;
+                            case 3: y += hexHeight; x += hex_width / 2; break;
+                            case 4: y += hexHeight; x -= hex_width / 2; break;
+                            case 5: y += 0; x -= hex_width; break;
+                        }
+                    }
+                }
+                ring++;
+            }
+        }
+
+        function drawHexagons(positions, hex_width) {
+            const svg = d3.select("#hexGrid");
+            const hexHeight = Math.sqrt(3) / 2 * hex_width;
+            const hexPoints = [
+                [hex_width / 2, 0],
+                [hex_width, hexHeight],
+                [hex_width / 2, 2 * hexHeight],
+                [-hex_width / 2, 2 * hexHeight],
+                [-hex_width, hexHeight],
+                [-hex_width / 2, 0]
+            ];
+
+            svg.selectAll(".hexagon")
+                .data(positions)
+                .enter().append("polygon")
+                .attr("class", "hexagon")
+                .attr("points", hexPoints.map(d => d.join(",")).join(" "))
+                .attr("transform", d => `translate(${400 + d.x * 10}, ${400 + d.y * 10})`);
+        }
+
+        calculateHexPositions(n, hex_width);
+        drawHexagons(positions, hex_width);
+    </script>
+</body>
+</html>
