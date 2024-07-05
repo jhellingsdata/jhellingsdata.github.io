@@ -27,7 +27,7 @@
         .hexMap {
             width: 60%;
             float: right;
-            height: 90%;
+            height: 100%;
             margin-top: 100px;
         }
 
@@ -52,7 +52,6 @@
             right: 50px;
             width: 150px;
             height: 50px;
-
             z-index: 2;
         }
 
@@ -62,14 +61,12 @@
             right: 250px;
             width: 150px;
             height: 50px;
-
             z-index: 2;
         }
 
-
         #normalMap {
             width: 30%;
-            height: 110%;
+            height: 100%;
             float: left;
         }
 
@@ -295,7 +292,7 @@
 
         // Define a color scale for the major parties
         const colorScale = d3.scaleOrdinal()
-            .domain(['LAB', 'LD', 'CON', 'DUP', 'SNP', 'SF', 'SDLP', 'GRN', 'PC', 'SPK', 'All', 'NaN'])
+            .domain(['LAB', 'LD', 'CON', 'DUP', 'SNP', 'SF', 'SDLP', 'GRN', 'PC', 'SPK', 'All', 'IND','NaN'])
             .range([
                 'rgb(220, 67, 67)',
                 'rgb(233, 190, 32)',  // LD
@@ -308,6 +305,7 @@
                 'rgb(0,91,84)',  // PC
                 '#cccccc',  // SPK
                 'rgb(233, 190, 32)',   // All
+                '#FF69B4', // IND pink
                 '#ddd'       // Grey for nan values
             ]);
 
