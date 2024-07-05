@@ -27,7 +27,7 @@
         .hexMap {
             width: 60%;
             float: right;
-            height: 100%;
+            height: 90%;
             margin-top: 100px;
         }
 
@@ -159,6 +159,17 @@
         #supermarketSelect {
             opacity: 0;
             position: fixed;
+            top: 130px;
+            right: 150px;
+            width: 150px;
+            height: 50px;
+
+            z-index: 2;
+        }
+
+        #electionSelect {
+            opacity: 1;
+            position: fixed;
             top: 50px;
             right: 150px;
             width: 150px;
@@ -206,49 +217,22 @@
 
         </select>
 
+        <select id="electionSelect" onchange="">
+            <option value="result_2024">2024 - live</option>
+            <!-- <option value="result_2019">2019</option> -->
+        </select>
+
           <div id="container">
         <div class="map-container">
             <svg class="normalMap" overflow="visible" id="normalMap"></svg>
             <svg class="hexMap" overflow="visible" id="hexMap"></svg>
         </div>
-        <div class="info">
-            <!-- <div class="info-box">
-                <h2>Information 1</h2>
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, distinctio aut molestias, consequatur vitae.</p>
-            </div>
+        <!-- <div class="info">
             <div class="info-box">
-                <h2>Information 2</h2>
-                <p>This is the second info box containing additional information.</p>
+                <h2>UK Hex Map</h2>
+                <p>Hover over a hex or constituency to see the name and party of the MP</p>
             </div>
-            <div class="info-box">
-                <h2>Information 1</h2>
-                <p>This is the first info box containing information about the constituencies.</p>
-            </div>
-            <div class="info-box">
-                <h2>Information 2</h2>
-                <p>This is the second info box containing additional information.</p>
-            </div>
-
-            <div class="info-box">
-                <h2>Information 1</h2>
-                <p>This is the first info box containing information about the constituencies.</p>
-            </div>
-            <div class="info-box">
-                <h2>Information 2</h2>
-                <p>This is the second info box containing additional information.</p>
-            </div>
-
-            <div class="info-box">
-                <h2>Information 1</h2>
-                <p>This is the first info box containing information about the constituencies.</p>
-            </div>
-            <div class="info-box">
-                <h2>Information 2</h2>
-                <p>This is the second info box containing additional information.</p>
-            </div>
- -->
-            <!-- Add more info boxes as needed -->
-        </div>
+        </div> -->
     </div>
 
     <div class="toggle-container">
@@ -298,20 +282,26 @@
 
         // Define a color scale for the major parties
         const colorScale = d3.scaleOrdinal()
-            .domain(['Lab', 'LD', 'Con', 'DUP', 'SNP', 'SF', 'SDLP', 'Green', 'PC', 'Spkr', 'All'])
+            .domain(['LAB', 'LD', 'CON', 'DUP', 'SNP', 'SF', 'SDLP', 'GRN', 'PC', 'SPK', 'All', 'NaN'])
             .range([
                 'rgb(220, 67, 67)',
                 'rgb(233, 190, 32)',  // LD
-                'rgb(67, 169, 220)',  // Con
+                'rgb(67, 169, 220)',  // CON
                 'rgb(212, 106, 75)',  // DUP
                 '#ffdd00',  // SNP
                 'rgb(49, 103, 96)',  // SF
                 'rgb(34, 135, 37)',  // SDLP
-                'rgb(30, 180, 40)',  // Green
+                'rgb(30, 180, 40)',  // GRN
                 'rgb(0,91,84)',  // PC
-                '#cccccc',  // Spkr
-                'rgb(233, 190, 32)'   // All
+                '#cccccc',  // SPK
+                'rgb(233, 190, 32)',   // All
+                '#ddd'       // Grey for nan values
             ]);
+
+        // Function to get color for a given result, handling NaN values
+        function getColor(result) {
+            return colorScale(result || 'NaN');
+        }
 
 
         function updateTooltipContents(properties) {
@@ -325,17 +315,8 @@
 
         const tooltip = d3.select("#tooltip");
 
-        // Load the CSV file
-        d3.csv('indicators.csv').then(csvData => {
-            // make the csv data available globally
-            window.csvData = csvData;
-            csvMap = new Map();
-            csvData.forEach(d => {
-                csvMap.set(d.GSScode, d.winner_2019);
-            });
-
-
-            // draw the normal map first
+        function drawNormalMap() {
+            // Draw the normal map - Load the GeoJSON file
             d3.json("buc_const.geojson").then(geojson => {
                 projection.fitSize([width, height * 1.2], geojson);
 
@@ -367,9 +348,7 @@
                             .attr('stroke-width', e => e.properties.GSScode === id ? 5 : 2)
                             .raise();
 
-
                         updateTooltipContents(d.properties);
-
 
                     }).on('mouseout', function (d) {
                         d3.selectAll(`.constituency, .hex`)
@@ -380,10 +359,10 @@
                             .duration(500)
                             .style("opacity", 0);
                     })
-
-
             });
+        }
 
+        function drawHexMap(resultData='result_2024') {
             // draw the hex map - Load the GeoJSON file
             d3.json('hexes.geojson').then(geojson => {
                 projection.fitSize([width, height], geojson);
@@ -397,17 +376,13 @@
                         });
                     }
                 });
-
-
-                //party_order = ['Con', 'Lab', 'SNP', 'LD']
-                party_order = ['LD', 'SNP', 'Lab', 'Con']
+                //party_order = ['CON', 'Lab', 'SNP', 'LD']
+                party_order = ['LD', 'SNP', 'LAB', 'CON']
 
                 geojson.features.sort((a, b) => {
-
-                    //return (a.properties.winner_2019=='Con') -( b.properties.winner_2019=='Con')
-                    return party_order.indexOf(b.properties.winner_2019) - party_order.indexOf(a.properties.winner_2019)
+                    //return (a.properties.result_2019=='CON') -( b.properties.result_2019=='CON')
+                    return party_order.indexOf(b.properties[resultData]) - party_order.indexOf(a.properties[resultData])
                 })
-
                 hexSvg.selectAll('.hex')
                     .data(geojson.features)
                     .enter().append('path')
@@ -430,8 +405,6 @@
                         // select the normal and hex with the same GSS code and give them a red border
                         const id = d.properties.GSScode;
 
-
-
                         d3.selectAll(`.constituency, .hex`)
                             .filter(e => e.properties.GSScode === id || e.properties.PCON24CD === id)
                             .attr('stroke', 'white')
@@ -449,9 +422,97 @@
                             .duration(500)
                             .style("opacity", 0);
                     })
-
             });
-        });
+        }
+
+        function loadData() {
+            // Load the CSV file
+            d3.csv('https://eco-data-cache.s3.eu-west-2.amazonaws.com/elections/live_results/results_2024.csv').then(csvData => {
+                // make the csv data available globally
+                // Log the CSV data to verify it's loaded correctly
+                console.log(csvData);
+                window.csvData = csvData;
+                csvMap = new Map();
+                csvData.forEach(d => {
+                    csvMap.set(d.GSScode, d.result_2024);
+                });
+                // draw the normal map
+                drawNormalMap();
+                // draw the hex map
+                drawHexMap();
+            });
+        }
+        // function loadData() {
+        //     // Load the single CSV file from the provided AWS S3 link
+        //     d3.csv('https://eco-data-cache.s3.eu-west-2.amazonaws.com/elections/live_results/results_2024.csv')
+        //     .then(csvData => {
+        //         // Make the csv data available globally
+        //         window.csvData = csvData;
+        //         const csvMap2019 = new Map();
+        //         const csvMap2024 = new Map();
+
+        //         csvData.forEach(d => {
+        //             csvMap2019.set(d.GSScode, d.result_2019);
+        //             csvMap2024.set(d.GSScode, d.result_2024);
+        //         });
+
+        //         // Store the maps globally
+        //         window.csvMap2019 = csvMap2019;
+        //         window.csvMap2024 = csvMap2024;
+
+        //         // Draw the normal map and hex map for the initial load (default to 2024)
+        //         drawNormalMap();
+        //         drawHexMap();
+        //     });
+        // }
+        // function loadData() {
+        //     // Load both CSV files
+        //     Promise.all([
+        //         d3.csv('indicators.csv'),
+        //         d3.csv('2024_results.csv')
+        //     ]).then(([indicatorsData, results2024Data]) => {
+        //         // Merge the two datasets using GSScode as the key
+        //         const mergedData = indicatorsData.map(indicator => {
+        //             const result2024 = results2024Data.find(result => result.GSScode === indicator.GSScode) || {};
+        //             return {
+        //                 ...indicator,
+        //                 result_2024: result2024.result_2024 || null
+        //             };
+        //         });
+
+        //         // Make the merged data available globally
+        //         window.csvData = mergedData;
+        //         const csvMap2019 = new Map();
+        //         const csvMap2024 = new Map();
+
+        //         mergedData.forEach(d => {
+        //             csvMap2019.set(d.GSScode, d.result_2019);
+        //             csvMap2024.set(d.GSScode, d.result_2024);
+        //         });
+
+        //         // Store the maps globally
+        //         window.csvMap2019 = csvMap2019;
+        //         window.csvMap2024 = csvMap2024;
+
+        //         // Draw the normal map and hex map for the initial load (default to 2024)
+        //         drawNormalMap(csvMap2024);
+        //         drawHexMap(csvMap2024);
+        //     });
+        // }
+
+        loadData();
+
+        // // Function to toggle between 2019 and 2024 data
+        // function toggleYear(selectedValue) {
+        //     if (selectedValue === "result_2019") {
+        //         drawNormalMap(window.csvMap2019);
+        //         drawHexMap(window.csvMap2019);
+        //     } else if (selectedValue === "result_2024") {
+        //         drawNormalMap(window.csvMap2024);
+        //         drawHexMap(window.csvMap2024);
+        //     }
+        // }
+
 
         function getTranslateNeededForXY(element, x, y, rotation = 120) {
 
@@ -771,8 +832,8 @@
             buildHexRing(has_hexes, [200, 175]);
             buildHexRing(hasnt_hexes, [450, 450]);
 
-            has_con_pct = d3.mean(has_hexes.data(), d => d.properties['winner_2019'] == 'Con');
-            hasnt_con_pct = d3.mean(hasnt_hexes.data(), d => d.properties['winner_2019'] == 'Con');
+            has_con_pct = d3.mean(has_hexes.data(), d => d.properties['result_2019'] == 'CON');
+            hasnt_con_pct = d3.mean(hasnt_hexes.data(), d => d.properties['result_2019'] == 'CON');
 
             // add the titles and subtitles
             hexSvg.append('text')
@@ -791,7 +852,7 @@
                 .attr('text-anchor', 'middle')
                 .attr('font-family', "'Circular Std', 'Helvetica Neue', sans-serif")
                 .attr('font-size', '16px')
-                .html(`${(has_hexes.data().filter(d => d.properties['winner_2019'] == 'Con').length)}/${has_hexes.data().length} Con (${(has_con_pct * 100).toFixed(0)}%)`)
+                .html(`${(has_hexes.data().filter(d => d.properties['result_2019'] == 'CON').length)}/${has_hexes.data().length} CON (${(has_con_pct * 100).toFixed(0)}%)`)
 
             hexSvg.append('text')
                 .attr('x', 170)
@@ -809,7 +870,7 @@
                 .attr('text-anchor', 'middle')
                 .attr('font-family', "'Circular Std', 'Helvetica Neue', sans-serif")
                 .attr('font-size', '16px')
-                .html(`${(hasnt_hexes.data().filter(d => d.properties['winner_2019'] == 'Con').length)}/${hasnt_hexes.data().length} Con (${(hasnt_con_pct * 100).toFixed(0)}%)`)
+                .html(`${(hasnt_hexes.data().filter(d => d.properties['result_2019'] == 'CON').length)}/${hasnt_hexes.data().length} CON (${(hasnt_con_pct * 100).toFixed(0)}%)`)
 
         }
 
