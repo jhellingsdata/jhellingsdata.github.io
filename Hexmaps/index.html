@@ -159,7 +159,17 @@
         #supermarketSelect {
             opacity: 0;
             position: fixed;
-            top: 130px;
+            top: 150px;
+            right: 150px;
+            width: 150px;
+            height: 50px;
+
+            z-index: 2;
+        }
+
+        #result2024Count {
+            position: fixed;
+            top: 40px;
             right: 150px;
             width: 150px;
             height: 50px;
@@ -170,7 +180,7 @@
         #electionSelect {
             opacity: 1;
             position: fixed;
-            top: 50px;
+            top: 80px;
             right: 150px;
             width: 150px;
             height: 50px;
@@ -204,6 +214,14 @@
             <p id="party"></p>
         </div>
 
+        <select id="electionSelect" onchange="">
+            <option value="result_2024">2024 - live</option>
+            <!-- <option value="result_2019">2019</option> -->
+        </select>
+
+        <!-- Add text box showing value held in JS variable nonNullCount -->
+        <div id="result2024Count">Loading...</div>
+
         <select id="supermarketSelect" onchange="groupBySupermarket(this.value)">
             <!-- 'aldi', 'asda', 'co-operative', 'iceland', 'lidl',
        'marks and spencer', 'morrisons', 'sainsburys', 'tesco', 'waitrose' -->
@@ -215,11 +233,6 @@
             <option value="iceland">Iceland</option>
             <option value="marks and spencer">M&S</option>  
 
-        </select>
-
-        <select id="electionSelect" onchange="">
-            <option value="result_2024">2024 - live</option>
-            <!-- <option value="result_2019">2019</option> -->
         </select>
 
           <div id="container">
@@ -436,6 +449,14 @@
                 csvData.forEach(d => {
                     csvMap.set(d.GSScode, d.result_2024);
                 });
+                // Count how many `result_2024` are non-null
+                // const nonNullCount = csvData.filter(d => d.result_2024).length;
+
+                // Calculate the number of non-null result_2024 values
+                const nonNullCount = csvData.filter(d => d.result_2024 !== null && d.result_2024 !== "").length;
+                // Display the count on the page
+                document.getElementById('result2024Count').innerText = `Confirmed results: ${nonNullCount} / 650`;
+
                 // draw the normal map
                 drawNormalMap();
                 // draw the hex map
