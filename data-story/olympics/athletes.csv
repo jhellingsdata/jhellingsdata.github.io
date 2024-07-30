@@ -1,0 +1,207 @@
+iso2,code,country,athletes
+AF,AFG,Afghanistan,6
+AL,ALB,Albania,8
+DZ,DZA,Algeria,45
+AS,ASM,American Samoa,2
+AD,AND,Andorra,2
+AO,AGO,Angola,24
+AG,ATG,Antigua and Barbuda,5
+AR,ARG,Argentina,136
+AM,ARM,Armenia,15
+AW,ABW,Aruba,6
+AU,AUS,Australia,460
+AT,AUT,Austria,81
+AZ,AZE,Azerbaijan,47
+BS,BHS,Bahamas,18
+BH,BHR,Bahrain,14
+BD,BGD,Bangladesh,5
+BB,BRB,Barbados,4
+BE,BEL,Belgium,165
+BZ,BLZ,Belize,1
+BJ,BEN,Benin,5
+BM,BMU,Bermuda,8
+BT,BTN,Bhutan,3
+BO,BOL,Bolivia,4
+BA,BIH,Bosnia and Herzegovina,5
+BW,BWA,Botswana,13
+BR,BRA,Brazil,277
+BN,BRN,Brunei Darussalam,3
+BG,BGR,Bulgaria,46
+BF,BFA,Burkina Faso,8
+BI,BDI,Burundi,7
+CV,CPV,Cabo Verde,7
+KH,KHM,Cambodia,3
+CM,CMR,Cameroon,6
+CA,CAN,Canada,316
+KY,CYM,Cayman Islands,4
+CF,CAF,Central African Republic,4
+TD,TCD,Chad,3
+CL,CHL,Chile,48
+TW,TWN,Chinese Taipei,60
+CO,COL,Colombia,88
+KM,COM,Comoros,4
+CG,COG,Congo,4
+CK,COK,Cook Islands,2
+CR,CRI,Costa Rica,6
+HR,HRV,Croatia,73
+CU,CUB,Cuba,61
+CY,CYP,Cyprus,15
+CZ,CZE,Czechia,112
+CI,CIV,CÃ´te d'Ivoire,13
+KP,PRK,Democratic People's Republic of Korea,16
+TL,TLS,Democratic Republic of Timor-Leste,4
+CD,COD,Democratic Republic of the Congo,6
+DK,DNK,Denmark,123
+DJ,DJI,Djibouti,7
+DM,DMA,Dominica,4
+DO,DOM,Dominican Republic,57
+EC,ECU,Ecuador,40
+EG,EGY,Egypt,149
+SV,SLV,El Salvador,8
+GQ,GNQ,Equatorial Guinea,3
+ER,ERI,Eritrea,13
+EE,EST,Estonia,24
+SZ,SWZ,Eswatini,3
+ET,ETH,Ethiopia,32
+FM,FSM,Federated States of Micronesia,3
+FJ,FJI,Fiji,33
+FI,FIN,Finland,56
+FR,FRA,France,572
+GA,GAB,Gabon,5
+GM,GMB,Gambia,7
+GE,GEO,Georgia,28
+DE,DEU,Germany,427
+GH,GHA,Ghana,8
+GB,GBR,Great Britain,327
+GR,GRC,Greece,101
+GD,GRD,Grenada,6
+GU,GUM,Guam,8
+GT,GTM,Guatemala,16
+GN,GIN,Guinea	,24
+GW,GNB,Guinea-Bissau,6
+GY,GUY,Guyana,5
+HT,HTI,Haiti,7
+HN,HND,Honduras,4
+HK,HKG,Hong Kong,34
+HU,HUN,Hungary,169
+IS,ISL,Iceland,5
+IN,IND,India,110
+ID,IDN,Indonesia,29
+IQ,IRQ,Iraq,22
+IE,IRL,Ireland,133
+IR,IRN,Islamic Republic of Iran,39
+IL,ISR,Israel,87
+IT,ITA,Italy,380
+JM,JAM,Jamaica,63
+JP,JPN,Japan,410
+JO,JOR,Jordan,12
+KZ,KAZ,Kazakhstan,79
+KE,KEN,Kenya,70
+KI,KIR,Kiribati,3
+XK,XKX,Kosovo,9
+KW,KWT,Kuwait,9
+KG,KGZ,Kyrgyzstan,16
+LA,LAO,Lao People's Democratic Republic,4
+LV,LVA,Latvia,29
+LB,LBN,Lebanon,10
+LS,LSO,Lesotho,3
+LR,LBR,Liberia,8
+LY,LBY,Libya,6
+LI,LIE,Liechtenstein,1
+LT,LTU,Lithuania,50
+LU,LUX,Luxembourg,13
+MG,MDG,Madagascar,7
+MW,MWI,Malawi,3
+MY,MYS,Malaysia,26
+MV,MDV,Maldives,5
+ML,MLI,Mali,23
+MT,MLT,Malta,5
+MH,MHL,Marshall Islands,4
+MR,MRT,Mauritania,2
+MU,MUS,Mauritius,13
+MX,MEX,Mexico,106
+MC,MCO,Monaco,6
+MN,MNG,Mongolia,32
+ME,MNE,Montenegro,19
+MA,MAR,Morocco,60
+MZ,MOZ,Mozambique,7
+MM,MMR,Myanmar,2
+NA,NAM,Namibia,4
+NR,NRU,Nauru,1
+NP,NPL,Nepal,7
+NL,NLD,Netherlands,276
+NZ,NZL,New Zealand,195
+NI,NIC,Nicaragua,7
+NE,NER,Niger,7
+NG,NGA,Nigeria,85
+MK,MKD,North Macedonia,7
+NO,NOR,Norway,105
+OM,OMN,Oman,4
+PK,PAK,Pakistan,7
+PW,PLW,Palau,3
+PS,PSE,Palestine,8
+PA,PAN,Panama,8
+PG,PNG,Papua New Guinea,6
+PY,PRY,Paraguay,28
+CN,CHN,People's Republic of China,388
+PE,PER,Peru,26
+PH,PHL,Philippines,22
+PL,POL,Poland,214
+PT,PRT,Portugal,73
+PR,PRI,Puerto Rico,51
+QA,QAT,Qatar,14
+not found,not found,Refugee Olympic Team,37
+KR,KOR,Republic of Korea,141
+MD,MDA,Republic of Moldova,25
+RO,ROU,Romania,107
+RW,RWA,Rwanda,8
+KN,KNA,Saint Kitts and Nevis,3
+LC,LCA,Saint Lucia,4
+WS,WSM,Samoa,24
+SM,SMR,San Marino,5
+ST,STP,Sao Tome and Principe,3
+SA,SAU,Saudi Arabia,9
+SN,SEN,Senegal,11
+RS,SRB,Serbia,112
+SC,SYC,Seychelles,3
+SL,SLE,Sierra Leone,5
+SG,SGP,Singapore,23
+SK,SVK,Slovakia,28
+SI,SVN,Slovenia,90
+SB,SLB,Solomon Islands,3
+SO,SOM,Somalia,1
+ZA,ZAF,South Africa,138
+SS,SSD,South Sudan,14
+ES,ESP,Spain,382
+LK,LKA,Sri Lanka,6
+VC,VCT,St Vincent and the Grenadines,4
+SD,SDN,Sudan,4
+SR,SUR,Suriname,5
+SE,SWE,Sweden,117
+CH,CHE,Switzerland,127
+SY,SYR,Syrian Arab Republic,6
+TJ,TJK,Tajikistan,14
+TH,THA,Thailand,51
+TG,TGO,Togo,5
+TO,TON,Tonga,4
+TT,TTO,Trinidad and Tobago,17
+TN,TUN,Tunisia,27
+TM,TKM,Turkmenistan,6
+TV,TUV,Tuvalu,2
+TR,TUR,Turkey,100
+UG,UGA,Uganda,25
+UA,UKR,Ukraine,140
+AE,ARE,United Arab Emirates,13
+TZ,TZA,United Republic of Tanzania,7
+US,USA,United States of America,594
+UY,URY,Uruguay,25
+UZ,UZB,Uzbekistan,86
+VU,VUT,Vanuatu,6
+VE,VEN,Venezuela,32
+VN,VNM,Vietnam,16
+VG,VGB,British Virgin Islands,4
+VI,VIR,US Virgin Islands,5
+YE,YEM,Yemen,4
+ZM,ZMB,Zambia,28
+ZW,ZWE,Zimbabwe,7
+"['BY', 'RU']","['BLR', 'RUS']",Individual Neutral Athletes from Russia and Belarus,31

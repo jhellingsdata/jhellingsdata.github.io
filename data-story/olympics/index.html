@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Olympics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin-right: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table id="medals-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Gold</th>
+                    <th>Silver</th>
+                    <th>Bronze</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div class="chart-container">
+            <p>Chart will be displayed here</p>
+        </div>
+    </div>
+    <script>
+        async function loadMedalsData() {
+            const response = await fetch('https://eco-data-cache.s3.eu-west-2.amazonaws.com/olympics/live_results/medals.csv');
+            const data = await response.text();
+            const rows = data.split('\n').slice(1);
+            const tableBody = document.getElementById('medals-table').getElementsByTagName('tbody')[0];
+    
+            rows.forEach(row => {
+                const columns = row.split(',');
+                if (columns.length === 8) {
+                    const newRow = tableBody.insertRow();
+                    // Skipping the 'sequence' column (index 1)
+                    const relevantColumns = [columns[0], columns[2], columns[3], columns[4], columns[5], columns[6], columns[7]];
+                    relevantColumns.forEach(column => {
+                        const newCell = newRow.insertCell();
+                        newCell.textContent = column;
+                    });
+                }
+            });
+        }
+    
+        // Load data when the page loads
+        window.onload = loadMedalsData;
+    </script>
+</body>
+
+</html>
