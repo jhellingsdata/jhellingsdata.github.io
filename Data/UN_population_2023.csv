@@ -1,0 +1,235 @@
+Rank,Country,Population,Share,ISO3,Continent,P21
+1,India,1428627663,0.1776,IND,Asia,True
+2,China,1425671352,0.1772,CHN,Asia,True
+3,United States,339996563,0.0423,USA,America,True
+4,Indonesia,277534122,0.0345,IDN,Asia,True
+5,Pakistan,240485658,0.0299,PAK,Asia,True
+6,Nigeria,223804632,0.0278,NGA,Africa,True
+7,Brazil,216422446,0.0269,BRA,America,True
+8,Bangladesh,172954319,0.0215,BGD,Asia,True
+9,Russia,144444359,0.018,RUS,Europe,True
+10,Mexico,128455567,0.016,MEX,America,True
+11,Ethiopia,126527060,0.0157,ETH,Africa,True
+12,Japan,123294513,0.0153,JPN,Asia,True
+13,Philippines,117337368,0.0146,PHL,Asia,True
+14,Egypt,112716598,0.0139999999999999,EGY,Africa,True
+15,DR Congo,102262808,0.0127,COD,Africa,True
+16,Vietnam,98858950,0.0123,VNM,Asia,True
+17,Iran,89172767,0.0111,IRN,Asia,True
+18,Türkiye,85816199,0.0107,TUR,Asia,True
+19,Germany,83294633,0.0104,DEU,Europe,True
+20,Thailand,71801279,0.0089,THA,Asia,True
+21,United Kingdom,67736802,0.0084,GBR,Europe,True
+22,Tanzania,67438106,0.0084,TZA,Africa,False
+23,France,64756584,0.008,FRA,Europe,False
+24,South Africa,60414495,0.0075,ZAF,Africa,False
+25,Italy,58870762,0.0073,ITA,Europe,False
+26,Kenya,55100586,0.0068,KEN,Africa,False
+27,Myanmar,54577997,0.0068,MMR,Asia,False
+28,Colombia,52085168,0.0065,COL,America,False
+29,South Korea,51784059,0.0064,KOR,Asia,False
+30,Uganda,48582334,0.006,UGA,Africa,False
+31,Sudan,48109006,0.006,SDN,Africa,False
+32,Spain,47519628,0.0059,ESP,Europe,False
+33,Argentina,45773884,0.0056999999999999,ARG,America,False
+34,Algeria,45606480,0.0056999999999999,DZA,Africa,False
+35,Iraq,45504560,0.0056999999999999,IRQ,Asia,False
+36,Afghanistan,42239854,0.0053,AFG,Asia,False
+37,Poland,41026067,0.0051,POL,Europe,False
+38,Canada,38781291,0.0048,CAN,America,False
+39,Morocco,37840044,0.0046999999999999,MAR,Africa,False
+40,Saudi Arabia,36947025,0.0046,SAU,Asia,False
+41,Ukraine,36744634,0.0046,UKR,Europe,False
+42,Angola,36684202,0.0046,AGO,Africa,False
+43,Uzbekistan,35163944,0.0044,UZB,Asia,False
+44,Yemen,34449825,0.0043,YEM,Asia,False
+45,Peru,34352719,0.0043,PER,America,False
+46,Malaysia,34308525,0.0043,MYS,Asia,False
+47,Ghana,34121985,0.0042,GHA,Africa,False
+48,Mozambique,33897354,0.0042,MOZ,Africa,False
+49,Nepal,30896590,0.0038,NPL,Asia,False
+50,Madagascar,30325732,0.0038,MDG,Africa,False
+51,Cote d'Ivoire,28873034,0.0036,CIV,Africa,False
+52,Venezuela,28838499,0.0036,VEN,America,False
+53,Cameroon,28647293,0.0036,CMR,Africa,False
+54,Niger,27202843,0.0034,NER,Africa,False
+55,Australia,26439111,0.0033,AUS,Oceania,False
+56,North Korea,26160821,0.0033,PRK,Asia,False
+57,Taiwan,23923276,0.003,TWN,Asia,False
+58,Mali,23293698,0.0029,MLI,Africa,False
+59,Burkina Faso,23251485,0.0029,BFA,Africa,False
+60,Syria,23227014,0.0029,SYR,Asia,False
+61,Sri Lanka,21893579,0.0027,LKA,Asia,False
+62,Malawi,20931751,0.0026,MWI,Africa,False
+63,Zambia,20569737,0.0026,ZMB,Africa,False
+64,Romania,19892812,0.0025,ROU,Europe,False
+65,Chile,19629590,0.0024,CHL,America,False
+66,Kazakhstan,19606633,0.0024,KAZ,Asia,False
+67,Chad,18278568,0.0023,TCD,Africa,False
+68,Ecuador,18190484,0.0023,ECU,America,False
+69,Somalia,18143378,0.0023,SOM,Africa,False
+70,Guatemala,18092026,0.0022,GTM,America,False
+71,Senegal,17763163,0.0022,SEN,Africa,False
+72,Netherlands,17618299,0.0022,NLD,Europe,False
+73,Cambodia,16944826,0.0021,KHM,Asia,False
+74,Zimbabwe,16665409,0.0021,ZWE,Africa,False
+75,Guinea,14190612,0.0018,GIN,Africa,False
+76,Rwanda,14094683,0.0018,RWA,Africa,False
+77,Benin,13712828,0.0017,BEN,Africa,False
+78,Burundi,13238559,0.0016,BDI,Africa,False
+79,Tunisia,12458223,0.0015,TUN,Africa,False
+80,Bolivia,12388571,0.0015,BOL,America,False
+81,Haiti,11724763,0.0015,HTI,America,False
+82,Belgium,11686140,0.0015,BEL,Europe,False
+83,Jordan,11337052,0.0014,JOR,Asia,False
+84,Dominican Republic,11332972,0.0014,DOM,America,False
+85,Cuba,11194449,0.0014,CUB,America,False
+86,South Sudan,11088796,0.0014,SSD,Africa,False
+87,Sweden,10612086,0.0013,SWE,Europe,False
+88,Honduras,10593798,0.0013,HND,America,False
+89,Czechia,10495295,0.0013,CZE,Europe,False
+90,Azerbaijan,10412651,0.0013,AZE,Asia,False
+91,Greece,10341277,0.0013,GRC,Europe,False
+92,Papua New Guinea,10329931,0.0013,PNG,Oceania,False
+93,Portugal,10247605,0.0013,PRT,Europe,False
+94,Hungary,10156239,0.0013,HUN,Europe,False
+95,Tajikistan,10143543,0.0013,TJK,Asia,False
+96,United Arab Emirates,9516871,0.0012,ARE,Asia,False
+97,Belarus,9498238,0.0012,BLR,Europe,False
+98,Israel,9174520,0.0011,ISR,Asia,False
+99,Togo,9053799,0.0011,TGO,Africa,False
+100,Austria,8958960,0.0011,AUT,Europe,False
+101,Switzerland,8796669,0.0011,CHE,Europe,False
+102,Sierra Leone,8791092,0.0011,SLE,Africa,False
+103,Laos,7633779,0.0009,LAO,Asia,False
+104,Hong Kong,7491609,0.0009,HKG,Asia,False
+105,Serbia,7149077,0.0009,SRB,Europe,False
+106,Nicaragua,7046310,0.0009,NIC,America,False
+107,Libya,6888388,0.0009,LBY,Africa,False
+108,Paraguay,6861524,0.0009,PRY,America,False
+109,Kyrgyz Republic,6735347,0.0008,KGZ,Asia,False
+110,Bulgaria,6687717,0.0008,BGR,Europe,False
+111,Turkmenistan,6516100,0.0008,TKM,Asia,False
+112,El Salvador,6364943,0.0008,SLV,America,False
+113,Congo Republic,6106869,0.0008,COG,Africa,False
+114,Singapore,6014723,0.0007,SGP,Asia,False
+115,Denmark,5910913,0.0007,DNK,Europe,False
+116,Slovakia,5795199,0.0007,SVK,Europe,False
+117,Central African Republic,5742315,0.0007,CAF,Africa,False
+118,Finland,5545475,0.0007,FIN,Europe,False
+119,Norway,5474360,0.0007,NOR,Europe,False
+120,Liberia,5418377,0.0007,LBR,Africa,False
+121,Palestine,5371230,0.0007,PSE,Asia,False
+122,Lebanon,5353930,0.0007,LBN,Asia,False
+123,New Zealand,5228100,0.0006,NZL,Oceania,False
+124,Costa Rica,5212173,0.0006,CRI,America,False
+125,Ireland,5056935,0.0006,IRL,Europe,False
+126,Mauritania,4862989,0.0006,MRT,Africa,False
+127,Oman,4644384,0.0006,OMN,Asia,False
+128,Panama,4468087,0.0006,PAN,America,False
+129,Kuwait,4310108,0.0005,KWT,Asia,False
+130,Croatia,4008617,0.0005,HRV,Europe,False
+131,Eritrea,3748901,0.0005,ERI,Africa,False
+132,Georgia,3728282,0.0005,GEO,Asia,False
+133,Mongolia,3447157,0.0004,MNG,Asia,False
+134,Moldova,3435931,0.0004,MDA,Europe,False
+135,Uruguay,3423108,0.0004,URY,America,False
+136,Puerto Rico,3260314,0.0004,PRI,America,False
+137,Bosnia and Herzegovina,3210847,0.0004,BIH,Europe,False
+138,Albania,2832439,0.0004,ALB,Europe,False
+139,Jamaica,2825544,0.0004,JAM,America,False
+140,Armenia,2777970,0.0003,ARM,Asia,False
+141,Gambia,2773168,0.0003,GMB,Africa,False
+142,Lithuania,2718352,0.0003,LTU,Europe,False
+143,Qatar,2716391,0.0003,QAT,Asia,False
+144,Botswana,2675352,0.0003,BWA,Africa,False
+145,Namibia,2604172,0.0003,NAM,Africa,False
+146,Gabon,2436566,0.0003,GAB,Africa,False
+147,Lesotho,2330318,0.0003,LSO,Africa,False
+148,Guinea-Bissau,2150842,0.0003,GNB,Africa,False
+149,Slovenia,2119675,0.0003,SVN,Europe,False
+150,North Macedonia,2085679,0.0003,MKD,Europe,False
+151,Latvia,1830211,0.0002,LVA,Europe,False
+152,Equatorial Guinea,1714671,0.0002,GNQ,Africa,False
+153,Trinidad and Tobago,1534937,0.0002,TTO,America,False
+154,Bahrain,1485509,0.0002,BHR,Asia,False
+155,Timor-Leste,1360596,0.0002,TLS,Asia,False
+156,Estonia,1322765,0.0002,EST,Europe,False
+157,Mauritius,1300557,0.0002,MUS,Africa,False
+158,Cyprus,1260138,0.0002,CYP,Asia,False
+159,Eswatini,1210822,0.0002,SWZ,Africa,False
+160,Djibouti,1136455,0.0001,DJI,Africa,False
+161,Reunion,981796,0.0001,REU,Africa,False
+162,Fiji,936375,0.0001,FJI,Oceania,False
+163,Comoros,852075,0.0001,COM,Africa,False
+164,Guyana,813834,0.0001,GUY,America,False
+165,Bhutan,787424,0.0001,BTN,Asia,False
+166,Solomon Islands,740424,0.0001,SLB,Oceania,False
+167,Macau,704149,0.0001,MAC,Asia,False
+168,Luxembourg,654768,0.0001,LUX,Europe,False
+169,Montenegro,626485,0.0001,MNE,Europe,False
+170,Suriname,623236,0.0001,SUR,America,False
+171,Cabo Verde,598682,0.0001,CPV,Africa,False
+172,Western Sahara,587259,0.0001,ESH,Africa,False
+173,"Micronesia, Fed. Sts.",544321,0.0001,FSM,Oceania,False
+174,Malta,535064,0.0001,MLT,Europe,False
+175,Maldives,521021,0.0001,MDV,Asia,False
+176,Brunei Darussalam,452524,0.0001,BRN,Asia,False
+177,Bahamas,412623,0.0001,BHS,America,False
+178,Belize,410825,0.0001,BLZ,America,False
+179,Guadeloupe,395839,0.0,GLP,America,False
+180,Iceland,375318,0.0,ISL,Europe,False
+181,Martinique,366981,0.0,MTQ,America,False
+182,Mayotte,335995,0.0,MYT,Africa,False
+183,Vanuatu,334506,0.0,VUT,Oceania,False
+184,French Guiana,312155,0.0,GUF,America,False
+185,French Polynesia,308872,0.0,PYF,Oceania,False
+186,New Caledonia,292991,0.0,NCL,Oceania,False
+187,Barbados,281995,0.0,BRB,America,False
+188,Sao Tome and Principe,231856,0.0,STP,Africa,False
+189,Samoa,225681,0.0,WSM,Oceania,False
+190,Curacao,192077,0.0,CUW,America,False
+191,St. Lucia,180251,0.0,LCA,America,False
+192,Guam,172952,0.0,GUM,Oceania,False
+193,Kiribati,133515,0.0,KIR,Oceania,False
+194,Grenada,126183,0.0,GRD,America,False
+195,Tonga,107773,0.0,TON,Oceania,False
+196,Seychelles,107660,0.0,SYC,Africa,False
+197,Aruba,106277,0.0,ABW,America,False
+198,St. Vincent and the Grenadines,103698,0.0,VCT,America,False
+199,United States Virgin Islands,98750,0.0,VIR,America,False
+200,Antigua and Barbuda,94298,0.0,ATG,America,False
+201,Isle of Man,84710,0.0,IMN,Europe,False
+202,Andorra,80088,0.0,AND,Europe,False
+203,Dominica,73040,0.0,DMA,America,False
+204,Cayman Islands,69310,0.0,CYM,America,False
+205,Bermuda,64069,0.0,BMU,America,False
+206,Greenland,56643,0.0,GRL,America,False
+207,Faroe Islands,53270,0.0,FRO,Europe,False
+208,Northern Mariana Islands,49796,0.0,MNP,Oceania,False
+209,St. Kitts and Nevis,47755,0.0,KNA,America,False
+210,Turks and Caicos Islands,46062,0.0,TCA,America,False
+211,Sint Maarten,44222,0.0,SXM,America,False
+212,American Samoa,43914,0.0,ASM,Oceania,False
+213,Marshall Islands,41996,0.0,MHL,Oceania,False
+214,Liechtenstein,39584,0.0,LIE,Europe,False
+215,Monaco,36297,0.0,MCO,Europe,False
+216,San Marino,33642,0.0,SMR,Europe,False
+217,Gibraltar,32688,0.0,GIB,Europe,False
+218,Saint-Martin,32077,0.0,MAF,America,False
+219,British Virgin Islands,31538,0.0,VGB,America,False
+220,"Bonaire, Saint Eustatius and Saba",27148,0.0,BES,America,False
+221,Palau,18058,0.0,PLW,Oceania,False
+222,Cook Islands,17044,0.0,COK,Oceania,False
+223,Anguilla,15899,0.0,AIA,America,False
+224,Nauru,12780,0.0,NRU,Oceania,False
+225,Wallis and Futuna Islands,11502,0.0,WLF,Oceania,False
+226,Tuvalu,11396,0.0,TUV,Oceania,False
+227,St. Barths,10994,0.0,BLM,America,False
+228,St. Pierre and Miquelon,5840,0.0,SPM,America,False
+229,St. Helena,5314,0.0,SHN,Africa,False
+230,Montserrat,4386,0.0,MSR,America,False
+231,Falkland Islands,3791,0.0,FLK,America,False
+232,Niue,1935,0.0,NIU,Oceania,False
+233,Tokelau,1893,0.0,TKL,Oceania,False
+234,Vatican,518,0.0,VAT,Europe,False
