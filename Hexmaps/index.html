@@ -276,8 +276,10 @@
 
     <script src="d3.v7.js"></script>
     <script>
+        d3.select('#supermarketSelect').style("opacity", 0)
         const width = document.querySelector('.hexMap').clientWidth;
         const height = document.querySelector('.hexMap').clientHeight;
+
 
         const hexSvg = d3.select('.hexMap')
             .attr('width', width)
