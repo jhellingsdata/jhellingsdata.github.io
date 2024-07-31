@@ -30,17 +30,29 @@
         }
         table {
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
             border-collapse: collapse;
             margin-right: 20px;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        th {
             background-color: #f2f2f2;
+            text-align: center;
+        }
+        th.country {
             text-align: left;
+        }
+        td.country {
+            font-weight: bold;
+            text-align: left;
+        }
+        th, td {
+            border-bottom: 1px solid #ddd;
+            border-left: none;
+            border-right: none;
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
         .chart-container {
             width: 100%;
@@ -52,6 +64,10 @@
             align-items: center;
             border: 1px solid #ddd;
         }
+        #chart1 {
+            padding: 10px;
+            width: 90%;
+        }
     </style>
 </head>
 <body>
@@ -59,9 +75,9 @@
         <table id="medals-table">
             <thead>
                 <tr>
-                    <th>Rank</th>
-                    <th>Code</th>
-                    <th>Country</th>
+                    <th></th>
+                    <!-- <th>Code</th> -->
+                    <th class="country">Country</th>
                     <th>🥇</th>
                     <th>🥈</th>
                     <th>🥉</th>
@@ -91,10 +107,13 @@
                 if (columns.length === 8) {
                     const newRow = tableBody.insertRow();
                     // Skipping the 'sequence' column (index 1)
-                    const relevantColumns = [columns[0], columns[2], columns[3], columns[4], columns[5], columns[7], columns[6]];
-                    relevantColumns.forEach(column => {
+                    const relevantColumns = [columns[0], columns[3], columns[4], columns[5], columns[7], columns[6]];
+                    relevantColumns.forEach((column, index) => {
                         const newCell = newRow.insertCell();
                         newCell.textContent = column;
+                        if (index === 1) { // Country column
+                            newCell.classList.add('country');
+                        }
                     });
                 }
             });

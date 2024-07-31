@@ -1,6 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {
+      "background": "transparent",
       "font": "Circular Std",
       "text": {
         "color": "#676A86",
@@ -153,27 +154,42 @@
     "transform": [
     ],
     "title": {
-      "text": ""
+      "text": "Do rich countries send more athletes to the Olympics?",
+      "fontSize": 16,
+      "offset": 10
     },
+    "width": "container",
     "layer": [
       {
-        "mark": {"type": "point", "color": "#36B7B4"},
+        "mark": {
+          "type": "point",
+          "color": "#36B7B4",
+          "opacity": 0.8
+        },
         "encoding": {
           "x": {
             "field": "athletes",
             "type": "quantitative",
             "axis": {
-              "title": "Athletes"
+              "title": "Athletes at Paris 2024",
+              "gridOpacity": 0.3
             } 
           },
           "y": {
             "field": "GDP-pc",
             "type": "quantitative",
-            "title": "GDP per capita ($)"
+            "axis": {
+              "title": "GDP per capita ($)",
+              "gridOpacity": 0.3
+            } 
           },
           "size": {
             "field": "Population",
-            "type": "quantitative"
+            "type": "quantitative",
+            "scale": {
+              "range": [5, 400]
+            },
+            "legend": null
           }
         }
       },
