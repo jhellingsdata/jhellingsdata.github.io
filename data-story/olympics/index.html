@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paris Olympics</title>
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,9 +62,9 @@
                     <th>Rank</th>
                     <th>Code</th>
                     <th>Country</th>
-                    <th>Gold</th>
-                    <th>Silver</th>
-                    <th>Bronze</th>
+                    <th>🥇</th>
+                    <th>🥈</th>
+                    <th>🥉</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -69,10 +73,13 @@
             </tbody>
         </table>
         <div class="chart-container">
-            <p>Chart will be displayed here</p>
+            <!-- <p>Chart will be displayed here</p> -->
+            <chart id='chart1'></chart>
         </div>
     </div>
     <script>
+        vegaEmbed('#chart1', 'scatter.json', {"actions": false});
+
         async function loadMedalsData() {
             const response = await fetch('https://eco-data-cache.s3.eu-west-2.amazonaws.com/olympics/live_results/medals.csv');
             const data = await response.text();
@@ -84,7 +91,7 @@
                 if (columns.length === 8) {
                     const newRow = tableBody.insertRow();
                     // Skipping the 'sequence' column (index 1)
-                    const relevantColumns = [columns[0], columns[2], columns[3], columns[4], columns[5], columns[6], columns[7]];
+                    const relevantColumns = [columns[0], columns[2], columns[3], columns[4], columns[5], columns[7], columns[6]];
                     relevantColumns.forEach(column => {
                         const newCell = newRow.insertCell();
                         newCell.textContent = column;
