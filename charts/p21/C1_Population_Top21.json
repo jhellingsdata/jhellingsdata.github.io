@@ -1,0 +1,415 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-a564e69b249e1fea78728ff56611a802"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(218,77,82)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "labelExpr": "datum.value < 1e9 ? datum.value/1e6 + \"m\" : datum.value/1e9 + \"bn\""
+          },
+          "field": "Population",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Top 21 countries by population, 2023"
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: UN World Population Prospects 2022"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-a564e69b249e1fea78728ff56611a802"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Population < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Population < 0 ? -2 : 5"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "IND",
+                "GBR"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "labelExpr": "datum.value < 1e9 ? datum.value/1e6 + \"m\" : datum.value/1e9 + \"bn\""
+          },
+          "field": "Population",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Top 21 countries by population, 2023"
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-a564e69b249e1fea78728ff56611a802": [
+      {
+        "Rank": 1,
+        "Country": "India",
+        "ISO3": "IND",
+        "Population": 1428627663,
+        "Share": 0.1776,
+        "Source": "United Nations, via Worldometers 2023",
+        "label": "1.43bn"
+      },
+      {
+        "Rank": 2,
+        "Country": "China",
+        "ISO3": "CHN",
+        "Population": 1425671352,
+        "Share": 0.1772,
+        "Source": null,
+        "label": "1.43bn"
+      },
+      {
+        "Rank": 3,
+        "Country": "United States",
+        "ISO3": "USA",
+        "Population": 339996563,
+        "Share": 0.042300000000000004,
+        "Source": null,
+        "label": "340.00m"
+      },
+      {
+        "Rank": 4,
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Population": 277534122,
+        "Share": 0.0345,
+        "Source": null,
+        "label": "277.53m"
+      },
+      {
+        "Rank": 5,
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Population": 240485658,
+        "Share": 0.029900000000000003,
+        "Source": null,
+        "label": "240.49m"
+      },
+      {
+        "Rank": 6,
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Population": 223804632,
+        "Share": 0.0278,
+        "Source": null,
+        "label": "223.80m"
+      },
+      {
+        "Rank": 7,
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Population": 216422446,
+        "Share": 0.0269,
+        "Source": null,
+        "label": "216.42m"
+      },
+      {
+        "Rank": 8,
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Population": 172954319,
+        "Share": 0.0215,
+        "Source": null,
+        "label": "172.95m"
+      },
+      {
+        "Rank": 9,
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Population": 144444359,
+        "Share": 0.018000000000000002,
+        "Source": null,
+        "label": "144.44m"
+      },
+      {
+        "Rank": 10,
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Population": 128455567,
+        "Share": 0.016,
+        "Source": null,
+        "label": "128.46m"
+      },
+      {
+        "Rank": 11,
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Population": 126527060,
+        "Share": 0.015700000000000002,
+        "Source": null,
+        "label": "126.53m"
+      },
+      {
+        "Rank": 12,
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Population": 123294513,
+        "Share": 0.015300000000000001,
+        "Source": null,
+        "label": "123.29m"
+      },
+      {
+        "Rank": 13,
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Population": 117337368,
+        "Share": 0.0146,
+        "Source": null,
+        "label": "117.34m"
+      },
+      {
+        "Rank": 14,
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Population": 112716598,
+        "Share": 0.013999999999999999,
+        "Source": null,
+        "label": "112.72m"
+      },
+      {
+        "Rank": 15,
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Population": 102262808,
+        "Share": 0.0127,
+        "Source": null,
+        "label": "102.26m"
+      },
+      {
+        "Rank": 16,
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Population": 98858950,
+        "Share": 0.0123,
+        "Source": null,
+        "label": "98.86m"
+      },
+      {
+        "Rank": 17,
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Population": 89172767,
+        "Share": 0.0111,
+        "Source": null,
+        "label": "89.17m"
+      },
+      {
+        "Rank": 18,
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Population": 85816199,
+        "Share": 0.010700000000000001,
+        "Source": null,
+        "label": "85.82m"
+      },
+      {
+        "Rank": 19,
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Population": 83294633,
+        "Share": 0.0104,
+        "Source": null,
+        "label": "83.29m"
+      },
+      {
+        "Rank": 20,
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Population": 71801279,
+        "Share": 0.0089,
+        "Source": null,
+        "label": "71.80m"
+      },
+      {
+        "Rank": 21,
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Population": 67736802,
+        "Share": 0.0084,
+        "Source": null,
+        "label": "67.74m"
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ]
+  },
+  "width": 400,
+  "height": 300
+}

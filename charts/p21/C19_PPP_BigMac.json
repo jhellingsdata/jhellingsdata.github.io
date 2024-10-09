@@ -1,0 +1,564 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-a0a55d106695e8d630baff0f16eee66d"
+      },
+      "mark": {
+        "type": "rule",
+        "opacity": 0.6,
+        "size": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-1bf7596079915c01d6354fb20d756954"
+      },
+      "mark": {
+        "type": "rule"
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "(datum.Value < 0)",
+            "value": "rgb(218,77,82)"
+          },
+          "value": "rgb(126,179,215)"
+        },
+        "x": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Purchasing Power Parities",
+        "subtitle": [
+          "Fair exchange rate to US$ according to local Big Mac prices, 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-1bf7596079915c01d6354fb20d756954"
+      },
+      "mark": {
+        "type": "point"
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "(datum.Value < 0)",
+            "value": "rgb(218,77,82)"
+          },
+          "value": "rgb(126,179,215)"
+        },
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "%",
+            "zindex": 0
+          },
+          "field": "Value",
+          "scale": {
+            "padding": 45,
+            "nice": false
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Purchasing Power Parities",
+        "subtitle": [
+          "Fair exchange rate to US$ according to local Big Mac prices, 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: Economist Intelligence Unit"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-1bf7596079915c01d6354fb20d756954"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Value < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Value < 0 ? -5 : 5"
+        }
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "(datum.Value < 0)",
+            "value": "rgb(218,77,82)"
+          },
+          "value": "rgb(126,179,215)"
+        },
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "GBR",
+                "IDN"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Value",
+          "format": ",.1%",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "%",
+            "zindex": 0
+          },
+          "field": "Value",
+          "scale": {
+            "padding": 45,
+            "nice": false
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Purchasing Power Parities",
+        "subtitle": [
+          "Fair exchange rate to US$ according to local Big Mac prices, 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-2777f6fe55cc345414c562bc18a4a929"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "color": "rgb(126,179,215)",
+        "dx": 5,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 290
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-0c163984336d6efa0c5ec056b0b143ea"
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "color": "rgb(218,77,82)",
+        "dx": -5,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 290
+        }
+      }
+    },
+    {
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "dimgrey",
+            "opacity": 0.7
+          },
+          "encoding": {
+            "x": {
+              "value": 10
+            },
+            "y": {
+              "value": 210
+            },
+            "y2": {
+              "value": 290
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-up"
+          },
+          "encoding": {
+            "x": {
+              "value": 10
+            },
+            "y": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-down"
+          },
+          "encoding": {
+            "x": {
+              "value": 10
+            },
+            "y": {
+              "value": 290
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "color": "dimgrey",
+            "dx": 4,
+            "dy": -6,
+            "lineBreak": "\n",
+            "opacity": 0.6
+          },
+          "encoding": {
+            "text": {
+              "value": "Missing\ndata"
+            },
+            "x": {
+              "value": 10
+            },
+            "y": {
+              "value": 250.0
+            }
+          }
+        }
+      ],
+      "data": {
+        "name": "data-1bfe8cbde6452f2dc115a7e224ce2bfe"
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-a0a55d106695e8d630baff0f16eee66d": [
+      {
+        "y": 0
+      }
+    ],
+    "data-1bf7596079915c01d6354fb20d756954": [
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Value": -0.15482
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Value": -0.38988
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Value": -0.5165500000000001
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Value": 0.0035800000000000003
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Value": -0.57286
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Value": -0.54512
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Value": -0.46513000000000004
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Value": -0.08735000000000001
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Value": -0.33094
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Value": -0.49742000000000003
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Value": -0.33499
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Value": -0.30293000000000003
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Value": 0.0
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Value": -0.47058000000000005
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Value": null
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Value": null
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Value": null
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Value": null
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-2777f6fe55cc345414c562bc18a4a929": [
+      {
+        "x": 0,
+        "text": "Overvalued"
+      }
+    ],
+    "data-0c163984336d6efa0c5ec056b0b143ea": [
+      {
+        "x": 0,
+        "text": "Undervalued"
+      }
+    ],
+    "data-1bfe8cbde6452f2dc115a7e224ce2bfe": [
+      {
+        "x": -0.68
+      }
+    ]
+  }
+}

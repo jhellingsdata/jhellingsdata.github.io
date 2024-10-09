@@ -1,0 +1,420 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-0d6e1db79c25dcf101d52ef904c20587"
+      },
+      "mark": {
+        "type": "bar"
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "(datum.Country === 'Rest of World')",
+            "value": "grey"
+          },
+          "value": "rgb(218,77,82)"
+        },
+        "x": {
+          "axis": {
+            "tickCount": 5
+          },
+          "field": "Total fertility rate",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Total Fertility Rate",
+        "anchor": "start"
+      }
+    },
+    {
+      "data": {
+        "name": "data-e366e5af3cf6122e1aac90b6472a19e5"
+      },
+      "mark": {
+        "type": "rule",
+        "color": "dimgrey",
+        "size": 2.5,
+        "strokeDash": [
+          4,
+          1
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-e366e5af3cf6122e1aac90b6472a19e5"
+      },
+      "mark": {
+        "type": "text",
+        "color": "grey",
+        "dx": 4
+      },
+      "encoding": {
+        "text": {
+          "value": "Replenishment rate (2.1)"
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 290
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: UN, World Population Dashboard 2024"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-0d6e1db79c25dcf101d52ef904c20587": [
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Population": 174.7,
+        "Pop. doubling time": 70,
+        "Total fertility rate": 1.9,
+        "Life expectancy (male)": 72,
+        "Life expectancy (female)": 77
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Population": 217.6,
+        "Pop. doubling time": 127,
+        "Total fertility rate": 1.6,
+        "Life expectancy (male)": 73,
+        "Life expectancy (female)": 79
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Population": 1425.2,
+        "Pop. doubling time": "-",
+        "Total fertility rate": 1.2,
+        "Life expectancy (male)": 76,
+        "Life expectancy (female)": 82
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Population": 105.6,
+        "Pop. doubling time": 21,
+        "Total fertility rate": 6.0,
+        "Life expectancy (male)": 59,
+        "Life expectancy (female)": 63
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Population": 114.5,
+        "Pop. doubling time": 44,
+        "Total fertility rate": 2.8,
+        "Life expectancy (male)": 70,
+        "Life expectancy (female)": 75
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Population": 129.7,
+        "Pop. doubling time": 28,
+        "Total fertility rate": 3.9,
+        "Life expectancy (male)": 64,
+        "Life expectancy (female)": 70
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Population": 83.3,
+        "Pop. doubling time": "-",
+        "Total fertility rate": 1.5,
+        "Life expectancy (male)": 80,
+        "Life expectancy (female)": 85
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Population": 1441.7,
+        "Pop. doubling time": 77,
+        "Total fertility rate": 2.0,
+        "Life expectancy (male)": 71,
+        "Life expectancy (female)": 74
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Population": 279.8,
+        "Pop. doubling time": 87,
+        "Total fertility rate": 2.1,
+        "Life expectancy (male)": 69,
+        "Life expectancy (female)": 73
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Population": 89.8,
+        "Pop. doubling time": 101,
+        "Total fertility rate": 1.7,
+        "Life expectancy (male)": 75,
+        "Life expectancy (female)": 80
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Population": 122.6,
+        "Pop. doubling time": "-",
+        "Total fertility rate": 1.3,
+        "Life expectancy (male)": 82,
+        "Life expectancy (female)": 88
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Population": 129.4,
+        "Pop. doubling time": 97,
+        "Total fertility rate": 1.8,
+        "Life expectancy (male)": 72,
+        "Life expectancy (female)": 79
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Population": 229.2,
+        "Pop. doubling time": 29,
+        "Total fertility rate": 5.0,
+        "Life expectancy (male)": 54,
+        "Life expectancy (female)": 55
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Population": 245.2,
+        "Pop. doubling time": 36,
+        "Total fertility rate": 3.3,
+        "Life expectancy (male)": 65,
+        "Life expectancy (female)": 70
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Population": 119.1,
+        "Pop. doubling time": 47,
+        "Total fertility rate": 2.7,
+        "Life expectancy (male)": 70,
+        "Life expectancy (female)": 74
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Population": 144.0,
+        "Pop. doubling time": "-",
+        "Total fertility rate": 1.5,
+        "Life expectancy (male)": 70,
+        "Life expectancy (female)": 79
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Population": 71.9,
+        "Pop. doubling time": "-",
+        "Total fertility rate": 1.3,
+        "Life expectancy (male)": 76,
+        "Life expectancy (female)": 84
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Population": 86.3,
+        "Pop. doubling time": 137,
+        "Total fertility rate": 1.9,
+        "Life expectancy (male)": 76,
+        "Life expectancy (female)": 82
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Population": 68.0,
+        "Pop. doubling time": "-",
+        "Total fertility rate": 1.6,
+        "Life expectancy (male)": 81,
+        "Life expectancy (female)": 84
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Population": 341.8,
+        "Pop. doubling time": 132,
+        "Total fertility rate": 1.7,
+        "Life expectancy (male)": 77,
+        "Life expectancy (female)": 82
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Population": 99.5,
+        "Pop. doubling time": 111,
+        "Total fertility rate": 1.9,
+        "Life expectancy (male)": 70,
+        "Life expectancy (female)": 80
+      }
+    ],
+    "data-e366e5af3cf6122e1aac90b6472a19e5": [
+      {
+        "x": 2.1
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ]
+  }
+}

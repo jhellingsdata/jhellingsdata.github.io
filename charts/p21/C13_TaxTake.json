@@ -1,0 +1,363 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-4762a7160225297dade4d9eba6486468"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(223,190,99)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "%",
+            "zindex": 1
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Government Revenue",
+        "subtitle": [
+          "% of GDP, 2023"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: IMF Fiscal Monitor"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-4762a7160225297dade4d9eba6486468"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Value < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Value < 0 ? -2 : 5"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "DEU",
+                "ETH"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Value",
+          "format": ",.1%",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "format": "%",
+            "zindex": 1
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Government Revenue",
+        "subtitle": [
+          "% of GDP, 2023"
+        ]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-4762a7160225297dade4d9eba6486468": [
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Population (2024)": 1428627663,
+        "Value": 0.1937151736892
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Population (2024)": 1425671352,
+        "Value": 0.26515612756241497
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Population (2024)": 339996564,
+        "Value": 0.29297093819056497
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Population (2024)": 277534123,
+        "Value": 0.150617476991391
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Population (2024)": 240485658,
+        "Value": 0.11419277288344899
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Population (2024)": 223804632,
+        "Value": 0.0926091788839361
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Population (2024)": 216422446,
+        "Value": 0.41108879523421105
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Population (2024)": 172954319,
+        "Value": 0.08264798655221339
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Population (2024)": 144444359,
+        "Value": 0.32412864986190004
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Population (2024)": 128455567,
+        "Value": 0.238285721226002
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Population (2024)": 126527060,
+        "Value": 0.07723861946420621
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Population (2024)": 123294513,
+        "Value": 0.367454324094999
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Population (2024)": 117337368,
+        "Value": 0.200401815414845
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Population (2024)": 112716599,
+        "Value": 0.18145996058403
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Population (2024)": 102262809,
+        "Value": 0.14402842309999
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Population (2024)": 98858950,
+        "Value": 0.18394161377284401
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Population (2024)": 89172767,
+        "Value": 0.08251999415743161
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Population (2024)": 85816199,
+        "Value": 0.29067409822769397
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Population (2024)": 83294633,
+        "Value": 0.464300713062795
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Population (2024)": 71801279,
+        "Value": 0.200429208108782
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Population (2024)": 67736802,
+        "Value": 0.39759476074709
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ]
+  }
+}

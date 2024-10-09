@@ -1,0 +1,527 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-c63a41a698bfd1a15046c75a30e2c97a"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(126,179,215)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "zindex": 1,
+            "tickCount": 6,
+            "format": "%"
+          },
+          "field": "Value",
+          "scale": {
+            "padding": 35
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Investment Position",
+        "subtitle": [
+          "Net international investment position, with fund record, % of GDP, 2023"
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "format(datum.Value, \".1%\")",
+          "as": "text_label"
+        }
+      ]
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: IMF, World Economic Outlook (April 2024)"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-c63a41a698bfd1a15046c75a30e2c97a"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Value < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Value < 0 ? -2 : 5"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "JPN",
+                "USA"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "text_label",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "zindex": 1,
+            "tickCount": 6,
+            "format": "%"
+          },
+          "field": "Value",
+          "scale": {
+            "padding": 35
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Investment Position",
+        "subtitle": [
+          "Net international investment position, with fund record, % of GDP, 2023"
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "format(datum.Value, \".1%\")",
+          "as": "text_label"
+        }
+      ]
+    },
+    {
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "dimgrey",
+            "opacity": 0.7
+          },
+          "encoding": {
+            "x": {
+              "value": 9
+            },
+            "y": {
+              "value": 267
+            },
+            "y2": {
+              "value": 293
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-up"
+          },
+          "encoding": {
+            "x": {
+              "value": 9
+            },
+            "y": {
+              "value": 267
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-down"
+          },
+          "encoding": {
+            "x": {
+              "value": 9
+            },
+            "y": {
+              "value": 293
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "color": "dimgrey",
+            "dx": 6,
+            "dy": -6,
+            "lineBreak": "\n",
+            "opacity": 0.6
+          },
+          "encoding": {
+            "text": {
+              "value": "Missing\ndata"
+            },
+            "x": {
+              "value": 9
+            },
+            "y": {
+              "value": 280.0
+            }
+          }
+        }
+      ],
+      "data": {
+        "name": "data-1bfe8cbde6452f2dc115a7e224ce2bfe"
+      }
+    },
+    {
+      "data": {
+        "name": "data-a0a55d106695e8d630baff0f16eee66d"
+      },
+      "mark": {
+        "type": "rule",
+        "opacity": 0.6,
+        "size": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-c63a41a698bfd1a15046c75a30e2c97a": [
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Year": "2020",
+        "NIIP": -24.40313337097944,
+        "GDP": 67.268,
+        "Value": -0.3627747721201677
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Year": "2021",
+        "NIIP": 486.58512557041144,
+        "GDP": 1997.03,
+        "Value": 0.24365438955369295
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Year": "2022",
+        "NIIP": -133.08300725396805,
+        "GDP": 338.237,
+        "Value": -0.3934608196441195
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Year": "2023",
+        "NIIP": -92.31031819273717,
+        "GDP": 446.349,
+        "Value": -0.20681197491814068
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Year": "2023",
+        "NIIP": -967.4007527508985,
+        "GDP": 2173.671,
+        "Value": -0.44505389856647976
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Year": "2023",
+        "NIIP": 2908.2039487625293,
+        "GDP": 17662.041,
+        "Value": 0.16465843040238268
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Year": "2023",
+        "NIIP": -265.2166192449084,
+        "GDP": 393.909,
+        "Value": -0.6732941345460712
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Year": "2023",
+        "NIIP": 3204.612653065849,
+        "GDP": 4457.366,
+        "Value": 0.7189476145925304
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Year": "2023",
+        "NIIP": -396.072737224038,
+        "GDP": 3572.078,
+        "Value": -0.11088020396644138
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Year": "2023",
+        "NIIP": -260.2600168641256,
+        "GDP": 1371.171,
+        "Value": -0.18980857738686538
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Year": "2023",
+        "NIIP": 3437.7639672085184,
+        "GDP": 4212.944,
+        "Value": 0.8160003947853373
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Year": "2023",
+        "NIIP": -725.1905020409143,
+        "GDP": 1788.897,
+        "Value": -0.40538415685247076
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Year": "2023",
+        "NIIP": -84.80945668069305,
+        "GDP": 374.947,
+        "Value": -0.2261905194085912
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Year": "2023",
+        "NIIP": -51.342993204673036,
+        "GDP": 436.622,
+        "Value": -0.11759140218466553
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Year": "2023",
+        "NIIP": 37.464265903190274,
+        "GDP": 514.945,
+        "Value": 0.07275391722065516
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Year": "2023",
+        "NIIP": -285.3438133415622,
+        "GDP": 1108.453,
+        "Value": -0.25742527048198005
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Year": "2023",
+        "NIIP": -1050.5417880421007,
+        "GDP": 3344.744,
+        "Value": -0.3140873525872535
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Year": "2023",
+        "NIIP": -19767.960374771246,
+        "GDP": 27357.825,
+        "Value": -0.7225706127870635
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Year": null,
+        "NIIP": null,
+        "GDP": null,
+        "Value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Year": null,
+        "NIIP": null,
+        "GDP": null,
+        "Value": null
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Year": null,
+        "NIIP": null,
+        "GDP": null,
+        "Value": null
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-1bfe8cbde6452f2dc115a7e224ce2bfe": [
+      {
+        "x": -0.68
+      }
+    ],
+    "data-a0a55d106695e8d630baff0f16eee66d": [
+      {
+        "y": 0
+      }
+    ]
+  }
+}

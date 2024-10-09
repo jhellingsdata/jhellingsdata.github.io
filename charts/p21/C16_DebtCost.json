@@ -1,0 +1,535 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-01d3e8fa8b506cbe1cdfbe9723a1cf12"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(223,190,99)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Global Bond Yields",
+        "subtitle": [
+          "Major 10-year bonds, as of 23rd May 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: Trading Economics"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-01d3e8fa8b506cbe1cdfbe9723a1cf12"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Value < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Value < 0 ? -2 : 4"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "TUR",
+                "JPN"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Value",
+          "format": ".2%",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Global Bond Yields",
+        "subtitle": [
+          "Major 10-year bonds, as of 23rd May 2024"
+        ]
+      }
+    },
+    {
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "dimgrey",
+            "opacity": 0.7
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 240
+            },
+            "y2": {
+              "value": 290
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-up"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 240
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "opacity": 0.7,
+            "shape": "triangle-down"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 290
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "color": "dimgrey",
+            "dx": 4,
+            "dy": -6,
+            "lineBreak": "\n",
+            "opacity": 0.6
+          },
+          "encoding": {
+            "text": {
+              "value": "Missing\ndata"
+            },
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 265.0
+            }
+          }
+        }
+      ],
+      "data": {
+        "name": "data-765fb80cd5a13872c53debac485ed9ef"
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-01d3e8fa8b506cbe1cdfbe9723a1cf12": [
+      {
+        "Country": "Nigeria",
+        "Value": 0.19366,
+        "Day": "\u00a00.0030",
+        "Weekly": 0.0006,
+        "Monthly": -0.0016,
+        "YoY": 0.0488,
+        "Date": "2022-05-01",
+        "ISO3": "NGA"
+      },
+      {
+        "Country": "Japan",
+        "Value": 0.010029999999999999,
+        "Day": "\u00a00.0022",
+        "Weekly": 0.0008,
+        "Monthly": 0.0011,
+        "YoY": 0.006,
+        "Date": "2023-05-01",
+        "ISO3": "JPN"
+      },
+      {
+        "Country": "India",
+        "Value": 0.06997,
+        "Day": "\u00a00.0810",
+        "Weekly": -0.0009,
+        "Monthly": -0.0017,
+        "YoY": -0.0002,
+        "Date": "2022-05-01",
+        "ISO3": "IND"
+      },
+      {
+        "Country": "China",
+        "Value": 0.023170000000000003,
+        "Day": "\u00a00.0065",
+        "Weekly": 0.0,
+        "Monthly": 0.0004,
+        "YoY": -0.0039,
+        "Date": "2023-05-01",
+        "ISO3": "CHN"
+      },
+      {
+        "Country": "Thailand",
+        "Value": 0.028295,
+        "Day": "\u00a00.0005",
+        "Weekly": 0.0009,
+        "Monthly": 0.0007,
+        "YoY": 0.0027,
+        "Date": "2023-05-01",
+        "ISO3": "THA"
+      },
+      {
+        "Country": "Vietnam",
+        "Value": 0.029529999999999997,
+        "Day": "\u00a00.0690",
+        "Weekly": 0.0009,
+        "Monthly": 0.0003,
+        "YoY": -0.0019,
+        "Date": "2023-05-01",
+        "ISO3": "VNM"
+      },
+      {
+        "Country": "Indonesia",
+        "Value": 0.06949,
+        "Day": "\u00a00.0260",
+        "Weekly": -0.0009,
+        "Monthly": -0.0011,
+        "YoY": 0.0052,
+        "Date": "2022-05-01",
+        "ISO3": "IDN"
+      },
+      {
+        "Country": "Pakistan",
+        "Value": 0.14554,
+        "Day": "\u00a00.0005",
+        "Weekly": -0.0006,
+        "Monthly": -0.0007,
+        "YoY": -0.0053,
+        "Date": "2023-05-01",
+        "ISO3": "PAK"
+      },
+      {
+        "Country": "Philippines",
+        "Value": 0.06768,
+        "Day": "\u00a00.0285",
+        "Weekly": -0.0008,
+        "Monthly": -0.0008,
+        "YoY": 0.0082,
+        "Date": "2023-05-01",
+        "ISO3": "PHL"
+      },
+      {
+        "Country": "United States",
+        "Value": 0.04423,
+        "Day": "\u00a00.0027",
+        "Weekly": 0.0005,
+        "Monthly": -0.0022,
+        "YoY": 0.0071,
+        "Date": "2024-05-23",
+        "ISO3": "USA"
+      },
+      {
+        "Country": "Brazil",
+        "Value": 0.11810000000000001,
+        "Day": "\u00a00.1400",
+        "Weekly": 0.0015,
+        "Monthly": 0.0034,
+        "YoY": -0.0008,
+        "Date": "2022-05-01",
+        "ISO3": "BRA"
+      },
+      {
+        "Country": "Mexico",
+        "Value": 0.10086,
+        "Day": "\u00a00.0005",
+        "Weekly": 0.0008,
+        "Monthly": -0.0024,
+        "YoY": 0.0116,
+        "Date": "2023-05-01",
+        "ISO3": "MEX"
+      },
+      {
+        "Country": "United Kingdom",
+        "Value": 0.04222000000000001,
+        "Day": "\u00a00.014",
+        "Weekly": 0.0014,
+        "Monthly": -0.0011,
+        "YoY": 0.0001,
+        "Date": "2024-05-23",
+        "ISO3": "GBR"
+      },
+      {
+        "Country": "Germany",
+        "Value": 0.02544,
+        "Day": "\u00a00.006",
+        "Weekly": 0.0009,
+        "Monthly": -0.0005,
+        "YoY": 0.0009,
+        "Date": "2024-05-23",
+        "ISO3": "DEU"
+      },
+      {
+        "Country": "Russia",
+        "Value": 0.1436,
+        "Day": "\u00a00.12",
+        "Weekly": -0.0069,
+        "Monthly": 0.0011,
+        "YoY": 0.0362,
+        "Date": "2024-05-23",
+        "ISO3": "RUS"
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "Value": 0.2764,
+        "Day": "\u00a00.2150",
+        "Weekly": 0.002,
+        "Monthly": 0.0061,
+        "YoY": 0.1877,
+        "Date": "2022-05-01",
+        "ISO3": "TUR"
+      },
+      {
+        "Country": "Bangladesh",
+        "Value": null,
+        "Day": null,
+        "Weekly": null,
+        "Monthly": null,
+        "YoY": null,
+        "Date": null,
+        "ISO3": "BGD"
+      },
+      {
+        "Country": "Ethiopia",
+        "Value": null,
+        "Day": null,
+        "Weekly": null,
+        "Monthly": null,
+        "YoY": null,
+        "Date": null,
+        "ISO3": "ETH"
+      },
+      {
+        "Country": "Egypt",
+        "Value": null,
+        "Day": null,
+        "Weekly": null,
+        "Monthly": null,
+        "YoY": null,
+        "Date": null,
+        "ISO3": "EGY"
+      },
+      {
+        "Country": "DR Congo",
+        "Value": null,
+        "Day": null,
+        "Weekly": null,
+        "Monthly": null,
+        "YoY": null,
+        "Date": null,
+        "ISO3": "COD"
+      },
+      {
+        "Country": "Iran",
+        "Value": null,
+        "Day": null,
+        "Weekly": null,
+        "Monthly": null,
+        "YoY": null,
+        "Date": null,
+        "ISO3": "IRN"
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-765fb80cd5a13872c53debac485ed9ef": [
+      {
+        "x": 0.007
+      }
+    ]
+  }
+}

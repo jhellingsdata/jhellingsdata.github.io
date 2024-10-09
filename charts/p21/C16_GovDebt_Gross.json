@@ -1,0 +1,363 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-22a30738783ed9e96cba387accc2dbd3"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(223,190,99)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Government Debt",
+        "subtitle": [
+          "Gross debt position, % of GDP, 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: IMF Fiscal Monitor"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-22a30738783ed9e96cba387accc2dbd3"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Value < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Value < 0 ? -2 : 4"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "JPN",
+                "COD"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Value",
+          "format": ".2%",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Government Debt",
+        "subtitle": [
+          "Gross debt position, % of GDP, 2024"
+        ]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-22a30738783ed9e96cba387accc2dbd3": [
+      {
+        "Year": "2024-01-01",
+        "Value": 0.82482845333472,
+        "ISO3": "IND",
+        "Country": "India"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.8858107880766801,
+        "ISO3": "CHN",
+        "Country": "China"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 1.2325550634323,
+        "ISO3": "USA",
+        "Country": "United States"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.39312691247354004,
+        "ISO3": "IDN",
+        "Country": "Indonesia"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.7180251666906101,
+        "ISO3": "PAK",
+        "Country": "Pakistan"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.46588357879070996,
+        "ISO3": "NGA",
+        "Country": "Nigeria"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.86724005927579,
+        "ISO3": "BRA",
+        "Country": "Brazil"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.41401703770687,
+        "ISO3": "BGD",
+        "Country": "Bangladesh"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.20762340575191998,
+        "ISO3": "RUS",
+        "Country": "Russia"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.55550113463744,
+        "ISO3": "MEX",
+        "Country": "Mexico"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.30462139090461,
+        "ISO3": "ETH",
+        "Country": "Ethiopia"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 2.5455644460763,
+        "ISO3": "JPN",
+        "Country": "Japan"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.5687721378496601,
+        "ISO3": "PHL",
+        "Country": "Philippines"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.9636574844374699,
+        "ISO3": "EGY",
+        "Country": "Egypt"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.11061994490749001,
+        "ISO3": "COD",
+        "Country": "DR Congo"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.33450212026136,
+        "ISO3": "VNM",
+        "Country": "Vietnam"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.25542647139012997,
+        "ISO3": "IRN",
+        "Country": "Iran"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.30872968660053,
+        "ISO3": "TUR",
+        "Country": "T\u00fcrkiye"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.63745031064633,
+        "ISO3": "DEU",
+        "Country": "Germany"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 0.6451046200428201,
+        "ISO3": "THA",
+        "Country": "Thailand"
+      },
+      {
+        "Year": "2024-01-01",
+        "Value": 1.0434655722977,
+        "ISO3": "GBR",
+        "Country": "United Kingdom"
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ]
+  }
+}

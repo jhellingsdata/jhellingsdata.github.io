@@ -1,0 +1,460 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-d80b91678f1d914de5e1c3a134d08a9d"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(107,188,162)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "zindex": 1
+          },
+          "field": "Gini",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Gini Coefficients",
+        "subtitle": [
+          "Pre-tax national income Gini coefficients based on equal-split adults, 2022"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: World Inequality Database"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-d80b91678f1d914de5e1c3a134d08a9d"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Gini < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Gini < 0 ? -2 : 5"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "MEX",
+                "GBR"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Gini",
+          "format": ",.2",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "tickCount": 6,
+            "zindex": 1
+          },
+          "field": "Gini",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Gini Coefficients",
+        "subtitle": [
+          "Pre-tax national income Gini coefficients based on equal-split adults, 2022"
+        ]
+      }
+    },
+    {
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "dimgrey",
+            "opacity": 0.7
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 90
+            },
+            "y2": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "shape": "triangle-up"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 90
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "dimgrey",
+            "shape": "triangle-down"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 210
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "color": "dimgrey",
+            "dx": 6,
+            "lineBreak": "\n",
+            "opacity": 0.5
+          },
+          "encoding": {
+            "text": {
+              "value": "More \nunequal"
+            },
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 100
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "color": "dimgrey",
+            "dx": 6,
+            "dy": -9,
+            "lineBreak": "\n",
+            "opacity": 0.5
+          },
+          "encoding": {
+            "text": {
+              "value": "More \nequal"
+            },
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "value": 200
+            }
+          }
+        }
+      ],
+      "data": {
+        "name": "data-c2e1511c5b1655dd394546af779a70f0"
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-d80b91678f1d914de5e1c3a134d08a9d": [
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Gini": 0.473169555512
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Gini": 0.680345786187
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Gini": 0.565235900876
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Gini": 0.603470415083
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Gini": 0.571385358793
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Gini": 0.554313415304
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Gini": 0.460040383465
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Gini": 0.633618147881
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Gini": 0.53092529943
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Gini": 0.613275368174
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Gini": 0.53641953733
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Gini": 0.748809314353
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Gini": 0.545149203899
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Gini": 0.545353493337
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Gini": 0.603986277172
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Gini": 0.581996631745
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Gini": 0.638397453894
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Gini": 0.601108193179
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Gini": 0.626775383696
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Gini": 0.457286219701
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Gini": 0.578893475996
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ],
+    "data-c2e1511c5b1655dd394546af779a70f0": [
+      {
+        "x": 0.85
+      }
+    ]
+  }
+}

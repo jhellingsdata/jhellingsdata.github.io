@@ -1,0 +1,8199 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "area": {
+      "opacity": 0.3
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "dx": 24,
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 0
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-a0a55d106695e8d630baff0f16eee66d"
+      },
+      "mark": {
+        "type": "rule",
+        "color": "dimgrey",
+        "size": 2,
+        "strokeDash": [
+          4,
+          2
+        ]
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-b398eaf97ad6e4ebc8c1c87ffc1cdb07"
+      },
+      "mark": {
+        "type": "line",
+        "color": "rgb(126,179,215)",
+        "opacity": 0.5
+      },
+      "encoding": {
+        "detail": {
+          "field": "Country",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        }
+      },
+      "title": {
+        "text": "Growth Trajectories",
+        "anchor": "start",
+        "dx": 0,
+        "fontSize": 14,
+        "frame": "group",
+        "offset": 6,
+        "subtitle": [
+          "GDP per capita (constant 2015 $), 1960=0, logs"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-b398eaf97ad6e4ebc8c1c87ffc1cdb07"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "color": "rgb(126,179,215)",
+        "dx": 2
+      },
+      "encoding": {
+        "text": {
+          "field": "Country",
+          "type": "nominal"
+        },
+        "x": {
+          "aggregate": "max",
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "aggregate": {
+            "argmax": "Date"
+          },
+          "field": "value",
+          "type": "quantitative"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "ISO3",
+            "oneOf": [
+              "CHN",
+              "THA",
+              "IND",
+              "BGD",
+              "GBR",
+              "IRN",
+              "NGA",
+              "COD"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: World Bank"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-a0a55d106695e8d630baff0f16eee66d": [
+      {
+        "y": 0
+      }
+    ],
+    "data-b398eaf97ad6e4ebc8c1c87ffc1cdb07": [
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1961-01-01",
+        "value": 0.029751032882844124
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1962-01-01",
+        "value": 0.05286844760690629
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1963-01-01",
+        "value": 0.018220956574514127
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1964-01-01",
+        "value": 0.09211179286841165
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1965-01-01",
+        "value": 0.0781039294717818
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1966-01-01",
+        "value": 0.07372182458617368
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1967-01-01",
+        "value": 0.02472255524208458
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1968-01-01",
+        "value": 0.08538371681911898
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1969-01-01",
+        "value": 0.06869735521388
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1970-01-01",
+        "value": 0.09826212481837095
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1971-01-01",
+        "value": 0.02963154503989106
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1972-01-01",
+        "value": -0.13497967478815331
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1973-01-01",
+        "value": -0.1278627741239269
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1974-01-01",
+        "value": -0.061295702703269325
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1975-01-01",
+        "value": -0.12677751422889816
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1976-01-01",
+        "value": -0.09394564431018046
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1977-01-01",
+        "value": -0.09031795554581881
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1978-01-01",
+        "value": -0.04561669695446786
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1979-01-01",
+        "value": -0.02219501833923911
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1980-01-01",
+        "value": -0.0384187756477382
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1981-01-01",
+        "value": 0.005258097917531875
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1982-01-01",
+        "value": -0.001104727730474357
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1983-01-01",
+        "value": 0.009240028417333856
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1984-01-01",
+        "value": 0.029186776077592243
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1985-01-01",
+        "value": 0.03646612133121346
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1986-01-01",
+        "value": 0.05353807534607073
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1987-01-01",
+        "value": 0.06824373864854877
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1988-01-01",
+        "value": 0.07047640175064793
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1989-01-01",
+        "value": 0.07720353108210874
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1990-01-01",
+        "value": 0.11064188159173954
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1991-01-01",
+        "value": 0.12553513170072883
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1992-01-01",
+        "value": 0.16012715424482732
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1993-01-01",
+        "value": 0.1870582949227582
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1994-01-01",
+        "value": 0.2060439935222533
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1995-01-01",
+        "value": 0.2373215654367436
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1996-01-01",
+        "value": 0.26402434961180893
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1997-01-01",
+        "value": 0.2900671444566989
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1998-01-01",
+        "value": 0.32178041890145603
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "1999-01-01",
+        "value": 0.34827352772069436
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2000-01-01",
+        "value": 0.3807978404728635
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2001-01-01",
+        "value": 0.4113312811128706
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2002-01-01",
+        "value": 0.430365862751561
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2003-01-01",
+        "value": 0.45920726736536277
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2004-01-01",
+        "value": 0.49366418278457835
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2005-01-01",
+        "value": 0.5417966850542565
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2006-01-01",
+        "value": 0.5942784148222003
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2007-01-01",
+        "value": 0.6519733989626735
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2008-01-01",
+        "value": 0.7014940605052435
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2009-01-01",
+        "value": 0.7419129575906186
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2010-01-01",
+        "value": 0.7847184364773622
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2011-01-01",
+        "value": 0.8351693244689439
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2012-01-01",
+        "value": 0.8859098817523269
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2013-01-01",
+        "value": 0.9316355639346708
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2014-01-01",
+        "value": 0.9780207358224636
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2015-01-01",
+        "value": 1.0295790727561638
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2016-01-01",
+        "value": 1.0859897497496735
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2017-01-01",
+        "value": 1.1373144124137728
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2018-01-01",
+        "value": 1.196339949075977
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2019-01-01",
+        "value": 1.261075210835995
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2020-01-01",
+        "value": 1.2835322461756284
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2021-01-01",
+        "value": 1.3391244533110505
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Date": "2022-01-01",
+        "value": 1.3969672786113225
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1961-01-01",
+        "value": 0.052348621007020237
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1962-01-01",
+        "value": 0.08658316496885188
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1963-01-01",
+        "value": 0.06315207178977188
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1964-01-01",
+        "value": 0.06763843485065806
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1965-01-01",
+        "value": 0.06305896454520071
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1966-01-01",
+        "value": 0.10045489762717731
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1967-01-01",
+        "value": 0.11500456706072418
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1968-01-01",
+        "value": 0.18267929491255122
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1969-01-01",
+        "value": 0.2482126757220759
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1970-01-01",
+        "value": 0.32225780625205785
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1971-01-01",
+        "value": 0.4051397673775131
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1972-01-01",
+        "value": 0.4936486765845089
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1973-01-01",
+        "value": 0.6002629781552853
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1974-01-01",
+        "value": 0.6548144455566134
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1975-01-01",
+        "value": 0.68161078373136
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1976-01-01",
+        "value": 0.7557443158204907
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1977-01-01",
+        "value": 0.7803458369043778
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1978-01-01",
+        "value": 0.8052189820556176
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1979-01-01",
+        "value": 0.8470539880789743
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1980-01-01",
+        "value": 0.9115581099874563
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1981-01-01",
+        "value": 0.8448532882081975
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1982-01-01",
+        "value": 0.8302376575865733
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1983-01-01",
+        "value": 0.7780139684727461
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1984-01-01",
+        "value": 0.8086215608130265
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1985-01-01",
+        "value": 0.8628051212131623
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1986-01-01",
+        "value": 0.9143380916075086
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1987-01-01",
+        "value": 0.9290158115918761
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1988-01-01",
+        "value": 0.9090371111427797
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1989-01-01",
+        "value": 0.9213965335698769
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1990-01-01",
+        "value": 0.8588234858235649
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1991-01-01",
+        "value": 0.8517918590200654
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1992-01-01",
+        "value": 0.8297509345837437
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1993-01-01",
+        "value": 0.8616619514229571
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1994-01-01",
+        "value": 0.9026403095413785
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1995-01-01",
+        "value": 0.9283869031405363
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1996-01-01",
+        "value": 0.9349304688690167
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1997-01-01",
+        "value": 0.9533138839213589
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1998-01-01",
+        "value": 0.9420057631885965
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "1999-01-01",
+        "value": 0.932472001740573
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2000-01-01",
+        "value": 0.961748344492945
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2001-01-01",
+        "value": 0.9623446561005163
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2002-01-01",
+        "value": 0.9797939554970453
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2003-01-01",
+        "value": 0.9792809672761105
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2004-01-01",
+        "value": 1.0238888928984016
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2005-01-01",
+        "value": 1.0442361904765962
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2006-01-01",
+        "value": 1.072317805200609
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2007-01-01",
+        "value": 1.1209253805112822
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2008-01-01",
+        "value": 1.160739399991009
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2009-01-01",
+        "value": 1.149949009226384
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2010-01-01",
+        "value": 1.2131380218671144
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2011-01-01",
+        "value": 1.2428268765506931
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2012-01-01",
+        "value": 1.2528529870357519
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2013-01-01",
+        "value": 1.2737751487129465
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2014-01-01",
+        "value": 1.2702237017615545
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2015-01-01",
+        "value": 1.2256622535727248
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2016-01-01",
+        "value": 1.1842419238105752
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2017-01-01",
+        "value": 1.189461245310042
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2018-01-01",
+        "value": 1.1992030246425807
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2019-01-01",
+        "value": 1.2036758108754095
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2020-01-01",
+        "value": 1.1637075750126125
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2021-01-01",
+        "value": 1.2071056356868943
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Date": "2022-01-01",
+        "value": 1.2311024136511908
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1961-01-01",
+        "value": -0.30826095400244574
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1962-01-01",
+        "value": -0.3738827802561213
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1963-01-01",
+        "value": -0.30042551405619655
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1964-01-01",
+        "value": -0.15659364405055137
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1965-01-01",
+        "value": -0.02383101799978354
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1966-01-01",
+        "value": 0.049497544112621646
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1967-01-01",
+        "value": -0.035641015897176075
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1968-01-01",
+        "value": -0.10361424612007734
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1969-01-01",
+        "value": 0.02547652954878741
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1970-01-01",
+        "value": 0.17433091697249653
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1971-01-01",
+        "value": 0.2150810004398284
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1972-01-01",
+        "value": 0.22789955036372275
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1973-01-01",
+        "value": 0.2798019428457767
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1974-01-01",
+        "value": 0.2819796266438612
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1975-01-01",
+        "value": 0.3479212926594304
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1976-01-01",
+        "value": 0.31662336256658735
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1977-01-01",
+        "value": 0.3759671802780838
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1978-01-01",
+        "value": 0.4698778070558953
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1979-01-01",
+        "value": 0.5297083603593435
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1980-01-01",
+        "value": 0.5925903162920853
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1981-01-01",
+        "value": 0.6296442959327008
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1982-01-01",
+        "value": 0.7012522406312556
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1983-01-01",
+        "value": 0.7890903653918747
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1984-01-01",
+        "value": 0.9173958000625225
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1985-01-01",
+        "value": 1.0298005024716
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1986-01-01",
+        "value": 1.1006450376360972
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1987-01-01",
+        "value": 1.1948743043356858
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1988-01-01",
+        "value": 1.2851369609543073
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1989-01-01",
+        "value": 1.311007992837513
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1990-01-01",
+        "value": 1.3347885659584537
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1991-01-01",
+        "value": 1.4097299021083471
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1992-01-01",
+        "value": 1.530470423030275
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1993-01-01",
+        "value": 1.6489820522550303
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1994-01-01",
+        "value": 1.7602227480479415
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1995-01-01",
+        "value": 1.8533027600048535
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1996-01-01",
+        "value": 1.9374272472334229
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1997-01-01",
+        "value": 2.015540379821949
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1998-01-01",
+        "value": 2.081478526271853
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "1999-01-01",
+        "value": 2.1466432793853394
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2000-01-01",
+        "value": 2.220252391244196
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2001-01-01",
+        "value": 2.2930534474549336
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2002-01-01",
+        "value": 2.373756367676439
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2003-01-01",
+        "value": 2.46318361004743
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2004-01-01",
+        "value": 2.5535868502296326
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2005-01-01",
+        "value": 2.6556141931623802
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2006-01-01",
+        "value": 2.769775609266055
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2007-01-01",
+        "value": 2.897604201178621
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2008-01-01",
+        "value": 2.9846098124046723
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2009-01-01",
+        "value": 3.069465053622393
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2010-01-01",
+        "value": 3.165709638770255
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2011-01-01",
+        "value": 3.2514635391841136
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2012-01-01",
+        "value": 3.3203786295674016
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2013-01-01",
+        "value": 3.388511316448932
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2014-01-01",
+        "value": 3.4538379049372545
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2015-01-01",
+        "value": 3.5160681685787485
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2016-01-01",
+        "value": 3.5765818708053865
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2017-01-01",
+        "value": 3.6376944968264278
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2018-01-01",
+        "value": 3.698335123745208
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2019-01-01",
+        "value": 3.7525895398860003
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2020-01-01",
+        "value": 3.7723486176291474
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2021-01-01",
+        "value": 3.852561033547749
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Date": "2022-01-01",
+        "value": 3.8821448454393503
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1961-01-01",
+        "value": -0.14050338765594908
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1962-01-01",
+        "value": 0.025777311489070677
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1963-01-01",
+        "value": 0.05010756074263928
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1964-01-01",
+        "value": -0.0013497456151609188
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1965-01-01",
+        "value": -0.01888916862142867
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1966-01-01",
+        "value": 0.01820557556327467
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1967-01-01",
+        "value": -0.020832742633514093
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1968-01-01",
+        "value": -0.007794562635950126
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1969-01-01",
+        "value": 0.05236553255814832
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1970-01-01",
+        "value": 0.021289793472257804
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1971-01-01",
+        "value": 0.052137125305746275
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1972-01-01",
+        "value": 0.026948655527000105
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1973-01-01",
+        "value": 0.07825818175233377
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1974-01-01",
+        "value": 0.0822436645614995
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1975-01-01",
+        "value": 0.0045801697568170945
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1976-01-01",
+        "value": -0.07576271503853899
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1977-01-01",
+        "value": -0.09329152650846448
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1978-01-01",
+        "value": -0.1790283504110038
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1979-01-01",
+        "value": -0.20960081784676207
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1980-01-01",
+        "value": -0.21852840712115001
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1981-01-01",
+        "value": -0.22295599120765372
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1982-01-01",
+        "value": -0.2548968819725394
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1983-01-01",
+        "value": -0.2683495541834031
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1984-01-01",
+        "value": -0.2441296805651837
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1985-01-01",
+        "value": -0.26979401998143965
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1986-01-01",
+        "value": -0.2532935590337432
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1987-01-01",
+        "value": -0.2575391837020599
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1988-01-01",
+        "value": -0.28406882676680284
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1989-01-01",
+        "value": -0.3281893066152136
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1990-01-01",
+        "value": -0.4289406098037063
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1991-01-01",
+        "value": -0.5499058643494936
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1992-01-01",
+        "value": -0.6909611665488238
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1993-01-01",
+        "value": -0.867681534208819
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1994-01-01",
+        "value": -0.9550992878305702
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1995-01-01",
+        "value": -0.989965933720495
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1996-01-01",
+        "value": -1.0193098681842738
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1997-01-01",
+        "value": -1.0929391506293045
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1998-01-01",
+        "value": -1.1329781188206303
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "1999-01-01",
+        "value": -1.2052212534266802
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2000-01-01",
+        "value": -1.3058230467218708
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2001-01-01",
+        "value": -1.3572431087550147
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2002-01-01",
+        "value": -1.3587615716818915
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2003-01-01",
+        "value": -1.333923935507479
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2004-01-01",
+        "value": -1.2985239503137789
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2005-01-01",
+        "value": -1.2701354611173608
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2006-01-01",
+        "value": -1.2501647268591418
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2007-01-01",
+        "value": -1.221606286435036
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2008-01-01",
+        "value": -1.193206003971199
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2009-01-01",
+        "value": -1.196997805769429
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2010-01-01",
+        "value": -1.1607993462232968
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2011-01-01",
+        "value": -1.1278306235016324
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2012-01-01",
+        "value": -1.0929267262602174
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2013-01-01",
+        "value": -1.0456045010518298
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2014-01-01",
+        "value": -0.9895816837438649
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2015-01-01",
+        "value": -0.9566007403398629
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2016-01-01",
+        "value": -0.967550430227129
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2017-01-01",
+        "value": -0.9653863426087429
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2018-01-01",
+        "value": -0.9415346691188516
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2019-01-01",
+        "value": -0.9304862653889493
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2020-01-01",
+        "value": -0.9455256869416007
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2021-01-01",
+        "value": -0.9175955955265539
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Date": "2022-01-01",
+        "value": -0.8640896317133964
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1961-01-01",
+        "value": 0.024278227316333795
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1962-01-01",
+        "value": 0.03608279876242152
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1963-01-01",
+        "value": 0.10972963583898723
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1964-01-01",
+        "value": 0.19230736765121198
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1965-01-01",
+        "value": 0.2142496526418747
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1966-01-01",
+        "value": 0.2380232085392252
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1967-01-01",
+        "value": 0.22119812375216039
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1968-01-01",
+        "value": 0.180728498025498
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1969-01-01",
+        "value": 0.2086249436798997
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1970-01-01",
+        "value": 0.24024100460147335
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1971-01-01",
+        "value": 0.25800453533576184
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1972-01-01",
+        "value": 0.26654684105656057
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1973-01-01",
+        "value": 0.27950243019620313
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1974-01-01",
+        "value": 0.2733961466969365
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1975-01-01",
+        "value": 0.3369768498157527
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1976-01-01",
+        "value": 0.4393903343239714
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1977-01-01",
+        "value": 0.502452770348119
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1978-01-01",
+        "value": 0.5608906543726433
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1979-01-01",
+        "value": 0.5802862826052321
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1980-01-01",
+        "value": 0.6498567298563976
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1981-01-01",
+        "value": 0.6947979190423277
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1982-01-01",
+        "value": 0.7631254777695061
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1983-01-01",
+        "value": 0.785736782478401
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1984-01-01",
+        "value": 0.8511820616834885
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1985-01-01",
+        "value": 0.8799376941920853
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1986-01-01",
+        "value": 0.8989203359811365
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1987-01-01",
+        "value": 0.9093492414227885
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1988-01-01",
+        "value": 0.9353211444979365
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1989-01-01",
+        "value": 0.956691450604237
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1990-01-01",
+        "value": 0.9861660947567861
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1991-01-01",
+        "value": 0.9732439817280434
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1992-01-01",
+        "value": 0.9937604717664642
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1993-01-01",
+        "value": 0.9993993020422691
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1994-01-01",
+        "value": 1.0159115153814258
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1995-01-01",
+        "value": 1.0393734857771297
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1996-01-01",
+        "value": 1.0664989512073115
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1997-01-01",
+        "value": 1.098413236665219
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1998-01-01",
+        "value": 1.1312230925546969
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "1999-01-01",
+        "value": 1.1688628115337034
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2000-01-01",
+        "value": 1.2098978967777836
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2001-01-01",
+        "value": 1.2240756658456928
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2002-01-01",
+        "value": 1.226785491144779
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2003-01-01",
+        "value": 1.2373421684857653
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2004-01-01",
+        "value": 1.2571311373328102
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2005-01-01",
+        "value": 1.2810441839871354
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2006-01-01",
+        "value": 1.327776303878417
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2007-01-01",
+        "value": 1.3767386896042884
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2008-01-01",
+        "value": 1.4262730374906254
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2009-01-01",
+        "value": 1.452388234448724
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2010-01-01",
+        "value": 1.4823032565900722
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2011-01-01",
+        "value": 1.4777186698222347
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2012-01-01",
+        "value": 1.4771206134172892
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2013-01-01",
+        "value": 1.4755828092249534
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2014-01-01",
+        "value": 1.4808869580190327
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2015-01-01",
+        "value": 1.5016257969927507
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2016-01-01",
+        "value": 1.5233110493389903
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2017-01-01",
+        "value": 1.5443750707520245
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2018-01-01",
+        "value": 1.5773243810719964
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2019-01-01",
+        "value": 1.6134187780697347
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2020-01-01",
+        "value": 1.6309734760687629
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2021-01-01",
+        "value": 1.6467662736367243
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Date": "2022-01-01",
+        "value": 1.6948748358972736
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1961-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1962-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1963-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1964-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1965-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1966-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1967-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1968-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1969-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1970-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1971-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1972-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1973-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1974-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1975-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1976-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1977-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1978-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1979-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1980-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1981-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1982-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1983-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1984-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1985-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1986-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1987-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1988-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1989-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1990-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1991-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1992-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1993-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1994-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1995-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1996-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1997-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1998-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "1999-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2000-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2001-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2002-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2003-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2004-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2005-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2006-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2007-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2008-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2009-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2010-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2011-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2012-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2013-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2014-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2015-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2016-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2017-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2018-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2019-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2020-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2021-01-01",
+        "value": null
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Date": "2022-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1961-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1962-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1963-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1964-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1965-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1966-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1967-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1968-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1969-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1970-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1971-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1972-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1973-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1974-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1975-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1976-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1977-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1978-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1979-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1980-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1981-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1982-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1983-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1984-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1985-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1986-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1987-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1988-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1989-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1990-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1991-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1992-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1993-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1994-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1995-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1996-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1997-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1998-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "1999-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2000-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2001-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2002-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2003-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2004-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2005-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2006-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2007-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2008-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2009-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2010-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2011-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2012-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2013-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2014-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2015-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2016-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2017-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2018-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2019-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2020-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2021-01-01",
+        "value": null
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Date": "2022-01-01",
+        "value": null
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1961-01-01",
+        "value": 0.013504152225185535
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1962-01-01",
+        "value": 0.019277176417786954
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1963-01-01",
+        "value": 0.05440202301190746
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1964-01-01",
+        "value": 0.10327299754958084
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1965-01-01",
+        "value": 0.054208709308571516
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1966-01-01",
+        "value": 0.032136890801643225
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1967-01-01",
+        "value": 0.08619750514511947
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1968-01-01",
+        "value": 0.09782691899910616
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1969-01-01",
+        "value": 0.13914284912457803
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1970-01-01",
+        "value": 0.16732748656674834
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1971-01-01",
+        "value": 0.1614532077821412
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1972-01-01",
+        "value": 0.13363052129468972
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1973-01-01",
+        "value": 0.14354258957950272
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1974-01-01",
+        "value": 0.13274420746869212
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1975-01-01",
+        "value": 0.19791172561772383
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1976-01-01",
+        "value": 0.19231547463061424
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1977-01-01",
+        "value": 0.2402681046521393
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1978-01-01",
+        "value": 0.27369201553722644
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1979-01-01",
+        "value": 0.1976530459204428
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1980-01-01",
+        "value": 0.2402274952829777
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1981-01-01",
+        "value": 0.27579599655201636
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1982-01-01",
+        "value": 0.28735485653226556
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1983-01-01",
+        "value": 0.33512290794355837
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1984-01-01",
+        "value": 0.34999090888454026
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1985-01-01",
+        "value": 0.3787164183370161
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1986-01-01",
+        "value": 0.40302364240781285
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1987-01-01",
+        "value": 0.4198017208673859
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1988-01-01",
+        "value": 0.48987955311907555
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1989-01-01",
+        "value": 0.5259594019821221
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1990-01-01",
+        "value": 0.5584058180999859
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1991-01-01",
+        "value": 0.5478997676425069
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1992-01-01",
+        "value": 0.580530215834385
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1993-01-01",
+        "value": 0.6064656252051912
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1994-01-01",
+        "value": 0.6507229966683603
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1995-01-01",
+        "value": 0.7038176533097998
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1996-01-01",
+        "value": 0.7570845258837523
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1997-01-01",
+        "value": 0.777591545012434
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1998-01-01",
+        "value": 0.8187231347425151
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "1999-01-01",
+        "value": 0.8849914096769428
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2000-01-01",
+        "value": 0.9044601816137875
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2001-01-01",
+        "value": 0.9334879628957186
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2002-01-01",
+        "value": 0.9530543660556029
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2003-01-01",
+        "value": 1.011479116416696
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2004-01-01",
+        "value": 1.0709982442692272
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2005-01-01",
+        "value": 1.1312087665396295
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2006-01-01",
+        "value": 1.1934889086496472
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2007-01-01",
+        "value": 1.2526406890055504
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2008-01-01",
+        "value": 1.2688169508370217
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2009-01-01",
+        "value": 1.3305864171912452
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2010-01-01",
+        "value": 1.3983681850100171
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2011-01-01",
+        "value": 1.4358380695339579
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2012-01-01",
+        "value": 1.4756434537476226
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2013-01-01",
+        "value": 1.5245727688505688
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2014-01-01",
+        "value": 1.5836543676206931
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2015-01-01",
+        "value": 1.6487027678288042
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2016-01-01",
+        "value": 1.7161837341499253
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2017-01-01",
+        "value": 1.7703720024745355
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2018-01-01",
+        "value": 1.8220381097653664
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2019-01-01",
+        "value": 1.849768767218965
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2020-01-01",
+        "value": 1.7801368478661208
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2021-01-01",
+        "value": 1.8588035420355185
+      },
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Date": "2022-01-01",
+        "value": 1.9218960834813044
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1961-01-01",
+        "value": 0.028651659432394266
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1962-01-01",
+        "value": 0.019442111957339765
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1963-01-01",
+        "value": -0.030832424592359957
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1964-01-01",
+        "value": -0.024018568627281828
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1965-01-01",
+        "value": -0.03811085369676389
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1966-01-01",
+        "value": -0.03405934397035349
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1967-01-01",
+        "value": -0.046083868476630194
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1968-01-01",
+        "value": 0.03078790634952448
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1969-01-01",
+        "value": 0.06957363351048701
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1970-01-01",
+        "value": 0.11531673824770527
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1971-01-01",
+        "value": 0.1564937002200237
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1972-01-01",
+        "value": 0.1981778428866197
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1973-01-01",
+        "value": 0.2500660463714709
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1974-01-01",
+        "value": 0.29429296899967844
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1975-01-01",
+        "value": 0.323630373711648
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1976-01-01",
+        "value": 0.36713618959122774
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1977-01-01",
+        "value": 0.4220136255754322
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1978-01-01",
+        "value": 0.464170378349613
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1979-01-01",
+        "value": 0.5090865868286857
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1980-01-01",
+        "value": 0.5806034714129185
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1981-01-01",
+        "value": 0.6330348844356823
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1982-01-01",
+        "value": 0.6321735948342441
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1983-01-01",
+        "value": 0.652503800302857
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1984-01-01",
+        "value": 0.6966287428239222
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1985-01-01",
+        "value": 0.699872085279139
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1986-01-01",
+        "value": 0.7359948701737736
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1987-01-01",
+        "value": 0.7655424385850607
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1988-01-01",
+        "value": 0.8014868477912118
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1989-01-01",
+        "value": 0.8581183613131871
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1990-01-01",
+        "value": 0.9100884914048022
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1991-01-01",
+        "value": 0.9582280028443504
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1992-01-01",
+        "value": 1.0040780357268122
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1993-01-01",
+        "value": 1.0503008276360428
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1994-01-01",
+        "value": 1.106486388480273
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1995-01-01",
+        "value": 1.1691407878841398
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1996-01-01",
+        "value": 1.2282287888251788
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1997-01-01",
+        "value": 1.2581256706331574
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1998-01-01",
+        "value": 1.1017565979140356
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "1999-01-01",
+        "value": 1.09463629935811
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2000-01-01",
+        "value": 1.1281940292364716
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2001-01-01",
+        "value": 1.1498796568425125
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2002-01-01",
+        "value": 1.1801563292386543
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2003-01-01",
+        "value": 1.2134721411565315
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2004-01-01",
+        "value": 1.2498240347894014
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2005-01-01",
+        "value": 1.2925809752924537
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2006-01-01",
+        "value": 1.333137674854705
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2007-01-01",
+        "value": 1.3815377478858752
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2008-01-01",
+        "value": 1.4269142215412227
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2009-01-01",
+        "value": 1.4594482433375973
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2010-01-01",
+        "value": 1.5073115836502398
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2011-01-01",
+        "value": 1.5546235672828126
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2012-01-01",
+        "value": 1.6006165173725484
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2013-01-01",
+        "value": 1.6425717427290982
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2014-01-01",
+        "value": 1.6798303472806164
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2015-01-01",
+        "value": 1.7163333850230051
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2016-01-01",
+        "value": 1.7548490236190204
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2017-01-01",
+        "value": 1.7942391994086084
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2018-01-01",
+        "value": 1.835025842500067
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2019-01-01",
+        "value": 1.8746227892586846
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2020-01-01",
+        "value": 1.8453474776676102
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2021-01-01",
+        "value": 1.874761693020227
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Date": "2022-01-01",
+        "value": 1.9201209956727945
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1961-01-01",
+        "value": 0.07142766268449195
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1962-01-01",
+        "value": 0.11967262789132033
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1963-01-01",
+        "value": 0.15920156281339554
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1964-01-01",
+        "value": 0.2113385388315651
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1965-01-01",
+        "value": 0.3390909649200581
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1966-01-01",
+        "value": 0.4187363399827279
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1967-01-01",
+        "value": 0.4968573306503841
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1968-01-01",
+        "value": 0.6034289932497263
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1969-01-01",
+        "value": 0.7194839721008736
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1970-01-01",
+        "value": 0.7944510568914367
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1971-01-01",
+        "value": 0.894307098441829
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1972-01-01",
+        "value": 1.0014824112046448
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1973-01-01",
+        "value": 1.0447669466226839
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1974-01-01",
+        "value": 1.0720943108631946
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1975-01-01",
+        "value": 1.0391287343993978
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1976-01-01",
+        "value": 1.1773370459143784
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1977-01-01",
+        "value": 1.119071063073627
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1978-01-01",
+        "value": 0.9501068826924924
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1979-01-01",
+        "value": 0.7889369007184468
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1980-01-01",
+        "value": 0.5108438003163253
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1981-01-01",
+        "value": 0.4026682905491081
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1982-01-01",
+        "value": 0.5622843570338768
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1983-01-01",
+        "value": 0.6321046048401394
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1984-01-01",
+        "value": 0.5223241150800293
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1985-01-01",
+        "value": 0.505564117605367
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1986-01-01",
+        "value": 0.3683372395133197
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1987-01-01",
+        "value": 0.3338681519047049
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1988-01-01",
+        "value": 0.2405219306403981
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1989-01-01",
+        "value": 0.2710458056874511
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1990-01-01",
+        "value": 0.3592381229944954
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1991-01-01",
+        "value": 0.44031451347713246
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1992-01-01",
+        "value": 0.44922497159216346
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1993-01-01",
+        "value": 0.4279685290593677
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1994-01-01",
+        "value": 0.4069928532801379
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1995-01-01",
+        "value": 0.41732219085715583
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1996-01-01",
+        "value": 0.4657613606342936
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1997-01-01",
+        "value": 0.46495548988873264
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1998-01-01",
+        "value": 0.46996509716230567
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "1999-01-01",
+        "value": 0.473952738990855
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2000-01-01",
+        "value": 0.5143093767874517
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2001-01-01",
+        "value": 0.5208491430023332
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2002-01-01",
+        "value": 0.588804571280073
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2003-01-01",
+        "value": 0.6623893817082984
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2004-01-01",
+        "value": 0.6886833999494636
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2005-01-01",
+        "value": 0.7039828643564046
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2006-01-01",
+        "value": 0.7373151126105872
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2007-01-01",
+        "value": 0.8011810911377599
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2008-01-01",
+        "value": 0.7899676652006465
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2009-01-01",
+        "value": 0.7863864141146013
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2010-01-01",
+        "value": 0.8287030177452663
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2011-01-01",
+        "value": 0.842040758670125
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2012-01-01",
+        "value": 0.7910746793994732
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2013-01-01",
+        "value": 0.7611728185215769
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2014-01-01",
+        "value": 0.7908458306228445
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2015-01-01",
+        "value": 0.7538766423813479
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2016-01-01",
+        "value": 0.8199983660244609
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2017-01-01",
+        "value": 0.8329215508328797
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2018-01-01",
+        "value": 0.8012916407200249
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2019-01-01",
+        "value": 0.7591085245134549
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2020-01-01",
+        "value": 0.7835171188957424
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2021-01-01",
+        "value": 0.8224067069501034
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Date": "2022-01-01",
+        "value": 0.8523698789125108
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1961-01-01",
+        "value": 0.10475699093647739
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1962-01-01",
+        "value": 0.18080756606390758
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1963-01-01",
+        "value": 0.25200999393538087
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1964-01-01",
+        "value": 0.3520434749277514
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1965-01-01",
+        "value": 0.3978429812155572
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1966-01-01",
+        "value": 0.48980537826694615
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1967-01-01",
+        "value": 0.5845593534101939
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1968-01-01",
+        "value": 0.6944663714243605
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1969-01-01",
+        "value": 0.8001647459000338
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1970-01-01",
+        "value": 0.8129014267902214
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1971-01-01",
+        "value": 0.8368781964630327
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1972-01-01",
+        "value": 0.9036532745377317
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1973-01-01",
+        "value": 0.9668442343403081
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1974-01-01",
+        "value": 0.9412203364375582
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1975-01-01",
+        "value": 0.9589407547146706
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1976-01-01",
+        "value": 0.9872053032474157
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1977-01-01",
+        "value": 1.020491912794018
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1978-01-01",
+        "value": 1.0627683382176858
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1979-01-01",
+        "value": 1.1076916864239543
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1980-01-01",
+        "value": 1.1275964247552515
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1981-01-01",
+        "value": 1.1620353994995074
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1982-01-01",
+        "value": 1.187369907681685
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1983-01-01",
+        "value": 1.2160726680228433
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1984-01-01",
+        "value": 1.2527532007166506
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1985-01-01",
+        "value": 1.2968048282569309
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1986-01-01",
+        "value": 1.3238908207411575
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1987-01-01",
+        "value": 1.3645108485162327
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1988-01-01",
+        "value": 1.4248411075137954
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1989-01-01",
+        "value": 1.4689266045434828
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1990-01-01",
+        "value": 1.5128828297874066
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1991-01-01",
+        "value": 1.5435817064907509
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1992-01-01",
+        "value": 1.5488353323614805
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1993-01-01",
+        "value": 1.5409908826790568
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1994-01-01",
+        "value": 1.5489745252752478
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1995-01-01",
+        "value": 1.5725984651656424
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1996-01-01",
+        "value": 1.6011872945565353
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1997-01-01",
+        "value": 1.6085690418234637
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1998-01-01",
+        "value": 1.5930670638916864
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "1999-01-01",
+        "value": 1.587896312668718
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2000-01-01",
+        "value": 1.6134947693609314
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2001-01-01",
+        "value": 1.6149388430852394
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2002-01-01",
+        "value": 1.6130331081893605
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2003-01-01",
+        "value": 1.6261279153612866
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2004-01-01",
+        "value": 1.6474169210690273
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2005-01-01",
+        "value": 1.6652012364787065
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2006-01-01",
+        "value": 1.6781976873820672
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2007-01-01",
+        "value": 1.6917792620940364
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2008-01-01",
+        "value": 1.6789765566018164
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2009-01-01",
+        "value": 1.6204842287141985
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2010-01-01",
+        "value": 1.6604664119566146
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2011-01-01",
+        "value": 1.6625567437182993
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2012-01-01",
+        "value": 1.6778077206865243
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2013-01-01",
+        "value": 1.6991030672995944
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2014-01-01",
+        "value": 1.7033876864207602
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2015-01-01",
+        "value": 1.7199346778920759
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2016-01-01",
+        "value": 1.7279560487512042
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2017-01-01",
+        "value": 1.7453893203752224
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2018-01-01",
+        "value": 1.7530714220417296
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2019-01-01",
+        "value": 1.7504462710601925
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2020-01-01",
+        "value": 1.7110325587195891
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2021-01-01",
+        "value": 1.740903262101749
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Date": "2022-01-01",
+        "value": 1.7548438625666918
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1961-01-01",
+        "value": 0.01700608152567595
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1962-01-01",
+        "value": 0.029908942711976687
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1963-01-01",
+        "value": 0.07483442692936106
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1964-01-01",
+        "value": 0.15406868408764204
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1965-01-01",
+        "value": 0.18925568616021954
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1966-01-01",
+        "value": 0.21523731212600147
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1967-01-01",
+        "value": 0.23926261336566643
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1968-01-01",
+        "value": 0.2967069648910096
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1969-01-01",
+        "value": 0.2981124929043754
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1970-01-01",
+        "value": 0.3292927170343986
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1971-01-01",
+        "value": 0.33474531204255853
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1972-01-01",
+        "value": 0.3826034774966073
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1973-01-01",
+        "value": 0.42729722953349214
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1974-01-01",
+        "value": 0.4528309182953429
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1975-01-01",
+        "value": 0.47848632030025445
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1976-01-01",
+        "value": 0.492155662077679
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1977-01-01",
+        "value": 0.49599915428088404
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1978-01-01",
+        "value": 0.5523224846256751
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1979-01-01",
+        "value": 0.616459413675419
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1980-01-01",
+        "value": 0.6744832455657835
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1981-01-01",
+        "value": 0.7436952839193564
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1982-01-01",
+        "value": 0.7228539191914031
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1983-01-01",
+        "value": 0.6555625649908476
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1984-01-01",
+        "value": 0.6707298605507442
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1985-01-01",
+        "value": 0.671104737365273
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1986-01-01",
+        "value": 0.6131109678735848
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1987-01-01",
+        "value": 0.6162477002862295
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1988-01-01",
+        "value": 0.6112447554832298
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1989-01-01",
+        "value": 0.6299932951551179
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1990-01-01",
+        "value": 0.6628022226242883
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1991-01-01",
+        "value": 0.6820274881126474
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1992-01-01",
+        "value": 0.6975885434402711
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1993-01-01",
+        "value": 0.7065669802498882
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1994-01-01",
+        "value": 0.7305258686872845
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1995-01-01",
+        "value": 0.6510361914781337
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1996-01-01",
+        "value": 0.6935494319331071
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1997-01-01",
+        "value": 0.7457831819211658
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1998-01-01",
+        "value": 0.7889386613347769
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "1999-01-01",
+        "value": 0.7997108012873867
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2000-01-01",
+        "value": 0.8329343138770525
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2001-01-01",
+        "value": 0.8129962563211759
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2002-01-01",
+        "value": 0.7954230209539175
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2003-01-01",
+        "value": 0.7923347389681437
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2004-01-01",
+        "value": 0.8126717166361465
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2005-01-01",
+        "value": 0.819288877163186
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2006-01-01",
+        "value": 0.8526149151285594
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2007-01-01",
+        "value": 0.8600182549680968
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2008-01-01",
+        "value": 0.8567320002323877
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2009-01-01",
+        "value": 0.7793432530834541
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2010-01-01",
+        "value": 0.8145945862372246
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2011-01-01",
+        "value": 0.8341788418466444
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2012-01-01",
+        "value": 0.8551280953622846
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2013-01-01",
+        "value": 0.8504414041429691
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2014-01-01",
+        "value": 0.86275606600508
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2015-01-01",
+        "value": 0.8777505316206967
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2016-01-01",
+        "value": 0.8839878663707397
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2017-01-01",
+        "value": 0.8917279314105565
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2018-01-01",
+        "value": 0.9017401300110776
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2019-01-01",
+        "value": 0.8903521157756398
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2020-01-01",
+        "value": 0.7925904035423105
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2021-01-01",
+        "value": 0.8437340216776588
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Date": "2022-01-01",
+        "value": 0.8756896340775656
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1961-01-01",
+        "value": -0.01851036201873122
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1962-01-01",
+        "value": 0.0008456074686735758
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1963-01-01",
+        "value": 0.062002115008059515
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1964-01-01",
+        "value": 0.08893432295607295
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1965-01-01",
+        "value": 0.11497453614797996
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1966-01-01",
+        "value": 0.04985397697329495
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1967-01-01",
+        "value": -0.14252167342573646
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1968-01-01",
+        "value": -0.17603926098917425
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1969-01-01",
+        "value": 0.01926885799124151
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1970-01-01",
+        "value": 0.22048248651192665
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1971-01-01",
+        "value": 0.33102410913638197
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1972-01-01",
+        "value": 0.3408758560450112
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1973-01-01",
+        "value": 0.36908833797273344
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1974-01-01",
+        "value": 0.44918221962715255
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1975-01-01",
+        "value": 0.36817644559567725
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1976-01-01",
+        "value": 0.426397711666896
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1977-01-01",
+        "value": 0.4554615982121853
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1978-01-01",
+        "value": 0.36586275995196843
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1979-01-01",
+        "value": 0.40089217321177156
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1980-01-01",
+        "value": 0.4114433537796989
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1981-01-01",
+        "value": 0.2406804382288971
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1982-01-01",
+        "value": 0.1412128938577833
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1983-01-01",
+        "value": 0.00047585258320760707
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1984-01-01",
+        "value": -0.03546245935126214
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1985-01-01",
+        "value": -0.005273648341209728
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1986-01-01",
+        "value": -0.030865081686984232
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1987-01-01",
+        "value": -0.025136230790021384
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1988-01-01",
+        "value": 0.019770848412048538
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1989-01-01",
+        "value": 0.012646338065334327
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1990-01-01",
+        "value": 0.09769495710050716
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1991-01-01",
+        "value": 0.07565006522227766
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1992-01-01",
+        "value": 0.09568431850490024
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1993-01-01",
+        "value": 0.04956551588323874
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1994-01-01",
+        "value": 0.005501258716407402
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1995-01-01",
+        "value": -0.020797551040887534
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1996-01-01",
+        "value": -0.004963251052045255
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1997-01-01",
+        "value": -0.001244968056478858
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1998-01-01",
+        "value": -0.0009202855237986396
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "1999-01-01",
+        "value": -0.020522209529501165
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2000-01-01",
+        "value": 0.002391015041953578
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2001-01-01",
+        "value": 0.033370406629106716
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2002-01-01",
+        "value": 0.14916158491477735
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2003-01-01",
+        "value": 0.19313211406733252
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2004-01-01",
+        "value": 0.2546508370403464
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2005-01-01",
+        "value": 0.2901112256981281
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2006-01-01",
+        "value": 0.32198136030251845
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2007-01-01",
+        "value": 0.35871520833979303
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2008-01-01",
+        "value": 0.39697337361572205
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2009-01-01",
+        "value": 0.44700240697113675
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2010-01-01",
+        "value": 0.49657202780890336
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2011-01-01",
+        "value": 0.5206498879325475
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2012-01-01",
+        "value": 0.5345873958416852
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2013-01-01",
+        "value": 0.5721949448974488
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2014-01-01",
+        "value": 0.6071002282222089
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2015-01-01",
+        "value": 0.6078695483867904
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2016-01-01",
+        "value": 0.5664983784952369
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2017-01-01",
+        "value": 0.5492517762411097
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2018-01-01",
+        "value": 0.5433303866536141
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2019-01-01",
+        "value": 0.5406923463005158
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2020-01-01",
+        "value": 0.4981808076917116
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2021-01-01",
+        "value": 0.5099396825643633
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Date": "2022-01-01",
+        "value": 0.5181389415615288
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1961-01-01",
+        "value": 0.0343525153262283
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1962-01-01",
+        "value": 0.05508115437517863
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1963-01-01",
+        "value": 0.11453497273451409
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1964-01-01",
+        "value": 0.16292217584481355
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1965-01-01",
+        "value": 0.23685832619420155
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1966-01-01",
+        "value": 0.26728971764215
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1967-01-01",
+        "value": 0.2933559678378998
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1968-01-01",
+        "value": 0.3361945054531514
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1969-01-01",
+        "value": 0.3625318149898355
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1970-01-01",
+        "value": 0.44247084548895044
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1971-01-01",
+        "value": 0.4207143110860894
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1972-01-01",
+        "value": 0.40238057726099763
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1973-01-01",
+        "value": 0.44262319801188155
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1974-01-01",
+        "value": 0.4488365762176436
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1975-01-01",
+        "value": 0.4606268010042645
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1976-01-01",
+        "value": 0.4804882628711735
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1977-01-01",
+        "value": 0.4880827405127474
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1978-01-01",
+        "value": 0.5337297588717805
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1979-01-01",
+        "value": 0.536218642061065
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1980-01-01",
+        "value": 0.592772389650265
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1981-01-01",
+        "value": 0.6247682429737738
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1982-01-01",
+        "value": 0.6467406849614962
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1983-01-01",
+        "value": 0.675966240293832
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1984-01-01",
+        "value": 0.6937836232655411
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1985-01-01",
+        "value": 0.7343334111585315
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1986-01-01",
+        "value": 0.752516793951655
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1987-01-01",
+        "value": 0.7795780305548815
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1988-01-01",
+        "value": 0.8180323561564979
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1989-01-01",
+        "value": 0.8327211299301779
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1990-01-01",
+        "value": 0.8433669267238819
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1991-01-01",
+        "value": 0.8604368449236299
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1992-01-01",
+        "value": 0.9084121350249436
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1993-01-01",
+        "value": 0.9002513546048699
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1994-01-01",
+        "value": 0.9079102450160752
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1995-01-01",
+        "value": 0.9268231292352305
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1996-01-01",
+        "value": 0.9436897105579001
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1997-01-01",
+        "value": 0.924376495751304
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1998-01-01",
+        "value": 0.9206466963784383
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "1999-01-01",
+        "value": 0.9280096601204628
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2000-01-01",
+        "value": 0.9389725685056936
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2001-01-01",
+        "value": 0.9439144557209977
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2002-01-01",
+        "value": 0.9444430839533451
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2003-01-01",
+        "value": 0.9751540899114033
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2004-01-01",
+        "value": 1.0281999686493073
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2005-01-01",
+        "value": 1.0768551685198782
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2006-01-01",
+        "value": 1.114625974492131
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2007-01-01",
+        "value": 1.136699388262051
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2008-01-01",
+        "value": 1.1358932213409099
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2009-01-01",
+        "value": 1.1477377759004856
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2010-01-01",
+        "value": 1.1401175161941683
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2011-01-01",
+        "value": 1.1454574784741478
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2012-01-01",
+        "value": 1.1573042955253807
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2013-01-01",
+        "value": 1.1846773735374772
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2014-01-01",
+        "value": 1.2109251324320034
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2015-01-01",
+        "value": 1.239273732722359
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2016-01-01",
+        "value": 1.2909010521561948
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2017-01-01",
+        "value": 1.3209916471464054
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2018-01-01",
+        "value": 1.365318964815552
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2019-01-01",
+        "value": 1.3739087093183386
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2020-01-01",
+        "value": 1.3437556956753842
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2021-01-01",
+        "value": 1.3885202482227834
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Date": "2022-01-01",
+        "value": 1.4155721471625302
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1961-01-01",
+        "value": 0.025801228441709557
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1962-01-01",
+        "value": 0.04478285404326305
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1963-01-01",
+        "value": 0.0845748035005814
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1964-01-01",
+        "value": 0.09030300709967698
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1965-01-01",
+        "value": 0.11490394467204745
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1966-01-01",
+        "value": 0.13131619056249294
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1967-01-01",
+        "value": 0.15552293047853943
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1968-01-01",
+        "value": 0.17821847162691706
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1969-01-01",
+        "value": 0.19815901259845287
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1970-01-01",
+        "value": 0.20848333062275196
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1971-01-01",
+        "value": 0.23496963879930538
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1972-01-01",
+        "value": 0.262391463103476
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1973-01-01",
+        "value": 0.3216656525844967
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1974-01-01",
+        "value": 0.3310335325520822
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1975-01-01",
+        "value": 0.3600924677518502
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1976-01-01",
+        "value": 0.4190805850810345
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1977-01-01",
+        "value": 0.44661329746175077
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1978-01-01",
+        "value": 0.46974700671604225
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1979-01-01",
+        "value": 0.4970328214057525
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1980-01-01",
+        "value": 0.5212528809795979
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1981-01-01",
+        "value": 0.5292170426519021
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1982-01-01",
+        "value": 0.5405030980862645
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1983-01-01",
+        "value": 0.534454861658732
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1984-01-01",
+        "value": 0.4369589664226292
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1985-01-01",
+        "value": 0.34194997410337813
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1986-01-01",
+        "value": 0.35306464943415977
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1987-01-01",
+        "value": 0.37276078560396525
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1988-01-01",
+        "value": 0.4144996718480709
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1989-01-01",
+        "value": 0.4514294223316067
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1990-01-01",
+        "value": 0.4582608374392745
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1991-01-01",
+        "value": 0.4301162989334861
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1992-01-01",
+        "value": 0.4107095863417273
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1993-01-01",
+        "value": 0.40871727792499324
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1994-01-01",
+        "value": 0.42808934071347265
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1995-01-01",
+        "value": 0.44992546992948057
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1996-01-01",
+        "value": 0.4827014476803178
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1997-01-01",
+        "value": 0.5085694221656601
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1998-01-01",
+        "value": 0.47932507686089504
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "1999-01-01",
+        "value": 0.48892733484553513
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2000-01-01",
+        "value": 0.5096512914028852
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2001-01-01",
+        "value": 0.5185192831816269
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2002-01-01",
+        "value": 0.5343811685030275
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2003-01-01",
+        "value": 0.5638155903405933
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2004-01-01",
+        "value": 0.6075689439954014
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2005-01-01",
+        "value": 0.6364538326922323
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2006-01-01",
+        "value": 0.6694127606478093
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2007-01-01",
+        "value": 0.7138651984102633
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2008-01-01",
+        "value": 0.737688499888774
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2009-01-01",
+        "value": 0.7336674218452701
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2010-01-01",
+        "value": 0.7864309228772651
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2011-01-01",
+        "value": 0.8064709721591726
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2012-01-01",
+        "value": 0.8557308369247861
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2013-01-01",
+        "value": 0.9041857195483904
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2014-01-01",
+        "value": 0.9495637454346958
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2015-01-01",
+        "value": 0.9944149071548544
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2016-01-01",
+        "value": 1.0457311284055546
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2017-01-01",
+        "value": 1.0951343736741173
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2018-01-01",
+        "value": 1.1396171880203105
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2019-01-01",
+        "value": 1.1824518011560872
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2020-01-01",
+        "value": 1.0661629645611426
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2021-01-01",
+        "value": 1.1067914763930269
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Date": "2022-01-01",
+        "value": 1.1651330224434893
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1961-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1962-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1963-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1964-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1965-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1966-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1967-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1968-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1969-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1970-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1971-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1972-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1973-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1974-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1975-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1976-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1977-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1978-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1979-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1980-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1981-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1982-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1983-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1984-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1985-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1986-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1987-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1988-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1989-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1990-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1991-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1992-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1993-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1994-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1995-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1996-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1997-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1998-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "1999-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2000-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2001-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2002-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2003-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2004-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2005-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2006-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2007-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2008-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2009-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2010-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2011-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2012-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2013-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2014-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2015-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2016-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2017-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2018-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2019-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2020-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2021-01-01",
+        "value": null
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Date": "2022-01-01",
+        "value": null
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1961-01-01",
+        "value": 0.022474365824228508
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1962-01-01",
+        "value": 0.06502486299077945
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1963-01-01",
+        "value": 0.11157731275064285
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1964-01-01",
+        "value": 0.14722894182020035
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1965-01-01",
+        "value": 0.19546176217120836
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1966-01-01",
+        "value": 0.27088690961800005
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1967-01-01",
+        "value": 0.32400467095080854
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1968-01-01",
+        "value": 0.3730459795701939
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1969-01-01",
+        "value": 0.4079142740735989
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1970-01-01",
+        "value": 0.4874864766113871
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1971-01-01",
+        "value": 0.5072813775316203
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1972-01-01",
+        "value": 0.5216732857997347
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1973-01-01",
+        "value": 0.5920474030877966
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1974-01-01",
+        "value": 0.6096423591408991
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1975-01-01",
+        "value": 0.6332138809080958
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1976-01-01",
+        "value": 0.6988633180798741
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1977-01-01",
+        "value": 0.7700476289537226
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1978-01-01",
+        "value": 0.8458166801289516
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1979-01-01",
+        "value": 0.8766114240915319
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1980-01-01",
+        "value": 0.9054458500311522
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1981-01-01",
+        "value": 0.9414314227335049
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1982-01-01",
+        "value": 0.9729615508418527
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1983-01-01",
+        "value": 1.0071642202850108
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1984-01-01",
+        "value": 1.0434383026392635
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1985-01-01",
+        "value": 1.069742586676948
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1986-01-01",
+        "value": 1.10505668281002
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1987-01-01",
+        "value": 1.1779663486125898
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1988-01-01",
+        "value": 1.285130895065992
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1989-01-01",
+        "value": 1.3832089518030892
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1990-01-01",
+        "value": 1.4725625083370613
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1991-01-01",
+        "value": 1.5390234013916149
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1992-01-01",
+        "value": 1.6019087914376735
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1993-01-01",
+        "value": 1.666605657955507
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1994-01-01",
+        "value": 1.7292085320352686
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1995-01-01",
+        "value": 1.7934762653856098
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1996-01-01",
+        "value": 1.8353117936083478
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1997-01-01",
+        "value": 1.7945511903568996
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1998-01-01",
+        "value": 1.702818343743617
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "1999-01-01",
+        "value": 1.736294893596351
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2000-01-01",
+        "value": 1.7699406223951628
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2001-01-01",
+        "value": 1.7945969772861778
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2002-01-01",
+        "value": 1.8453136643762946
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2003-01-01",
+        "value": 1.9061443190987784
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2004-01-01",
+        "value": 1.9589260571277691
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2005-01-01",
+        "value": 1.9921679716567608
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2006-01-01",
+        "value": 2.033111583053877
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2007-01-01",
+        "value": 2.078418324287261
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2008-01-01",
+        "value": 2.0880518640301236
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2009-01-01",
+        "value": 2.0739379100140103
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2010-01-01",
+        "value": 2.1396690938911753
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2011-01-01",
+        "value": 2.1415767455426584
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2012-01-01",
+        "value": 2.2050585007038674
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2013-01-01",
+        "value": 2.2255012045408438
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2014-01-01",
+        "value": 2.22981769829311
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2015-01-01",
+        "value": 2.2559221188426704
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2016-01-01",
+        "value": 2.2852591343480837
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2017-01-01",
+        "value": 2.322071601384631
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2018-01-01",
+        "value": 2.3601997916111057
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2019-01-01",
+        "value": 2.378597991961824
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2020-01-01",
+        "value": 2.3136585276249955
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2021-01-01",
+        "value": 2.3267158068832425
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Date": "2022-01-01",
+        "value": 2.3510217463543928
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1961-01-01",
+        "value": -0.015190926518423296
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1962-01-01",
+        "value": 0.011841764544469465
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1963-01-01",
+        "value": 0.07163955643667683
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1964-01-01",
+        "value": 0.09881667871513873
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1965-01-01",
+        "value": 0.10208300580484901
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1966-01-01",
+        "value": 0.1832341377712824
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1967-01-01",
+        "value": 0.20328447211759257
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1968-01-01",
+        "value": 0.24323098828824383
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1969-01-01",
+        "value": 0.2588035797453876
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1970-01-01",
+        "value": 0.26731341899381905
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1971-01-01",
+        "value": 0.29870475312939654
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1972-01-01",
+        "value": 0.34781585209036026
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1973-01-01",
+        "value": 0.3575764867822587
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1974-01-01",
+        "value": 0.3902878330847686
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1975-01-01",
+        "value": 0.4389401017509242
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1976-01-01",
+        "value": 0.5177931946974229
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1977-01-01",
+        "value": 0.529684717310252
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1978-01-01",
+        "value": 0.5229337596583448
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1979-01-01",
+        "value": 0.49572533459764245
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1980-01-01",
+        "value": 0.4502860390647571
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1981-01-01",
+        "value": 0.4776622285183246
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1982-01-01",
+        "value": 0.49138038783181004
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1983-01-01",
+        "value": 0.5167390680753527
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1984-01-01",
+        "value": 0.5589895329964986
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1985-01-01",
+        "value": 0.5785518345276969
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1986-01-01",
+        "value": 0.6252312566084494
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1987-01-01",
+        "value": 0.6956256722771628
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1988-01-01",
+        "value": 0.6987511577641077
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1989-01-01",
+        "value": 0.6821501397950301
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1990-01-01",
+        "value": 0.7518323655225599
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1991-01-01",
+        "value": 0.7408223794601846
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1992-01-01",
+        "value": 0.7723768431608867
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1993-01-01",
+        "value": 0.8286033966265799
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1994-01-01",
+        "value": 0.7632503468559051
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1995-01-01",
+        "value": 0.8221595188036062
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1996-01-01",
+        "value": 0.8768329879489338
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1997-01-01",
+        "value": 0.9336933675680685
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1998-01-01",
+        "value": 0.9418286532957852
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "1999-01-01",
+        "value": 0.8936093084670214
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2000-01-01",
+        "value": 0.9460648154572594
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2001-01-01",
+        "value": 0.8720064437212947
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2002-01-01",
+        "value": 0.9205019208023113
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2003-01-01",
+        "value": 0.9633069173653385
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2004-01-01",
+        "value": 1.0431286747766413
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2005-01-01",
+        "value": 1.1157599809754113
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2006-01-01",
+        "value": 1.1699665277606688
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2007-01-01",
+        "value": 1.211203249033397
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2008-01-01",
+        "value": 1.206664427225314
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2009-01-01",
+        "value": 1.1434279125039235
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2010-01-01",
+        "value": 1.2091415147681646
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2011-01-01",
+        "value": 1.3006249634057359
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2012-01-01",
+        "value": 1.3346515607025446
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2013-01-01",
+        "value": 1.4032566727577187
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2014-01-01",
+        "value": 1.4379816417225604
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2015-01-01",
+        "value": 1.483706120939065
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2016-01-01",
+        "value": 1.5029424944129661
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2017-01-01",
+        "value": 1.562314179992562
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2018-01-01",
+        "value": 1.578464904459405
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2019-01-01",
+        "value": 1.5723198774601523
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2020-01-01",
+        "value": 1.5810435787870807
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2021-01-01",
+        "value": 1.6802497522734612
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Date": "2022-01-01",
+        "value": 1.7242618506726315
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1961-01-01",
+        "value": 0.01881451164087074
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1962-01-01",
+        "value": 0.02129661730089129
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1963-01-01",
+        "value": 0.061406057914202256
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1964-01-01",
+        "value": 0.10876324278323006
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1965-01-01",
+        "value": 0.12353409940715807
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1966-01-01",
+        "value": 0.1336296213095445
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1967-01-01",
+        "value": 0.15572777235754384
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1968-01-01",
+        "value": 0.20384224966957828
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1969-01-01",
+        "value": 0.21874241857542182
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1970-01-01",
+        "value": 0.2569415627858909
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1971-01-01",
+        "value": 0.2872119013319307
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1972-01-01",
+        "value": 0.3261302235569439
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1973-01-01",
+        "value": 0.38739694458044777
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1974-01-01",
+        "value": 0.36160849173191684
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1975-01-01",
+        "value": 0.3468365696767639
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1976-01-01",
+        "value": 0.37576982767193984
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1977-01-01",
+        "value": 0.4003789036972547
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1978-01-01",
+        "value": 0.4415081351532057
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1979-01-01",
+        "value": 0.4774153430044335
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1980-01-01",
+        "value": 0.4556973321127531
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1981-01-01",
+        "value": 0.4474404849647738
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1982-01-01",
+        "value": 0.4675514539876104
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1983-01-01",
+        "value": 0.5085621150665905
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1984-01-01",
+        "value": 0.5294169355651958
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1985-01-01",
+        "value": 0.567784584267816
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1986-01-01",
+        "value": 0.5964858377675418
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1987-01-01",
+        "value": 0.6468830160072804
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1988-01-01",
+        "value": 0.7004036935379205
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1989-01-01",
+        "value": 0.723250005868374
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1990-01-01",
+        "value": 0.7275714663937767
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1991-01-01",
+        "value": 0.7133864754286096
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1992-01-01",
+        "value": 0.7146849620142467
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1993-01-01",
+        "value": 0.7368809057248527
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1994-01-01",
+        "value": 0.7720739755745374
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1995-01-01",
+        "value": 0.7944300423231044
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1996-01-01",
+        "value": 0.817376290862744
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1997-01-01",
+        "value": 0.8628757008679009
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1998-01-01",
+        "value": 0.8935344130937879
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "1999-01-01",
+        "value": 0.9204014368577106
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2000-01-01",
+        "value": 0.9591091378190169
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2001-01-01",
+        "value": 0.9807199011222469
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2002-01-01",
+        "value": 0.9942477185974655
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2003-01-01",
+        "value": 1.0205721324047041
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2004-01-01",
+        "value": 1.0388579497789119
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2005-01-01",
+        "value": 1.059011908466073
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2006-01-01",
+        "value": 1.075243909706344
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2007-01-01",
+        "value": 1.0933231357596949
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2008-01-01",
+        "value": 1.0831929883152038
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2009-01-01",
+        "value": 1.0283806737042323
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2010-01-01",
+        "value": 1.04268176544506
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2011-01-01",
+        "value": 1.0462526486037922
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2012-01-01",
+        "value": 1.0543151773106645
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2013-01-01",
+        "value": 1.0653822669633861
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2014-01-01",
+        "value": 1.089475425819229
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2015-01-01",
+        "value": 1.1035114452302504
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2016-01-01",
+        "value": 1.1149611398900756
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2017-01-01",
+        "value": 1.1343717393099388
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2018-01-01",
+        "value": 1.142252749754245
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2019-01-01",
+        "value": 1.1528942609810269
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2020-01-01",
+        "value": 1.0398692477262128
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2021-01-01",
+        "value": 1.1238793287029678
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Date": "2022-01-01",
+        "value": 1.1672461955383358
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1961-01-01",
+        "value": 0.006162186595592189
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1962-01-01",
+        "value": 0.04999407264490017
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1963-01-01",
+        "value": 0.07866191448827674
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1964-01-01",
+        "value": 0.1211517873725494
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1965-01-01",
+        "value": 0.1706854618357161
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1966-01-01",
+        "value": 0.22211132908955702
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1967-01-01",
+        "value": 0.23591512960704977
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1968-01-01",
+        "value": 0.2728141050700438
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1969-01-01",
+        "value": 0.29357088198614073
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1970-01-01",
+        "value": 0.27908191670978916
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1971-01-01",
+        "value": 0.2988414081210903
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1972-01-01",
+        "value": 0.33938909406160267
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1973-01-01",
+        "value": 0.38476539710363106
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1974-01-01",
+        "value": 0.3702086159593204
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1975-01-01",
+        "value": 0.3582920811306055
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1976-01-01",
+        "value": 0.4012697939464274
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1977-01-01",
+        "value": 0.43641632181352785
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1978-01-01",
+        "value": 0.4796959461126906
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1979-01-01",
+        "value": 0.4998307443579007
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1980-01-01",
+        "value": 0.48766404671920616
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1981-01-01",
+        "value": 0.5029104304845461
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1982-01-01",
+        "value": 0.47518388041416226
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1983-01-01",
+        "value": 0.5108596570816141
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1984-01-01",
+        "value": 0.5720692151389621
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1985-01-01",
+        "value": 0.6040586185832995
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1986-01-01",
+        "value": 0.6288574300948102
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1987-01-01",
+        "value": 0.6539267866991103
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1988-01-01",
+        "value": 0.6857685742366345
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1989-01-01",
+        "value": 0.7123926537322435
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1990-01-01",
+        "value": 0.7197801597853852
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1991-01-01",
+        "value": 0.705334317982861
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1992-01-01",
+        "value": 0.7260836809639628
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1993-01-01",
+        "value": 0.74004288203357
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1994-01-01",
+        "value": 0.7672774542484421
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1995-01-01",
+        "value": 0.7818578245022483
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1996-01-01",
+        "value": 0.807255156563318
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1997-01-01",
+        "value": 0.8387268082839802
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1998-01-01",
+        "value": 0.8709084888676365
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "1999-01-01",
+        "value": 0.9062561828842051
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2000-01-01",
+        "value": 0.9350908490556818
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2001-01-01",
+        "value": 0.9346915720673398
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2002-01-01",
+        "value": 0.9422308208825972
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2003-01-01",
+        "value": 0.9612142936545965
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2004-01-01",
+        "value": 0.9897613976855475
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2005-01-01",
+        "value": 1.0147835570783568
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2006-01-01",
+        "value": 1.0325889591476525
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2007-01-01",
+        "value": 1.0429840439224958
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2008-01-01",
+        "value": 1.034746529586172
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2009-01-01",
+        "value": 0.9996371875506402
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2010-01-01",
+        "value": 1.0180691865340403
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2011-01-01",
+        "value": 1.026181387059598
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2012-01-01",
+        "value": 1.0413960748125322
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2013-01-01",
+        "value": 1.0527186552515668
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2014-01-01",
+        "value": 1.0680050275314974
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2015-01-01",
+        "value": 1.0873468047104766
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2016-01-01",
+        "value": 1.096637268014435
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2017-01-01",
+        "value": 1.1124824237642756
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2018-01-01",
+        "value": 1.1362464870643036
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2019-01-01",
+        "value": 1.1543778007298244
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2020-01-01",
+        "value": 1.1166660422377204
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2021-01-01",
+        "value": 1.1728530528138559
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Date": "2022-01-01",
+        "value": 1.1882488021970268
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1960-01-01",
+        "value": 0.0
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1961-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1962-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1963-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1964-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1965-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1966-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1967-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1968-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1969-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1970-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1971-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1972-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1973-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1974-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1975-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1976-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1977-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1978-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1979-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1980-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1981-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1982-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1983-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1984-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1985-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1986-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1987-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1988-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1989-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1990-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1991-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1992-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1993-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1994-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1995-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1996-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1997-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1998-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "1999-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2000-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2001-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2002-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2003-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2004-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2005-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2006-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2007-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2008-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2009-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2010-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2011-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2012-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2013-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2014-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2015-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2016-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2017-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2018-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2019-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2020-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2021-01-01",
+        "value": null
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Date": "2022-01-01",
+        "value": null
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ]
+  },
+  "width": 400,
+  "height": 300
+}

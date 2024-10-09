@@ -1,0 +1,377 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.3
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#122b39E6",
+      "subtitleColor": "#122b39CC",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 11,
+      "subtitlePadding": 4,
+      "offset": 6,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-474ce3774fe5ebb57c0d11b49793a31d"
+      },
+      "mark": {
+        "type": "bar",
+        "color": "rgb(126,179,215)"
+      },
+      "encoding": {
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "scale": {
+            "nice": false,
+            "domain": [
+              -0.08,
+              0.075
+            ]
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Trade Balance",
+        "subtitle": [
+          "Current account balance, % of GDP, 2024"
+        ]
+      }
+    },
+    {
+      "data": {
+        "name": "data-d285a7403ed98ae579761d64a864032b"
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 10,
+        "opacity": 0.5,
+        "text": "Source: World Economic Outlook (April 2024)"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 330
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-474ce3774fe5ebb57c0d11b49793a31d"
+      },
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.Value < 0 ? \"right\" : \"left\""
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.Value < 0 ? -2 : 5"
+        }
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "ISO3",
+              "oneOf": [
+                "DEU",
+                "EGY"
+              ]
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "Value",
+          "format": ".2%",
+          "type": "nominal"
+        },
+        "x": {
+          "axis": {
+            "format": "%",
+            "zindex": 1,
+            "tickCount": 6
+          },
+          "field": "Value",
+          "scale": {
+            "nice": false,
+            "domain": [
+              -0.08,
+              0.075
+            ]
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": "-x",
+          "type": "nominal"
+        }
+      },
+      "title": {
+        "text": "Trade Balance",
+        "subtitle": [
+          "Current account balance, % of GDP, 2024"
+        ]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-474ce3774fe5ebb57c0d11b49793a31d": [
+      {
+        "Country": "India",
+        "ISO3": "IND",
+        "Year": "2024-01-01",
+        "Value": -0.0139999999999999
+      },
+      {
+        "Country": "China",
+        "ISO3": "CHN",
+        "Year": "2024-01-01",
+        "Value": 0.013
+      },
+      {
+        "Country": "United States",
+        "ISO3": "USA",
+        "Year": "2024-01-01",
+        "Value": -0.025
+      },
+      {
+        "Country": "Indonesia",
+        "ISO3": "IDN",
+        "Year": "2024-01-01",
+        "Value": -0.009
+      },
+      {
+        "Country": "Pakistan",
+        "ISO3": "PAK",
+        "Year": "2024-01-01",
+        "Value": -0.011
+      },
+      {
+        "Country": "Nigeria",
+        "ISO3": "NGA",
+        "Year": "2024-01-01",
+        "Value": 0.006
+      },
+      {
+        "Country": "Brazil",
+        "ISO3": "BRA",
+        "Year": "2024-01-01",
+        "Value": -0.0139999999999999
+      },
+      {
+        "Country": "Bangladesh",
+        "ISO3": "BGD",
+        "Year": "2024-01-01",
+        "Value": -0.008
+      },
+      {
+        "Country": "Russia",
+        "ISO3": "RUS",
+        "Year": "2024-01-01",
+        "Value": 0.027
+      },
+      {
+        "Country": "Mexico",
+        "ISO3": "MEX",
+        "Year": "2024-01-01",
+        "Value": -0.008
+      },
+      {
+        "Country": "Ethiopia",
+        "ISO3": "ETH",
+        "Year": "2024-01-01",
+        "Value": -0.026
+      },
+      {
+        "Country": "Japan",
+        "ISO3": "JPN",
+        "Year": "2024-01-01",
+        "Value": 0.035
+      },
+      {
+        "Country": "Philippines",
+        "ISO3": "PHL",
+        "Year": "2024-01-01",
+        "Value": -0.022
+      },
+      {
+        "Country": "Egypt",
+        "ISO3": "EGY",
+        "Year": "2024-01-01",
+        "Value": -0.063
+      },
+      {
+        "Country": "DR Congo",
+        "ISO3": "COD",
+        "Year": "2024-01-01",
+        "Value": -0.0409999999999999
+      },
+      {
+        "Country": "Vietnam",
+        "ISO3": "VNM",
+        "Year": "2024-01-01",
+        "Value": 0.023
+      },
+      {
+        "Country": "Iran",
+        "ISO3": "IRN",
+        "Year": "2024-01-01",
+        "Value": 0.036
+      },
+      {
+        "Country": "T\u00fcrkiye",
+        "ISO3": "TUR",
+        "Year": "2024-01-01",
+        "Value": -0.0279999999999999
+      },
+      {
+        "Country": "Germany",
+        "ISO3": "DEU",
+        "Year": "2024-01-01",
+        "Value": 0.07
+      },
+      {
+        "Country": "Thailand",
+        "ISO3": "THA",
+        "Year": "2024-01-01",
+        "Value": 0.017
+      },
+      {
+        "Country": "United Kingdom",
+        "ISO3": "GBR",
+        "Year": "2024-01-01",
+        "Value": -0.026
+      }
+    ],
+    "data-d285a7403ed98ae579761d64a864032b": [
+      {
+        "x": 0
+      }
+    ]
+  }
+}
