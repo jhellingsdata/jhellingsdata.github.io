@@ -1,0 +1,43 @@
+<html></html>
+<body>
+    <h1> BeautifulSoup </h1>
+    <p> BeautifulSoup is a Python library for parsing HTML documents. We can use it to extract data from HTML we fetch
+        from the web.
+        Here, we're just using it to parse some simple sample HTML. </p>
+
+    <h2 class="important"> Searching the tree </h2>
+    <p id="searching_description" style="color: red"> BeautifulSoup allows us to search the HTML tree in lots of different ways: by tag, by
+        id, by CSS class, and so on. </p>
+    <ol>
+        <li role="example_1"> By tag: we could search for every li </li>
+        <li role="example_2"> By id: we could search for the p tag with id="searching_description" </li>
+        <li role="example_3" class="important"> By class: we could search for every tag with a given class </li>
+        <li> and so on... </li>
+    </ol>
+    <div>
+        <p>Div tags are used to group block-elements and structure the web page.</p>
+    </div>
+
+    <br>
+    <br>
+
+
+    <h3 style="color: green">Exercises:</h5>
+    <div class="exercise">
+        <p id="exercise1">Find the text of the first paragraph inside this div.</p>
+    </div>
+    <div class="exercise" id="exercise2">
+        <p>Count the number of <code>&lt;div&gt;</code> elements with the class "exercise".</p>
+    </div>
+    <div class="exercise" id="exercise3">
+        <ul>
+            <li><a href="https://example.com/page1">Page 1</a></li>
+            <li><a href="https://example.com/page2">Page 2</a></li>
+            <li><a href="https://example.com/page3">Page 3</a></li>
+        </ul>
+        <p>Extract all the URLs from the links in this list.</p>
+    </div>
+
+
+</body>
+</html>
