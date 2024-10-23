@@ -9,10 +9,13 @@ body {
 h1 {
 /* Fix h1 to left of screen with max width of 1000px */
     margin: 0 auto;
+    color: #333;
+
+}
+
+.page-header {
     max-width: 1200px;
     padding: 20px;
-
-    color: #333;
 
 }
 

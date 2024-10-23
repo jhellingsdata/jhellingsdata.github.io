@@ -1,0 +1,171 @@
+<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
+<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
+<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
+<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
+
+<!-- Take a look around and make your own copy to adapt for your own use. -->
+
+<!-- This is a comment -->
+<!-- Comments are not displayed in the browser -->
+<!-- They can be used to leave notes in the code -->
+
+<!DOCTYPE html>
+<html> 
+    <!-- HTML is heirarchial: tags like this define elements on the page. 
+    Each tag does something different. For example:
+        - The <html> tag defines the whole document.
+        - The <h1> tag defines a large heading
+        - The <p> tag defines a paragraph
+        - Tags appear as an opening <div> and closing </div> pair
+    -->
+
+<head>    
+    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+
+    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
+    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
+    <link rel="stylesheet" type="text/css" href="example.css">
+    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+
+    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        figure .ex1 {
+            width: 400px
+        }
+
+        /* We can target our styles to HTML elements in different ways */
+        /* figure {} -> applies to all HTML 'figure' tags*/
+        /* #chart1 {} -> applies to all HTML elements with the attribute class="chart1" */
+        /* .chart1 {} -> applies to all HTML elements with the attribute id="chart1" */
+
+        #chart1 {
+            width: 400px
+        }
+        
+    </style>
+</head>
+
+<body> 
+<!-- The body tag contains the elements that visitors to our page will see. -->
+    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
+        <!-- This is a header, it is the largest text on the page -->
+        Responsive charts
+    </h1>
+    <p style="margin-top: 0px; color: darkblue">
+        <a href="https://www.github.com/jhellingsdata" target=”_blank”>GitHub</a> <!-- Adding the target=”_blank” attribute means clicking the link will open in a new tab -->
+    </p>
+    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+        Practical Data Science 2024 - Tips and Tricks
+    </h3>
+
+    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
+    <section>
+        <div class="chart-description">
+            <h2>Intro</h2>
+            <p>
+                When embedding a Vega-Lite chart in an HTML page, one common issue is the chart not displaying correctly when the window is resized, or not displaying at all. This issue often occurs because the chart container has no defined width, or the chart's width is set incorrectly. In this guide, we'll explore how to fix this and create fully responsive charts. We will cover multiple examples with different dynamic sizing and styling options.
+            </p>
+            <p>
+                The issue of non-appearing charts can happen when trying to take a chart from the Economics Observatory Chart Builder tool and embed it in your own website. This occues because the generated Vega-Lite chart specifications include the width set as "container", which can cause issues if not properly handled in the HTML structure. Example properties:
+                <code>
+                    "height": 250,
+                        "width": "container",
+                        "autosize": {
+                        "type": "fit",
+                        "contains": "padding"
+                        }
+                </code>
+            </p>
+            <p>This configuration requires additional CSS to display correctly. In this guide, we will show how to fix the issue and create responsive charts.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="chart-desciption">
+            <h2>The Problem: Why is the Chart Not Showing? </h2>
+            <p>
+                When embedding a chart with "width": "container", the chart's size is determined by the size of its HTML container—the element that holds the chart.
+            </p>
+            <h5>What is a container?</h5>
+            <p>
+                In HTML, a container refers to the parent element (like a div, figure, etc.) that holds or "contains" other content. In the case of embedding a Vega-Lite chart, this container needs to have a width defined. If the container's width isn't set, the chart has no frame to fit into and may not display at all.
+            </p>
+            <p>
+                For example, if a Vega-Lite chart's width is set to "container" but the container element has no defined width, the chart will not be visible. This is because there's no defined space for the chart to render itself into.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="chart-desciption">
+            <h2>Example 1: Basic Responsive Bar Chart</h2>
+            <p>
+                In this first example, we will embed a simple bar chart from <a href="https://vega.github.io/vega-lite/examples/bar_size_responsive.html" target="_blank">Vega-Lite's example gallery</a> that resizes with the window size. We'll use CSS to set the container's width to 100%, ensuring the chart can resize dynamically. This is the 2nd chart in the Vega Lite example gallery. 
+            </p>
+        </div>
+        <!-- <figure id="chart1" style="width: 400px"></figure> -->
+        <figure id="chart1" class="ex1"></figure>
+    </section>
+
+    <section>
+        <div class="chart-desciption">
+            <h2>Example 2: Chart with Padding and Margin</h2>
+            <p>
+                In this first example, we will embed a simple bar chart from <a href="https://vega.github.io/vega-lite/examples/bar_size_responsive.html" target="_blank">Vega-Lite's example gallery</a> that resizes with the window size. We'll use CSS to set the container's width to 100%, ensuring the chart can resize dynamically. This is the 2nd chart in the Vega Lite example gallery. 
+            </p>
+        </div>
+        <figure id="Location4" style="width: 400px"></figure>
+    </section>
+    
+    <section>
+        <div class="chart-desciption">
+            <h2>Example 3: Full-Screen Width Chart</h2>
+            <p>
+                For cases where you want the chart to cover the entire width of the window, we can set up the container to take 100% of the width with zero margin.
+            </p>
+        </div>
+        <figure id="Location4" style="width: 400px"></figure>
+    </section>
+
+    <section></section>
+        <div class="chart-desciption">
+            <h2>Example 4: Chart with Fixed Height and Dynamic Width</h2>
+            <p>
+                Sometimes, it might be desirable to fix the chart's height while keeping the width responsive. You can combine fixed height with a flexible width.
+            </p>
+        </div>
+        <figure id="Location4" style="width: 400px"></figure>
+    </section>
+
+
+
+    <!-- Do you want to add more sections? -->
+        <!-- Try copying pasting the section above -->
+        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
+        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+
+
+    <!-- Add script to run JavaScript code on the page -->
+    <script>
+        const chart1 = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": "container",  /* Makes the chart scale with the container */
+            "height": 250,
+            "data": {"url": "https://raw.githubusercontent.com/vega/vega-datasets/refs/heads/next/data/cars.json"},
+            "mark": "bar",
+            "encoding": {
+                "x": {"field": "Origin"},
+                "y": {"aggregate": "count", "title": "Number of Cars"}
+            }
+        }
+
+        vegaEmbed('#chart1', chart1);
+    </script>
+
+</body>
+    
+</html>

@@ -1,0 +1,59 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.18.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/LAD_Debt/cleanedFinanceData_2023_lads.csv"
+    },
+    "config": {"view": {"strokeOpacity": 0}},
+
+    "transform": [
+      {
+        "filter": "datum.Name != 'Shetland Islands' && datum.Assets > -1"
+      }
+    ],
+    "height": "container",
+    "width": "container",
+  "encoding": {
+    "x": {
+      "field": "Borrowing",
+      "axis": {
+        "titleFontWeight": "normal",
+        "gridOpacity": 0.3,
+        "tickOpacity": 0,
+        "labelFontWeight": "lighter",
+        "labelExpr": "'£'+format(datum.value/1000000, ',.1f')+'B'"
+      },
+      "type": "quantitative",
+      "scale": {
+        "domain": [0,3700000]
+      }
+    },
+    "y": {
+      "field": "Assets",
+      "axis": {
+        "titleFontWeight": "normal",
+        "gridOpacity": 0.3,
+        "tickOpacity": 0,
+        "labelFontWeight": "lighter",
+        "labelExpr": "'£'+format(datum.value/1000000, ',.1f')+'B'"
+      },
+      "scale": {"domain": [0, 1000000], "clamp": true},
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "DebtToAssets",
+      "type": "quantitative",
+      "legend": null,
+      "scale": {
+        "domain": [0, 50],
+        "clamp": true,
+        "type": "linear",
+        "scheme": "lightmulti"
+      }
+    }
+  },
+  "mark": {
+    "type": "circle",
+    "stroke": "rgba(0,0,0,0.8)",
+    "strokeWidth": 0.5
+  }
+}

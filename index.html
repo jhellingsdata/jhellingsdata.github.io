@@ -18,39 +18,58 @@
 </head>
 
 <body>
-    <!-- <sajndckwECFE -->
+    <!-- <sajndcskwECFE -->
 
-    <h1 class="Any-label-name">Josh Hellings</h1>
+    <div class="page-header">
+        <h1 class="">Josh Hellings</h1>
+
+        <p style="margin-top: 0px; color: darkblue"></p>
+        <p>
+            <!-- we're setting the margin to 0px so the header and authour name are close together -->
+            <a href="https://www.linkedin.com/in/josh-hellings-388b43165/">LinkedIn</a> | <a
+                href="https://www.github.com/jhellingsdata">GitHub</a>
+        </p>
+    </div>
 
     <!-- Add a grey dividing line across the whole page -->
     <hr class="line">
 
 
     <div class="cards-container">
+        <div class="card" onclick="location.href='tutorials-home.html';">
+            <h3 class="card-title">Chart Tutorials: Vega-Lite</h3>
+            <div class="card-chart" id="chart9"></div>
+            <span class="card-date">October 2024</span>
+            <p class="card-text"><span class="leader">Growing collection of tutorials related to chart building using Vega-Lite.</span>
+            </p>
+        </div>
         <div class="card" onclick="location.href='growth-day-p21.html';">
             <h3 class="card-title">21 charts for 21 countries</h3>
-            <div class="card-chart" id="chartx"></div>
+            <!-- <div class="card-chart" id="chartx"></div> -->
+            <img src="Charts/p21/C1_Population_World.png" alt="" style="width: 100%">
             <span class="card-date">May 2024</span>
-            <p class="card-text"><span class="leader">World's 25 most populous countries.</span>The page holds a
+            <p class="card-text"><span class="leader">World's 21 most populous countries. </span>The page holds a
                 collection of charts...
             </p>
         </div>
+
         <div class="card" onclick="location.href='data-story/local-authorities.html';">
             <h3 class="card-title">Local Authority Debt</h3>
-            <div class="card-chart" id="chartx"></div>
+            <div class="card-chart" id="chart7"></div>
             <span class="card-date">May 2024</span>
-            <p class="card-text"><span class="leader">Visualising the debt crisis across UK Local Authorities.</span>The page holds a
+            <p class="card-text"><span class="leader">Visualising the debt crisis across UK Local Authorities. </span>The page holds a
                 collection of charts...
             </p>
         </div>
-        <div class="card">
-            <span class="card-date">March 2023</span>
+        
+        <!-- <div class="card">
+            <span class="card-date">March 2023</span> -->
             <!-- <div class="card-chart" id="chart1"></div> -->
-            <div class="card-content" onclick="location.href='Project.html';">
+            <!-- <div class="card-content" onclick="location.href='Project.html';">
                 <h3 class="card-title">Project Title</h3>
                 <p class="card-text">This is a short summary of the project. Click to learn more.</p>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
 
         <div class="card" onclick="location.href='https://econ4everyone.uchicago.edu/macro-syllabus';">
             <h3 class="card-title">Economics for Everyone</h3>
@@ -59,6 +78,13 @@
             <p class="card-text">Selection of charts produced for a new macroeconomics course at the <a
                     href="https://econ4everyone.uchicago.edu/macro-syllabus/">University of
                     Chicago</a>.</p>
+        </div>
+
+        <div class="card" onclick="location.href='london-crime.html';">
+            <h3 class="card-title">London crime during the pandemic</h3>
+            <div class="card-chart" id="chart6"></div>
+            <span class="card-date">January 2023</span>
+            <p class="card-text">Data analysis assignment for UoB software & programming module.</p>
         </div>
 
         <div class="card" onclick="location.href='housing.html';">
@@ -151,6 +177,9 @@
         var myChart3 = "charts/teaser/202204_ECO_bankRate.json";
         var myChart4 = "charts/teaser/202204_ECO_newHousing.json";
         var myChart5 = "charts/teaser/202303_e4e_gdpScatter.json";
+        var myChart6 = "charts/teaser/202303_e4e_gdpScatter.json";
+        var myChart7 = "charts/teaser/202405_LocalAuthorities.json";
+        var myChart9 = "charts/teaser/202410_SimpleBar.json";
 
         // Embed the charts in the divs above
         vegaEmbed('#chart1', myChart1, { "actions": false });
@@ -158,6 +187,9 @@
         vegaEmbed('#chart3', myChart3, { "actions": false });
         vegaEmbed('#chart4', myChart4, { "actions": false });
         vegaEmbed('#chart5', myChart5, { "actions": false });
+        vegaEmbed('#chart6', myChart6, { "actions": false });
+        vegaEmbed('#chart7', myChart7, { "actions": false });
+        vegaEmbed('#chart9', myChart9, { "actions": false });
     </script>
 
 </body>
