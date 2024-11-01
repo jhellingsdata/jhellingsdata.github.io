@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data: Deep Dive</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 1em;
+        }
+
+        #charts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        #charts div {
+            margin: 20px;
+            padding-top: 20px;
+        }
+        hr.solid {
+            border: none; /* remove existing border */
+            border-top: 1.5px solid #727171;
+            width: 680px; /* adjust width as needed */
+        }
+        .vega-embed.has-actions {
+            padding: 0px !important;
+        }
+        .charts-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+    <h1>21 charts for World's 21 largest countries</h1>
+
+    <div class="charts-area">
+        <img src="charts/p21/C1_Population_World.png" alt="Treemap of the countries by population. Highlighting the 21 largest countries make up 71% of the global population." style="width: 600px; padding-bottom: 2em;">
+        <hr class="solid">
+        <div id="charts"></div>
+    </div>
+
+
+
+    <script>
+        // JSON file names in 'charts' folders
+        const charts = [
+            'C1_Population_Top21.json',
+            'C2_Fertility.json',
+            "C3_Migration.json",
+            "C4_PopulationDistribution_Tall.json",
+            "C5_GDPpc.json",
+            "C6_GDP_LongRun.json",
+            "C7_GDP_5yr.json",
+            "C7_GDP_10yr.json",
+            "C9_Unemployment.json",
+            "C10_YouthUnemployment.json",
+            "C11_Inequality.json",
+            "C12_MinimumWages.json",
+            "C13_TaxTake.json",
+            "C14_GovDeficit.json",
+            "C16_DebtCost.json",
+            "C16_GovDebt_Gross.json",
+            "C17_Inflation.json",
+            "C18_Bank_Rates.json",
+            "C19_PPP_BigMac.json",
+            "C20_CurrentAccount_GDP.json",
+            "C21_InvestmentPosition.json"
+        ];
+        let path = 'charts/p21/';
+
+        // // Embed all these charts. We could do this manually, with an embed for each chart, but we can also use a for loop.
+        // vegaEmbed('#C1', path + charts[0]);
+        // vegaEmbed('#C2', path + charts[1]);
+        // vegaEmbed('#C3', path + charts[2]);
+        // vegaEmbed('#C4', path + charts[3]);
+        // vegaEmbed('#C5', path + charts[4]);
+        
+
+        // Embed all charts in `charts` array using vegaEmbed and a for loop. Target 'charts' div.
+        const chartsContainer = document.getElementById('charts');
+        // Create links to each of the charts using our `path`
+        for (let i = 0; i < charts.length; i++) {
+            const chartDiv = document.createElement('div');
+            chartDiv.classList.add('chart');
+            chartsContainer.appendChild(chartDiv);
+            vegaEmbed(chartDiv, path + charts[i]);
+            // Add a <hr> element after the chart
+            const hr = document.createElement('hr');
+            hr.classList.add('solid');
+            chartsContainer.appendChild(hr);
+        }
+        
+        
+
+        // // For every string in `chartFiles`, prepend path to file name
+        // path = 'charts/p21/'
+        // chartFiles.forEach((chartFile, i) => {
+        //     chartFiles[i] = path + chartFile;
+        // });
+        // // repoPath = 'https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/'
+        // // // For every string in `chartFiles`, prepend repo path to file name
+        // // chartFiles.forEach((chartFile, i) => {
+        // //     chartFiles[i] = repoPath + chartFile;
+        // // });
+
+    </script>
+      
+</body>
+</html>

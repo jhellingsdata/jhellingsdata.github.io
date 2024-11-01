@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 Charts for World's Largest Countries</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .intro-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a365d;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+            max-width: 70ch;
+        }
+
+        .highlight {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        .treemap-container {
+            margin: 2rem 0;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .treemap-container svg {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-content {
+            position: sticky;
+            top: 2rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .category {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .category.active {
+            background-color: #f0f0f0;
+            color: #2563eb;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2563eb;
+        }
+
+        .chart-container {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .chart-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .sidebar-content {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header"></header>
+        <div class="intro-section">
+            <h1>21 Charts for World's Largest Countries</h1>
+            <p>An in-depth exploration of the world's 21 most populous nations, which collectively represent <span class="highlight">over 70% of the global population</span>. This project examines key economic, demographic, and social indicators across these influential countries.</p>
+            
+            <p>Through a series of carefully curated visualizations, we explore various aspects of these nations - from population dynamics and economic growth to fiscal policies and monetary conditions. Each chart tells a part of the story of how these major countries shape our world.</p>
+            
+            <div class="treemap-container">
+                <object data="charts/p21/C1_Population_World.svg" type="image/svg+xml" width="80%">
+                    Your browser does not support SVG
+                </object>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="category" data-category="population">Population</div>
+                <div class="category" data-category="gdp">GDP</div>
+                <div class="category" data-category="labour">Labour Market</div>
+                <div class="category" data-category="fiscal">Fiscal</div>
+                <div class="category" data-category="monetary">Monetary</div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="population" class="section">
+                <h2 class="section-title">Population</h2>
+                <div class="chart-container" id="chart1"></div>
+                <div class="chart-container" id="chart2"></div>
+                <div class="chart-container" id="chart3"></div>
+                <div class="chart-container" id="chart4"></div>
+            </section>
+
+            <section id="gdp" class="section">
+                <h2 class="section-title">GDP</h2>
+                <div class="chart-container" id="chart5"></div>
+                <div class="chart-container" id="chart6"></div>
+                <div class="chart-container" id="chart7"></div>
+                <div class="chart-container" id="chart8"></div>
+            </section>
+
+            <section id="labour" class="section">
+                <h2 class="section-title">Labour Market</h2>
+                <div class="chart-container" id="chart9"></div>
+                <div class="chart-container" id="chart10"></div>
+                <div class="chart-container" id="chart11"></div>
+                <div class="chart-container" id="chart12"></div>
+            </section>
+
+            <section id="fiscal" class="section">
+                <h2 class="section-title">Fiscal</h2>
+                <div class="chart-container" id="chart13"></div>
+                <div class="chart-container" id="chart14"></div>
+                <div class="chart-container" id="chart15"></div>
+                <div class="chart-container" id="chart16"></div>
+            </section>
+
+            <section id="monetary" class="section">
+                <h2 class="section-title">Monetary</h2>
+                <div class="chart-container" id="chart17"></div>
+                <div class="chart-container" id="chart18"></div>
+                <div class="chart-container" id="chart19"></div>
+                <div class="chart-container" id="chart20"></div>
+                <div class="chart-container" id="chart21"></div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Function to update active category
+        function updateActiveCategory() {
+            const sections = document.querySelectorAll('.section');
+            const categories = document.querySelectorAll('.category');
+            
+            // Get the current scroll position plus a small offset
+            const scrollPosition = window.scrollY + 300;
+
+            // Find which section is currently in view
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    const sectionId = section.id;
+                    categories.forEach(category => {
+                        if (category.dataset.category === sectionId) {
+                            category.classList.add('active');
+                        } else {
+                            category.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', updateActiveCategory);
+
+        // Add click handlers for category navigation
+        document.querySelectorAll('.category').forEach(category => {
+            category.addEventListener('click', () => {
+                const sectionId = category.dataset.category;
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Load Vega-Lite charts
+        const charts = [
+            'C1_Population_Top21.json',
+            'C2_Fertility.json',
+            'C3_Migration.json',
+            'C4_PopulationDistribution_Tall.json',
+            'C5_GDPpc.json',
+            'C6_GDP_LongRun.json',
+            'C7_GDP_5yr.json',
+            'C7_GDP_10yr.json',
+            'C9_Unemployment.json',
+            'C10_YouthUnemployment.json',
+            'C11_Inequality.json',
+            'C12_MinimumWages.json',
+            'C13_TaxTake.json',
+            'C14_GovDeficit.json',
+            'C16_DebtCost.json',
+            'C16_GovDebt_Gross.json',
+            'C17_Inflation.json',
+            'C18_Bank_Rates.json',
+            'C19_PPP_BigMac.json',
+            'C20_CurrentAccount_GDP.json',
+            'C21_InvestmentPosition.json'
+        ];
+
+        let path = 'charts/p21/';
+
+         // Load all charts and then initialize the intersection observer
+        Promise.all(charts.map((chart, index) => 
+            vegaEmbed(`#chart${index + 1}`, path + chart, {
+                actions: false,
+                theme: 'custom'
+            }).catch(console.error)
+        )).then(() => {
+            // After all charts are loaded, trigger an initial check
+            updateActiveCategory();
+            
+            // Add a resize observer to handle dynamic height changes
+            const resizeObserver = new ResizeObserver(() => {
+                updateActiveCategory();
+            });
+            
+            // Observe the main content area for size changes
+            resizeObserver.observe(document.querySelector('.main-content'));
+        });
+    </script>
+</body>
+</html>
