@@ -118,6 +118,19 @@
   "data": {
     "name": "data-51585ead14e0c88fb4f70c5f27709898"
   },
+
+  "title": {
+    "text": "Age composition",
+    "anchor": "start",
+    "dx": 0,
+    "fontSize": 14,
+    "frame": "group",
+    "offset": 6,
+    "subtitle": [
+      "Source: UN, World Population Prosects 2022 (2023 population data)"
+    ]
+  },
+
   "facet": {
     "row": {
       "field": "Country",
@@ -187,7 +200,6 @@
             -10
           ]
         },
-        "title": null,
         "type": "quantitative"
       }
     },
@@ -200,6 +212,7 @@
       "y": "independent"
     }
   },
+
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "datasets": {
     "data-51585ead14e0c88fb4f70c5f27709898": [

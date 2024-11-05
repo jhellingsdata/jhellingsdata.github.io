@@ -1,9 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap');
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #fef7f4;
+}
+
+.header-wrapper {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 1rem 0;
 }
 
 h1 {
@@ -13,37 +37,102 @@ h1 {
 
 }
 
-.page-header {
-    max-width: 1200px;
-    padding: 20px;
+.page-wrapper {
+    max-width: 1280px; /* Approximately equivalent to max-w-7xl in Tailwind */
+    margin: 0 auto;
+    padding: 3rem 5rem 3rem 5rem;
+}
 
+
+
+.header-description {
+font-family: 'Inter', sans-serif;
+font-size: 1.125rem;
+color: #4b5563;
+max-width: 42rem;
+margin: 0 0 1.5rem 0;
+line-height: 1.6;
+}
+
+.social-links {
+display: flex;
+gap: 1rem;
+align-items: center;
+}
+
+.social-link {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+color: #4b5563;
+text-decoration: none;
+transition: color 0.2s ease;
+font-family: 'Inter', sans-serif;
+font-size: 0.875rem;
+}
+
+.social-link:hover {
+color: #2563eb;
+}
+
+.social-link[href*="github"]:hover {
+color: #111827;
+}
+
+.social-link[href*="mailto"]:hover {
+color: #dc2626;
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-    justify-content: center; /* Center the cards horizontally */
-    gap: 20px; /* Adjust the space between cards */
-    padding: 20px; /* Padding around the container */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 800px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1060px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1380px) {
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .card {
     background-color: #F6EFEC;
-    width: 300px;;
+    width: 300px;
     height: 400px;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
     transition: box-shadow 0.1s ease-in-out;
-    margin: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
 }
 
 .card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
@@ -74,6 +163,51 @@ h1 {
     margin: 10px 0;
 }
 
-.leader{
-    font-weight: 550;
+
+/* Styling for pulsating text effect */
+.construction-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6366f1; /* Indigo color */
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.construction-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: currentColor;
+    border-radius: 50%;
+    animation: pulseOpacity 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes pulseOpacity {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Optional: Add a hover state to pause the animation */
+.card:hover .construction-text,
+.card:hover .construction-text::before {
+    animation-play-state: paused;
 }
