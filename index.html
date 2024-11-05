@@ -18,112 +18,150 @@
 </head>
 
 <body>
-    <!-- <sajndcskwECFE -->
 
-    <div class="page-header">
-        <h1 class="">Josh Hellings</h1>
-
-        <p style="margin-top: 0px; color: darkblue"></p>
-        <p>
-            <!-- we're setting the margin to 0px so the header and authour name are close together -->
-            <a href="https://www.linkedin.com/in/josh-hellings-388b43165/">LinkedIn</a> | <a
-                href="https://www.github.com/jhellingsdata">GitHub</a>
-        </p>
-    </div>
+    <header class="header-wrapper">
+        <div class="header-content">
+            <h1 class="header-title">Josh Hellings</h1>
+            <p class="header-description">
+                Data Visualisation Engineer specialising in interactive web-based visualisations
+                and storytelling through data.
+            </p>
+            <p class="header-description">
+                Data scientist at the Economics Observatory and researcher at the London School of Economics. 
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/josh-hellings-388b43165/" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.github.com/jhellingsdata" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
     <!-- Add a grey dividing line across the whole page -->
-    <hr class="line">
+    <!-- <hr class="line"> -->
 
+    <div class="page-wrapper">
+        <div class="cards-container">
+            <!-- <div class="card" onclick="location.href='football.html';">
+                <h3 class="card-title">Dashboard: Football</h3>
+                <div class="card-chart" id="chart11"></div>
+                <span class="card-date">November 2024</span>
+                <p class="card-text">Live dashboard for football.</p>
+            </div> -->
+            <div class="card" onclick="location.href='uk.html';">
+                <h3 class="card-title">UK Dashboard</h3>
+                <div class="card-chart" id="chart10"></div>
+                <span class="card-date">November 2024</span>
+                <p class="card-text">
+                    Live dashboard for UK economic indicator.
+                    <span class="construction-text">Under development</span>
+                </p>
+            </div>
+            <div class="card" onclick="location.href='tutorials-home.html';">
+                <h3 class="card-title">Chart Tutorials: Vega-Lite</h3>
+                <div class="card-chart" id="chart9"></div>
+                <span class="card-date">October 2024</span>
+                <p class="card-text">
+                    Growing collection of tutorials related to chart building using Vega-Lite.
+                    <span class="construction-text">Under development</span>
+                </p>
+            </div>
+            <div class="card" onclick="location.href='p21.html';">
+                <h3 class="card-title">21 charts for 21 countries</h3>
+                <!-- <div class="card-chart" id="chartx"></div> -->
+                <img src="Charts/p21/C1_Population_World.png" alt="" style="width: 100%">
+                <span class="card-date">May 2024</span>
+                <p class="card-text">World's 21 most populous countries, compared through a series a charts on five economic topics. These charts were produced for LSE's Growth Day 2024.
+                </p>
+            </div>
 
-    <div class="cards-container">
-        <div class="card" onclick="location.href='tutorials-home.html';">
-            <h3 class="card-title">Chart Tutorials: Vega-Lite</h3>
-            <div class="card-chart" id="chart9"></div>
-            <span class="card-date">October 2024</span>
-            <p class="card-text"><span class="leader">Growing collection of tutorials related to chart building using Vega-Lite.</span>
-            </p>
-        </div>
-        <div class="card" onclick="location.href='growth-day-p21.html';">
-            <h3 class="card-title">21 charts for 21 countries</h3>
-            <!-- <div class="card-chart" id="chartx"></div> -->
-            <img src="Charts/p21/C1_Population_World.png" alt="" style="width: 100%">
-            <span class="card-date">May 2024</span>
-            <p class="card-text"><span class="leader">World's 21 most populous countries. </span>The page holds a
-                collection of charts...
-            </p>
-        </div>
+            <div class="card" onclick="location.href='data-story/local-authorities.html';">
+                <h3 class="card-title">Local Authority Debt</h3>
+                <div class="card-chart" id="chart7"></div>
+                <span class="card-date">May 2024</span>
+                <p class="card-text">Visualising the debt crisis across UK Local Authorities.
+                </p>
+            </div>
 
-        <div class="card" onclick="location.href='data-story/local-authorities.html';">
-            <h3 class="card-title">Local Authority Debt</h3>
-            <div class="card-chart" id="chart7"></div>
-            <span class="card-date">May 2024</span>
-            <p class="card-text"><span class="leader">Visualising the debt crisis across UK Local Authorities. </span>The page holds a
-                collection of charts...
-            </p>
-        </div>
-        
-        <!-- <div class="card">
+            <!-- <div class="card">
             <span class="card-date">March 2023</span> -->
             <!-- <div class="card-chart" id="chart1"></div> -->
             <!-- <div class="card-content" onclick="location.href='Project.html';">
                 <h3 class="card-title">Project Title</h3>
                 <p class="card-text">This is a short summary of the project. Click to learn more.</p>
             </div> -->
-        <!-- </div> -->
+            <!-- </div> -->
 
-        <div class="card" onclick="location.href='https://econ4everyone.uchicago.edu/macro-syllabus';">
-            <h3 class="card-title">Economics for Everyone</h3>
-            <div class="card-chart" id="chart5"></div>
-            <span class="card-date">March 2023</span>
-            <p class="card-text">Selection of charts produced for a new macroeconomics course at the <a
-                    href="https://econ4everyone.uchicago.edu/macro-syllabus/">University of
-                    Chicago</a>.</p>
+            <div class="card" onclick="location.href='https://econ4everyone.uchicago.edu/macro-syllabus';">
+                <h3 class="card-title">Economics for Everyone</h3>
+                <div class="card-chart" id="chart5"></div>
+                <span class="card-date">March 2023</span>
+                <p class="card-text">Selection of charts produced for a new macroeconomics course at the <a
+                        href="https://econ4everyone.uchicago.edu/macro-syllabus/">University of
+                        Chicago</a>.</p>
+            </div>
+
+            <div class="card" onclick="location.href='london-crime.html';">
+                <h3 class="card-title">London crime during the pandemic</h3>
+                <img src="charts/teaser/202301_LondonCrime.png" alt="" style="width: 100%">
+                <span class="card-date">January 2023</span>
+                <p class="card-text">Data analysis assignment for UoB software & programming module.</p>
+            </div>
+
+            <div class="card" onclick="location.href='housing.html';">
+                <h3 class="card-title">Housing</h3>
+                <div class="card-chart" id="chart4"></div>
+                <span class="card-date">April 2022</span>
+                <p class="card-text">Selection of charts on house building in the UK. Produced for the <a
+                        href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
+            </div>
+
+            <div class="card" onclick="location.href='monetary_policy.html';">
+                <h3 class="card-title">Monetary Policy</h3>
+                <div class="card-chart" id="chart3"></div>
+                <span class="card-date">April 2022</span>
+                <p class="card-text">Selection of charts focusing on key economic indicators related to Unit 10 of the
+                    Core Econ textbook: Banks, Money and the Credit Market. Produced for the <a
+                        href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
+            </div>
+
+            <div class="card" onclick="location.href='Project.html';">
+                <h3 class="card-title">Data Science: Project</h3>
+                <img class="card-chart" src="charts/teaser/202201_DS_project_map.png"></img>
+                <span class="card-date">January 2022</span>
+                <p class="card-text"><span class="leader">Renewables and the potential for solar. </span>The page holds a
+                    collection of charts produced for the Data Science course final project.
+                </p>
+            </div>
+
+            <div class="card" onclick="location.href='Portfolio.html';">
+                <h3 class="card-title">Data Science: Portfolio</h3>
+                <div class="card-chart" id="chart1"></div>
+                <span class="card-date">December 2021</span>
+                <p class="card-text">A collection of charts produced throughout the Data Science unit, part of the
+                    University of Bristol Economics course. Each chart
+                    demonstrates different data science and visualisation techniques.</p>
+            </div>
         </div>
 
-        <div class="card" onclick="location.href='london-crime.html';">
-            <h3 class="card-title">London crime during the pandemic</h3>
-            <div class="card-chart" id="chart6"></div>
-            <span class="card-date">January 2023</span>
-            <p class="card-text">Data analysis assignment for UoB software & programming module.</p>
-        </div>
-
-        <div class="card" onclick="location.href='housing.html';">
-            <h3 class="card-title">Housing</h3>
-            <div class="card-chart" id="chart4"></div>
-            <span class="card-date">April 2022</span>
-            <p class="card-text">Selection of charts on house building in the UK. Produced for the <a
-                    href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
-        </div>
-
-        <div class="card" onclick="location.href='monetary_policy.html';">
-            <h3 class="card-title">Monetary Policy</h3>
-            <div class="card-chart" id="chart3"></div>
-            <span class="card-date">April 2022</span>
-            <p class="card-text">Selection of charts focusing on key economic indicators related to Unit 10 of the Core
-                Econ textbook: Banks, Money and the Credit Market. Produced for the <a
-                    href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
-        </div>
-
-        <div class="card" onclick="location.href='Project.html';">
-            <h3 class="card-title">Data Science: Project</h3>
-            <div class="card-chart" id="chart2"></div>
-            <span class="card-date">January 2022</span>
-            <p class="card-text"><span class="leader">Renewables and the potential for solar.</span>The page holds a
-                collection of charts produced for the Data Science course final project.
-            </p>
-        </div>
-
-        <div class="card" onclick="location.href='Portfolio.html';">
-            <h3 class="card-title">Data Science: Portfolio</h3>
-            <div class="card-chart" id="chart1"></div>
-            <span class="card-date">December 2021</span>
-            <p class="card-text">A collection of charts produced throughout the Data Science unit, part of the
-                University of Bristol Economics course. Each chart
-                demonstrates different data science and visualisation techniques.</p>
-        </div>
-    </div>
-
-    <!-- <div class="grid-container">
+        <!-- <div class="grid-container">
         <div class="landing-page">
             <div>
                 <p><a href="maps.html">Maps</a></p>
@@ -169,27 +207,29 @@
 
 
 
-
+    </div>
     <script>
         // Set the charts that we want on the page as variables linked to JSON files:
         var myChart1 = "charts/teaser/202112_DS_portfolio_advPlotting.json";
-        var myChart2 = "charts/teaser/202201_DS_project_map.json";
+        // var myChart2 = "charts/teaser/202201_DS_project_map.json";
         var myChart3 = "charts/teaser/202204_ECO_bankRate.json";
         var myChart4 = "charts/teaser/202204_ECO_newHousing.json";
         var myChart5 = "charts/teaser/202303_e4e_gdpScatter.json";
         var myChart6 = "charts/teaser/202303_e4e_gdpScatter.json";
         var myChart7 = "charts/teaser/202405_LocalAuthorities.json";
         var myChart9 = "charts/teaser/202410_SimpleBar.json";
+        var myChart10 = "charts/teaser/202411_DeficitUK.json";
 
         // Embed the charts in the divs above
-        vegaEmbed('#chart1', myChart1, { "actions": false });
-        vegaEmbed('#chart2', myChart2, { "actions": false });
-        vegaEmbed('#chart3', myChart3, { "actions": false });
-        vegaEmbed('#chart4', myChart4, { "actions": false });
-        vegaEmbed('#chart5', myChart5, { "actions": false });
-        vegaEmbed('#chart6', myChart6, { "actions": false });
-        vegaEmbed('#chart7', myChart7, { "actions": false });
-        vegaEmbed('#chart9', myChart9, { "actions": false });
+        vegaEmbed('#chart1', myChart1, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        // vegaEmbed('#chart2', myChart2, { "actions": false });
+        vegaEmbed('#chart3', myChart3, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart4', myChart4, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart5', myChart5, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart6', myChart6, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart7', myChart7, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart9', myChart9, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart10', myChart10, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
     </script>
 
 </body>

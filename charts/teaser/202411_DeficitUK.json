@@ -1,0 +1,91 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "ONS",
+    "data": {
+      "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/jw2v/pusf/data",
+      "format": {
+        "property": "years"
+      }
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {
+        "labelColor": "#676A86",
+        "labelFontSize": 11,
+        "labelFont": "Circular Std",
+        "labelOpacity": 0.8,
+        "tickColor": "#676A86",
+        "tickOpacity": 0.5,
+        "domainColor": "#676A86",
+        "domainOpacity": 0.5,
+        "gridColor": "#676A86",
+        "gridOpacity": 0.5,
+        "title": null,
+        "titleColor": "#676A86",
+        "titleOpacity": 0.8,
+        "tickSize": 4
+      },
+      "axisX": {
+        "grid": false
+      },
+      "axisYQuantitative": {
+        "gridColor": "#676A86",
+        "gridDash": [
+          1,
+          5
+        ],
+        "gridOpacity": 0.5,
+        "ticks": false,
+        "labelPadding": 5,
+        "tickCount": 8,
+        "titleAngle": 0,
+        "titleAlign": "left",
+        "titleBaseline": "bottom",
+        "titleX": 0,
+        "titleY": -5
+      }
+    },
+    "width": "container",
+    "height": "container",
+    "mark": {
+      "type": "bar"
+    },
+    "transform": [
+      {"filter": "datum.value"}
+    ],
+    "encoding": {
+      "x": {
+        "field": "year",
+        "timeUnit": "year",
+        "type": "temporal",
+        "axis": {
+          "domain": false,
+          "tickCount": 5
+        }
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "axis": {
+          "gridOpacity": {
+            "expr": "datum.value == 0 ? 1 : 0.5"
+          },
+          "gridDash": {
+            "expr": "datum.value == 0 ? [0,0] : [1,5]"
+          },
+          "gridWidth": {
+            "expr": "datum.value == 0 ? 2 : 1"
+          },
+          "labelExpr": "datum.label + '%'",
+          "title": "Current account deficit, % of GDP"
+        }
+      },
+      "color": {
+        "condition": [
+          {"test": "datum.value > 0", "value": "#bc4749"},
+          {"test": "datum.value < 0", "value": "#0077b6"}
+        ]
+      }
+    }
+  }
+  

@@ -10,7 +10,10 @@
         {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
       ]
     },
-    "mark": "bar",
+    "mark": {
+      "type": "bar",
+      "color": "#0077b6"
+    },
     "encoding": {
       "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}, "title": ""},
       "y": {"field": "b", "type": "quantitative", "title": ""}

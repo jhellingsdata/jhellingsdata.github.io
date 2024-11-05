@@ -1,56 +1,55 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-    "width": "container",
-    "height": "container",
-    "data": {
-      "url": "https://raw.githubusercontent.com/vega/vega/master/docs/data/us-10m.json",
-      "format": {
-        "type": "topojson",
-        "feature": "counties"
-      }
-    },
-    "transform": [
-      {"lookup": "id",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/LCOE_data_v1.4.0.csv"
-        },
-        "key": "FIPS",
-        "fields": ["County", "State", "Cheapest Technology", "Cost"]
-      }},
-      {
-      "calculate": "format(datum['Cost'], '.3') + ' $/MWh'", "as": "Units"
-      }
-    ],
-  
-    "projection": {
-        "type": "albersUsa"
-    },
-    "mark": {
-      "type": "geoshape"
-    },
-  
-    "encoding": {
-      "color": {
-        "legend": null,
-        "field": "Cheapest Technology",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Coal (Subbituminous)", "Natural Gas Combined Cycle", "Natural Gas Combustion Turbine", "Solar PV (Residential)","Solar PV (Utility)", "Wind"],
-          "range": ["#5B5E76", "#7D8092", "#00A9E8", "#AA649E",  "#D988AD", "#B5D37E"]
-        },
-        "condition": {
-          "test": "datum['County'] === null",
-          "value": "#aaa 0"
-        }
-      },
-      "tooltip": [
-        {"field": "County", "title": "State"},
-        {"field": "State", "title": "County"},
-        {"field": "Cheapest Technology", "title": "Technology"},
-        {"field": "Units", "title": "LCOE"}
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "rgb(0,0,0,0)",
+  "width": "container",
+  "height": "container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/vega/vega/master/docs/data/us-10m.json",
+    "format": {
+      "type": "topojson",
+      "feature": "counties"
     }
+  },
+  "transform": [
+    {"lookup": "id",
+    "from": {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/LCOE_data_v1.4.0.csv"
+      },
+      "key": "FIPS",
+      "fields": ["County", "State", "Cheapest Technology", "Cost"]
+    }},
+    {
+    "calculate": "format(datum['Cost'], '.3') + ' $/MWh'", "as": "Units"
+    }
+  ],
+
+  "projection": {
+      "type": "albersUsa"
+  },
+  "mark": {
+    "type": "geoshape"
+  },
+
+  "encoding": {
+    "color": {
+      "legend": null,
+      "field": "Cheapest Technology",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Coal (Subbituminous)", "Natural Gas Combined Cycle", "Natural Gas Combustion Turbine", "Solar PV (Residential)","Solar PV (Utility)", "Wind"],
+        "range": ["#5B5E76", "#7D8092", "#00A9E8", "#AA649E",  "#D988AD", "#B5D37E"]
+      },
+      "condition": {
+        "test": "datum['County'] === null",
+        "value": "#aaa 0"
+      }
+    },
+    "tooltip": [
+      {"field": "County", "title": "State"},
+      {"field": "State", "title": "County"},
+      {"field": "Cheapest Technology", "title": "Technology"},
+      {"field": "Units", "title": "LCOE"}
+    ]
   }
-  
+}
