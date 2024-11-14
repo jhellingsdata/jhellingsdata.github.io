@@ -42,8 +42,8 @@
       "projection": {"type": "mercator"},
       "mark": "circle",
       "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
+        "longitude": {"field": "longY", "type": "quantitative"},
+        "latitude": {"field": "latX", "type": "quantitative"},
         "size": {"field": "Aircraft Movements", "type": "quantitative"},
         "color": {"value": "#D35400"},
         "tooltip": [

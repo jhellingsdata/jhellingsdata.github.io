@@ -5,8 +5,8 @@
   "height": 400,
 
   "title": {
-    "text": "UK Airports",
-    "subtitle":["ITL1 regions, Mercator Projection",""],
+    "text": "UK Airport Map",
+    "subtitle":["Passenger & aircaft movements. Source: CAA 2021",""],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "middle",
@@ -33,22 +33,6 @@
       "encoding": {
         "tooltip": 
           {"field": "properties.ITL121NM"}
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/point_maps/UK_airports1.csv"
-      },
-      "projection": {"type": "mercator"},
-      "mark": "circle",
-      "encoding": {
-        "longitude": {"field": "longY", "type": "quantitative"},
-        "latitude": {"field": "latX", "type": "quantitative"},
-        "size": {"value": 25},
-        "color": {"value": "#D35400"},
-        "tooltip": [
-          {"field": "Airport", "title": "Airport"}
-        ]
       }
     }
   ]

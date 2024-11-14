@@ -1,4 +1,4 @@
-Airport,latitude,longitude,Passengers,Aircraft Movements
+Airport,latX,longY,Passengers,Aircraft Movements
 London Heathrow,51.4700223,-0.4542955,19393886,195336
 London Stansted,51.8860181,0.2388661,7148200,93316
 London Gatwick,51.1536621,-0.1820629,6261814,55817
