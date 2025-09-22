@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxes: marginal & effective rates</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body {
+            font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+        .control-group {
+            margin-bottom: 15px;
+        }
+        .control-group label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .control-group label:hover {
+            background: #f0f0f0;
+        }
+        .control-group input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .income-input {
+            margin-bottom: 20px;
+        }
+        .income-input label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .income-input input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        .stat-label {
+            font-weight: 500;
+        }
+        .stat-value {
+            color: #4CAF50;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tax explorer</h1>
+    <h3>Find your marginal & effective tax rates</h3>
+    
+    <div class="dashboard">
+        <div class="chart-container">
+            <div id="vis"></div>
+        </div>
+        
+        <div class="controls">
+            <h3>Tax Components</h3>
+            <div class="income-input">
+                <label for="maxIncome">Max Income (£):</label>
+                <input type="number" id="maxIncome" value="200000" min="1000" max="1000000" step="1000">
+            </div>
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="incomeTax" checked>
+                    Income Tax
+                </label>
+            </div>
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="nationalInsurance" checked>
+                    National Insurance
+                </label>
+            </div>
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="studentLoanUG" checked>
+                    Student Loan (Plan 2)
+                </label>
+            </div>
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="studentLoanPG" checked>
+                    Postgraduate Loan
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="stats">
+        <h3>Summary Statistics</h3>
+        <div class="income-input">
+            <label for="summaryIncomeInput">Your Income (£):</label>
+            <input type="number" id="summaryIncomeInput" value="50000" min="0" max="1000000" step="100">
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Marginal Rate:</span>
+            <span class="stat-value" id="marginalRate">--</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Effective Rate:</span>
+            <span class="stat-value" id="effectiveRate">--</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Total Tax:</span>
+            <span class="stat-value" id="totalTax">--</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Net Income:</span>
+            <span class="stat-value" id="netIncome">--</span>
+        </div>
+    </div>
+
+    <script>
+        // Tax configuration data structure
+        const taxConfig = {
+            incomeTax: {
+                name: "Income Tax",
+                bands: [
+                    { min: 0, max: 12570, rate: 0 },
+                    { min: 12570, max: 50270, rate: 0.20 },
+                    { min: 50270, max: 125140, rate: 0.40 },
+                    { min: 125140, max: Infinity, rate: 0.45 }
+                ],
+                personalAllowance: 12570,
+                allowanceTaper: {
+                    start: 100000,
+                    end: 125140,
+                    reductionRate: 0.5  // £1 reduction per £2 over threshold
+                }
+            },
+            nationalInsurance: {
+                name: "National Insurance",
+                bands: [
+                    { min: 0, max: 12570, rate: 0 },
+                    { min: 12570, max: 50270, rate: 0.08 },
+                    { min: 50270, max: Infinity, rate: 0.02 }
+                ]
+            },
+            studentLoanUG: {
+                name: "Student Loan Plan 2",
+                threshold: 28470,
+                rate: 0.09
+            },
+            studentLoanPG: {
+                name: "Postgraduate Loan",
+                threshold: 21000,
+                rate: 0.06
+            }
+        };
+
+        const styleConfig = {
+            view: {
+                stroke: null
+            },
+            font: 'Circular Std',
+            axis: {
+                domainColor: '#676A8680',
+                gridColor: '#676A8680',
+                gridDash: [2, 2],
+                tickColor: '#676A8680',
+                labelColor: '#676A86B3',
+                labelFontSize: 15,
+                labelFont: 'Circular Std',
+                title: null,
+                titleColor: '#676A86CC',
+                tickSize: 4              
+            },
+            axisY: {
+                titleX: 0,
+                titleY: -8,
+                titleAnchor: 'start',
+                titleAngle: 0,
+                titleFontSize:14
+            },
+            text: {
+                labelFont: 'Circular Std',
+                labelFontSize: 15
+            }
+        };
+
+        // Calculate income tax with personal allowance tapering
+        function calculateIncomeTax(income) {
+            const config = taxConfig.incomeTax;
+            let personalAllowance = config.personalAllowance;
+            
+            // Apply tapering
+            if (income > config.allowanceTaper.start) {
+                const excess = Math.min(income - config.allowanceTaper.start, 
+                                       config.allowanceTaper.end - config.allowanceTaper.start);
+                personalAllowance = Math.max(0, personalAllowance - (excess * config.allowanceTaper.reductionRate));
+            }
+            
+            let tax = 0;
+            let taxableIncome = Math.max(0, income - personalAllowance);
+            
+            // 
+            for (const band of config.bands) {
+                if (taxableIncome <= 0) break;
+                // Skip first band
+                if (band.min === 0) continue;
+                
+                const bandWidth = band.max - band.min;
+                const taxableInBand = Math.min(taxableIncome, bandWidth);
+                tax += taxableInBand * band.rate;
+                taxableIncome -= taxableInBand;
+            }
+            
+            return tax;
+        }
+
+        // Calculate National Insurance
+        function calculateNationalInsurance(income) {
+            const config = taxConfig.nationalInsurance;
+            let ni = 0;
+            
+            for (const band of config.bands) {
+                if (income <= band.min) break;
+                
+                const taxableInBand = Math.min(income - band.min, band.max - band.min);
+                ni += taxableInBand * band.rate;
+            }
+            
+            return ni;
+        }
+
+        // Calculate student loan repayment
+        function calculateStudentLoan(income, config) {
+            if (income <= config.threshold) return 0;
+            return (income - config.threshold) * config.rate;
+        }
+
+        // Calculate marginal rate at a specific income level
+        function calculateMarginalRate(income, components) {
+            const delta = 1;
+            const taxAtIncome = calculateTotalTax(income, components);
+            const taxAtIncomePlusDelta = calculateTotalTax(income + delta, components);
+            return (taxAtIncomePlusDelta - taxAtIncome) / delta;
+        }
+
+        // Calculate total tax for selected components
+        function calculateTotalTax(income, components) {
+            let total = 0;
+            
+            if (components.incomeTax) {
+                total += calculateIncomeTax(income);
+            }
+            if (components.nationalInsurance) {
+                total += calculateNationalInsurance(income);
+            }
+            if (components.studentLoanUG) {
+                total += calculateStudentLoan(income, taxConfig.studentLoanUG);
+            }
+            if (components.studentLoanPG) {
+                total += calculateStudentLoan(income, taxConfig.studentLoanPG);
+            }
+            
+            return total;
+        }
+
+        // Generate data for visualisation
+        function generateData(maxIncome, components) {
+            const data = [];
+            const step = Math.min(100, maxIncome / 1000);
+            
+            for (let income = 0; income <= maxIncome; income += step) {
+                const marginalRate = calculateMarginalRate(income, components);
+                const totalTax = calculateTotalTax(income, components);
+                const effectiveRate = income > 0 ? totalTax / income : 0;
+                
+                data.push({
+                    income: income,
+                    marginalRate: marginalRate,    // * 100 here if we want range 0-100
+                    effectiveRate: effectiveRate
+                });
+            }
+            
+            return data;
+        }
+
+        // Create Vega-Lite specification
+        function createSpec(data) {
+            // Prepare data for labels - get the last point for each line
+            const lastPoint = data[data.length - 1];
+            const labelData = [
+                {
+                    income: lastPoint.income,
+                    rate: lastPoint.marginalRate,
+                    label: "Marginal"
+                },
+                {
+                    income: lastPoint.income,
+                    rate: lastPoint.effectiveRate,
+                    label: "Effective"
+                }
+            ];
+
+            return {
+                $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+                width: 700,
+                height: 400,
+                data: { values: data },
+                layer: [
+                    {
+                        mark: { type: "line", strokeWidth: 2, color: "#ff6b6b" },
+                        encoding: {
+                            x: {
+                                field: "income",
+                                type: "quantitative",
+                                title: "Personal income (£)",
+                                axis: {
+                                    format: "$,d",
+                                    labelAngle: 0,
+                                    titleFontSize: 13
+                                }
+                            },
+                            y: {
+                                field: "marginalRate",
+                                type: "quantitative",
+                                title: "Rate (%)",
+                                scale: { domain: [0, 1] },
+                                axis: { format: "%" }
+                            },
+                            color: {
+                                value: "#ff6b6b"
+                            },
+                            tooltip: [
+                                { field: "income", type: "quantitative", title: "Income", format: "$,.0f" },
+                                { field: "marginalRate", type: "quantitative", title: "Marginal Rate", format: ".1%" }
+                            ]
+                        }
+                    },
+                    { 
+                        mark: { type: "line", strokeWidth: 2, color: "#4CAF50", strokeDash: [5, 5] },
+                        encoding: {
+                            x: {
+                                field: "income",
+                                type: "quantitative"
+                            },
+                            y: {
+                                field: "effectiveRate",
+                                type: "quantitative",
+                                axis: { format: "%" }
+                            },
+                            color: {
+                                value: "#4CAF50"
+                            },
+                            tooltip: [
+                                { field: "income", type: "quantitative", title: "Income", format: "$,.0f" },
+                                { field: "effectiveRate", type: "quantitative", title: "Effective Rate", format: ".1%" }
+                            ]
+                        }
+                    },
+                    {
+                        data: { values: labelData },
+                        mark: { 
+                            type: "text", 
+                            align: "left",
+                            dx: 5,
+                            dy: 0,
+                            fontWeight: "bold",
+                            fontSize: 15
+                        },
+                        encoding: {
+                            x: {
+                                field: "income",
+                                type: "quantitative",
+                                scale: {
+                                    domain: [0, Math.max(...data.map(d => d.income))]
+                                }
+                            },
+                            y: {
+                                field: "rate",
+                                type: "quantitative",
+                                scale: { domain: [0, 1] }
+                            },
+                            text: {
+                                field: "label",
+                                type: "nominal"
+                            },
+                            color: {
+                                field: "label",
+                                type: "nominal",
+                                scale: {
+                                    domain: ["Marginal", "Effective"],
+                                    range: ["#ff6b6b", "#4CAF50"]
+                                },
+                                legend: null
+                            }
+                        }
+                    }
+                ],
+                resolve: { scale: { color: "independent" } }
+            };
+        }
+
+        function loadConfig() {
+            const config = fetch('config.json').then(response => response.json());
+            console.log(config);
+            return config;
+        }
+
+        // Update visualisation
+        function updateVisualisation() {
+            const components = {
+                incomeTax: document.getElementById('incomeTax').checked,
+                nationalInsurance: document.getElementById('nationalInsurance').checked,
+                studentLoanUG: document.getElementById('studentLoanUG').checked,
+                studentLoanPG: document.getElementById('studentLoanPG').checked
+            };
+            
+            const maxIncome = parseInt(document.getElementById('maxIncome').value) || 200000;
+            const data = generateData(maxIncome, components);
+            const spec = createSpec(data);
+
+            
+            vegaEmbed('#vis', spec, {
+                actions: true,
+                config: {
+                    legend: {
+                        orient: "top-right",
+                        title: null
+                    },
+                    locale: {
+                        number: {
+                            decimal: ".",
+                            thousands: ",",
+                            grouping: [3],
+                            currency: ["£", ""]
+                        }
+                    },
+                    ...styleConfig
+                }
+            });
+            
+            console.log(spec);
+
+            // Update summary statistics
+            const summaryIncome = parseInt(document.getElementById('summaryIncomeInput').value) || 50000;
+            
+            const marginal = calculateMarginalRate(summaryIncome, components);
+            const total = calculateTotalTax(summaryIncome, components);
+            const effective = summaryIncome > 0 ? total / summaryIncome : 0;
+            const net = summaryIncome - total;
+            
+            document.getElementById('marginalRate').textContent = (marginal * 100).toFixed(1) + '%';
+            document.getElementById('effectiveRate').textContent = (effective * 100).toFixed(1) + '%';
+            document.getElementById('totalTax').textContent = '£' + total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            document.getElementById('netIncome').textContent = '£' + net.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        // Event listeners
+        document.getElementById('incomeTax').addEventListener('change', updateVisualisation);
+        document.getElementById('nationalInsurance').addEventListener('change', updateVisualisation);
+        document.getElementById('studentLoanUG').addEventListener('change', updateVisualisation);
+        document.getElementById('studentLoanPG').addEventListener('change', updateVisualisation);
+        document.getElementById('maxIncome').addEventListener('input', updateVisualisation);
+        document.getElementById('summaryIncomeInput').addEventListener('input', updateVisualisation);
+
+        // Initial render
+        updateVisualisation();
+    </script>
+</body>
+</html>
