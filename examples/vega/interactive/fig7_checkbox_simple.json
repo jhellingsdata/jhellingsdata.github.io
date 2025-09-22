@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Checkbox to set y-axis from zero. Sliders to filter years. Layer with rectangles to show US recessionary periods.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/e4e/ch5_crisis/data/chart5_x_GFC_GDP.csv"
+  },
+  "width": 300,
+  "height": 250,
+  "title": {
+    "text": "Real GDP Per Capita",
+    "subtitle": [
+      "2011 USD. Source: FRED"
+    ],
+    "align": "left",
+    "anchor": "start",
+    "fontSize": 14,
+    "offset":10, 
+    "subtitleFontSize": 11,
+    "subtitleFontStyle": "italic"
+  },
+  "config": {"view": {"stroke": "transparent"}},
+  "params": [
+    {
+      "name": "toggleZero",
+      "value": false,
+      "bind": {"input": "checkbox", "name": "Start y-axis at 0"}
+    },
+    {
+      "name": "minYear",
+      "value": 2000,
+      "bind": {
+        "input": "range",
+        "min": 1948,
+        "max": 2022,
+        "step": 1,
+        "name": "Start year:"
+      }
+    }
+  ],
+  "mark": {"type": "line", "color": "rgb(128,0,0)"},
+  "transform": [
+    {"calculate": "year(datum.Date)", "as": "foo"},
+    {"filter": "year(datum.Date) >= minYear"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "axis": {"grid": false, "tickOpacity": 0, "labelPadding": 5}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "scale": {
+        "domainMin": {
+          "expr": "toggleZero ? 0 : (minYear > 1997 ? 42000 : 0 )"
+        },
+        "clamp": true
+      },
+      "axis": {
+        "title": null,
+        "tickOpacity": 0,
+        "grid": false,
+        "format": "$,.0d"
+      }
+    }
+  }
+}

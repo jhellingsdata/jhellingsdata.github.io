@@ -1,0 +1,114 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A scatterplot showing horsepower and miles per gallons for various cars.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/main/e4e/ch1_GDP/data/mortality_gdp.json"
+  },
+  "view": {"stroke": "transparent"},
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "GDP and Maternal Mortality",
+    "subtitle": [
+      "Maternal mortality per million live births. Source: WHO",
+      "GDP: per capita PPP (2022 $). Source: World Bank",
+      ""
+    ],
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "font": "Arial",
+    "subtitleFont": "Arial",
+    "subtitleFontWeight": 400,
+    "fontWeight": 600
+  },
+  "width": 400,
+  "height": 300,
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 2000,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2023,
+        "step": 1,
+        "name": "Select year:"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "leg_region",
+          "select": {"type": "point", "fields": ["Region"]},
+          "bind": "legend"
+        }
+      ],
+      "mark": {"type": "circle"},
+      "encoding": {
+        "x": {
+          "field": "GDP pc",
+          "type": "quantitative",
+          "scale": {"type": "log", "domain": [400, 150000]},
+          "axis": {
+            "title": "GDP (log scale)",
+            "values": [400, 1000, 2000, 4000, 10000, 20000, 40000, 100000],
+            "gridOpacity": 0.3,
+            "labelFontSize": 12,
+            "labelPadding": 5,
+            "titlePadding": 6,
+            "ticks": false,
+            "format": "$,"
+          }
+        },
+        "tooltip": [
+          {"field": "Year"},
+          {"field": "Country"},
+          {"field": "Maternal Mortality", "format": ","},
+          {"field": "GDP pc", "format": "$,d", "title": "GDP Per Capita"}
+        ],
+        "y": {
+          "field": "Maternal Mortality",
+          "type": "quantitative",
+          "axis": {
+            "title": "Mortality (log scale)",
+            "values": [1, 2, 10, 20, 100, 200, 1000, 2000, 10000],
+            "gridOpacity": 0.3,
+            "tickCount": 10,
+            "labelFontSize": 11,
+            "labelPadding": 5,
+            "ticks": false,
+            "titlePadding": -4
+          },
+          "scale": {"type": "log"}
+        },
+        "color": {
+          "field": "Region",
+          "type": "nominal",
+          "legend": {
+            "title": null,
+            "direction": "horizontal",
+            "orient": "top",
+            "offset": 10,
+            "labelFontSize": 11,
+            "labelPadding": 10,
+            "columns":3,
+            "labelOffset": 2
+          }
+        },
+        "size": {
+          "field": "Population",
+          "type": "quantitative",
+          "legend": null,
+          "scale": {"type": "linear", "range": [10, 1200]}
+        },
+        "opacity": {
+          "condition": {"param": "leg_region", "value": 1},
+          "value": 0.2
+        }
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.Year == yearSelector"}]
+}

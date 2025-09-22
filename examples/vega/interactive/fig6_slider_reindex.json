@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Growing Manufacturing Output",
+    "subtitle": [
+      "Total employees and real manufacturing output, indexed at selected year.",
+      "Sources: BLS, Federal Reserve."
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "frame": "group",
+    "offset": 10
+  },
+  "config": {"view": {"stroke": "transparent"}},
+  "width": 290,
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/US_manufacturingOutput.csv"
+  },
+  "params": [
+    {
+      "name": "minYear",
+      "value": 1992,
+      "bind": {
+        "input": "range",
+        "min": 1972,
+        "max": 2020,
+        "step": 1,
+        "name": "Index year:"
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "year(datum.Date)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"calculate": "toNumber(datum.Employees)", "as": "Employees"},
+    {
+      "window": [
+        {
+          "op": "first_value",
+          "field": "Manufacturing Output",
+          "as": "output_first"
+        }
+      ],
+      "frame": [null, null],
+      "sort": [{"field": "_index"}]
+    },
+    {
+      "calculate": "datum['Manufacturing Output'] / datum.output_first * 100",
+      "as": "Manufacturing Output_live"
+    },
+    {
+      "window": [
+        {"op": "first_value", "field": "Employees", "as": "employ_first"}
+      ],
+      "frame": [null, null],
+      "sort": [{"field": "_index"}]
+    },
+    {
+      "calculate": "datum.Employees / datum.employ_first * 100",
+      "as": "Employees_live"
+    }
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "title": null,
+      "type": "temporal",
+      "axis": {"grid": false, "gridOpacity": 0.6}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "transparent",
+        "point": "transparent"
+      },
+      "encoding": {
+        "y": {
+          "field": "Employees_live", "type": "quantitative"
+        },
+        "color": {
+          "field": "Manufacturing Jobs",
+          "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+          "legend": {"labelFontSize": 11, "offset": 13}
+        }
+      }
+    },
+    {
+      "encoding": {
+        "y": {
+          "field": "Manufacturing Output_live",
+          "type": "quantitative",
+          "title": null,
+          "axis": {"labelFontSize": 11, "format": "d", "gridOpacity": 0.6},
+          "scale": {"zero": false, "padding": 15}
+        },
+        "color": {
+          "datum": "Industrial Output",
+          "scale": {"range": ["#008080", "rgb(128,0,0)"]},
+          "legend": {"orient": "top-left"}
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "transparent",
+            "point": "transparent"
+          }
+        }
+      ]
+    }
+  ]
+}

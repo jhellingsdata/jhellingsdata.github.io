@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": "transparent"}},
+    "width": 290,
+    "height": 250,
+    "data": {
+      "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/cdko/mm23/data",
+      "format": {"property": "years", "type": "json"}
+    },
+    "title": {
+      "text": "UK historical prices",
+      "subtitle": ["Long run retail prices index, 1800-2023. Source: ONS"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "frame": "group",
+      "offset": 8
+    },
+    "params": [
+      {
+        "name": "startYear",
+        "value": 1974,
+        "bind": {
+          "input": "range",
+          "min": 1800,
+          "max": 2022,
+          "step": 1,
+          "name": "Index year:"
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "datum.year >= startYear"},
+      {
+        "window": [
+          {
+            "op": "first_value",
+            "field": "value",
+            "as": "value_first"
+          }
+        ],
+        "frame": [null, null],
+        "sort": [{"field": "_index"}]
+      },
+      {
+        "calculate": "datum.value / datum.value_first * 100",
+        "as": "value_live"
+      }
+    ],
+    "mark": {"type": "line", "color": "#179fdb"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {"title": "", "grid": false, "gridOpacity": 0.6}
+      },
+      "y": {
+        "field": "value_live",
+        "type": "quantitative",
+        "axis": {
+          "title": "",
+          "labelExpr": "toString(datum.value / 100) + 'x'"
+        }
+      }
+    }
+  }

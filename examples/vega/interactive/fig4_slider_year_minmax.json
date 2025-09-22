@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Interactive range sliders to set the start and end year for the data range. Layers for area chart between with y and y2 set as daily low and high price respectively.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/refs/heads/main/Data/btc_usd_historical_price.csv",
+    "format": {"type": "csv"}
+  },
+  "view": {"stroke": "transparent"},
+  "title": {
+    "text": "Price of Bitcoin",
+    "subtitle": [
+      "Daily BTC price, current US Dollars",
+      "Source: Investing.com"
+    ],
+    "fontSize": 14,
+    "offset": 10,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "height": 250,
+  "width": 300,
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2024,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2024,
+      "bind": {
+        "input": "range",
+        "min": 2011,
+        "max": 2024,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "year(datum.Date)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"}
+  ],
+  "mark": {"type": "line", "size": 1.4, "color": "#e6224b"},
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "ticks": false,
+        "labelPadding": 5,
+        "labelFontSize": 11
+      }
+    },
+    "y": {
+      "field": "Price",
+      "type": "quantitative",
+      "axis": {
+        "title": "",
+        "grid": true,
+        "gridOpacity": 0.6,
+        "format": "$,.0f",
+        "ticks": false,
+        "labelPadding": 5,
+        "labelFontSize": 11
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{  
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Vertically concatanated graphs, select point on lower graph to highlight Technology on price graph above",
+
+  "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Project/Data/SolCost_IRENA.csv"},
+  "config": {
+    "view": {"stroke": "transparent"}
+  },
+  "title": {
+    "text": "Costs of renewables, 10 years of progress",
+    "color": "#54bb8e",
+    "fontSize": 14,
+    "anchor": "start",
+    "subtitle": "Global LCOE 2020$/kWh, source: IRENA",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "frame": "group"
+  },
+
+  "vconcat": [
+    {
+      "name": "top",
+      "height": 200,
+      "width": 330,
+      "mark": {
+        "type": "line",
+        "point": "transparent"
+      },
+      "encoding": {
+        "color": {
+          "field": "Technology",
+          "legend": {
+            "orient": "none",
+            "legendX": 250,
+            "legendY": 5,
+            "title": null,
+            "symbolSize": 40
+          },
+          "type": "nominal",
+            "scale": {
+              "domain": ["Bioenergy", "Geothermal", "Hydropower", "Offshore wind", "Onshore wind", "Solar concentrating", "Solar photovoltaic"],
+              "range": ["#009642", "#E86200", "#00A9E8", "#5B5E76", "#B5D37E", "#AA649E", "#F7B913"]
+            }
+        },
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "grid": false
+          }
+        },
+
+        "y": {
+          "field": "Weighted average",
+          "type": "quantitative",
+          "title": null
+        },
+        "tooltip": [
+          {"field": "Technology"},
+          {"field": "LCOE"}
+        ]
+      },
+
+      "transform": [
+        {"calculate": "datum['Weighted average'] + ' $/kWh'", "as": "LCOE"}
+      ]
+    },
+
+    {
+      "height": 150,
+      "width": 330,
+      "name": "bottom",
+      "title": {
+        "text": "Yearly change in global capcity",
+        "anchor": "start",
+        "fontSize": 12,
+        "frame": "group"
+      },
+      "transform": [
+        {"calculate": "format(datum['Net additions MW'], ',') + ' MW'", "as": "Net additions"}
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150
+      },
+      "encoding": {
+        "color": {
+          "field": "Technology",
+          "type": "ordinal"
+        },
+
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "Net additions MW",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "labelExpr": "(datum.value / 1000) + 'GW'"
+          }
+        },
+        "tooltip": [
+          {"field": "Technology"},
+          {"field": "Net additions"}
+        ]
+      }
+    }
+  ]
+}

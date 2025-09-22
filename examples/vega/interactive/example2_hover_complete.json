@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Millions without work",
+    "subtitle": [
+      "Youth Unemployment (15-24 yrs), 2021. 21 most populous countries",
+      "Source: World Bank"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "black",
+    "offset": 10
+  },
+  "view": {"stroke": "transparent"},
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/e4e/Global_WB_YouthUnemployment.csv"
+  },
+  "transform": [
+    {"filter": "datum.p21==1"},
+    {"calculate": "datum.value2021/100", "as": "unempPercent"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "unempPercent",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "gridWidth": 0.5,
+        "labelAngle": 0,
+        "format": ".0%"
+      }
+    },
+    "y": {"field": "nameSimple", "title": null, "type": "nominal", "sort": "-x"}
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "pointerover"
+          }
+        }
+      ],
+      "mark": {"type": "bar", "color": "#47a7b2"},
+      "encoding": {
+        "opacity": {
+          "condition": {"param": "hover", "value": 1},
+          "value": 0.7
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 5},
+      "encoding": {
+        "text": {
+          "field": "unempPercent",
+          "type": "quantitative",
+          "format": ".1%"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "value": 1,
+            "empty": false
+          },
+          "value": 0
+        }
+      }
+    }
+  ]
+}

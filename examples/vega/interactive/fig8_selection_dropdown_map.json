@@ -1,0 +1,90 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 250,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL3_2021_20m.geojson",
+      "format": {"property": "features"}
+    },
+  
+    "title": {
+      "text": "UK - ITL3 regions",
+      "fontSize": 12,
+      "subtitle":[],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "middle",
+      "color": "black"
+    },
+  
+    "projection": {"type": "mercator"},
+    "mark": "geoshape", 
+  
+    "params": [
+      {
+        "name": "SelectParam",
+        "value": "Population",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Population",
+            "Gross Domestic Product (£m)",
+            "GDP Growth 2010-19 (%)",
+            "Gross Value Added (£)",
+            "GDP per capita (£)",
+            "Employment (%)",
+            "Unemployment (%)",
+            "Economic Inactivity (%)",
+            "Unemployment Claimants (%)"
+          ],
+          "name": "Select series:"
+        }
+      }
+    ],
+  
+    "transform": [
+      {
+        "lookup": "properties.ITL321CD",
+        "from": {
+          "data": {"url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL3_UK_DataHub.csv"},
+          "key": "ITL code",
+          "fields": [       
+            "Population",
+            "Gross Domestic Product (£m)",
+            "GDP Growth 2010-19 (%)",
+            "Gross Value Added (£)",
+            "GDP per capita (£)",
+            "Employment (%)",
+            "Unemployment (%)",
+            "Economic Inactivity (%)",
+            "Unemployment Claimants (%)"
+          ]
+        }
+      },
+      {"calculate": "datum[SelectParam]","as": "varSelected"},
+  
+      {"filter": "datum.properties.ITL321NM != 'Shetland Islands'"}
+    ],
+    "encoding":{
+      
+      "color":{
+        "field":"varSelected",
+        "legend":{
+          "title": "",
+          "legendX": 220,
+          "legendY": 0,
+          "orient": "none",
+          "direction": "vertical"
+        },
+        "type": "quantitative",
+        "scale":{
+          "scheme":"goldred",
+          "reverse": false
+        }
+      },
+      "tooltip":[
+        {"field":"properties.ITL321NM", "title": "Region"},
+        {"field":"varSelected", "title": "Value", "format": ","}
+      ]
+    }
+  }
