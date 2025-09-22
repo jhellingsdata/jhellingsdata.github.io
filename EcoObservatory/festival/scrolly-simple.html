@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(24, 42, 55);
+            color: rgb(12, 12, 12);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            height: 450px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .chart-section {
+            width: 60%;
+        }
+
+        /* Position embedded charts in centre of display */
+        .vega-embed {
+            margin: 0 auto;
+        }
+
+        .info-section {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .nav-button {
+            position: absolute;
+            font-size: 3em;
+            cursor: pointer;
+            color: rgb(202, 202, 202);
+        }
+
+        .nav-button.prev {
+            left: 15%;
+            /* i.e. 15% from the left-hand side. */
+        }
+
+        .nav-button.next {
+            right: 15%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="chart-container"></div>
+    </div>
+
+    <div class="nav-button prev" id="prev">◀</div>
+    <div class="nav-button next" id="next">▶</div>
+
+    <script>
+        // Load CSV data and initialise variables
+        let currentIndex = 0;
+        let chartData = [];
+
+        ///// Define list of charts
+        const charts = [
+            'C1_Population_Top21.json', 
+            'C2_Fertility.json',
+            'C3_Migration.json',
+            'C4_PopulationDistribution_Tall.json',
+            'C5_GDPpc.json',
+            'C6_GDP_LongRun.json',
+            'C7_GDP_5yr.json',
+            'C7_GDP_10yr.json',
+            'C9_Unemployment.json',
+            'C10_YouthUnemployment.json',
+            'C11_Inequality.json',
+            'C12_MinimumWages.json',
+            'C13_TaxTake.json',
+            'C14_GovDeficit.json',
+            'C16_DebtCost.json',
+            'C16_GovDebt_Gross.json',
+            'C17_Inflation.json',
+            'C18_Bank_Rates.json',
+            'C19_PPP_BigMac.json',
+            'C20_CurrentAccount_GDP.json',
+            'C21_InvestmentPosition.json'
+        ];
+
+
+        // Define the path to folder with charts
+        let path = '../../charts/p21/';
+
+        // Embed chart at index `currentIndex` into the chart container
+        function embedChart(index) {
+            const chartPath = path + charts[index];
+
+            // Embed the Vega-Lite chart (we can pass an extra json object to change some of the chart options, e.g. background colour)
+            vegaEmbed('.chart-container', chartPath, {
+                "config": {
+                    "background": "rgba(0,0,0,0)",
+                },
+                "width": 500,
+            }).catch(console.error);
+        }
+        // Run our function to embed first chart
+        embedChart(currentIndex);
+
+
+
+        // Function to update the chart and info section (run when the next or prev button is clicked)
+        function updateChart(index) {
+            const data = chartData[index];
+            embedChart(index);
+        }
+
+        // Navigation
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % charts.length;
+            updateChart(currentIndex);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + charts.length) % charts.length;
+            updateChart(currentIndex);
+        });
+
+    </script>
+
+</body>
+</html>

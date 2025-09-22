@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(24, 42, 55);
+            color: rgb(12, 12, 12);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            height: 450px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .chart-section {
+            width: 60%;
+        }
+
+        /* Position embedded charts in centre of display */
+        .vega-embed {
+            margin: 0 auto;
+        }
+
+        .info-section {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2,
+        h3,
+        h4 {
+            margin: 5px 0;
+            /* Minimised margins between headers */
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+
+        .nav-button {
+            position: absolute;
+            font-size: 3em;
+            cursor: pointer;
+            color: rgb(202, 202, 202);
+        }
+
+        .nav-button.prev {
+            left: 15%;
+            /* i.e. 15% from the left-hand side. */
+        }
+
+        .nav-button.next {
+            right: 15%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="chart-container"></div>
+        <div class="info-section">
+            <h5>World's 21 most populous countries</h5>
+            <h4 class="chart-title"></h4>
+        </div>
+    </div>
+
+    <div class="nav-button prev" id="prev">◀</div>
+    <div class="nav-button next" id="next">▶</div>
+
+    <script>
+        // Load CSV data and initialise variables
+        let currentIndex = 0;
+        let chartData = [];
+
+        ///// Define list of charts (each chart is a list with two elements: the path to the chart and the chart title)
+        const charts = [
+            ['C1_Population_Top21.json', 'Largest countries by population, 2023'], 
+            ['C2_Fertility.json', 'Fertility rates'],
+            ['C3_Migration.json', 'Migration rates'],
+            ['C4_PopulationDistribution_Tall.json', 'Population distribution'],
+            ['C5_GDPpc.json', 'GDP per capita'],
+            ['C6_GDP_LongRun.json', 'GDP'],
+            ['C7_GDP_5yr.json', 'GDP (5 year average)'],
+            ['C7_GDP_10yr.json', 'GDP (10 year average)'],
+            ['C9_Unemployment.json', 'Unemployment rates'],
+            ['C10_YouthUnemployment.json', 'Youth unemployment rates'],
+            ['C11_Inequality.json', 'Inequality'],
+            ['C12_MinimumWages.json', 'Minimum wages'],
+            ['C13_TaxTake.json', 'Tax take'],
+            ['C14_GovDeficit.json', 'Government deficit'],
+            ['C16_DebtCost.json', 'Debt cost'],
+            ['C16_GovDebt_Gross.json', 'Government debt'],
+            ['C17_Inflation.json', 'Inflation'],
+            ['C18_Bank_Rates.json', 'Bank rates'],
+            ['C19_PPP_BigMac.json', 'PPP'],
+            ['C20_CurrentAccount_GDP.json', 'Current account balance'],
+            ['C21_InvestmentPosition.json', 'Investment position']
+        ];
+
+        // Define the path to folder with charts
+        let path = '../../charts/p21/';
+
+        // Embed chart at index `currentIndex` into the chart container
+        function embedChart(index) {
+            // Update the path to the chart. (Get index of the chart from the list of charts, then select the first element of the chart list)
+            const chartPath = path + charts[index][0];
+            // Embed the Vega-Lite chart (we can pass an extra json object to change some of the chart options, e.g. background colour)
+            vegaEmbed('.chart-container', chartPath, {
+                "config": {
+                    "background": "rgba(0,0,0,0)",
+                },
+                "width": 500,
+            }).catch(console.error);
+
+            // Update the chart title. (Get index of the chart from the list of charts, then select the second element of the chart list)
+            document.querySelector('.chart-title').textContent = charts[index][1];
+
+        }
+        // Run our function to embed first chart
+        embedChart(currentIndex);
+
+
+
+        // Function to update the chart and info section (run when the next or prev button is clicked)
+        function updateChart(index) {
+            const data = chartData[index];
+            embedChart(index);
+        }
+
+
+
+        // Navigation
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % charts.length;
+            updateChart(currentIndex);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + charts.length) % charts.length;
+            updateChart(currentIndex);
+        });
+
+    </script>
+
+</body>
+</html>
