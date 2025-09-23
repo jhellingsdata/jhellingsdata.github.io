@@ -172,6 +172,21 @@
     <script>
         // Tax configuration data structure
         const taxConfig = {
+            // incomeTax: {
+            //     name: "Income Tax",
+            //     bands: [
+            //         { min: 0, max: 12570, rate: 0 },
+            //         { min: 12570, max: 50270, rate: 0.20 },
+            //         { min: 50270, max: 125140, rate: 0.40 },
+            //         { min: 125140, max: Infinity, rate: 0.45 }
+            //     ],
+            //     personalAllowance: 12570,
+            //     allowanceTaper: {
+            //         start: 100000,
+            //         end: 125140,
+            //         reductionRate: 0.5  // £1 reduction per £2 over threshold
+            //     }
+            // },
             incomeTax: {
                 name: "Income Tax",
                 bands: [
@@ -180,12 +195,17 @@
                     { min: 50270, max: 125140, rate: 0.40 },
                     { min: 125140, max: Infinity, rate: 0.45 }
                 ],
-                personalAllowance: 12570,
+                personalAllowance: 12_570,
                 allowanceTaper: {
-                    start: 100000,
-                    end: 125140,
-                    reductionRate: 0.5  // £1 reduction per £2 over threshold
-                }
+                    start: 100_000,
+                    end: 125_140,
+                    reductionRate: 0.5  // £1 PA reduced per £2 over => 0.5 per £1
+                },
+                basicRate: 0.20,
+                higherRate: 0.40,
+                additionalRate: 0.45,
+                basicBandWidth: 37_700,             // constant width of 20% band
+                additionalThresholdGross: 125_140   // fixed gross threshold for 45%
             },
             nationalInsurance: {
                 name: "National Insurance",
@@ -237,35 +257,52 @@
             }
         };
 
-        // Calculate income tax with personal allowance tapering
+
         function calculateIncomeTax(income) {
-            const config = taxConfig.incomeTax;
-            let personalAllowance = config.personalAllowance;
-            
-            // Apply tapering
-            if (income > config.allowanceTaper.start) {
-                const excess = Math.min(income - config.allowanceTaper.start, 
-                                       config.allowanceTaper.end - config.allowanceTaper.start);
-                personalAllowance = Math.max(0, personalAllowance - (excess * config.allowanceTaper.reductionRate));
+
+            const cfg = taxConfig.incomeTax;
+
+            // 1) Adjust the personal allowance for taper
+            let pa = cfg.personalAllowance;
+            if (income > cfg.allowanceTaper.start) {
+                const excess = income - cfg.allowanceTaper.start;
+                const reduction = Math.min(excess * cfg.allowanceTaper.reductionRate, cfg.personalAllowance);
+                pa = Math.max(0, cfg.personalAllowance - reduction);
             }
-            
+
+            // 2) Taxable income after the adjusted allowance
+            let taxable = Math.max(0, income - pa);
+
+            // 3) Compute taxable thresholds in *taxable-income* space
+            const basicWidth = cfg.basicBandWidth;                                  // 37,700
+            const additionalThresholdTaxable = cfg.additionalThresholdGross - pa;   // shifts with PA
+
+            // 4) Apply bands in taxable space
             let tax = 0;
-            let taxableIncome = Math.max(0, income - personalAllowance);
-            
-            // 
-            for (const band of config.bands) {
-                if (taxableIncome <= 0) break;
-                // Skip first band
-                if (band.min === 0) continue;
-                
-                const bandWidth = band.max - band.min;
-                const taxableInBand = Math.min(taxableIncome, bandWidth);
-                tax += taxableInBand * band.rate;
-                taxableIncome -= taxableInBand;
+
+            // Basic rate (20%) on first 37,700 of taxable income
+            const basicTaxable = Math.min(taxable, basicWidth);
+            tax += basicTaxable * cfg.basicRate;
+            taxable -= basicTaxable;
+
+            if (taxable > 0) {
+                // Higher-rate ceiling measured from the *start* of taxable bands
+                // i.e., the portion available at 40% before hitting additional rate
+                const higherWidth = Math.max(0, additionalThresholdTaxable - basicWidth);
+
+                const higherTaxable = Math.min(taxable, higherWidth);
+                tax += higherTaxable * cfg.higherRate;
+                taxable -= higherTaxable;
+
+                if (taxable > 0) {
+                // Remainder at additional rate (45%)
+                    tax += taxable * cfg.additionalRate;
+                }
             }
-            
+
             return tax;
-        }
+            }
+
 
         // Calculate National Insurance
         function calculateNationalInsurance(income) {
@@ -337,7 +374,7 @@
         }
 
         // Create Vega-Lite specification
-        function createSpec(data) {
+        function createSpec(data, summaryIncome) {
             // Prepare data for labels - get the last point for each line
             const lastPoint = data[data.length - 1];
             const labelData = [
@@ -359,6 +396,28 @@
                 height: 400,
                 data: { values: data },
                 layer: [
+                {
+                        data: { values: [{ income: summaryIncome }] },
+                        mark: { 
+                            type: "rule", 
+                            strokeWidth: 2, 
+                            // color: "#666",
+                            strokeDash: [3, 3],
+                            opacity: 0.7
+                        },
+                        encoding: {
+                            x: {
+                                field: "income",
+                                type: "quantitative",
+                                // scale: {
+                                //     domain: [0, Math.max(...data.map(d => d.income))]
+                                // }
+                            },
+                            tooltip: [
+                                { field: "income", type: "quantitative", title: "Your Income", format: "$.0f" }
+                            ]
+                        }
+                    },
                     {
                         mark: { type: "line", strokeWidth: 2, color: "#ff6b6b" },
                         encoding: {
@@ -452,12 +511,6 @@
             };
         }
 
-        function loadConfig() {
-            const config = fetch('config.json').then(response => response.json());
-            console.log(config);
-            return config;
-        }
-
         // Update visualisation
         function updateVisualisation() {
             const components = {
@@ -468,8 +521,9 @@
             };
             
             const maxIncome = parseInt(document.getElementById('maxIncome').value) || 200000;
+            const summaryIncome = parseInt(document.getElementById('summaryIncomeInput').value) || 50000;
             const data = generateData(maxIncome, components);
-            const spec = createSpec(data);
+            const spec = createSpec(data, summaryIncome);
 
             
             vegaEmbed('#vis', spec, {
@@ -494,7 +548,7 @@
             console.log(spec);
 
             // Update summary statistics
-            const summaryIncome = parseInt(document.getElementById('summaryIncomeInput').value) || 50000;
+            // const summaryIncome = parseInt(document.getElementById('summaryIncomeInput').value) || 50000;
             
             const marginal = calculateMarginalRate(summaryIncome, components);
             const total = calculateTotalTax(summaryIncome, components);
