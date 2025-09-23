@@ -301,7 +301,7 @@
             }
 
             return tax;
-            }
+        }
 
 
         // Calculate National Insurance
@@ -395,9 +395,63 @@
                 width: 700,
                 height: 400,
                 data: { values: data },
+                encoding: {
+                    x: {
+                        field: "income",
+                        type: "quantitative",
+                        title: "Personal income (£)",
+                        axis: {
+                            format: "$,d",
+                            labelAngle: 0,
+                            titleFontSize: 13
+                        }
+                    }
+                },
                 layer: [
                 {
-                        data: { values: [{ income: summaryIncome }] },
+                    encoding: {
+                        y: {
+                            field: "marginalRate",
+                            type: "quantitative",
+                            title: "Rate (%)",
+                            scale: { domain: [0, 1] },
+                            axis: { format: "%" }
+                        },
+                        color: {
+                            value: "#ff6b6b"
+                        }
+                    },
+                    layer: [
+                        {
+                            mark: { type: "line", strokeWidth: 2, color: "#ff6b6b" },
+                        },
+                        {
+                            mark: { type: "point" },
+                            transform: [{filter: { param: "hover", empty: false }}]
+                        }
+                    ]
+                },
+                {
+                    encoding: {
+                        y: {
+                            field: "effectiveRate",
+                            type: "quantitative"
+                        },
+                        color: {
+                            value: "#4CAF50"
+                        }
+                    },
+                    layer: [
+                        {
+                            mark: { type: "line", strokeWidth: 2, color: "#4CAF50", strokeDash: [5, 5] },
+                        },
+                        {
+                            mark: { type: "point" },
+                            transform: [{filter: { param: "hover", empty: false }}]
+                        }
+                    ]
+                },
+                {
                         mark: { 
                             type: "rule", 
                             strokeWidth: 2, 
@@ -406,67 +460,23 @@
                             opacity: 0.7
                         },
                         encoding: {
-                            x: {
-                                field: "income",
-                                type: "quantitative",
-                                // scale: {
-                                //     domain: [0, Math.max(...data.map(d => d.income))]
-                                // }
+                            opacity: {
+                                condition: { value: 0.3, param: "hover", empty: false },
+                                value: 0
                             },
                             tooltip: [
-                                { field: "income", type: "quantitative", title: "Your Income", format: "$.0f" }
-                            ]
-                        }
-                    },
-                    {
-                        mark: { type: "line", strokeWidth: 2, color: "#ff6b6b" },
-                        encoding: {
-                            x: {
-                                field: "income",
-                                type: "quantitative",
-                                title: "Personal income (£)",
-                                axis: {
-                                    format: "$,d",
-                                    labelAngle: 0,
-                                    titleFontSize: 13
-                                }
-                            },
-                            y: {
-                                field: "marginalRate",
-                                type: "quantitative",
-                                title: "Rate (%)",
-                                scale: { domain: [0, 1] },
-                                axis: { format: "%" }
-                            },
-                            color: {
-                                value: "#ff6b6b"
-                            },
-                            tooltip: [
-                                { field: "income", type: "quantitative", title: "Income", format: "$,.0f" },
-                                { field: "marginalRate", type: "quantitative", title: "Marginal Rate", format: ".1%" }
-                            ]
-                        }
-                    },
-                    { 
-                        mark: { type: "line", strokeWidth: 2, color: "#4CAF50", strokeDash: [5, 5] },
-                        encoding: {
-                            x: {
-                                field: "income",
-                                type: "quantitative"
-                            },
-                            y: {
-                                field: "effectiveRate",
-                                type: "quantitative",
-                                axis: { format: "%" }
-                            },
-                            color: {
-                                value: "#4CAF50"
-                            },
-                            tooltip: [
-                                { field: "income", type: "quantitative", title: "Income", format: "$,.0f" },
+                                { field: "income", type: "quantitative", title: "Your Income", format: "$,.0f" },
+                                { field: "marginalRate", type: "quantitative", title: "Marginal Rate", format: ".1%" },
                                 { field: "effectiveRate", type: "quantitative", title: "Effective Rate", format: ".1%" }
                             ]
-                        }
+                        },
+                        params: [
+                            {
+                                name: "hover",
+                                value: [{ x: summaryIncome }],
+                                select: { type: "point", fields: ["income"], on: "pointerover", clear: "dblclick", nearest: true }
+                            }
+                        ]
                     },
                     {
                         data: { values: labelData },
