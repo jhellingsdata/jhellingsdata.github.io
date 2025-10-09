@@ -1,0 +1,13 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/refs/heads/main/examples/vega-lite/international-formats/sample-data/ex2.csv",
+      "format": {"type": "dsv", "delimiter": ";"}
+    },
+    "mark": {"type": "line"},
+    "encoding": {
+      "x": {"field": "date", "type": "temporal"},
+      "y": {"field": "value", "type": "quantitative"}
+    }
+  }
