@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- LOAD VEGA-LITE -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        :root {
+            --bg: #f7f8fa;
+            --card-bg: #ffffff;
+            --text: #111111;
+            --muted: #6b7280;
+            --primary: #267a64; /* matches eco green-ish */
+            --primary-600: #1f6956;
+            --border: #e5e7eb;
+            --shadow: 0 1px 2px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.06);
+            --radius: 12px;
+        }
+
+        html, body {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px 48px;
+            line-height: 1.45;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .wrap p#rubric {
+            color: var(--muted);
+            margin: 6px 0 0 0;
+        }
+
+        /* Controls layout */
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 16px 0 20px 0;
+        }
+
+        .control-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 16px;
+        }
+
+        .control-card p {
+            margin: 0 0 8px 0;
+            font-weight: 600;
+        }
+
+        /* Inputs */
+        .countryInput {
+            margin-right: 8px;
+            margin-bottom: 8px;
+            height: 40px;
+            padding: 0 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 120ms ease, box-shadow 120ms ease;
+        }
+        .countryInput:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(38,122,100,0.15);
+        }
+
+        select#seriesSelect {
+            height: 40px;
+            padding: 0 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+        select#seriesSelect:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(38,122,100,0.15);
+        }
+
+        /* Buttons */
+        .btn {
+            appearance: none;
+            border: 0;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 80ms ease, filter 120ms ease, background 120ms ease;
+        }
+        .btn:active { transform: translateY(1px); }
+
+        #addCountryButton {
+            background: #eef6f3;
+            color: var(--primary);
+            border: 1px solid #d7efe7;
+        }
+        #addCountryButton:hover { filter: brightness(0.98); }
+
+        #runButton {
+            background: var(--primary);
+            color: #fff;
+        }
+        #runButton:hover { background: var(--primary-600); }
+
+        /* Charts grid */
+        #charts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        /* Individual chart card */
+        .chart {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 12px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- //////////////////////////////////////  BODY //////////////////////////////////////// -->
+    
+        <div class="wrap">
+            <h1>ECO API - <span style="color: #86d0bb">loops</span></h1>
+            <span style="display:block; height: 10px;"></span>
+            <p id="rubric" class="rubric">An automated dashboard for building charts from the ECO API</p>
+            <span style="display:block; height: 10px;"></span>
+        </div>
+        
+        <!-- //////////////////////////////////////  CONTROLS //////////////////////////////////////// -->
+        <div class="controls">
+            <!-- STEP 1: SELECT SERIES FROM DROPDOWN -->
+            <section class="control-card" style="display: flex; flex-direction: column; gap: 10px;">
+               <p>Select series</p>
+               <select id="seriesSelect">
+                   <option value="infl">Inflation</option>
+                   <option value="unem">Unemployment</option>
+                   <option value="popu">Population</option>
+                   <option value="impo">Imports</option>
+                   <option value="expo">Export</option>
+                   <option value="grow">GDP growth</option>
+                   <option value="gdpp">GDP per capita</option>
+               </select>
+            </section>
+
+
+            <!-- STEP 2: INPUT BOXES FOR COUNTRY CODES -->
+            <section class="control-card">
+                <p>Input country codes</p>
+                <div id="countryInputs">    <!-- We start wtih 3 input boxes, then the JavaScript function adds more as needed -->
+                    <input class="countryInput" type="text" placeholder="Enter country code" maxlength="3">
+                    <input class="countryInput" type="text" placeholder="e.g. usa" maxlength="3">
+                    <input class="countryInput" type="text" placeholder="e.g. fra" maxlength="3">
+                </div>
+                <button class="btn" id="addCountryButton" onclick="addInputBox()">Add country</button>
+            </section>
+        </div>
+
+        
+
+        <!-- STEP 3: RUN BUTTON -->
+        <button class="btn" id="runButton" onclick="run()">Go</button>
+
+
+        <!-- STEP 4: OUTPUT DIVS FOR CHARTS -->
+        <div id="charts"></div>
+
+
+        <!-- /////// IMPORT JAVASCRIPT CHART BUILDER /////// -->
+        <script src="js/ecoApiChartBuilder.js"></script>
+
+
+    
+</body>
+</html>
