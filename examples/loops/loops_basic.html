@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- LOAD VEGA-LITE -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        /* :root is a CSS variable that can be used to store values that can be reused throughout the CSS file. */
+        :root {
+            --bg: #f7f8fa;
+            --card-bg: #ffffff;
+            --text: #111111;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --shadow: 0 1px 2px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.06);
+            --radius: 12px;
+        }
+
+        html, body {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px 48px;
+            line-height: 1.45;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        p#rubric {
+            color: var(--muted);
+            margin: 6px 0 0 0;
+        }
+
+
+        /* Charts grid */
+        #charts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 280px);     /* Fixed 300px cards; auto-fit columns based on available width */
+            gap: 25px;
+            margin-top: 16px;
+        }
+
+        /* Individual chart card */
+        .chart {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 5px;
+            margin: 0; /* Reset default figure margins to avoid overflow */
+        }
+    </style>
+
+
+        <!--  //////////////////////////////////////  PRE_WORK REQUIRED ////////////////////////////////////////
+        
+
+        REQUIRED STEPS:
+         1. Run DS_L5_2_LoopFred_Short.ipynb to batch download multiple FRED JSON data files (SHOULD HAVE AT LEAST 4 .json data files)
+
+         2. SAVE TO LOCAL VSCODE FOLDER AND ADD TO GITHUB REPO  
+         
+         3. UPDATE THE LIST OF CHART FILE LINKS IN THE JAVASCRIPT BELOW
+        
+        
+        //////////////////////////////////////  END PRE_WORK REQUIRED //////////////////////////////////////// -->
+
+</head>
+<body>
+
+    
+
+    <!-- //////////////////////////////////////  BODY //////////////////////////////////////// -->
+    
+        <div class="wrap">
+            <h1>Simple dashboard - <span style="color: #86d0bb">loops</span></h1>
+            <p id="rubric" class="rubric">An automated dashboard for creating multiple charts from FRED data</p>
+        </div>
+
+
+
+        <!-- DIV CONTAINER FOR CHARTS -->
+        <div id="charts">
+
+            <figure id="c1" class="chart"></figure>
+            <figure id="c2" class="chart"></figure>
+            <figure id="c3" class="chart"></figure>
+            <figure id="c4" class="chart"></figure>
+
+        </div>
+
+
+        <!-- /////// JAVASCRIPT: LOOP WITH VEGA EMBED /////// -->
+        <script>
+
+            // 1. DEFINE TEMPLATE SPEC FOR CHART
+            let templateSpec = {
+                "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+                "title": {
+                    "text": "", // This is injected via code, added from the csv that we load above.
+                    "subtitle": ["",""], // Added from csv
+                    "anchor": "middle",
+                    "color": "black"
+                },
+                "view": {"stroke": "transparent"}, // Make box around chart clear
+                "data":{
+                    "url": "", // Added from loop, e.g. "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/data_US_FRED-CPIAUCSL.json"
+                    "format":{
+                        "type": "json",
+                        "property": "observations"    // Tell Vega which json 'key' the data is in (else we will just see the metadata).
+                    }},
+                "transform": [
+                    {"calculate":"year(datum.date)", "as": "year"},
+                    {"filter": "datum.year >= 2000"}
+                ],
+                    
+                "height": 200,
+                "width": 200,
+                "mark": {"type": "line", "color": "#58b3c7", "interpolate": "basis"},
+                "encoding": {
+                    "x":{"field": "date", "type": "temporal", "title": null, "axis": {"grid": false,}},
+                    "y":{"field": "value", "type": "quantitative", "title": null, "axis": {"grid": false}}
+                }
+            }
+
+            // 2. DEFINE LIST OF CHART FILE LINKS. (EITHER LOCAL OR RAW ONLINE)
+            let chartFiles = [
+                // DEFINE LIST OF CHART FILE LINKS 
+                "data_US_FRED-CPIAUCSL.json",
+                "data_US_FRED-GDPC1.json",
+                "data_US_FRED-UNRATE.json",
+                "data_US_FRED-FEDFUNDS.json"
+            ]
+
+            // 3. DEFINE BASE URL FOR CHART FILES (i.e. raw folder link, without the file name)
+            let baseUrl = "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/";
+
+
+
+            // WE HAVE 4 CHART DIVS, SO WE NEED TO LOOP 4 TIMES
+            for(let i=0; i<4; i++) {
+                // Add chartFile to base url
+                let url = baseUrl + chartFiles[i];  
+                
+                // Make a copy of the template spec, so we can modify it for each chart.
+                let spec = JSON.parse(JSON.stringify(templateSpec));
+                spec.data.url = url;   // Set the data url
+                spec.title.text = chartFiles[i].split('-')[1].split('.')[0];     // Extract just the series code from the file name, so set as title.
+
+                // Print the spec to the console (helpful for debugging)
+                console.log(spec);
+
+                // Select the chart div
+                let chartDiv = document.getElementById(`c${i+1}`);
+
+                // Embed our modified spec into the chart div
+                vegaEmbed(chartDiv, spec);
+            }
+
+        </script>
+
+
+    <!-- //////////////////////////////////////  END BODY //////////////////////////////////////// -->
+</body>
+</html>
