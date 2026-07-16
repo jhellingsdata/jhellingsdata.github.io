@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Inflation Visualization</title>
+    
+    <!-- Link to global styles -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Link to visualizer-specific styles -->
+    <link rel="stylesheet" href="vis_interactive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.29.0"></script>
+    
+    <style>
+        .code-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: #2d3748;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: background 0.2s;
+            border: 1px solid #4a5568;
+        }
+        
+        .code-button:hover {
+            background: #4a5568;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">It's Riad</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PROJECT OVERVIEW (narrow) -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto; padding: 40px 20px;">
+        <div class="chart-description">
+            <h1 style="margin-bottom: 20px;">Inflation & Media Sentiment in Egypt</h1>
+            <p style="text-align: left; line-height: 1.8;">
+                This project provides interactive, visual, and accessible explanations of inflation's impact on everyday life and, alternatively, people's impact on inflation. In parallel, the project is geared towards those with an economics background by visualizing my undergraduate dissertation findings on the role of media in affecting consumer behavior and inflationary outcomes. Finally, the project automates these findings through an inflation forecasting system that scrapes and analyzes media sentiment across Egypt and provides forecasts based on the preceding findings.
+            </p>
+        </div>
+    </section>
+
+    <section style="text-align: center; margin: 40px auto;">
+        <img src="project_banner.jpg" alt="Project Banner" style="max-width: 600px; width: 100%;">
+        <p style="color: #999; font-size: 0.9em; margin-top: 10px;">Image was shot by Riad Ghoneim for a project in London on Arab Identity</p>
+    </section>
+
+    <!-- SECTION 1: EGYPT VS NORTH AFRICA -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="chart-description" style="width: 100%; max-width: 1200px; padding: 0 20px;">
+            <div class="section-header">
+                <h2>Egypt's Inflation: A Regional Comparison</h2>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/vis_inf_mar_egy_alg.json" target="_blank" class="code-button">
+                    &lt;/&gt; View Code
+                </a>
+            </div>
+            <p style="text-align: left; line-height: 1.8;">
+                The first section illustrates the aggressive value loss of real income for Egyptians over the past two decades. The opening visualization contrasts Egypt with similar North African economies—Algeria and Morocco—showing how Egypt has consistently experienced higher inflation, at its peak experiencing 32.6% more inflation than Morocco.
+            </p>
+            <p style="text-align: left; font-size: 0.9em; color: #999; margin-top: 10px; line-height: 1.6;">
+                <em>The data uses the International Monetary Fund's API, which I accessed through their API Guide. I chose the IMF over the World Bank due to its more frequent and timely inflation updates.</em>
+            </p>
+        </div>
+        <figure id="Location1"></figure>
+    </section>
+
+    <!-- SECTION 2: EXCHANGE RATE & DEVALUATION -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="chart-description" style="width: 100%; max-width: 1200px; padding: 0 20px;">
+            <div class="section-header">
+                <h2>The Double Burden: Inflation & Devaluation</h2>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/vis_fx_egy.json" target="_blank" class="code-button">
+                    &lt;/&gt; View Code
+                </a>
+            </div>
+            <p style="text-align: left; line-height: 1.8;">
+                The second section illustrates the effects of inflation (green) and devaluation (yellow) on the weakening purchasing power of the Egyptian Pound. The top red visualization emphasizes the cumulative effect of both phenomena, highlighting the percentage loss of income and savings value each year. During the run-up, spike, and cooldown of the inflationary crises in 2017 and 2023, Egyptian households lost approximately 40-50% of their income and savings value annually.
+            </p>
+            <p style="text-align: left; font-size: 0.9em; color: #999; margin-top: 10px; line-height: 1.6;">
+                <em>The inflation and devaluation data utilize World Bank APIs; the value loss figure has been manually calculated and stored in <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/data/egypt_value_loss_rate.csv" target="_blank" style="color: #6b9bd1;">egypt_value_loss_rate.csv</a>.</em>
+            </p>
+        </div>
+        <figure id="Location2"></figure>
+    </section>
+
+    <!-- SECTION 3: CUMULATIVE LOSS -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="chart-description" style="width: 100%; max-width: 1200px; padding: 0 20px;">
+            <div class="section-header">
+                <h2>Cumulative Erosion of Savings</h2>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/vis_dev_egy.json" target="_blank" class="code-button">
+                    &lt;/&gt; View Code
+                </a>
+            </div>
+            <p style="text-align: left; line-height: 1.8;">
+                To emphasize the loss of savings value for Egyptian households, this visualization illustrates cumulative income loss from 2010 to 2024, where Egyptian households lost 84% of their savings value in 14 years. In comparison, Morocco experienced only 24% value loss and Algeria 54%.
+            </p>
+            <p style="text-align: left; font-size: 0.9em; color: #999; margin-top: 10px; line-height: 1.6;">
+                <em>This data was manually calculated using World Bank inflation figures.</em>
+            </p>
+        </div>
+        <figure id="Location3"></figure>
+    </section>
+
+    <!-- ============================================
+         INTERACTIVE TAXI METER SECTION
+         ============================================ -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="chart-description" style="width: 100%; max-width: 1200px; padding: 0 20px;">
+            <div class="section-header">
+                <h2>How Far Will Your Money Take You?</h2>
+            </div>
+            <p style="text-align: left; line-height: 1.8;">
+                For a less economics-oriented explanation, I created an interactive section where users can adjust their income and inflation levels to visually observe variations in their real income. Highlighting this project's Egyptian heritage, the text above the toggle poses the question "How far will your money take you?" alongside an automated Egyptian taxi meter.
+            </p>
+        </div>
+    </section>
+
+    <div class="meter-section">
+        <h3>Purchasing Power</h3>
+        <div class="meter-wrapper">
+            <div class="meter-container">
+                <img src="taxi_meter_base.png" alt="Taxi Meter Base" class="meter-base">
+                <div class="meter-digits" id="meterDigits"></div>
+        <em/div> this will likely move out of place with different screen sizes </em>
+            </div>
+            <div class="arabic-text-container">
+                <img src="arabic_text.png" alt="Arabic Text" class="arabic-text-img">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="vis-grid">
+        
+
+        <div class="vis-area">
+            
+            <!-- CIRCLE Visualiser -->
+            <div id="circlesView" class="viz-view">
+                <div class="circle-container">
+                    <svg width="500" height="500" viewBox="0 0 500 500">
+                        <circle id="nominalCircle" cx="250" cy="250" r="200" fill="#ffffff" opacity="1" />
+                        <circle id="nominalCircleStroke" cx="250" cy="250" r="200" fill="none" stroke="#ffffff" stroke-width="2" />
+                        <circle id="inflationRing" cx="250" cy="250" r="160" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="10,5" opacity="0.7" />
+                        <text id="inflationText" x="250" y="70" text-anchor="middle" class="svg-text" style="fill: #ef4444; font-size: 14px;">
+                            Egypt Current: <tspan id="actualInflationSVG">12.3</tspan>%
+                        </text>
+                        <circle id="realCircle" cx="250" cy="250" r="160" fill="#3b82f6" opacity="0.5" />
+                        <circle id="realCircleStroke" cx="250" cy="250" r="160" fill="none" stroke="#1e40af" stroke-width="2" />
+                        <text x="250" y="240" text-anchor="middle" class="svg-text" style="fill: #1e40af; font-size: 18px;">Real Income</text>
+                        <text id="realIncomeTextSVG" x="250" y="265" text-anchor="middle" class="svg-text" style="fill: #1e40af; font-size: 24px;">
+                            0 EGP
+                        </text>
+                    </svg>
+                    
+                    <!-- Legend -->
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-box legend-nominal"></div>
+                            <span>Nominal Income</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box legend-inflation"></div>
+                            <span>Egypt Inflation</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box legend-real"></div>
+                            <span>Real Income</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bar Chart -->
+            <div id="barsView" class="viz-view" style="display: none;">
+                <h2>Income Breakdown</h2>
+                <div class="bars-container">
+                    <!-- Bar 1: User's scenario -->
+                    <div class="bar-row">
+                        <div class="bar-header">
+                            <span class="bar-label">Your Scenario (<span id="inflationRateBar1">25</span>% inflation)</span>
+                            <span class="bar-value"><span id="nominalIncomeBar1">50,000</span> EGP</span>
+                        </div>
+                        <div class="bar-visual" id="bar1Container">
+                            <div class="bar-segment bar-real" style="width: 80%" id="bar1Real">
+                                <span id="bar1RealText">Real: 40,000 EGP</span>
+                            </div>
+
+                            <div class="bar-segment bar-loss" style="width: 20%" id="bar1Loss">
+                                <span id="bar1LossText">Loss: 10,000 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bar 2: Egypt current inflation -->
+                    <div class="bar-row">
+                        <div class="bar-header">
+                            <span class="bar-label">Egypt Current (<span id="actualInflationBar">12.3</span>% inflation)</span>
+                            <span class="bar-value"><span id="nominalIncomeBar2">50,000</span> EGP</span>
+                        </div>
+                        <div class="bar-visual bar-visual-egypt" id="bar2Container">
+                            <div class="bar-segment bar-real" style="width: 89%" id="bar2Real">
+                                <span id="bar2RealText">Real: 44,500 EGP</span>
+                            </div>
+                            <div class="bar-segment bar-loss" style="width: 11%" id="bar2Loss">
+                                <span id="bar2LossText">Loss: 5,500 EGP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RIGHT COLUMN: CONTROLS -->
+        <div class="controls-area">
+
+            <div class="view-buttons">
+                <button onclick="setViewMode('circles')" id="btnCircles" class="view-btn active">
+                    Circle View
+                </button>
+                <button onclick="setViewMode('bars')" id="btnBars" class="view-btn">
+                    Bar Chart View
+                </button>
+            </div>
+            
+            <!-- Sliders -->
+            <div class="sliders">
+                <!-- Income Slider -->
+                <div class="slider-wrapper">
+                    <label class="slider-label">Nominal Income</label>
+                    <div class="slider-value" id="incomeValue">50,000</div>
+                    <input
+                        type="range"
+                        orient="vertical"
+                        min="10000"
+                        max="50000"
+                        step="5000"
+                        value="50000"
+                        id="incomeSlider"
+                        class="slider-vertical"
+                    />
+                    <div class="slider-unit">EGP</div>
+                </div>
+                
+                <!-- Inflation Slider -->
+                <div class="slider-wrapper">
+                    <label class="slider-label">Inflation</label>
+                    <div class="slider-value" id="inflationValue">25</div>
+                    <input
+                        type="range"
+                        orient="vertical"
+                        min="0"
+                        max="50"
+                        step="1"
+                        value="25"
+                        id="inflationSlider"
+                        class="slider-vertical"
+                    />
+                    <div class="slider-unit">Egypt: <span id="actualInflation">12.3</span>%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <section style="text-align: center; margin: 40px auto;">
+        <img src="project_photo.jpg" alt="Project Banner" style="max-width: 600px; width: 100%;">
+        <p style="color: #999; font-size: 0.9em; margin-top: 10px;">Image was shot by Riad Ghoneim in the Birqash Camel Market North of Cairo</p>
+    </section>
+
+    <!-- SECTION 4: CONSUMER CONFIDENCE -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="chart-description" style="width: 100%; max-width: 1200px; padding: 0 20px;">
+            <div class="section-header">
+                <h2>Consumer Confidence & Inflation Expectations</h2>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/vis_cci_egy.json" target="_blank" class="code-button">
+                    &lt;/&gt; View Code
+                </a>
+            </div>
+            <p style="text-align: left; line-height: 1.8;">
+                The second section introduces the role of consumer behavior in perpetuating inflation in Egypt. The figures are based on calculations from my undergraduate dissertation. This section begins by visualizing the portion of inflation attributed to consumer behavior, emphasizing consumers' role in perpetuating inflation.
+            </p>
+        </div>
+        <figure id="Location4"></figure>
+    </section>
+
+    <!-- SECTION 5: MEDIA SENTIMENT -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="chart-description" style="width: 100%; max-width: 1200px; padding: 0 20px;">
+            <div class="section-header">
+                <h2>Media Sentiment Analysis</h2>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/vis_media_egy.json" target="_blank" class="code-button">
+                    &lt;/&gt; View Code
+                </a>
+            </div>
+            <p style="text-align: left; line-height: 1.8;">
+                The following visualization captures media sentiment—a dominant driver of consumer confidence. To track media sentiment, I scrape three Egyptian news outlets daily for economy-related articles. I use CAMeL-BERT and FinBERT for Arabic and English sentiment analysis, amassing over 2,500 data points in the past two months. The scraper runs every morning using GitHub Actions and remains within GitHub Actions' free tier. This code can be replicated on any Arabic or English economics news websites without CloudFlare protection.
+            </p>
+            <p style="text-align: left; font-size: 0.9em; color: #999; margin-top: 10px; line-height: 1.6;">
+                <em>Replication tip: Use websites with dedicated economics sections to ease scraping complexity and reduce runtime. View the <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/.github/workflows/scrape_news.yml" target="_blank" style="color: #6b9bd1;">scraper code</a> and <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/data/arabic_news.csv" target="_blank" style="color: #6b9bd1;">raw data</a>.</em>
+            </p>
+        </div>
+        <figure id="Location5"></figure>
+    </section>
+
+    <!-- SECTION 6: INFLATION FORECAST -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="chart-description" style="width: 100%; max-width: 1200px; padding: 0 20px;">
+            <div class="section-header">
+                <h2>Inflation Forecast Model</h2>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/calculate_forecast.py" target="_blank" class="code-button">
+                    &lt;/&gt; View Code
+                </a>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io/blob/main/scraper_arabic.py" target="_blank" class="code-button">
+                    &lt;/&gt; Arabic Scraper
+                </a>
+                 <a href="https://github.com/Its-Riad/Its-Riad.github.io/tree/main/data" target="_blank" class="code-button">
+                    &lt;/&gt; Data Files
+                </a>
+            </div>
+            <p style="text-align: left; line-height: 1.8;">
+                Finally, using media as a proxy for consumer behavior (with a weighting of 20% at different lag points), I create an inflation forecasting tool. I use real-time media sentiment data to predict inflation up to six months ahead. The model uses empirically-derived structures from an 8-year, 400,000 data-point study to predict media and consumer impact on inflation.
+            </p>
+            <p style="text-align: left; font-size: 0.9em; color: #999; margin-top: 10px; line-height: 1.6;">
+                <em>The main challenge was finding data on Egyptian media sentiment. After resorting to scraping, bypassing CloudFlare was the primary obstacle. I used Claude AI to test a compiled list of websites rather than rewriting code for each attempt. The availability of sentiment analyzers such as CAMeL-BERT and FinBERT provided significant support in processing data. However, their variations in output created visualization challenges. Due to this, I plotted each language separately.</em>
+            </p>
+        </div>
+        <figure id="Location6"></figure>
+    </section>
+
+    <!-- CONCLUSION SECTION -->
+    <section style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 40px auto; padding: 40px 20px;">
+        <div class="chart-description">
+            <h2>Conclusion</h2>
+            <p style="text-align: left; line-height: 1.8;">
+                These visualizations create an accessible visual explanation of inflation's impact on Egyptians and, alternatively, Egyptians' impact on inflation. The project highlights the potential of interactive visual tools for explaining relevant economic phenomena and reinforces my dissertation's claim that as disinformation and misinformation rise, understanding media's role on consumers is paramount.
+            </p>
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="Dissertation_Undergrad.pdf" target="_blank" class="code-button" style="font-size: 1em; padding: 12px 24px; margin-right: 15px;">
+                    📄 View Dissertation
+                </a>
+                <a href="https://github.com/Its-Riad/Its-Riad.github.io" target="_blank" class="code-button" style="font-size: 1em; padding: 12px 24px;">
+                    View Full Project Repository →
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- CITATIONS SECTION -->
+<section style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 60px auto 40px; padding: 40px 20px; border-top: 2px solid #444;">
+    <div class="chart-description">
+        <h2 style="margin-bottom: 30px;">References & Data Sources</h2>
+        
+        <div style="text-align: left; line-height: 2;">
+            <p style="margin-bottom: 15px;">
+                <strong>International Monetary Fund (IMF).</strong> (2024). <em>International Financial Statistics - Inflation Data.</em> 
+                Retrieved from <a href="https://data.imf.org/" target="_blank" style="color: #60a5fa;">https://data.imf.org/</a>
+            </p>
+            
+            <p style="margin-bottom: 15px;">
+                <strong>World Bank.</strong> (2024). <em>World Development Indicators - Inflation (GDP Deflator), Exchange Rates, and Economic Indicators.</em> 
+                Retrieved from <a href="https://api.worldbank.org/v2/" target="_blank" style="color: #60a5fa;">https://api.worldbank.org/v2/</a>
+            </p>
+            
+            <p style="margin-bottom: 15px;">
+                <strong>Ghoneim, R.</strong> (2024). <em>The Role of Media Sentiment in Driving Consumer Confidence and Inflation Expectations: Evidence from Egypt.</em> 
+                Undergraduate Dissertation, King's College London.
+            </p>
+            
+            <p style="margin-bottom: 15px;">
+                <strong>Egyptian News Sources.</strong> (2024-2025). <em>Scraped economic sentiment data from Al-Ahram, Al-Masry Al-Youm, and Daily News Egypt.</em> 
+                Analyzed using CAMeL-BERT and FinBERT models.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Riad Ghoneim</p>
+    </footer>
+
+    <script>
+        // ============================================
+        // STATE VARIABLES
+        // ============================================
+        let figure_1_spec = "vis_inf_mar_egy_alg.json";
+        let figure_2_spec = "vis_fx_egy.json";
+        let figure_3_spec = "vis_dev_egy.json";
+        let figure_4_spec = "vis_cci_egy.json";
+        let figure_5_spec = "vis_media_egy.json";
+        let figure_6_spec = "vis_forecast_inf_egy.json";
+
+        let nominalIncome = 50000;
+        let inflationRate = 25;
+        let actualInflation = 12.3;
+        let viewMode = 'circles';
+        let currentFrame = 0;
+        let animationInterval = null;
+        const frames = [
+            'meter_horse_1.png',
+            'meter_horse_2.png',
+            'meter_horse_3.png',
+            'meter_horse_4.png'
+        ];
+
+        // ============================================
+        // TAXI METER FUNCTIONS
+        // ============================================
+        function updateMeter(value) {
+            const valueStr = String(value).padStart(5, '0');
+            const firstNonZero = valueStr.search(/[1-9]/);
+            const meterDiv = document.getElementById('meterDigits');
+            
+            meterDiv.innerHTML = '';
+            
+            for (let i = 0; i < 5; i++) {
+                const digit = valueStr[i];
+                const img = document.createElement('img');
+                
+                if (digit === '0' && (firstNonZero === -1 || i < firstNonZero)) {
+                    img.src = 'meter(null).png';
+                } else {
+                    img.src = 'meter(' + digit + ').png';
+                }
+                
+                img.alt = digit;
+                meterDiv.appendChild(img);
+            }
+            
+            updateMeterAnimation(value);
+        }
+
+        function updateMeterAnimation(itemsCanBuy) {
+            if (animationInterval) {
+                clearInterval(animationInterval);
+            }
+            
+            const maxSpeed = 30;
+            const minSpeed = 400;
+            const speedRange = minSpeed - maxSpeed;
+            const normalizedItems = Math.min(itemsCanBuy, 5000);
+            const speedFactor = normalizedItems / 5000;
+            const frameDelay = minSpeed - (speedRange * speedFactor);
+            
+            animationInterval = setInterval(() => {
+                currentFrame = (currentFrame + 1) % frames.length;
+                const baseImg = document.querySelector('.meter-base');
+                if (baseImg) {
+                    baseImg.src = frames[currentFrame];
+                }
+            }, frameDelay);
+        }
+
+        // ============================================
+        // CALCULATION FUNCTIONS
+        // ============================================
+        function updateCalculations() {
+            const realIncome = nominalIncome / (1 + inflationRate / 100);
+            const itemsCanBuy = Math.floor(realIncome / 10);
+            
+            document.getElementById('incomeValue').textContent = nominalIncome.toLocaleString();
+            document.getElementById('inflationValue').textContent = inflationRate;
+            
+            updateMeter(itemsCanBuy);
+            renderVisualization();
+        }
+
+
+        // ============================================
+        // VISUALIZATION RENDERING
+        // ============================================
+        function renderVisualization() {
+            const realIncome = nominalIncome / (1 + inflationRate / 100);
+            const maxRadius = 230;
+            const nominalRadius = Math.min((nominalIncome / 50000) * 150 + 100, maxRadius);
+            const realRadius = nominalRadius / (1 + inflationRate / 100);
+            const inflationRingRadius = nominalRadius / (1 + actualInflation / 100);
+            
+            if (viewMode === 'circles') {
+                renderCircleView(nominalRadius, realRadius, inflationRingRadius, realIncome);
+            } else {
+                renderBarView(realIncome);
+            }
+        }
+
+        function renderCircleView(nominalRadius, realRadius, inflationRingRadius, realIncome) {
+            document.getElementById('nominalCircle').setAttribute('r', nominalRadius);
+            document.getElementById('nominalCircleStroke').setAttribute('r', nominalRadius);
+            document.getElementById('realCircle').setAttribute('r', realRadius);
+            document.getElementById('realCircleStroke').setAttribute('r', realRadius);
+            document.getElementById('inflationRing').setAttribute('r', inflationRingRadius);
+            document.getElementById('inflationText').setAttribute('y', 250 - inflationRingRadius - 15);
+            document.getElementById('actualInflationSVG').textContent = actualInflation.toFixed(1);
+            document.getElementById('realIncomeTextSVG').textContent = Math.floor(realIncome).toLocaleString() + ' EGP';
+        }
+
+        function renderBarView(realIncome) {
+            const barHeight = Math.max(60, (nominalIncome / 50000) * 200);
+            document.getElementById('bar1Container').style.height = barHeight + 'px';
+            document.getElementById('bar2Container').style.height = barHeight + 'px';
+            
+            const realPercent = (realIncome / nominalIncome) * 100;
+            const lossPercent = 100 - realPercent;
+            
+            document.getElementById('inflationRateBar1').textContent = inflationRate;
+            document.getElementById('nominalIncomeBar1').textContent = nominalIncome.toLocaleString();
+            document.getElementById('nominalIncomeBar2').textContent = nominalIncome.toLocaleString();
+            document.getElementById('actualInflationBar').textContent = actualInflation.toFixed(1);
+            
+            document.getElementById('bar1Real').style.width = realPercent + '%';
+            document.getElementById('bar1Loss').style.width = lossPercent + '%';
+            document.getElementById('bar1RealText').textContent = 'Real: ' + Math.floor(realIncome).toLocaleString() + ' EGP';
+            document.getElementById('bar1LossText').textContent = 'Loss: ' + Math.floor(nominalIncome - realIncome).toLocaleString() + ' EGP';
+            
+            const egyptRealIncome = nominalIncome / (1 + actualInflation / 100);
+            const egyptRealPercent = (egyptRealIncome / nominalIncome) * 100;
+            const egyptLossPercent = 100 - egyptRealPercent;
+            
+            document.getElementById('bar2Real').style.width = egyptRealPercent + '%';
+            document.getElementById('bar2Loss').style.width = egyptLossPercent + '%';
+            document.getElementById('bar2RealText').textContent = 'Real: ' + Math.floor(egyptRealIncome).toLocaleString() + ' EGP';
+            document.getElementById('bar2LossText').textContent = 'Loss: ' + Math.floor(nominalIncome - egyptRealIncome).toLocaleString() + ' EGP';
+        }
+
+        // ============================================
+        // VIEW MODE SWITCHING
+        // ============================================
+        function setViewMode(mode) {
+            viewMode = mode;
+            const btnCircles = document.getElementById('btnCircles');
+            const btnBars = document.getElementById('btnBars');
+            const circlesView = document.getElementById('circlesView');
+            const barsView = document.getElementById('barsView');
+            
+            if (mode === 'circles') {
+                btnCircles.classList.add('active');
+                btnBars.classList.remove('active');
+                circlesView.style.display = 'block';
+                barsView.style.display = 'none';
+            } else {
+                btnBars.classList.add('active');
+                btnCircles.classList.remove('active');
+                circlesView.style.display = 'none';
+                barsView.style.display = 'block';
+            }
+            
+            renderVisualization();
+        }
+
+        // ============================================
+        // EVENT LISTENERS
+        // ============================================
+        document.getElementById('incomeSlider').addEventListener('input', function(e) {
+            nominalIncome = Number(e.target.value);
+            updateCalculations();
+        });
+
+        document.getElementById('inflationSlider').addEventListener('input', function(e) {
+            inflationRate = Number(e.target.value);
+            updateCalculations();
+        });
+
+        // ============================================
+        // EXTERNAL DATA FETCHING
+        // ============================================
+        fetch('https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG?format=json&date=2024:2025&per_page=1')
+            .then(r => r.json())
+            .then(data => {
+                if (data[1] && data[1][0] && data[1][0].value) {
+                    actualInflation = parseFloat(data[1][0].value);
+                    document.getElementById('actualInflation').textContent = actualInflation.toFixed(1);
+                    updateCalculations();
+                }
+            })
+            .catch(() => {});
+
+        // ============================================
+        // INITIALIZATION
+        // ============================================
+        updateCalculations();
+
+        vegaEmbed('#Location1', figure_1_spec, {
+            "actions": false,
+            "config": {
+                "background": null
+            }
+        });
+
+        vegaEmbed('#Location2', figure_2_spec, {
+            "actions": false,
+            "config": {
+                "background": null
+            }
+        });
+
+        vegaEmbed('#Location3', figure_3_spec, {
+            "actions": false,
+            "config": {
+                "background": null
+            }
+        });
+        
+        vegaEmbed('#Location4', figure_4_spec, {
+            "actions": false,
+            "config": {
+                "background": null
+            }
+        });
+        
+        vegaEmbed('#Location5', figure_5_spec, {
+            "actions": false,
+            "config": {
+                "background": null
+            }
+        });
+        
+        vegaEmbed('#Location6', figure_6_spec, {
+            "actions": false,
+            "config": {
+                "background": null
+            }
+        });
+
+    </script>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Sources of Inflation: Consumer Sentiment vs Other Factors",
+    "subtitle": "Source: World Bank inflation data with dissertation-based decomposition calculations",
+    "color": "white",
+    "subtitleColor": "white",
+    "fontSize": 20
+  },
+  "config": {
+    "background": null,
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "labelFontSize": 14,
+      "titleFontSize": 16,
+      "gridColor": "#444",
+      "domainColor": "white"
+    },
+    "legend": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "labelFontSize": 14
+    },
+    "title": {
+      "color": "white",
+      "fontSize": 20,
+      "subtitleColor": "white",
+      "subtitleFontSize": 14
+    }
+  },
+  "width": 880,
+  "height": 400,
+  "data": {
+    "url": "egypt_inflation_decomposition.csv"
+  },
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2024,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2024,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2024,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "year(datum.date)", "as": "year_num"},
+    {"filter": "datum.year_num >= minYear"},
+    {"filter": "datum.year_num <= maxYear"},
+    {
+      "fold": ["consumer_sentiment", "other_factors"],
+      "as": ["category", "value"]
+    }
+  ],
+  "mark": {
+    "type": "area",
+    "tooltip": true,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Inflation (%)",
+      "stack": "zero"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "domain": ["consumer_sentiment", "other_factors"],
+        "range": ["#ef4444", "#3b82f6"]
+      },
+      "legend": {
+        "title": "Inflation Source",
+        "labelExpr": "datum.label == 'consumer_sentiment' ? 'Consumer Sentiment' : 'Other Factors'"
+      }
+    },
+    "opacity": {
+      "condition": {
+        "test": "datum.category == 'other_factors'",
+        "value": 0.3
+      },
+      "value": 0.7
+    },
+    "tooltip": [
+      {"field": "year", "type": "quantitative", "title": "Year"},
+      {"field": "category", "type": "nominal", "title": "Source"},
+      {"field": "value", "type": "quantitative", "title": "Contribution (%)", "format": ".2f"},
+      {"field": "total_inflation", "type": "quantitative", "title": "Total Inflation (%)", "format": ".2f"}
+    ]
+  }
+}

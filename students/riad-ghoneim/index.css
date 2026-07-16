@@ -1,0 +1,749 @@
+/* ==================== UNIVERSAL STYLES FOR ALL PAGES ==================== */
+
+/* ==================== FONTS ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Courier+Prime:wght@400&display=swap');
+
+/* ==================== CSS VARIABLES (COLORS) ==================== */
+:root {
+    /* Main Colors */
+    --deep-indigo: #141d44;
+    --primary-blue: #1a3a52;
+    --sky-blue: #4a90c8;
+    --powder-blue: #a8b8c8;
+    --silver: #c0c5ca;
+    
+    /* Neutrals */
+    --white: #ffffff;
+    --soft-white: #f5f5f5;
+    --light-gray: #e5e7eb;
+    --charcoal: #2a2a2a;
+    --medium-gray: #666666;
+    --light-text: #999999;
+    
+    /* Status Colors */
+    --success: #10b981;
+    --error: #ef4444;
+}
+
+/* ==================== RESET & BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--charcoal);
+    background: var(--white);
+    min-height: 100vh;
+    font-weight: 400;
+}
+
+/* Dark theme body (for pages like portfolio) */
+body.dark-theme {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--white);
+    background: var(--deep-indigo);
+    padding: 40px;
+}
+
+/* ==================== CONTAINER ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.container-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ==================== NAVIGATION ==================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--silver);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Dark nav for dark theme pages */
+body.dark-theme nav {
+    background: var(--deep-indigo);
+    border-bottom: 2px solid var(--white);
+}
+
+nav.scrolled {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-theme nav.scrolled {
+    background: var(--deep-indigo);
+}
+
+nav .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+body.dark-theme nav .logo {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+nav .logo:hover {
+    opacity: 0.7;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+body.dark-theme nav a {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+nav a:hover {
+    color: var(--sky-blue);
+}
+
+body.dark-theme nav a:hover {
+    color: var(--white);
+}
+
+nav a.active {
+    color: var(--sky-blue);
+    border-bottom-color: var(--sky-blue);
+}
+
+body.dark-theme nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--white);
+}
+
+/* ==================== TYPOGRAPHY - LIGHT THEME ==================== */
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+}
+
+h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+h6 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+/* ==================== TYPOGRAPHY - DARK THEME ==================== */
+body.dark-theme h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 72px;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 0;
+    color: var(--white);
+}
+
+body.dark-theme h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    margin-top: 64px;
+    color: var(--white);
+}
+
+body.dark-theme h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    margin-top: 48px;
+    color: var(--white);
+}
+
+body.dark-theme h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: var(--white);
+}
+
+/* ==================== PARAGRAPHS ==================== */
+p {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--charcoal);
+    margin-bottom: 24px;
+}
+
+body.dark-theme p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+/* ==================== LINKS ==================== */
+a {
+    color: var(--sky-blue);
+    text-decoration: none;
+    border-bottom: 1px solid var(--sky-blue);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+}
+
+body.dark-theme a {
+    color: var(--white);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    border: none;
+}
+
+body.dark-theme a:hover {
+    opacity: 0.7;
+}
+
+/* ==================== HEADER / HERO ==================== */
+header {
+    margin-top: 72px;
+    padding: 96px 0 64px;
+    text-align: center;
+    border-bottom: 1px solid var(--silver);
+}
+
+body.dark-theme header {
+    margin-top: 0;
+    padding: 0;
+    border-bottom: none;
+}
+
+/* Special classes for main page */
+h1.big {
+    font-size: 48px;
+}
+
+h3.small {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 24px auto;
+}
+
+header p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--sky-blue);
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+body.dark-theme header p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: var(--white);
+}
+
+/* ==================== SECTIONS ==================== */
+section {
+    max-width: 720px;
+    margin: 64px auto;
+    padding: 0;
+}
+
+section:first-of-type {
+    margin-top: 96px;
+}
+
+body.dark-theme section {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Week sections for portfolio */
+.week-section {
+    margin-bottom: 96px;
+}
+
+.week-description {
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.chart-section {
+    margin-bottom: 64px;
+}
+
+/* ==================== CHART DESCRIPTIONS ==================== */
+.chart-description {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+body.dark-theme .chart-description {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.chart-description h2 {
+    margin-bottom: 16px;
+}
+
+.chart-description p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--charcoal);
+    max-width: 650px;
+    margin: 0 auto 24px;
+}
+
+body.dark-theme .chart-description p {
+    max-width: 100%;
+    margin: 0 0 24px 0;
+}
+
+/* ==================== FIGURES / CHARTS ==================== */
+figure {
+    margin: 48px auto;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--silver);
+    transition: all 0.3s ease;
+}
+
+figure:hover {
+    border-color: var(--powder-blue);
+    box-shadow: 0 8px 16px rgba(26, 58, 82, 0.08);
+}
+
+body.dark-theme figure {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0 0 32px 0;
+}
+
+#chartGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin: 48px 0;
+}
+
+/* ==================== ACCENT ELEMENTS ==================== */
+.accent-bar {
+    height: 1px;
+    width: 80px;
+    background: var(--primary-blue);
+    margin: 24px auto;
+}
+
+.terminal-line {
+    font-family: 'Courier Prime', monospace;
+    font-size: 15px;
+    color: var(--primary-blue);
+    background: var(--soft-white);
+    padding: 8px 12px;
+    margin: 24px auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.terminal-line::before {
+    content: '→ ';
+    color: var(--sky-blue);
+}
+
+/* ==================== BUTTON GRID ==================== */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 48px auto;
+    max-width: 720px;
+}
+
+.nav-button {
+    background: var(--white);
+    border: 1px solid var(--silver);
+    padding: 48px 32px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid var(--silver);
+}
+
+.nav-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(26, 58, 82, 0.08);
+    border-color: var(--powder-blue);
+    border-bottom: 1px solid var(--powder-blue);
+}
+
+.button-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.button-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+}
+
+.button-desc {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    color: var(--charcoal);
+    line-height: 1.7;
+}
+
+/* ==================== TECH STACK BADGES ==================== */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 32px;
+    justify-content: center;
+}
+
+.tech-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary-blue);
+    background: transparent;
+    border: 1px solid var(--silver);
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.25s ease;
+}
+
+.tech-badge:hover {
+    border-color: var(--sky-blue);
+    color: var(--sky-blue);
+}
+
+/* ==================== DIVIDERS ==================== */
+.divider {
+    height: 1px;
+    background: var(--silver);
+    margin: 64px auto;
+    width: 100%;
+}
+
+.divider-subtle {
+    height: 1px;
+    background: var(--light-gray);
+    margin: 32px auto;
+    width: 60%;
+}
+
+body.dark-theme .divider {
+    height: 2px;
+    background: var(--white);
+    margin: 64px auto;
+    max-width: 200px;
+    opacity: 0.5;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    max-width: 720px;
+    margin: 96px auto 0;
+    padding: 48px 0;
+    border-top: 1px solid var(--silver);
+    text-align: center;
+}
+
+body.dark-theme footer {
+    max-width: 100%;
+    padding: 48px 0;
+    border-top: 2px solid var(--white);
+}
+
+footer p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--medium-gray);
+    margin: 0;
+}
+
+body.dark-theme footer p {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ==================== STATUS INDICATORS ==================== */
+.status-up {
+    color: var(--success);
+}
+
+.status-down {
+    color: var(--error);
+}
+
+.status-neutral {
+    color: var(--sky-blue);
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0.9;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body:not(.dark-theme) section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+*:focus {
+    outline: 2px solid var(--sky-blue);
+    outline-offset: 2px;
+}
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--soft-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--silver);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--powder-blue);
+}
+
+body.dark-theme::-webkit-scrollbar-track {
+    background: var(--deep-indigo);
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+    background: var(--sky-blue);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1023px) {
+    .container {
+        padding: 0 32px;
+    }
+    
+    h1, h1.big {
+        font-size: 36px;
+    }
+    
+    body.dark-theme h1 {
+        font-size: 56px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    body.dark-theme {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    nav ul {
+        gap: 20px;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+    
+    header {
+        padding: 64px 0 48px;
+    }
+    
+    h1, h1.big {
+        font-size: 32px;
+    }
+    
+    body.dark-theme h1 {
+        font-size: 40px;
+    }
+    
+    h3.small {
+        font-size: 18px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    body.dark-theme h2 {
+        font-size: 24px;
+        margin-top: 48px;
+    }
+    
+    body.dark-theme h3 {
+        font-size: 20px;
+        margin-top: 32px;
+    }
+    
+    body.dark-theme h4 {
+        font-size: 18px;
+    }
+    
+    section {
+        margin: 48px auto;
+    }
+    
+    .week-section {
+        margin-bottom: 64px;
+    }
+    
+    .button-grid {
+        gap: 16px;
+    }
+    
+    .nav-button {
+        padding: 32px 24px;
+    }
+}

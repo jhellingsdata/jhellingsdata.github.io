@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": null,
+    "view": {"stroke": null},
+    "axis": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "labelFontSize": 14,
+      "titleFontSize": 16,
+      "gridColor": "#444",
+      "domainColor": "white"
+    },
+    "legend": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "labelFontSize": 14
+    },
+    "title": {
+      "color": "white",
+      "fontSize": 20,
+      "subtitleColor": "white",
+      "subtitleFontSize": 14
+    }
+  },
+  "title": {
+    "text": "Egypt Inflation: 6-Month Forecast",
+    "subtitle": "Sentiment (20%) + Inflation Momentum (80%) with 95% confidence intervals"
+  },
+  "width": 880,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Its-Riad/Its-Riad.github.io/main/data/egypt_inflation_forecast.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": ""
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {"filter": "datum.type == 'forecast'"}
+      ],
+      "mark": {"type": "errorband", "color": "#ef4444", "opacity": 0.2},
+      "encoding": {
+        "y": {
+          "field": "lower_bound",
+          "type": "quantitative",
+          "title": "Inflation (%)"
+        },
+        "y2": {
+          "field": "upper_bound"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 4,
+        "point": {"size": 150, "filled": true}
+      },
+      "encoding": {
+        "y": {
+          "field": "inflation",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["actual", "forecast"],
+            "range": ["#10b981", "#ef4444"]
+          },
+          "legend": null
+        },
+        "strokeDash": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["actual", "forecast"],
+            "range": [[1], [8, 4]]
+          }
+        },
+        "tooltip": [
+          {"field": "date", "type": "temporal", "title": "Date", "format": "%b %Y"},
+          {"field": "inflation", "type": "quantitative", "title": "Inflation (%)", "format": ".1f"},
+          {"field": "type", "type": "nominal", "title": "Type"}
+        ]
+      }
+    }
+  ]
+}
