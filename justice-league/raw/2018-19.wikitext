@@ -1,0 +1,75 @@
+{{#invoke:Sports table|main|style=WDL
+|update=complete
+|source=[https://www.premierleague.com/en/tables/premier-league/2018-19/all-matchweeks Premier League]
+
+<!--Update team positions here-->
+|team1=MCI|team2=LIV |team3=CHE |team4=TOT |team5=ARS |team6=MUN |team7=WOL |team8=EVE |team9=LEI |team10=WHU
+|team11=WAT |team12=CRY |team13=NEW |team14=BOU |team15=BUR |team16=SOU |team17=BHA |team18=CAR |team19=FUL |team20=HUD
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLGS |result5=ELGS |result6=ELGS |result7=ELQ2 |result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|win_ARS=21|draw_ARS=7 |loss_ARS=10|gf_ARS=73|ga_ARS=51<!-- Arsenal-->
+|win_BOU=13|draw_BOU=6 |loss_BOU=19|gf_BOU=56|ga_BOU=70<!-- Bournemouth -->
+|win_BHA=9 |draw_BHA=9 |loss_BHA=20|gf_BHA=35|ga_BHA=60<!-- Brighton & Hove Albion-->
+|win_BUR=11|draw_BUR=7 |loss_BUR=20|gf_BUR=45|ga_BUR=68<!-- Burnley -->
+|win_CAR=10|draw_CAR=4 |loss_CAR=24|gf_CAR=34|ga_CAR=69<!-- Cardiff City -->
+|win_CHE=21|draw_CHE=9 |loss_CHE=8 |gf_CHE=63|ga_CHE=39<!-- Chelsea -->
+|win_CRY=14|draw_CRY=7 |loss_CRY=17|gf_CRY=51|ga_CRY=53<!-- Crystal Palace -->
+|win_EVE=15|draw_EVE=9 |loss_EVE=14|gf_EVE=54|ga_EVE=46<!-- Everton -->
+|win_FUL=7 |draw_FUL=5 |loss_FUL=26|gf_FUL=34|ga_FUL=81<!-- Fulham  -->
+|win_HUD=3 |draw_HUD=7 |loss_HUD=28|gf_HUD=22|ga_HUD=76<!-- Huddersfield Town -->
+|win_LEI=15|draw_LEI=7 |loss_LEI=16|gf_LEI=51|ga_LEI=48<!-- Leicester City-->
+|win_LIV=30|draw_LIV=7 |loss_LIV=1 |gf_LIV=89|ga_LIV=22<!-- Liverpool -->
+|win_MCI=32|draw_MCI=2 |loss_MCI=4 |gf_MCI=95|ga_MCI=23<!-- Manchester City -->
+|win_MUN=19|draw_MUN=9 |loss_MUN=10|gf_MUN=65|ga_MUN=54<!-- Manchester United -->
+|win_NEW=12|draw_NEW=9 |loss_NEW=17|gf_NEW=42|ga_NEW=48<!-- Newcastle United -->
+|win_SOU=9 |draw_SOU=12|loss_SOU=17|gf_SOU=45|ga_SOU=65<!-- Southampton  -->
+|win_TOT=23|draw_TOT=2 |loss_TOT=13|gf_TOT=67|ga_TOT=39<!-- Tottenham Hotspur -->
+|win_WAT=14|draw_WAT=8 |loss_WAT=16|gf_WAT=52|ga_WAT=59<!-- Watford -->
+|win_WHU=15|draw_WHU=7 |loss_WHU=16|gf_WHU=52|ga_WHU=55<!-- West Ham United -->
+|win_WOL=16|draw_WOL=9 |loss_WOL=13|gf_WOL=47|ga_WOL=46<!-- Wolverhampton Wanderers -->
+
+<!--Status-->
+|status_MCI=C
+|status_CAR=R
+|status_FUL=R
+|status_HUD=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_BOU=[[AFC Bournemouth|Bournemouth]]
+|name_BHA=[[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+|name_BUR=[[Burnley F.C.|Burnley]]
+|name_CAR=[[Cardiff City F.C.|Cardiff City]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_FUL=[[Fulham F.C.|Fulham]]
+|name_HUD=[[Huddersfield Town A.F.C.|Huddersfield Town]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WAT=[[Watford F.C.|Watford]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules=1) Points; 2) Goal difference; 3) Goals scored; 4) Play-offs (only if needed to decide champion, teams for relegation or teams for UEFA competitions).
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1|text_CLGS=Qualification to [[2019–20 UEFA Champions League#Group stage|Champions League group stage]]
+|col_ELGS=blue1 |text_ELGS=Qualification to [[2019–20 UEFA Europa League#Group stage|Europa League group stage]]
+|col_ELQ2=blue2 |text_ELQ2={{nowrap|Qualification to [[2019–20 UEFA Europa League#Second qualifying round|Europa League second qualifying round]]}}
+|col_REL=red1   |text_REL=Relegation to [[2019–20 EFL Championship|EFL Championship]]
+
+|note_res_ELQ2=Since the winners of the [[2018–19 EFL Cup|EFL Cup]] and the [[2018–19 FA Cup|FA Cup]], Manchester City, qualified for the Champions League, the spot given to the FA Cup winners (Europa League group stage) was passed to the sixth-placed team and the spot given to the League Cup winners (Europa League second qualifying round) was passed to the seventh-placed team.
+|note_res_ELGS=ELQ2
+}}</onlyinclude>

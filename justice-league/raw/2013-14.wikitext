@@ -1,0 +1,57 @@
+{{#invoke:Sports table|main|style=WDL
+|update=complete
+|source=[https://www.premierleague.com/en/tables/premier-league/2013-14/all-matchweeks Barclays Premier League]
+
+<!--Update team positions here-->
+|team1=MNC|team2=LIV|team3=CHE|team4=ARS|team5=EVE|team6=TOT|team7=MNU|team8=STN|team9=SKE|team10=NEW
+|team11=CPA|team12=SWA|team13=WHU|team14=SUN|team15=AST|team16=HUL|team17=WBA|team18=NRW|team19=FUL|team20=CAR
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLPO
+|result5=ELGS|result6=ELPO |result16=EL3Q
+|result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed positions above). Don't forget to update the date above (update parameter)-->
+|win_MNC=27|draw_MNC=5 |loss_MNC=6 |gf_MNC=102|ga_MNC=37|name_MNC=[[Manchester City F.C.|Manchester City]]
+|win_LIV=26|draw_LIV=6 |loss_LIV=6 |gf_LIV=101|ga_LIV=50|name_LIV=[[Liverpool F.C.|Liverpool]]
+|win_CHE=25|draw_CHE=7 |loss_CHE=6 |gf_CHE=71 |ga_CHE=27|name_CHE=[[Chelsea F.C.|Chelsea]]
+|win_ARS=24|draw_ARS=7 |loss_ARS=7 |gf_ARS=68 |ga_ARS=41|name_ARS=[[Arsenal F.C.|Arsenal]]
+|win_EVE=21|draw_EVE=9 |loss_EVE=8 |gf_EVE=61 |ga_EVE=39|name_EVE=[[Everton F.C.|Everton]]
+|win_TOT=21|draw_TOT=6 |loss_TOT=11|gf_TOT=55 |ga_TOT=51|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|win_MNU=19|draw_MNU=7 |loss_MNU=12|gf_MNU=64 |ga_MNU=43|name_MNU=[[Manchester United F.C.|Manchester United]]
+|win_STN=15|draw_STN=11|loss_STN=12|gf_STN=54 |ga_STN=46|name_STN=[[Southampton F.C.|Southampton]]
+|win_SKE=13|draw_SKE=11|loss_SKE=14|gf_SKE=45 |ga_SKE=52|name_SKE=[[Stoke City F.C.|Stoke City]]
+|win_NEW=15|draw_NEW=4 |loss_NEW=19|gf_NEW=43 |ga_NEW=59|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|win_CPA=13|draw_CPA=6 |loss_CPA=19|gf_CPA=33 |ga_CPA=48|name_CPA=[[Crystal Palace F.C.|Crystal Palace]]
+|win_SWA=11|draw_SWA=9 |loss_SWA=18|gf_SWA=54 |ga_SWA=54|name_SWA=[[Swansea City A.F.C.|Swansea City]]
+|win_WHU=11|draw_WHU=7 |loss_WHU=20|gf_WHU=40 |ga_WHU=51|name_WHU=[[West Ham United F.C.|West Ham United]]
+|win_SUN=10|draw_SUN=8 |loss_SUN=20|gf_SUN=41 |ga_SUN=60|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|win_AST=10|draw_AST=8 |loss_AST=20|gf_AST=39 |ga_AST=61|name_AST=[[Aston Villa F.C.|Aston Villa]]
+|win_HUL=10|draw_HUL=7 |loss_HUL=21|gf_HUL=38 |ga_HUL=53|name_HUL=[[Hull City A.F.C.|Hull City]]
+|win_WBA=7 |draw_WBA=15|loss_WBA=16|gf_WBA=43 |ga_WBA=59|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|win_NRW=8 |draw_NRW=9 |loss_NRW=21|gf_NRW=28 |ga_NRW=62|name_NRW=[[Norwich City F.C.|Norwich City]]
+|win_FUL=9 |draw_FUL=5 |loss_FUL=24|gf_FUL=40 |ga_FUL=85|name_FUL=[[Fulham F.C.|Fulham]]
+|win_CAR=7 |draw_CAR=9 |loss_CAR=22|gf_CAR=32 |ga_CAR=74|name_CAR=[[Cardiff City F.C.|Cardiff City]]
+
+<!-- Status -->
+|status_MNC=C
+|status_NRW=R
+|status_FUL=R
+|status_CAR=R
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules = 1) Points; 2) Goal difference; 3) Goals scored; 4) Play-offs (only if needed to decide champion, teams for relegation or teams for UEFA competitions).<ref>{{cite web |url=http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2013-14.pdf |title=Premier League Handbook Season 2013/14 |publisher=Premier League |access-date=13 August 2013 |pages=96–97|url-status=dead |archive-url=https://web.archive.org/web/20140122060849/http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2013-14.pdf |archive-date=22 January 2014}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1 |text_CLGS=Qualification for the [[2014–15 UEFA Champions League#Group stage|Champions League group stage]]
+|col_CLPO=green2 |text_CLPO=Qualification for the [[2014–15 UEFA Champions League#Play-off round|Champions League play-off round]]
+|col_ELGS=blue1  |text_ELGS=Qualification for the [[2014–15 UEFA Europa League#Group stage|Europa League group stage]]
+|col_ELPO=blue2  |text_ELPO=Qualification for the [[2014–15 UEFA Europa League#Play-off round|Europa League play-off round]]
+|col_EL3Q=blue3  |text_EL3Q=Qualification for the [[2014–15 UEFA Europa League#Third qualifying round|Europa League third qualifying round]]
+|col_REL =red1   |text_REL=Relegation to [[2014–15 Football League Championship|Football League Championship]]
+
+|note_res_ELPO = Since the winners of [[2013–14 Football League Cup]] ([[Manchester City F.C.|Manchester City]]) qualified for the Champions League, the spot awarded to them ([[2014–15 UEFA Europa League#Play-off round|Europa League play-off round]]) was passed to the 6th-placed team.
+|note_res_EL3Q = [[Hull City A.F.C.|Hull City]] qualified for the [[2014–15 UEFA Europa League#Third qualifying round|Europa League third qualifying round]] as runners-up of the [[2013–14 FA Cup]] since winners [[Arsenal F.C.|Arsenal]] qualified for Champions League.
+}}</onlyinclude>

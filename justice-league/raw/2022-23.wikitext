@@ -1,0 +1,75 @@
+{{#invoke:Sports table|main|style=WDL|source=[https://www.premierleague.com/en/tables/premier-league/2022-23/all-matchweeks Premier League]
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLGS |result5=ELGS |result6=ELGS |result7=ECLPO |result14=ECLTH
+|result18=REL |result19=REL |result20=REL
+
+<!--Update team positions here-->
+|team_order= MCI, ARS, MUN, NEW, LIV, BHA, AVL, TOT, BRE, FUL, CRY, CHE, WOL, WHU, BOU, NFO, EVE, LEI, LEE, SOU
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=26|draw_ARS=6|loss_ARS=6 |gf_ARS=88|ga_ARS=43<!-- Arsenal -->
+|win_AVL=18|draw_AVL=7 |loss_AVL=13|gf_AVL=51|ga_AVL=46<!-- Aston Villa -->
+|win_BOU=11|draw_BOU=6 |loss_BOU=21|gf_BOU=37|ga_BOU=71<!-- Bournemouth -->
+|win_BRE=15|draw_BRE=14|loss_BRE=9 |gf_BRE=58|ga_BRE=46<!-- Brentford -->
+|win_BHA=18|draw_BHA=8 |loss_BHA=12|gf_BHA=72|ga_BHA=53<!-- Brighton & Hove Albion-->
+|win_CHE=11|draw_CHE=11|loss_CHE=16|gf_CHE=38|ga_CHE=47<!-- Chelsea -->
+|win_CRY=11|draw_CRY=12|loss_CRY=15|gf_CRY=40|ga_CRY=49<!-- Crystal Palace-->
+|win_EVE=8 |draw_EVE=12|loss_EVE=18|gf_EVE=34|ga_EVE=57<!-- Everton-->
+|win_FUL=15|draw_FUL=7 |loss_FUL=16|gf_FUL=55|ga_FUL=53<!-- Fulham -->
+|win_LEE=7 |draw_LEE=10|loss_LEE=21|gf_LEE=48|ga_LEE=78<!-- Leeds United -->
+|win_LEI=9 |draw_LEI=7 |loss_LEI=22|gf_LEI=51|ga_LEI=68<!-- Leicester City -->
+|win_LIV=19|draw_LIV=10|loss_LIV=9 |gf_LIV=75|ga_LIV=47<!-- Liverpool -->
+|win_MCI=28|draw_MCI=5 |loss_MCI=5 |gf_MCI=94|ga_MCI=33<!-- Manchester City -->
+|win_MUN=23|draw_MUN=6 |loss_MUN=9 |gf_MUN=58|ga_MUN=43<!-- Manchester United -->
+|win_NEW=19|draw_NEW=14|loss_NEW=5 |gf_NEW=68|ga_NEW=33<!-- Newcastle United -->
+|win_NFO=9 |draw_NFO=11|loss_NFO=18|gf_NFO=38|ga_NFO=68<!-- Nottingham Forest -->
+|win_SOU=6 |draw_SOU=7 |loss_SOU=25|gf_SOU=36|ga_SOU=73<!-- Southampton -->
+|win_TOT=18|draw_TOT=6 |loss_TOT=14|gf_TOT=70|ga_TOT=63<!-- Tottenham Hotspur -->
+|win_WHU=11|draw_WHU=7 |loss_WHU=20|gf_WHU=42|ga_WHU=55<!-- West Ham United -->
+|win_WOL=11|draw_WOL=8 |loss_WOL=19|gf_WOL=31|ga_WOL=58<!-- Wolverhampton Wanderers -->
+
+<!--Team definitions (wikilinks in table)-->
+| name_ARS = [[Arsenal F.C.|Arsenal]]
+| name_AVL = [[Aston Villa F.C.|Aston Villa]]
+| name_BOU = [[AFC Bournemouth|Bournemouth]]
+| name_BRE = [[Brentford F.C.|Brentford]]
+| name_BHA = [[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+| name_CHE = [[Chelsea F.C.|Chelsea]]
+| name_CRY = [[Crystal Palace F.C.|Crystal Palace]]
+| name_EVE = [[Everton F.C.|Everton]]
+| name_FUL = [[Fulham F.C.|Fulham]]
+| name_LEE = [[Leeds United F.C.|Leeds United]]
+| name_LEI = [[Leicester City F.C.|Leicester City]]
+| name_LIV = [[Liverpool F.C.|Liverpool]]
+| name_MCI = [[Manchester City F.C.|Manchester City]]
+| name_MUN = [[Manchester United F.C.|Manchester United]]
+| name_NEW = [[Newcastle United F.C.|Newcastle United]]
+| name_NFO = [[Nottingham Forest F.C.|Nottingham Forest]]
+| name_SOU = [[Southampton F.C.|Southampton]]
+| name_TOT = [[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+| name_WHU = [[West Ham United F.C.|West Ham United]]
+| name_WOL = [[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+<!--Status-->
+|status_MCI=C
+|status_LEI=R
+|status_LEE=R
+|status_SOU=R
+|show_limit=5
+|class_rules= 1) Points; 2) Goal difference; 3) Goals scored; 4) If the champions, relegated teams or qualified teams for UEFA competitions cannot be determined by rules 1 to 3, rules 4.1 to 4.3 are applied – 4.1) Points gained in head-to-head record between such teams; 4.2) Away goals scored in head-to-head record between such teams; 4.3) Play-offs<ref>{{cite web|url=https://resources.premierleague.com/premierleague/document/2022/08/17/41833320-bac0-4aa1-966e-b07c65267dbe/PL_Handbook_2022-23_DIGITAL_17.08.pdf|title=Premier League Handbook 2022/23|pages=109–111|publisher=Premier League|access-date=24 August 2022|archive-date=27 August 2022|archive-url=https://web.archive.org/web/20220827050212/https://resources.premierleague.com/premierleague/document/2022/08/17/41833320-bac0-4aa1-966e-b07c65267dbe/PL_Handbook_2022-23_DIGITAL_17.08.pdf|url-status=live}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1   |text_CLGS=Qualification to [[2023–24 UEFA Champions League|Champions League group stage]]
+|col_ELGS=blue1    |text_ELGS={{nowrap|Qualification to [[2023–24 UEFA Europa League|Europa League group stage]]}}
+|col_ECLTH=blue1   |text_ECLTH={{nowrap|Qualification to [[2023–24 UEFA Europa League|Europa League group stage]]}}
+|col_ECLPO=yellow1 |text_ECLPO={{nowrap|Qualification to [[2023–24 UEFA Europa Conference League|Europa Conference League play-off round]]}}
+|col_REL=red1      |text_REL=Relegation to [[2023–24 EFL Championship|EFL Championship]]
+
+|note_res_ELGS=Since the winners of the [[2022–23 FA Cup]], Manchester City, qualified for the Champions League, the spot given to the FA Cup winners (Europa League group stage) was passed to the sixth-placed team.
+
+|note_res_ECLPO=Since the winners of the [[2022–23 EFL Cup]], Manchester United, qualified for the Champions League, the spot given to the League Cup winners (Europa Conference League play-off round) was passed to the seventh-placed team.
+
+|note_res_ECLTH=West Ham United qualified for the Europa League group stage by winning the [[2022–23 UEFA Europa Conference League]].
+}}</onlyinclude>

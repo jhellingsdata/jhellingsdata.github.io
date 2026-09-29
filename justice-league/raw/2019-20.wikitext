@@ -1,0 +1,76 @@
+{{#invoke:Sports table|main|style=WDL
+|source=[https://www.premierleague.com/en/tables/premier-league/2019-20/all-matchweeks Premier League]
+
+<!--Update team positions here-->
+|team_order=LIV, MCI, MUN, CHE, LEI, TOT, WOL, ARS, SHU, BUR, SOU, EVE, NEW, CRY, BHA, WHU, AVL, BOU, WAT, NOR
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLGS |result5=ELGS |result6=EL2Q |result8=ELGScup |result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=14|draw_ARS=14|loss_ARS=10|gf_ARS=56 |ga_ARS=48<!-- Arsenal-->
+|win_AVL=9 |draw_AVL=8 |loss_AVL=21|gf_AVL=41 |ga_AVL=67<!-- Aston Villa-->
+|win_BOU=9 |draw_BOU=7 |loss_BOU=22|gf_BOU=40 |ga_BOU=65<!-- Bournemouth-->
+|win_BHA=9 |draw_BHA=14|loss_BHA=15|gf_BHA=39 |ga_BHA=54<!-- Brighton & Hove Albion-->
+|win_BUR=15|draw_BUR=9 |loss_BUR=14|gf_BUR=43 |ga_BUR=50<!-- Burnley -->
+|win_CHE=20|draw_CHE=6 |loss_CHE=12|gf_CHE=69 |ga_CHE=54<!-- Chelsea-->
+|win_CRY=11|draw_CRY=10|loss_CRY=17|gf_CRY=31 |ga_CRY=50<!-- Crystal Palace-->
+|win_EVE=13|draw_EVE=10|loss_EVE=15|gf_EVE=44 |ga_EVE=56<!-- Everton-->
+|win_LEI=18|draw_LEI=8 |loss_LEI=12|gf_LEI=67 |ga_LEI=41<!-- Leicester City-->
+|win_LIV=32|draw_LIV=3 |loss_LIV=3 |gf_LIV=85 |ga_LIV=33<!-- Liverpool-->
+|win_MCI=26|draw_MCI=3 |loss_MCI=9 |gf_MCI=102|ga_MCI=35<!-- Manchester City-->
+|win_MUN=18|draw_MUN=12|loss_MUN=8 |gf_MUN=66 |ga_MUN=36<!-- Manchester United-->
+|win_NEW=11|draw_NEW=11|loss_NEW=16|gf_NEW=38 |ga_NEW=58<!-- Newcastle United-->
+|win_NOR=5 |draw_NOR=6 |loss_NOR=27|gf_NOR=26 |ga_NOR=75<!-- Norwich City-->
+|win_SHU=14|draw_SHU=12|loss_SHU=12|gf_SHU=39 |ga_SHU=39<!-- Sheffield United-->
+|win_SOU=15|draw_SOU=7 |loss_SOU=16|gf_SOU=51 |ga_SOU=60<!-- Southampton-->
+|win_TOT=16|draw_TOT=11|loss_TOT=11|gf_TOT=61 |ga_TOT=47<!-- Tottenham Hotspur-->
+|win_WAT=8 |draw_WAT=10|loss_WAT=20|gf_WAT=36 |ga_WAT=64<!-- Watford-->
+|win_WHU=10|draw_WHU=9 |loss_WHU=19|gf_WHU=49 |ga_WHU=62<!-- West Ham United-->
+|win_WOL=15|draw_WOL=14|loss_WOL=9 |gf_WOL=51 |ga_WOL=40<!-- Wolverhampton Wanderers-->
+
+<!--Status-->
+|status_BOU=R
+|status_LIV=C
+|status_NOR=R
+|status_WAT=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_AVL=[[Aston Villa F.C.|Aston Villa]]
+|name_BOU=[[AFC Bournemouth|Bournemouth]]
+|name_BHA=[[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+|name_BUR=[[Burnley F.C.|Burnley]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_NOR=[[Norwich City F.C.|Norwich City]]
+|name_SHU=[[Sheffield United F.C.|Sheffield United]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WAT=[[Watford F.C.|Watford]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules=1) Points; 2) Goal difference; 3) Goals scored; 4) If the champions, relegated teams or qualified teams for UEFA competitions cannot be determined by rules 1 to 3, rules 4.1 to 4.3 are applied – 4.1) Points gained in head to head record between such teams; 4.2) Away goals scored in head to head record between such teams; 4.3) Play-offs<ref>{{cite web|title=Premier League Handbook Season 2019/20: Rules of the Premier League Section C pages 101–102|url=https://www.premierleague.com/publications|website=premierleague.com|date=2 August 2019|access-date=5 March 2026|archive-date=25 December 2012|archive-url=https://web.archive.org/web/20121225233556/https://www.premierleague.com/publications|url-status=dead}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1   |text_CLGS=Qualification for the [[2020–21 UEFA Champions League#Group stage|Champions League group stage]]
+|col_ELGS=blue1    |text_ELGS=Qualification for the [[2020–21 UEFA Europa League#Group stage|Europa League group stage]]
+|col_ELGScup=blue1 |text_ELGScup=Qualification for the [[2020–21 UEFA Europa League#Group stage|Europa League group stage]]
+|col_EL2Q=blue2    |text_EL2Q={{nowrap|Qualification for the [[2020–21 UEFA Europa League#Second qualifying round|Europa League second qualifying round]]}}
+|col_REL=red1      |text_REL=Relegation to [[2020–21 EFL Championship|EFL Championship]]
+
+|note_res_ELGScup = Arsenal qualified for the Europa League group stage as the [[2019–20 FA Cup]] winners.
+|note_res_EL2Q = Since the winners of the [[2019–20 EFL Cup]], Manchester City, qualified for the Champions League group stage by league position, the spot given to the EFL Cup winners (Europa League second qualifying round) was passed down to the sixth-placed team.
+
+}}</onlyinclude>

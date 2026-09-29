@@ -1,0 +1,84 @@
+{{#invoke:Sports table|main|style=WDL
+|update=complete
+|source=[https://www.premierleague.com/en/tables/premier-league/2014-15/all-matchweeks Barclays Premier League]
+
+<!--Update team positions here-->
+|team1=CHE |team2=MCI |team3=ARS |team4=MUN |team5=TOT |team6=LIV |team7=SOU |team8=SWA |team9=STK |team10=CRY
+|team11=EVE |team12=WHU |team13=WBA |team14=LEI |team15=NEW |team16=SUN |team17=AVL |team18=HUL |team19=BUR |team20=QPR
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLPO
+|result5=ELGS |result6=ELGS |result7=EL3Q |result12=EL1Q
+|result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed positions above). Don't forget to update the date above (update parameter)-->
+|win_ARS=22|draw_ARS=9 |loss_ARS=7 |gf_ARS=71 |ga_ARS=36 <!-- Arsenal -->
+|win_AVL=10|draw_AVL=8 |loss_AVL=20|gf_AVL=31 |ga_AVL=57 <!-- Aston Villa -->
+|win_BUR=7 |draw_BUR=12|loss_BUR=19|gf_BUR=28 |ga_BUR=53 <!-- Burnley -->
+|win_CHE=26|draw_CHE=9 |loss_CHE=3
+|gf_CHE=73 |ga_CHE=32 <!-- Chelsea -->
+|win_CRY=13|draw_CRY=9 |loss_CRY=16|gf_CRY=47 |ga_CRY=51 <!-- Crystal Palace -->
+|win_EVE=12|draw_EVE=11|loss_EVE=15|gf_EVE=48 |ga_EVE=50 <!-- Everton -->
+|win_HUL=8 |draw_HUL=11|loss_HUL=19|gf_HUL=33 |ga_HUL=51 <!-- Hull City -->
+|win_LEI=11|draw_LEI=8 |loss_LEI=19|gf_LEI=46 |ga_LEI=55 <!-- Leicester City -->
+|win_LIV=18|draw_LIV=8 |loss_LIV=12|gf_LIV=52 |ga_LIV=48 <!-- Liverpool -->
+|win_MCI=24|draw_MCI=7 |loss_MCI=7 |gf_MCI=83 |ga_MCI=38 <!-- Manchester City -->
+|win_MUN=20|draw_MUN=10|loss_MUN=8 |gf_MUN=62 |ga_MUN=37 <!-- Manchester United -->
+|win_NEW=10|draw_NEW=9 |loss_NEW=19|gf_NEW=40 |ga_NEW=63 <!-- Newcastle United -->
+|win_QPR=8 |draw_QPR=6 |loss_QPR=24|gf_QPR=42 |ga_QPR=73 <!-- Queens Park Rangers -->
+|win_SOU=18|draw_SOU=6 |loss_SOU=14|gf_SOU=54 |ga_SOU=33 <!-- Southampton -->
+|win_STK=15|draw_STK=9 |loss_STK=14|gf_STK=48 |ga_STK=45 <!-- Stoke City -->
+|win_SUN=7 |draw_SUN=17|loss_SUN=14|gf_SUN=31 |ga_SUN=53 <!-- Sunderland -->
+|win_SWA=16|draw_SWA=8 |loss_SWA=14|gf_SWA=46 |ga_SWA=49 <!-- Swansea City -->
+|win_TOT=19|draw_TOT=7 |loss_TOT=12|gf_TOT=58 |ga_TOT=53 <!-- Tottenham Hotspur -->
+|win_WBA=11|draw_WBA=11|loss_WBA=16|gf_WBA=38 |ga_WBA=51 <!-- West Bromwich Albion -->
+|win_WHU=12|draw_WHU=11|loss_WHU=15|gf_WHU=44 |ga_WHU=47 <!-- West Ham United-->
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS = [[Arsenal F.C.|Arsenal]]
+|name_AVL = [[Aston Villa F.C.|Aston Villa]]
+|name_BUR = [[Burnley F.C.|Burnley]]
+|name_CHE = [[Chelsea F.C.|Chelsea]]
+|name_CRY = [[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE = [[Everton F.C.|Everton]]
+|name_HUL = [[Hull City A.F.C.|Hull City]]
+|name_LEI = [[Leicester City F.C.|Leicester City]]
+|name_LIV = [[Liverpool F.C.|Liverpool]]
+|name_MCI = [[Manchester City F.C.|Manchester City]]
+|name_MUN = [[Manchester United F.C.|Manchester United]]
+|name_NEW = [[Newcastle United F.C.|Newcastle United]]
+|name_QPR = [[Queens Park Rangers F.C.|Queens Park Rangers]]
+|name_SOU = [[Southampton F.C.|Southampton]]
+|name_STK = [[Stoke City F.C.|Stoke City]]
+|name_SUN = [[Sunderland A.F.C.|Sunderland]]
+|name_SWA = [[Swansea City A.F.C.|Swansea City]]
+|name_TOT = [[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WBA = [[West Bromwich Albion F.C.|West Bromwich Albion]]
+|name_WHU = [[West Ham United F.C.|West Ham United]]
+
+<!-- Status -->
+|status_CHE=C
+|status_BUR=R
+|status_QPR=R
+|status_HUL=R
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules = 1) Points; 2) Goal difference; 3) Goals scored; 4) Play-offs (only if needed to decide champion, teams for relegation or teams for UEFA competitions).<ref>{{cite web|url=http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2014-15.pdf |title=Premier League – Handbook Season 2014/15 |publisher=Premier League |access-date=2 February 2015 |pages=96–97|url-status=dead |archive-url=https://web.archive.org/web/20140820004527/http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2014-15.pdf |archive-date=20 August 2014 }}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1 |text_CLGS=Qualification for the [[2015–16 UEFA Champions League#Group stage|Champions League group stage]]
+|col_CLPO=green2 |text_CLPO=Qualification for the [[2015–16 UEFA Champions League#Play-off round|Champions League play-off round]]
+|col_ELGS=blue1  |text_ELGS=Qualification for the [[2015–16 UEFA Europa League#Group stage|Europa League group stage]] 
+|col_EL3Q=blue2  |text_EL3Q=Qualification for the [[2015–16 UEFA Europa League#Third qualifying round|Europa League third qualifying round]]
+|col_EL1Q=blue3  |text_EL1Q=Qualification for the [[2015–16 UEFA Europa League#First qualifying round|Europa League first qualifying round]]
+|col_REL=red1    |text_REL=Relegation to [[2015–16 Football League Championship|Football League Championship]]
+
+|note_res_ELGS=Since winners of the [[2014–15 FA Cup]], [[Arsenal F.C.|Arsenal]], and winners of the [[2014–15 Football League Cup]], [[Chelsea F.C.|Chelsea]], qualified for the Champions League based on league position, the spot awarded to the FA Cup winners ([[2015–16 UEFA Europa League#Group stage|Europa League group stage]]) was passed to the sixth-placed team, [[Liverpool F.C|Liverpool]], and the spot awarded to the League Cup winners ([[2015–16 UEFA Europa League#Third qualifying round|Europa League third qualifying round]]) was passed to the seventh-placed team, [[Southampton F.C.|Southampton]], since those teams were the first teams in the table not already qualified for any European competition.
+
+|note_res_EL3Q=ELGS
+
+|note_res_EL1Q=England was given an extra qualification berth for the [[2015–16 UEFA Europa League#First qualifying round|Europa League first qualifying round]] as one of the top three associations in [[UEFA Respect Fair Play ranking]].<ref name="UEFA Fair play">{{cite web|url=http://www.uefa.org/social-responsibility/news/newsid=2244170.html|title=Netherlands, England, Ireland get Fair Play bonus|publisher=UEFA|date=8 May 2015|access-date=8 May 2015}}</ref> The spot was given to [[West Ham United F.C.|West Ham United]] after finishing on top of the Premier League Fair Play table.<ref name="PL Fair play">{{cite web |url=http://www.premierleague.com/en-gb/news/news/2014-15/may/260515-west-ham-top-fair-play-league.html |title=West Ham get UEFA Europa League place after topping Fair Play Table |publisher=Premier League |date=26 May 2015 |access-date=26 May 2015 |archive-date=6 July 2015 |archive-url=https://web.archive.org/web/20150706015924/http://www.premierleague.com/en-gb/news/news/2014-15/may/260515-west-ham-top-fair-play-league.html |url-status=dead }}</ref><ref name="PL Fair playBBC">{{cite web |url=https://www.bbc.com/sport/0/football/32889068 |title=West Ham qualify for Europa League through Fair Play system |publisher=BBC Sport |date=26 May 2015 |access-date=26 May 2015}}</ref>
+
+}}</onlyinclude>

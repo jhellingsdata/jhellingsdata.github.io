@@ -1,0 +1,54 @@
+{{#invoke:Sports table|main|style=WDL
+|update=complete
+|source=[https://www.premierleague.com/en/tables/premier-league/2012-13/all-matchweeks Barclays Premier League]
+
+<!--Update team positions here-->
+|team1=MNU|team2=MNC|team3=CHE|team4=ARS|team5=TOT|team6=EVE|team7=LIV|team8=WBA|team9=SWA|team10=WHU
+|team11=NOR|team12=FUL|team13=STO|team14=SOU|team15=AST|team16=NEW|team17=SUN|team18=WIG|team19=REA|team20=QPR
+
+<!--Update team results here and then (if needed positions above). Dont forget to update the date above (update parameter)-->
+|win_MNU=28|draw_MNU=5 |loss_MNU=5 |gf_MNU=86|ga_MNU=43|name_MNU=[[Manchester United F.C.|Manchester United]]
+|win_MNC=23|draw_MNC=9 |loss_MNC=6 |gf_MNC=66|ga_MNC=34|name_MNC=[[Manchester City F.C.|Manchester City]]
+|win_CHE=22|draw_CHE=9 |loss_CHE=7 |gf_CHE=75|ga_CHE=39|name_CHE=[[Chelsea F.C.|Chelsea]]
+|win_ARS=21|draw_ARS=10|loss_ARS=7 |gf_ARS=72|ga_ARS=37|name_ARS=[[Arsenal F.C.|Arsenal]]
+|win_TOT=21|draw_TOT=9 |loss_TOT=8 |gf_TOT=66|ga_TOT=46|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|win_EVE=16|draw_EVE=15|loss_EVE=7 |gf_EVE=55|ga_EVE=40|name_EVE=[[Everton F.C.|Everton]]
+|win_LIV=16|draw_LIV=13|loss_LIV=9 |gf_LIV=71|ga_LIV=43|name_LIV=[[Liverpool F.C.|Liverpool]]
+|win_WBA=14|draw_WBA=7 |loss_WBA=17|gf_WBA=53|ga_WBA=57|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|win_SWA=11|draw_SWA=13|loss_SWA=14|gf_SWA=47|ga_SWA=51|name_SWA=[[Swansea City A.F.C.|Swansea City]]
+|win_WHU=12|draw_WHU=10|loss_WHU=16|gf_WHU=45|ga_WHU=53|name_WHU=[[West Ham United F.C.|West Ham United]]
+|win_NOR=10|draw_NOR=14|loss_NOR=14|gf_NOR=41|ga_NOR=58|name_NOR=[[Norwich City F.C.|Norwich City]]
+|win_FUL=11|draw_FUL=10|loss_FUL=17|gf_FUL=50|ga_FUL=60|name_FUL=[[Fulham F.C.|Fulham]]
+|win_STO=9 |draw_STO=15|loss_STO=14|gf_STO=34|ga_STO=45|name_STO=[[Stoke City F.C.|Stoke City]]
+|win_SOU=9 |draw_SOU=14|loss_SOU=15|gf_SOU=49|ga_SOU=60|name_SOU=[[Southampton F.C.|Southampton]]
+|win_AST=10|draw_AST=11|loss_AST=17|gf_AST=47|ga_AST=69|name_AST=[[Aston Villa F.C.|Aston Villa]]
+|win_NEW=11|draw_NEW=8 |loss_NEW=19|gf_NEW=45|ga_NEW=68|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|win_SUN=9 |draw_SUN=12|loss_SUN=17|gf_SUN=41|ga_SUN=54|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|win_WIG=9 |draw_WIG=9 |loss_WIG=20|gf_WIG=47|ga_WIG=73|name_WIG=[[Wigan Athletic F.C.|Wigan Athletic]]
+|win_REA=6 |draw_REA=10|loss_REA=22|gf_REA=43|ga_REA=73|name_REA=[[Reading F.C.|Reading]]
+|win_QPR=4 |draw_QPR=13|loss_QPR=21|gf_QPR=30|ga_QPR=60|name_QPR=[[Queens Park Rangers F.C.|Queens Park Rangers]]
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLPO |result5=ELPO |result9=EL3Q |result18=ELGSREL |result19=REL |result20=REL 
+
+<!-- Status -->
+|status_MNU=C
+|status_WIG=R
+|status_REA=R
+|status_QPR=R
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules = 1) Points; 2) Goal difference; 3) Goals scored; 4) Play-offs (only if needed to decide champion, teams for relegation or teams for UEFA competitions).<ref>{{cite web|url=http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2012-2013.pdf |url-status=dead |title=Premier League Handbook 2012/13 |publisher=[[Premier League]]|pages=92–93 |access-date=17 August 2012 |archive-url=https://web.archive.org/web/20130314070653/http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2012-2013.pdf |archive-date=14 March 2013 }}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1 |text_CLGS=Qualification for the [[2013–14 UEFA Champions League#Group stage|Champions League group stage]]
+|col_CLPO=green2 |text_CLPO=Qualification for the [[2013–14 UEFA Champions League#Play-off round|Champions League play-off round]]
+|col_ELPO=blue1  |text_ELPO=Qualification for the [[2013–14 UEFA Europa League#Play-off round|Europa League play-off round]] 
+|col_EL3Q=blue2  |text_EL3Q=Qualification for the [[2013–14 UEFA Europa League#Third qualifying round|Europa League third qualifying round]]
+|col_ELGSREL=red1|text_ELGSREL=Qualification for the [[2013–14 UEFA Europa League#Group stage|Europa League group stage]] and relegation to [[2013–14 Football League Championship|Football League Championship]]
+|col_REL=red1    |text_REL=Relegation to [[2013–14 Football League Championship|Football League Championship]]
+|note_res_EL3Q = [[Swansea City A.F.C.|Swansea City]] qualified for the [[2013–14 UEFA Europa League#Third qualifying round|Europa League third qualifying round]] as the [[2012–13 Football League Cup]] winners.
+|note_res_ELGSREL=[[Wigan Athletic F.C.|Wigan Athletic]] qualified for the [[2013–14 UEFA Europa League#Group stage|Europa League group stage]] as the [[2012–13 FA Cup]] winners.
+}}</onlyinclude>

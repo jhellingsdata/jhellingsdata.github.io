@@ -1,0 +1,72 @@
+{{#invoke:Sports table|main|style=WDL|source=[https://www.premierleague.com/en/tables/premier-league/2024-25/all-matchweeks Premier League]
+|result1=CLLS |result2=CLLS |result3=CLLS |result4=CLLS |result5=CLLS |result6=ELLS |result7=ELLS |result12=ECLPO |result17=ELTH
+|result18=REL |result19=REL |result20=REL
+
+<!--Update team positions here.-->
+|team_order = LIV, ARS, MCI, CHE, NEW, AVL, NFO, BHA, BOU, BRE, FUL, CRY, EVE, WHU, MUN, WOL, TOT, LEI, IPS, SOU
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=20|draw_ARS=14|loss_ARS=4 |gf_ARS=69|ga_ARS=34
+|win_AVL=19|draw_AVL=9 |loss_AVL=10|gf_AVL=58|ga_AVL=51
+|win_BOU=15|draw_BOU=11|loss_BOU=12|gf_BOU=58|ga_BOU=46
+|win_BRE=16|draw_BRE=8 |loss_BRE=14|gf_BRE=66|ga_BRE=57
+|win_BHA=16|draw_BHA=13|loss_BHA=9 |gf_BHA=66|ga_BHA=59
+|win_CHE=20|draw_CHE=9 |loss_CHE=9 |gf_CHE=64|ga_CHE=43
+|win_CRY=13|draw_CRY=14|loss_CRY=11|gf_CRY=51|ga_CRY=51
+|win_EVE=11|draw_EVE=15|loss_EVE=12|gf_EVE=42|ga_EVE=44
+|win_FUL=15|draw_FUL=9 |loss_FUL=14|gf_FUL=54|ga_FUL=54
+|win_IPS=4 |draw_IPS=10|loss_IPS=24|gf_IPS=36|ga_IPS=82
+|win_LEI=6 |draw_LEI=7 |loss_LEI=25|gf_LEI=33|ga_LEI=80
+|win_LIV=25|draw_LIV=9 |loss_LIV=4 |gf_LIV=86|ga_LIV=41
+|win_MCI=21|draw_MCI=8 |loss_MCI=9 |gf_MCI=72|ga_MCI=44
+|win_MUN=11|draw_MUN=9 |loss_MUN=18|gf_MUN=44|ga_MUN=54
+|win_NEW=20|draw_NEW=6 |loss_NEW=12|gf_NEW=68|ga_NEW=47
+|win_NFO=19|draw_NFO=8 |loss_NFO=11|gf_NFO=58|ga_NFO=46
+|win_SOU=2 |draw_SOU=6 |loss_SOU=30|gf_SOU=26|ga_SOU=86
+|win_TOT=11|draw_TOT=5 |loss_TOT=22|gf_TOT=64|ga_TOT=65
+|win_WHU=11|draw_WHU=10|loss_WHU=17|gf_WHU=46|ga_WHU=62
+|win_WOL=12|draw_WOL=6 |loss_WOL=20|gf_WOL=54|ga_WOL=69
+
+<!--Status-->
+|status_LIV=C
+|status_IPS=R
+|status_LEI=R
+|status_SOU=R
+ 
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_AVL=[[Aston Villa F.C.|Aston Villa]]
+|name_BOU=[[AFC Bournemouth|Bournemouth]]
+|name_BHA=[[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+|name_BRE=[[Brentford F.C.|Brentford]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_FUL=[[Fulham F.C.|Fulham]]
+|name_IPS=[[Ipswich Town F.C.|Ipswich Town]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_NFO=[[Nottingham Forest F.C.|Nottingham Forest]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+|show_limit=5
+|class_rules= 1) Points; 2) Goal difference; 3) Goals scored; 4) If the champions, relegated teams or qualified teams for UEFA competitions cannot be determined by rules 1 to 3, rules 4.1 to 4.3 are applied – 4.1) Points gained in head-to-head record between such teams; 4.2) Away goals scored in head-to-head record between such teams; 4.3) Play-offs<ref name="PLhandbook">{{cite web |url=https://resources.premierleague.pulselive.com/premierleague/document/2024/12/11/e9aa1b9e-a7d5-4788-8afe-6e07b8a5f5fc/TM1603-PL_Handbook-and-Collateral-2024-25_11.12_DIGITAL.pdf |title=Premier League Handbook: Season 2024/25 |date=11 December 2024 |access-date=1 February 2025 |publisher=Premier League}}</ref>
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLLS=green1  |text_CLLS=Qualification for the {{nowrap|[[2025–26 UEFA Champions League|Champions League league phase]]}}
+|col_ELTH=green1  |text_ELTH=Qualification for the {{nowrap|[[2025–26 UEFA Champions League|Champions League league phase]]}}
+|col_ELLS=blue1   |text_ELLS=Qualification for the {{nowrap|[[2025–26 UEFA Europa League|Europa League league phase]]}}
+|col_ECLPO=yellow1|text_ECLPO=Qualification for the {{nowrap|[[2025–26 UEFA Conference League|Conference League play-off round]]}}
+|col_REL=red1|text_REL=Relegation to {{nowrap|[[2025–26 EFL Championship|EFL Championship]]}}
+|note_res_CLLS=The Premier League gained an additional Champions League place as a result of England gaining one of the two European Performance Spots (EPS) awarded to the two associations with the highest [[UEFA coefficient#Men's association coefficient|UEFA coefficient]] points in 2024–25.
+|note_res_ELTH=Tottenham Hotspur qualified for the Champions League league phase as the [[2024–25 UEFA Europa League]] winners.
+|note_res_ELLS=Initially, Crystal Palace qualified for the Europa League league phase as the [[2024–25 FA Cup]] winners. However, due to [[Multi-club ownership (association football)|multi-club ownership]] rules, they were not permitted to enter the Europa League and entered the Conference League play-off round instead, with 7th-placed Nottingham Forest taking their place in the Europa League.<ref name="CRY_MultiClub">{{Cite web |date=2025-07-11 |title=Crystal Palace set to be replaced by Nottingham Forest in Europa League |url=https://www.bbc.com/sport/football/articles/ckg5260zzp2o |access-date=2025-07-11 |website=BBC Sport |language=en-GB}}</ref><!-- deliberately repeated references to support transclusion --> Crystal Palace appealed the decision but this was ultimately rejected.<ref name="CRY_Appeal">{{Cite web |date=2025-07-22 |title=Crystal Palace appeal to CAS against Europa League demotion |url=https://www.bbc.com/sport/football/articles/ce8350jl5kgo |access-date=2025-07-23 |website=BBC Sport |language=en-GB}}</ref><!-- deliberately repeated references to support transclusion -->
+|note_res_ECLPO=Since the winners of the [[2024–25 EFL Cup]], Newcastle United, qualified for the Champions League via league position, the spot reserved for the EFL Cup winners (Conference League play-off round) was initially passed to the 7th-placed team (Nottingham Forest). However due to [[Multi-club ownership (association football)|multi-club ownership]] rules, the winners of the FA Cup, Crystal Palace, were not permitted to enter the Europa League and entered the Conference League play-off round instead, with Nottingham Forest taking their place in the Europa League.<ref name="CRY_MultiClub">{{Cite web |date=2025-07-11 |title=Crystal Palace set to be replaced by Nottingham Forest in Europa League |url=https://www.bbc.com/sport/football/articles/ckg5260zzp2o |access-date=2025-07-11 |website=BBC Sport |language=en-GB}}</ref><!-- deliberately repeated references to support transclusion --> Crystal Palace appealed the decision but this was ultimately rejected.<ref name="CRY_Appeal">{{Cite web |date=2025-07-22 |title=Crystal Palace appeal to CAS against Europa League demotion |url=https://www.bbc.com/sport/football/articles/ce8350jl5kgo |access-date=2025-07-23 |website=BBC Sport |language=en-GB}}</ref><!-- deliberately repeated references to support transclusion -->
+}}</onlyinclude>

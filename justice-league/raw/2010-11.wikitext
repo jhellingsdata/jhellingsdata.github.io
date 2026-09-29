@@ -1,0 +1,74 @@
+{{#invoke:sports table|main|style=WDL
+|res_col_header=QR
+|show_limit=5
+
+|team1=MUN|name_MUN=[[Manchester United F.C.|Manchester United]]
+|team2=CHE|name_CHE=[[Chelsea F.C.|Chelsea]]
+|team3=MCI|name_MCI=[[Manchester City F.C.|Manchester City]]
+|team4=ARS|name_ARS=[[Arsenal F.C.|Arsenal]]
+|team5=TOT|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|team6=LIV|name_LIV=[[Liverpool F.C.|Liverpool]]
+|team7=EVE|name_EVE=[[Everton F.C.|Everton]]
+|team8=FUL|name_FUL=[[Fulham F.C.|Fulham]]
+|team9=AST|name_AST=[[Aston Villa F.C.|Aston Villa]]
+|team10=SUN|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|team11=WBA|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|team12=NEW|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|team13=STK|name_STK=[[Stoke City F.C.|Stoke City]]
+|team14=BOL|name_BOL=[[Bolton Wanderers F.C.|Bolton Wanderers]]
+|team15=BLB|name_BLB=[[Blackburn Rovers F.C.|Blackburn Rovers]]
+|team16=WIG|name_WIG=[[Wigan Athletic F.C.|Wigan Athletic]]
+|team17=WOL|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+|team18=BIR|name_BIR=[[Birmingham City F.C.|Birmingham City]]
+|team19=BLP|name_BLP=[[Blackpool F.C.|Blackpool]]
+|team20=WHU|name_WHU=[[West Ham United F.C.|West Ham United]]
+
+|win_MUN=23|draw_MUN=11|loss_MUN=4|gf_MUN=78|ga_MUN=37|status_MUN=C
+|win_CHE=21|draw_CHE=8|loss_CHE=9|gf_CHE=69|ga_CHE=33
+|win_MCI=21|draw_MCI=8|loss_MCI=9|gf_MCI=60|ga_MCI=33
+|win_ARS=19|draw_ARS=11|loss_ARS=8|gf_ARS=72|ga_ARS=43
+|win_TOT=16|draw_TOT=14|loss_TOT=8|gf_TOT=55|ga_TOT=46
+|win_LIV=17|draw_LIV=7|loss_LIV=14|gf_LIV=59|ga_LIV=44
+|win_EVE=13|draw_EVE=15|loss_EVE=10|gf_EVE=51|ga_EVE=45
+|win_FUL=11|draw_FUL=16|loss_FUL=11|gf_FUL=49|ga_FUL=43
+|win_AST=12|draw_AST=12|loss_AST=14|gf_AST=48|ga_AST=59
+|win_SUN=12|draw_SUN=11|loss_SUN=15|gf_SUN=45|ga_SUN=56
+|win_WBA=12|draw_WBA=11|loss_WBA=15|gf_WBA=56|ga_WBA=71
+|win_NEW=11|draw_NEW=13|loss_NEW=14|gf_NEW=56|ga_NEW=57
+|win_STK=13|draw_STK=7|loss_STK=18|gf_STK=46|ga_STK=48
+|win_BOL=12|draw_BOL=10|loss_BOL=16|gf_BOL=52|ga_BOL=56
+|win_BLB=11|draw_BLB=10|loss_BLB=17|gf_BLB=46|ga_BLB=59
+|win_WIG=9|draw_WIG=15|loss_WIG=14|gf_WIG=40|ga_WIG=61
+|win_WOL=11|draw_WOL=7|loss_WOL=20|gf_WOL=46|ga_WOL=66
+|win_BIR=8|draw_BIR=15|loss_BIR=15|gf_BIR=37|ga_BIR=58|status_BIR=R
+|win_BLP=10|draw_BLP=9|loss_BLP=19|gf_BLP=55|ga_BLP=78|status_BLP=R
+|win_WHU=7|draw_WHU=12|loss_WHU=19|gf_WHU=43|ga_WHU=70|status_WHU=R
+
+|col_CLGS=green1|text_CLGS=Qualification for the [[2011–12 UEFA Champions League#Group stage|Champions League group stage]]
+|result1=CLGS|result2=CLGS|result3=CLGS
+
+|col_CLPR=green2|text_CLPR=Qualification for the [[2011–12 UEFA Champions League#Play-off round|Champions League play-off round]]
+|result4=CLPR
+
+|col_ELPR=blue1|text_ELPR=Qualification for the [[2011–12 UEFA Europa League#Play-off round|Europa League play-off round]]
+|result5=ELPR
+
+|col_EL1=blue3|text_EL1=Qualification for the [[2011–12 UEFA Europa League#First qualifying round|Europa League first qualifying round]] 
+|note_res_EL1=Fulham, as the highest-ranked team from the [[UEFA Fair Play ranking|Fair Play]] table not yet qualified for any European competition, entered the first qualifying round of the Europa League.<ref>{{cite web|title=Fulham handed Europa League place |url=http://www.premierleague.com/page/Headlines/0,,12306~2367265,00.html |website=premierleague.com|publisher=Premier League|access-date=26 May 2011 |date=26 May 2011 |url-status=dead |archive-url=https://web.archive.org/web/20110830172023/http://www.premierleague.com/page/Headlines/0%2C%2C12306~2367265%2C00.html |archive-date=30 August 2011 }}</ref>
+|result8=EL1
+
+|col_EL3=blue2|text_EL3=Qualification for the [[2011–12 UEFA Europa League#Third qualifying round|Europa League third qualifying round]] 
+|note_res_EL3=Stoke City qualified for the third qualifying round of the Europa League as [[2010–11 FA Cup|FA Cup]] [[2011 FA Cup final|runners-up]] to Champions League-qualified Manchester City.
+|result13=EL3
+
+|col_ELPRR=red1|text_ELPRR=Qualification for the [[2011–12 UEFA Europa League#Play-off round|Europa League play-off round]] and relegation to [[2011–12 Football League Championship|Football League Championship]]
+|note_res_ELPRR=Birmingham City qualified for the play-off round of the Europa League after [[2011 Football League Cup final|winning]] the [[2010–11 Football League Cup|League Cup]], worth a third qualification round spot, and subsequently being moved up a round due to the outcome of the [[2011 FA Cup final|FA Cup final]].
+|result18=ELPRR
+
+|col_R=red1|text_R=Relegation to [[2011–12 Football League Championship|Football League Championship]]
+|result19=R|result20=R
+
+|class_rules=1) points; 2) goal difference; 3) number of goals scored.
+|update=complete
+|source=[https://www.premierleague.com/en/tables/premier-league/2010-11/all-matchweeks Barclays Premier League]
+}}</onlyinclude>

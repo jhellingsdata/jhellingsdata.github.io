@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>City Deduction Tables</title>
+<meta name="description" content="Apply points deductions to Manchester City for any Premier League season from 2009/10 to 2025/26 and see how titles, European places and relegation change.">
+<link rel="canonical" href="https://hellin.gs/justice-league/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hellin.gs/justice-league/">
+<meta property="og:title" content="What if Manchester City lose points?">
+<meta property="og:description" content="Apply points deductions to Manchester City for any Premier League season and see how titles, European places and relegation change.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Libre+Franklin:wght@400;500;600;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="data/pl_tables.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f4f4f0;
+    --surface: #fcfcfb;
+    --ink: #121211;
+    --ink-2: #52514e;
+    --muted: #7d7b75;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --border: rgba(11, 11, 11, 0.10);
+    --mid: #eceae4;
+    --ucl: #2a78d6;
+    --uel: #eb6834;
+    --uecl: #1baf7a;
+    --rel: #6f6d67;
+    --up: #006300;
+    --down: #b3261e;
+    --focus: #2a78d6;
+    --display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", sans-serif;
+    --body: "Libre Franklin", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page: #0f0f0e;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #929089;
+      --grid: #2c2c2a;
+      --axis: #383835;
+      --border: rgba(255, 255, 255, 0.10);
+      --mid: #262624;
+      --ucl: #3987e5;
+      --uel: #d95926;
+      --uecl: #199e70;
+      --rel: #a3a19a;
+      --up: #3cc13c;
+      --down: #f07a72;
+      --focus: #6da7ec;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0f0f0e;
+    --surface: #1a1a19;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --muted: #929089;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.10);
+    --mid: #262624;
+    --ucl: #3987e5;
+    --uel: #d95926;
+    --uecl: #199e70;
+    --rel: #a3a19a;
+    --up: #3cc13c;
+    --down: #f07a72;
+    --focus: #6da7ec;
+  }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  .wrap > *, .layout > *, .detail > *, .masthead > * { min-width: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 400 15px/1.55 var(--body);
+  }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 20px 64px; display: grid; gap: 28px; }
+  a { color: inherit; text-decoration-color: var(--axis); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: currentColor; }
+  button, input, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .num { font-variant-numeric: tabular-nums; }
+  h1, h2, h3 { text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+
+  /* Masthead */
+  .masthead { display: grid; gap: 20px; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: start; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+  h1 {
+    font-family: var(--display); font-weight: 800; text-transform: uppercase;
+    font-size: clamp(40px, 6vw, 68px); line-height: 0.92; letter-spacing: 0.005em; margin-top: 8px;
+  }
+  .dek { max-width: 62ch; color: var(--ink-2); margin-top: 14px; font-size: 16px; }
+  .facts { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 13.5px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; }
+  .facts dt { color: var(--muted); font-weight: 500; }
+  .facts dd { margin: 0; }
+  .facts .asof { grid-column: 1 / -1; font-size: 12px; color: var(--muted); border-top: 1px solid var(--grid); padding-top: 8px; margin-top: 4px; }
+
+  /* Controls */
+  .controls { display: grid; gap: 12px; }
+  .controls h2, .section-head h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 24px; letter-spacing: 0.01em; }
+  .preset-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    border: 1px solid var(--axis); background: var(--surface); border-radius: 999px;
+    padding: 6px 14px; cursor: pointer; font-size: 13.5px; font-weight: 500;
+  }
+  .chip:hover { border-color: var(--ink-2); }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+  .custom { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink-2); }
+  .custom input[type="number"] { width: 64px; }
+  .custom select, .custom input { border: 1px solid var(--axis); background: var(--surface); border-radius: 4px; padding: 5px 8px; }
+  .btn { border: 1px solid var(--ink); background: var(--ink); color: var(--page); border-radius: 4px; padding: 5px 12px; cursor: pointer; font-weight: 600; font-size: 13.5px; }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--axis); }
+  .total { margin-left: auto; color: var(--ink-2); }
+
+  /* Summary tiles */
+  .tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--grid); }
+  .tile { padding: 14px 16px 16px 0; display: grid; gap: 2px; align-content: start; }
+  .tile + .tile { padding-left: 16px; border-left: 1px solid var(--grid); }
+  .tile .big { font-family: var(--display); font-weight: 800; font-size: 52px; line-height: 1; }
+  .tile .label { font-weight: 600; font-size: 14px; }
+  .tile .sub { font-size: 12.5px; color: var(--ink-2); min-height: 1.5em; }
+
+  /* Main layout */
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+  .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 10px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-2); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; flex: none; }
+  .z-UCL { background: var(--ucl); }
+  .z-UEL { background: var(--uel); }
+  .z-UECL { background: var(--uecl); }
+  .z-REL { background: repeating-linear-gradient(135deg, var(--rel) 0 2px, var(--mid) 2px 5px); }
+  .z-none { background: var(--mid); }
+  .mk-now { width: 12px; height: 12px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 2px var(--surface); display: inline-block; }
+  .mk-was { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ink-2); display: inline-block; }
+
+  .board { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; }
+  .row-grid { display: grid; grid-template-columns: 116px 118px minmax(0, 1fr) 200px; gap: 14px; align-items: center; }
+  .axis-row { padding: 10px 16px 4px; font-size: 11px; color: var(--muted); }
+  .axis { position: relative; height: 14px; }
+  .axis span { position: absolute; transform: translateX(-50%); }
+  .axis-row .h { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  .season { border-top: 1px solid var(--grid); }
+  .season.open { background: color-mix(in oklab, var(--mid) 45%, var(--surface)); }
+  .s-main { padding: 10px 16px; }
+  .s-toggle {
+    all: unset; cursor: pointer; display: grid; gap: 2px; border-radius: 3px;
+  }
+  .s-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+  .s-name { font-family: var(--display); font-weight: 800; font-size: 22px; line-height: 1; display: inline-flex; align-items: center; gap: 6px; }
+  .s-name::after { content: ""; width: 7px; height: 7px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg) translateY(-3px); transition: transform .2s; }
+  .season.open .s-name::after { transform: rotate(-135deg) translate(-2px, -1px); }
+  .tag { font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
+  .tag.charge { color: var(--ink); }
+  .tag.charge::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--ink); border-radius: 50%; margin-right: 5px; vertical-align: 1px; }
+
+  .stepper { display: inline-grid; grid-template-columns: 30px 50px 30px; border: 1px solid var(--axis); border-radius: 4px; overflow: hidden; background: var(--surface); height: 32px; }
+  .stepper button { border: 0; background: transparent; cursor: pointer; font-size: 17px; line-height: 1; color: var(--ink-2); }
+  .stepper button:hover { background: var(--mid); color: var(--ink); }
+  .stepper input { border: 0; border-left: 1px solid var(--grid); border-right: 1px solid var(--grid); width: 100%; text-align: center; background: transparent; font-weight: 600; font-variant-numeric: tabular-nums; -moz-appearance: textfield; }
+  .stepper input::-webkit-inner-spin-button, .stepper input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  .stepper.active { border-color: var(--ink); }
+
+  .track { position: relative; height: 30px; }
+  .cells { position: absolute; inset: 8px 0; display: grid; grid-template-columns: repeat(20, 1fr); gap: 2px; }
+  .cell { border-radius: 2px; transition: background-color .35s; }
+  .cell.z-UCL, .cell.z-UEL, .cell.z-UECL { opacity: 0.85; }
+  .link { position: absolute; top: 14px; height: 2px; background: var(--ink); opacity: 0.55; }
+  .marker { position: absolute; top: 9px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; pointer-events: none; }
+  .marker.was { border: 2px solid var(--ink); background: var(--surface); }
+  .marker.now { background: var(--ink); box-shadow: 0 0 0 2px var(--surface); }
+
+  .s-out { font-size: 13px; display: grid; gap: 3px; }
+  .s-out .pos { font-weight: 600; }
+  .s-out .pts { color: var(--ink-2); font-weight: 400; }
+  .flags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .flag { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--axis); color: var(--ink-2); white-space: nowrap; }
+  .flag.hot { border-color: var(--ink); color: var(--ink); }
+
+  /* Season detail */
+  .detail { padding: 4px 16px 18px; display: grid; gap: 10px; }
+  .detail-head { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; color: var(--ink-2); }
+  .detail-head label { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); }
+  .detail-head input[type="range"] { width: 220px; max-width: 50vw; accent-color: var(--ink); }
+  .note { font-size: 12.5px; color: var(--ink-2); max-width: 80ch; }
+  .tbl-scroll { overflow-x: auto; }
+  .tbl { position: relative; min-width: 600px; font-size: 13px; }
+  .tr { display: grid; grid-template-columns: 34px 40px minmax(150px, 1fr) repeat(4, 34px) 44px 190px; column-gap: 4px; align-items: center; height: 30px; padding: 0 6px; }
+  .tr > span:nth-child(n+4):nth-child(-n+8) { text-align: right; font-variant-numeric: tabular-nums; }
+  .tr > span:nth-child(9) { padding-left: 16px; }
+  .tr > span:nth-child(3) { line-height: 1.15; }
+  .tr.th { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--axis); }
+  .tbody { position: relative; }
+  .tbody .tr { position: absolute; left: 0; right: 0; top: 0; border-bottom: 1px solid var(--grid); background: transparent; }
+  .tbody .tr.city { font-weight: 700; background: color-mix(in oklab, var(--ink) 6%, transparent); }
+  .tbody .tr.cut { border-bottom: 1px solid var(--ink-2); }
+  .mv { font-size: 11.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .mv.up { color: var(--up); }
+  .mv.down { color: var(--down); }
+  .comp { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; white-space: nowrap; }
+  .comp .was { color: var(--muted); font-weight: 400; }
+  .adjnote { color: var(--muted); font-weight: 400; font-size: 11px; }
+
+  /* Effects */
+  .effects { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); max-height: calc(100vh - 24px); overflow: auto; padding: 16px 18px; }
+  .effects h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 24px; }
+  .effects .intro { font-size: 12.5px; color: var(--ink-2); margin: 4px 0 12px; }
+  .eff-season { border-top: 1px solid var(--grid); padding: 10px 0; display: grid; gap: 6px; }
+  .eff-season h3 { font-family: var(--display); font-weight: 800; font-size: 18px; display: flex; justify-content: space-between; align-items: baseline; }
+  .eff-season h3 small { font-family: var(--body); font-size: 12px; font-weight: 500; color: var(--ink-2); }
+  .eff-season ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 13px; }
+  .eff-season li { display: grid; grid-template-columns: 14px 1fr; gap: 8px; align-items: start; }
+  .eff-season li .sw { margin-top: 4px; }
+  .eff-season li.title .sw { background: var(--ink); border-radius: 50%; }
+  .eff-season .to { color: var(--ink-2); }
+  .empty { font-size: 13px; color: var(--ink-2); border-top: 1px solid var(--grid); padding-top: 10px; }
+
+  /* Tipping points */
+  .tip-wrap { overflow-x: auto; }
+  table.tips { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 13.5px; background: var(--surface); border: 1px solid var(--border); }
+  .tips th, .tips td { padding: 7px 12px; text-align: right; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  .tips th:first-child, .tips td:first-child, .tips th:nth-child(2), .tips td:nth-child(2) { text-align: left; }
+  .tips thead th { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border-bottom: 1px solid var(--axis); vertical-align: bottom; }
+  .tips td.season-cell { font-family: var(--display); font-weight: 800; font-size: 17px; }
+  .tips button { border: 1px solid var(--axis); background: transparent; border-radius: 3px; padding: 1px 8px; cursor: pointer; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .tips button:hover { border-color: var(--ink); }
+  .tips button.met { border-color: var(--ink); background: color-mix(in oklab, var(--ink) 10%, transparent); }
+  .tips button[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+  .short { display: none; }
+  .tips .na { color: var(--muted); font-size: 12px; }
+  .tips-caption { font-size: 13px; color: var(--ink-2); margin-bottom: 10px; max-width: 80ch; }
+
+  /* Method */
+  .method { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; font-size: 13.5px; color: var(--ink-2); border-top: 2px solid var(--ink); padding-top: 16px; }
+  .method h2 { grid-column: 1 / -1; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 24px; color: var(--ink); }
+  .method h3 { font-size: 13.5px; color: var(--ink); margin-bottom: 4px; }
+  .method ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+
+  .credit { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--grid); padding-top: 12px; }
+  .credit a { color: var(--ink-2); }
+
+  /* Tooltip */
+  .tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--page); font-size: 12.5px; line-height: 1.35; padding: 6px 9px; border-radius: 4px; z-index: 10; width: max-content; max-width: min(360px, calc(100vw - 16px)); transform: translate(-50%, calc(-100% - 10px)); }
+  .tip b { font-weight: 700; }
+
+  @media (max-width: 1080px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    .effects { position: static; max-height: none; }
+  }
+  @media (max-width: 860px) {
+    .masthead { grid-template-columns: minmax(0, 1fr); }
+    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tile:nth-child(3) { padding-left: 0; border-left: 0; }
+    .tile:nth-child(n+3) { border-top: 1px solid var(--grid); }
+    .row-grid { grid-template-columns: auto auto; justify-content: space-between; row-gap: 8px; }
+    .row-grid .track, .row-grid .axis, .row-grid .s-out { grid-column: 1 / -1; }
+    .axis-row .h { display: none; }
+    .total { margin-left: 0; }
+    .method { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .long { display: none; }
+    .short { display: inline; }
+    table.tips { min-width: 0; font-size: 13px; }
+    .tips th, .tips td { padding: 7px 6px; }
+    .tips td.season-cell { font-size: 15px; }
+    .tips thead th { font-size: 10px; letter-spacing: 0.02em; }
+    .detail { padding-inline: 10px; }
+    .tbl { min-width: 0; font-size: 12.5px; }
+    .tr { grid-template-columns: 20px 26px minmax(84px, 1fr) 28px 26px 50px repeat(3, 19px); column-gap: 3px; padding: 0 4px; }
+    .tr.th { font-size: 10px; letter-spacing: 0.02em; }
+    .tr > span:nth-child(7) { order: 4; }
+    .tr > span:nth-child(8) { order: 5; }
+    .tr > span:nth-child(9) { order: 6; padding-left: 4px; }
+    .tr > span:nth-child(4) { order: 7; }
+    .tr > span:nth-child(5) { order: 8; }
+    .tr > span:nth-child(6) { order: 9; }
+    .mv { font-size: 10.5px; }
+    .comp { display: grid; grid-template-columns: 9px auto; column-gap: 4px; row-gap: 1px; line-height: 1.1; font-size: 11.5px; }
+    .comp .sw { width: 9px; height: 9px; }
+    .comp .was { grid-column: 2; font-size: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="masthead">
+    <div>
+      <div class="eyebrow">Premier League · The 115 charges</div>
+      <h1>What if Manchester City lose points?</h1>
+      <p class="dek">An independent commission has found Manchester City guilty of breaking Premier League financial rules. Sanctions have not been set. Choose a points deduction for any season below. The final table is re-ranked straight away, and the page shows who would gain or lose the title, European places and survival.</p>
+    </div>
+    <dl class="facts">
+      <dt>Verdict</dt><dd>Guilty of 114 of 115 charges, first reported by The Athletic on Friday 25 September 2026</dd>
+      <dt>Charged</dt><dd>February 2023, after an investigation that began in 2018</dd>
+      <dt>Breaches</dt><dd>Financial reporting, pay, UEFA and profitability rules across 2009/10 to 2017/18</dd>
+      <dt>Non-cooperation</dt><dd>35 charges covering December 2018 to February 2023</dd>
+      <dt>Sanction</dt><dd>Not yet decided. City deny wrongdoing and are expected to appeal</dd>
+      <dt>Precedent</dt><dd>Everton lost 10 points (6 on appeal) and later 2 more; Nottingham Forest lost 4. Both were for single-season breaches</dd>
+      <dd class="asof">As of 28 September 2026. Sources are listed at the foot of the page.</dd>
+    </dl>
+  </header>
+
+  <section class="controls" aria-labelledby="scenario-h">
+    <h2 id="scenario-h">Scenario</h2>
+    <div class="preset-row" id="presets"></div>
+    <form class="custom" id="custom">
+      <label for="custom-pts">Deduct</label>
+      <input id="custom-pts" type="number" min="0" max="150" value="15" class="num">
+      <label for="custom-scope">points in</label>
+      <select id="custom-scope">
+        <option value="charge">each charged season (2009/10 to 2017/18)</option>
+        <option value="coop">each non-cooperation season (2018/19 to 2022/23)</option>
+        <option value="titles">each season City won the title</option>
+        <option value="all">every season</option>
+      </select>
+      <button class="btn" type="submit">Apply</button>
+      <span class="total num" id="total"></span>
+    </form>
+  </section>
+
+  <section class="tiles" id="tiles" aria-label="Summary of effects"></section>
+
+  <div class="layout">
+    <section aria-labelledby="seasons-h">
+      <div class="section-head">
+        <h2 id="seasons-h">Final tables, re-ranked</h2>
+        <div class="legend" aria-label="Legend">
+          <span><i class="sw z-UCL"></i>Champions League</span>
+          <span><i class="sw z-UEL"></i>Europa League</span>
+          <span><i class="sw z-UECL"></i>Conference League</span>
+          <span><i class="sw z-REL"></i>Relegated</span>
+          <span><i class="mk-was"></i>City actual</span>
+          <span><i class="mk-now"></i>City after deduction</span>
+        </div>
+      </div>
+      <div class="board">
+        <div class="axis-row row-grid">
+          <span class="h">Season</span>
+          <span class="h">Points deducted</span>
+          <div class="axis" id="axis"></div>
+          <span class="h">City finish</span>
+        </div>
+        <div id="seasons"></div>
+      </div>
+    </section>
+
+    <aside class="board effects" aria-labelledby="effects-h">
+      <h2 id="effects-h">What changes</h2>
+      <p class="intro">Every club whose title, European place or survival changes under this scenario.</p>
+      <div id="effects"></div>
+    </aside>
+  </div>
+
+  <section aria-labelledby="tips-h">
+    <div class="section-head"><h2 id="tips-h">Tipping points</h2></div>
+    <p class="tips-caption">The smallest deduction that would push City past each line in each season, with no other club penalised. Click a number to apply it, and click it again to undo. A solid button is the deduction currently set for that season. An outlined button means a larger deduction already passes that line.</p>
+    <div class="tip-wrap"><table class="tips" id="tips"></table></div>
+  </section>
+
+  <section class="method" aria-labelledby="method-h">
+    <h2 id="method-h">How this works</h2>
+    <div>
+      <h3>Data</h3>
+      <ul>
+        <li>Final tables for 2009/10 to 2025/26 come from each season's Wikipedia article, parsed by <code>build_data.py</code>. Each table is checked for 38 games per club and an order that follows the ranking rules.</li>
+        <li>Historic deductions are kept: Portsmouth (&minus;9, 2009/10), Everton (&minus;8) and Nottingham Forest (&minus;4) in 2023/24.</li>
+        <li>2026/27 is under way and is not included.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ranking and European places</h3>
+      <ul>
+        <li>Clubs are ranked on points, then goal difference, then goals scored. Head-to-head records are not modelled.</li>
+        <li>European places follow each season's own rules. Places earned through the FA Cup or League Cup pass down the table when the winner has already qualified. Fair play places and UEFA title holders keep their places. With no deduction, the model reproduces every actual qualifier and relegated club.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What is not modelled</h3>
+      <ul>
+        <li>Each season is re-ranked on its own. A club spared relegation would have played the next season in the Premier League, but later tables stay as they were.</li>
+        <li>England's fifth Champions League place in 2024/25 and 2025/26 depended on English clubs' results in Europe, including City's. It is treated as fixed.</li>
+        <li>Prize money, stripped trophies beyond the league table, and deductions for other clubs.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sources</h3>
+      <ul>
+        <li><a href="https://www.nytimes.com/athletic/7049721/2026/09/25/manchester-city-charges-verdict-premier-league/">The Athletic</a> (David Ornstein), 25 September 2026</li>
+        <li><a href="https://www.nytimes.com/athletic/4160366/2023/02/06/manchester-city-financial-charges-explained/">The Athletic: charges explained</a>, 6 February 2023</li>
+        <li><a href="https://www.skysports.com/football/news/12804623/man-city-premier-league-charges-explained-what-are-they-what-could-punishment-be-whats-the-timescale">Sky Sports: the charges explained</a>, 31 July 2025</li>
+        <li>League tables: <a href="https://en.wikipedia.org/wiki/2009%E2%80%9310_Premier_League">Wikipedia season articles</a>, retrieved <span id="built"></span></li>
+        <li>Precendents: <a href="https://www.nytimes.com/athletic/5071224/2023/11/18/everton-10-point-penalty-explained/">Everton's 10-point penalty</a>; <a href="https://www.nytimes.com/athletic/5351723/2024/03/18/nottingham-forest-points-deduction-explained/">Nottingham Forest's points deduction</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="credit">Made by <a href="https://hellin.gs/">Josh Hellings</a></footer>
+</main>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(function () {
+  const CITY = "Manchester City";
+  const MAX = 150;
+  const COMP = { UCL: "Champions League", UEL: "Europa League", UECL: "Conference League" };
+  const ABBR = { UCL: "CL", UEL: "EL", UECL: "ECL" };
+  const RANK = { UCL: 3, UEL: 2, UECL: 1 };
+  const SHORT = {
+    "Manchester City": "Man City", "Manchester United": "Man Utd", "Tottenham Hotspur": "Tottenham",
+    "Wolverhampton Wanderers": "Wolves", "Brighton & Hove Albion": "Brighton", "West Bromwich Albion": "West Brom",
+    "Queens Park Rangers": "QPR", "Nottingham Forest": "Nott'm Forest", "Newcastle United": "Newcastle",
+    "West Ham United": "West Ham", "Sheffield United": "Sheff Utd", "Leicester City": "Leicester",
+    "Blackburn Rovers": "Blackburn", "Bolton Wanderers": "Bolton", "Wigan Athletic": "Wigan",
+    "Birmingham City": "Birmingham", "Huddersfield Town": "Huddersfield", "Leeds United": "Leeds",
+    "Norwich City": "Norwich", "Swansea City": "Swansea", "Cardiff City": "Cardiff", "Stoke City": "Stoke",
+    "Hull City": "Hull", "Ipswich Town": "Ipswich", "Luton Town": "Luton"
+  };
+  const short = t => SHORT[t] || t;
+  const ordinal = n => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
+  const STORE = "epl-city-deductions-v1";
+
+  const seasons = window.PL_DATA.seasons;
+  document.getElementById("built").textContent = window.PL_DATA.built;
+
+  // ---------- Engine (mirrors allocate() in build_data.py) ----------
+  function rank(season, d) {
+    const rows = season.teams.map(t => ({
+      team: t.team, w: t.w, d: t.d, l: t.l, gf: t.gf, ga: t.ga, gd: t.gf - t.ga,
+      histAdj: t.adj, adjNote: t.adj_note || "", basePos: t.pos,
+      ded: t.team === CITY ? d : 0,
+      pts: t.pts - (t.team === CITY ? d : 0)
+    }));
+    rows.sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gf - a.gf || a.basePos - b.basePos);
+    rows.forEach((r, i) => { r.pos = i + 1; });
+    const q = allocate(rows.map(r => r.team), season.rules);
+    rows.forEach(r => { r.comp = q.get(r.team) || null; r.rel = r.pos >= 18; });
+    return rows;
+  }
+
+  function allocate(ranked, rules) {
+    const q = new Map(), fixedOnly = new Set();
+    rules.fixed.forEach(f => { q.set(f.team, f.comp); fixedOnly.add(f.team); });
+    const nextFree = (skipFixed = true) => ranked.find(t => !q.has(t) || (!skipFixed && fixedOnly.has(t)));
+    rules.berths.forEach(b => {
+      if (b.type === "pos") {
+        for (let i = 0; i < b.n; i++) { const t = nextFree(); q.set(t, b.comp); fixedOnly.delete(t); }
+      } else if (!q.has(b.winner)) {
+        q.set(b.winner, b.comp);
+      } else if (b.fallback === "runnerup" && !q.has(b.runnerup)) {
+        q.set(b.runnerup, b.comp);
+      } else if (b.fallback === "nextOrVacate") {
+        const t = nextFree(false);
+        if (!fixedOnly.has(t)) q.set(t, b.comp);
+      } else {
+        q.set(nextFree(), b.comp);
+      }
+    });
+    return q;
+  }
+
+  const baseline = new Map(seasons.map(s => [s.start, rank(s, 0)]));
+  const baseOf = (s, team) => baseline.get(s.start).find(r => r.team === team);
+
+  // Smallest deduction that crosses each line, computed once
+  const tipping = new Map(seasons.map(s => {
+    const b = baseOf(s, CITY);
+    const out = { title: null, ucl: null, europe: null, rel: null };
+    for (let d = 1; d <= MAX; d++) {
+      const c = rank(s, d).find(r => r.team === CITY);
+      if (out.title === null && b.pos === 1 && c.pos > 1) out.title = d;
+      if (out.ucl === null && b.comp === "UCL" && c.comp !== "UCL") out.ucl = d;
+      if (out.europe === null && b.comp && !c.comp) out.europe = d;
+      if (out.rel === null && c.pos >= 18) out.rel = d;
+    }
+    return [s.start, out];
+  }));
+
+  // ---------- State ----------
+  const ded = new Map(seasons.map(s => [s.start, 0]));
+  const prevDed = new Map(); // value before a tipping point was applied, for undo
+  const titleSeasons = seasons.filter(s => baseOf(s, CITY).pos === 1).map(s => s.start);
+  const scope = {
+    charge: s => s.charge_period,
+    coop: s => s.cooperation_period,
+    titles: s => titleSeasons.includes(s.start),
+    all: () => true
+  };
+  const presetMap = f => new Map(seasons.map(s => [s.start, f(s)]));
+  const PRESETS = [
+    { id: "none", label: "No deductions", map: () => presetMap(() => 0) },
+    { id: "everton", label: "Everton scale: 10 points per charged season", map: () => presetMap(s => s.charge_period ? 10 : 0) },
+    { id: "strip3", label: "Strip the three charged titles", map: () => presetMap(s => s.charge_period && tipping.get(s.start).title || 0) },
+    { id: "stripall", label: "Strip all eight titles", map: () => presetMap(s => tipping.get(s.start).title || 0) },
+    { id: "thirty", label: "30 points per charged season", map: () => presetMap(s => s.charge_period ? 30 : 0) }
+  ];
+
+  function save() {
+    try { localStorage.setItem(STORE, JSON.stringify([...ded])); } catch (e) { /* storage unavailable */ }
+  }
+  function load() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE) || "null");
+      if (Array.isArray(saved)) { saved.forEach(([k, v]) => ded.has(k) && ded.set(k, v)); return true; }
+    } catch (e) { /* storage unavailable */ }
+    return false;
+  }
+  function setAll(map) { prevDed.clear(); map.forEach((v, k) => ded.set(k, clamp(v))); update(); }
+  const clamp = v => Math.max(0, Math.min(MAX, Math.round(+v || 0)));
+
+  // ---------- Build static DOM ----------
+  const axis = d3.select("#axis");
+  [1, 4, 5, 10, 15, 17, 20].forEach(p => axis.append("span").style("left", `${(p - 0.5) / 20 * 100}%`).text(p));
+
+  const presetBtns = d3.select("#presets").selectAll("button").data(PRESETS).join("button")
+    .attr("type", "button").attr("class", "chip").text(p => p.label)
+    .on("click", (e, p) => setAll(p.map()));
+
+  document.getElementById("custom").addEventListener("submit", e => {
+    e.preventDefault();
+    const pts = clamp(document.getElementById("custom-pts").value);
+    const f = scope[document.getElementById("custom-scope").value];
+    setAll(presetMap(s => f(s) ? pts : 0));
+  });
+
+  const openSeasons = new Set();
+  const rowSel = d3.select("#seasons").selectAll(".season").data(seasons, s => s.start).join("div")
+    .attr("class", "season");
+
+  rowSel.each(function (s) {
+    const el = d3.select(this);
+    const main = el.append("div").attr("class", "s-main row-grid");
+    const tog = main.append("button").attr("class", "s-toggle").attr("type", "button")
+      .attr("aria-expanded", "false").attr("aria-controls", `detail-${s.start}`)
+      .on("click", () => toggle(s));
+    tog.append("span").attr("class", "s-name").text(s.season);
+    tog.append("span").attr("class", s.charge_period ? "tag charge" : "tag")
+      .text(s.charge_period ? "Charged season" : s.cooperation_period ? "Non-cooperation" : " ");
+
+    const st = main.append("div").attr("class", "stepper");
+    st.append("button").attr("type", "button").attr("aria-label", `One point fewer in ${s.season}`).text("−")
+      .on("click", () => { prevDed.delete(s.start); ded.set(s.start, clamp(ded.get(s.start) - 1)); update(); });
+    st.append("input").attr("type", "number").attr("id", `ded-${s.start}`).attr("min", 0).attr("max", MAX)
+      .attr("aria-label", `Points deducted from City in ${s.season}`)
+      .on("input", function () { prevDed.delete(s.start); ded.set(s.start, clamp(this.value)); update(this); });
+    st.append("button").attr("type", "button").attr("aria-label", `One point more in ${s.season}`).text("+")
+      .on("click", () => { prevDed.delete(s.start); ded.set(s.start, clamp(ded.get(s.start) + 1)); update(); });
+
+    const tr = main.append("div").attr("class", "track");
+    tr.append("div").attr("class", "cells");
+    tr.append("div").attr("class", "link");
+    tr.append("div").attr("class", "marker was");
+    tr.append("div").attr("class", "marker now");
+    main.append("div").attr("class", "s-out");
+
+    const det = el.append("div").attr("class", "detail").attr("id", `detail-${s.start}`).property("hidden", true);
+    const head = det.append("div").attr("class", "detail-head");
+    const lab = head.append("label").attr("for", `range-${s.start}`);
+    lab.append("span").text("Deduction");
+    lab.append("input").attr("type", "range").attr("id", `range-${s.start}`).attr("min", 0).attr("max", 100)
+      .on("input", function () { prevDed.delete(s.start); ded.set(s.start, clamp(this.value)); update(); });
+    lab.append("span").attr("class", "num range-val");
+    head.append("a").attr("href", s.source).attr("target", "_blank").attr("rel", "noopener").text("Source table");
+    const notes = [s.rules.note, ...s.teams.filter(t => t.adj).map(t => `${t.team} \u2212${-t.adj} points: ${t.adj_note}`)].filter(Boolean);
+    notes.forEach(n => det.append("p").attr("class", "note").text(n));
+    const tbl = det.append("div").attr("class", "tbl-scroll").append("div").attr("class", "tbl").attr("role", "table")
+      .attr("aria-label", `${s.season} final table after deduction`);
+    const th = tbl.append("div").attr("class", "tr th").attr("role", "row");
+    ["Pos", "", "Club", "W", "D", "L", "GD", "Pts", ["Europe / relegation", "Europe"]].forEach(h => labelled(th.append("span").attr("role", "columnheader").node(), h));
+    tbl.append("div").attr("class", "tbody").attr("role", "rowgroup").style("height", `${20 * 30}px`);
+  });
+
+  function toggle(s) {
+    openSeasons.has(s.start) ? openSeasons.delete(s.start) : openSeasons.add(s.start);
+    update();
+  }
+
+  // Tooltip for track cells
+  const tip = document.getElementById("tip");
+  window.addEventListener("scroll", () => { tip.hidden = true; }, { passive: true });
+  function showTip(e, r) {
+    const comp = r.rel ? "Relegated" : r.comp ? COMP[r.comp] : "No European place";
+    tip.innerHTML = `<b>${ordinal(r.pos)}</b> ${r.team} · ${r.pts} pts · ${comp}`;
+    tip.hidden = false;
+    // Centre over the cell, but keep the whole tooltip 8px inside the screen
+    const box = e.currentTarget.getBoundingClientRect();
+    const half = tip.offsetWidth / 2, edge = 8, vw = document.documentElement.clientWidth;
+    tip.style.left = `${Math.min(Math.max(box.left + box.width / 2, edge + half), vw - edge - half)}px`;
+    tip.style.top = `${box.top}px`;
+  }
+
+  // ---------- Diff helpers ----------
+  const status = r => r.rel ? "REL" : r.comp;
+  const statusLabel = st => st === "REL" ? "relegated" : st ? COMP[st] : "no European place";
+
+  function changes(s, rows) {
+    const out = [];
+    const champNow = rows[0].team, champWas = baseline.get(s.start)[0].team;
+    if (champNow !== champWas) out.push({ kind: "title", text: `${champNow} win the title`, to: `instead of ${short(champWas)}` });
+    rows.forEach(r => {
+      const b = baseOf(s, r.team);
+      if (status(b) === status(r)) return;
+      out.push({
+        kind: "move", team: r.team, cls: r.rel ? "REL" : (r.comp || "none"),
+        gain: (RANK[r.comp] || (r.rel ? -1 : 0)) > (RANK[b.comp] || (b.rel ? -1 : 0)),
+        text: r.team, to: `${statusLabel(status(b))} → ${statusLabel(status(r))}`
+      });
+    });
+    // City first, then gains, then losses
+    return out.sort((a, b) => (a.kind === "title" ? -2 : 0) - (b.kind === "title" ? -2 : 0)
+      || (a.team === CITY ? -1 : 0) - (b.team === CITY ? -1 : 0) || (b.gain - a.gain));
+  }
+
+  // ---------- Update ----------
+  function update(activeInput) {
+    save();
+    const results = new Map(seasons.map(s => [s.start, rank(s, ded.get(s.start))]));
+    const total = d3.sum([...ded.values()]);
+    const touched = [...ded.values()].filter(v => v > 0).length;
+    document.getElementById("total").textContent = total
+      ? `${total} points across ${touched} season${touched === 1 ? "" : "s"}` : "No points deducted";
+
+    presetBtns.attr("aria-pressed", p => {
+      const m = p.map();
+      return seasons.every(s => m.get(s.start) === ded.get(s.start)) ? "true" : "false";
+    });
+
+    rowSel.classed("open", s => openSeasons.has(s.start)).each(function (s) {
+      const el = d3.select(this), rows = results.get(s.start), d = ded.get(s.start);
+      const c = rows.find(r => r.team === CITY), b = baseOf(s, CITY);
+      const input = el.select(`#ded-${s.start}`).node();
+      if (input !== activeInput) input.value = d;
+      el.select(".stepper").classed("active", d > 0);
+      el.select(".s-toggle").attr("aria-expanded", openSeasons.has(s.start));
+
+      el.select(".cells").selectAll(".cell").data(rows).join("div")
+        .attr("class", r => `cell z-${r.rel ? "REL" : r.comp || "none"}`)
+        .on("mouseenter", showTip).on("mouseleave", () => { tip.hidden = true; });
+      const pct = p => `${(p - 0.5) / 20 * 100}%`;
+      el.select(".marker.was").style("left", pct(b.pos)).style("opacity", c.pos === b.pos ? 0 : 1);
+      // Place directly on first paint, animate after that
+      const now = el.select(".marker.now"), link = el.select(".link");
+      const first = !now.node().style.left;
+      (first ? now : now.transition().duration(350)).style("left", pct(c.pos));
+      (first ? link : link.transition().duration(350))
+        .style("left", pct(b.pos)).style("width", `${(c.pos - b.pos) / 20 * 100}%`);
+
+      const out = el.select(".s-out").html("");
+      const line = out.append("div");
+      line.append("span").attr("class", "pos").text(c.pos === b.pos ? ordinal(b.pos) : `${ordinal(b.pos)} → ${ordinal(c.pos)}`);
+      line.append("span").attr("class", "pts").text(d ? ` · ${b.pts} → ${c.pts} pts` : ` · ${b.pts} pts`);
+      const flags = [];
+      if (b.pos === 1 && c.pos > 1) flags.push([`Title to ${short(rows[0].team)}`, true]);
+      if (status(b) !== status(c)) flags.push([c.rel ? "Relegated" : c.comp ? `${COMP[c.comp]}` : "Out of Europe", true]);
+      else if (c.pos === 1) flags.push(["Champions", false]);
+      out.append("div").attr("class", "flags").selectAll("span").data(flags).join("span")
+        .attr("class", f => f[1] ? "flag hot" : "flag").text(f => f[0]);
+
+      // Detail table
+      const det = el.select(".detail").property("hidden", !openSeasons.has(s.start));
+      if (!openSeasons.has(s.start)) return;
+      det.select(`#range-${s.start}`).property("value", d);
+      det.select(".range-val").text(`${d} pts`);
+      const cut = new Set([17]);
+      det.select(".tbody").selectAll(".tr").data(rows, r => r.team).join(enter => {
+        const tr = enter.append("div").attr("class", "tr").attr("role", "row")
+          .style("transform", r => `translateY(${(r.basePos - 1) * 30}px)`);
+        for (let i = 0; i < 9; i++) tr.append("span").attr("role", "cell");
+        return tr;
+      }).classed("city", r => r.team === CITY).classed("cut", r => cut.has(r.pos))
+        .each(function (r) {
+          const cells = [...this.children]; // direct cells only, not nested labels
+          const b0 = baseOf(s, r.team), mv = b0.pos - r.pos;
+          cells[0].textContent = r.pos;
+          cells[1].className = `mv ${mv > 0 ? "up" : mv < 0 ? "down" : ""}`;
+          cells[1].textContent = mv > 0 ? `▲${mv}` : mv < 0 ? `▼${-mv}` : "";
+          labelled(cells[2], [r.team, short(r.team)]);
+          const adj = r.histAdj + (r.ded ? -r.ded : 0);
+          if (adj) {
+            const a = document.createElement("span"); a.className = "adjnote";
+            labelled(a, [` (\u2212${-adj} pts)`, ` (\u2212${-adj})`]);
+            cells[2].append(a);
+          }
+          [r.w, r.d, r.l, r.gd > 0 ? `+${r.gd}` : r.gd, r.pts].forEach((v, i) => { cells[3 + i].textContent = v; });
+          const stNow = status(r), stWas = status(b0);
+          cells[8].innerHTML = "";
+          const wrap = document.createElement("span"); wrap.className = "comp";
+          if (stNow) {
+            const sw = document.createElement("i"); sw.className = `sw z-${stNow}`;
+            wrap.append(sw);
+            labelled(wrap, stNow === "REL" ? ["Relegated", "Rel"] : [COMP[stNow], ABBR[stNow]], true);
+          }
+          if (stNow !== stWas) {
+            const w = document.createElement("span"); w.className = "was";
+            labelled(w, stWas === "REL" ? ["was relegated", "was Rel"] : stWas ? `was ${ABBR[stWas]}` : ["was none", "was \u2013"]);
+            wrap.append(w);
+          }
+          cells[8].append(wrap);
+        })
+        .transition().duration(450).style("transform", r => `translateY(${(r.pos - 1) * 30}px)`);
+    });
+
+    renderEffects(results);
+    renderTiles(results);
+    renderTips();
+  }
+
+  function renderEffects(results) {
+    const box = d3.select("#effects").html("");
+    const list = seasons.map(s => ({ s, ch: changes(s, results.get(s.start)) })).filter(x => x.ch.length);
+    if (!list.length) {
+      box.append("p").attr("class", "empty").text("No changes. Pick a scenario above or set a deduction for any season.");
+      return;
+    }
+    list.forEach(({ s, ch }) => {
+      const sec = box.append("div").attr("class", "eff-season");
+      const h = sec.append("h3");
+      h.append("span").text(s.season);
+      h.append("small").text(`City −${ded.get(s.start)}`);
+      const li = sec.append("ul").selectAll("li").data(ch).join("li").attr("class", c => c.kind);
+      li.append("i").attr("class", c => c.kind === "title" ? "sw" : `sw z-${c.cls}`);
+      const txt = li.append("span");
+      txt.append("b").text(c => c.text);
+      txt.append("span").attr("class", "to").text(c => ` ${c.to}`);
+    });
+  }
+
+  function renderTiles(results) {
+    let titles = [], cityNoUcl = 0, uclGains = 0, others = 0, spared = 0;
+    seasons.forEach(s => {
+      const rows = results.get(s.start), base = baseline.get(s.start);
+      if (rows[0].team !== base[0].team) titles.push(`${s.season} ${short(rows[0].team)}`);
+      rows.forEach(r => {
+        const b = baseOf(s, r.team);
+        if (r.team === CITY) { if (b.comp === "UCL" && r.comp !== "UCL") cityNoUcl++; return; }
+        if (status(r) !== status(b)) others++;
+        if (r.comp === "UCL" && b.comp !== "UCL") uclGains++;
+        if (b.rel && !r.rel) spared++;
+      });
+    });
+    const tiles = [
+      { big: titles.length, label: "Titles change hands", sub: titles.join(", ") || "City keep every title" },
+      { big: cityNoUcl, label: "Champions League seasons City lose", sub: cityNoUcl ? "Seasons where City fall out of the Champions League places" : "City stay in the Champions League places" },
+      { big: uclGains, label: "Champions League places gained", sub: "By other clubs, counted per season" },
+      { big: others, label: "Other clubs affected", sub: spared ? `Includes ${spared} spared relegation` : "Title, European place or relegation changes" }
+    ];
+    d3.select("#tiles").selectAll(".tile").data(tiles).join(enter => {
+      const t = enter.append("div").attr("class", "tile");
+      t.append("span").attr("class", "big num");
+      t.append("span").attr("class", "label");
+      t.append("span").attr("class", "sub");
+      return t;
+    }).each(function (t) {
+      const el = d3.select(this);
+      el.select(".big").text(t.big);
+      el.select(".label").text(t.label);
+      el.select(".sub").text(t.sub);
+    });
+  }
+
+  // Writes a label, with an abbreviated form for small screens when given [long, short]
+  function labelled(el, text, append) {
+    if (!append) el.textContent = "";
+    if (!Array.isArray(text)) { el.append(text); return; }
+    const [long, short] = text;
+    const l = document.createElement("span"); l.className = "long"; l.textContent = long;
+    const sh = document.createElement("span"); sh.className = "short"; sh.textContent = short;
+    el.append(l, sh);
+  }
+
+  function renderTips() {
+    const table = d3.select("#tips");
+    if (table.select("thead").empty()) {
+      table.append("thead").append("tr").selectAll("th")
+        .data(["Season", "City actual", ["Lose the title", "Lose title"], ["Leave the Champions League", "Leave CL"], "Leave Europe", "Relegated"])
+        .join("th").attr("scope", "col").each(function (d) { labelled(this, d); });
+      table.append("tbody");
+    }
+    const keys = ["title", "ucl", "europe", "rel"];
+    const rows = table.select("tbody").selectAll("tr").data(seasons, s => s.start).join(enter => {
+      const tr = enter.append("tr");
+      tr.append("td").attr("class", "season-cell").text(s => s.season);
+      tr.append("td").each(function (s) {
+        const b = baseOf(s, CITY);
+        labelled(this, `${ordinal(b.pos)}, ${b.pts} pts`);
+        if (b.comp) labelled(this, [`, ${COMP[b.comp]}`, `, ${ABBR[b.comp]}`], true);
+      });
+      keys.forEach(k => tr.append("td").attr("data-k", k));
+      return tr;
+    });
+    rows.each(function (s) {
+      const t = tipping.get(s.start), b = baseOf(s, CITY);
+      keys.forEach(k => {
+        const td = d3.select(this).select(`td[data-k="${k}"]`).html("");
+        const v = t[k];
+        if (v === null) {
+          const why = k === "title" && b.pos !== 1 ? ["Not champions", "–"]
+            : k === "ucl" && b.comp !== "UCL" ? ["Not in it", "–"]
+            : k === "europe" && b.comp ? ["Kept via cup win", "Cup win"] : "–";
+          labelled(td.append("span").attr("class", "na").node(), why);
+          return;
+        }
+        const cur = ded.get(s.start), selected = cur === v;
+        td.append("button").attr("type", "button")
+          .attr("aria-pressed", selected).classed("met", cur > v)
+          .attr("aria-label", selected ? `Undo the ${v} point deduction in ${s.season}` : `Deduct ${v} points in ${s.season}`)
+          .text(`−${v}`)
+          .on("click", () => {
+            // A second click on the selected value restores what the season had before
+            if (selected) { ded.set(s.start, prevDed.get(s.start) ?? 0); prevDed.delete(s.start); }
+            else { if (cur !== v) prevDed.set(s.start, cur); ded.set(s.start, v); }
+            update();
+          });
+      });
+    });
+  }
+
+  if (!load()) setAll(PRESETS[1].map());
+  else update();
+})();
+</script>
+</body>
+</html>

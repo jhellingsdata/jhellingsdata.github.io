@@ -1,0 +1,72 @@
+{{#invoke:Sports table|main|style=WDL
+|source=[https://www.premierleague.com/en/tables/premier-league/2020-21/all-matchweeks Premier League]
+
+<!--Update team positions here-->
+|team_order=MCI, MUN, LIV, CHE, LEI, WHU, TOT, ARS, LEE, EVE, AVL, NEW, WOL, CRY, SOU, BHA, BUR, FUL, WBA, SHU
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLGS |result5=ELGS |result6=ELGS |result7=ECLPO |result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=18|draw_ARS=7 |loss_ARS=13|gf_ARS=55|ga_ARS=39<!--Arsenal-->
+|win_AVL=16|draw_AVL=7 |loss_AVL=15|gf_AVL=55|ga_AVL=46<!--Aston Villa-->
+|win_BHA=9 |draw_BHA=14|loss_BHA=15|gf_BHA=40|ga_BHA=46<!--Brighton & Hove Albion-->
+|win_BUR=10|draw_BUR=9 |loss_BUR=19|gf_BUR=33|ga_BUR=55<!--Burnley-->
+|win_CHE=19|draw_CHE=10|loss_CHE=9 |gf_CHE=58|ga_CHE=36<!--Chelsea-->
+|win_CRY=12|draw_CRY=8 |loss_CRY=18|gf_CRY=41|ga_CRY=66<!--Crystal Palace-->
+|win_EVE=17|draw_EVE=8 |loss_EVE=13|gf_EVE=47|ga_EVE=48<!--Everton-->
+|win_FUL=5 |draw_FUL=13|loss_FUL=20|gf_FUL=27|ga_FUL=53<!--Fulham-->
+|win_LEE=18|draw_LEE=5 |loss_LEE=15|gf_LEE=62|ga_LEE=54<!--Leeds United-->
+|win_LEI=20|draw_LEI=6 |loss_LEI=12|gf_LEI=68|ga_LEI=50<!--Leicester City-->
+|win_LIV=20|draw_LIV=9 |loss_LIV=9 |gf_LIV=68|ga_LIV=42<!--Liverpool-->
+|win_MCI=27|draw_MCI=5 |loss_MCI=6 |gf_MCI=83|ga_MCI=32<!--Manchester City-->
+|win_MUN=21|draw_MUN=11|loss_MUN=6 |gf_MUN=73|ga_MUN=44<!--Manchester United-->
+|win_NEW=12|draw_NEW=9 |loss_NEW=17|gf_NEW=46|ga_NEW=62<!--Newcastle United-->
+|win_SHU=7 |draw_SHU=2 |loss_SHU=29|gf_SHU=20|ga_SHU=63<!--Sheffield United-->
+|win_SOU=12|draw_SOU=7 |loss_SOU=19|gf_SOU=47|ga_SOU=68<!--Southampton-->
+|win_TOT=18|draw_TOT=8 |loss_TOT=12|gf_TOT=68|ga_TOT=45<!--Tottenham Hotspur-->
+|win_WBA=5 |draw_WBA=11|loss_WBA=22|gf_WBA=35|ga_WBA=76<!--West Bromwich Albion-->
+|win_WHU=19|draw_WHU=8 |loss_WHU=11|gf_WHU=62|ga_WHU=47<!--West Ham United-->
+|win_WOL=12|draw_WOL=9 |loss_WOL=17|gf_WOL=36|ga_WOL=52<!--Wolverhampton Wanderers-->
+
+<!--status-->
+|status_MCI=C
+|status_FUL=R|status_WBA=R|status_SHU=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_AVL=[[Aston Villa F.C.|Aston Villa]]
+|name_BHA=[[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+|name_BUR=[[Burnley F.C.|Burnley]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_FUL=[[Fulham F.C.|Fulham]]
+|name_LEE=[[Leeds United F.C.|Leeds United]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_SHU=[[Sheffield United F.C.|Sheffield United]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules=1) Points; 2) Goal difference; 3) Goals scored; 4) If the champions, relegated teams or qualified teams for UEFA competitions cannot be determined by rules 1 to 3, rules 4.1 to 4.3 are applied – 4.1) Points gained in head-to-head record between such teams; 4.2) Away goals scored in head-to-head record between such teams; 4.3) Play-offs<ref>{{cite web |title=Premier League Handbook 2020/21 |url=https://resources.premierleague.com/premierleague/document/2020/12/07/b3910048-cd78-484d-839f-3d9d6696ac6f/2020-21-PL-Handbook-031220.pdf|url-status = live|archive-url=https://web.archive.org/web/20201229162806/https://resources.premierleague.com/premierleague/document/2020/12/07/b3910048-cd78-484d-839f-3d9d6696ac6f/2020-21-PL-Handbook-031220.pdf|archive-date=29 December 2020 |publisher=Premier League |access-date=29 December 2020|pages=103–105}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1   |text_CLGS=Qualification for the [[2021–22 UEFA Champions League#Group stage|Champions League group stage]]
+|col_ELGS=blue1    |text_ELGS={{nowrap|Qualification for the [[2021–22 UEFA Europa League#Group stage|Europa League group stage]]}}
+|col_ECLPO=yellow1 |text_ECLPO={{nowrap|Qualification for the [[2021–22 UEFA Europa Conference League#Play-off round|Europa Conference League play-off round]]}}
+|col_REL=red1      |text_REL=Relegation to [[2021–22 EFL Championship|EFL Championship]]
+
+|note_res_ELGS=Since the winners of the [[2020–21 FA Cup]], Leicester City, also qualified for the Europa League based on league position, the second Europa League group stage berth allocated to England was transferred to the sixth-placed team.
+|note_res_ECLPO=Since the winners of the [[2020–21 EFL Cup]], Manchester City, qualified for European competition based on league position, the Europa Conference League berth awarded to the EFL Cup winners was transferred to the highest-placed Premier League team not already qualified for European competition, the seventh-placed team.
+}}</onlyinclude>

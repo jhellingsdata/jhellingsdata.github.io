@@ -1,0 +1,76 @@
+{{#invoke:Sports table|main|style=WDL|source=[https://www.premierleague.com/en/tables/premier-league/2025-26/all-matchweeks Premier League]
+
+<!--Update team positions here-->
+|team_order = ARS, MCI, MUN, AVL, LIV, BOU, SUN, BHA, BRE, CHE, FUL, NEW, EVE, LEE, CRY, NFO, TOT, WHU, BUR, WOL 
+
+|result1=CLLS |result2=CLLS |result3=CLLS |result4=CLLS |result5=CLLS |result6=ELLS |result7=ELLS |result8=ECLPO |result15=ECLTH |result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=26|draw_ARS=7 |loss_ARS=5 |gf_ARS=71|ga_ARS=27<!-- Arsenal -->
+|win_AVL=19|draw_AVL=8 |loss_AVL=11|gf_AVL=56|ga_AVL=49<!-- Aston Villa -->
+|win_BOU=13|draw_BOU=18|loss_BOU=7 |gf_BOU=58|ga_BOU=54<!-- Bournemouth -->
+|win_BRE=14|draw_BRE=11|loss_BRE=13|gf_BRE=55|ga_BRE=52<!-- Brentford -->
+|win_BHA=14|draw_BHA=11|loss_BHA=13|gf_BHA=52|ga_BHA=46<!-- Brighton & Hove Albion -->
+|win_BUR=4 |draw_BUR=10|loss_BUR=24|gf_BUR=38|ga_BUR=75<!-- Burnley -->
+|win_CHE=14|draw_CHE=10|loss_CHE=14|gf_CHE=58|ga_CHE=52<!-- Chelsea -->
+|win_CRY=11|draw_CRY=12|loss_CRY=15|gf_CRY=41|ga_CRY=51<!-- Crystal Palace -->
+|win_EVE=13|draw_EVE=10|loss_EVE=15|gf_EVE=47|ga_EVE=50<!-- Everton -->
+|win_FUL=15|draw_FUL=7 |loss_FUL=16|gf_FUL=47|ga_FUL=51<!-- Fulham -->
+|win_LEE=11|draw_LEE=14|loss_LEE=13|gf_LEE=49|ga_LEE=56<!-- Leeds United -->
+|win_LIV=17|draw_LIV=9 |loss_LIV=12|gf_LIV=63|ga_LIV=53<!-- Liverpool -->
+|win_MCI=23|draw_MCI=9 |loss_MCI=6 |gf_MCI=77|ga_MCI=35<!-- Manchester City -->
+|win_MUN=20|draw_MUN=11|loss_MUN=7 |gf_MUN=69|ga_MUN=50<!-- Manchester United -->
+|win_NEW=14|draw_NEW=7 |loss_NEW=17|gf_NEW=53|ga_NEW=55<!-- Newcastle United -->
+|win_NFO=11|draw_NFO=11|loss_NFO=16|gf_NFO=48|ga_NFO=51<!-- Nottingham Forest -->
+|win_SUN=14|draw_SUN=12|loss_SUN=12|gf_SUN=42|ga_SUN=48<!-- Sunderland -->
+|win_TOT=10|draw_TOT=11|loss_TOT=17|gf_TOT=48|ga_TOT=57<!-- Tottenham Hotspur -->
+|win_WHU=10|draw_WHU=9 |loss_WHU=19|gf_WHU=46|ga_WHU=65<!-- West Ham United -->
+|win_WOL=3 |draw_WOL=11|loss_WOL=24|gf_WOL=27|ga_WOL=68<!-- Wolverhampton Wanderers -->
+
+<!--Team status-->
+|status_ARS=C
+|status_WHU=R
+|status_WOL=R
+|status_BUR=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_AVL=[[Aston Villa F.C.|Aston Villa]]
+|name_BOU=[[AFC Bournemouth|Bournemouth]]
+|name_BHA=[[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+|name_BRE=[[Brentford F.C.|Brentford]]
+|name_BUR=[[Burnley F.C.|Burnley]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_FUL=[[Fulham F.C.|Fulham]]
+|name_LEE=[[Leeds United F.C.|Leeds United]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_NFO=[[Nottingham Forest F.C.|Nottingham Forest]]
+|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules=1) Points; 2) Goal difference; 3) Goals scored; 4) If the champions, relegated teams or qualified teams for UEFA competitions cannot be determined by rules 1 to 3, rules 4.1 to 4.3 are applied – 4.1) Points gained in head-to-head record between such teams; 4.2) Away goals scored in head-to-head record between such teams; 4.3) Play-offs<ref>{{#invoke:cite|web|url=https://resources.premierleague.com/premierleague/document/2022/08/17/41833320-bac0-4aa1-966e-b07c65267dbe/PL_Handbook_2022-23_DIGITAL_17.08.pdf|title=Premier League Handbook 2022/23|pages=109–111|publisher=Premier League|access-date=24 August 2022|archive-date=27 August 2022|archive-url=https://web.archive.org/web/20220827050212/https://resources.premierleague.com/premierleague/document/2022/08/17/41833320-bac0-4aa1-966e-b07c65267dbe/PL_Handbook_2022-23_DIGITAL_17.08.pdf|url-status=live}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLLS=green1  |text_CLLS=Qualification for the {{nowrap|[[2026–27 UEFA Champions League|Champions League league phase]]}}
+|col_ELLS=blue1   |text_ELLS=Qualification for the {{nowrap|[[2026–27 UEFA Europa League|Europa League league phase]]}}
+|col_ECLTH=blue1  |text_ECLTH=Qualification for the {{nowrap|[[2026–27 UEFA Europa League|Europa League league phase]]}}
+|col_ECLPO=yellow1|text_ECLPO=Qualification for the {{nowrap|[[2026–27 UEFA Conference League|Conference League play-off round]]}}
+|col_REL=red1     |text_REL=Relegation to {{nowrap|[[2026–27 EFL Championship|EFL Championship]]}}
+
+<!--Qualification notes-->
+|note_res_CLLS=The Premier League gained an additional Champions League place as a result of England gaining one of the two European Performance Spots (EPS) awarded to the two associations with the highest [[UEFA coefficient#Men's association coefficient|UEFA coefficient]] points in 2025–26.<ref>{{cite web |title=Premier League: How does Champions League qualification work? |url=https://www.bbc.co.uk/sport/football/articles/c2k29qpd879o |work=BBC Sport |access-date=24 May 2026}}</ref>
+|note_res_ELLS=Since the winners of the [[2025–26 FA Cup]] and [[2025–26 EFL Cup]], Manchester City, qualified for the Champions League by league position, the spot reserved for the FA Cup winners (Europa League league phase) was passed to the seventh-placed team, and the spot reserved for the EFL Cup winners (Conference League play-off round) was passed to the eighth-placed team.
+|note_res_ECLPO=ELLS
+|note_res_ECLTH=Crystal Palace qualified for the Europa League league phase as the [[2025–26 UEFA Conference League]] winners.
+}}</onlyinclude>

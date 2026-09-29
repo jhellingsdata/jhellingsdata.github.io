@@ -1,0 +1,72 @@
+{{#invoke:Sports table|main|style=WDL|source=[https://www.premierleague.com/en/tables/premier-league/2021-22/all-matchweeks Premier League]
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLGS |result5=ELGS |result6=ELGS |result7=ECLPO |result18=REL |result19=REL |result20=REL
+
+<!--Update team positions here-->
+|team_order=MCI, LIV, CHE, TOT, ARS, MUN, WHU, LEI, BHA, WOL, NEW, CRY, BRE, AVL, SOU, EVE, LEE, BUR, WAT, NOR
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=22|draw_ARS=3 |loss_ARS=13|gf_ARS=61|ga_ARS=48<!--Arsenal-->
+|win_AVL=13|draw_AVL=6 |loss_AVL=19|gf_AVL=52|ga_AVL=54<!--Aston Villa-->
+|win_BRE=13|draw_BRE=7 |loss_BRE=18|gf_BRE=48|ga_BRE=56<!--Brentford-->
+|win_BHA=12|draw_BHA=15|loss_BHA=11|gf_BHA=42|ga_BHA=44<!--Brighton & Hove Albion-->
+|win_BUR=7 |draw_BUR=14|loss_BUR=17|gf_BUR=34|ga_BUR=53<!--Burnley-->
+|win_CHE=21|draw_CHE=11|loss_CHE=6 |gf_CHE=76|ga_CHE=33<!--Chelsea-->
+|win_CRY=11|draw_CRY=15|loss_CRY=12|gf_CRY=50|ga_CRY=46<!--Crystal Palace-->
+|win_EVE=11|draw_EVE=6 |loss_EVE=21|gf_EVE=43|ga_EVE=66<!--Everton-->
+|win_LEE=9 |draw_LEE=11|loss_LEE=18|gf_LEE=42|ga_LEE=79<!--Leeds United-->
+|win_LEI=14|draw_LEI=10|loss_LEI=14|gf_LEI=62|ga_LEI=59<!--Leicester City-->
+|win_LIV=28|draw_LIV=8 |loss_LIV=2 |gf_LIV=94|ga_LIV=26<!--Liverpool-->
+|win_MCI=29|draw_MCI=6 |loss_MCI=3 |gf_MCI=99|ga_MCI=26<!--Manchester City-->
+|win_MUN=16|draw_MUN=10|loss_MUN=12|gf_MUN=57|ga_MUN=57<!--Manchester United-->
+|win_NEW=13|draw_NEW=10|loss_NEW=15|gf_NEW=44|ga_NEW=62<!--Newcastle United-->
+|win_NOR=5 |draw_NOR=7 |loss_NOR=26|gf_NOR=23|ga_NOR=84<!--Norwich City-->
+|win_SOU=9 |draw_SOU=13|loss_SOU=16|gf_SOU=43|ga_SOU=67<!--Southampton-->
+|win_TOT=22|draw_TOT=5 |loss_TOT=11|gf_TOT=69|ga_TOT=40<!--Tottenham Hotspur-->
+|win_WAT=6 |draw_WAT=5 |loss_WAT=27|gf_WAT=34|ga_WAT=77<!--Watford-->
+|win_WHU=16|draw_WHU=8 |loss_WHU=14|gf_WHU=60|ga_WHU=51<!--West Ham United-->
+|win_WOL=15|draw_WOL=6 |loss_WOL=17|gf_WOL=38|ga_WOL=43<!--Wolverhampton Wanderers-->
+
+<!--status-->
+|status_MCI=C
+|status_NOR=R
+|status_BUR=R
+|status_WAT=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_AVL=[[Aston Villa F.C.|Aston Villa]]
+|name_BRE=[[Brentford F.C.|Brentford]]
+|name_BHA=[[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+|name_BUR=[[Burnley F.C.|Burnley]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_LEE=[[Leeds United F.C.|Leeds United]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_NOR=[[Norwich City F.C.|Norwich City]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WAT=[[Watford F.C.|Watford]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules= 1) Points; 2) Goal difference; 3) Goals scored; 4) If the champions, relegated teams or qualified teams for UEFA competitions cannot be determined by rules 1 to 3, rules 4.1 to 4.3 are applied – 4.1) Points gained in head-to-head record between such teams; 4.2) Away goals scored in head-to-head record between such teams; 4.3) Play-offs<ref>{{cite web|url=https://resources.premierleague.com/premierleague/document/2021/08/12/0232d998-f26f-49d5-8a82-a78aaa0a7dd1/PL_Handbook_2021_22_DIGITAL_11.08.pdf|title=Premier League Handbook 2021/22|pages=105–107|publisher=Premier League|access-date=14 August 2021|archive-url=https://web.archive.org/web/20211202125439/https://resources.premierleague.com/premierleague/document/2021/11/30/235538a5-3927-4489-9812-7b426b80e6e1/PL_Handbook_2021_22_DIGITAL_29.11.21.pdf|archive-date=2 December 2021|url-status=live}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1   |text_CLGS=Qualification for the [[2022–23 UEFA Champions League|Champions League group stage]]
+|col_ELGS=blue1    |text_ELGS={{nowrap|Qualification for the [[2022–23 UEFA Europa League|Europa League group stage]]}}
+|col_ECLPO=yellow1 |text_ECLPO={{nowrap|Qualification for the [[2022–23 UEFA Europa Conference League|Europa Conference League play-off round]]}}
+|note_res_ELGS=Since the winners of the [[2021–22 FA Cup]] and the [[2021–22 EFL Cup]], Liverpool, qualified for the Champions League, the spot given to the FA Cup winners (Europa League group stage) was passed to the sixth-placed team and the spot given to the League Cup winners (Europa Conference League play-off round) was passed to the seventh-placed team.<ref name="Qualification Rules">{{cite web |title=European qualification for UEFA competitions explained |url=https://www.premierleague.com/european-qualification-explained |access-date=17 April 2022 |website=Premier League |archive-date=25 May 2017 |archive-url=https://web.archive.org/web/20170525124517/https://www.premierleague.com/european-qualification-explained |url-status=dead }}</ref>
+|note_res_ECLPO=ELGS
+|col_REL=red1      |text_REL=Relegation to [[2022–23 EFL Championship|EFL Championship]]
+}}</onlyinclude>

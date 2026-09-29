@@ -1,0 +1,60 @@
+{{#invoke:sports table|main|style=WDL
+|res_col_header=QR
+|show_limit=5
+|update=complete
+
+|team1=CHE|name_CHE=[[Chelsea F.C.|Chelsea]]
+|team2=MUN|name_MUN=[[Manchester United F.C.|Manchester United]]
+|team3=ARS|name_ARS=[[Arsenal F.C.|Arsenal]]
+|team4=TOT|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|team5=MCI|name_MCI=[[Manchester City F.C.|Manchester City]]
+|team6=AST|name_AST=[[Aston Villa F.C.|Aston Villa]]
+|team7=LIV|name_LIV=[[Liverpool F.C.|Liverpool]]
+|team8=EVE|name_EVE=[[Everton F.C.|Everton]]
+|team9=BIR|name_BIR=[[Birmingham City F.C.|Birmingham City]]
+|team10=BLB|name_BLB=[[Blackburn Rovers F.C.|Blackburn Rovers]]
+|team11=STK|name_STK=[[Stoke City F.C.|Stoke City]]
+|team12=FUL|name_FUL=[[Fulham F.C.|Fulham]]
+|team13=SUN|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|team14=BOL|name_BOL=[[Bolton Wanderers F.C.|Bolton Wanderers]]
+|team15=WOL|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+|team16=WIG|name_WIG=[[Wigan Athletic F.C.|Wigan Athletic]]
+|team17=WHU|name_WHU=[[West Ham United F.C.|West Ham United]]
+|team18=BUR|name_BUR=[[Burnley F.C.|Burnley]]
+|team19=HUL|name_HUL=[[Hull City A.F.C.|Hull City]]
+|team20=POR|name_POR=[[Portsmouth F.C.|Portsmouth]]
+|win_CHE=27|draw_CHE=5|loss_CHE=6|gf_CHE=103|ga_CHE=32|status_CHE=C
+|win_MUN=27|draw_MUN=4|loss_MUN=7|gf_MUN=86|ga_MUN=28
+|win_ARS=23|draw_ARS=6|loss_ARS=9|gf_ARS=83|ga_ARS=41
+|win_TOT=21|draw_TOT=7|loss_TOT=10|gf_TOT=67|ga_TOT=41
+|win_MCI=18|draw_MCI=13|loss_MCI=7|gf_MCI=73|ga_MCI=45
+|win_AST=17|draw_AST=13|loss_AST=8|gf_AST=52|ga_AST=39
+|win_LIV=18|draw_LIV=9|loss_LIV=11|gf_LIV=61|ga_LIV=35
+|win_EVE=16|draw_EVE=13|loss_EVE=9|gf_EVE=60|ga_EVE=49
+|win_BIR=13|draw_BIR=11|loss_BIR=14|gf_BIR=38|ga_BIR=47
+|win_BLB=13|draw_BLB=11|loss_BLB=14|gf_BLB=41|ga_BLB=55
+|win_STK=11|draw_STK=14|loss_STK=13|gf_STK=34|ga_STK=48
+|win_FUL=12|draw_FUL=10|loss_FUL=16|gf_FUL=39|ga_FUL=46
+|win_SUN=11|draw_SUN=11|loss_SUN=16|gf_SUN=48|ga_SUN=56
+|win_BOL=10|draw_BOL=9|loss_BOL=19|gf_BOL=42|ga_BOL=67
+|win_WOL=9|draw_WOL=11|loss_WOL=18|gf_WOL=32|ga_WOL=56
+|win_WIG=9|draw_WIG=9|loss_WIG=20|gf_WIG=37|ga_WIG=79
+|win_WHU=8|draw_WHU=11|loss_WHU=19|gf_WHU=47|ga_WHU=66
+|win_BUR=8|draw_BUR=6|loss_BUR=24|gf_BUR=42|ga_BUR=82|status_BUR=R
+|win_HUL=6|draw_HUL=12|loss_HUL=20|gf_HUL=34|ga_HUL=75|status_HUL=R
+|win_POR=7|draw_POR=7|loss_POR=24|gf_POR=34|ga_POR=66|status_POR=R|adjust_points_POR=-9
+|hth_POR=Portsmouth were docked nine points for entering administration.<ref>{{cite news|url=http://www.premierleague.com/page/Headlines/0,,12306~1996776,00.html |title=Portsmouth Football Club |date=17 March 2010 |work=premierleague.com |publisher=[[Premier League]] |access-date=17 March 2010 |url-status=dead |archive-url=https://web.archive.org/web/20100322191354/http://www.premierleague.com/page/Headlines/0%2C%2C12306~1996776%2C00.html |archive-date=22 March 2010 }}</ref>
+|col_CLGS=green1|text_CLGS=Qualification for the [[2010–11 UEFA Champions League#Group stage|Champions League group stage]]
+|result1=CLGS|result2=CLGS|result3=CLGS
+|col_CLPR=green2|text_CLPR=Qualification for the [[2010–11 UEFA Champions League#Play-off round|Champions League play-off round]]
+|result4=CLPR
+|col_ELPR=blue1|text_ELPR=Qualification for the [[2010–11 UEFA Europa League#Play-off round|Europa League play-off round]] 
+|note_res_ELPR=Since Manchester United [[2010 Football League Cup final|won]] the [[2009–10 Football League Cup|League Cup]] and then qualified for the Champions League, their spot in the Europa League was passed down to the 6th-placed team. The 6th-placed Aston Villa was coincidentally also the League Cup runners-up.
+|result5=ELPR|result6=ELPR
+|col_EL3=blue2|text_EL3=Qualification for the [[2010–11 UEFA Europa League#Third qualifying round|Europa League third qualifying round]] 
+|note_res_EL3=Originally Portsmouth qualified for the third qualifying round of the [[2010–11 UEFA Europa League|Europa League]] as the [[2009–10 FA Cup|FA Cup]] [[2010 FA Cup final|runners-up]], replacing the winners, Champions League-qualified Chelsea. However, they failed to apply for a UEFA licence. Therefore, Liverpool as the best placed team not qualified for the European competitions took their place.
+|result7=EL3
+|col_R=red1|text_R=Relegation to [[2010–11 Football League Championship|Football League Championship]]
+|result18=R|result19=R|result20=R
+|source=[https://www.premierleague.com/en/tables/premier-league/2009-10/all-matchweeks Barclays Premier League]
+}}</onlyinclude>

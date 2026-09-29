@@ -1,0 +1,72 @@
+{{#invoke:sports table|main|style=WDL
+|res_col_header=QR
+|show_limit=5
+
+|team1=MCI|name_MCI=[[Manchester City F.C.|Manchester City]]
+|team2=MUN|name_MUN=[[Manchester United F.C.|Manchester United]]
+|team3=ARS|name_ARS=[[Arsenal F.C.|Arsenal]]
+|team4=TOT|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|team5=NEW|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|team6=CHE|name_CHE=[[Chelsea F.C.|Chelsea]]
+|team7=EVE|name_EVE=[[Everton F.C.|Everton]]
+|team8=LIV|name_LIV=[[Liverpool F.C.|Liverpool]]
+|team9=FUL|name_FUL=[[Fulham F.C.|Fulham]]
+|team10=WBA|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|team11=SWA|name_SWA=[[Swansea City A.F.C.|Swansea City]]
+|team12=NOR|name_NOR=[[Norwich City F.C.|Norwich City]]
+|team13=SUN|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|team14=STK|name_STK=[[Stoke City F.C.|Stoke City]]
+|team15=WIG|name_WIG=[[Wigan Athletic F.C.|Wigan Athletic]]
+|team16=AST|name_AST=[[Aston Villa F.C.|Aston Villa]]
+|team17=QPR|name_QPR=[[Queens Park Rangers F.C.|Queens Park Rangers]]
+|team18=BOL|name_BOL=[[Bolton Wanderers F.C.|Bolton Wanderers]]
+|team19=BLB|name_BLB=[[Blackburn Rovers F.C.|Blackburn Rovers]]
+|team20=WOL|name_WOL=[[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+|win_MCI=28|draw_MCI=5|loss_MCI=5|gf_MCI=93|ga_MCI=29|status_MCI=C
+|win_MUN=28|draw_MUN=5|loss_MUN=5|gf_MUN=89|ga_MUN=33
+|win_ARS=21|draw_ARS=7|loss_ARS=10|gf_ARS=74|ga_ARS=49
+|win_TOT=20|draw_TOT=9|loss_TOT=9|gf_TOT=66|ga_TOT=41
+|win_NEW=19|draw_NEW=8|loss_NEW=11|gf_NEW=56|ga_NEW=51
+|win_CHE=18|draw_CHE=10|loss_CHE=10|gf_CHE=65|ga_CHE=46
+|win_EVE=15|draw_EVE=11|loss_EVE=12|gf_EVE=50|ga_EVE=40
+|win_LIV=14|draw_LIV=10|loss_LIV=14|gf_LIV=47|ga_LIV=40
+|win_FUL=14|draw_FUL=10|loss_FUL=14|gf_FUL=48|ga_FUL=51
+|win_WBA=13|draw_WBA=8|loss_WBA=17|gf_WBA=45|ga_WBA=52
+|win_SWA=12|draw_SWA=11|loss_SWA=15|gf_SWA=44|ga_SWA=51
+|win_NOR=12|draw_NOR=11|loss_NOR=15|gf_NOR=52|ga_NOR=66
+|win_SUN=11|draw_SUN=12|loss_SUN=15|gf_SUN=45|ga_SUN=46
+|win_STK=11|draw_STK=12|loss_STK=15|gf_STK=36|ga_STK=53
+|win_WIG=11|draw_WIG=10|loss_WIG=17|gf_WIG=42|ga_WIG=62
+|win_AST=7|draw_AST=17|loss_AST=14|gf_AST=37|ga_AST=53
+|win_QPR=10|draw_QPR=7|loss_QPR=21|gf_QPR=43|ga_QPR=66
+|win_BOL=10|draw_BOL=6|loss_BOL=22|gf_BOL=46|ga_BOL=77|status_BOL=R
+|win_BLB=8|draw_BLB=7|loss_BLB=23|gf_BLB=48|ga_BLB=78|status_BLB=R
+|win_WOL=5|draw_WOL=10|loss_WOL=23|gf_WOL=40|ga_WOL=82|status_WOL=R
+
+|col_CLGS=green1|text_CLGS=Qualification for the [[2012–13 UEFA Champions League#Group stage|Champions League group stage]]
+|result1=CLGS|result2=CLGS|result3=CLGS
+
+|col_ELGS=blue1|text_ELGS=Qualification for the [[2012–13 UEFA Europa League#Group stage|Europa League group stage]] 
+|note_res_ELGS=Chelsea [[2012 UEFA Champions League final|won]] the [[2011–12 UEFA Champions League|Champions League]] and thus qualified for the group stage as defending champions, forfeiting their spot in the Europa League as the [[2011–12 FA Cup|FA Cup]] [[2012 FA Cup final|winners]]. This meant that Tottenham were to compete in the [[2012–13 UEFA Europa League|Europa League]] group stage, since, pursuant to the rules, only four clubs from the Premier League could play in the Champions League.
+
+|result4=ELGS
+|col_ELPR=blue2|text_ELPR=Qualification for the [[2012–13 UEFA Europa League#Play-off round|Europa League play-off round]] 
+|note_res_ELPR=ELGS
+|result5=ELPR
+
+|col_CLGS1=green1|text_CLGS1=Qualification for the [[2012–13 UEFA Champions League#Group stage|Champions League group stage]] 
+|note_res_CLGS1=ELGS
+|result6=CLGS1
+
+|col_EL3=blue3|text_EL3=Qualification for the [[2012–13 UEFA Europa League#Third qualifying round|Europa League third qualifying round]] 
+|note_res_EL3=Liverpool [[2012 Football League Cup final|won]] the [[2011–12 Football League Cup|League Cup]] and thus qualified for the [[2012–13 UEFA Europa League#Third qualifying round|Europa League third qualifying round]].
+|result8=EL3
+
+|col_R=red1|text_R=Relegation to [[2012–13 Football League Championship|Football League Championship]]
+
+|result18=R|result19=R|result20=R
+|class_rules=1) points; 2) goal difference; 3) number of goals scored.
+|update=complete
+|source=[https://www.premierleague.com/en/tables/premier-league/2011-12/all-matchweeks Barclays Premier League]
+}}</onlyinclude>

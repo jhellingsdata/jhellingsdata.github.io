@@ -1,0 +1,78 @@
+{{#invoke:Sports table|main|style=WDL
+|source=[https://www.premierleague.com/en/tables/premier-league/2015-16/all-matchweeks Barclays Premier League]
+
+<!--Update team positions here-->
+|team1=LEI |team2=ARS |team3=TOT |team4=MCI |team5=MUN |team6=SOU |team7=WHU |team8=LIV |team9=STK |team10=CHE
+|team11=EVE |team12=SWA |team13=WAT |team14=WBA |team15=CRY |team16=BOU |team17=SUN |team18=NEW |team19=NOR |team20=AST
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLPO
+|result5=ELGS |result6=ELGS |result7=EL3Q
+|result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=20|draw_ARS=11|loss_ARS=7 |gf_ARS=65|ga_ARS=36<!-- Arsenal -->
+|win_AST=3 |draw_AST=8 |loss_AST=27|gf_AST=27|ga_AST=76<!-- Aston Villa -->
+|win_BOU=11|draw_BOU=9 |loss_BOU=18|gf_BOU=45|ga_BOU=67<!-- Bournemouth -->
+|win_CHE=12|draw_CHE=14|loss_CHE=12|gf_CHE=59|ga_CHE=53<!-- Chelsea -->
+|win_CRY=11|draw_CRY=9 |loss_CRY=18|gf_CRY=39|ga_CRY=51<!-- Crystal Palace -->
+|win_EVE=11|draw_EVE=14|loss_EVE=13|gf_EVE=59|ga_EVE=55<!-- Everton -->
+|win_LEI=23|draw_LEI=12|loss_LEI=3 |gf_LEI=68|ga_LEI=36<!-- Leicester City --> 
+|win_LIV=16|draw_LIV=12|loss_LIV=10|gf_LIV=63|ga_LIV=50<!-- Liverpool -->
+|win_MCI=19|draw_MCI=9 |loss_MCI=10|gf_MCI=71|ga_MCI=41<!-- Manchester City -->
+|win_MUN=19|draw_MUN=9 |loss_MUN=10|gf_MUN=49|ga_MUN=35<!-- Manchester United -->
+|win_NEW=9 |draw_NEW=10|loss_NEW=19|gf_NEW=44|ga_NEW=65<!-- Newcastle United -->
+|win_NOR=9 |draw_NOR=7 |loss_NOR=22|gf_NOR=39|ga_NOR=67<!-- Norwich City -->
+|win_SOU=18|draw_SOU=9 |loss_SOU=11|gf_SOU=59|ga_SOU=41<!-- Southampton -->
+|win_STK=14|draw_STK=9 |loss_STK=15|gf_STK=41|ga_STK=55<!-- Stoke City -->
+|win_SUN=9 |draw_SUN=12|loss_SUN=17|gf_SUN=48|ga_SUN=62<!-- Sunderland -->
+|win_SWA=12|draw_SWA=11|loss_SWA=15|gf_SWA=42|ga_SWA=52<!-- Swansea City -->
+|win_TOT=19|draw_TOT=13|loss_TOT=6 |gf_TOT=69|ga_TOT=35<!-- Tottenham -->
+|win_WAT=12|draw_WAT=9 |loss_WAT=17|gf_WAT=40|ga_WAT=50<!-- Watford -->
+|win_WBA=10|draw_WBA=13|loss_WBA=15|gf_WBA=34|ga_WBA=48<!-- West Bromwich Albion -->
+|win_WHU=16|draw_WHU=14|loss_WHU=8 |gf_WHU=65|ga_WHU=51<!-- West Ham United -->
+
+<!-- Team status -->
+|status_LEI=C
+|status_AST=R
+|status_NOR=R
+|status_NEW=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_AST=[[Aston Villa F.C.|Aston Villa]]
+|name_BOU=[[AFC Bournemouth|Bournemouth]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_NOR=[[Norwich City F.C.|Norwich City]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_STK=[[Stoke City F.C.|Stoke City]]
+|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|name_SWA=[[Swansea City A.F.C.|Swansea City]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WAT=[[Watford F.C.|Watford]]
+|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules = 1) Points; 2) Goal difference; 3) Goals scored; 4) Play-offs (only if needed to decide champion, teams for relegation or teams for UEFA competitions).<ref>{{cite web |url=http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2015-16.pdf |title=Premier League – Handbook Season 2015/16 |publisher=Premier League |access-date=8 August 2015 |pages=96–97 |url-status=dead |archive-url=https://web.archive.org/web/20150906045556/http://www.premierleague.com/content/dam/premierleague/site-content/News/publications/handbooks/premier-league-handbook-2015-16.pdf |archive-date=6 September 2015}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1 |text_CLGS=Qualification for the [[2016–17 UEFA Champions League#Group stage|Champions League group stage]]
+|col_CLPO=green2 |text_CLPO=Qualification for the [[2016–17 UEFA Champions League#Play-off round|Champions League play-off round]]
+|col_ELGS=blue1 |text_ELGS=Qualification for the [[2016–17 UEFA Europa League#Group stage|Europa League group stage]] 
+|col_EL3Q=blue2 |text_EL3Q=Qualification for the [[2016–17 UEFA Europa League#Third qualifying round|Europa League third qualifying round]]
+|col_REL=red1 |text_REL=Relegation to [[2016–17 EFL Championship|EFL Championship]]
+
+|note_res_EL3Q=Manchester City qualified for the [[2016–17 UEFA Europa League#Third qualifying round|Europa League third qualifying round]] by winning the [[2015–16 Football League Cup]]. However, since they already qualified for European competition based on their league position, the spot awarded to the League Cup winners was passed to the next best-placed team (seventh-placed [[West Ham United F.C.|West Ham United]]).
+|note_res_ELGS=Manchester United qualified for the [[2016–17 UEFA Europa League#Group stage|Europa League group stage]] by winning the [[2015–16 FA Cup]]. As they had also qualified by their virtue of their league position (5th), this spot was passed to the next-highest ranked team (6th), Southampton.
+}}</onlyinclude>

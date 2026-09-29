@@ -1,0 +1,6 @@
+# Club crests: fetched by fetch_logos.py, not yet used by the page
+fetch_logos.py
+logos/
+# Source articles kept for reference; do not republish
+articles/
+__pycache__/

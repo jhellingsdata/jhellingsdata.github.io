@@ -1,0 +1,76 @@
+{{#invoke:Sports table|main|style=WDL
+|update=complete
+|source=[https://www.premierleague.com/en/tables/premier-league/2017-18/all-matchweeks Premier League]
+
+<!--Update team positions here-->
+|team1=MCI |team2=MUN |team3=TOT |team4=LIV |team5=CHE |team6=ARS |team7=BUR |team8=EVE |team9=LEI |team10=NEW |team11=CRY |team12=BOU |team13=WHU |team14=WAT |team15=BHA |team16=HUD |team17=SOU |team18=SWA |team19=STK |team20=WBA
+
+<!--Override equal team positions here if and only if Pts, GD & GF are all equal. Remove when no longer needed. Example: "|pos_XXX=21", where XXX is the team ID from the previous section.-->
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLGS |result5=ELGS |result6=ELGS |result7=EL2Q |result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|win_BOU=11|draw_BOU=11|loss_BOU=16|gf_BOU=45|ga_BOU=61<!-- AFC Bournemouth -->
+|win_ARS=19|draw_ARS=6 |loss_ARS=13|gf_ARS=74|ga_ARS=51<!-- Arsenal -->
+|win_BHA=9 |draw_BHA=13|loss_BHA=16|gf_BHA=34|ga_BHA=54<!-- Brighton & Hove Albion -->
+|win_BUR=14|draw_BUR=12|loss_BUR=12|gf_BUR=36|ga_BUR=39<!-- Burnley -->
+|win_CHE=21|draw_CHE=7 |loss_CHE=10|gf_CHE=62|ga_CHE=38<!-- Chelsea -->
+|win_CRY=11|draw_CRY=11|loss_CRY=16|gf_CRY=45|ga_CRY=55<!-- Crystal Palace -->
+|win_EVE=13|draw_EVE=10|loss_EVE=15|gf_EVE=44|ga_EVE=58<!-- Everton -->
+|win_HUD=9 |draw_HUD=10|loss_HUD=19|gf_HUD=28|ga_HUD=58<!-- Huddersfield Town -->
+|win_LEI=12|draw_LEI=11|loss_LEI=15|gf_LEI=56|ga_LEI=60<!-- Leicester City -->
+|win_LIV=21|draw_LIV=12|loss_LIV=5 |gf_LIV=84|ga_LIV=38<!-- Liverpool -->
+|win_MCI=32|draw_MCI=4 |loss_MCI=2 |gf_MCI=106|ga_MCI=27<!-- Manchester City -->
+|win_MUN=25|draw_MUN=6 |loss_MUN=7 |gf_MUN=68|ga_MUN=28<!-- Manchester United -->
+|win_NEW=12|draw_NEW=8 |loss_NEW=18|gf_NEW=39|ga_NEW=47<!-- Newcastle United -->
+|win_SOU=7 |draw_SOU=15|loss_SOU=16|gf_SOU=37|ga_SOU=56<!-- Southampton -->
+|win_STK=7 |draw_STK=12|loss_STK=19|gf_STK=35|ga_STK=68<!-- Stoke City -->
+|win_SWA=8 |draw_SWA=9 |loss_SWA=21|gf_SWA=28|ga_SWA=56<!-- Swansea City -->
+|win_TOT=23|draw_TOT=8 |loss_TOT=7 |gf_TOT=74|ga_TOT=36<!-- Tottenham Hotspur -->
+|win_WAT=11|draw_WAT=8 |loss_WAT=19|gf_WAT=44|ga_WAT=64<!-- Watford -->
+|win_WBA=6 |draw_WBA=13|loss_WBA=19|gf_WBA=31|ga_WBA=56<!-- West Bromwich Albion -->
+|win_WHU=10|draw_WHU=12|loss_WHU=16|gf_WHU=48|ga_WHU=68<!-- West Ham United -->
+
+<!--Status-->
+|status_MCI=C
+|status_SWA=R
+|status_WBA=R
+|status_STK=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_BOU=[[AFC Bournemouth|Bournemouth]]
+|name_BHA=[[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+|name_BUR=[[Burnley F.C.|Burnley]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_HUD=[[Huddersfield Town A.F.C.|Huddersfield Town]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_NEW=[[Newcastle United F.C.|Newcastle United]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_STK=[[Stoke City F.C.|Stoke City]]
+|name_SWA=[[Swansea City A.F.C.|Swansea City]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WAT=[[Watford F.C.|Watford]]
+|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules = 1) Points; 2) Goal difference; 3) Goals scored. 4) Play-offs (only if needed to decide champion, teams for relegation or teams for UEFA competitions).<ref>{{cite web |url=https://pulse-static-files.s3.amazonaws.com/premierleague/document/2017/08/11/c494a26e-b573-41e4-bcd2-daf0ca76a00d/PL_Handbook_2017-18_Digital-4-.pdf |title=Premier League Handbook 2017/18 |publisher=Premier League |pages=103–104 |date=11 August 2017 |access-date=5 September 2017 |archive-url=https://web.archive.org/web/20180218073513/https://pulse-static-files.s3.amazonaws.com/premierleague/document/2017/08/11/c494a26e-b573-41e4-bcd2-daf0ca76a00d/PL_Handbook_2017-18_Digital-4-.pdf |archive-date=18 February 2018 |url-status=dead }}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1 |text_CLGS=Qualification for the [[2018–19 UEFA Champions League#Group stage|Champions League group stage]]
+|col_ELGS=blue1  |text_ELGS=Qualification for the [[2018–19 UEFA Europa League#Group stage|Europa League group stage]]
+|col_EL2Q=blue2  |text_EL2Q={{nowrap|Qualification for the [[2018–19 UEFA Europa League#Second qualifying round|Europa League second qualifying round]]}}
+|col_REL=red1    |text_REL=Relegation to [[2018–19 EFL Championship|EFL Championship]]
+
+|note_res_ELGS=Since the winners of the [[2017–18 FA Cup]] (Chelsea) and the winners of the [[2017–18 EFL Cup]] (Manchester City) both qualified for European competition based on their league positions, the berths awarded to the 5th-placed team (Europa League group stage) and the League Cup winners (Europa League second qualifying round) were passed down the league.
+|note_res_EL2Q=ELGS
+}}</onlyinclude>

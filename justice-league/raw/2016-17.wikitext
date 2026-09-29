@@ -1,0 +1,80 @@
+{{#invoke:Sports table|main|style=WDL
+|source=[https://www.premierleague.com/en/tables/premier-league/2016-17/all-matchweeks Premier League]
+
+<!--Update team positions here-->
+|team1=CHE |team2=TOT |team3=MCI |team4=LIV |team5=ARS |team6=MUN |team7=EVE |team8=SOU |team9=BOU |team10=WBA
+|team11=WHU |team12=LEI |team13=STK |team14=CRY |team15=SWA |team16=BUR |team17=WAT |team18=HUL |team19=MID |team20=SUN
+
+<!--Update team qualifications here (defined below)-->
+|result1=CLGS |result2=CLGS |result3=CLGS |result4=CLPO
+|result5=ELGS |result6=ELTH |result7=EL3Q
+|result18=REL |result19=REL |result20=REL
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=23|draw_ARS=6 |loss_ARS=9 |gf_ARS=77|ga_ARS=44<!-- Arsenal -->
+|win_BOU=12|draw_BOU=10|loss_BOU=16|gf_BOU=55|ga_BOU=67<!-- Bournemouth -->
+|win_BUR=11|draw_BUR=7 |loss_BUR=20|gf_BUR=39|ga_BUR=55<!-- Burnley -->
+|win_CHE=30|draw_CHE=3 |loss_CHE=5 |gf_CHE=85|ga_CHE=33<!-- Chelsea -->
+|win_CRY=12|draw_CRY=5 |loss_CRY=21|gf_CRY=50|ga_CRY=63<!-- Crystal Palace -->
+|win_EVE=17|draw_EVE=10|loss_EVE=11|gf_EVE=62|ga_EVE=44<!-- Everton -->
+|win_HUL=9 |draw_HUL=7 |loss_HUL=22|gf_HUL=37|ga_HUL=80<!-- Hull City -->
+|win_LEI=12|draw_LEI=8 |loss_LEI=18|gf_LEI=48|ga_LEI=63<!-- Leicester City -->
+|win_LIV=22|draw_LIV=10|loss_LIV=6 |gf_LIV=78|ga_LIV=42<!-- Liverpool -->
+|win_MCI=23|draw_MCI=9 |loss_MCI=6 |gf_MCI=80|ga_MCI=39<!-- Manchester City -->
+|win_MUN=18|draw_MUN=15|loss_MUN=5 |gf_MUN=54|ga_MUN=29<!-- Manchester United -->
+|win_MID=5 |draw_MID=13|loss_MID=20|gf_MID=27|ga_MID=53<!-- Middlesbrough -->
+|win_SOU=12|draw_SOU=10|loss_SOU=16|gf_SOU=41|ga_SOU=48<!-- Southampton -->
+|win_STK=11|draw_STK=11|loss_STK=16|gf_STK=41|ga_STK=56<!-- Stoke City -->
+|win_SUN=6 |draw_SUN=6 |loss_SUN=26|gf_SUN=29|ga_SUN=69<!-- Sunderland -->
+|win_SWA=12|draw_SWA=5 |loss_SWA=21|gf_SWA=45|ga_SWA=70<!-- Swansea City -->
+|win_TOT=26|draw_TOT=8 |loss_TOT=4 |gf_TOT=86|ga_TOT=26<!-- Tottenham Hotspur -->
+|win_WAT=11|draw_WAT=7 |loss_WAT=20|gf_WAT=40|ga_WAT=68<!-- Watford -->
+|win_WBA=12|draw_WBA=9 |loss_WBA=17|gf_WBA=43|ga_WBA=51<!-- West Bromwich Albion -->
+|win_WHU=12|draw_WHU=9 |loss_WHU=17|gf_WHU=47|ga_WHU=64<!-- West Ham United -->
+
+<!--Status-->
+|status_CHE=C |status_HUL=R |status_MID=R |status_SUN=R
+
+<!--Team definitions (wikilinks in table)-->
+|name_ARS=[[Arsenal F.C.|Arsenal]]
+|name_BOU=[[AFC Bournemouth|Bournemouth]]
+|name_BUR=[[Burnley F.C.|Burnley]]
+|name_CHE=[[Chelsea F.C.|Chelsea]]
+|name_CRY=[[Crystal Palace F.C.|Crystal Palace]]
+|name_EVE=[[Everton F.C.|Everton]]
+|name_HUL=[[Hull City A.F.C.|Hull City]]
+|name_LEI=[[Leicester City F.C.|Leicester City]]
+|name_LIV=[[Liverpool F.C.|Liverpool]]
+|name_MCI=[[Manchester City F.C.|Manchester City]]
+|name_MUN=[[Manchester United F.C.|Manchester United]]
+|name_MID=[[Middlesbrough F.C.|Middlesbrough]]
+|name_SOU=[[Southampton F.C.|Southampton]]
+|name_STK=[[Stoke City F.C.|Stoke City]]
+|name_SUN=[[Sunderland A.F.C.|Sunderland]]
+|name_SWA=[[Swansea City A.F.C.|Swansea City]]
+|name_TOT=[[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+|name_WAT=[[Watford F.C.|Watford]]
+|name_WBA=[[West Bromwich Albion F.C.|West Bromwich Albion]]
+|name_WHU=[[West Ham United F.C.|West Ham United]]
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules = 1) Points; 2) Goal difference; 3) Goals scored; 4) Play-offs (only if needed to decide champion, teams for relegation or teams for UEFA competitions).<ref>{{cite news|title=Why are Chelsea top of the Premier League above Manchester City?|url=https://www.telegraph.co.uk/sport/football/teams/chelsea/11320967/Why-are-Chelsea-top-of-the-Premier-League-above-Manchester-City.html |archive-url=https://ghostarchive.org/archive/20220112/https://www.telegraph.co.uk/sport/football/teams/chelsea/11320967/Why-are-Chelsea-top-of-the-Premier-League-above-Manchester-City.html |archive-date=12 January 2022 |url-access=subscription |url-status=live|newspaper=The Daily Telegraph|access-date=20 August 2016|date=1 January 2015}}{{cbignore}}</ref><ref>{{cite web|url=http://pulse-static-files.s3.amazonaws.com/premierleague/document/2016/08/09/b81992f4-cf2a-4c5e-a9c1-155169074163/2016-17_Premier_League_Handbook.pdf |title=Premier League Handbook 2016/17 |publisher=Premier League |pages=103–104 |date=9 August 2016 |access-date=19 June 2018 |archive-url=https://web.archive.org/web/20160812115722/http://pulse-static-files.s3.amazonaws.com/premierleague/document/2016/08/09/b81992f4-cf2a-4c5e-a9c1-155169074163/2016-17_Premier_League_Handbook.pdf |archive-date=12 August 2016 |url-status=dead }}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLGS=green1 |text_CLGS=Qualification for the [[2017–18 UEFA Champions League#Group stage|Champions League group stage]]
+|col_ELTH=green1 |text_ELTH=Qualification for the [[2017–18 UEFA Champions League#Group stage|Champions League group stage]]
+|col_CLPO=green2 |text_CLPO=Qualification for the [[2017–18 UEFA Champions League#Play-off round|Champions League play-off round]]
+|col_ELGS=blue1  |text_ELGS=Qualification for the [[2017–18 UEFA Europa League#Group stage|Europa League group stage]]
+|col_EL3Q=blue2  |text_EL3Q={{nowrap|Qualification for the [[2017–18 UEFA Europa League#Third qualifying round|Europa League third qualifying round]]}}
+|col_REL=red1    |text_REL=Relegation to [[2017–18 EFL Championship|EFL Championship]]
+
+|note_res_ELGS=[[Arsenal F.C.|Arsenal]] qualified for the [[2017–18 UEFA Europa League#Group stage|Europa League group stage]] by winning the [[2016–17 FA Cup]]. As they had also qualified there by the virtue of their league position (5th), this spot was passed to the next-highest ranked team (6th), [[Manchester United F.C.|Manchester United]].
+
+|note_res_ELTH=[[Manchester United F.C.|Manchester United]] qualified for the [[2017–18 UEFA Champions League#Group stage|Champions League group stage]] by winning the [[2016–17 UEFA Europa League]]. Based on their league position (6th), they would have received the spot above to enter the [[2017–18 UEFA Europa League#Group stage|Europa League group stage]]. This spot was vacated without replacement as per UEFA regulations.
+
+|note_res_EL3Q=[[Manchester United F.C.|Manchester United]], winners of the [[2016–17 EFL Cup]], initially attained a spot in the [[2017–18 UEFA Europa League#Third qualifying round|Europa League third qualifying round]]. That was passed to the next-highest ranked team in the league not already qualified for UEFA competitions (7th-placed [[Everton F.C.|Everton]]).
+
+}}</onlyinclude>

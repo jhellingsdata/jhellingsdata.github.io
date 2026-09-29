@@ -1,0 +1,84 @@
+{{#invoke:Sports table|main|style=WDL|source=[https://www.premierleague.com/en/tables/premier-league/2023-24/all-matchweeks Premier League]
+|result1=CLLS |result2=CLLS |result3=CLLS |result4=CLLS |result5=ELLS |result6=ECLPO |result8=ELLScup |result18=REL |result19=REL |result20=REL
+
+<!--Update team positions here-->
+|team_order=MCI, ARS, LIV, AVL, TOT, CHE, NEW, MUN, WHU, CRY, BHA, BOU, FUL, WOL, EVE, BRE, NFO, LUT, BUR, SHU
+
+<!--Update team results here and then (if needed) positions above. Don't forget to update the date (update parameter).-->
+|update=complete
+|win_ARS=28|draw_ARS=5 |loss_ARS=5 |gf_ARS=91|ga_ARS=29 <!-- Arsenal -->
+|win_AVL=20|draw_AVL=8 |loss_AVL=10|gf_AVL=76|ga_AVL=61 <!-- Aston Villa -->
+|win_BOU=13|draw_BOU=9 |loss_BOU=16|gf_BOU=54|ga_BOU=67 <!-- AFC Bournemouth -->
+|win_BRE=10|draw_BRE=9 |loss_BRE=19|gf_BRE=56|ga_BRE=65 <!-- Brentford -->
+|win_BHA=12|draw_BHA=12|loss_BHA=14|gf_BHA=55|ga_BHA=62 <!-- Brighton & Hove Albion-->
+|win_BUR=5 |draw_BUR=9 |loss_BUR=24|gf_BUR=41|ga_BUR=78 <!-- Burnley -->
+|win_CHE=18|draw_CHE=9 |loss_CHE=11|gf_CHE=77|ga_CHE=63 <!-- Chelsea -->
+|win_CRY=13|draw_CRY=10|loss_CRY=15|gf_CRY=57|ga_CRY=58 <!-- Crystal Palace -->
+|win_EVE=13|draw_EVE=9 |loss_EVE=16|gf_EVE=40|ga_EVE=51 <!-- Everton -->
+|win_FUL=13|draw_FUL=8 |loss_FUL=17|gf_FUL=55|ga_FUL=61 <!-- Fulham -->
+|win_LIV=24|draw_LIV=10|loss_LIV=4 |gf_LIV=86|ga_LIV=41 <!-- Liverpool -->
+|win_LUT=6 |draw_LUT=8 |loss_LUT=24|gf_LUT=52|ga_LUT=85 <!-- Luton Town -->
+|win_MCI=28|draw_MCI=7 |loss_MCI=3 |gf_MCI=96|ga_MCI=34 <!-- Manchester City-->
+|win_MUN=18|draw_MUN=6 |loss_MUN=14|gf_MUN=57|ga_MUN=58 <!-- Manchester United -->
+|win_NEW=18|draw_NEW=6 |loss_NEW=14|gf_NEW=85|ga_NEW=62 <!-- Newcastle United -->
+|win_NFO=9 |draw_NFO=9 |loss_NFO=20|gf_NFO=49|ga_NFO=67 <!-- Nottingham Forest -->
+|win_SHU=3 |draw_SHU=7 |loss_SHU=28|gf_SHU=35|ga_SHU=104<!-- Sheffield United -->
+|win_TOT=20|draw_TOT=6 |loss_TOT=12|gf_TOT=74|ga_TOT=61 <!-- Tottenham Hotspur -->
+|win_WHU=14|draw_WHU=10|loss_WHU=14|gf_WHU=60|ga_WHU=74 <!-- West Ham United -->
+|win_WOL=13|draw_WOL=7 |loss_WOL=18|gf_WOL=50|ga_WOL=65 <!-- Wolverhampton Wanderers -->
+
+<!--Team definitions (wikilinks in table)-->
+| name_ARS = [[Arsenal F.C.|Arsenal]]
+| name_AVL = [[Aston Villa F.C.|Aston Villa]]
+| name_BOU = [[AFC Bournemouth|Bournemouth]]
+| name_BRE = [[Brentford F.C.|Brentford]]
+| name_BHA = [[Brighton & Hove Albion F.C.|Brighton & Hove Albion]]
+| name_BUR = [[Burnley F.C.|Burnley]]
+| name_CHE = [[Chelsea F.C.|Chelsea]]
+| name_CRY = [[Crystal Palace F.C.|Crystal Palace]]
+| name_EVE = [[Everton F.C.|Everton]]
+| name_FUL = [[Fulham F.C.|Fulham]]
+| name_LIV = [[Liverpool F.C.|Liverpool]]
+| name_LUT = [[Luton Town F.C.|Luton Town]]
+| name_MCI = [[Manchester City F.C.|Manchester City]]
+| name_MUN = [[Manchester United F.C.|Manchester United]]
+| name_NEW = [[Newcastle United F.C.|Newcastle United]]
+| name_NFO = [[Nottingham Forest F.C.|Nottingham Forest]]
+| name_SHU = [[Sheffield United F.C.|Sheffield United]]
+| name_TOT = [[Tottenham Hotspur F.C.|Tottenham Hotspur]]
+| name_WHU = [[West Ham United F.C.|West Ham United]]
+| name_WOL = [[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]]
+
+<!--Points deductions-->
+|adjust_points_EVE=-8
+|hth_EVE=Everton were deducted eight points for breaching profitability and sustainability rules. They were originally deducted ten points but this was reduced to six after an appeal. The club were then deducted an additional two points for further PSR breaches.<ref name="everton points deduction">{{cite news|title=Everton FC deducted 10 points by independent Commission|url=https://www.premierleague.com/news/3788486/|publisher=Premier League|date=17 November 2023|access-date=17 November 2023}}</ref><ref name="everton appeal outcome">{{Cite news |title=Everton punishment reduced to six points |url=https://www.bbc.com/sport/football/68273436 |access-date=26 February 2024|last=Jackson|first=Bobbie|work=[[BBC Sport]]|language=en-GB}}</ref><ref name="everton second points deduction">{{cite news|title=Everton deducted two points for breaching Premier League Profitability and Sustainability Rules for second time|url=https://www.skysports.com/football/news/11671/13107642/everton-deducted-two-points-for-breaching-premier-league-profitability-and-sustainability-rules-for-second-time|date=8 April 2024|access-date=8 April 2024|work=[[Sky Sports]]|language=en-GB}}</ref> 
+
+|adjust_points_NFO=-4
+|hth_NFO=Nottingham Forest were deducted four points for breaching profitability and sustainability rules. The club appealed the decision but were unsuccessful.<ref name="nottingham forest points deduction">{{Cite news |title= Nottingham Forest docked four points for Premier League financial rules breach |url= https://www.theguardian.com/football/2024/mar/18/nottingham-forest-docked-four-points-premier-league-financial-rules-breach-profitability-and-sustainability |date=18 March 2024 |access-date=18 March 2024|last=Unwin|first=Will|work=[[The Guardian]]|language=en-GB}}</ref><ref name="nottingham forest appeal">{{Cite news |title=Forest lodge appeal against points deduction |url=https://www.bbc.com/sport/football/68661196 |access-date=2024-03-28 |work=BBC Sport |language=en-GB}}</ref><ref name="nottingham forest appeal outcome">{{Cite news |title=Forest points deduction appeal rejected |url=https://www.bbc.co.uk/sport/football/articles/cd13r56z21xo |access-date=2024-05-07 |work=[[BBC Sport]] |language=en-GB}}</ref>
+
+<!--Status-->
+|status_MCI=C
+|status_LUT=R
+|status_BUR=R
+|status_SHU=R
+
+<!--Table settings and rules-->
+|show_limit=5
+|class_rules= 1) Points; 2) Goal difference; 3) Goals scored; 4) If the champions, relegated teams or qualified teams for UEFA competitions cannot be determined by rules 1 to 3, rules 4.1 to 4.3 are applied – 4.1) Points gained in head-to-head record between such teams; 4.2) Away goals scored in head-to-head record between such teams; 4.3) Play-offs<ref name="PLhandbook">{{cite book |url=https://resources.premierleague.com/premierleague/document/2023/08/31/132475d9-6ce7-48f3-b168-0d9f234c995a/PL_Handbook_2023-24_DIGITAL_29.08.23.pdf |archive-url=https://web.archive.org/web/20230901205852/https://resources.premierleague.com/premierleague/document/2023/08/31/132475d9-6ce7-48f3-b168-0d9f234c995a/PL_Handbook_2023-24_DIGITAL_29.08.23.pdf |url-status=live |title=Premier League Handbook: Season 2023/24 |date=29 August 2023 |archive-date=1 September 2023 |access-date=22 September 2023}}</ref>
+
+<!--Qualification and relegation column definitions-->
+|res_col_header=QR
+|col_CLLS=green1
+|text_CLLS={{nowrap|Qualification for the [[2024–25 UEFA Champions League#League phase|Champions League league phase]]}}
+|col_ELLS=blue1
+|text_ELLS={{nowrap|Qualification for the [[2024–25 UEFA Europa League#League phase|Europa League league phase]]}}
+|col_ELLScup=blue1
+|text_ELLScup={{nowrap|Qualification for the [[2024–25 UEFA Europa League#League phase|Europa League league phase]]}}
+|col_ECLPO=yellow1
+|text_ECLPO={{nowrap|Qualification for the [[2024–25 UEFA Conference League#Play-off_round|Conference League play-off round]]}}
+|col_REL=red1
+|text_REL=Relegation to [[2024–25 EFL Championship|EFL Championship]]
+
+<!--Notes-->
+|note_res_ECLPO=Since the winners of the [[2023–24 EFL Cup]], Liverpool, qualified for the Champions League, the spot given to the League Cup winners (Conference League play-off round) was passed to the sixth-placed team.
+|note_res_ELLScup=Manchester United qualified for the Europa League league phase as the [[2023–24 FA Cup]] winners.}}</onlyinclude>
