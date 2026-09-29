@@ -65,6 +65,12 @@
                 <span class="card-date">November 2024</span>
                 <p class="card-text">Live dashboard for football.</p>
             </div> -->
+            <div class="card" onclick="location.href='justice-league/';">
+                <h3 class="card-title">Justice League</h3>
+                <div class="card-chart" id="chart12"></div>
+                <span class="card-date">September 2026</span>
+                <p class="card-text">What if Manchester City lose points? Test deductions for every season since 2009/10.</p>
+            </div>
             <div class="card" onclick="location.href='data-story/tax-explorer.html';">
                 <h3 class="card-title">Tax Explorer</h3>
                 <!-- <div class="card-chart" id="chart7"></div> -->
@@ -229,6 +235,7 @@
         var myChart7 = "charts/teaser/202405_LocalAuthorities.json";
         var myChart9 = "charts/teaser/202410_SimpleBar.json";
         var myChart10 = "charts/teaser/202411_DeficitUK.json";
+        var myChart12 = "charts/teaser/202609_JusticeLeague.json";
 
         // Embed the charts in the divs above
         vegaEmbed('#chart1', myChart1, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
@@ -240,6 +247,7 @@
         vegaEmbed('#chart7', myChart7, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
         vegaEmbed('#chart9', myChart9, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
         vegaEmbed('#chart10', myChart10, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart12', myChart12, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
     </script>
 
 </body>

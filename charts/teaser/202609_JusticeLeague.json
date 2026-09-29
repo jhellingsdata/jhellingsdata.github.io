@@ -1,0 +1,96 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Smallest points deduction that would cost Manchester City each Premier League title (from justice-league/, tipping points table)",
+  "data": {
+    "values": [
+      {"season": "11/12", "points": 1, "period": "Charged seasons"},
+      {"season": "13/14", "points": 3, "period": "Charged seasons"},
+      {"season": "17/18", "points": 20, "period": "Charged seasons"},
+      {"season": "18/19", "points": 2, "period": "Later titles"},
+      {"season": "20/21", "points": 13, "period": "Later titles"},
+      {"season": "21/22", "points": 2, "period": "Later titles"},
+      {"season": "22/23", "points": 6, "period": "Later titles"},
+      {"season": "23/24", "points": 3, "period": "Later titles"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "font": "Circular Std",
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.8,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridOpacity": 0.5,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "titleFont": "Circular Std",
+      "titleFontWeight": "normal",
+      "tickSize": 4
+    },
+    "axisX": {"grid": false, "ticks": false, "labelAngle": 0, "labelPadding": 4},
+    "axisY": {
+      "gridDash": [1, 5],
+      "ticks": false,
+      "domain": false,
+      "labelPadding": 5,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": -22,
+      "titleY": -8
+    },
+    "legend": {
+      "orient": "top-right",
+      "direction": "vertical",
+      "labelColor": "#676A86",
+      "labelFont": "Circular Std",
+      "labelFontSize": 10,
+      "symbolType": "square",
+      "symbolSize": 70,
+      "rowPadding": 2,
+      "padding": 0,
+      "offset": 0,
+      "fillColor": "#F6EFEC"
+    }
+  },
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "x": {"field": "season", "type": "ordinal", "sort": null, "title": null},
+    "y": {
+      "field": "points",
+      "type": "quantitative",
+      "scale": {"domain": [0, 22]},
+      "axis": {"values": [0, 5, 10, 15, 20], "title": "Points deduction to lose the title"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "width": {"band": 0.62}, "cornerRadiusEnd": 2},
+      "encoding": {
+        "color": {
+          "field": "period",
+          "type": "nominal",
+          "sort": ["Charged seasons", "Later titles"],
+          "scale": {"domain": ["Charged seasons", "Later titles"], "range": ["#1c2c5b", "#6cabdd"]},
+          "title": null
+        },
+        "tooltip": [
+          {"field": "season", "title": "Season"},
+          {"field": "points", "title": "Points to lose title"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "dy": -6, "baseline": "bottom", "fontSize": 11, "color": "#3d3f54"},
+      "transform": [{"calculate": "'\u2212' + datum.points", "as": "label"}],
+      "encoding": {"text": {"field": "label", "type": "nominal"}}
+    }
+  ]
+}
