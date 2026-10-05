@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
@@ -68,23 +68,47 @@
             <div class="card" onclick="location.href='justice-league/';">
                 <h3 class="card-title">Justice League</h3>
                 <div class="card-chart" id="chart12"></div>
-                <span class="card-date">September 2026</span>
+                <span class="card-date"><span class="card-tag">Dashboard</span>September 2026</span>
                 <p class="card-text">What if Manchester City lose points? Test deductions for every season since 2009/10.</p>
+            </div>
+            <div class="card" onclick="location.href='https://www.lse-mayors.uk/';">
+                <h3 class="card-title">Mapping English Devolution</h3>
+                <img class="card-image" src="charts/teaser/202608_Devolution.jpg" alt="">
+                <span class="card-date"><span class="card-tag">Research tool</span>August 2026</span>
+                <p class="card-text">Research site for LSE Growth Lab and LSE Cities. Map the powers of each strategic authority, compare local economies, and find areas that face similar challenges.</p>
             </div>
             <div class="card" onclick="location.href='data-story/tax-explorer.html';">
                 <h3 class="card-title">Tax Explorer</h3>
                 <!-- <div class="card-chart" id="chart7"></div> -->
                 <img src="data-story/chart-tax-rates.png" alt="" style="width: 100%">
-                <span class="card-date">September 2025</span>
+                <span class="card-date"><span class="card-tag">Tool</span>September 2025</span>
                 <p class="card-text">
                     Visualise your marginal tax rates.
                     <span class="construction-text">Under development</span>
                 </p>
             </div>
+            <div class="card" onclick="location.href='https://niesr.ac.uk/publications/britains-trade-challenge?type=national-institute-economic-review';">
+                <h3 class="card-title">Britain's Trade Challenge</h3>
+                <img class="card-image" src="charts/teaser/202504_NIER.jpg" alt="">
+                <span class="card-date"><span class="card-tag">Paper</span>April 2025</span>
+                <p class="card-text">With Richard Davies, in the National Institute Economic Review. We trace the origin of 67,000 supermarket products to measure how trade barriers push up food prices.</p>
+            </div>
+            <div class="card" onclick="location.href='https://eco-search-app.vercel.app/';">
+                <h3 class="card-title">ECO Semantic Search</h3>
+                <div class="card-chart" id="chart14"></div>
+                <span class="card-date"><span class="card-tag">Tool</span>February 2025</span>
+                <p class="card-text">Search every Economics Observatory article by meaning, not keywords, so editors can find old pieces to repost and cite. Built on OpenAI embeddings and Pinecone.</p>
+            </div>
+            <div class="card" onclick="location.href='https://github.com/jhellingsdata/ecostyles';">
+                <h3 class="card-title">ECO Styles</h3>
+                <div class="card-chart" id="chart13"></div>
+                <span class="card-date"><span class="card-tag">Package</span>January 2025</span>
+                <p class="card-text">Python package on PyPI that applies Economics Observatory house styles to Altair charts, with helpers for sources, recession shading and population data.</p>
+            </div>
             <div class="card" onclick="location.href='uk.html';">
                 <h3 class="card-title">UK Dashboard</h3>
                 <div class="card-chart" id="chart10"></div>
-                <span class="card-date">November 2024</span>
+                <span class="card-date"><span class="card-tag">Dashboard</span>November 2024</span>
                 <p class="card-text">
                     Live dashboard of UK economic indicators.
                     <span class="construction-text">Under development</span>
@@ -93,17 +117,35 @@
             <div class="card" onclick="location.href='tutorials-home.html';">
                 <h3 class="card-title">Chart Tutorials: Vega-Lite</h3>
                 <div class="card-chart" id="chart9"></div>
-                <span class="card-date">October 2024</span>
+                <span class="card-date"><span class="card-tag">Teaching</span>October 2024</span>
                 <p class="card-text">
                     Growing collection of tutorials related to chart building using Vega-Lite.
                     <span class="construction-text">Under development</span>
                 </p>
             </div>
+            <div class="card" onclick="location.href='https://github.com/jhellingsdata/map-data/';">
+                <h3 class="card-title">Map Data</h3>
+                <div class="card-chart" id="chart15"></div>
+                <span class="card-date"><span class="card-tag">Data</span>September 2024</span>
+                <p class="card-text">Boundary files for the UK, US and world, simplified and standardised as TopoJSON, ready to drop into Vega-Lite and Altair maps.</p>
+            </div>
+            <div class="card" onclick="location.href='https://www.economicsobservatory.com/modern-data-visualisation';">
+                <h3 class="card-title">Data Visualisation Masterclass</h3>
+                <div class="card-chart" id="chart16"></div>
+                <span class="card-date"><span class="card-tag">Teaching</span>July 2024</span>
+                <p class="card-text">One-day course for beginners, co-developed at the Economics Observatory. Five sessions take students from their first Vega-Lite chart to a live website of their own.</p>
+            </div>
+            <div class="card" onclick="location.href='https://economicsobservatory.com/autocpi.pdf';">
+                <h3 class="card-title">AutoCPI</h3>
+                <img class="card-image" src="charts/teaser/202405_AutoCPI.jpg" alt="">
+                <span class="card-date"><span class="card-tag">Paper</span>May 2024</span>
+                <p class="card-text">Launch paper for AutoCPI, a daily scrape of UK supermarket prices. With Richard Davies and Finn McEvoy, we show how AI can make price data faster, bigger and cheaper.</p>
+            </div>
             <div class="card" onclick="location.href='p21.html';">
                 <h3 class="card-title">21 charts for 21 countries</h3>
                 <!-- <div class="card-chart" id="chartx"></div> -->
                 <img src="charts/p21/C1_Population_World.png" alt="" style="width: 100%">
-                <span class="card-date">May 2024</span>
+                <span class="card-date"><span class="card-tag">Charts</span>May 2024</span>
                 <p class="card-text">World's 21 most populous countries, compared through a series a charts on five economic topics. These charts were produced for LSE's Growth Day 2024.
                 </p>
             </div>
@@ -111,7 +153,7 @@
             <div class="card" onclick="location.href='data-story/local-authorities.html';">
                 <h3 class="card-title">Local Authority Debt</h3>
                 <div class="card-chart" id="chart7"></div>
-                <span class="card-date">May 2024</span>
+                <span class="card-date"><span class="card-tag">Data story</span>May 2024</span>
                 <p class="card-text">Visualising the debt crisis across UK Local Authorities.
                 </p>
             </div>
@@ -128,7 +170,7 @@
             <div class="card" onclick="location.href='https://econ4everyone.uchicago.edu/macro-syllabus';">
                 <h3 class="card-title">Economics for Everyone</h3>
                 <div class="card-chart" id="chart5"></div>
-                <span class="card-date">March 2023</span>
+                <span class="card-date"><span class="card-tag">Charts</span>March 2023</span>
                 <p class="card-text">Selection of charts produced for a new macroeconomics course at the <a
                         href="https://econ4everyone.uchicago.edu/macro-syllabus/">University of
                         Chicago</a>.</p>
@@ -137,14 +179,14 @@
             <div class="card" onclick="location.href='london-crime.html';">
                 <h3 class="card-title">London crime during the pandemic</h3>
                 <img src="charts/teaser/202301_LondonCrime.png" alt="" style="width: 100%">
-                <span class="card-date">January 2023</span>
+                <span class="card-date"><span class="card-tag">Coursework</span>January 2023</span>
                 <p class="card-text">Data analysis assignment for UoB software & programming module.</p>
             </div>
 
             <div class="card" onclick="location.href='housing.html';">
                 <h3 class="card-title">Housing</h3>
                 <div class="card-chart" id="chart4"></div>
-                <span class="card-date">April 2022</span>
+                <span class="card-date"><span class="card-tag">Charts</span>April 2022</span>
                 <p class="card-text">Selection of charts on house building in the UK. Produced for the <a
                         href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
             </div>
@@ -152,7 +194,7 @@
             <div class="card" onclick="location.href='monetary_policy.html';">
                 <h3 class="card-title">Monetary Policy</h3>
                 <div class="card-chart" id="chart3"></div>
-                <span class="card-date">April 2022</span>
+                <span class="card-date"><span class="card-tag">Charts</span>April 2022</span>
                 <p class="card-text">Selection of charts focusing on key economic indicators related to Unit 10 of the
                     Core Econ textbook: Banks, Money and the Credit Market. Produced for the <a
                         href="https://www.economicsobservatory.com/">Economics Observatory</a>.</p>
@@ -161,7 +203,7 @@
             <div class="card" onclick="location.href='Project.html';">
                 <h3 class="card-title">Data Science: Project</h3>
                 <img class="card-chart" src="charts/teaser/202201_DS_project_map.png"></img>
-                <span class="card-date">January 2022</span>
+                <span class="card-date"><span class="card-tag">Coursework</span>January 2022</span>
                 <p class="card-text"><span class="leader">Renewables and the potential for solar. </span>The page holds a
                     collection of charts produced for the Data Science course final project.
                 </p>
@@ -170,7 +212,7 @@
             <div class="card" onclick="location.href='Portfolio.html';">
                 <h3 class="card-title">Data Science: Portfolio</h3>
                 <div class="card-chart" id="chart1"></div>
-                <span class="card-date">December 2021</span>
+                <span class="card-date"><span class="card-tag">Coursework</span>December 2021</span>
                 <p class="card-text">A collection of charts produced throughout the Data Science unit, part of the
                     University of Bristol Economics course. Each chart
                     demonstrates different data science and visualisation techniques.</p>
@@ -236,6 +278,10 @@
         var myChart9 = "charts/teaser/202410_SimpleBar.json";
         var myChart10 = "charts/teaser/202411_DeficitUK.json";
         var myChart12 = "charts/teaser/202609_JusticeLeague.json";
+        var myChart13 = "charts/teaser/202501_EcoStyles.json";
+        var myChart14 = "charts/teaser/202502_EcoSearch.json";
+        var myChart15 = "charts/teaser/202409_MapData.json";
+        var myChart16 = "charts/teaser/202407_Masterclass.json";
 
         // Embed the charts in the divs above
         vegaEmbed('#chart1', myChart1, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
@@ -248,6 +294,10 @@
         vegaEmbed('#chart9', myChart9, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
         vegaEmbed('#chart10', myChart10, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
         vegaEmbed('#chart12', myChart12, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart13', myChart13, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart14', myChart14, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart15', myChart15, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        vegaEmbed('#chart16', myChart16, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
     </script>
 
 </body>

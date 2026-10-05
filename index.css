@@ -96,6 +96,12 @@ color: #dc2626;
 }
 
 /* Responsive breakpoints */
+@media (max-width: 799px) {
+    .page-wrapper {
+        padding: 2rem 1rem;
+    }
+}
+
 @media (min-width: 800px) {
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
@@ -155,6 +161,26 @@ color: #dc2626;
     font-size: 0.9em;
     color: #666;
     margin: 10px 0;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-tag {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.1rem 0.45rem;
+    border: 1px solid #d9cdc8;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #4b5563;
 }
 
 .card-text {

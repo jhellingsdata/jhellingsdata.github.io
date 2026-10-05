@@ -1,0 +1,535 @@
+{
+  "config": {
+    "font": "Circular Std",
+    "text": {
+      "color": "#676A86",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 7,
+      "dy": 0,
+      "fontSize": 11
+    },
+    "view": {
+      "stroke": null,
+      "continuousWidth": 400,
+      "continuousHeight": 300,
+      "discreteWidth": 400,
+      "discreteHeight": 300
+    },
+    "range": {
+      "category": [
+        "#36B7B4",
+        "#E6224B",
+        "#F4C245",
+        "#0063AF",
+        "#00A767",
+        "#179FDB",
+        "#EB5C2E",
+        "#5C267B",
+        "#122B39"
+      ],
+      "diverging": [
+        "#E6224B",
+        "#E54753",
+        "#C9C9C9",
+        "#179FDB",
+        "#122B39"
+      ],
+      "heatmap": [
+        "#C9C9C9",
+        "#179FDB",
+        "#0063AF",
+        "#122B39"
+      ],
+      "ordinal": [
+        "#00A767",
+        "#36B7B4",
+        "#179FDB",
+        "#0063AF",
+        "#243B5A"
+      ]
+    },
+    "bar": {
+      "color": "#179fdb"
+    },
+    "line": {
+      "color": "#e6224b"
+    },
+    "rule": {
+      "color": "#676A86"
+    },
+    "area": {
+      "fill": "#d6d4d4b3",
+      "opacity": 0.8
+    },
+    "point": {
+      "filled": true,
+      "size": 80,
+      "color": "#e6224b",
+      "opacity": 0.95
+    },
+    "geoshape": {
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "rect": {
+      "fill": "#d6d4d4",
+      "opacity": 0.35
+    },
+    "axis": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "labelFont": "Circular Std",
+      "labelOpacity": 0.7,
+      "tickColor": "#676A86",
+      "tickOpacity": 0.5,
+      "domainColor": "#676A86",
+      "domainOpacity": 0.5,
+      "gridColor": "#676A86",
+      "gridDash": [
+        2,
+        2
+      ],
+      "gridOpacity": 0.5,
+      "title": null,
+      "titleColor": "#676A86",
+      "titleOpacity": 0.8,
+      "tickSize": 4
+    },
+    "axisXDiscrete": {
+      "grid": false,
+      "labelAngle": 0,
+      "tickCount": 10,
+      "tickOpacity": 0.5,
+      "title": null
+    },
+    "axisYDiscrete": {
+      "ticks": false,
+      "labelPadding": 5
+    },
+    "axisXTemporal": {
+      "grid": false,
+      "ticks": true,
+      "title": ""
+    },
+    "axisXQuantitative": {
+      "grid": true
+    },
+    "axisYQuantitative": {
+      "gridColor": "#676A86",
+      "gridDash": [
+        1,
+        5
+      ],
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 5,
+      "tickCount": 8,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleBaseline": "bottom",
+      "titleX": 0,
+      "titleY": -5
+    },
+    "title": {
+      "color": "#676A86",
+      "subtitleColor": "#676A86E6",
+      "font": "Circular Std",
+      "subtitleFont": "Circular Std",
+      "anchor": "start",
+      "fontSize": 14,
+      "subtitleFontSize": 12,
+      "subtitlePadding": 4,
+      "offset": 0,
+      "frame": "group"
+    },
+    "legend": {
+      "titleColor": "#122b39",
+      "title": null,
+      "labelColor": "#122b39",
+      "labelFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "name": "data-b81878a8d3f128f81652fe96bcdbbddc"
+      },
+      "mark": {
+        "type": "area",
+        "color": "#179FDB",
+        "line": {
+          "color": "#0063AF"
+        },
+        "opacity": 0.25
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "month",
+            "format": "%b %Y",
+            "title": "Month",
+            "type": "temporal"
+          },
+          {
+            "field": "articles",
+            "format": ",",
+            "title": "Articles",
+            "type": "quantitative"
+          }
+        ],
+        "x": {
+          "axis": {
+            "format": "%Y",
+            "tickCount": 6
+          },
+          "field": "month",
+          "title": null,
+          "type": "temporal"
+        },
+        "y": {
+          "axis": {
+            "tickCount": 4
+          },
+          "field": "articles",
+          "title": "Articles indexed",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "name": "data-f538bb2ac657830f59bf0092bebd2dda"
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "color": "#0063AF",
+        "dx": -4,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "articles",
+          "format": ",",
+          "type": "quantitative"
+        },
+        "x": {
+          "field": "month",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "articles",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "height": "container",
+  "width": "container",
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-b81878a8d3f128f81652fe96bcdbbddc": [
+      {
+        "month": "2020-05",
+        "articles": 40
+      },
+      {
+        "month": "2020-06",
+        "articles": 65
+      },
+      {
+        "month": "2020-07",
+        "articles": 92
+      },
+      {
+        "month": "2020-08",
+        "articles": 117
+      },
+      {
+        "month": "2020-09",
+        "articles": 140
+      },
+      {
+        "month": "2020-10",
+        "articles": 162
+      },
+      {
+        "month": "2020-11",
+        "articles": 190
+      },
+      {
+        "month": "2020-12",
+        "articles": 214
+      },
+      {
+        "month": "2021-01",
+        "articles": 236
+      },
+      {
+        "month": "2021-02",
+        "articles": 255
+      },
+      {
+        "month": "2021-03",
+        "articles": 278
+      },
+      {
+        "month": "2021-04",
+        "articles": 301
+      },
+      {
+        "month": "2021-05",
+        "articles": 323
+      },
+      {
+        "month": "2021-06",
+        "articles": 351
+      },
+      {
+        "month": "2021-07",
+        "articles": 377
+      },
+      {
+        "month": "2021-08",
+        "articles": 394
+      },
+      {
+        "month": "2021-09",
+        "articles": 411
+      },
+      {
+        "month": "2021-10",
+        "articles": 425
+      },
+      {
+        "month": "2021-11",
+        "articles": 437
+      },
+      {
+        "month": "2021-12",
+        "articles": 452
+      },
+      {
+        "month": "2022-01",
+        "articles": 464
+      },
+      {
+        "month": "2022-02",
+        "articles": 481
+      },
+      {
+        "month": "2022-03",
+        "articles": 502
+      },
+      {
+        "month": "2022-04",
+        "articles": 519
+      },
+      {
+        "month": "2022-05",
+        "articles": 538
+      },
+      {
+        "month": "2022-06",
+        "articles": 556
+      },
+      {
+        "month": "2022-07",
+        "articles": 572
+      },
+      {
+        "month": "2022-08",
+        "articles": 580
+      },
+      {
+        "month": "2022-09",
+        "articles": 595
+      },
+      {
+        "month": "2022-10",
+        "articles": 607
+      },
+      {
+        "month": "2022-11",
+        "articles": 618
+      },
+      {
+        "month": "2022-12",
+        "articles": 635
+      },
+      {
+        "month": "2023-01",
+        "articles": 647
+      },
+      {
+        "month": "2023-02",
+        "articles": 660
+      },
+      {
+        "month": "2023-03",
+        "articles": 677
+      },
+      {
+        "month": "2023-04",
+        "articles": 688
+      },
+      {
+        "month": "2023-05",
+        "articles": 696
+      },
+      {
+        "month": "2023-06",
+        "articles": 714
+      },
+      {
+        "month": "2023-07",
+        "articles": 725
+      },
+      {
+        "month": "2023-08",
+        "articles": 729
+      },
+      {
+        "month": "2023-09",
+        "articles": 742
+      },
+      {
+        "month": "2023-10",
+        "articles": 753
+      },
+      {
+        "month": "2023-11",
+        "articles": 764
+      },
+      {
+        "month": "2023-12",
+        "articles": 775
+      },
+      {
+        "month": "2024-01",
+        "articles": 790
+      },
+      {
+        "month": "2024-02",
+        "articles": 799
+      },
+      {
+        "month": "2024-03",
+        "articles": 813
+      },
+      {
+        "month": "2024-04",
+        "articles": 822
+      },
+      {
+        "month": "2024-05",
+        "articles": 835
+      },
+      {
+        "month": "2024-06",
+        "articles": 858
+      },
+      {
+        "month": "2024-07",
+        "articles": 874
+      },
+      {
+        "month": "2024-08",
+        "articles": 880
+      },
+      {
+        "month": "2024-09",
+        "articles": 888
+      },
+      {
+        "month": "2024-10",
+        "articles": 898
+      },
+      {
+        "month": "2024-11",
+        "articles": 909
+      },
+      {
+        "month": "2024-12",
+        "articles": 919
+      },
+      {
+        "month": "2025-01",
+        "articles": 923
+      },
+      {
+        "month": "2025-02",
+        "articles": 928
+      },
+      {
+        "month": "2025-03",
+        "articles": 937
+      },
+      {
+        "month": "2025-04",
+        "articles": 948
+      },
+      {
+        "month": "2025-05",
+        "articles": 965
+      },
+      {
+        "month": "2025-06",
+        "articles": 978
+      },
+      {
+        "month": "2025-07",
+        "articles": 984
+      },
+      {
+        "month": "2025-08",
+        "articles": 989
+      },
+      {
+        "month": "2025-09",
+        "articles": 997
+      },
+      {
+        "month": "2025-10",
+        "articles": 1008
+      },
+      {
+        "month": "2025-11",
+        "articles": 1019
+      },
+      {
+        "month": "2025-12",
+        "articles": 1020
+      },
+      {
+        "month": "2026-01",
+        "articles": 1025
+      },
+      {
+        "month": "2026-02",
+        "articles": 1030
+      },
+      {
+        "month": "2026-03",
+        "articles": 1034
+      },
+      {
+        "month": "2026-04",
+        "articles": 1040
+      },
+      {
+        "month": "2026-05",
+        "articles": 1042
+      }
+    ],
+    "data-f538bb2ac657830f59bf0092bebd2dda": [
+      {
+        "month": "2026-05",
+        "articles": 1042
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "UK local authority districts (May 2024), loaded straight from the map-data repository and coloured by nation",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/map-data/refs/heads/main/gbr/LAD_UK_2024_05.json",
+    "format": {"type": "topojson", "feature": "geog"}
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "legend": {
+      "labelColor": "#676A86",
+      "labelFontSize": 11,
+      "symbolType": "square",
+      "symbolSize": 80,
+      "symbolStrokeWidth": 0,
+      "rowPadding": 4,
+      "offset": -40
+    }
+  },
+  "width": "container",
+  "height": "container",
+  "transform": [
+    {
+      "calculate": "{'E': 'England', 'W': 'Wales', 'S': 'Scotland', 'N': 'Northern Ireland'}[substring(datum.properties.id, 0, 1)]",
+      "as": "nation"
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "mark": {"type": "geoshape", "stroke": "#F6EFEC", "strokeWidth": 0.3},
+  "encoding": {
+    "color": {
+      "field": "nation",
+      "type": "nominal",
+      "scale": {
+        "domain": ["England", "Scotland", "Wales", "Northern Ireland"],
+        "range": ["#0063AF", "#36B7B4", "#E6224B", "#F4C245"]
+      },
+      "legend": {"title": null, "orient": "right"}
+    },
+    "tooltip": [
+      {"field": "properties.name", "title": "Local authority"},
+      {"field": "nation", "title": "Nation"}
+    ]
+  }
+}
