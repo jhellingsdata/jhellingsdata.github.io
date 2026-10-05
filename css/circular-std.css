@@ -1,0 +1,35 @@
+/* Circular Std, the Economics Observatory house font.
+   Weights follow the font's own naming, matching how ecostyles registers it with vl-convert:
+   Book 400 (default text), Medium 500, Bold 700, Black 900. */
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/circular-std/CircularStd-Book.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/circular-std/CircularStd-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/circular-std/CircularStd-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/circular-std/CircularStd-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

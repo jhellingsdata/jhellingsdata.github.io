@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/circular-std.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <script src="jquery-3.6.0.js"></script>
+    <script src="js/fonts-ready.js"></script>
 
     <!--The next three lines allow the Vega embed-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -283,21 +285,23 @@
         var myChart15 = "charts/teaser/202409_MapData.json";
         var myChart16 = "charts/teaser/202407_Masterclass.json";
 
-        // Embed the charts in the divs above
-        vegaEmbed('#chart1', myChart1, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        // vegaEmbed('#chart2', myChart2, { "actions": false });
-        vegaEmbed('#chart3', myChart3, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart4', myChart4, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart5', myChart5, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart6', myChart6, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart7', myChart7, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart9', myChart9, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart10', myChart10, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart12', myChart12, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart13', myChart13, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart14', myChart14, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart15', myChart15, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
-        vegaEmbed('#chart16', myChart16, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        // Embed the charts in the divs above, once Circular Std has loaded
+        circularReady().then(() => {
+            vegaEmbed('#chart1', myChart1, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            // vegaEmbed('#chart2', myChart2, { "actions": false });
+            vegaEmbed('#chart3', myChart3, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart4', myChart4, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart5', myChart5, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart6', myChart6, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart7', myChart7, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart9', myChart9, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart10', myChart10, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart12', myChart12, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart13', myChart13, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart14', myChart14, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart15', myChart15, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+            vegaEmbed('#chart16', myChart16, { "actions": false, "config": { "background": "rgba(0,0,0,0)" } });
+        });
     </script>
 
 </body>

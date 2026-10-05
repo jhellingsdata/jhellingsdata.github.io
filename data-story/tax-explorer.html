@@ -7,6 +7,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <link rel="stylesheet" href="../css/circular-std.css">
+    <script src="../js/fonts-ready.js"></script>
     <style>
         body {
             font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -536,7 +538,7 @@
             const spec = createSpec(data, summaryIncome);
 
             
-            vegaEmbed('#vis', spec, {
+            circularReady().then(() => vegaEmbed('#vis', spec, {
                 actions: true,
                 config: {
                     legend: {
@@ -553,7 +555,7 @@
                     },
                     ...styleConfig
                 }
-            });
+            }));
             
             console.log(spec);
 

@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <link rel="stylesheet" href="../../css/circular-std.css">
+    <script src="../../js/fonts-ready.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -94,7 +96,7 @@
         </div>
     </div>
     <script>
-        vegaEmbed('#chart1', 'scatter.json', {"actions": false});
+        circularReady().then(() => vegaEmbed('#chart1', 'scatter.json', {"actions": false}));
 
         async function loadMedalsData() {
             const response = await fetch('https://eco-data-cache.s3.eu-west-2.amazonaws.com/olympics/live_results/medals.csv');
