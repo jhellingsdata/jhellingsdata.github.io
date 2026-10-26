@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreating an FT chart in Vega-Lite</title>
+    <meta name="description" content="A step-by-step rebuild of the Financial Times chart of UK housebuilding in Vega-Lite and Altair, from the default bar chart to a close copy.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tutorial.css">
+
+    <!-- Same versions as the PP434 course examples -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+</head>
+
+<body data-lang="vl">
+
+    <!-- Diagonal hatching used by the 'Going further' demo. Vega's SVG renderer can point a fill at it. -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <defs>
+            <pattern id="ft-hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="4" stroke="#66605c" stroke-width="1.5" />
+            </pattern>
+        </defs>
+    </svg>
+
+    <div class="topbar">
+        <div class="topbar-inner">
+            <a href="../index.html">Josh Hellings</a>
+            <span class="sep">/</span>
+            <a href="../tutorials-home.html">Tutorials</a>
+            <span class="sep">/</span>
+            <span>Recreating charts</span>
+        </div>
+    </div>
+
+    <header class="article-header">
+        <div class="header-text">
+            <p class="kicker">Recreating charts · Part 1</p>
+            <h1>Recreating an FT chart in Vega-Lite</h1>
+            <p class="dek">We rebuild the Financial Times' chart of UK housebuilding one step at a time, from Vega-Lite's
+                default bar chart to a close copy. Each step adds one idea, with the code in Vega-Lite and Altair.</p>
+            <div class="meta">
+                <span><strong>Level:</strong> new to Vega-Lite</span>
+                <span><strong>Tools:</strong> Vega-Lite 6, Altair 6</span>
+                <span><strong>Time:</strong> about 30 minutes</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <h2>Show code in</h2>
+                <div class="lang-switch" role="group" aria-label="Code language">
+                    <button type="button" data-lang-btn="vl" aria-pressed="true">Vega-Lite</button>
+                    <button type="button" data-lang-btn="altair" aria-pressed="false">Altair</button>
+                </div>
+
+                <h2>Contents</h2>
+                <nav>
+                    <ul class="toc">
+                        <li><a href="#target"><span class="num"></span>The target</a></li>
+                        <li><a href="#data"><span class="num">0</span>Get the data</a></li>
+                        <li><a href="#step-1"><span class="num">1</span>Start from an example</a></li>
+                        <li><a href="#step-2"><span class="num">2</span>Dates and colour</a></li>
+                        <li><a href="#step-3"><span class="num">3</span>Size and axes</a></li>
+                        <li><a href="#step-4"><span class="num">4</span>FT colours</a></li>
+                        <li><a href="#step-5"><span class="num">5</span>Legend and stack order</a></li>
+                        <li><a href="#step-6"><span class="num">6</span>Layers: the target line</a></li>
+                        <li><a href="#step-7"><span class="num">7</span>Missing years</a></li>
+                        <li><a href="#step-8"><span class="num">8</span>Titles and font</a></li>
+                        <li><a href="#step-9"><span class="num">9</span>Finishing touches</a></li>
+                        <li><a href="#embed"><span class="num"></span>Put it on your site</a></li>
+                        <li><a href="#further"><span class="num"></span>Going further</a></li>
+                        <li><a href="#reference"><span class="num"></span>Reference</a></li>
+                    </ul>
+                </nav>
+
+                <h2>Files</h2>
+                <ul class="side-links">
+                    <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/tree/main/examples/vega-lite/recreate/ft-housebuilding/specs">Vega-Lite specs</a></li>
+                    <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/tree/main/examples/vega-lite/recreate/ft-housebuilding/altair">Altair scripts</a></li>
+                    <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/Data/ONS_UK_housebuilding_long.csv">Data (CSV)</a></li>
+                    <li><a href="https://vega.github.io/editor/">Vega Editor</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="article">
+
+            <!-- ============ The target ============ -->
+            <section id="target">
+                <figure>
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/target-ft-chart.png"
+                        alt="FT stacked bar chart titled 'The UK has not built 300,000 homes a year since 1977', showing completed dwellings by sector from 1950 to 2023, with a dashed line at 300,000 labelled 'Labour target' and hatching over 2020 to 2022."
+                        width="716" height="611">
+                    <figcaption>The target. <a href="https://www.ft.com/content/40ecd316-7f15-43a9-afe3-6095c6081e00">Financial Times</a>, July 2024. Data: ONS.</figcaption>
+                </figure>
+
+                <p class="lead">Copying a chart you admire is one of the fastest ways to learn a charting tool. Every
+                    detail you notice in the original (a lighter grid line, a legend in an odd place, a gap in the
+                    data) becomes a question: <em>which property controls that?</em></p>
+
+                <p>The FT chart above is a good first target. It is a stacked bar chart, the kind of chart Vega-Lite
+                    makes by default, but it adds a reference line, a label, a shaded period of missing data and the
+                    FT's house style. By the end we will have a chart that is hard to tell apart from the original.</p>
+
+                <div class="callout principle">
+                    <span class="callout-title">Why the FT chart works</span>
+                    <p>The main quantity (homes built) is shown by <strong>position along a common scale</strong>,
+                        the most accurate channel in Mackinlay's ranking. Sector is a nominal variable, so it gets
+                        <strong>hue</strong>, which Bertin calls <em>selective</em>: you can pick out one sector at a
+                        glance. Everything else is kept quiet so the data stands out.</p>
+                </div>
+
+                <h3>How to use this page</h3>
+                <ul>
+                    <li>Each step shows <strong>what changes</strong>, the <strong>chart it makes</strong>, and the
+                        <strong>full code</strong> (click to expand).</li>
+                    <li>Use the switch in the sidebar to show code in <strong>Vega-Lite</strong> (JSON) or
+                        <strong>Altair</strong> (Python). Both produce the same chart.</li>
+                    <li>Open any chart in the Vega Editor from its <strong>…</strong> menu and try changing values.
+                        The Altair scripts run as they are in Google Colab.</li>
+                </ul>
+
+                <p>The steps follow the grammar of graphics: <strong>data</strong>, then <strong>marks</strong> and
+                    <strong>encodings</strong>, then <strong>scales</strong> and <strong>guides</strong> (axes and
+                    legends), then extra <strong>layers</strong>. Vega-Lite specs are built in the same order, which is
+                    why each step only touches one part of the spec.</p>
+            </section>
+
+            <!-- ============ Data ============ -->
+            <section id="data">
+                <h2><span class="step-label">Step 0</span>Get the data</h2>
+
+                <p>The FT credits the ONS, so we start there. The dataset is
+                    <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/ukhousebuildingpermanentdwellingsstartedandcompleted">House
+                        building, UK: permanent dwellings started and completed</a>. Download the Excel file and open
+                    the <code>Contents</code> sheet. The table we want is <strong>3a</strong>: dwellings completed by
+                    sector, United Kingdom, by calendar year.</p>
+
+                <h3>In Excel</h3>
+                <ol>
+                    <li>The FT shows <em>completed</em> homes, so ignore the columns for homes <em>started</em>.</li>
+                    <li>Copy <code>Period</code> and the three <code>Completed</code> sector columns to a new sheet.
+                        Leave out the total: the stacked bars add up to it anyway.</li>
+                </ol>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/excel-wide-columns.png"
+                        alt="Excel sheet with columns Period, Completed - Private Enterprise, Completed - Housing Associations and Completed - Local Authorities."
+                        loading="lazy">
+                    <figcaption>The four columns we need, in "wide" format: one column per sector.</figcaption>
+                </figure>
+                <ol start="3">
+                    <li>Stack the three sector columns on top of each other, so the sheet has three columns:
+                        <code>Period</code>, <code>Sector</code> and <code>Completed</code>.</li>
+                    <li>Set the number format of <code>Completed</code> to <em>General</em>, so the CSV has no
+                        thousands separators, then save the sheet as CSV.</li>
+                </ol>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/excel-long-format.png"
+                        alt="Excel sheet in long format with columns Period, Sector and Completed."
+                        loading="lazy">
+                    <figcaption>The same data in "long" format: one row per year and sector.</figcaption>
+                </figure>
+
+                <div class="callout tip">
+                    <span class="callout-title">Why long format?</span>
+                    <p>Vega-Lite maps <em>columns</em> to visual channels. With a single <code>Sector</code> column
+                        we can write <code>"color": {"field": "Sector"}</code> and get one colour per sector. In wide
+                        format there is no single field to point at.</p>
+                </div>
+
+                <h3>Or in Python</h3>
+                <p>The same steps in pandas. The full script is
+                    <a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/data/prepare_data.py"><code>prepare_data.py</code></a>;
+                    the key step is <code>melt</code>, which turns wide data into long.</p>
+
+                <div class="code-block" data-title="prepare_data.py (excerpt)">
+<pre><code class="language-python"># Table 3a has five rows of notes above the column headings
+wide = pd.read_excel(io.BytesIO(response.content), sheet_name="3a", skiprows=5)
+
+wide = wide[["Period", "Completed - Private Enterprise",
+             "Completed - Housing Associations", "Completed - Local Authorities"]]
+wide.columns = ["Period", "Private enterprise", "Housing associations", "Local authorities"]
+
+# Stack the three sector columns into one 'Sector' column
+long = wide.melt(id_vars="Period", var_name="Sector", value_name="Completed")
+
+# ONS marks missing years with '[x2]'. Turn these into blanks so Vega-Lite skips them.
+long["Completed"] = pd.to_numeric(long["Completed"], errors="coerce").astype("Int64")
+long.to_csv("ons_housebuilding_uk_long.csv", index=False)</code></pre>
+                </div>
+
+                <h3>Host the file</h3>
+                <p>A chart on a website needs the data at a URL. Commit the CSV to a public GitHub repository, open it,
+                    and click <strong>Raw</strong>. The address of that page is the URL to use.</p>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/github-raw-button.png"
+                        alt="GitHub file view with the Raw button in the top right." loading="lazy">
+                    <figcaption>The Raw button gives a plain-text link that Vega-Lite can load.</figcaption>
+                </figure>
+
+                <div class="callout warn">
+                    <span class="callout-title">Data gets revised</span>
+                    <p>The ONS revises recent years and has added 2024 and 2025 since the FT published. This page uses
+                        a copy downloaded in 2024 that matches the FT chart. <a href="#further">Going further</a> shows
+                        the chart with the latest data.</p>
+                </div>
+            </section>
+
+            <!-- ============ Step 1 ============ -->
+            <section id="step-1">
+                <h2><span class="step-label">Step 1</span>Start from an example</h2>
+
+                <p>Few people write a spec from a blank page. Open the
+                    <a href="https://vega.github.io/vega-lite/examples/bar.html">simple bar chart</a> from the
+                    Vega-Lite example gallery, then make two changes:</p>
+                <ol>
+                    <li>Replace the inline <code>values</code> in <code>data</code> with a <code>url</code> pointing to
+                        our CSV.</li>
+                    <li>Change the field names in <code>encoding</code> to match our columns: <code>Period</code> on
+                        the x-axis and <code>Completed</code> on the y-axis.</li>
+                </ol>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_housebuilding_long.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Period", "type": "nominal"},
+    "y": {"field": "Completed", "type": "quantitative"}
+  }
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">import altair as alt
+
+url = "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_housebuilding_long.csv"
+
+alt.Chart(url).mark_bar().encode(
+    x="Period:N",
+    y="Completed:Q",
+)</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 1 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/01_simple_bar.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/01_simple_bar.json"></div>
+                </div>
+
+                <p>Each year has three rows (one per sector), and Vega-Lite <strong>stacks</strong> bars by default,
+                    so each bar already shows the total. We just can't see the sectors yet.</p>
+                <p>The chart is also very wide (it's shrunk to fit here). A <code>nominal</code> axis treats each
+                    year as a separate category and gives every one its own labelled slot.</p>
+
+                <div class="callout tip">
+                    <span class="callout-title">Altair shorthand</span>
+                    <p>In Altair, <code>"Period:N"</code> is short for a field called <code>Period</code> with type
+                        <code>nominal</code>. The letters stand for nominal (<code>N</code>), ordinal
+                        (<code>O</code>), quantitative (<code>Q</code>) and temporal (<code>T</code>). Altair needs
+                        the type when the data comes from a URL, because it can't look inside the file.</p>
+                </div>
+            </section>
+
+            <!-- ============ Step 2 ============ -->
+            <section id="step-2">
+                <h2><span class="step-label">Step 2</span>Dates and colour</h2>
+
+                <p>Two changes turn this into a stacked bar chart:</p>
+                <ul>
+                    <li><code>Period</code> holds years, so its type should be <code>temporal</code>, not
+                        <code>nominal</code>. Vega-Lite then spaces the bars by time and labels the axis with dates.</li>
+                    <li>Adding a <code>color</code> channel for <code>Sector</code> splits each bar into its three
+                        parts and adds a legend.</li>
+                </ul>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"encoding": {
+  "x": {"field": "Period", "type": "temporal"},
+  "y": {"field": "Completed", "type": "quantitative"},
+  "color": {"field": "Sector", "type": "nominal"}
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">.encode(
+    x="Period:T",
+    y="Completed:Q",
+    color="Sector:N",
+)</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 2 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/02_temporal_stacked.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/02_temporal_stacked.json"></div>
+                </div>
+
+                <p>The shape is right. Now compare it with the target and list what is different: the size, the
+                    colours, the axes, the legend, the order of the sectors, the bars running into each other, and
+                    everything that isn't a bar (titles, the target line, the shading). The rest of the walkthrough
+                    works down that list.</p>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/02_temporal_stacked.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/02_temporal_stacked.py">
+                    <summary>Full code for step 2</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 3 ============ -->
+            <section id="step-3">
+                <h2><span class="step-label">Step 3</span>Size and axes</h2>
+
+                <h3>Size</h3>
+                <p>Right-click the FT chart and choose <strong>Inspect</strong>. Hovering over the
+                    <code>&lt;svg&gt;</code> element shows the whole graphic is 700 × 417 pixels. The grid lines
+                    inside it are 649 pixels wide, and the zero line sits 389 pixels below the top.</p>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/inspect-svg-size.png"
+                        alt="Browser inspector highlighting the FT chart's svg element, labelled 700 by 416.58."
+                        loading="lazy">
+                    <figcaption>The browser inspector shows the size of any element on the page.</figcaption>
+                </figure>
+                <p>In Vega-Lite, <code>width</code> and <code>height</code> set the size of the <em>plot area</em>,
+                    not the whole graphic. Axes, legend and titles are added around it. So we can use the FT's
+                    plot size directly.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"width": 649,
+"height": 389,</code></pre>
+<pre data-lang="altair"><code class="language-python">.properties(width=649, height=389)</code></pre>
+                </div>
+
+                <h3>Start in 1950</h3>
+                <p>Our data begins in 1949; the FT's chart begins in 1950. A <code>filter</code> transform drops
+                    the rows we don't want before anything is drawn.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"transform": [
+  {"filter": "utcyear(datum.Period) >= 1950"}
+],</code></pre>
+<pre data-lang="altair"><code class="language-python">.transform_filter("utcyear(datum.Period) >= 1950")</code></pre>
+                </div>
+
+                <div class="callout warn">
+                    <span class="callout-title">Gotcha: comparing dates with numbers</span>
+                    <p>The obvious filter, <code>datum.Period &gt;= 1950</code>, removes every year before
+                        <strong>1971</strong>. Because <code>Period</code> is encoded as temporal, Vega-Lite turns it
+                        into a date before the filter runs. A date compared with a number becomes milliseconds since
+                        1 January 1970, and every date before 1970 is negative. <code>utcyear()</code> pulls the year
+                        back out as a number.</p>
+                </div>
+
+                <h3>One bar per year, centred on its tick</h3>
+                <p>A temporal axis treats each value as a moment, so Vega-Lite doesn't know how wide a bar should
+                    be. Adding <code>"timeUnit": "utcyear"</code> tells it each bar covers a whole year. Three more
+                    properties match the FT's layout:</p>
+                <ul>
+                    <li><code>"bandPosition": 0</code> centres each bar on the 1 January tick, rather than filling
+                        the space from 1 January to 31 December. This is why the FT's "1950" label sits under the
+                        middle of the first bar.</li>
+                    <li><code>"width": {"band": 0.85}</code> makes each bar 85% of a year wide, leaving a gap.
+                        (Measured from the FT chart: 14.8 pixels of bar to 2.7 of gap.)</li>
+                    <li><code>"binSpacing": 0</code> removes the extra 1 pixel gap Vega-Lite adds between
+                        time-unit bars, since we've set our own.</li>
+                </ul>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"mark": {"type": "bar", "width": {"band": 0.85}, "binSpacing": 0},
+"encoding": {
+  "x": {
+    "field": "Period",
+    "type": "temporal",
+    "timeUnit": "utcyear",
+    "bandPosition": 0,
+    ...</code></pre>
+<pre data-lang="altair"><code class="language-python">.mark_bar(width={"band": 0.85}, binSpacing=0)
+.encode(
+    x=alt.X("utcyear(Period):T", bandPosition=0, ...),
+    ...</code></pre>
+                </div>
+
+                <div class="callout tip">
+                    <span class="callout-title">Why "utc"?</span>
+                    <p>A year like <code>1950</code> is read as midnight on 1 January 1950 in UTC. Without
+                        <code>utc</code>, Vega-Lite shows dates in the reader's local time zone. For a reader in New
+                        York that moment falls on 31 December 1949, so every bar would shift back a year. Using
+                        <code>utcyear</code> keeps everyone on the same calendar.</p>
+                </div>
+
+                <h3>Axes</h3>
+                <p>The FT strips its axes back to the minimum. Using the inspector on a grid line shows its colour:
+                    <code>rgb(204, 193, 183)</code>, or <code>#ccc1b7</code>.</p>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/inspect-gridlines.png"
+                        alt="Inspector showing horizontal grid line elements with stroke rgb(204, 193, 183) and stroke-width 1."
+                        loading="lazy">
+                    <figcaption>Each grid line is an SVG <code>&lt;line&gt;</code> with its colour in the
+                        <code>style</code>.</figcaption>
+                </figure>
+                <ul>
+                    <li><strong>No axis titles.</strong> Readers don't need to be told the x-axis shows years, and
+                        the subtitle will say what the bars measure. Use <code>"title": null</code>.</li>
+                    <li><strong>No vertical grid lines</strong>, and light horizontal ones.</li>
+                    <li><strong>No y-axis line or ticks</strong>, and a tick every ten years on the x-axis.</li>
+                    <li><strong>Labels in thousands.</strong> <code>labelExpr</code> rewrites each label with an
+                        expression, so <code>datum.value / 1000</code> turns 300000 into 300.</li>
+                    <li><strong>A fixed y scale.</strong> The FT's axis stops just above the tallest bar, at about
+                        440,000.</li>
+                </ul>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"x": {
+  ...
+  "title": null,
+  "axis": {
+    "grid": false,
+    "tickCount": {"interval": "year", "step": 10},
+    "domainColor": "#999189",
+    "tickColor": "#999189"
+  }
+},
+"y": {
+  "field": "Completed",
+  "type": "quantitative",
+  "title": null,
+  "scale": {"domain": [0, 440000], "nice": false},
+  "axis": {
+    "gridColor": "#ccc1b7",
+    "domain": false,
+    "ticks": false,
+    "labelPadding": 5,
+    "tickCount": 5,
+    "labelExpr": "datum.value / 1000"
+  }
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">x=alt.X(
+    "utcyear(Period):T",
+    bandPosition=0,
+    title=None,
+    axis=alt.Axis(
+        grid=False,
+        tickCount={"interval": "year", "step": 10},
+        domainColor="#999189",
+        tickColor="#999189",
+    ),
+),
+y=alt.Y(
+    "Completed:Q",
+    title=None,
+    scale=alt.Scale(domain=[0, 440000], nice=False),
+    axis=alt.Axis(
+        gridColor="#ccc1b7",
+        domain=False,
+        ticks=False,
+        labelPadding=5,
+        tickCount=5,
+        labelExpr="datum.value / 1000",
+    ),
+),</code></pre>
+                </div>
+
+                <div class="callout warn">
+                    <span class="callout-title">Gotcha: "nice" scales</span>
+                    <p>Vega-Lite rounds scale domains to "nice" numbers, even ones you set yourself. Without
+                        <code>"nice": false</code>, our domain of 440,000 quietly becomes 450,000.</p>
+                </div>
+
+                <p>Last, Vega-Lite draws a thin border around the plot area by default. It is set in the chart's
+                    <code>config</code>, which holds default styles for the whole chart:</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"config": {
+  "view": {"stroke": "transparent"}
+},</code></pre>
+<pre data-lang="altair"><code class="language-python">.configure_view(stroke="transparent")</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 3 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/03_size_axes.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/03_size_axes.json"></div>
+                </div>
+
+                <div class="callout principle">
+                    <span class="callout-title">Data-ink ratio</span>
+                    <p>Edward Tufte argued that most of the ink in a chart should show data. Each element we
+                        removed (axis titles, the border, vertical grid lines, y-axis ticks) carried no
+                        information. Notice too that the y-axis starts at zero: we read a bar by its length, so a
+                        bar chart that doesn't start at zero misleads.</p>
+                </div>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/03_size_axes.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/03_size_axes.py">
+                    <summary>Full code for step 3</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 4 ============ -->
+            <section id="step-4">
+                <h2><span class="step-label">Step 4</span>FT colours</h2>
+
+                <p>Rather than guess colours from a screenshot, we can read them from the page. In the inspector,
+                    click the element picker (top left), then hover over a bar.</p>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/inspect-picker.png"
+                        alt="Browser developer tools with the element picker icon circled." loading="lazy">
+                    <figcaption>The element picker selects whatever you hover over.</figcaption>
+                </figure>
+                <p>The <strong>Styles</strong> panel then lists everything applied to that bar. For a local
+                    authorities bar:</p>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/inspect-bar-styles.png"
+                        alt="Styles panel showing fill-opacity 0.9, opacity 0.9, fill rgb(239, 101, 144), stroke-width 0."
+                        loading="lazy">
+                    <figcaption>A bar's styles: its fill colour, plus <code>opacity</code> and
+                        <code>fill-opacity</code> both set to 0.9.</figcaption>
+                </figure>
+
+                <p>Doing the same for each sector gives:</p>
+                <table class="ref-table">
+                    <thead>
+                        <tr><th>Sector</th><th>Fill</th><th>Hex</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Private enterprise</td><td><code>rgb(15, 84, 153)</code></td><td><code>#0f5499</code></td></tr>
+                        <tr><td>Housing associations</td><td><code>rgb(112, 220, 230)</code></td><td><code>#70dce6</code></td></tr>
+                        <tr><td>Local authorities</td><td><code>rgb(239, 101, 144)</code></td><td><code>#ef6590</code></td></tr>
+                    </tbody>
+                </table>
+
+                <p>Vega-Lite marks have the same <code>opacity</code> and <code>fillOpacity</code> properties as SVG,
+                    so we copy both. (Together they make the bars 81% opaque, which lets a little of the
+                    background through.)</p>
+
+                <p>To give each sector its colour, list the sectors in the colour scale's <code>domain</code> and
+                    the colours in the same order in its <code>range</code>. The domain also sets the order of the
+                    legend. Without it, sectors are sorted alphabetically.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"mark": {
+  "type": "bar",
+  ...
+  "opacity": 0.9,
+  "fillOpacity": 0.9
+},
+"encoding": {
+  ...
+  "color": {
+    "field": "Sector",
+    "type": "nominal",
+    "scale": {
+      "domain": ["Private enterprise", "Housing associations", "Local authorities"],
+      "range": ["#0f5499", "#70dce6", "#ef6590"]
+    }
+  }
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">sectors = ["Private enterprise", "Housing associations", "Local authorities"]
+colours = ["#0f5499", "#70dce6", "#ef6590"]
+
+...
+.mark_bar(width={"band": 0.85}, binSpacing=0, opacity=0.9, fillOpacity=0.9)
+.encode(
+    ...
+    color=alt.Color("Sector:N", scale=alt.Scale(domain=sectors, range=colours)),
+)</code></pre>
+                </div>
+
+                <p>Finally, the FT's pink "paper" background and its dark grey axis labels:</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"background": "#fff1e5",
+"config": {
+  "view": {"stroke": "transparent"},
+  "axis": {"labelColor": "#4d4845"}
+},</code></pre>
+<pre data-lang="altair"><code class="language-python">.properties(width=649, height=389, background="#fff1e5")
+.configure_view(stroke="transparent")
+.configure_axis(labelColor="#4d4845")</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 4 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/04_colours.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/04_colours.json"></div>
+                </div>
+
+                <div class="callout principle">
+                    <span class="callout-title">Colour accessibility</span>
+                    <p>The FT's three colours differ in <strong>lightness</strong> (dark blue, mid pink, pale
+                        teal) as well as hue. Readers with colour-vision deficiency, or anyone printing in grey,
+                        can still tell the sectors apart. When you pick your own palette, check it in a simulator such
+                        as <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis</a>.</p>
+                </div>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/04_colours.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/04_colours.py">
+                    <summary>Full code for step 4</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 5 ============ -->
+            <section id="step-5">
+                <h2><span class="step-label">Step 5</span>Legend and stack order</h2>
+
+                <h3>Legend</h3>
+                <p>Legend settings live in a <code>legend</code> object inside the <code>color</code> channel.
+                    The FT's legend sits above the chart, in a single column, with no title and wide rectangular
+                    swatches.</p>
+                <ul>
+                    <li><code>"orient": "top"</code> and <code>"direction": "vertical"</code> place it.</li>
+                    <li><code>symbolType</code> accepts any SVG path as well as named shapes. The path
+                        <code>M-1.5,-1H1.5V1H-1.5Z</code> draws a rectangle one and a half times as wide as it is
+                        tall.</li>
+                </ul>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"color": {
+  ...
+  "legend": {
+    "orient": "top",
+    "direction": "vertical",
+    "title": null,
+    "symbolType": "M-1.5,-1H1.5V1H-1.5Z",
+    "symbolSize": 120,
+    "labelFontSize": 16,
+    "labelColor": "#33302e"
+  }
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">color=alt.Color(
+    "Sector:N",
+    scale=alt.Scale(domain=sectors, range=colours),
+    legend=alt.Legend(
+        orient="top",
+        direction="vertical",
+        title=None,
+        symbolType="M-1.5,-1H1.5V1H-1.5Z",
+        symbolSize=120,
+        labelFontSize=16,
+        labelColor="#33302e",
+    ),
+),</code></pre>
+                </div>
+
+                <h3>Stack order</h3>
+                <p>By default, Vega-Lite stacks the segments in legend order, from the top down: private enterprise
+                    sits on top of each bar. The FT does the reverse, with private enterprise at the base, so the
+                    largest sector rests on the axis.</p>
+                <p>The <code>order</code> channel controls stacking, but it can only sort a field up or down. Our
+                    order isn't alphabetical either way, so we make a field that holds it. A
+                    <code>calculate</code> transform looks up each sector's position in our list (0, 1 or 2) with
+                    <code>indexof</code>, and the bars stack from 0 upwards.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"transform": [
+  {"filter": "utcyear(datum.Period) >= 1950"},
+  {
+    "calculate": "indexof(['Private enterprise', 'Housing associations', 'Local authorities'], datum.Sector)",
+    "as": "SectorOrder"
+  }
+],
+...
+"encoding": {
+  ...
+  "order": {"field": "SectorOrder", "type": "quantitative"}
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">.transform_calculate(SectorOrder=f"indexof({sectors}, datum.Sector)")
+...
+.encode(
+    ...
+    order="SectorOrder:Q",
+)</code></pre>
+                </div>
+
+                <div class="callout warn">
+                    <span class="callout-title">Gotcha: Altair shorthand in JSON</span>
+                    <p>You may see <code>"order": {"field": "max(Completed)"}</code> suggested for this. In a
+                        Vega-Lite spec, <code>max(Completed)</code> is read as the name of a column, and there is no
+                        such column. The chart only looks right because, with nothing to sort on, Vega-Lite falls
+                        back to the order of rows in the CSV, which happens to match. Shorthand such as
+                        <code>max(Completed)</code> is an Altair feature. In JSON, aggregation goes in its own
+                        <code>"aggregate"</code> property.</p>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 5 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/05_legend_order.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/05_legend_order.json"></div>
+                </div>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/05_legend_order.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/05_legend_order.py">
+                    <summary>Full code for step 5</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 6 ============ -->
+            <section id="step-6">
+                <h2><span class="step-label">Step 6</span>Layers: the target line</h2>
+
+                <p>So far the chart has one mark: bars. The FT chart has four kinds of element:</p>
+                <ol>
+                    <li>stacked bars (<code>bar</code> mark)</li>
+                    <li>a dashed line at 300,000 (<code>rule</code> mark)</li>
+                    <li>the "Labour target" label (<code>text</code> mark)</li>
+                    <li>a shaded block over the missing years (<code>rect</code> mark)</li>
+                </ol>
+                <p>To combine marks, we use a <strong>layered</strong> spec. Properties shared by every layer (size,
+                    background, config) stay at the top. Each layer gets its own <code>mark</code> and
+                    <code>encoding</code>. Layers are drawn in order, so later layers sit on top.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {...},
+  "transform": [...],
+  "width": 649,
+  "height": 389,
+  "background": "#fff1e5",
+  "config": {...},
+  "layer": [
+    {"mark": {...}, "encoding": {...}},   // the bars, moved here unchanged
+    {...}                                 // the target line and its label
+  ]
+}</code></pre>
+<pre data-lang="altair"><code class="language-python"># In Altair, build each layer as its own chart...
+bars = alt.Chart(url).mark_bar(...).encode(...)
+
+# ...then combine them. Shared properties go on the layered chart.
+chart = (
+    alt.layer(bars, rule, label)
+    .properties(width=649, height=389, background="#fff1e5")
+    .configure_view(stroke="transparent")
+)</code></pre>
+                </div>
+
+                <h3>The target line and label</h3>
+                <p>The target isn't in our CSV, so this layer brings its own data: a single row with
+                    <code>target: 300000</code>. A <code>rule</code> with only a <code>y</code> encoding draws a
+                    horizontal line across the full width.</p>
+                <p>The label uses the same data and the same <code>y</code>, so we <strong>nest</strong> a second
+                    layer inside: shared data and encoding go on the outside, and each inner layer adds a mark.</p>
+                <ul>
+                    <li>A list of strings, <code>["Labour", "target"]</code>, puts each item on its own line.</li>
+                    <li><code>"x": {"expr": "width / 2"}</code> centres the label horizontally, using the chart's
+                        width.</li>
+                    <li><code>dy</code> lifts it above the line. Text is centred on its position, and the second
+                        line sits one line height (17 pixels) below the first, so it takes 30 pixels to clear the
+                        line with a small gap.</li>
+                </ul>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">{
+  "data": {"values": [{"target": 300000}]},
+  "encoding": {"y": {"field": "target", "type": "quantitative"}},
+  "layer": [
+    {"mark": {"type": "rule", "strokeDash": [6, 4], "strokeWidth": 2.2, "color": "#33302e"}},
+    {
+      "mark": {
+        "type": "text",
+        "text": ["Labour", "target"],
+        "x": {"expr": "width / 2"},
+        "dy": -30,
+        "lineHeight": 17,
+        "fontSize": 14.4,
+        "fontWeight": 600,
+        "color": "#33302e"
+      }
+    }
+  ]
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">target = alt.Chart(alt.Data(values=[{"target": 300000}])).encode(y="target:Q")
+rule = target.mark_rule(strokeDash=[6, 4], strokeWidth=2.2, color="#33302e")
+label = target.mark_text(
+    text=["Labour", "target"],
+    x=alt.expr("width / 2"),
+    dy=-30,
+    lineHeight=17,
+    fontSize=14.4,
+    fontWeight=600,
+    color="#33302e",
+)</code></pre>
+                </div>
+
+                <div class="callout tip">
+                    <span class="callout-title">Layers with their own data</span>
+                    <p>A layer with its own <code>data</code> ignores the top-level data <em>and</em> the top-level
+                        transforms. So our 1950 filter doesn't touch the target row, which is what we want.</p>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 6 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/06_layers_target.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/06_layers_target.json"></div>
+                </div>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/06_layers_target.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/06_layers_target.py">
+                    <summary>Full code for step 6</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 7 ============ -->
+            <section id="step-7">
+                <h2><span class="step-label">Step 7</span>Missing years</h2>
+
+                <p>Covid disrupted data collection, so there are no figures for 2020 to 2022. Vega-Lite already
+                    leaves those years blank, because it skips empty values. The FT goes further and shades the
+                    gap, so readers know the data is missing rather than zero.</p>
+
+                <p>The inspector shows the FT draws a <code>&lt;rect&gt;</code> filled with a diagonal hatching
+                    pattern at 20% opacity:</p>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/inspect-hatched-area.png"
+                        alt="Inspector showing a rect with opacity 0.2 and fill url(#fl-pattern-diagonal-x)."
+                        loading="lazy">
+                    <figcaption>The shaded area is a rectangle with a pattern fill. The <code>fl-</code> prefixes
+                        show the FT built this chart in Flourish.</figcaption>
+                </figure>
+
+                <p>A <code>rect</code> layer with <code>x</code> and <code>x2</code> but no <code>y</code> fills the
+                    full height of the chart. Since our bars are centred on 1 January, the gap runs from halfway
+                    between 2019 and 2020 (1 July 2019) to halfway between 2022 and 2023 (1 July 2022). We add the
+                    layer <em>first</em>, so it sits behind the bars and the target line.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"layer": [
+  {
+    "data": {"values": [{"start": "2019-07-01", "end": "2022-07-01"}]},
+    "mark": {"type": "rect", "color": "#ccc1b7", "opacity": 0.5},
+    "encoding": {
+      "x": {"field": "start", "type": "temporal"},
+      "x2": {"field": "end"}
+    }
+  },
+  {...},   // bars
+  {...}    // target line and label
+]</code></pre>
+<pre data-lang="altair"><code class="language-python">gap = (
+    alt.Chart(alt.Data(values=[{"start": "2019-07-01", "end": "2022-07-01"}]))
+    .mark_rect(color="#ccc1b7", opacity=0.5)
+    .encode(x="start:T", x2="end")
+)
+
+chart = alt.layer(gap, bars, rule, label)</code></pre>
+                </div>
+
+                <p>Vega-Lite has no pattern fills, so we use a flat tint. <a href="#further">Going further</a>
+                    shows how to add real hatching on a web page.</p>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 7 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/07_missing_data.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/07_missing_data.json"></div>
+                </div>
+
+                <div class="callout principle">
+                    <span class="callout-title">Show missing data honestly</span>
+                    <p>A blank space can be misread as zero, and a line chart would join 2019 to 2023 as if we knew
+                        what happened in between. Marking the gap tells the reader the truth: we don't know.</p>
+                </div>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/07_missing_data.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/07_missing_data.py">
+                    <summary>Full code for step 7</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 8 ============ -->
+            <section id="step-8">
+                <h2><span class="step-label">Step 8</span>Titles and font</h2>
+
+                <h3>Title and subtitle</h3>
+                <p>The FT's headline states the finding, not the topic, and the subtitle names the measure and its
+                    units. <code>"anchor": "start"</code> left-aligns both.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"title": {
+  "text": "The UK has not built 300,000 homes a year since 1977",
+  "subtitle": "Completed dwellings (000)",
+  "anchor": "start",
+  "offset": 16,
+  "fontSize": 21,
+  "fontWeight": "normal",
+  "color": "#33302e",
+  "subtitleFontSize": 16,
+  "subtitleColor": "#4d4845",
+  "subtitlePadding": 6
+},</code></pre>
+<pre data-lang="altair"><code class="language-python">.properties(
+    ...
+    title=alt.Title(
+        "The UK has not built 300,000 homes a year since 1977",
+        subtitle="Completed dwellings (000)",
+        anchor="start",
+        offset=16,
+        fontSize=21,
+        fontWeight="normal",
+        color="#33302e",
+        subtitleFontSize=16,
+        subtitleColor="#4d4845",
+        subtitlePadding=6,
+    ),
+)</code></pre>
+                </div>
+
+                <h3>Source note</h3>
+                <p>Vega-Lite has one title, which can go at the top or the bottom but not both. For a footer there
+                    are three options:</p>
+                <ul>
+                    <li>add a <code>text</code> layer and position it below the plot;</li>
+                    <li>put the charts in a <code>vconcat</code> with a text-only chart underneath;</li>
+                    <li>reuse the <strong>x-axis title</strong>, which we removed in step 3.</li>
+                </ul>
+                <p>The axis title is the simplest: it already sits below the chart and moves with it. We left-align
+                    it and shift it left (<code>titleX</code>) to line up with the y-axis labels.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"x": {
+  ...
+  "title": "Source: ONS • Covid affected data collection between 2020 and 2022",
+  "axis": {
+    ...
+    "titleAnchor": "start",
+    "titleAlign": "left",
+    "titleX": -29,
+    "titlePadding": 16,
+    "titleFontSize": 13,
+    "titleFontWeight": "normal",
+    "titleColor": "#4d4845"
+  }
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">x=alt.X(
+    "utcyear(Period):T",
+    bandPosition=0,
+    title="Source: ONS • Covid affected data collection between 2020 and 2022",
+    axis=alt.Axis(
+        ...
+        titleAnchor="start",
+        titleAlign="left",
+        titleX=-29,
+        titlePadding=16,
+        titleFontSize=13,
+        titleFontWeight="normal",
+        titleColor="#4d4845",
+    ),
+),</code></pre>
+                </div>
+
+                <h3>Font</h3>
+                <p>The inspector shows the FT uses <strong>Metric</strong>, a typeface licensed to the FT. We can't
+                    use it, but we can pick a free font with a similar feel. <a href="https://fonts.google.com/specimen/Hanken+Grotesk">Hanken Grotesk</a>
+                    from Google Fonts is a close match: narrow, with similar numbers. Set it once in
+                    <code>config</code> and every piece of text uses it. Axis label sizes come from the FT's SVG
+                    (<code>font-size="14.4"</code>).</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"config": {
+  "view": {"stroke": "transparent"},
+  "font": "Hanken Grotesk, Arial, sans-serif",
+  "axis": {"labelColor": "#4d4845", "labelFontSize": 14.4}
+},</code></pre>
+<pre data-lang="altair"><code class="language-python">.configure(font="Hanken Grotesk, Arial, sans-serif")
+.configure_view(stroke="transparent")
+.configure_axis(labelColor="#4d4845", labelFontSize=14.4)</code></pre>
+                </div>
+
+                <div class="callout warn">
+                    <span class="callout-title">The font must be loaded</span>
+                    <p>A chart can only use a font the browser has. On your site, load it with a
+                        <code>&lt;link&gt;</code> from Google Fonts, and wait for it before drawing the chart (see
+                        <a href="#embed">Put it on your site</a>). In Colab and the Vega Editor, the chart falls back
+                        to Arial.</p>
+                </div>
+
+                <h3>Line everything up</h3>
+                <p>In the FT chart the title, legend, y-axis labels and source note all share one left edge. A
+                    legend with <code>"orient": "top"</code> lines up with the plot instead, about 29 pixels to the
+                    right. Setting <code>"orient": "none"</code> lets us place the legend by hand, relative to the
+                    top left corner of the plot.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"legend": {
+  "orient": "none",
+  "legendX": -29,
+  "legendY": -75,
+  "rowPadding": 0,
+  ...
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">legend=alt.Legend(
+    orient="none",
+    legendX=-29,
+    legendY=-75,
+    rowPadding=0,
+    ...
+),</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 8 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/08_titles_font.json">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/08_titles_font.json"></div>
+                </div>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/08_titles_font.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/08_titles_font.py">
+                    <summary>Full code for step 8</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 9 ============ -->
+            <section id="step-9">
+                <h2><span class="step-label">Step 9</span>Finishing touches</h2>
+
+                <p>Two small changes. First, the FT separates the segments of each bar with a thin gap, which
+                    makes the small local authority slivers easier to see. A <code>stroke</code> in the background
+                    colour does the same. A stroke is drawn on the edge of a shape, half inside it, so it also
+                    trims the sides of each bar. We widen the bars to 95% of a year to make up for it.</p>
+                <p>Second, a <code>tooltip</code> shows the exact figure when you hover over a bar. The
+                    <code>format</code> adds thousands separators.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"mark": {
+  "type": "bar",
+  "width": {"band": 0.95},
+  "binSpacing": 0,
+  "opacity": 0.9,
+  "fillOpacity": 0.9,
+  "stroke": "#fff1e5",
+  "strokeWidth": 1
+},
+"encoding": {
+  ...
+  "tooltip": [
+    {"field": "Period", "type": "temporal", "timeUnit": "utcyear", "title": "Year"},
+    {"field": "Sector", "type": "nominal"},
+    {"field": "Completed", "type": "quantitative", "format": ","}
+  ]
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">.mark_bar(
+    width={"band": 0.95},
+    binSpacing=0,
+    opacity=0.9,
+    fillOpacity=0.9,
+    stroke="#fff1e5",
+    strokeWidth=1,
+)
+.encode(
+    ...
+    tooltip=[
+        alt.Tooltip("utcyear(Period):T", title="Year"),
+        alt.Tooltip("Sector:N"),
+        alt.Tooltip("Completed:Q", format=","),
+    ],
+)</code></pre>
+                </div>
+
+                <div class="compare">
+                    <div class="chart-frame">
+                        <div class="chart-label"><span>Our recreation</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json">View on GitHub</a></div>
+                        <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json"></div>
+                    </div>
+                    <figure class="chart-frame">
+                        <div class="chart-label"><span>The FT original</span></div>
+                        <img src="../examples/vega-lite/recreate/ft-housebuilding/images/target-ft-chart.png"
+                            alt="The original FT chart, for comparison." loading="lazy" width="716" height="611">
+                    </figure>
+                </div>
+
+                <p>The remaining differences are small: the font, the hatching, and the FT's "©FT" line, which
+                    doesn't belong on our copy.</p>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/09_finishing.py">
+                    <summary>Full code for step 9 (the finished chart)</summary>
+                </details>
+            </section>
+
+            <!-- ============ Embed ============ -->
+            <section id="embed">
+                <h2>Put it on your site</h2>
+                <p>Save the spec as a JSON file next to your page (in Altair, <code>chart.save("ft_housebuilding.json")</code>),
+                    then embed it with <code>vegaEmbed</code>, as in the course examples. The extra lines load the
+                    font and wait for it, because Vega measures text when it first draws the chart.</p>
+
+                <div class="code-block" data-title="index.html">
+<pre><code class="language-markup">&lt;link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"&gt;&lt;/script&gt;
+
+&lt;figure id="housebuilding"&gt;&lt;/figure&gt;
+
+&lt;script&gt;
+  document.fonts.load('400 1em "Hanken Grotesk"')
+    .then(() =&gt; vegaEmbed('#housebuilding', 'ft_housebuilding.json'));
+&lt;/script&gt;</code></pre>
+                </div>
+            </section>
+
+            <!-- ============ Going further ============ -->
+            <section id="further">
+                <h2>Going further</h2>
+
+                <h3>Update the data</h3>
+                <p>The ONS now has figures to 2025. Because the chart is code, updating it is one line: point
+                    <code>data.url</code> at the new file, made by <code>prepare_data.py</code>. The title still
+                    holds.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">"data": {
+  "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/examples/vega-lite/recreate/ft-housebuilding/data/ons_housebuilding_uk_long.csv"
+},</code></pre>
+<pre data-lang="altair"><code class="language-python">url = "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/examples/vega-lite/recreate/ft-housebuilding/data/ons_housebuilding_uk_long.csv"</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>The finished chart with data to 2025</span></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" data-modify="latest"></div>
+                </div>
+
+                <h3>Real hatching with an SVG pattern</h3>
+                <p>Vega-Lite can't draw patterns, but on a web page we can borrow one. Define an SVG
+                    <code>&lt;pattern&gt;</code> anywhere in the page, then set the rectangle's <code>fill</code> to
+                    <code>url(#id)</code>. This only works with Vega's SVG renderer
+                    (<code>vegaEmbed(el, spec, {renderer: "svg"})</code>), and only on a page that contains the
+                    pattern. In the Vega Editor or Colab, the rectangle won't show.</p>
+
+                <div class="code-block" data-title="In the page">
+<pre><code class="language-markup">&lt;svg width="0" height="0" style="position: absolute"&gt;
+  &lt;defs&gt;
+    &lt;pattern id="ft-hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"&gt;
+      &lt;line x1="0" y1="0" x2="0" y2="4" stroke="#66605c" stroke-width="1.5" /&gt;
+    &lt;/pattern&gt;
+  &lt;/defs&gt;
+&lt;/svg&gt;</code></pre>
+                </div>
+                <div class="code-block" data-title="In the spec: the rect layer's mark">
+<pre data-lang="vl"><code class="language-json">"mark": {"type": "rect", "fill": "url(#ft-hatch)", "opacity": 0.3}</code></pre>
+<pre data-lang="altair"><code class="language-python">.mark_rect(fill="url(#ft-hatch)", opacity=0.3)</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>With an SVG hatching pattern</span></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" data-modify="hatch"></div>
+                </div>
+
+                <h3>Try it yourself</h3>
+                <ol>
+                    <li>Move the "Labour target" label to the right-hand end of the line, right-aligned. (Hint:
+                        <code>align</code> and <code>x</code>.)</li>
+                    <li>Add the FT's two-line footer. Axis titles accept a list of strings, one per line.</li>
+                    <li>Highlight one sector: when the reader hovers over the legend, fade the other two. Start
+                        from the Vega-Lite <a href="https://vega.github.io/vega-lite/examples/interactive_legend.html">interactive
+                            legend</a> example.</li>
+                    <li>Pick another chart from the
+                        <a href="https://github.com/jhellingsdata/jhellingsdata.github.io/tree/main/examples/vega-lite/recreate/candidates">candidates
+                            folder</a> and recreate it using the same process.</li>
+                </ol>
+            </section>
+
+            <!-- ============ Reference ============ -->
+            <section id="reference">
+                <h2>Reference</h2>
+                <p>The documentation for every feature used on this page.</p>
+                <table class="ref-table">
+                    <thead>
+                        <tr><th>Step</th><th>Vega-Lite docs</th><th>Altair docs</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1–2</td><td><a href="https://vega.github.io/vega-lite/docs/bar.html">Bar mark</a>, <a href="https://vega.github.io/vega-lite/docs/type.html">Data types</a>, <a href="https://vega.github.io/vega-lite/docs/stack.html">Stack</a></td><td><a href="https://altair-viz.github.io/user_guide/encodings/index.html">Encodings</a></td></tr>
+                        <tr><td>3</td><td><a href="https://vega.github.io/vega-lite/docs/filter.html">Filter</a>, <a href="https://vega.github.io/vega-lite/docs/timeunit.html">Time unit</a>, <a href="https://vega.github.io/vega-lite/docs/axis.html">Axis</a>, <a href="https://vega.github.io/vega-lite/docs/scale.html">Scale</a>, <a href="https://vega.github.io/vega-lite/docs/size.html">Size</a></td><td><a href="https://altair-viz.github.io/user_guide/transform/filter.html">Filter</a>, <a href="https://altair-viz.github.io/user_guide/customization.html">Customizing visualizations</a></td></tr>
+                        <tr><td>4</td><td><a href="https://vega.github.io/vega-lite/docs/scale.html#range">Scale range</a>, <a href="https://vega.github.io/vega-lite/docs/config.html">Config</a></td><td><a href="https://altair-viz.github.io/user_guide/customization.html#color-schemes">Colour schemes</a>, <a href="https://altair-viz.github.io/user_guide/configuration.html">Configuration</a></td></tr>
+                        <tr><td>5</td><td><a href="https://vega.github.io/vega-lite/docs/legend.html">Legend</a>, <a href="https://vega.github.io/vega-lite/docs/calculate.html">Calculate</a>, <a href="https://vega.github.io/vega-lite/docs/sort.html#sorting-stacking-order">Sorting stack order</a></td><td><a href="https://altair-viz.github.io/user_guide/transform/calculate.html">Calculate</a></td></tr>
+                        <tr><td>6</td><td><a href="https://vega.github.io/vega-lite/docs/layer.html">Layer</a>, <a href="https://vega.github.io/vega-lite/docs/rule.html">Rule</a>, <a href="https://vega.github.io/vega-lite/docs/text.html">Text</a></td><td><a href="https://altair-viz.github.io/user_guide/compound_charts.html">Layered charts</a></td></tr>
+                        <tr><td>7</td><td><a href="https://vega.github.io/vega-lite/docs/rect.html">Rect</a></td><td><a href="https://altair-viz.github.io/user_guide/marks/rect.html">Rect</a></td></tr>
+                        <tr><td>8</td><td><a href="https://vega.github.io/vega-lite/docs/title.html">Title</a>, <a href="https://vega.github.io/vega-lite/docs/legend.html#legend-orientation">Legend orientation</a></td><td><a href="https://altair-viz.github.io/user_guide/customization.html#chart-title">Chart title</a></td></tr>
+                        <tr><td>9</td><td><a href="https://vega.github.io/vega-lite/docs/tooltip.html">Tooltip</a>, <a href="https://vega.github.io/vega-lite/docs/format.html">Format</a></td><td><a href="https://altair-viz.github.io/user_guide/interactions/index.html">Interactive features</a></td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Sources.</strong> Chart: Financial Times, "<a href="https://www.ft.com/content/40ecd316-7f15-43a9-afe3-6095c6081e00">The UK has not built 300,000 homes a year since 1977</a>".
+                    Data: Office for National Statistics, <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/ukhousebuildingpermanentdwellingsstartedandcompleted">House building, UK</a>, table 3a.
+                    This page recreates the FT's design for teaching; it is not affiliated with the FT.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="page-footer">
+        Josh Hellings · <a href="../tutorials-home.html">More tutorials</a> · <a href="https://github.com/jhellingsdata/jhellingsdata.github.io">Source on GitHub</a>
+    </footer>
+
+    <script>
+        // Variations of the finished chart used in 'Going further'
+        window.specModifiers = {
+            // Same chart, newer data file (to 2025)
+            latest(spec) {
+                spec.data.url = "../examples/vega-lite/recreate/ft-housebuilding/data/ons_housebuilding_uk_long.csv";
+                return spec;
+            },
+            // Replace the flat tint over the missing years with the SVG pattern defined at the top of the page
+            hatch(spec) {
+                spec.layer[0].mark = { type: "rect", fill: "url(#ft-hatch)", opacity: 0.3 };
+                return spec;
+            },
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="tutorial.js"></script>
+</body>
+
+</html>

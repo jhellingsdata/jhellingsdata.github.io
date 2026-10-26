@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Step 1. The Vega-Lite 'simple bar chart' example, pointed at the ONS housebuilding data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_housebuilding_long.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Period", "type": "nominal"},
+    "y": {"field": "Completed", "type": "quantitative"}
+  }
+}

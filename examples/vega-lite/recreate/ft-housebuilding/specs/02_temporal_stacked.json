@@ -1,0 +1,13 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Step 2. Treat Period as a date and split each bar by sector with the color channel.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_housebuilding_long.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Period", "type": "temporal"},
+    "y": {"field": "Completed", "type": "quantitative"},
+    "color": {"field": "Sector", "type": "nominal"}
+  }
+}

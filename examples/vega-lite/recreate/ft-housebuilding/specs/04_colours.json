@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Step 4. Use the FT's paper background, text greys and the exact bar colours found with the browser inspector.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/ONS_UK_housebuilding_long.csv"
+  },
+  "transform": [{"filter": "utcyear(datum.Period) >= 1950"}],
+  "width": 649,
+  "height": 389,
+  "background": "#fff1e5",
+  "config": {"view": {"stroke": "transparent"}, "axis": {"labelColor": "#4d4845"}},
+  "mark": {
+    "type": "bar",
+    "width": {"band": 0.85},
+    "binSpacing": 0,
+    "opacity": 0.9,
+    "fillOpacity": 0.9
+  },
+  "encoding": {
+    "x": {
+      "field": "Period",
+      "type": "temporal",
+      "timeUnit": "utcyear",
+      "bandPosition": 0,
+      "title": null,
+      "axis": {
+        "grid": false,
+        "tickCount": {"interval": "year", "step": 10},
+        "domainColor": "#999189",
+        "tickColor": "#999189"
+      }
+    },
+    "y": {
+      "field": "Completed",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [0, 440000], "nice": false},
+      "axis": {
+        "gridColor": "#ccc1b7",
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 5,
+        "tickCount": 5,
+        "labelExpr": "datum.value / 1000"
+      }
+    },
+    "color": {
+      "field": "Sector",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Private enterprise", "Housing associations", "Local authorities"],
+        "range": ["#0f5499", "#70dce6", "#ef6590"]
+      }
+    }
+  }
+}
