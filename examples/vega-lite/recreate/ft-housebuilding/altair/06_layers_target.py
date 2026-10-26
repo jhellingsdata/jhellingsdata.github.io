@@ -13,42 +13,36 @@ bars = (
     .transform_calculate(SectorOrder=f"indexof({sectors}, datum.Sector)")
     .mark_bar(width={"band": 0.85}, binSpacing=0, opacity=0.9, fillOpacity=0.9)
     .encode(
-        x=alt.X(
-            "utcyear(Period):T",
-            bandPosition=0,
-            title=None,
-            axis=alt.Axis(
-                grid=False,
-                tickCount={"interval": "year", "step": 10},
-                domainColor="#999189",
-                tickColor="#999189",
-            ),
+        x=alt.X("utcyear(Period):T")
+        .bandPosition(0)
+        .title(None)
+        .axis(
+            grid=False,
+            tickCount={"interval": "year", "step": 10},
+            domainColor="#999189",
+            tickColor="#999189",
         ),
-        y=alt.Y(
-            "Completed:Q",
-            title=None,
-            scale=alt.Scale(domain=[0, 440000], nice=False),
-            axis=alt.Axis(
-                gridColor="#ccc1b7",
-                domain=False,
-                ticks=False,
-                labelPadding=5,
-                tickCount=5,
-                labelExpr="datum.value / 1000",
-            ),
+        y=alt.Y("Completed:Q")
+        .title(None)
+        .scale(domain=[0, 440000], nice=False)
+        .axis(
+            gridColor="#ccc1b7",
+            domain=False,
+            ticks=False,
+            labelPadding=5,
+            tickCount=5,
+            labelExpr="datum.value / 1000",
         ),
-        color=alt.Color(
-            "Sector:N",
-            scale=alt.Scale(domain=sectors, range=colours),
-            legend=alt.Legend(
-                orient="top",
-                direction="vertical",
-                title=None,
-                symbolType="M-1.5,-1H1.5V1H-1.5Z",
-                symbolSize=120,
-                labelFontSize=16,
-                labelColor="#33302e",
-            ),
+        color=alt.Color("Sector:N")
+        .scale(domain=sectors, range=colours)
+        .legend(
+            orient="top",
+            direction="vertical",
+            title=None,
+            symbolType="M-1.5,-1H1.5V1H-1.5Z",
+            symbolSize=120,
+            labelFontSize=16,
+            labelColor="#33302e",
         ),
         order="SectorOrder:Q",
     )

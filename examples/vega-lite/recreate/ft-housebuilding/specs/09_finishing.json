@@ -54,19 +54,12 @@
           "type": "temporal",
           "timeUnit": "utcyear",
           "bandPosition": 0,
-          "title": "Source: ONS • Covid affected data collection between 2020 and 2022",
+          "title": null,
           "axis": {
             "grid": false,
             "tickCount": {"interval": "year", "step": 10},
             "domainColor": "#999189",
-            "tickColor": "#999189",
-            "titleAnchor": "start",
-            "titleAlign": "left",
-            "titleX": -29,
-            "titlePadding": 16,
-            "titleFontSize": 13,
-            "titleFontWeight": "normal",
-            "titleColor": "#4d4845"
+            "tickColor": "#999189"
           }
         },
         "y": {
@@ -145,6 +138,23 @@
           }
         }
       ]
+    },
+    {
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "text",
+        "text": [
+          "Recreated from an FT chart",
+          "Source: ONS • Covid affected data collection between 2020 and 2022"
+        ],
+        "x": -29,
+        "y": {"expr": "height + 40"},
+        "align": "left",
+        "baseline": "top",
+        "lineHeight": 17,
+        "fontSize": 13,
+        "color": "#4d4845"
+      }
     }
   ]
 }

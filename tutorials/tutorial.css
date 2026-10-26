@@ -454,6 +454,9 @@ figcaption {
 
 .code-head .copy-btn {
     margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.65rem;
 }
 
 .code-block pre {

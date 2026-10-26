@@ -84,10 +84,10 @@
 
                 <h2>Files</h2>
                 <ul class="side-links">
-                    <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/tree/main/examples/vega-lite/recreate/ft-housebuilding/specs">Vega-Lite specs</a></li>
-                    <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/tree/main/examples/vega-lite/recreate/ft-housebuilding/altair">Altair scripts</a></li>
-                    <li><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/Data/ONS_UK_housebuilding_long.csv">Data (CSV)</a></li>
-                    <li><a href="https://vega.github.io/editor/">Vega Editor</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://github.com/jhellingsdata/jhellingsdata.github.io/tree/main/examples/vega-lite/recreate/ft-housebuilding/specs">Vega-Lite specs</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://github.com/jhellingsdata/jhellingsdata.github.io/tree/main/examples/vega-lite/recreate/ft-housebuilding/altair">Altair scripts</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/Data/ONS_UK_housebuilding_long.csv">Data (CSV)</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://vega.github.io/editor/">Vega Editor</a></li>
                 </ul>
             </div>
         </aside>
@@ -252,7 +252,7 @@ alt.Chart(url).mark_bar().encode(
                 </div>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 1 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/01_simple_bar.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 1 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/01_simple_bar.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/01_simple_bar.json"></div>
                 </div>
 
@@ -296,7 +296,7 @@ alt.Chart(url).mark_bar().encode(
                 </div>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 2 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/02_temporal_stacked.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 2 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/02_temporal_stacked.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/02_temporal_stacked.json"></div>
                 </div>
 
@@ -379,7 +379,7 @@ alt.Chart(url).mark_bar().encode(
     ...</code></pre>
 <pre data-lang="altair"><code class="language-python">.mark_bar(width={"band": 0.85}, binSpacing=0)
 .encode(
-    x=alt.X("utcyear(Period):T", bandPosition=0, ...),
+    x=alt.X("utcyear(Period):T").bandPosition(0)...,
     ...</code></pre>
                 </div>
 
@@ -437,30 +437,35 @@ alt.Chart(url).mark_bar().encode(
     "labelExpr": "datum.value / 1000"
   }
 }</code></pre>
-<pre data-lang="altair"><code class="language-python">x=alt.X(
-    "utcyear(Period):T",
-    bandPosition=0,
-    title=None,
-    axis=alt.Axis(
-        grid=False,
-        tickCount={"interval": "year", "step": 10},
-        domainColor="#999189",
-        tickColor="#999189",
-    ),
+<pre data-lang="altair"><code class="language-python">x=alt.X("utcyear(Period):T")
+.bandPosition(0)
+.title(None)
+.axis(
+    grid=False,
+    tickCount={"interval": "year", "step": 10},
+    domainColor="#999189",
+    tickColor="#999189",
 ),
-y=alt.Y(
-    "Completed:Q",
-    title=None,
-    scale=alt.Scale(domain=[0, 440000], nice=False),
-    axis=alt.Axis(
-        gridColor="#ccc1b7",
-        domain=False,
-        ticks=False,
-        labelPadding=5,
-        tickCount=5,
-        labelExpr="datum.value / 1000",
-    ),
+y=alt.Y("Completed:Q")
+.title(None)
+.scale(domain=[0, 440000], nice=False)
+.axis(
+    gridColor="#ccc1b7",
+    domain=False,
+    ticks=False,
+    labelPadding=5,
+    tickCount=5,
+    labelExpr="datum.value / 1000",
 ),</code></pre>
+                </div>
+
+                <div class="callout tip">
+                    <span class="callout-title">Altair's method syntax</span>
+                    <p>Each Vega-Lite property of a channel is also a method in Altair, so settings chain one
+                        after another: <code>alt.Y("Completed:Q").title(None).scale(nice=False)</code>. This is
+                        shorter than the older style of passing objects, such as
+                        <code>alt.Y("Completed:Q", scale=alt.Scale(nice=False))</code>, and we use it
+                        throughout.</p>
                 </div>
 
                 <div class="callout warn">
@@ -480,7 +485,7 @@ y=alt.Y(
                 </div>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 3 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/03_size_axes.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 3 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/03_size_axes.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/03_size_axes.json"></div>
                 </div>
 
@@ -563,7 +568,7 @@ colours = ["#0f5499", "#70dce6", "#ef6590"]
 .mark_bar(width={"band": 0.85}, binSpacing=0, opacity=0.9, fillOpacity=0.9)
 .encode(
     ...
-    color=alt.Color("Sector:N", scale=alt.Scale(domain=sectors, range=colours)),
+    color=alt.Color("Sector:N").scale(domain=sectors, range=colours),
 )</code></pre>
                 </div>
 
@@ -581,7 +586,7 @@ colours = ["#0f5499", "#70dce6", "#ef6590"]
                 </div>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 4 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/04_colours.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 4 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/04_colours.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/04_colours.json"></div>
                 </div>
 
@@ -626,18 +631,16 @@ colours = ["#0f5499", "#70dce6", "#ef6590"]
     "labelColor": "#33302e"
   }
 }</code></pre>
-<pre data-lang="altair"><code class="language-python">color=alt.Color(
-    "Sector:N",
-    scale=alt.Scale(domain=sectors, range=colours),
-    legend=alt.Legend(
-        orient="top",
-        direction="vertical",
-        title=None,
-        symbolType="M-1.5,-1H1.5V1H-1.5Z",
-        symbolSize=120,
-        labelFontSize=16,
-        labelColor="#33302e",
-    ),
+<pre data-lang="altair"><code class="language-python">color=alt.Color("Sector:N")
+.scale(domain=sectors, range=colours)
+.legend(
+    orient="top",
+    direction="vertical",
+    title=None,
+    symbolType="M-1.5,-1H1.5V1H-1.5Z",
+    symbolSize=120,
+    labelFontSize=16,
+    labelColor="#33302e",
 ),</code></pre>
                 </div>
 
@@ -682,7 +685,7 @@ colours = ["#0f5499", "#70dce6", "#ef6590"]
                 </div>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 5 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/05_legend_order.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 5 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/05_legend_order.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/05_legend_order.json"></div>
                 </div>
 
@@ -786,7 +789,7 @@ label = target.mark_text(
                 </div>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 6 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/06_layers_target.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 6 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/06_layers_target.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/06_layers_target.json"></div>
                 </div>
 
@@ -844,7 +847,7 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
                     shows how to add real hatching on a web page.</p>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 7 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/07_missing_data.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 7 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/07_missing_data.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/07_missing_data.json"></div>
                 </div>
 
@@ -898,46 +901,62 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
                 </div>
 
                 <h3>Source note</h3>
-                <p>Vega-Lite has one title, which can go at the top or the bottom but not both. For a footer there
-                    are three options:</p>
+                <p>Vega-Lite has one title, which can go at the top or the bottom but not both. We could borrow the
+                    x-axis title for the source, but then a chart that needs an axis title couldn't have both. A
+                    <code>text</code> layer works for any chart. It goes last in the <code>layer</code> list.</p>
                 <ul>
-                    <li>add a <code>text</code> layer and position it below the plot;</li>
-                    <li>put the charts in a <code>vconcat</code> with a text-only chart underneath;</li>
-                    <li>reuse the <strong>x-axis title</strong>, which we removed in step 3.</li>
+                    <li><strong>One row of data.</strong> A layer without its own <code>data</code> uses the CSV,
+                        and would draw the note once per row: 231 copies on top of each other. A single empty row,
+                        <code>[{}]</code>, draws it once.</li>
+                    <li><strong>Two lines.</strong> As with the target label, a list of strings puts each on its
+                        own line. The first line credits the FT, where the original has "©FT".</li>
+                    <li><strong>Placed with an expression.</strong> <code>height</code> is the height of the plot,
+                        so <code>"y": {"expr": "height + 40"}</code> keeps the note 40 pixels below it. If you
+                        change the chart's height, the note moves with it. With <code>"baseline": "top"</code>,
+                        the 40 pixels are measured to the top of the text.</li>
+                    <li><strong>Lined up on the left.</strong> <code>"x": -29</code> with
+                        <code>"align": "left"</code> starts the text at the left edge of the y-axis labels.</li>
                 </ul>
-                <p>The axis title is the simplest: it already sits below the chart and moves with it. We left-align
-                    it and shift it left (<code>titleX</code>) to line up with the y-axis labels.</p>
 
                 <div class="code-block">
-<pre data-lang="vl"><code class="language-json">"x": {
-  ...
-  "title": "Source: ONS • Covid affected data collection between 2020 and 2022",
-  "axis": {
-    ...
-    "titleAnchor": "start",
-    "titleAlign": "left",
-    "titleX": -29,
-    "titlePadding": 16,
-    "titleFontSize": 13,
-    "titleFontWeight": "normal",
-    "titleColor": "#4d4845"
+<pre data-lang="vl"><code class="language-json">{
+  "data": {"values": [{}]},
+  "mark": {
+    "type": "text",
+    "text": [
+      "Recreated from an FT chart",
+      "Source: ONS • Covid affected data collection between 2020 and 2022"
+    ],
+    "x": -29,
+    "y": {"expr": "height + 40"},
+    "align": "left",
+    "baseline": "top",
+    "lineHeight": 17,
+    "fontSize": 13,
+    "color": "#4d4845"
   }
 }</code></pre>
-<pre data-lang="altair"><code class="language-python">x=alt.X(
-    "utcyear(Period):T",
-    bandPosition=0,
-    title="Source: ONS • Covid affected data collection between 2020 and 2022",
-    axis=alt.Axis(
-        ...
-        titleAnchor="start",
-        titleAlign="left",
-        titleX=-29,
-        titlePadding=16,
-        titleFontSize=13,
-        titleFontWeight="normal",
-        titleColor="#4d4845",
-    ),
-),</code></pre>
+<pre data-lang="altair"><code class="language-python">source = alt.Chart(alt.Data(values=[{}])).mark_text(
+    text=[
+        "Recreated from an FT chart",
+        "Source: ONS • Covid affected data collection between 2020 and 2022",
+    ],
+    x=-29,
+    y=alt.expr("height + 40"),
+    align="left",
+    baseline="top",
+    lineHeight=17,
+    fontSize=13,
+    color="#4d4845",
+)
+
+chart = alt.layer(gap, bars, rule, label, source)</code></pre>
+                </div>
+
+                <div class="callout tip">
+                    <span class="callout-title">Marks outside the plot</span>
+                    <p>The note sits below the plot area, but nothing is cut off. Vega-Lite grows the chart to fit
+                        every mark, so the padding around the chart adjusts on its own.</p>
                 </div>
 
                 <h3>Font</h3>
@@ -980,17 +999,17 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
   "rowPadding": 0,
   ...
 }</code></pre>
-<pre data-lang="altair"><code class="language-python">legend=alt.Legend(
+<pre data-lang="altair"><code class="language-python">.legend(
     orient="none",
     legendX=-29,
     legendY=-75,
     rowPadding=0,
     ...
-),</code></pre>
+)</code></pre>
                 </div>
 
                 <div class="chart-frame">
-                    <div class="chart-label"><span>Step 8 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/08_titles_font.json">View on GitHub</a></div>
+                    <div class="chart-label"><span>Step 8 result</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/08_titles_font.json" target="_blank" rel="noopener">View on GitHub</a></div>
                     <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/08_titles_font.json"></div>
                 </div>
 
@@ -1039,16 +1058,16 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
 .encode(
     ...
     tooltip=[
-        alt.Tooltip("utcyear(Period):T", title="Year"),
+        alt.Tooltip("utcyear(Period):T").title("Year"),
         alt.Tooltip("Sector:N"),
-        alt.Tooltip("Completed:Q", format=","),
+        alt.Tooltip("Completed:Q").format(","),
     ],
 )</code></pre>
                 </div>
 
                 <div class="compare">
                     <div class="chart-frame">
-                        <div class="chart-label"><span>Our recreation</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json">View on GitHub</a></div>
+                        <div class="chart-label"><span>Our recreation</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" target="_blank" rel="noopener">View on GitHub</a></div>
                         <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json"></div>
                     </div>
                     <figure class="chart-frame">
@@ -1058,8 +1077,8 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
                     </figure>
                 </div>
 
-                <p>The remaining differences are small: the font, the hatching, and the FT's "©FT" line, which
-                    doesn't belong on our copy.</p>
+                <p>The remaining differences are small: the font, the hatching, and our credit line in place of
+                    the FT's "©FT".</p>
 
                 <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/09_finishing.py">
                     <summary>Full code for step 9 (the finished chart)</summary>
@@ -1140,7 +1159,8 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
                 <ol>
                     <li>Move the "Labour target" label to the right-hand end of the line, right-aligned. (Hint:
                         <code>align</code> and <code>x</code>.)</li>
-                    <li>Add the FT's two-line footer. Axis titles accept a list of strings, one per line.</li>
+                    <li>Make the first line of the source note italic, like the FT's "©FT". (Hint: a text mark has
+                        one style for all its lines, so you need two marks.)</li>
                     <li>Highlight one sector: when the reader hovers over the legend, fade the other two. Start
                         from the Vega-Lite <a href="https://vega.github.io/vega-lite/examples/interactive_legend.html">interactive
                             legend</a> example.</li>

@@ -27,58 +27,45 @@ bars = (
         strokeWidth=1,
     )
     .encode(
-        x=alt.X(
-            "utcyear(Period):T",
-            bandPosition=0,
-            title="Source: ONS • Covid affected data collection between 2020 and 2022",
-            axis=alt.Axis(
-                grid=False,
-                tickCount={"interval": "year", "step": 10},
-                domainColor="#999189",
-                tickColor="#999189",
-                titleAnchor="start",
-                titleAlign="left",
-                titleX=-29,
-                titlePadding=16,
-                titleFontSize=13,
-                titleFontWeight="normal",
-                titleColor="#4d4845",
-            ),
+        x=alt.X("utcyear(Period):T")
+        .bandPosition(0)
+        .title(None)
+        .axis(
+            grid=False,
+            tickCount={"interval": "year", "step": 10},
+            domainColor="#999189",
+            tickColor="#999189",
         ),
-        y=alt.Y(
-            "Completed:Q",
+        y=alt.Y("Completed:Q")
+        .title(None)
+        .scale(domain=[0, 440000], nice=False)
+        .axis(
+            gridColor="#ccc1b7",
+            domain=False,
+            ticks=False,
+            labelPadding=5,
+            tickCount=5,
+            labelExpr="datum.value / 1000",
+        ),
+        color=alt.Color("Sector:N")
+        .scale(domain=sectors, range=colours)
+        .legend(
+            orient="none",
+            legendX=-29,
+            legendY=-75,
+            rowPadding=0,
+            direction="vertical",
             title=None,
-            scale=alt.Scale(domain=[0, 440000], nice=False),
-            axis=alt.Axis(
-                gridColor="#ccc1b7",
-                domain=False,
-                ticks=False,
-                labelPadding=5,
-                tickCount=5,
-                labelExpr="datum.value / 1000",
-            ),
-        ),
-        color=alt.Color(
-            "Sector:N",
-            scale=alt.Scale(domain=sectors, range=colours),
-            legend=alt.Legend(
-                orient="none",
-                legendX=-29,
-                legendY=-75,
-                rowPadding=0,
-                direction="vertical",
-                title=None,
-                symbolType="M-1.5,-1H1.5V1H-1.5Z",
-                symbolSize=120,
-                labelFontSize=16,
-                labelColor="#33302e",
-            ),
+            symbolType="M-1.5,-1H1.5V1H-1.5Z",
+            symbolSize=120,
+            labelFontSize=16,
+            labelColor="#33302e",
         ),
         order="SectorOrder:Q",
         tooltip=[
-            alt.Tooltip("utcyear(Period):T", title="Year"),
+            alt.Tooltip("utcyear(Period):T").title("Year"),
             alt.Tooltip("Sector:N"),
-            alt.Tooltip("Completed:Q", format=","),
+            alt.Tooltip("Completed:Q").format(","),
         ],
     )
 )
@@ -96,8 +83,23 @@ label = target.mark_text(
     color="#33302e",
 )
 
+# Layer: source note below the chart. One empty row, so the text is drawn once.
+source = alt.Chart(alt.Data(values=[{}])).mark_text(
+    text=[
+        "Recreated from an FT chart",
+        "Source: ONS • Covid affected data collection between 2020 and 2022",
+    ],
+    x=-29,
+    y=alt.expr("height + 40"),
+    align="left",
+    baseline="top",
+    lineHeight=17,
+    fontSize=13,
+    color="#4d4845",
+)
+
 chart = (
-    alt.layer(gap, bars, rule, label)
+    alt.layer(gap, bars, rule, label, source)
     .properties(
         width=649,
         height=389,
