@@ -20,7 +20,8 @@
         "grid": false,
         "tickCount": {"interval": "year", "step": 10},
         "domainColor": "#999189",
-        "tickColor": "#999189"
+        "tickColor": "#999189",
+        "tickSize": 7
       }
     },
     "y": {
@@ -32,7 +33,7 @@
         "gridColor": "#ccc1b7",
         "domain": false,
         "ticks": false,
-        "labelPadding": 5,
+        "labelPadding": 7,
         "tickCount": 5,
         "labelExpr": "datum.value / 1000"
       }

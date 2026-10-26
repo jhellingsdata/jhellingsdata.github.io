@@ -312,6 +312,8 @@ img {
     border: 1px solid var(--code-border);
     border-radius: 4px;
     padding: 0.08em 0.35em;
+    /* Long inline snippets wrap on narrow screens instead of widening the page */
+    overflow-wrap: anywhere;
 }
 
 .article ul,

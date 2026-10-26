@@ -28,6 +28,7 @@ bars = (
             tickCount={"interval": "year", "step": 10},
             domainColor="#999189",
             tickColor="#999189",
+            tickSize=7,
         ),
         y=alt.Y("Completed:Q")
         .title(None)
@@ -36,7 +37,7 @@ bars = (
             gridColor="#ccc1b7",
             domain=False,
             ticks=False,
-            labelPadding=5,
+            labelPadding=7,
             tickCount=5,
             labelExpr="datum.value / 1000",
         ),
@@ -46,7 +47,7 @@ bars = (
             orient="top",
             direction="vertical",
             title=None,
-            symbolType="M-1.5,-1H1.5V1H-1.5Z",
+            symbolType="M-1.8,-1H1.8V1H-1.8Z",
             symbolSize=120,
             labelFontSize=16,
             labelColor="#33302e",

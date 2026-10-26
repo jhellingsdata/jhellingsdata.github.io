@@ -21,6 +21,7 @@ Walkthrough: [tutorials/ft-housebuilding.html](../../../../tutorials/ft-housebui
 | 7 | [`07_missing_data.json`](specs/07_missing_data.json) | [`07_missing_data.py`](altair/07_missing_data.py) | Shaded area over 2020 to 2022 |
 | 8 | [`08_titles_font.json`](specs/08_titles_font.json) | [`08_titles_font.py`](altair/08_titles_font.py) | Title, subtitle, source note, font, legend placement |
 | 9 | [`09_finishing.json`](specs/09_finishing.json) | [`09_finishing.py`](altair/09_finishing.py) | Gaps between stacked segments; tooltip |
+| 10 | [`10_interactive_legend.json`](specs/10_interactive_legend.json) | [`10_interactive_legend.py`](altair/10_interactive_legend.py) | Click a legend entry to hide that sector |
 
 Each Altair script renders the same chart as its spec, pixel for pixel (checked with Vega-Lite 6.4.3 and Altair 6.3).
 
@@ -33,4 +34,5 @@ Each Altair script renders the same chart as its spec, pixel for pixel (checked 
 
 - The FT built the original in Flourish (the SVG uses `fl-` class names).
 - The FT uses Metric, a licensed typeface. The recreation uses [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk) from Google Fonts, which needs loading on the page before the chart draws. In Colab and the Vega Editor the chart falls back to Arial.
+- The walkthrough's "Going further" section also styles the tooltip like the FT's, using vega-tooltip's `formatTooltip` and `theme` options in `vegaEmbed` (the spec is unchanged).
 - Vega-Lite has no pattern fills. The walkthrough's "Going further" section shows the FT's hatching with an SVG `<pattern>`, which only works with the SVG renderer on a page that defines the pattern.

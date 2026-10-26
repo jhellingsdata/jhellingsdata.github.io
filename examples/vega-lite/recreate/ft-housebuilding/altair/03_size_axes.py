@@ -16,6 +16,7 @@ chart = (
             tickCount={"interval": "year", "step": 10},
             domainColor="#999189",
             tickColor="#999189",
+            tickSize=7,
         ),
         y=alt.Y("Completed:Q")
         .title(None)
@@ -24,7 +25,7 @@ chart = (
             gridColor="#ccc1b7",
             domain=False,
             ticks=False,
-            labelPadding=5,
+            labelPadding=7,
             tickCount=5,
             labelExpr="datum.value / 1000",
         ),

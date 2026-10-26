@@ -11,6 +11,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tutorial.css">
+    <style>
+        /* FT-style tooltip for the 'Going further' demo (vega-tooltip adds the ft-theme class) */
+        #vg-tooltip-element.ft-theme {
+            font-family: "Hanken Grotesk", sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #33302e;
+            background: #fff;
+            border: 1px solid #ccc1b7;
+            border-radius: 0;
+            padding: 6px 10px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        #vg-tooltip-element.ft-theme .sector {
+            font-weight: 600;
+        }
+    </style>
 
     <!-- Same versions as the PP434 course examples -->
     <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
@@ -76,6 +94,7 @@
                         <li><a href="#step-7"><span class="num">7</span>Missing years</a></li>
                         <li><a href="#step-8"><span class="num">8</span>Titles and font</a></li>
                         <li><a href="#step-9"><span class="num">9</span>Finishing touches</a></li>
+                        <li><a href="#step-10"><span class="num">10</span>Click to hide a sector</a></li>
                         <li><a href="#embed"><span class="num"></span>Put it on your site</a></li>
                         <li><a href="#further"><span class="num"></span>Going further</a></li>
                         <li><a href="#reference"><span class="num"></span>Reference</a></li>
@@ -405,7 +424,7 @@ alt.Chart(url).mark_bar().encode(
                     <li><strong>No axis titles.</strong> Readers don't need to be told the x-axis shows years, and
                         the subtitle will say what the bars measure. Use <code>"title": null</code>.</li>
                     <li><strong>No vertical grid lines</strong>, and light horizontal ones.</li>
-                    <li><strong>No y-axis line or ticks</strong>, and a tick every ten years on the x-axis.</li>
+                    <li><strong>No y-axis line or ticks</strong>, and a slightly longer tick (7 pixels) every ten years on the x-axis.</li>
                     <li><strong>Labels in thousands.</strong> <code>labelExpr</code> rewrites each label with an
                         expression, so <code>datum.value / 1000</code> turns 300000 into 300.</li>
                     <li><strong>A fixed y scale.</strong> The FT's axis stops just above the tallest bar, at about
@@ -420,7 +439,8 @@ alt.Chart(url).mark_bar().encode(
     "grid": false,
     "tickCount": {"interval": "year", "step": 10},
     "domainColor": "#999189",
-    "tickColor": "#999189"
+    "tickColor": "#999189",
+    "tickSize": 7
   }
 },
 "y": {
@@ -432,7 +452,7 @@ alt.Chart(url).mark_bar().encode(
     "gridColor": "#ccc1b7",
     "domain": false,
     "ticks": false,
-    "labelPadding": 5,
+    "labelPadding": 7,
     "tickCount": 5,
     "labelExpr": "datum.value / 1000"
   }
@@ -445,6 +465,7 @@ alt.Chart(url).mark_bar().encode(
     tickCount={"interval": "year", "step": 10},
     domainColor="#999189",
     tickColor="#999189",
+    tickSize=7,
 ),
 y=alt.Y("Completed:Q")
 .title(None)
@@ -453,7 +474,7 @@ y=alt.Y("Completed:Q")
     gridColor="#ccc1b7",
     domain=False,
     ticks=False,
-    labelPadding=5,
+    labelPadding=7,
     tickCount=5,
     labelExpr="datum.value / 1000",
 ),</code></pre>
@@ -614,7 +635,7 @@ colours = ["#0f5499", "#70dce6", "#ef6590"]
                 <ul>
                     <li><code>"orient": "top"</code> and <code>"direction": "vertical"</code> place it.</li>
                     <li><code>symbolType</code> accepts any SVG path as well as named shapes. The path
-                        <code>M-1.5,-1H1.5V1H-1.5Z</code> draws a rectangle one and a half times as wide as it is
+                        <code>M-1.8,-1H1.8V1H-1.8Z</code> draws a rectangle 1.8 times as wide as it is
                         tall.</li>
                 </ul>
 
@@ -625,7 +646,7 @@ colours = ["#0f5499", "#70dce6", "#ef6590"]
     "orient": "top",
     "direction": "vertical",
     "title": null,
-    "symbolType": "M-1.5,-1H1.5V1H-1.5Z",
+    "symbolType": "M-1.8,-1H1.8V1H-1.8Z",
     "symbolSize": 120,
     "labelFontSize": 16,
     "labelColor": "#33302e"
@@ -637,7 +658,7 @@ colours = ["#0f5499", "#70dce6", "#ef6590"]
     orient="top",
     direction="vertical",
     title=None,
-    symbolType="M-1.5,-1H1.5V1H-1.5Z",
+    symbolType="M-1.8,-1H1.8V1H-1.8Z",
     symbolSize=120,
     labelFontSize=16,
     labelColor="#33302e",
@@ -881,7 +902,7 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
   "color": "#33302e",
   "subtitleFontSize": 16,
   "subtitleColor": "#4d4845",
-  "subtitlePadding": 6
+  "subtitlePadding": 8
 },</code></pre>
 <pre data-lang="altair"><code class="language-python">.properties(
     ...
@@ -895,7 +916,7 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
         color="#33302e",
         subtitleFontSize=16,
         subtitleColor="#4d4845",
-        subtitlePadding=6,
+        subtitlePadding=8,
     ),
 )</code></pre>
                 </div>
@@ -914,7 +935,7 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
                         so <code>"y": {"expr": "height + 40"}</code> keeps the note 40 pixels below it. If you
                         change the chart's height, the note moves with it. With <code>"baseline": "top"</code>,
                         the 40 pixels are measured to the top of the text.</li>
-                    <li><strong>Lined up on the left.</strong> <code>"x": -29</code> with
+                    <li><strong>Lined up on the left.</strong> <code>"x": -31</code> with
                         <code>"align": "left"</code> starts the text at the left edge of the y-axis labels.</li>
                 </ul>
 
@@ -927,7 +948,7 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
       "Recreated from an FT chart",
       "Source: ONS • Covid affected data collection between 2020 and 2022"
     ],
-    "x": -29,
+    "x": -31,
     "y": {"expr": "height + 40"},
     "align": "left",
     "baseline": "top",
@@ -941,7 +962,7 @@ chart = alt.layer(gap, bars, rule, label)</code></pre>
         "Recreated from an FT chart",
         "Source: ONS • Covid affected data collection between 2020 and 2022",
     ],
-    x=-29,
+    x=-31,
     y=alt.expr("height + 40"),
     align="left",
     baseline="top",
@@ -987,21 +1008,21 @@ chart = alt.layer(gap, bars, rule, label, source)</code></pre>
 
                 <h3>Line everything up</h3>
                 <p>In the FT chart the title, legend, y-axis labels and source note all share one left edge. A
-                    legend with <code>"orient": "top"</code> lines up with the plot instead, about 29 pixels to the
+                    legend with <code>"orient": "top"</code> lines up with the plot instead, about 31 pixels to the
                     right. Setting <code>"orient": "none"</code> lets us place the legend by hand, relative to the
                     top left corner of the plot.</p>
 
                 <div class="code-block">
 <pre data-lang="vl"><code class="language-json">"legend": {
   "orient": "none",
-  "legendX": -29,
+  "legendX": -31,
   "legendY": -75,
   "rowPadding": 0,
   ...
 }</code></pre>
 <pre data-lang="altair"><code class="language-python">.legend(
     orient="none",
-    legendX=-29,
+    legendX=-31,
     legendY=-75,
     rowPadding=0,
     ...
@@ -1081,7 +1102,87 @@ chart = alt.layer(gap, bars, rule, label, source)</code></pre>
                     the FT's "©FT".</p>
 
                 <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/09_finishing.py">
-                    <summary>Full code for step 9 (the finished chart)</summary>
+                    <summary>Full code for step 9</summary>
+                </details>
+            </section>
+
+            <!-- ============ Step 10 ============ -->
+            <section id="step-10">
+                <h2><span class="step-label">Step 10</span>Click to hide a sector</h2>
+
+                <p>On the FT site, clicking a sector in the legend removes its bars, and the other sectors drop
+                    down to fill the gap. The legend entry fades, and clicking it again brings the sector back. (The
+                    FT also animates the bars falling away. Vega-Lite can't animate changes, so ours jump.)</p>
+
+                <p>Interaction in Vega-Lite starts with a <strong>parameter</strong> that holds a
+                    <strong>selection</strong>. Ours is a <code>point</code> selection on the
+                    <code>Sector</code> field, with three settings:</p>
+                <ul>
+                    <li><code>"bind": "legend"</code>: clicks on the legend make the selection, instead of clicks
+                        on the bars.</li>
+                    <li><code>"toggle": "true"</code>: each click adds or removes one sector, rather than replacing
+                        the whole selection.</li>
+                    <li><code>"value"</code>: the selection starts with all three sectors, so every bar shows.</li>
+                </ul>
+                <p>The selection holds the sectors that are <em>shown</em>. A <code>filter</code> transform then
+                    keeps only rows in the selection. <code>"empty": false</code> means that if the reader hides
+                    every sector, the chart shows no bars rather than all of them.</p>
+
+                <div class="code-block">
+<pre data-lang="vl"><code class="language-json">{
+  "params": [
+    {
+      "name": "shown",
+      "select": {"type": "point", "fields": ["Sector"], "toggle": "true"},
+      "bind": "legend",
+      "value": [
+        {"Sector": "Private enterprise"},
+        {"Sector": "Housing associations"},
+        {"Sector": "Local authorities"}
+      ]
+    }
+  ],
+  "transform": [{"filter": {"param": "shown", "empty": false}}],
+  "mark": {...},       // the bar layer, unchanged
+  "encoding": {...}
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">shown = alt.selection_point(
+    fields=["Sector"],
+    bind="legend",
+    toggle="true",
+    value=[{"Sector": sector} for sector in sectors],
+    empty=False,
+)
+
+bars = (
+    alt.Chart(url)
+    ...
+    .add_params(shown)
+    .transform_filter(shown)
+    .mark_bar(...)
+    .encode(...)
+)</code></pre>
+                </div>
+
+                <div class="callout tip">
+                    <span class="callout-title">Why select the shown sectors, not the hidden ones?</span>
+                    <p>When a selection is bound to a legend, Vega-Lite fades every entry that is
+                        <em>not</em> selected. So the selection has to hold the visible sectors: hidden ones then
+                        fade, as on the FT site. The one oddity is that with all three hidden the selection is
+                        empty, and Vega-Lite shows an empty selection as "nothing chosen", with every entry at full
+                        strength.</p>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>Step 10 result: click the legend</span><a href="https://github.com/jhellingsdata/jhellingsdata.github.io/blob/main/examples/vega-lite/recreate/ft-housebuilding/specs/10_interactive_legend.json" target="_blank" rel="noopener">View on GitHub</a></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/10_interactive_legend.json"></div>
+                </div>
+
+                <p>The y-axis stays fixed at 0 to 440,000 while sectors come and go. That keeps the scale honest: the
+                    remaining bars visibly shrink, rather than the axis stretching to fill the space.</p>
+
+                <details class="full-code" data-vl="../examples/vega-lite/recreate/ft-housebuilding/specs/10_interactive_legend.json" data-altair="../examples/vega-lite/recreate/ft-housebuilding/altair/10_interactive_legend.py">
+                    <summary>Full code for step 10 (the finished chart)</summary>
                 </details>
             </section>
 
@@ -1126,7 +1227,7 @@ chart = alt.layer(gap, bars, rule, label, source)</code></pre>
 
                 <div class="chart-frame">
                     <div class="chart-label"><span>The finished chart with data to 2025</span></div>
-                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" data-modify="latest"></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/10_interactive_legend.json" data-modify="latest"></div>
                 </div>
 
                 <h3>Real hatching with an SVG pattern</h3>
@@ -1152,7 +1253,85 @@ chart = alt.layer(gap, bars, rule, label, source)</code></pre>
 
                 <div class="chart-frame">
                     <div class="chart-label"><span>With an SVG hatching pattern</span></div>
-                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/09_finishing.json" data-modify="hatch"></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/10_interactive_legend.json" data-modify="hatch"></div>
+                </div>
+
+                <h3>An FT-style tooltip</h3>
+                <p>The FT's tooltip has two lines: the sector, in the colour of its bar, then the year in bold and
+                    the value. Our tooltip from step 9 is a table of field names and values.</p>
+                <p>Within Vega-Lite, the closest we can get is the mark's <code>tooltip</code> property with an
+                    expression. It builds one string, and <code>\n</code> starts a new line, but the text can't be
+                    styled:</p>
+
+                <div class="code-block" data-title="In the spec: the bar layer's mark (replaces the tooltip encoding)">
+<pre data-lang="vl"><code class="language-json">"tooltip": {
+  "expr": "datum.Sector + '\\n' + utcyear(datum.Period) + ': ' + format(datum.Completed, ',')"
+}</code></pre>
+<pre data-lang="altair"><code class="language-python">.mark_bar(
+    ...,
+    tooltip=alt.expr("datum.Sector + '\\n' + utcyear(datum.Period) + ': ' + format(datum.Completed, ',')"),
+)</code></pre>
+                </div>
+
+                <p>For colour and bold text we go one level down, to the web page. Tooltips are drawn by the
+                    <a href="https://github.com/vega/vega-tooltip" target="_blank" rel="noopener">vega-tooltip</a>
+                    library inside <code>vegaEmbed</code>, and it takes two useful options:</p>
+                <ul>
+                    <li><code>formatTooltip</code> is a function that receives the tooltip's values (keyed by the
+                        titles from step 9: <code>Year</code>, <code>Sector</code>, <code>Completed</code>) and
+                        returns HTML. <code>sanitize</code> escapes each value, so stray HTML in the data can't
+                        break the page.</li>
+                    <li><code>theme</code> adds a class (here <code>ft-theme</code>) to the tooltip, so we can
+                        style it with CSS.</li>
+                </ul>
+                <p>The spec doesn't change. Keep the step 9 tooltip encoding and pass the options to
+                    <code>vegaEmbed</code>:</p>
+
+                <div class="code-block" data-title="JavaScript">
+<pre><code class="language-javascript">const colours = {
+  "Private enterprise": "#0f5499",
+  "Housing associations": "#70dce6",
+  "Local authorities": "#ef6590",
+};
+
+vegaEmbed("#housebuilding", "ft_housebuilding.json", {
+  tooltip: {
+    theme: "ft",
+    formatTooltip: (value, sanitize) =&gt;
+      `&lt;div class="sector" style="color: ${colours[value.Sector]}"&gt;${sanitize(value.Sector)}&lt;/div&gt;` +
+      `&lt;b&gt;${sanitize(value.Year)}&lt;/b&gt;: ${sanitize(value.Completed)}`,
+  },
+});</code></pre>
+                </div>
+                <div class="code-block" data-title="CSS">
+<pre><code class="language-css">#vg-tooltip-element.ft-theme {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #33302e;
+  background: #fff;
+  border: 1px solid #ccc1b7;
+  border-radius: 0;
+  padding: 6px 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+#vg-tooltip-element.ft-theme .sector {
+  font-weight: 600;
+}</code></pre>
+                </div>
+
+                <div class="chart-frame">
+                    <div class="chart-label"><span>With an FT-style tooltip: hover over a bar</span></div>
+                    <div class="chart" data-spec="../examples/vega-lite/recreate/ft-housebuilding/specs/10_interactive_legend.json" data-options="ftTooltip"></div>
+                </div>
+
+                <div class="callout principle">
+                    <span class="callout-title">Colour as text</span>
+                    <p>Hover over a housing associations bar: the pale teal is hard to read as text on white (a
+                        contrast ratio of about 1.6:1, against the 4.5:1 that accessibility guidelines ask for), and
+                        the pink only reaches 3:1. A colour that works for a bar doesn't always work for words. A small coloured square beside a
+                        dark label is a safer choice.</p>
                 </div>
 
                 <h3>Try it yourself</h3>
@@ -1213,6 +1392,23 @@ chart = alt.layer(gap, bars, rule, label, source)</code></pre>
             hatch(spec) {
                 spec.layer[0].mark = { type: "rect", fill: "url(#ft-hatch)", opacity: 0.3 };
                 return spec;
+            },
+        };
+
+        // Extra vegaEmbed options: the FT-style tooltip (same code as shown in 'Going further')
+        const colours = {
+            "Private enterprise": "#0f5499",
+            "Housing associations": "#70dce6",
+            "Local authorities": "#ef6590",
+        };
+        window.embedOptions = {
+            ftTooltip: {
+                tooltip: {
+                    theme: "ft",
+                    formatTooltip: (value, sanitize) =>
+                        `<div class="sector" style="color: ${colours[value.Sector]}">${sanitize(value.Sector)}</div>` +
+                        `<b>${sanitize(value.Year)}</b>: ${sanitize(value.Completed)}`,
+                },
             },
         };
     </script>

@@ -8,7 +8,8 @@
 //   <details class="full-code" data-vl="x.json" data-altair="x.py">   full code, fetched when opened
 //   <nav class="toc"><a href="#id">…</a></nav> sidebar links, highlighted for the section in view
 //
-// Pages can register spec modifiers on window.specModifiers, keyed by data-modify.
+// Pages can register spec modifiers on window.specModifiers, keyed by data-modify, and extra
+// vegaEmbed options on window.embedOptions, keyed by data-options.
 
 (function () {
     const LANG_KEY = "tutorial-code-lang";
@@ -146,9 +147,10 @@
             let spec = await res.json();
             const modify = el.dataset.modify && (window.specModifiers || {})[el.dataset.modify];
             if (modify) spec = modify(spec);
+            const extra = (el.dataset.options && (window.embedOptions || {})[el.dataset.options]) || {};
             await fontsReady;
             el.classList.remove("loading");
-            await vegaEmbed(el, spec, EMBED_OPTIONS);
+            await vegaEmbed(el, spec, { ...EMBED_OPTIONS, ...extra });
         } catch (err) {
             el.classList.remove("loading");
             el.innerHTML = "";
