@@ -15,7 +15,7 @@ For HTML code highlighting: [Prism CDNs](https://cdnjs.com/libraries/prism/1.29.
 
 The Economist. Indexed line chart, e.g.
 
-![image.png](../candidates/economist-indexed-line.png)
+![image.png](../candidates/economist-rat-sightings.png)
 
 ## The Economist
 

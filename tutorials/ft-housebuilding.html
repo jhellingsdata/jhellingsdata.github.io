@@ -15,14 +15,14 @@
         /* FT-style tooltip for the 'Going further' demo (vega-tooltip adds the ft-theme class) */
         #vg-tooltip-element.ft-theme {
             font-family: "Hanken Grotesk", sans-serif;
-            font-size: 14px;
-            line-height: 1.4;
+            font-size: 16px;
+            line-height: 1.35;
             color: #33302e;
             background: #fff;
-            border: 1px solid #ccc1b7;
-            border-radius: 0;
-            padding: 6px 10px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+            border: none;
+            border-radius: 6px;
+            padding: 8px 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
         }
 
         #vg-tooltip-element.ft-theme .sector {
@@ -51,7 +51,7 @@
         <div class="topbar-inner">
             <a href="../index.html">Josh Hellings</a>
             <span class="sep">/</span>
-            <a href="../tutorials-home.html">Tutorials</a>
+            <a href="./">Tutorials</a>
             <span class="sep">/</span>
             <span>Recreating charts</span>
         </div>
@@ -1113,6 +1113,13 @@ chart = alt.layer(gap, bars, rule, label, source)</code></pre>
                 <p>On the FT site, clicking a sector in the legend removes its bars, and the other sectors drop
                     down to fill the gap. The legend entry fades, and clicking it again brings the sector back. (The
                     FT also animates the bars falling away. Vega-Lite can't animate changes, so ours jump.)</p>
+                <figure>
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/interactive-legend.png"
+                        alt="The FT chart with housing associations hidden: its legend entry is faded and only private enterprise and local authority bars remain."
+                        loading="lazy" width="724" height="502">
+                    <figcaption>The FT chart after clicking "Housing associations". Its legend entry fades and its
+                        bars disappear.</figcaption>
+                </figure>
 
                 <p>Interaction in Vega-Lite starts with a <strong>parameter</strong> that holds a
                     <strong>selection</strong>. Ours is a <code>point</code> selection on the
@@ -1258,7 +1265,13 @@ bars = (
 
                 <h3>An FT-style tooltip</h3>
                 <p>The FT's tooltip has two lines: the sector, in the colour of its bar, then the year in bold and
-                    the value. Our tooltip from step 9 is a table of field names and values.</p>
+                    the value in thousands. Our tooltip from step 9 is a table of field names and values.</p>
+                <figure class="screenshot">
+                    <img src="../examples/vega-lite/recreate/ft-housebuilding/images/tooltip.png"
+                        alt="FT tooltip reading 'Private enterprise' in blue, then '2023: 144'."
+                        loading="lazy" width="194" height="234" style="max-width: 194px">
+                    <figcaption>The FT's tooltip.</figcaption>
+                </figure>
                 <p>Within Vega-Lite, the closest we can get is the mark's <code>tooltip</code> property with an
                     expression. It builds one string, and <code>\n</code> starts a new line, but the text can't be
                     styled:</p>
@@ -1285,7 +1298,8 @@ bars = (
                         style it with CSS.</li>
                 </ul>
                 <p>The spec doesn't change. Keep the step 9 tooltip encoding and pass the options to
-                    <code>vegaEmbed</code>:</p>
+                    <code>vegaEmbed</code>. The values arrive already formatted as text (<code>"143,720"</code>),
+                    so to show thousands we remove the commas, turn the text back into a number and divide.</p>
 
                 <div class="code-block" data-title="JavaScript">
 <pre><code class="language-javascript">const colours = {
@@ -1294,26 +1308,29 @@ bars = (
   "Local authorities": "#ef6590",
 };
 
+// "143,720" -&gt; 144
+const thousands = (text) =&gt; Math.round(Number(text.replace(/,/g, "")) / 1000);
+
 vegaEmbed("#housebuilding", "ft_housebuilding.json", {
   tooltip: {
     theme: "ft",
     formatTooltip: (value, sanitize) =&gt;
       `&lt;div class="sector" style="color: ${colours[value.Sector]}"&gt;${sanitize(value.Sector)}&lt;/div&gt;` +
-      `&lt;b&gt;${sanitize(value.Year)}&lt;/b&gt;: ${sanitize(value.Completed)}`,
+      `&lt;b&gt;${sanitize(value.Year)}:&lt;/b&gt; ${thousands(value.Completed)}`,
   },
 });</code></pre>
                 </div>
                 <div class="code-block" data-title="CSS">
 <pre><code class="language-css">#vg-tooltip-element.ft-theme {
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.35;
   color: #33302e;
   background: #fff;
-  border: 1px solid #ccc1b7;
-  border-radius: 0;
-  padding: 6px 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
 #vg-tooltip-element.ft-theme .sector {
@@ -1377,7 +1394,7 @@ vegaEmbed("#housebuilding", "ft_housebuilding.json", {
     </div>
 
     <footer class="page-footer">
-        Josh Hellings · <a href="../tutorials-home.html">More tutorials</a> · <a href="https://github.com/jhellingsdata/jhellingsdata.github.io">Source on GitHub</a>
+        Josh Hellings · <a href="./">More tutorials</a> · <a href="https://github.com/jhellingsdata/jhellingsdata.github.io">Source on GitHub</a>
     </footer>
 
     <script>
@@ -1401,13 +1418,14 @@ vegaEmbed("#housebuilding", "ft_housebuilding.json", {
             "Housing associations": "#70dce6",
             "Local authorities": "#ef6590",
         };
+        const thousands = (text) => Math.round(Number(text.replace(/,/g, "")) / 1000);
         window.embedOptions = {
             ftTooltip: {
                 tooltip: {
                     theme: "ft",
                     formatTooltip: (value, sanitize) =>
                         `<div class="sector" style="color: ${colours[value.Sector]}">${sanitize(value.Sector)}</div>` +
-                        `<b>${sanitize(value.Year)}</b>: ${sanitize(value.Completed)}`,
+                        `<b>${sanitize(value.Year)}:</b> ${thousands(value.Completed)}`,
                 },
             },
         };

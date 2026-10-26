@@ -1,6 +1,6 @@
 # Recreating charts in Vega-Lite
 
-Step-by-step rebuilds of charts from news organisations, used as teaching material. Each recreation starts from a default Vega-Lite chart and adds one idea per step, with matching Altair code. The walkthroughs are published at [hellin.gs/tutorials-home.html](https://hellin.gs/tutorials-home.html).
+Step-by-step rebuilds of charts from news organisations, used as teaching material. Each recreation starts from a default Vega-Lite chart and adds one idea per step, with matching Altair code. The walkthroughs are published at [hellin.gs/tutorials](https://hellin.gs/tutorials/).
 
 ## Recreations
 
@@ -29,12 +29,14 @@ The walkthrough pages live in [`/tutorials`](../../../tutorials/) and share `tut
 4. Build the spec in small steps, saving each as `specs/NN_name.json`.
 5. Write the matching Altair script for each step, and check both render the same chart.
 
-## Candidates
+## Planned walkthroughs
 
-| File | Chart |
-|---|---|
-| `candidates/ft-school-teachers.png` | FT: school teachers |
-| `candidates/ft-cashflow-dark.png` | FT: Alphabet's quarterly free cash flow (dark theme, negative bar) |
-| `candidates/economist-indexed-line.png` | The Economist: indexed line chart |
-| `candidates/economist-stock-markets.png` | The Economist: European stock markets |
-| `candidates/cbp-transport-spending.png` | Centre for British Progress (Datawrapper): UK transport spending vs OECD peers, highlighted horizontal bars |
+Targets are in [`candidates/`](candidates/). Listed roughly from simplest to hardest, with the main new idea each one teaches.
+
+| Target | Level | Techniques |
+|---|---|---|
+| [FT: Alphabet's free cash flow](candidates/ft-cashflow-dark.png) | First chart (simpler than housebuilding) | One bar series on a quarterly time axis, a negative bar, a dark theme set once in `config` |
+| [FT: teacher recruitment against target](candidates/ft-school-teachers.png) | Beginner | Bars above and below zero coloured by sign with a `condition`, value labels inside bars, a heavier zero line, an "Above target" annotation |
+| [Centre for British Progress: transport spending](candidates/cbp-transport-spending.png) | Beginner | Horizontal bars sorted by value, one country and the average highlighted, labels inside bars, grey "track" bars behind, a long footnote |
+| [The Economist: European stock markets](candidates/economist-stock-markets.png) | Intermediate | Rebasing to 100 with `joinaggregate` and `calculate`, multi-line chart, direct line labels instead of a legend, one series in bold |
+| [The Economist: rat sightings](candidates/economist-rat-sightings.png) | Intermediate | Two panels with `hconcat`, a moving average with `window`, a log scale, a highlighted line among muted ones |

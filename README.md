@@ -12,8 +12,8 @@ The work spans a university data science course, research for the Economics Obse
 | `charts/` | Vega-Lite chart specs, grouped by project. `charts/teaser/` holds the home page previews. |
 | `data-story/` | Longer interactive pieces, such as the tax explorer. |
 | `justice-league/` | Premier League points deduction dashboard. |
-| `examples/`, `tutorials-home.html` | Teaching material and Vega-Lite tutorials. |
-| `tutorials/` | Step-by-step walkthrough pages, with shared `tutorial.css` and `tutorial.js`. Their specs live in `examples/vega-lite/recreate/`. |
+| `examples/` | Teaching material: Vega-Lite and Python examples. |
+| `tutorials/` | Step-by-step chart tutorials. `index.html` lists them (hellin.gs/tutorials/), and the pages share `tutorial.css` and `tutorial.js`. Their specs live in `examples/vega-lite/recreate/`. `tutorials-home.html` redirects here. |
 | `EcoObservatory/`, `Hexmaps/` | Economics Observatory articles and UK hex maps. |
 | `Portfolio/`, `Project/` | University of Bristol data science coursework. |
 | `Data/` | Datasets used by the charts. |
