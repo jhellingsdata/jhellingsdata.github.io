@@ -9,3 +9,6 @@ test_grid*
 # Local files
 CLAUDE.md
 PROJECTS.md
+
+# Python
+__pycache__/
