@@ -89,7 +89,8 @@
             margin-bottom: 5px;
             font-weight: 500;
         }
-        .income-input input {
+        .income-input input,
+        .income-input select {
             width: 100%;
             padding: 8px;
             border: 1px solid #ddd;
@@ -127,6 +128,59 @@
             color: #4CAF50;
             font-weight: 700;
         }
+        .salary-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .salary-inputs .income-input {
+            margin-bottom: 10px;
+        }
+        .stats:not(.comparing) .compare-only {
+            display: none;
+        }
+        .compare-toggle {
+            margin-bottom: 10px;
+        }
+        .compare-toggle label {
+            display: inline-flex;
+        }
+        .headline {
+            font-size: 17px;
+            margin: 5px 0 15px;
+            padding: 12px 15px;
+            background: #f5f5f5;
+            border-left: 3px solid #4CAF50;
+            border-radius: 4px;
+        }
+        .headline strong {
+            font-weight: 700;
+        }
+        .period-toggle {
+            display: inline-flex;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        .period-toggle label {
+            padding: 5px 14px;
+            cursor: pointer;
+            color: var(--muted);
+        }
+        .period-toggle label:has(input:checked) {
+            background: var(--muted);
+            color: white;
+        }
+        .period-toggle input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .period-toggle label:has(input:focus-visible) {
+            outline: 2px solid #4CAF50;
+        }
         .pension-options {
             margin: 4px 0 0 33px;
             font-size: 13px;
@@ -156,7 +210,6 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
-            font-variant-numeric: tabular-nums;
         }
         .breakdown th,
         .breakdown td {
@@ -203,6 +256,193 @@
             color: var(--muted);
             margin: 12px 0 0;
         }
+        /* ---------- Mobile-only components (hidden on wider screens) ---------- */
+        .chip-bar,
+        .settings-toggle {
+            display: none;
+        }
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        /* ---------- Tablets and phones: one column (chart, controls, summary) ---------- */
+        @media (max-width: 900px) {
+            .dashboard {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .chart-container,
+            .controls,
+            .stats {
+                grid-column: 1;
+                grid-row: auto;
+            }
+            /* Full-width controls panel: settings in two columns */
+            .settings-body {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 30px;
+                align-items: start;
+            }
+        }
+
+        /* ---------- Phones ---------- */
+        @media (max-width: 760px) {
+            body {
+                padding: 12px;
+            }
+            h1 {
+                font-size: 26px;
+                margin: 4px 0 8px;
+            }
+            body > h3 {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+            /* 16px stops iOS zooming in when an input is focused */
+            input, select {
+                font-size: 16px !important;
+            }
+
+            .dashboard {
+                gap: 12px;
+                margin-top: 4px;
+            }
+            .chart-container,
+            .controls,
+            .stats {
+                padding: 14px;
+            }
+            .settings-body {
+                display: block;
+            }
+
+            /* Sticky row of toggle chips */
+            .chip-bar {
+                display: flex;
+                gap: 6px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                margin: 0 -12px;
+                padding: 10px 12px;
+                overflow-x: auto;
+                scrollbar-width: none;
+                background: #f5f5f5;
+            }
+            .chip-bar::-webkit-scrollbar {
+                display: none;
+            }
+            .chip {
+                flex: none;
+                padding: 7px 11px;
+                border: 1px solid #ccc;
+                border-radius: 999px;
+                background: white;
+                color: var(--muted);
+                font-size: 13px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            .chip[aria-pressed="true"] {
+                background: var(--muted);
+                border-color: var(--muted);
+                color: white;
+            }
+
+            /* Controls collapse to a one-line settings bar */
+            .controls h3,
+            .control-group .component-toggle {
+                display: none;
+            }
+            .settings-toggle {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                padding: 0;
+                border: none;
+                background: none;
+                color: var(--ink);
+                font-size: 15px;
+                text-align: left;
+                cursor: pointer;
+            }
+            .settings-title {
+                font-weight: 700;
+            }
+            .settings-summary {
+                flex: 1;
+                min-width: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: var(--muted);
+                font-size: 14px;
+            }
+            .chevron {
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid var(--muted);
+                border-bottom: 2px solid var(--muted);
+                transform: rotate(45deg);
+                transition: transform 0.2s;
+            }
+            .controls.open .chevron {
+                transform: rotate(-135deg);
+            }
+            .controls:not(.open) .settings-body {
+                display: none;
+            }
+            .settings-body {
+                margin-top: 14px;
+            }
+            .income-input {
+                margin-bottom: 14px;
+            }
+            .pension-options {
+                margin-left: 0;
+            }
+
+            /* Summary panel */
+            .salary-inputs {
+                gap: 12px;
+            }
+            .headline {
+                font-size: 15px;
+                padding: 10px 12px;
+            }
+            .stat-row,
+            .breakdown {
+                font-size: 14px;
+            }
+            .breakdown th,
+            .breakdown td {
+                padding-left: 8px;
+                white-space: nowrap;
+            }
+            .breakdown th:first-child,
+            .breakdown td:first-child {
+                padding-left: 0;
+                white-space: normal;
+            }
+            .breakdown tr.component td:first-child {
+                padding-left: 10px;
+            }
+        }
+
+        /* ---------- Small phones (iPhone SE 1st gen and similar) ---------- */
+        @media (max-width: 360px) {
+            .breakdown {
+                font-size: 12.5px;
+            }
+            .breakdown th,
+            .breakdown td {
+                padding-left: 5px;
+            }
+            .salary-inputs label {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -210,42 +450,66 @@
     <h3>Find your marginal & effective tax rates</h3>
     
     <div class="dashboard">
+        <!-- Phones: sticky chips replace the component checkboxes in the controls panel -->
+        <div class="chip-bar" role="group" aria-label="Tax components">
+            <button type="button" class="chip" data-toggles="incomeTax">Income Tax</button>
+            <button type="button" class="chip" data-toggles="nationalInsurance">NI</button>
+            <button type="button" class="chip" data-toggles="studentLoanUG">Plan 2</button>
+            <button type="button" class="chip" data-toggles="studentLoanPG">Postgrad</button>
+            <button type="button" class="chip" data-toggles="pension">Pension</button>
+        </div>
+
         <div class="chart-container">
             <div id="vis"></div>
         </div>
         
-        <div class="controls">
+        <div class="controls" id="controls">
             <h3>Tax Components</h3>
+            <button type="button" class="settings-toggle" id="settingsToggle"
+                    aria-expanded="false" aria-controls="settingsBody">
+                <span class="settings-title">Settings</span>
+                <span class="settings-summary" id="settingsSummary"></span>
+                <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <div class="settings-body" id="settingsBody">
+            <div class="income-input">
+                <label for="taxYear">Tax year:</label>
+                <select id="taxYear">
+                    <option value="2026-27" selected>2026/27</option>
+                    <option value="2025-26">2025/26</option>
+                    <option value="2024-25">2024/25</option>
+                </select>
+            </div>
             <div class="income-input">
                 <label for="maxIncome">Max Income (£):</label>
                 <input type="number" id="maxIncome" value="200000" min="1000" max="1000000" step="1000">
             </div>
             <div class="control-group">
-                <label>
+                <label class="component-toggle">
                     <input type="checkbox" id="incomeTax" checked>
                     Income Tax
                 </label>
             </div>
             <div class="control-group">
-                <label>
+                <label class="component-toggle">
                     <input type="checkbox" id="nationalInsurance" checked>
                     National Insurance
                 </label>
             </div>
             <div class="control-group">
-                <label>
+                <label class="component-toggle">
                     <input type="checkbox" id="studentLoanUG" checked>
                     Student Loan (Plan 2)
                 </label>
             </div>
             <div class="control-group">
-                <label>
+                <label class="component-toggle">
                     <input type="checkbox" id="studentLoanPG" checked>
                     Postgraduate Loan
                 </label>
             </div>
             <div class="control-group">
-                <label>
+                <label class="component-toggle">
                     <input type="checkbox" id="pension">
                     Employee pension
                 </label>
@@ -260,14 +524,28 @@
                     </select>
                 </div>
             </div>
+            </div>
         </div>
 
         <div class="stats">
             <h3>Summary Statistics</h3>
-            <div class="income-input">
-                <label for="summaryIncomeInput">Your Income (£):</label>
-                <input type="number" id="summaryIncomeInput" value="50000" min="0" max="1000000" step="100">
+            <div class="salary-inputs">
+                <div class="income-input">
+                    <label for="summaryIncomeInput">Your Income (£):</label>
+                    <input type="number" id="summaryIncomeInput" value="50000" min="0" max="1000000" step="100">
+                </div>
+                <div class="income-input compare-only">
+                    <label for="compareIncomeInput">Future Income (£):</label>
+                    <input type="number" id="compareIncomeInput" value="60000" min="0" max="1000000" step="100">
+                </div>
             </div>
+            <div class="control-group compare-toggle">
+                <label>
+                    <input type="checkbox" id="compareMode">
+                    Compare with another salary
+                </label>
+            </div>
+            <p class="headline compare-only" id="compareHeadline"></p>
             <div class="stat-row">
                 <span class="stat-label">Marginal Rate:</span>
                 <span class="stat-value" id="marginalRate">--</span>
@@ -276,74 +554,77 @@
                 <span class="stat-label">Effective Rate:</span>
                 <span class="stat-value" id="effectiveRate">--</span>
             </div>
-            <table class="breakdown">
-                <thead>
-                    <tr><th></th><th>Yearly</th><th>Monthly</th></tr>
-                </thead>
-                <tbody id="breakdownBody"></tbody>
-            </table>
+            <div class="period-toggle compare-only" role="radiogroup" aria-label="Show figures">
+                <label><input type="radio" name="period" value="yearly" checked> Yearly</label>
+                <label><input type="radio" name="period" value="monthly"> Monthly</label>
+            </div>
+            <div class="table-scroll">
+                <table class="breakdown">
+                    <thead id="breakdownHead"></thead>
+                    <tbody id="breakdownBody"></tbody>
+                </table>
+            </div>
             <p class="note" id="breakdownNote"></p>
         </div>
     </div>
 
 
     <script>
-        // Tax configuration data structure
-        const taxConfig = {
-            // incomeTax: {
-            //     name: "Income Tax",
-            //     bands: [
-            //         { min: 0, max: 12570, rate: 0 },
-            //         { min: 12570, max: 50270, rate: 0.20 },
-            //         { min: 50270, max: 125140, rate: 0.40 },
-            //         { min: 125140, max: Infinity, rate: 0.45 }
-            //     ],
-            //     personalAllowance: 12570,
-            //     allowanceTaper: {
-            //         start: 100000,
-            //         end: 125140,
-            //         reductionRate: 0.5  // £1 reduction per £2 over threshold
-            //     }
-            // },
-            incomeTax: {
-                name: "Income Tax",
-                bands: [
-                    { min: 0, max: 12570, rate: 0 },
-                    { min: 12570, max: 50270, rate: 0.20 },
-                    { min: 50270, max: 125140, rate: 0.40 },
-                    { min: 125140, max: Infinity, rate: 0.45 }
-                ],
-                personalAllowance: 12_570,
-                allowanceTaper: {
-                    start: 100_000,
-                    end: 125_140,
-                    reductionRate: 0.5  // £1 PA reduced per £2 over => 0.5 per £1
-                },
-                basicRate: 0.20,
-                higherRate: 0.40,
-                additionalRate: 0.45,
-                basicBandWidth: 37_700,             // constant width of 20% band
-                additionalThresholdGross: 125_140   // fixed gross threshold for 45%
+        // Tax rules by tax year (England, Wales and Northern Ireland).
+        // Income tax and NI thresholds are frozen until April 2031, so only the
+        // student loan thresholds differ between these years.
+        const incomeTaxRUK = {
+            name: "Income Tax",
+            personalAllowance: 12_570,
+            allowanceTaper: {
+                start: 100_000,
+                end: 125_140,
+                reductionRate: 0.5  // £1 PA reduced per £2 over => 0.5 per £1
             },
-            nationalInsurance: {
-                name: "National Insurance",
-                bands: [
-                    { min: 0, max: 12570, rate: 0 },
-                    { min: 12570, max: 50270, rate: 0.08 },
-                    { min: 50270, max: Infinity, rate: 0.02 }
-                ]
+            basicRate: 0.20,
+            higherRate: 0.40,
+            additionalRate: 0.45,
+            basicBandWidth: 37_700,             // constant width of 20% band
+            additionalThresholdGross: 125_140   // fixed gross threshold for 45%
+        };
+
+        const nationalInsuranceClass1 = {
+            name: "National Insurance",
+            bands: [
+                { min: 0, max: 12_570, rate: 0 },
+                { min: 12_570, max: 50_270, rate: 0.08 },
+                { min: 50_270, max: Infinity, rate: 0.02 }
+            ]
+        };
+
+        const studentLoan = (name, threshold, rate) => ({ name, threshold, rate });
+
+        const taxYears = {
+            "2024-25": {
+                label: "2024/25",
+                incomeTax: incomeTaxRUK,
+                nationalInsurance: nationalInsuranceClass1,
+                studentLoanUG: studentLoan("Student Loan Plan 2", 27_295, 0.09),
+                studentLoanPG: studentLoan("Postgraduate Loan", 21_000, 0.06)
             },
-            studentLoanUG: {
-                name: "Student Loan Plan 2",
-                threshold: 28470,
-                rate: 0.09
+            "2025-26": {
+                label: "2025/26",
+                incomeTax: incomeTaxRUK,
+                nationalInsurance: nationalInsuranceClass1,
+                studentLoanUG: studentLoan("Student Loan Plan 2", 28_470, 0.09),
+                studentLoanPG: studentLoan("Postgraduate Loan", 21_000, 0.06)
             },
-            studentLoanPG: {
-                name: "Postgraduate Loan",
-                threshold: 21000,
-                rate: 0.06
+            "2026-27": {
+                label: "2026/27",
+                incomeTax: incomeTaxRUK,
+                nationalInsurance: nationalInsuranceClass1,
+                studentLoanUG: studentLoan("Student Loan Plan 2", 29_385, 0.09),
+                studentLoanPG: studentLoan("Postgraduate Loan", 21_000, 0.06)
             }
         };
+
+        // Rules in use; set from the tax year selector in updateVisualisation()
+        let taxConfig = taxYears["2026-27"];
 
         const styleConfig = {
             view: {
@@ -510,7 +791,49 @@
         }
 
         // Create Vega-Lite specification
-        function createSpec(data, summaryIncome) {
+        // Shaded band between two salaries, with a labelled marker at each.
+        // Values are clamped to the chart's income range.
+        function comparisonLayers(currentIncome, futureIncome, maxIncome) {
+            const clamp = v => Math.min(Math.max(v, 0), maxIncome);
+            const markers = [
+                { income: clamp(currentIncome), label: "Current" },
+                { income: clamp(futureIncome), label: "Future" }
+            ];
+            // Lower salary labelled to the left of its line, higher to the right,
+            // so the labels never overlap
+            const [low, high] = [...markers].sort((a, b) => a.income - b.income);
+            const label = (marker, align, dx) => ({
+                data: { values: [marker] },
+                mark: { type: "text", color: "#676A86", baseline: "top", align, dx, dy: 4, fontSize: 13 },
+                encoding: {
+                    x: { field: "income", type: "quantitative" },
+                    y: { value: 0 },
+                    text: { field: "label" }
+                }
+            });
+            return [
+                {
+                    data: { values: [{ income: low.income, income2: high.income }] },
+                    mark: { type: "rect", color: "#676A86", opacity: 0.1 },
+                    encoding: {
+                        x: { field: "income", type: "quantitative" },
+                        x2: { field: "income2" }
+                    }
+                },
+                {
+                    data: { values: markers },
+                    mark: { type: "rule", color: "#676A86", strokeWidth: 1.5, strokeDash: [4, 3] },
+                    encoding: {
+                        x: { field: "income", type: "quantitative" }
+                    }
+                },
+                label(low, "right", -5),
+                label(high, "left", 5)
+            ];
+        }
+
+        // layout: { width, height, compact } from chartLayout()
+        function createSpec(data, summaryIncome, compareIncome = null, layout = { width: 700, height: 400, compact: false }) {
             // Prepare data for labels - get the last point for each line
             const lastPoint = data[data.length - 1];
             const labelData = [
@@ -528,8 +851,9 @@
 
             return {
                 $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-                width: 700,
-                height: 400,
+                width: layout.width,
+                height: layout.height,
+                autosize: { type: "fit", contains: "padding" },
                 data: { values: data },
                 encoding: {
                     x: {
@@ -537,13 +861,15 @@
                         type: "quantitative",
                         title: "Personal income (£)",
                         axis: {
-                            format: "$,d",
+                            format: layout.compact ? "$~s" : "$,d",   // £200k on phones
                             labelAngle: 0,
-                            titleFontSize: 13
+                            titleFontSize: 13,
+                            ...(layout.compact && { tickCount: 4 })
                         }
                     }
                 },
                 layer: [
+                ...(compareIncome === null ? [] : comparisonLayers(summaryIncome, compareIncome, lastPoint.income)),
                 {
                     encoding: {
                         y: {
@@ -614,15 +940,18 @@
                             }
                         ]
                     },
-                    {
-                        data: { values: labelData },
-                        mark: { 
-                            type: "text", 
-                            align: "left",
-                            dx: 5,
-                            dy: 0,
+                    // Line labels: beside the line ends on desktop; inside the plot on
+                    // phones (marginal above its line, effective below) to save width
+                    ...labelData.map(d => ({
+                        data: { values: [d] },
+                        mark: {
+                            type: "text",
                             fontWeight: "bold",
-                            fontSize: 15
+                            fontSize: layout.compact ? 12 : 15,
+                            ...(layout.compact
+                                ? { align: "right", dy: d.label === "Marginal" ? -6 : 6,
+                                    baseline: d.label === "Marginal" ? "bottom" : "top" }
+                                : { align: "left", dx: 5, baseline: "middle" })
                         },
                         encoding: {
                             x: {
@@ -651,14 +980,33 @@
                                 legend: null
                             }
                         }
-                    }
+                    }))
                 ],
                 resolve: { scale: { color: "independent" } }
             };
         }
 
+        // Read a number input, falling back only when it is empty or invalid
+        function readNumber(id, fallback) {
+            const value = parseFloat(document.getElementById(id).value);
+            return Number.isFinite(value) ? value : fallback;
+        }
+
+        const phoneQuery = window.matchMedia('(max-width: 760px)');
+
+        // Chart size from the width of its container; shorter and simpler on phones.
+        // The export menu (desktop only) takes 38px on the right.
+        function chartLayout() {
+            const compact = phoneQuery.matches;
+            const available = document.getElementById('vis').clientWidth - (compact ? 0 : 38);
+            const width = Math.max(260, Math.floor(available));
+            const height = compact ? Math.round(Math.min(320, Math.max(240, width * 0.8))) : 400;
+            return { width, height, compact };
+        }
+
         // Update visualisation
         function updateVisualisation() {
+            taxConfig = taxYears[document.getElementById('taxYear').value];
             const components = {
                 incomeTax: document.getElementById('incomeTax').checked,
                 nationalInsurance: document.getElementById('nationalInsurance').checked,
@@ -667,19 +1015,24 @@
             };
             const pension = {
                 enabled: document.getElementById('pension').checked,
-                rate: (parseFloat(document.getElementById('pensionRate').value) || 0) / 100,
+                rate: readNumber('pensionRate', 0) / 100,
                 method: document.getElementById('pensionMethod').value
             };
             document.getElementById('pensionOptions').classList.toggle('hidden', !pension.enabled);
 
-            const maxIncome = parseInt(document.getElementById('maxIncome').value) || 200000;
-            const summaryIncome = parseInt(document.getElementById('summaryIncomeInput').value) || 50000;
-            const data = generateData(maxIncome, components, pension);
-            const spec = createSpec(data, summaryIncome);
+            const comparing = document.getElementById('compareMode').checked;
+            document.querySelector('.stats').classList.toggle('comparing', comparing);
+            const period = document.querySelector('input[name="period"]:checked').value;
 
-            
+            const maxIncome = readNumber('maxIncome', 200000);
+            const summaryIncome = readNumber('summaryIncomeInput', 50000);
+            const compareIncome = readNumber('compareIncomeInput', 60000);
+            const data = generateData(maxIncome, components, pension);
+            const layout = chartLayout();
+            const spec = createSpec(data, summaryIncome, comparing ? compareIncome : null, layout);
+
             circularReady().then(() => vegaEmbed('#vis', spec, {
-                actions: true,
+                actions: !layout.compact,
                 config: {
                     legend: {
                         orient: "top-right",
@@ -693,20 +1046,51 @@
                             currency: ["£", ""]
                         }
                     },
-                    ...styleConfig
+                    ...styleConfig,
+                    axis: { ...styleConfig.axis, ...(layout.compact && { labelFontSize: 12 }) }
                 }
             }));
-            
-            console.log(spec);
+
+            // Phone controls: chip states and the one-line settings summary
+            document.querySelectorAll('.chip').forEach(chip => {
+                chip.setAttribute('aria-pressed', document.getElementById(chip.dataset.toggles).checked);
+            });
+            const pensionText = pension.enabled
+                ? `Pension ${+(pension.rate * 100).toFixed(2)}% ${pensionShortLabels[pension.method]}`
+                : 'No pension';
+            document.getElementById('settingsSummary').textContent =
+                `${taxConfig.label} · max ${formats.compact.format(maxIncome)} · ${pensionText}`;
 
             // Update summary statistics
-            const b = calculateBreakdown(summaryIncome, components, pension);
-            const marginal = calculateMarginalRate(summaryIncome, components, pension);
-            const effective = summaryIncome > 0 ? b.totalTax / summaryIncome : 0;
+            const current = summarise(summaryIncome, components, pension);
+            const future = comparing ? summarise(compareIncome, components, pension) : null;
 
-            document.getElementById('marginalRate').textContent = (marginal * 100).toFixed(1) + '%';
-            document.getElementById('effectiveRate').textContent = (effective * 100).toFixed(1) + '%';
-            renderBreakdown(b, components, pension);
+            const pct = rate => (rate * 100).toFixed(1) + '%';
+            document.getElementById('marginalRate').textContent = comparing
+                ? `${pct(current.marginal)} → ${pct(future.marginal)}`
+                : pct(current.marginal);
+            document.getElementById('effectiveRate').textContent = comparing
+                ? `${pct(current.effective)} → ${pct(future.effective)}`
+                : pct(current.effective);
+
+            const columns = comparing
+                ? comparisonColumns(current.breakdown, future.breakdown, period)
+                : [
+                    { title: 'Yearly', breakdown: current.breakdown, format: formats.yearly },
+                    { title: 'Monthly', breakdown: current.breakdown, scale: 1 / 12, format: formats.monthly }
+                ];
+            renderBreakdown(columns, components, pension, comparing);
+            if (comparing) renderHeadline(current.breakdown, future.breakdown, pension);
+        }
+
+        // Breakdown plus marginal and effective rates for one salary
+        function summarise(income, components, pension) {
+            const breakdown = calculateBreakdown(income, components, pension);
+            return {
+                breakdown,
+                marginal: calculateMarginalRate(income, components, pension),
+                effective: income > 0 ? breakdown.totalTax / income : 0
+            };
         }
 
         const pensionLabels = {
@@ -715,37 +1099,79 @@
             reliefAtSource: 'Pension (after 20% relief)'
         };
 
-        const yearly = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
-        const monthly = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', minimumFractionDigits: 2 });
+        const pensionShortLabels = {
+            netPay: 'net pay',
+            salarySacrifice: 'sacrifice',
+            reliefAtSource: 'relief at source'
+        };
 
-        // Yearly and monthly table of pay, deductions and take-home pay
-        function renderBreakdown(b, components, pension) {
-            const rows = [
-                { label: 'Gross pay', value: b.gross },
-                components.incomeTax && { label: 'Income Tax', value: -b.incomeTax, cls: 'component' },
-                components.nationalInsurance && { label: 'National Insurance', value: -b.nationalInsurance, cls: 'component' },
-                components.studentLoanUG && { label: 'Student Loan (Plan 2)', value: -b.studentLoanUG, cls: 'component' },
-                components.studentLoanPG && { label: 'Postgraduate Loan', value: -b.studentLoanPG, cls: 'component' },
-                { label: 'Total tax', value: -b.totalTax, cls: 'subtotal' },
-                pension.enabled && { label: pensionLabels[pension.method], value: -b.pension },
-                { label: 'Take-home pay', value: b.takeHome, cls: 'total' }
+        const currency = options => new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', ...options });
+        const formats = {
+            yearly: currency({ maximumFractionDigits: 0 }),
+            monthly: currency({ minimumFractionDigits: 2 }),
+            yearlyChange: currency({ maximumFractionDigits: 0, signDisplay: 'exceptZero' }),
+            monthlyChange: currency({ minimumFractionDigits: 2, signDisplay: 'exceptZero' }),
+            compact: currency({ notation: 'compact' })                     // £200K
+        };
+
+        // Current | Future | Change columns, all yearly or all monthly
+        function comparisonColumns(a, b, period) {
+            const scale = period === 'monthly' ? 1 / 12 : 1;
+            const format = formats[period];
+            return [
+                { title: 'Current', breakdown: a, scale, format },
+                { title: 'Future', breakdown: b, scale, format },
+                { title: 'Change', breakdown: b, minus: a, scale, format: formats[period + 'Change'], cls: 'change' }
+            ];
+        }
+
+        // Rows of the table. Deductions are negative so that every column,
+        // including the change column, sums down to take-home pay.
+        function breakdownRows(components, pension) {
+            return [
+                { label: 'Gross pay', value: b => b.gross },
+                components.incomeTax && { label: 'Income Tax', value: b => -b.incomeTax, cls: 'component' },
+                components.nationalInsurance && { label: 'National Insurance', value: b => -b.nationalInsurance, cls: 'component' },
+                components.studentLoanUG && { label: 'Student Loan (Plan 2)', value: b => -b.studentLoanUG, cls: 'component' },
+                components.studentLoanPG && { label: 'Postgraduate Loan', value: b => -b.studentLoanPG, cls: 'component' },
+                { label: 'Total tax', value: b => -b.totalTax, cls: 'subtotal' },
+                pension.enabled && { label: pensionLabels[pension.method], value: b => -b.pension },
+                { label: 'Take-home pay', value: b => b.takeHome, cls: 'total' }
             ].filter(Boolean);
+        }
+
+        function renderBreakdown(columns, components, pension, comparing) {
+            const headRow = document.createElement('tr');
+            ['', ...columns.map(c => c.title)].forEach(title => {
+                const th = document.createElement('th');
+                th.textContent = title;
+                headRow.appendChild(th);
+            });
+            document.getElementById('breakdownHead').replaceChildren(headRow);
 
             const tbody = document.getElementById('breakdownBody');
-            tbody.replaceChildren(...rows.map(row => {
+            tbody.replaceChildren(...breakdownRows(components, pension).map(row => {
                 const tr = document.createElement('tr');
                 if (row.cls) tr.className = row.cls;
-                const cells = [row.label, yearly.format(row.value), monthly.format(row.value / 12)];
-                cells.forEach((text, i) => {
+                const label = document.createElement('td');
+                label.textContent = row.label;
+                tr.appendChild(label);
+
+                columns.forEach(col => {
+                    const value = (row.value(col.breakdown) - (col.minus ? row.value(col.minus) : 0)) * (col.scale ?? 1);
                     const td = document.createElement('td');
-                    td.textContent = text;
-                    if (i > 0 && row.value < 0) td.className = 'deduction';
+                    td.textContent = col.format.format(value);
+                    td.classList.toggle('deduction', value < -0.005);
+                    if (col.cls) td.classList.add(col.cls);
                     tr.appendChild(td);
                 });
                 return tr;
             }));
 
-            const notes = ['Monthly figures are the yearly figures divided by 12, assuming equal pay each month.'];
+            const notes = [`${taxConfig.label} rates for England, Wales and Northern Ireland.`];
+            notes.push(comparing
+                ? 'Both salaries use the same tax year and pension settings.'
+                : 'Monthly figures are the yearly figures divided by 12, assuming equal pay each month.');
             if (pension.enabled) {
                 notes.push('Tax rates exclude pension contributions, which are savings rather than tax.');
             }
@@ -755,16 +1181,71 @@
             document.getElementById('breakdownNote').textContent = notes.join(' ');
         }
 
+        // "Of the £10,000 rise, you keep £5,800 (58%)", yearly with monthly in brackets
+        function renderHeadline(a, b, pension) {
+            const el = document.getElementById('compareHeadline');
+            const grossChange = b.gross - a.gross;
+            if (grossChange === 0) {
+                el.textContent = 'Enter a different future salary to compare.';
+                return;
+            }
+            const kept = b.takeHome - a.takeHome;
+            const pensionChange = b.pension - a.pension;
+            const money = v => formats.yearly.format(Math.abs(v));
+            const perMonth = v => `${formats.monthly.format(Math.abs(v) / 12)} a month`;
+            const share = Math.round(Math.abs(kept / grossChange) * 100);
+
+            const strong = text => {
+                const node = document.createElement('strong');
+                node.textContent = text;
+                return node;
+            };
+            const parts = grossChange > 0
+                ? [`Of the ${money(grossChange)} rise (${perMonth(grossChange)}), you keep `,
+                   strong(`${money(kept)} (${perMonth(kept)})`), `, or ${share}%.`]
+                : [`Of the ${money(grossChange)} cut (${perMonth(grossChange)}), take-home pay falls by `,
+                   strong(`${money(kept)} (${perMonth(kept)})`), `, or ${share}%.`];
+            if (pension.enabled && Math.abs(pensionChange) >= 0.5) {
+                parts.push(` Your pension contributions also ${pensionChange > 0 ? 'rise' : 'fall'} by ${money(pensionChange)}.`);
+            }
+            el.replaceChildren(...parts);
+        }
+
         // Event listeners
-        document.getElementById('incomeTax').addEventListener('change', updateVisualisation);
-        document.getElementById('nationalInsurance').addEventListener('change', updateVisualisation);
-        document.getElementById('studentLoanUG').addEventListener('change', updateVisualisation);
-        document.getElementById('studentLoanPG').addEventListener('change', updateVisualisation);
-        document.getElementById('pension').addEventListener('change', updateVisualisation);
-        document.getElementById('pensionRate').addEventListener('input', updateVisualisation);
-        document.getElementById('pensionMethod').addEventListener('change', updateVisualisation);
-        document.getElementById('maxIncome').addEventListener('input', updateVisualisation);
-        document.getElementById('summaryIncomeInput').addEventListener('input', updateVisualisation);
+        ['taxYear', 'incomeTax', 'nationalInsurance', 'studentLoanUG', 'studentLoanPG',
+         'pension', 'pensionMethod', 'compareMode'].forEach(id =>
+            document.getElementById(id).addEventListener('change', updateVisualisation));
+        ['pensionRate', 'maxIncome', 'summaryIncomeInput', 'compareIncomeInput'].forEach(id =>
+            document.getElementById(id).addEventListener('input', updateVisualisation));
+        document.querySelectorAll('input[name="period"]').forEach(radio =>
+            radio.addEventListener('change', updateVisualisation));
+
+        // Phone chips switch the matching checkbox, so there is one source of state
+        document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
+            const checkbox = document.getElementById(chip.dataset.toggles);
+            checkbox.checked = !checkbox.checked;
+            checkbox.dispatchEvent(new Event('change'));
+        }));
+
+        document.getElementById('settingsToggle').addEventListener('click', () => {
+            const open = document.getElementById('controls').classList.toggle('open');
+            document.getElementById('settingsToggle').setAttribute('aria-expanded', open);
+        });
+
+        // Redraw the chart when its width changes (not on height-only changes,
+        // which mobile browsers fire as the address bar shows and hides)
+        let lastChartWidth = document.getElementById('vis').clientWidth;
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                const width = document.getElementById('vis').clientWidth;
+                if (width !== lastChartWidth) {
+                    lastChartWidth = width;
+                    updateVisualisation();
+                }
+            }, 150);
+        });
 
         // Initial render
         updateVisualisation();
