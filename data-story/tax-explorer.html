@@ -10,17 +10,35 @@
     <link rel="stylesheet" href="../css/circular-std.css">
     <script src="../js/fonts-ready.js"></script>
     <style>
+        /* Fonts and text colours match the Vega-Lite chart config (styleConfig).
+           Circular Std is loaded at 400, 500, 700 and 900 only. */
+        :root {
+            --font: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            --ink: #333;
+            --muted: #676A86;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: var(--font);
+            color: var(--ink);
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             background: #f5f5f5;
         }
         h1 {
-            color: #333;
+            color: var(--ink);
             border-bottom: 2px solid #4CAF50;
             padding-bottom: 10px;
+        }
+        input, select, button {
+            font-family: inherit;
+        }
+        body #vg-tooltip-element,
+        .vega-embed .vega-actions {
+            font-family: var(--font);
         }
         .dashboard {
             display: grid;
@@ -39,7 +57,9 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            height: fit-content;
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            align-self: start;
         }
         .control-group {
             margin-bottom: 15px;
@@ -78,14 +98,18 @@
         }
         h3 {
             margin-top: 0;
-            color: #555;
+            color: var(--muted);
         }
         .stats {
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-top: 20px;
+            grid-column: 1;
+        }
+        .stat-row,
+        .breakdown {
+            font-size: 15px;            /* chart axis label size */
         }
         .stat-row {
             display: flex;
@@ -101,7 +125,83 @@
         }
         .stat-value {
             color: #4CAF50;
-            font-weight: 600;
+            font-weight: 700;
+        }
+        .pension-options {
+            margin: 4px 0 0 33px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+        .pension-options.hidden {
+            display: none;
+        }
+        .control-group .pension-options label {
+            display: block;
+            padding: 0;
+            margin: 8px 0 3px;
+            cursor: default;
+        }
+        .control-group .pension-options label:hover {
+            background: none;
+        }
+        .pension-options input,
+        .pension-options select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .breakdown {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-variant-numeric: tabular-nums;
+        }
+        .breakdown th,
+        .breakdown td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            text-align: right;
+        }
+        .breakdown th:first-child,
+        .breakdown td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+        .breakdown th {
+            color: var(--muted);
+            font-weight: 500;
+        }
+        .breakdown td.deduction {
+            color: #c0392b;
+        }
+        /* Individual taxes, summed in the "Total tax" row below them */
+        .breakdown tr.component td {
+            opacity: 0.7;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .breakdown tr.component td:first-child {
+            padding-left: 16px;
+            font-weight: 400;
+        }
+        .breakdown tr.subtotal td {
+            border-top: 1px solid #ccc;
+        }
+        .breakdown tr.total td {
+            border-top: 2px solid #333;
+            border-bottom: none;
+            font-weight: 700;
+            color: #4CAF50;
+        }
+        .breakdown tr.total td:first-child {
+            color: var(--ink);
+        }
+        .note {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 12px 0 0;
         }
     </style>
 </head>
@@ -144,32 +244,48 @@
                     Postgraduate Loan
                 </label>
             </div>
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="pension">
+                    Employee pension
+                </label>
+                <div class="pension-options hidden" id="pensionOptions">
+                    <label for="pensionRate">Contribution (% of salary)</label>
+                    <input type="number" id="pensionRate" value="5" min="0" max="100" step="0.5">
+                    <label for="pensionMethod">How it is deducted</label>
+                    <select id="pensionMethod">
+                        <option value="netPay">Net pay (before tax)</option>
+                        <option value="salarySacrifice">Salary sacrifice</option>
+                        <option value="reliefAtSource">Relief at source</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h3>Summary Statistics</h3>
+            <div class="income-input">
+                <label for="summaryIncomeInput">Your Income (£):</label>
+                <input type="number" id="summaryIncomeInput" value="50000" min="0" max="1000000" step="100">
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Marginal Rate:</span>
+                <span class="stat-value" id="marginalRate">--</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Effective Rate:</span>
+                <span class="stat-value" id="effectiveRate">--</span>
+            </div>
+            <table class="breakdown">
+                <thead>
+                    <tr><th></th><th>Yearly</th><th>Monthly</th></tr>
+                </thead>
+                <tbody id="breakdownBody"></tbody>
+            </table>
+            <p class="note" id="breakdownNote"></p>
         </div>
     </div>
-    
-    <div class="stats">
-        <h3>Summary Statistics</h3>
-        <div class="income-input">
-            <label for="summaryIncomeInput">Your Income (£):</label>
-            <input type="number" id="summaryIncomeInput" value="50000" min="0" max="1000000" step="100">
-        </div>
-        <div class="stat-row">
-            <span class="stat-label">Marginal Rate:</span>
-            <span class="stat-value" id="marginalRate">--</span>
-        </div>
-        <div class="stat-row">
-            <span class="stat-label">Effective Rate:</span>
-            <span class="stat-value" id="effectiveRate">--</span>
-        </div>
-        <div class="stat-row">
-            <span class="stat-label">Total Tax:</span>
-            <span class="stat-value" id="totalTax">--</span>
-        </div>
-        <div class="stat-row">
-            <span class="stat-label">Net Income:</span>
-            <span class="stat-value" id="netIncome">--</span>
-        </div>
-    </div>
+
 
     <script>
         // Tax configuration data structure
@@ -260,14 +376,17 @@
         };
 
 
-        function calculateIncomeTax(income) {
+        // bandExtension: gross relief-at-source pension contributions. These widen the
+        // basic and higher rate bands and lower "adjusted net income" for the taper.
+        function calculateIncomeTax(income, bandExtension = 0) {
 
             const cfg = taxConfig.incomeTax;
 
             // 1) Adjust the personal allowance for taper
             let pa = cfg.personalAllowance;
-            if (income > cfg.allowanceTaper.start) {
-                const excess = income - cfg.allowanceTaper.start;
+            const adjustedNetIncome = income - bandExtension;
+            if (adjustedNetIncome > cfg.allowanceTaper.start) {
+                const excess = adjustedNetIncome - cfg.allowanceTaper.start;
                 const reduction = Math.min(excess * cfg.allowanceTaper.reductionRate, cfg.personalAllowance);
                 pa = Math.max(0, cfg.personalAllowance - reduction);
             }
@@ -276,8 +395,8 @@
             let taxable = Math.max(0, income - pa);
 
             // 3) Compute taxable thresholds in *taxable-income* space
-            const basicWidth = cfg.basicBandWidth;                                  // 37,700
-            const additionalThresholdTaxable = cfg.additionalThresholdGross - pa;   // shifts with PA
+            const basicWidth = cfg.basicBandWidth + bandExtension;                  // 37,700
+            const additionalThresholdTaxable = cfg.additionalThresholdGross + bandExtension - pa;   // shifts with PA
 
             // 4) Apply bands in taxable space
             let tax = 0;
@@ -327,42 +446,57 @@
             return (income - config.threshold) * config.rate;
         }
 
+        // Full breakdown of deductions from a gross salary.
+        // How the employee pension is taken decides which deductions it reduces:
+        //   netPay          before income tax; NI and loans still charged on full salary
+        //   salarySacrifice salary is lowered, so tax, NI and loans all fall
+        //   reliefAtSource  taken from pay after tax; the provider adds 20% basic relief,
+        //                   and the tax bands widen by the gross contribution
+        function calculateBreakdown(gross, components, pension) {
+            const contribution = pension.enabled ? gross * pension.rate : 0;
+            const method = pension.method;
+
+            const sacrificed = method === 'salarySacrifice' ? contribution : 0;
+            const pay = gross - sacrificed;                       // pay for NI and loans
+            const taxable = method === 'netPay' ? pay - contribution : pay;
+            const bandExtension = method === 'reliefAtSource' ? contribution : 0;
+
+            const b = {
+                gross: gross,
+                pension: method === 'reliefAtSource'
+                    ? contribution * (1 - taxConfig.incomeTax.basicRate)  // net cost to employee
+                    : contribution,
+                incomeTax: components.incomeTax ? calculateIncomeTax(taxable, bandExtension) : 0,
+                nationalInsurance: components.nationalInsurance ? calculateNationalInsurance(pay) : 0,
+                studentLoanUG: components.studentLoanUG ? calculateStudentLoan(pay, taxConfig.studentLoanUG) : 0,
+                studentLoanPG: components.studentLoanPG ? calculateStudentLoan(pay, taxConfig.studentLoanPG) : 0
+            };
+            b.totalTax = b.incomeTax + b.nationalInsurance + b.studentLoanUG + b.studentLoanPG;
+            b.takeHome = gross - b.pension - b.totalTax;
+            return b;
+        }
+
+        // Tax (excluding pension, which is saving) for selected components
+        function calculateTotalTax(income, components, pension) {
+            return calculateBreakdown(income, components, pension).totalTax;
+        }
+
         // Calculate marginal rate at a specific income level
-        function calculateMarginalRate(income, components) {
+        function calculateMarginalRate(income, components, pension) {
             const delta = 1;
-            const taxAtIncome = calculateTotalTax(income, components);
-            const taxAtIncomePlusDelta = calculateTotalTax(income + delta, components);
+            const taxAtIncome = calculateTotalTax(income, components, pension);
+            const taxAtIncomePlusDelta = calculateTotalTax(income + delta, components, pension);
             return (taxAtIncomePlusDelta - taxAtIncome) / delta;
         }
 
-        // Calculate total tax for selected components
-        function calculateTotalTax(income, components) {
-            let total = 0;
-            
-            if (components.incomeTax) {
-                total += calculateIncomeTax(income);
-            }
-            if (components.nationalInsurance) {
-                total += calculateNationalInsurance(income);
-            }
-            if (components.studentLoanUG) {
-                total += calculateStudentLoan(income, taxConfig.studentLoanUG);
-            }
-            if (components.studentLoanPG) {
-                total += calculateStudentLoan(income, taxConfig.studentLoanPG);
-            }
-            
-            return total;
-        }
-
         // Generate data for visualisation
-        function generateData(maxIncome, components) {
+        function generateData(maxIncome, components, pension) {
             const data = [];
             const step = Math.min(100, maxIncome / 1000);
-            
+
             for (let income = 0; income <= maxIncome; income += step) {
-                const marginalRate = calculateMarginalRate(income, components);
-                const totalTax = calculateTotalTax(income, components);
+                const marginalRate = calculateMarginalRate(income, components, pension);
+                const totalTax = calculateTotalTax(income, components, pension);
                 const effectiveRate = income > 0 ? totalTax / income : 0;
                 
                 data.push({
@@ -531,10 +665,16 @@
                 studentLoanUG: document.getElementById('studentLoanUG').checked,
                 studentLoanPG: document.getElementById('studentLoanPG').checked
             };
-            
+            const pension = {
+                enabled: document.getElementById('pension').checked,
+                rate: (parseFloat(document.getElementById('pensionRate').value) || 0) / 100,
+                method: document.getElementById('pensionMethod').value
+            };
+            document.getElementById('pensionOptions').classList.toggle('hidden', !pension.enabled);
+
             const maxIncome = parseInt(document.getElementById('maxIncome').value) || 200000;
             const summaryIncome = parseInt(document.getElementById('summaryIncomeInput').value) || 50000;
-            const data = generateData(maxIncome, components);
+            const data = generateData(maxIncome, components, pension);
             const spec = createSpec(data, summaryIncome);
 
             
@@ -560,17 +700,59 @@
             console.log(spec);
 
             // Update summary statistics
-            // const summaryIncome = parseInt(document.getElementById('summaryIncomeInput').value) || 50000;
-            
-            const marginal = calculateMarginalRate(summaryIncome, components);
-            const total = calculateTotalTax(summaryIncome, components);
-            const effective = summaryIncome > 0 ? total / summaryIncome : 0;
-            const net = summaryIncome - total;
-            
+            const b = calculateBreakdown(summaryIncome, components, pension);
+            const marginal = calculateMarginalRate(summaryIncome, components, pension);
+            const effective = summaryIncome > 0 ? b.totalTax / summaryIncome : 0;
+
             document.getElementById('marginalRate').textContent = (marginal * 100).toFixed(1) + '%';
             document.getElementById('effectiveRate').textContent = (effective * 100).toFixed(1) + '%';
-            document.getElementById('totalTax').textContent = '£' + total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-            document.getElementById('netIncome').textContent = '£' + net.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            renderBreakdown(b, components, pension);
+        }
+
+        const pensionLabels = {
+            netPay: 'Pension (net pay)',
+            salarySacrifice: 'Pension (salary sacrifice)',
+            reliefAtSource: 'Pension (after 20% relief)'
+        };
+
+        const yearly = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
+        const monthly = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', minimumFractionDigits: 2 });
+
+        // Yearly and monthly table of pay, deductions and take-home pay
+        function renderBreakdown(b, components, pension) {
+            const rows = [
+                { label: 'Gross pay', value: b.gross },
+                components.incomeTax && { label: 'Income Tax', value: -b.incomeTax, cls: 'component' },
+                components.nationalInsurance && { label: 'National Insurance', value: -b.nationalInsurance, cls: 'component' },
+                components.studentLoanUG && { label: 'Student Loan (Plan 2)', value: -b.studentLoanUG, cls: 'component' },
+                components.studentLoanPG && { label: 'Postgraduate Loan', value: -b.studentLoanPG, cls: 'component' },
+                { label: 'Total tax', value: -b.totalTax, cls: 'subtotal' },
+                pension.enabled && { label: pensionLabels[pension.method], value: -b.pension },
+                { label: 'Take-home pay', value: b.takeHome, cls: 'total' }
+            ].filter(Boolean);
+
+            const tbody = document.getElementById('breakdownBody');
+            tbody.replaceChildren(...rows.map(row => {
+                const tr = document.createElement('tr');
+                if (row.cls) tr.className = row.cls;
+                const cells = [row.label, yearly.format(row.value), monthly.format(row.value / 12)];
+                cells.forEach((text, i) => {
+                    const td = document.createElement('td');
+                    td.textContent = text;
+                    if (i > 0 && row.value < 0) td.className = 'deduction';
+                    tr.appendChild(td);
+                });
+                return tr;
+            }));
+
+            const notes = ['Monthly figures are the yearly figures divided by 12, assuming equal pay each month.'];
+            if (pension.enabled) {
+                notes.push('Tax rates exclude pension contributions, which are savings rather than tax.');
+            }
+            if (pension.enabled && pension.method === 'reliefAtSource') {
+                notes.push('With relief at source, higher and additional rate relief is claimed through Self Assessment rather than through pay.');
+            }
+            document.getElementById('breakdownNote').textContent = notes.join(' ');
         }
 
         // Event listeners
@@ -578,6 +760,9 @@
         document.getElementById('nationalInsurance').addEventListener('change', updateVisualisation);
         document.getElementById('studentLoanUG').addEventListener('change', updateVisualisation);
         document.getElementById('studentLoanPG').addEventListener('change', updateVisualisation);
+        document.getElementById('pension').addEventListener('change', updateVisualisation);
+        document.getElementById('pensionRate').addEventListener('input', updateVisualisation);
+        document.getElementById('pensionMethod').addEventListener('change', updateVisualisation);
         document.getElementById('maxIncome').addEventListener('input', updateVisualisation);
         document.getElementById('summaryIncomeInput').addEventListener('input', updateVisualisation);
 
